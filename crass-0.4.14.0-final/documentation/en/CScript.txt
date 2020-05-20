@@ -1,0 +1,16 @@
+﻿Name:		CScript
+Description:	WindowsScriptHost
+Archive:	.dat
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.0.1
+Status:		Beta
+
+【TODO】
+·support resolving data from difgpd0.dat, difgpd1.dat in 七瀬恋
+
+【ChangeLog】
+2009-01-19 20:37 ver 1.0.1 fixed a problem on memory access violation when decompression
+2009-01-17 20:13 ver 1.0.0 supported old archive format
+2009-01-11 17:09 ver 0.6.1 enhanced ability of automatic recognition for .dat, eliminated possible clash with plug-in GXTH
+2008-12-06 16:59 ver 0.6.0 supported extracting resource in mov.dat
+2008-11-29 11:29 ver 0.5.0 introducted heuristic algorithm to calculate size of index entry

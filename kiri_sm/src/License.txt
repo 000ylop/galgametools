@@ -1,0 +1,41 @@
+--------------------------------------------------------------------------------
+AnimED - Visual Novel Tools
+Copyright © 2007-2010 WinKiller Studio. Open Source.
+This software is free. Please see License for details.
+--------------------------------------------------------------------------------
+AnimED - Visual Novel Tools License Version 4
+--------------------------------------------------------------------------------
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions (optional) and the following disclaimer (optional).
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions (optional) and the following disclaimer (optional) in
+   the documentation and/or other materials provided with the distribution.
+
+3. Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software (even if the source is ported
+   to another operating system and/or programming language).
+
+4. The names of the authors may not be used to endorse or promote products
+   derived from this software without specific prior written permission.
+
+5. This software may not be sold and/or rented and/or included into any
+   commercial products, and may not be used as tool for such products
+   development.
+
+This software is provided by the copyright holders and contributors 'as is' and
+without any express or implied warranties (including, but not limited to, the
+implied warranties of merchantability and fitness for a particular purpose).
+
+In no event shall the authors or contributors be liable for any direct,
+indirect, incidental, special, exemplary, or consequential damages (including,
+but not limited to, procurement of substitute goods or services; loss of use,
+data, or profits; or disclosure of private algorithm or data; or business
+interruption) however caused and on any theory of liability, whether in
+contract, strict liability, or tort (including negligence or otherwise) arising
+in any way out of the use or existence of this software, even if advised of the
+possibility of such damage.
+--------------------------------------------------------------------------------

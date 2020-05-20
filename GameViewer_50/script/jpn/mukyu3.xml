@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="ScrPAK.upk" 0 />
+
+	<文件 文件名="cg\cg" 插件="0" 数据文件="mukyu3.pndr" />
+
+</游戏脚本>

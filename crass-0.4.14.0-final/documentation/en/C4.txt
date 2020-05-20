@@ -1,0 +1,12 @@
+﻿Name:		C4
+Description:	
+archive:	.GD
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	0.5.0
+Status:	        Alpha
+
+【TODO】
+·support .VMD and .MPX.
+
+【ChangeLog】
+2009-03-29 16:09 ver 0.5.0 1st version released

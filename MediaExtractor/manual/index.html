@@ -1,0 +1,463 @@
+<html>
+    <head>
+        <title>WESTSIDE Media Extrector 取扱説明書 － 目次</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td nowrap>
+                    <h2><b>WESTSIDE Media Extrector 取扱説明書</b></h2>
+                </td>
+            </tr>
+        </table>
+
+        <hr/>
+
+        <table>
+            <tr>
+                <td nowrap>
+                    【名    称】
+                </td>
+                <td nowrap>
+                    WESTSIDE Media Extractor Ver1.00
+                </td>
+            </tr>
+            <tr>
+                <td nowrap>
+                    【著 作 権】
+                </td>
+                <td nowrap>
+                    株式会社ウエストサイド
+                </td>
+            </tr>
+            <tr>
+                <td nowrap>
+                    【制作者名】
+                </td>
+                <td nowrap>
+                    Grayzon Infeeld.
+                </td>
+            </tr>
+            <tr>
+                <td nowrap>
+                    【制作月日】
+                </td>
+                <td nowrap>
+                    2007/12/06
+                </td>
+            </tr>
+            <tr>
+                <td nowrap>
+                    【動作環境】
+                </td>
+                <td nowrap>
+                    Windows Vista / XP / 2000
+                </td>
+            </tr>
+            <tr>
+                <td nowrap>
+                    【動作確認】<br/>　
+                </td>
+                <td nowrap>
+                    自作ＡＴ + Windows Vista<br/>
+                    VAIO TypeU VGN-UX90PS + Windows XP
+                </td>
+            </tr>
+        </table>
+
+        <hr/>
+
+        <p>
+        <table>
+            <tr>
+                <td colspan="2" nowrap>
+                    <b>目次</b>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%">
+                </td>
+                <td width="90%">
+                    概要
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    インストール・実行・アンインストール
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    抽出方法
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    ファイル設定
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    プラグイン設定
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    プラグインについて
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    config.xml について
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    制限事項
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    著作権
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    免責事項
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    注意事項
+                </td>
+            </tr>
+        </table>
+        </p>
+
+        <p>
+        <table>
+            <tr>
+                <td colspan="2" nowrap>
+                    <b>概要</b>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%">
+                </td>
+                <td width="90%">
+                    　このソフトウェアは、任意のファイルから特定フォーマットのデータを検索し、新規のファイルとして抽出するものです。<br/>
+                    　対応フォーマットは、プラグインによって決まります。<br/>
+                    　デフォルトで提供されるプラグインについては、プラグインについてをご参照ください。<br/>
+                </td>
+            </tr>
+        </table>
+        </p>
+
+        <p>
+        <table>
+            <tr>
+                <td colspan="2" nowrap>
+                    <b>インストール・実行・アンインストール</b>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%">
+                </td>
+                <td width="90%">
+                    　アーカイブファイルを任意のディレクトリに展開し、展開された「MediaExtractor.exe」を実行してください。<br/>
+                    　アンインストールする際は、展開したファイルをディレクトリごと削除してください。<br/>
+                    　レジストリは使用していません。<br/>
+                </td>
+            </tr>
+        </table>
+        </p>
+
+        <p>
+        <table>
+            <tr>
+                <td colspan="2" nowrap>
+                    <b>抽出方法</b>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%">
+                </td>
+                <td width="90%">
+                    　「MediaExtractor.exe」を実行すると、以下の画面が表示されます。<br/>
+                    <br/>
+                    <img src="./images/mainView.png" /><br/>
+                    <br/>
+                    　<font color="#FF0000"><b>①</b></font>のリストビューに任意のファイルを追加し、<font color="#FF0000"><b>②</b></font>の抽出ボタンを押下してください。<br/>
+                    　<font color="#FF0000"><b>③</b></font>のツリービューで選択されているディレクトリに、抽出ファイルが格納されます。<br/>
+                    　出力先にはディレクトリを指定してください。<br/>
+                    　マイコンピュータやマイネットワーク等、ファイルを作成できないフォルダを選択し、抽出する事はできません。<br/>
+                    　デフォルトでは、実行した「MediaExtractor.exe」と同じディレクトリ（<font color="#FF0000"><b>④</b></font>のディレクトリ）が指定されています。<br/>
+                </td>
+            </tr>
+        </table>
+        </p>
+
+        <p>
+        <table>
+            <tr>
+                <td colspan="2" nowrap>
+                    <b>ファイル設定</b>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%">
+                </td>
+                <td width="90%">
+                    　「設定(O)」→「ファイル設定(F)」の順でメニューをたどり、クリックすると以下の画面が表示されます。<br/>
+                    <br/>
+                    <img src="./images/fileOptionView.png" /><br/>
+                    <br/>
+                    　「ディレクトリ作成」グループ内には２つのチェックボックスがあり、ファイルを抽出した際におけるディレクトリの作成方法を指定します。<br/>
+                    　ディレクトリ作成方法は以下の通りです。<br/>
+                    <dl>
+                        <dt/>・「ファイル毎」、「データ種類毎」両方にチェックした場合（デフォルト）
+                        <dd/>　指定された抽出ファイルと同じ名前のディレクトリを作成し、さらに左記のディレクトリ内に抽出したファイルフォーマット名のディレクトリを作成し、抽出ファイルを格納します。
+                        <dt/>・「ファイル毎」のみにチェックした場合
+                        <dd/>　指定された抽出ファイルと同じ名前のディレクトリを作成し、抽出ファイルを格納します。
+                        <dt/>・「データ種類毎」のみにチェックした場合
+                        <dd/>　抽出したファイルフォーマット名のディレクトリを作成し、抽出ファイルを格納します。
+                        <dt/>・チェックしない場合
+                        <dd/>　ディレクトリを作成せずに、出力先ディレクトリ内に抽出ファイルを格納します。
+                    </dl>
+                    　「抽出するファイルサイズ」グループ内には２つのテキストボックスがあり、抽出するファイルサイズの範囲を指定します。<br/>
+                    　抽出結果のファイルサイズが指定範囲内の時のみ、抽出ファイルを作成します。<br/>
+                    　指定できる値は、0.0001 ～ 999999 です。<br/>
+                </td>
+            </tr>
+        </table>
+        </p>
+
+        <p>
+        <table>
+            <tr>
+                <td colspan="2" nowrap>
+                    <b>プラグイン設定</b>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%">
+                </td>
+                <td width="90%">
+                    　「設定(O)」→「プラグイン設定(P)」の順でメニューをたどり、クリックすると以下の画面が表示されます。<br/>
+                    <br/>
+                    <img src="./images/pluginOptionView.png" /><br/>
+                    <br/>
+                    　「インストール済みプラグイン」にプラグインの一覧が表示され、それぞれが抽出対象とするファイル形式を表します。<br/>
+                    　プラグイン名の左隣にあるチェックボックスがチェックされていると、そのプラグインは有効となり対応するファイル形式が抽出対象となります。<br/>
+                    　特定のファイル形式を無視して抽出したい場合は、対応するプラグインのチェックをはずし、抽出対象から除外してください。<br/>
+                    　有効化・無効化の切り替えは、切り替えたいプラグインを一覧から選択し、チェックボックスをクリックするか、「無効にする」・「有効にする」ボタンをクリックしてください。<br/>
+                    <br/>
+                    　「最新の状態にする」ボタンは、プラグインを読み込み直します。<br/>
+                    　実行中に新しいプラグインを追加した場合は、このボタンをクリックして、新しいプラグインを読み込み直してください。<br/>
+                    　プラグインの追加については、プラグインについてをご参照ください。<br/>
+                    <br/>
+                    　プラグインによっては、抽出処理の詳細設定が可能です。<br/>
+                    　一覧で選択されたプラグインが詳細設定可能な時、「プロパティ」ボタンが有効になりますので、クリックすると詳細設定画面が開きます。<br/>
+                    　詳細設定については、各プラグインのマニュアルをご参照ください。<br/>
+                </td>
+            </tr>
+        </table>
+        </p>
+
+        <p>
+        <table>
+            <tr>
+                <td colspan="2" nowrap>
+                    <b>プラグインについて</b>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%">
+                </td>
+                <td width="90%">
+                　インストール時にアーカイブファイルを任意のディレクトリに展開すると、「MediaExtractor.exe」の他に「plugins」ディレクトリが展開されます。<br/>
+                　このディレクトリ内に存在する dll 形式のファイルがプラグインの実体であり、デフォルトで提供されるプラグインもこのディレクトリ配下に格納されています。<br/>
+                　新しいプラグインをインストールをインストールする際は、「plugins」ディレクトリ内にプラグインである dll 形式のファイルを格納してください。<br/>
+                　ただし、Media Extractor プラグイン以外の dll ファイルを格納してもプラグインとして認識しません。<br/>
+                <br/>
+                　デフォルトで提供されるプラグインは以下の通りです。
+                <ul>
+                    <li>AVI形式抽出プラグイン（plugins\jp.co.westside\avi ディレクトリ内に格納）
+                    <li>BMP形式抽出プラグイン（plugins\jp.co.westside\bmp ディレクトリ内に格納）
+                    <li>JPG形式抽出プラグイン（plugins\jp.co.westside\jpeg ディレクトリ内に格納）
+                    <li>MID形式抽出プラグイン（plugins\jp.co.westside\midi ディレクトリ内に格納）
+                    <li>OGG形式抽出プラグイン（plugins\jp.co.westside\ogg ディレクトリ内に格納）
+                    <li>PNG形式抽出プラグイン（plugins\jp.co.westside\ping ディレクトリ内に格納）
+                    <li>WAV形式抽出プラグイン（plugins\jp.co.westside\wave ディレクトリ内に格納）
+                    <li>WMV形式抽出プラグイン（plugins\jp.co.westside\wmv ディレクトリ内に格納）
+                </ul>
+                　詳細については、それぞれのマニュアルをご参照ください。
+                </td>
+            </tr>
+        </table>
+        </p>
+
+        <p>
+        <table>
+            <tr>
+                <td colspan="2" nowrap>
+                    <b>config.xml について</b>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%">
+                </td>
+                <td width="90%">
+                　初めて「MediaExtractor.exe」を起動すると、同一ディレクトリ内に「config.xml」というファイルが作成されます。<br/>
+                　このファイルは、「ファイル設定」、「プラグイン設定」、「各種プラグインの詳細設定」が保存されるファイルです。<br/>
+                　削除したり壊れてしまうと、設定が初期状態に戻りますのでご注意下さい。<br/>
+                </td>
+            </tr>
+        </table>
+        </p>
+
+        <p>
+        <table>
+            <tr>
+                <td colspan="2" nowrap>
+                    <b>制限事項</b>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%">
+                </td>
+                <td width="90%">
+                <ul>
+                    <li>抽出結果の最大ファイルサイズは 4GBytes です。
+                    <li>データ部が暗号化されているなどの理由により、抽出結果のファイルが正しいフォーマットでない場合があります。
+                    <li>変換時、ドライブの空き容量の計算を行っておりませんので、変換ファイルを出力するドライブには、十分な空きを作っておいて下さい。
+                    <li>本ツールは、Windows Vista / XP 用です。その他のWindowsでの動作確認はしていません。
+                </ul>
+                </td>
+            </tr>
+        </table>
+        </p>
+
+        <p>
+        <table>
+            <tr>
+                <td colspan="2" nowrap>
+                    <b>著作権</b>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%">
+                </td>
+                <td width="90%">
+                　本ツール(ドキュメント等を含む)は株式会社ウエストサイドの著作物です。<br/>
+                　いかなる方法を用いた場合でも、他の人に譲渡または配布する行為は著作権の侵害となります。<br/>
+                　本ツールの転載や再配布は行なわないで下さい。
+                </td>
+            </tr>
+        </table>
+        </p>
+
+        <p>
+        <table>
+            <tr>
+                <td colspan="2" nowrap>
+                    <b>免責事項</b>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%">
+                </td>
+                <td width="90%">
+                　本ツールを使用し変更を加えたデータ(画像ファイル等)を配布しないで下さい。<br/>
+                　配布した際に起こる全てについては、配布を行った本人に責任があるものとします。<br/>
+                　ツール制作者及び株式会社ウエストサイドはいかなる責任も負いません。<br/>
+                　また本ツールに起因するいかなる損害についても、株式会社ウエストサイドは賠償の責任を負わないものとします。<br/>
+                　ツールの適用は使用者の判断で行なって下さい。
+                </td>
+            </tr>
+        </table>
+        </p>
+
+        <p>
+        <table>
+            <tr>
+                <td colspan="2" nowrap>
+                    <b>注意事項</b>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%">
+                </td>
+                <td width="90%">
+                本ツールに関して、抽出対象のデータ作成・配布元は一切の関与をしておりません。<br/>
+                本ツールに関する質問は、抽出対象のデータ作成元や配布元には行わないで下さい。
+                </td>
+            </tr>
+        </table>
+        </p>
+
+        <hr/>
+
+        <table>
+            <tr>
+                <td>
+                    ※本ドキュメント及びツールに記載の会社名および製品名は、各社の登録商標または商標です。<br/>
+                    ※このプログラムは The Apache Software Foundation によって開発された xerces を利用しています。
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td nowrap>
+                    Copyright (C) 2007 WESTSIDE all rights reserved.<br/>
+                    Programed by Grayzon Infeeld.
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

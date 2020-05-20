@@ -1,0 +1,12 @@
+﻿Name:		gmf
+Description:	General Metafile Format(using for extracting meta-file without standard extension)
+Archive:	.dat .arc .nsa .ypf .fpk .odn .ngs .mpk
+Author:		痴漢公賊(glanser@163.com)
+Version:	0.2.0
+Status:		Alpha
+
+【TODO】
+support more meta-file format and non-standard extension, and remove support for such resource in all plug-in
+
+【ChangeLog】
+2008-07-09 20:32 ver 0.2.0 1st version released

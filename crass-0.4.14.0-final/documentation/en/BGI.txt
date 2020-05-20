@@ -1,0 +1,99 @@
+﻿Name:		BGI
+Description:	Ethornell - Buriko General Interpreter system(Darios Sawm氏-株式会社BURIKO)
+Archive:	.arc .gdb
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.0.1
+Status:         Beta
+
+【.arc Archive Info】
+    the .arc is actual type of archive with directory.
+    meta-data according to practical situation, can be bmp, ogg, _bp(binary script) and so on.
+    
+    	header:
+		s8 magic[12];	// "PackFile    "
+		u32 entries;	// resource number(every entry with 32 bytes)		
+	index segment:
+		s8 name[16];	// resource name
+		u32 offset;	// resource data offset(count from index segment)
+		u32 length;	// resource data length
+		u32 reserved[2];
+	data: plain-text resource or resource packaged by dsc format.
+		closely behind index segment.
+
+【dsc Resource Info】
+    all resources except image usually are encoded to dsc format.
+	
+    	header:
+		s8 magic[16];	// "DSC FORMAT 1.00"
+		u32 key;	// key for decrypting 512 bytes depth 
+		u32 uncomprlen;	// decompressed data length
+		u32 dec_counts;	// decompressed loop count
+		u32 reserved;
+	data: lz compression + huffman coding
+		u8 depth[512];	// encrypted 512 bytes huffman tree leaf node depth info(aka encode-bit length used for rebuilding huffman tree);
+				// in them leaf node whose code is less than 256 directly output byte data when lz compressing;
+				// leaf node whose code is more than or equal to 256 is copy_bytes length(actual length also +2) used for addressing window when lz compressing;
+		following is bit data of huffman coding. if code of leaf node is less than 256, output data is code itself; if code is more than or equal to 256，12-bit in bit data is used for indexing window, code - 256 means copy_bytes length(actual length also +2). (typical lz compression algorithm)
+
+【CompressedBG Resource Info】
+    the formmat only is used in image, no extension.
+    meta-data is bmp.
+
+	header:
+		s8 magic[16];		// "CompressedBG___"
+		u16 width;		// image width
+		u16 height;		// image height
+		u32 color_depth;	// image color depth
+		u32 reserved0[2];
+		u32 zero_comprlen;	// compressed data length of 0 value byte after huffman decoding 
+		u32 key;		// key for decrypting leaf node weight field  
+		u32 encode_length;	// encrypted leaf node weight field length
+		u8 sum_check;		// accumulative check sum value of decrypted leaf node weight field  
+		u8 xor_check;		// accumulative check xor value of decrypted leaf node weight field  
+		u16 reserved1;
+	data: huffman coding data
+		closely behind header, huffman decoded data is 0 value byte compressed data(also using similar RLE compression algorithm to compress all 0 byte value), after decompressing it will get standard RGB data during typical value defilting.
+
+【.gdb Archive Info】
+    the .gdb is actual type of archive without directory.
+    using to save BGI system config info.	
+
+    	header:
+		s8 magic[16];	// "SDC FORMAT 1.00"
+		u32 key;	// key for decrypting data
+		u32 comprlen;	// data length(lz compression)
+		u32 uncomprlen;	// decompressed data length
+		u16 sum_check;	// accumulative check sum value
+		u16 xor_check;	// accumulative check xor value
+	data:
+		closely behind header, after decompressing it's lz compression data.
+
+【Audio Resource Info】
+    the file is actual type of resource without directory, no extension.
+    meta-data is ogg.
+
+	header:
+		u32 header_length;	// header length(64 bytes)
+		u32 unknown0;		
+		u32 length;		// ogg data length
+		u32 unknown[13];
+	data:
+		closely behind header.
+
+【Image Resource Info】
+    the file is actual type of resource without directory, no extension, format exists in sysgrp.arc, graphic.arc archive.
+    meta-data is bmp.
+
+	header:
+		u16 width;		// image width
+		u16 height;		// image height
+		u32 color_depth;	// image color depth
+		u32 reserved0[2];
+	data:
+		closely behind header.
+
+	notice: because no good flag can mark on the format well, when crage process archive that if whose name isn't sysgrp.arc or graphic.arc, will output many datas without extension. if in such happening, please send game name, company and arc archive name to me, so that i can do more support for the archive.
+
+【ChangeLog】
+2008-06-18 08:33 ver 1.0.1 ignored extracting archive without loading valid data
+2007-04-23 11:53 ver 1.0.0 1st version released

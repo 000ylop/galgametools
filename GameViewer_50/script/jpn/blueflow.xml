@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="LPCG.grp" 0 />
+
+	<文件 文件名="CH\*.LPC"                 插件="0" />
+	<文件 文件名="CH\*.LPG"                 插件="0" />
+	<文件 文件名="CH\PER\*.LPG"             插件="0" />
+	<文件 文件名="CH\UNIT\*.LPG"            插件="0" />
+	<文件 文件名="FRAME\*.LPG"              插件="0" />
+	<文件 文件名="FRAME\ED\*.LPG"           插件="0" />
+	<文件 文件名="FRAME\LD\*.LPG"           插件="0" />
+	<文件 文件名="MGR\*.LPC"                插件="0" />
+	<文件 文件名="SCDATA\*.TGA"                      />
+	<文件 文件名="SCDATA\BF\*.LPG"          插件="0" />
+	<文件 文件名="SCDATA\MPCG\*.LPG"        插件="0" />
+	<文件 文件名="SCDATA\SCG\*.LPG"         插件="0" />
+	<文件 文件名="SCDATA\SCG\MPL\*.LPG"     插件="0" />
+	<文件 文件名="SCDATA\SCG\ST01-01\*.LPG" 插件="0" />
+	<文件 文件名="SYSCG\*.BMP"                       />
+	<文件 文件名="SYSCG\*.TGA"                       />
+	<文件 文件名="SYSCG\*.LPC"              插件="0" />
+	<文件 文件名="SYSCG\*.LPG"              插件="0" />
+	<文件 文件名="UNIT\*.LPC"               插件="0" />
+
+</游戏脚本>

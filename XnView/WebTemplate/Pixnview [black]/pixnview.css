@@ -1,0 +1,76 @@
+a:link, a:visited {
+  color: #999;
+  background: #000;
+  text-decoration: none;
+}
+a:active, a:hover {
+  color: #999;
+  background: #000;
+  text-decoration: underline;
+}
+body {
+  margin-left: 20px;
+  margin-top: 10px;
+  color: #999;
+  background: #000;
+  font-size: 80%;
+}
+body, h1, h2, td, a {
+  font-family: verdana, helvetica, arial, sans-serif;
+}
+div.credit {
+  margin-top: 1em;
+  font-style: italic;
+  font-size: 85%;
+}
+div.credit a:link, div.credit a:visited {
+  text-decoration: underline;
+}
+div.infobottom {
+  padding-top: 0.4em;
+  margin-top: 0.5em;
+}
+div.infotop {
+  border-bottom: 1px solid #999;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.1em;
+}
+div.main {
+  margin-left: 50px;
+  margin-top: 30px;
+  white-space: nowrap;
+}
+div.pic {
+  padding: 5px 0 0 0;
+}
+h1 {
+  font-size: 180%;
+  font-weight: normal;
+}
+h2 {
+  color: #fff;
+  background: #000;
+  font-size: 160%;
+  font-weight: normal;
+}
+img, table, td {
+  border: none;
+}
+img {
+  margin-right: -4px;
+}
+td {
+  color: #fff;
+  background: #000;
+  font-size: 85%;
+  text-align: center;
+  vertical-align: bottom;
+}
+select, input {
+  color: #999;
+  background: #000;
+  border: 1px solid #999;
+}
+input {
+  cursor: pointer;
+}

@@ -1,0 +1,12 @@
+﻿名称：		AVGEngine
+描述：		
+封包：		.pck
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.8.0
+成熟度：	开发版
+
+【TODO】
+支持.lag和.afd
+
+【ChangeLog】
+2009-04-06 18:56 ver 0.8.0 第一版发布

@@ -1,0 +1,14 @@
+﻿名称：		TEATIME
+描述：		
+封包：		.bmp .tga .wav. ODF .TEA(weak magic) .txt(no magic) .pak(no magic) .ODA
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.4
+成熟度：	测试版
+
+【注意事项】
+提取.txt和.pak时要指定-u参数提取。
+
+【ChangeLog】
+2009-06-27 13:43 ver 1.0.4 支持对加密的.ODA文件的提取
+2008-05-04 13:42 ver 1.0.2 支持对加密的.tga文件的提取
+2008-04-03 11:56 ver 1.0.1

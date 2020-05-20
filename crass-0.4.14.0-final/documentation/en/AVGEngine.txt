@@ -1,0 +1,12 @@
+﻿Name:		AVGEngine
+Description:	
+Archive:	.pck
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	0.8.0
+Status:	        Alpha
+
+【TODO】
+Support of .lag and .afd
+
+【ChangeLog】
+2009-04-06 18:56 ver 0.8.0 1st version released

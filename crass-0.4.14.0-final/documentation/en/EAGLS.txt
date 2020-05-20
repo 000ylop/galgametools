@@ -1,0 +1,34 @@
+﻿Name: 		EAGLS
+Description: 	Enhanced Adventure Game Language System(EAGLS) developed by Tech-Arts
+Archive: 	.pak .idx
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	1.1.1
+Status: 	Beta
+
+【Notice】
+·when extracting must specify -l and -u parameter.
+take game"遊撃警艦パトベセル ～こちら首都圏上空青空署～" for exsample:
+crage -p CGPACK.pak -l CGPACK.idx -u EAGLS
+·it's required to use "game" parameter to extract a few game's CG and scenario
+双子姫乳×３: use parameter "TIKAN" to extract
+へんし～ん！２: use parameter "game=hensin2" to extract
+SixtyNine2: use parameter"game=ANEBOIN" to extract
+姉とボイン: use parameter "game=ANEBOIN" to extract
+お姉さん中出し痴漢列車: use parameter "game=TIKAN" to extract
+うたうタンブリングダイス DVD-ROM版：使用参数“game=ALIS”提取
+Blue-Sky-Blue【s】－空を舞う翼－ DVD-ROM版: use parameter "game=ALIS" to extract
+金曜日の仔猫: use parameter "game=ALIS" to extract
+
+taka game "お姉さん中出し痴漢列車" for exsample:
+crage -p CGPACK.pak -l CGPACK.idx -O game=TIKAN
+
+【ChangeLog】
+2009-07-21 17:00 ver 1.1.1 avoid to get truncated decompressed data though adding the proper padding for compressed data
+2009-03-07 13:01 ver 1.1.0 removed no magic signature of .pak
+2008-11-15 10:50 ver 1.0.6 supported old ALIS system
+2008-08-26 20:50 ver 1.0.5 added parameter "game=hensin2"
+2008-08-11 20:04 ver 1.0.4 fixed a decompression error in decompressing large size gr resource
+2008-06-24 19:00 ver 1.0.3 removed "sc_mode" parameter, added "game" parameter to support special encryption mode
+2008-06-24 16:50 ver 1.0.2 added "sc_mode" parameter to support second cg encryption mode
+2008-03-31 10:31 ver 1.0.1 fixed a length error in saving bmp
+2008-03-30 15:26 ver 1.0.0 1st version released

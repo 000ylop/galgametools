@@ -1,0 +1,12 @@
+﻿Name:		losterika
+Description:		
+Archive:	.dat(no magic) .pak(no magic)
+Author:		痴漢公賊(glanser@163.com)
+Version:	1.0.0
+Status: 	Final
+
+【Notice】
+·when extracting must specify "-u losterika" parameter
+
+【ChangeLog】
+2008-09-02 21:24 ver 1.0.0 1st version released

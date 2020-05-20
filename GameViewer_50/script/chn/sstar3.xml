@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="ManPAK.upk"                0 />
+	<插件 文件名="SoftStar.dll" 接口名="IMD" 1 />
+	<插件 文件名="SoftStar.dll" 接口名="PNG" 2 />
+
+	<文件 文件名="Config\*.imd"  插件="1" />
+	<文件 文件名="Text2\*.imd"   插件="1" />
+	<文件 文件名="Texture\*.imd" 插件="1" />
+
+	<文件 文件名="Music\music.sfb"   插件="0" 数据文件="ss3\music.sfb.ini" />
+	<文件 文件名="Sound\SoundDB.sfb" 插件="0" 数据文件="ss3\SoundDB.sfb.ini" />
+
+</游戏脚本>

@@ -1,0 +1,20 @@
+﻿Name:		mgos
+Description:		
+Archive:	.dte(weak magic) .atm .nme
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.0.0
+Status:	 	Beta
+
+【注意事项】
+·.nme file record name of extracted resource. if don't specify nme parameter, name resource name after meaningless number.
+
+【提取示例】
+·specify nme parameter:
+crage -p "J:\Program Files\MSH\voice_ij.det" -l "J:\Progr
+am Files\MSH\voice_ij.atm" -O nme="J:\Program Files\MSH\voice_ij.nme"
+·no require to specify nme parameter also:
+crage -p "J:\Program Files\MSH\voice_ij.det" -l "J:\Progr
+am Files\MSH\voice_ij.atm"
+
+【ChangeLog】
+ ver 1.0.0 1st version released

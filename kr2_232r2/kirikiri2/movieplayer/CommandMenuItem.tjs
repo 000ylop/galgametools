@@ -1,0 +1,30 @@
+/*
+	クリックされたときの動作をコンストラクタから指定できるメニューアイテム
+	コンストラクタの第３引数にメソッドを指定すると、クリック時に
+	そのメソッドを 引数１個 (メニューアイテムオブジェクトが渡される) で
+	呼び出すようになる
+*/
+
+
+class CommandMenuItem extends MenuItem
+{
+	var command = null;
+
+	function CommandMenuItem(window, caption, cmd)
+	{
+		super.MenuItem(window, caption);
+
+		command = cmd;
+	}
+
+	function finalize()
+	{
+		super.finalize(...);
+	}
+
+	function onClick()
+	{
+		super.onClick(...);
+		if(command !== null) command(this);
+	}
+}

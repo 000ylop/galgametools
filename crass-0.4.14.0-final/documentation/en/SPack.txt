@@ -1,0 +1,12 @@
+﻿Name:		SPack
+Description:		
+Archive:	.dat
+Author:		痴漢公賊 (glanser@163.com)
+Version:	0.7.0
+Status:	        Alpha
+
+【TODO】
+·decrypt wpb script resource in scr.dat.
+
+【ChangeLog】
+2008-12-07 21:51 ver 0.7.0 1st version released

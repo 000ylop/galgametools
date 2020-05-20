@@ -1,0 +1,10 @@
+﻿名称：		RAGE
+描述：		RAGE's Adventure Game Engine
+封包：		.Pac
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.1
+成熟度：	测试版
+
+【ChangeLog】
+2008-06-19 17:59 ver 1.0.1 不再区分扩展名大小写
+2007-10-31 21:56 ver 1.0.0 第一版发布

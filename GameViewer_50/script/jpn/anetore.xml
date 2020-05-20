@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="KrKr.dll" 接口名="XP3" 0 />
+
+	<文件 文件名="ane-training.exe" 插件="0" 起始="32BA00" 结束="28F29F8B" />
+
+</游戏脚本>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="LzBMP.dec" 0 />
+
+	<文件 文件名="Bvs\*.bmp" 插件="0" />
+	<文件 文件名="Chb\*.bmp" 插件="0" />
+	<文件 文件名="Chl\*.bmp" 插件="0" />
+	<文件 文件名="Map\*.bmp" 插件="0" />
+	<文件 文件名="Mpb\*.bmp" 插件="0" />
+	<文件 文件名="Vis\*.bmp" 插件="0" />
+
+	<文件 文件名="rRyu_win\Bvs\*.bmp" />
+	<文件 文件名="rRyu_win\Chb\*.bmp" />
+	<文件 文件名="rRyu_win\Chl\*.bmp" />
+	<文件 文件名="rRyu_win\Map\*.bmp" />
+	<文件 文件名="rRyu_win\Mpb\*.bmp" />
+	<文件 文件名="rRyu_win\Vis\*.bmp" />
+
+</游戏脚本>

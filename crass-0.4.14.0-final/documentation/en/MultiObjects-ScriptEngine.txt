@@ -1,0 +1,13 @@
+﻿Name: 		MultiObjects-ScriptEngine
+Description: 	game system developed by Leaf
+Archive: 	.a .am
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	0.2.0
+Status: 	Alpha
+
+【TODO】
+·extract all kinds of .px resource
+·extract .g resource
+
+【ChangeLog】
+2008-03-22 02:49 ver 0.2.0 1st version released

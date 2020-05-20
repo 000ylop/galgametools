@@ -1,0 +1,15 @@
+﻿名称：		System4
+描述：		AliceSoft System4.0
+封包：		.ald .ain(weak magic) .AJP .bgi(weak magic) .alk
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.9.1
+成熟度：	开发版
+
+【TODO】
+·支持PM类型的图像的提取。
+·从ald中直接将ajp转换似乎不能工作。
+
+【ChangeLog】
+2009-02-14 19:57 ver 0.9.1 32位bmp与白色背景进行alpha blending
+2008-10-03 09:56 ver 0.9.0 支持.alk资源的提取
+2008-08-15 19:28 ver 0.8.0 第一版发布

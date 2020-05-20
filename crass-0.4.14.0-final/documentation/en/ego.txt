@@ -1,0 +1,18 @@
+﻿Name:		ego
+Description:	Studio e.go! game system
+archive:	.dat .dat(old version, no magic)
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.1.1
+Status:	        Beta
+
+【TODO】
+·support many kinds of decryption methodes for .scr
+
+【Notice】
+·older game use old .dat format, when extracting such game must specify -u ego parameter
+
+【ChangeLog】
+2009-03-26 20:26 ver 1.1.1 fixed the incorrect directory exported due to forgetting to consider the directory name length
+2008-05-23 17:45 ver 1.1.0 supported extracting old .dat archive
+2007-11-11 14:38 ver 1.0.1 fixed a bug for extracting 0-length resource
+2007-10-23 00:27 ver 1.0.0 1st version released

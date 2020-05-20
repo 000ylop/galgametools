@@ -1,0 +1,47 @@
+﻿名称：		Hypatia
+描述：		
+封包：		.pak .dat
+作者：		痴汉公贼 (glanser@163.com)
+版本：		1.0.0
+成熟度：	测试版
+
+【.pak封包文件说明】
+    实际类型是有目录的封包文件。
+    元数据根据用途可以是各类型的资源文件。
+  
+   	 首部：
+		s8 magic[6];    	// "HyPack"
+		u16 version;		// 0x0100, 0x0200, 0x0300或0x0301
+		u32 index_offset;	// 索引段的文件偏移
+		u32 index_entries;	// 资源文件数
+	索引段(version 0x0100)：
+		s8 name[21];		// 资源文件名
+		s8 suffix[3];		// 资源后缀名
+		u32 offset;		// 资源文件数据偏移（需要加上首部的长度）
+		u32 length;		// 资源文件的数据长度
+	索引段(version 0x0200)：
+		s8 name[21];		// 资源文件名
+		s8 suffix[3];		// 资源后缀名
+		u32 offset;		// 资源文件数据偏移（需要加上首部的长度）
+		u32 uncomprLen;		// 资源文件解压/解码后的数据长度
+		u32 comprLen;		// 资源文件数据长度
+		u8 mode;		// 1 - lz压缩变体；2 - BWT变换+MTF变换+RangeCoder压缩；3 - 取反变换；其他 - 明文数据
+	索引段(version 0x0300或0x0301)：
+		s8 name[21];		// 资源文件名
+		s8 suffix[3];		// 资源后缀名
+		u32 offset;		// 资源文件数据偏移（需要加上首部的长度）
+		u32 uncomprLen;		// 资源文件解压/解码后的数据长度
+		u32 comprLen;		// 资源文件数据长度
+		u8 mode;		// 1 - lz压缩变体；2 - BWT变换+MTF变换+RangeCoder压缩；3 - 取反变换；其他 - 明文数据
+		u8 do_crc_check;	// 总为1 
+		u16 crc;		// 资源文件数据的crc校验和
+		FILETIME time_stamp;	// windows文件时间戳
+	数据：
+		紧接在首部之后。
+
+【ChangeLog】
+ ver 1.0.0 支持crc校验；支持version 0x100和0x200类型的封包；修正了解压代码的bug；更新了文档中关于pak格式的说明
+2007-11-06 22:54 ver 0.9.1 支持.dat封包的提取
+2007-04-25 20:41 ver 0.9.0 修正了类型1解压缩没做边界检查的错误；支持发明工坊-重现蓝海之都的光芒（中文版）。
+2007-03-31 14:09 ver 0.1.0 支持提取mode2类型的资源文件；支持ASDVD～生まれたばかりのLoveSong（感谢名雪君测试）。
+2007-03-29 18:28 ver 0.0.1 第一版发布

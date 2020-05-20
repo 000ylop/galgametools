@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+  <head>
+    <title>#TITLE#</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="This page was generated with XnView - www.xnview.com" />
+    <meta name="author" content="Visuddhi">
+    <meta name="copyright" content="
+    /*
+    '
+    '**************************************
+    ' Visuddhi - http://visuddhi.com
+    ' Copyright (c) 2006 - Visuddhi
+    ' All right reserved. 
+    '**************************************
+    '
+    */
+    " />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="simpleviewer.css" />
+    <script type="text/javascript" src="flashobject.js"></script>    
+  </head>
+  <body>
+  
+    <div class="header">#HEADER#</div>
+
+    <div id="flashcontent">...</div>
+    <script type="text/javascript">
+      var fo = new FlashObject("viewer.swf", "gallery", "100%", "100%", "6", "#eeeeee");
+      fo.addParam("quality", "high");
+      fo.addParam("wmode", "transparent");
+      fo.addVariable("preloaderColor", "0xffffff");
+      fo.addVariable("xmlDataPath", "thumb.html");	
+      fo.write("flashcontent");
+    </script>
+
+    <div class="footer"><a href="http://www.xnview.com" title="Get XnView"><img src="getxnview.gif" alt="Get XnView" /></a></div>
+
+  </body>
+</html>

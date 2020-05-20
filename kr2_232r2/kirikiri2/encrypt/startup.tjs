@@ -1,0 +1,75 @@
+class MyWindow extends Window
+{
+	var primlayer;
+
+	function MyWindow()
+	{
+		super.Window();
+
+		borderStyle = bsSingle;
+
+		caption = "暗号化ツール";
+
+		// 下敷き(プライマリレイヤ)
+		add(primlayer = new Layer(this, null));
+		primlayer.left = primlayer.top = 0;
+		primlayer.imageWidth = 260;
+		primlayer.imageHeight = 60;
+		primlayer.setSizeToImageSize();
+		setInnerSize(primlayer.width, primlayer.height);
+
+		primlayer.drawText(10, 4, "エクスプローラ等から暗号化したい",
+			0x008000, 255, true, 255, 0x000000, 3, 2, 2);
+		primlayer.drawText(10, 16, "テキストファイルをここにドロップしてください。",
+			0x008000, 255, true, 255, 0x000000, 3, 2, 2);
+		primlayer.drawText(10, 31, "ファイルは上書きされますのでバックアップを",
+			0xa00000, 255, true, 255, 0x000000, 3, 2, 2);
+		primlayer.drawText(10, 43, "とることをおすすめします。",
+			0xa00000, 255, true, 255, 0x000000, 3, 2, 2);
+
+		Debug.console.visible = true;
+
+		Debug.message("エクスプローラ等から暗号化したいテキストファイルを、"
+			"「暗号化ツール」ウィンドウにドロップしてください。");
+		Debug.message(".txt .ks .tjs .ma .asd の各ファイルを暗号化することができます。");
+		Debug.message("注意!!! このプログラムは同じファイルを上書きしますので、"
+			"暗号化しようとするファイルのバックアップは各自でお願いします。");
+
+
+		visible = true;
+	}
+
+	function action(ev)
+	{
+		if(ev.type == "onFileDrop" && ev.target == this)
+		{
+			for(var i = 0; i < ev.files.count; i++)
+				encrypt_file(ev.files[i]);
+		}
+	}
+
+	function encrypt_file(file)
+	{
+		// ファイルを暗号化
+		try
+		{
+			var ext = Storages.extractStorageExt(file).toLowerCase();
+			if(ext != '.txt' && ext != '.ks' && ext != '.tjs' &&
+				ext != '.ma' && ext != '.asd')
+			{
+				throw new Exception(file + " は対応していない拡張子なので"
+					"暗号化しません");
+			}
+			Debug.message(file + " を暗号化中");
+			[].load(file).save(file, "c");
+			Debug.message(file + " 暗号化終了");
+		}
+		catch(e)
+		{
+			Debug.message("エラーが発生しました(ファイル " + file + ") : " + e.message);
+		}
+	}
+
+}
+
+var a = new MyWindow();

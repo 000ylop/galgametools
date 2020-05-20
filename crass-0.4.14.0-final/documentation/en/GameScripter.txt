@@ -1,0 +1,11 @@
+﻿Name: 		GameScripter
+Description: 	
+Archive: 	.pak
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	1.0.2
+Status:         Beta
+
+【ChangeLog】
+2009-02-25 19:22 ver 1.0.2 fixed a problem on truncating incorrectly filename
+2008-08-16 16:41 ver 1.0.1 fixed a error in extracting .pga(thank pcicp for testing)
+2007-11-14 23:50 ver 1.0.0 1st version released

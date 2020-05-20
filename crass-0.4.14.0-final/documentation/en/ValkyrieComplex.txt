@@ -1,0 +1,9 @@
+﻿Name: 		ValkyrieComplex
+Description: 	ヴァルキリーコンプレックス
+Archive: 	.pak .pac
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	1.0.1
+Status: 	Final
+
+【ChangeLog】
+2009-05-30 1:07 ver 1.0.1 support retail version

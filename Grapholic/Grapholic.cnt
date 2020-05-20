@@ -1,0 +1,39 @@
+:Base Grapholic.hlp>main
+:Title Grapholic ヘルプ
+:Index はじめに =Grapholic.hlp
+1 はじめに
+2 Grapholicについて =welcome
+2 動作環境 =begin_environ
+2 インストール =begin_install
+2 対応画像フォーマット =begin_supported_graphic
+2 用語解説 =begin_glossary
+1 画面について
+2 メインウインドウ =mainframe_index
+2 画像表示ウインドウ =graphframe_index
+2 プレビュー画像一覧ウインドウ =previewframe_index
+2 マルチピクチャプレビュー画像一覧ウインドウ =multigraphframe_index
+1 使い方
+2 コマンド別解説
+3 メインウインドウのコマンド
+4 [ファイル]メニュー =menu_file
+4 [編集]メニュー =menu_edit
+4 [ドライブ]メニュー =menu_drive
+4 [ディレクトリ]メニュー =menu_directory
+4 [表示]メニュー =menu_view
+4 [オプション]メニュー =menu_option
+4 [ウインドウ]メニュー =menu_window
+4 [ヘルプ]メニュー = menu_help
+3 画像表示ウインドウのコマンド
+4 [ファイル]メニュー =graph_file_menu
+4 [編集]メニュー =graph_edit_menu
+4 [表示]メニュー =graph_view_menu
+3 プレビュー画像一覧ウインドウのコマンド
+4 [ファイル]メニュー =preview_menu_file
+4 [表示]メニュー =preview_menu_view
+3 マルチピクチャプレビュー画像一覧ウインドウのコマンド
+4 [ファイル]メニュー =multigraph_menu_file
+4 [表示]メニュー =multigraph_menu_view
+1 その他
+2 プログラム =program
+2 配布先･連絡先 =distribution
+2 変更暦 =history

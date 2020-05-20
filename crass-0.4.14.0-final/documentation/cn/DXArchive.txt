@@ -1,0 +1,10 @@
+﻿名称：		DXArchive
+描述：		山田 巧开发的ＤＸライブラリ（http://homepage2.nifty.com/natupaji/DxLib/）
+封包：		.dxa .dat .hud
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.1
+成熟度：	测试版
+
+【ChangeLog】
+2009-08-07 12:00 ver 1.0.1 支持游戏“明日はきっと、晴れますように -She said so，and prayed to cloudy skies.-”
+2009-07-05 15:05 ver 1.0.0 第一版发布

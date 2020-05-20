@@ -1,0 +1,11 @@
+// tpw2bmp.cpp, v1.01 2007/06/10
+// coded by asmodean
+
+// contact: 
+//   web:   http://plaza.rakuten.co.jp/asmodean
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+
+// This tool decompresses TPW graphics used by Kit's game Boku no Koe..
+// Depends on Bokukoe.exe (200704 bytes, CRC 310F6E78)
+//         or Kyouin.exe (172032 bytes, CRC 57FC624D

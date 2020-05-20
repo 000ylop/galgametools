@@ -1,0 +1,11 @@
+﻿名称：		FVP
+描述：		FAVORITE VIEW POINT SYSTEM VER 2.5
+封包：		.bin
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.1.1
+成熟度：	测试版
+
+【ChangeLog】
+2009-04-04 23:23 ver 1.1.1 解决了与插件Xuse的冲突
+2009-02-28 10:21 ver 1.1.0 去除.bin的no magic标记；支持32位bmp alpha blending；支持type4图像格式
+2007-10-21 21:51 ver 1.0.0 第一版发布

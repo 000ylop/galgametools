@@ -1,0 +1,15 @@
+﻿名称：		A98SYS ENGINE
+描述：		GEAR/Active开发
+封包：		.PAK .edt .ed8 .sal
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.8.0
+成熟度：	开发版
+
+【TODO】
+1. 解密加密的.HGO脚本。
+2. 处理含有未知数据的.ed8。
+3. 提取.ITW和.EDO图像格式。
+4. 支持老系统。
+
+【ChangeLog】
+2009-06-06 14:19 ver 0.8.0 第一版发布

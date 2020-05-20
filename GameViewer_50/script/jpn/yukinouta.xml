@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="LiveMaker.dll" 接口名="VFF" 0 />
+	<插件 文件名="LiveMaker.dll" 接口名="GAL" 1 />
+
+	<文件 文件名="yukinouta.exe" 插件="0" 起始="1C3000" 结束="23873CE" />
+
+</游戏脚本>

@@ -1,0 +1,10 @@
+// exnllpk.cpp, v1.22 2013/05/04
+// coded by asmodean
+
+// contact: 
+//   web:   http://asmodean.reverse.net
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+
+// This tool extracts files from LPK1 (*.lpk) archives used by various Navel
+// games.  Use elg2bmp to convert the ELG (*.elg) images.

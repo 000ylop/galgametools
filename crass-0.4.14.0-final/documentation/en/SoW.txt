@@ -1,0 +1,12 @@
+﻿Name:		SoW
+Description:	
+Archive:	.aod(weak magic)
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	0.9.0
+Status:	        Alpha
+
+【TODO】
+support .AIM.
+
+【ChangeLog】
+2009-07-05 16:09 ver 0.9.0 1st version released

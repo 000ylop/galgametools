@@ -1,0 +1,18 @@
+﻿Name:		GameSys
+Description:		
+Archive:	.pak(no magic)
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.0.3
+Status:	        Final
+
+【TODO】
+support .mio
+
+【注意事项】
+when extracting must specify "-u GameSys" parameter.
+
+【ChangeLog】
+2008-11-23 12:47 ver 1.0.3 ignored 0-length resource
+2008-10-19 14:44 ver 1.0.2 supported extracting .dow resource 
+2008-04-19 13:40 ver 1.0.1 marked to no magic due to clash with hcsystem plug-in 
+2008-02-26 22:57 ver 1.0.0 1st version released

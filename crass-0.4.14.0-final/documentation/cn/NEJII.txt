@@ -1,0 +1,11 @@
+﻿名称：		NEJII
+描述：		
+封包：		.cdt .vdt .ovd .pdt .dat
+作者：		痴汉公贼 (glanser@163.com)
+版本：		1.0.2
+成熟度：	正式版
+
+【ChangeLog】
+2009-03-21 14:02 ver 1.0.2 支持mask图的提取
+2009-03-08 14:51 ver 1.0.1 支持32 bit bmp alpha blending；支持biCompression3的32位bmp的提取
+2007-09-02 23:25 ver 1.0.0 第一版发布

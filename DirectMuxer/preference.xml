@@ -1,0 +1,21 @@
+<Preference>
+    <AccessPath>E:\hentai\cg\_HAIBA~1\_HCG__~1\hanakoi\visual\psd</AccessPath>
+    <ImagePreview>true</ImagePreview>
+    <GroupPermutation>true</GroupPermutation>
+    <NamingSchema></NamingSchema>
+    <NamingSchema>_</NamingSchema>
+    <NamingSchema></NamingSchema>
+    <OutputPath>E:\新建文件夹\新建文件夹 (2)</OutputPath>
+    <AutoCapture>true</AutoCapture>
+    <MatchPattern>0</MatchPattern>
+    <ResizeCanvas>true</ResizeCanvas>
+    <ConcurrentComputation>true</ConcurrentComputation>
+    <ThreadNumber>8</ThreadNumber>
+    <ErasePattern>true</ErasePattern>
+    <PreservationMode>2</PreservationMode>
+    <PremultipliedAlpha>false</PremultipliedAlpha>
+    <ColorKey>65280</ColorKey>
+    <OffsetPrediction>true</OffsetPrediction>
+    <PhotoshopPreprocessing>true</PhotoshopPreprocessing>
+    <LayerType>0</LayerType>
+</Preference>

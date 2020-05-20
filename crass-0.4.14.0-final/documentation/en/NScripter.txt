@@ -1,0 +1,44 @@
+﻿Name:		NScripter
+Description:	game system developed by 高橋直樹 (http://www.nscripter.com/)
+Archive:	.nsa(weak magic) nscript.dat
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.2.1
+Status:	        Final
+
+【Notice】
+·A few games used special encryption. To extract from these games, parameter "game" must be specified.
+	·game=1: 侵蝕2 ～淫魔の生贄～
+	·game=2: 君が主で執事が俺で
+	·game=3: 魔法少女マナ Little Witch Mana
+	·game=4: スレイブorラバーズ
+	·game=1 or 5: 触装天使セリカ
+	·game=6: キスより甘くて深いもの
+	·game=7: 超外道勇者
+	·game=8: めっちゃママ
+	·game=9: 新妻×義母 ～花嫁は女子校生～
+	·game=512: .fuckコンプリーツ
+
+【Sample】
+Take game "侵蝕2 ～淫魔の生贄～" as an example:
+Extract scripts:
+crage -p E:\sinsyoku2\nscript.dat -u nscripter -O game=1
+notice: if the extracted script.txt looks messy, it means all data is encrypted and thus you have to upload nscript.dat and exe program so as to let me deal with this case.
+Extract arc.nsa:
+crage -p E:\sinsyoku2\arc.nsa -O game=1
+notice: not at all .nsa is encrypted. at first try to extract without game parameter, for .nsa in extracion failure, re-extract with game parameter.
+
+【ChangeLog】
+2009-06-20 14:48 ver 1.2.1 support the game "新妻×義母 ～花嫁は女子校生～"
+2009-02-08 10:13 ver 1.2.0 supported extracting game "めっちゃママ"
+2008-12-30 19:37 ver 1.1.9 appiled case insensitive when extracting nscript.dat
+2008-12-13 11:16 ver 1.1.8 supported extracting game "キスより甘くて深いもの"; supported recognizing encrypted and non-encrypted .nsa
+2008-11-22 09:15 ver 1.1.7 supported extracting game "キスより甘くて深いもの 体験版"
+2008-10-26 20:30 ver 1.1.6 supported extracting game "触装天使セリカ"
+2008-09-27 20:24 ver 1.1.5 supported extracting game "スレイブorラバーズ"
+2008-09-13 21:05 ver 1.1.4 supported extracting game "魔法少女マナ Little Witch Mana"
+2008-05-20 09:44 ver 1.1.3 supported extracting game ".fuckコンプリーツ"
+2008-03-13 21:41 ver 1.1.1 processed specially for game "妹逆レイプ～淫らなつぼみの誘い" plaintext script
+2008-03-13 19:00 ver 1.1.0 supported special encrypted game "君が主で執事が俺で"
+2007-12-17 23:36 ver 1.0.2 ignored invalid 0-length resource
+2007-12-03 22:11 ver 1.0.1 supported "侵蝕2 ～淫魔の生贄～" special encryption mode
+2007-11-03 18:41 ver 1.0.0 1st version released

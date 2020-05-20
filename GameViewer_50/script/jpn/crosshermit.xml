@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="ManPAK.upk"                   0 />
+	<插件 文件名="CrossHermit.dll" 接口名="BIN" 1 />
+	<插件 文件名="CrossHermit.dll" 接口名="DX"  2 />
+
+	<文件 文件名="DATA\ADV\BIN\*.BIN" 插件="1" />
+
+	<文件 文件名="DATA\ALLRESULT\ALLRESULT.BIN" 插件="1" />
+
+	<文件 文件名="DATA\ALLRESULT\ANMALLRESULT.BIN" 插件="0" 数据文件="crosshermit\ANMALLRESULT.BIN.ini" />
+
+	<文件 文件名="DATA\DXANIM\01E.BIN"   插件="0" 数据文件="crosshermit\01E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\02E.BIN"   插件="0" 数据文件="crosshermit\02E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\03E.BIN"   插件="0" 数据文件="crosshermit\03E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\04E.BIN"   插件="0" 数据文件="crosshermit\04E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\05E.BIN"   插件="0" 数据文件="crosshermit\05E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\06E.BIN"   插件="0" 数据文件="crosshermit\06E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\07E.BIN"   插件="0" 数据文件="crosshermit\07E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\08E.BIN"   插件="0" 数据文件="crosshermit\08E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\09E.BIN"   插件="0" 数据文件="crosshermit\09E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\10E.BIN"   插件="0" 数据文件="crosshermit\10E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\11E.BIN"   插件="0" 数据文件="crosshermit\11E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\12E.BIN"   插件="0" 数据文件="crosshermit\12E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\13E.BIN"   插件="0" 数据文件="crosshermit\13E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\14E.BIN"   插件="0" 数据文件="crosshermit\14E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\15E.BIN"   插件="0" 数据文件="crosshermit\15E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\17E.BIN"   插件="0" 数据文件="crosshermit\17E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\18E.BIN"   插件="0" 数据文件="crosshermit\18E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\19E.BIN"   插件="0" 数据文件="crosshermit\19E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\20E.BIN"   插件="0" 数据文件="crosshermit\20E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\21E.BIN"   插件="0" 数据文件="crosshermit\21E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\22E.BIN"   插件="0" 数据文件="crosshermit\22E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\24E.BIN"   插件="0" 数据文件="crosshermit\24E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\25E.BIN"   插件="0" 数据文件="crosshermit\25E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\26E.BIN"   插件="0" 数据文件="crosshermit\26E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\31E.BIN"   插件="0" 数据文件="crosshermit\31E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\33E.BIN"   插件="0" 数据文件="crosshermit\33E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\37E.BIN"   插件="0" 数据文件="crosshermit\37E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\38E.BIN"   插件="0" 数据文件="crosshermit\38E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\44E_0.BIN" 插件="0" 数据文件="crosshermit\44E_0.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\44E_1.BIN" 插件="0" 数据文件="crosshermit\44E_1.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\44E_2.BIN" 插件="0" 数据文件="crosshermit\44E_2.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\44E_3.BIN" 插件="0" 数据文件="crosshermit\44E_3.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\45E.BIN"   插件="0" 数据文件="crosshermit\45E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\46E.BIN"   插件="0" 数据文件="crosshermit\46E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\47E_0.BIN" 插件="0" 数据文件="crosshermit\47E_0.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\47E_1.BIN" 插件="0" 数据文件="crosshermit\47E_1.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\48E_0.BIN" 插件="0" 数据文件="crosshermit\48E_0.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\48E_1.BIN" 插件="0" 数据文件="crosshermit\48E_1.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\50E.BIN"   插件="0" 数据文件="crosshermit\50E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\51E.BIN"   插件="0" 数据文件="crosshermit\51E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\52E.BIN"   插件="0" 数据文件="crosshermit\52E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\53E.BIN"   插件="0" 数据文件="crosshermit\53E.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\A0A.BIN"   插件="0" 数据文件="crosshermit\A0A.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\A1A.BIN"   插件="0" 数据文件="crosshermit\A1A.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\B0A.BIN"   插件="0" 数据文件="crosshermit\B0A.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\B1A.BIN"   插件="0" 数据文件="crosshermit\B1A.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\C0A.BIN"   插件="0" 数据文件="crosshermit\C0A.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\C1A.BIN"   插件="0" 数据文件="crosshermit\C1A.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\D0A.BIN"   插件="0" 数据文件="crosshermit\D0A.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\D1A.BIN"   插件="0" 数据文件="crosshermit\D1A.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\E0A.BIN"   插件="0" 数据文件="crosshermit\E0A.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\E1A.BIN"   插件="0" 数据文件="crosshermit\E1A.BIN.ini" />
+	<文件 文件名="DATA\DXANIM\EFCT.BIN"  插件="0" 数据文件="crosshermit\EFCT.BIN.ini" />
+
+	<文件 文件名="DATA\ED\*.BIN" 插件="1" />
+
+	<文件 文件名="DATA\MENU\ANMHAN.BIN" 插件="0" 数据文件="crosshermit\ANMHAN.BIN.ini" />
+
+	<文件 文件名="DATA\MENU\HANDATA.BIN"   插件="1" />
+	<文件 文件名="DATA\MENU\KOJINDATA.BIN" 插件="1" />
+
+	<文件 文件名="DATA\OP\OPDATA2.BIN" 插件="0" 数据文件="crosshermit\OPDATA2.BIN.ini" />
+
+	<文件 文件名="DATA\OP\DEMODATA.BIN"         插件="1" />
+	<文件 文件名="DATA\OP\OPDATA.BIN"           插件="1" />
+	<文件 文件名="DATA\OP\OPDATA_256.BIN"       插件="1" />
+	<文件 文件名="DATA\SLPROG\*.BIN"            插件="1" />
+	<文件 文件名="DATA\TACTICS\*.BIN"           插件="1" />
+	<文件 文件名="DATA\TACTICS\TACTSTART\*.BIN" 插件="1" />
+	<文件 文件名="DATA\TACTICSRESULT\*.BIN"     插件="1" />
+	<文件 文件名="DATA\WORKROOM\*.BIN"          插件="1" />
+
+	<文件 文件名="DATA\TACTICS\MAP\*.BMP" />
+
+</游戏脚本>

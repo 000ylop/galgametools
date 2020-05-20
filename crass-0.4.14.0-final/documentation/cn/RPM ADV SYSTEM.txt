@@ -1,0 +1,95 @@
+﻿名称：		RPM ADV SYSTEM
+描述：		rpm ENTERTAINMENT CREATIONAL STUDIO开发的系统
+封包：		.arc .bmp
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.2.1
+成熟度：	正式版
+
+【注意事项】
+本插件试图使用启发式算法自动猜测解密code，但如果猜测失败，则
+提取时需要指定code参数和old(仅老游戏使用)参数。具体使用方法见下。
+注意：如果提取的封包是“system.arc”或者“instdata.arc”，可以不指定它们的code参数，因为它们的密钥总是“while”和“inst”。
+
+以下是已知的密码列表：
+【密码列表】(区分大小写)
+·けもぱにっ! 
+使用code=kemo参数提取
+·姦染3 ～首都崩壊～
+使用code=Kan3参数提取
+·狂イク指導 ～大和撫子再生計画
+使用code=kiku参数提取
+·萌日記
+使用code=moe参数提取
+·欲望の牢獄
+使用code=pri参数提取
+·侍ジュピター
+使用code=JUPITER参数提取
+·シャッターチャンス・ラブ EX
+使用code=SclEx参数提取
+·Princess Frontier
+使用code=PF参数提取
+·叔母の寝室(叔母の寝室 DDM版)
+使用code=OBA参数提取
+·欲望の王国
+使用code=kingdom参数提取
+·Witch'sSlave ～ワタシの脚をお舐め～
+使用code=wslave参数提取
+·姦染2 ～淫罪都市～
+使用code=Kan2参数提取
+·シャッターチャンス·ラブ
+使用code=Scl参数提取
+·Lesson～義母と叔母と女教師と～
+使用code=Tul参数提取
+·さくらリラクゼーション
+使用code=SAKURA-R参数提取
+·叔母の寝室
+使用code=OBA参数提取
+·真章 幻夢館
+使用code=HAMA参数提取
+·そらのいろ、みずのいろ
+使用code=HAMA参数提取
+·After...
+使用code=after,old参数提取
+·After... SweetKiss
+使用code=aftersk,old参数提取
+·黎明のラヴェンデュラ
+使用code=LAVENDURA参数提取
+·CROSS FIRE（クロスファイア）
+使用code=TEST参数提取
+·キミの声がきこえる
+使用code=KIMIKOE参数提取
+·ひだまり
+使用code=HIDAMARI参数提取
+·恋する乙女と守護の楯
+使用code=KOITATE参数提取
+·チュートリアルサマー
+使用code=SUMMER参数提取
+·こいちゅ！ ～恋に恋するかたおもい～
+使用code=KOICHU
+·姦染 ～淫欲の連鎖～
+使用code=KANSEN参数提取
+·もえべん ～いとこ（妹）はふすまごし～
+使用code=moeben,old参数提取
+·特命教師 瞳 DVDフルボイス
+使用code=HITOMI_D,old参数提取
+·ハ～トフル・デイズ～陽のあたる場所へ～
+使用code=rpm,old参数提取
+
+【提取示例】
+以游戏“年上Lesson～義母と叔母と女教師と～”为例：
+crage -u "rpm adv system" -O code=Tul -d "g:"
+
+以游戏“年上特命教師 瞳 DVDフルボイス“为例：
+crage -d "g:" -u "rpm adv system" -O old,code=HITOMI_D
+
+【ChangeLog】
+2009-03-04 23:14 ver 1.2.1 正确区分24位和32位bmp以便正常保存
+2009-03-03 22:23 ver 1.2.0 正确保存32位bmp
+2009-01-31 10:54 ver 1.1.1 优先使用code参数进行提取
+2008-11-29 19:48 ver 1.1.0 使用启发式算法自动猜测解密code
+2008-03-30 13:28 ver 1.0.5 修正了新版资源文件名也按照旧版处理的问题
+2008-03-15 13:45 ver 1.0.4 修正了长文件名导致扩展名被截短的问题
+2008-03-04 10:41 ver 1.0.3 修正了提取旧版本的“system.arc”和“instdata.arc”时提取错误的问题；修正了长资源文件名导致的保存失败的问题
+2008-02-21 16:00 ver 1.0.2 提取“system.arc”和“instdata.arc”时可以省略code参数
+2008-01-28 20:10 ver 1.0.1 支持.lib资源提取；支持.bmp封包文件提取
+2007-08-20 21:48 ver 1.0.0 第一版发布

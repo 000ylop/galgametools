@@ -1,0 +1,19 @@
+﻿Name:		NekoSDK
+Description:	system developed by ふわふわ猫しっぽ
+Archive:	.pak .dat(no magic)
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.0.6
+Status:	        Beta
+
+【Notice】
+·.alp is alpha info of corresponding namesake bmp, because it's not convenient for handling, no further processing
+·when extracting .dat resource, should specify "-u NekoSDK" parameter
+
+【ChangeLog】
+2009-06-30 22:41 ver 1.0.6 avoid allocating huge memory due to matching for the old .dat format
+2009-06-26 21:47 ver 1.0.5 match for the old .dat format in more strict method to avoid extracting by accident
+2009-06-10 20:57 ver 1.0.4 support extracting old .dat format
+2008-07-14 23:46 ver 1.0.3 fixed a error in incorrectly recongnizing .dat resource
+2008-07-10 19:10 ver 1.0.2 avoided extraction error in mpg file
+2008-05-20 19:37 ver 1.0.1 supported extracting .dat resource
+2008-02-03 15:00 ver 1.0.0 1st version released

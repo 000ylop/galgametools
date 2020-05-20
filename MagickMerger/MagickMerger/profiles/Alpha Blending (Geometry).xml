@@ -1,0 +1,9 @@
+<Profile>
+    <Name>Alpha Blending (Geometry)</Name>
+    <Setting>
+        <Match>(ev_\d+_\d+)_(\d+)_(\d+x\d+)_x(\d+)y(\d+)w\d+h\d+\.jpg</Match>
+        <Catch>$1_0_$3_base.jpg</Catch>
+        <Merge>$1_$2_$3.bmp</Merge>
+        <Command>composite [Match] [Catch] -geometry +$4+$5 [Merge]</Command>
+    </Setting>
+</Profile>

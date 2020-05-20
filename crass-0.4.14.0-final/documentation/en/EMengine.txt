@@ -1,0 +1,14 @@
+﻿Name:		EMengine
+Description:	ＥＭエンジン
+Archive:	.eme .rre .ecf .rcf emesys.dat rresys.dat
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	0.9.1
+Status:	        Alpha
+
+【TODO】
+·support extracting verion 1.0 and 1.1 archive  
+·support extracting type 5 resource  
+
+【ChangeLog】
+2008-11-02 11:08 ver 0.9.1 fixed a problem on extracted image which bpp=7 with deflection
+2008-02-01 22:28 ver 0.9.0 1st version released

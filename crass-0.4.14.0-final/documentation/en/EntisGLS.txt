@@ -1,0 +1,38 @@
+﻿Name:		EntisGLS
+Description:	Leshade Entis, Entis-soft(Entis Generalized Library Set version 3) (http://www.entis.jp/gls/)
+Archive:	.noa .dat .arc
+Author:		痴漢公賊 (glanser@163.com)
+Version:	0.5.0
+Status:		Alpha
+
+【TODO】
+·support extracting csx, mio, eri and mei format
+·support extracting compressed noa
+
+【Notice】
+·when extracting occuring crc prompt error, it's required to specify exe, game or pwd parameter.
+
+<exe parameter>
+specify exe file path of wanted extracted game.
+
+take the game "淫乳ファミレス～深夜の母乳サービスはいかが？" as example:
+
+crage -p "G:\Files\d05.dat" -O exe="G:\Files\fami.exe"
+
+d05.dat: 准备提取封包文件（含12个资源文件） ...
+d05.dat: 成功提取12 / 12 个资源文件 |
+
+EntisGLS：成功提取1个.dat封包文件
+
+<game parameter>
+specify name of wanted extracted game, see below
+
+·please use 萌衣☆Player to play extracted mio, eri and mei resource.
+download: http://www.entis.jp/eri/player/index.html
+
+【game support list for game parameter】
+NA
+
+【ChangeLog】
+2009-05-02 17:08 ver 0.5.0 complete the exe parameter to be used; support the decription for ERISACode.
+2008-12-21 18:25 ver 0.1.0 1st version released

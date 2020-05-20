@@ -1,0 +1,11 @@
+ucaenc 0.14
+ucaenc 0.14(修改)
+oggdec 1.?.?(修改)
+crass 0.4.14(仅krkr部分)
+imgdec 0.4
+
+ucienc 0.52
+更新检查地址  http://tieba.baidu.com/f?kw=dwing
+
+x264(10bit) core:122 r2184
+更新检查地址  http://x264.nl

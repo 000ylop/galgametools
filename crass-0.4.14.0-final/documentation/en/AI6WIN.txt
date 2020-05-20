@@ -1,0 +1,28 @@
+﻿Name:		AI6WIN
+Description:	game system developed by elf (http://www.elf-game.co.jp/)
+Archive:	.arc(no magic) .rmt .VSD .akb
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.1.2
+Status:	        Beta
+
+【Notice】
+·when extracting .arc archive must specify -u parameter.
+take game "媚肉の香り ネトリネトラレヤリヤラレ" for exsample:
+crage -p "J:\沍擏偺崄傝\layer.arc" -u AI6WIN -n
+
+layer.arc: 准备提取封包文件（含811个资源文件） ...
+layer.arc：成功提取811 / 811个资源文件  \
+
+AI6WIN：成功提取1个.arc封包文件文件 /
+
+【about composite】
+·akb composite(学園催眠隷奴 ～さっきまで、大嫌いだったはずなのに～)
+meaning of 4 number at end of filename of difference image file:
+position coordinate of the difference image in basic image(begining x coordinate - begining y coordinate_ending x coordinate - ending y coordinate).
+
+【ChangeLog】
+2009-05-01 14:24 ver 1.1.2 fix the error while extracting .VSD from movie.arc
+2008-12-06 20:34 ver 1.1.1 removed CG automatic composite of .akb image resource
+2008-??-?? 20:34 ver 1.1.0 supported CG automatic composite for .akb image resource
+2008-12-06 20:34 ver 1.0.1 supported extracting .akb image resource
+2008-03-29 09:51 ver 1.0.0 1st version released

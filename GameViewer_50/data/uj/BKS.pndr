@@ -1,0 +1,36 @@
+/*
+    Óî¾þ BKS ½â°ü½Å±¾
+*/
+
+if   [gv.state == gv.LOOP]
+[
+    str.sprintf [gv.name, "%06u.bik", idx];
+    gv.offset = io.readUint [fp];
+    gv.size   = io.readUint [fp];
+    idx   += 1;
+    count -= 1;
+    if [count == 0]
+    [
+        gv.end = 1;
+    ]
+    return;
+]
+elif [gv.state == gv.INIT]
+[
+    idx     = 0;
+    gv.end  = 0;
+    gv.name = mem.alloc [32];
+
+    fp = io.fopenA [gv.fileName, "rb"];
+    io.fseek [fp, 40, io.seekSet];
+    count = io.readUint [fp];
+    if [count == 0]
+    [
+        gv.end = 1;
+    ]
+]
+else
+[
+    mem.free [gv.name];
+    io.fclose [fp];
+]

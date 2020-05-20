@@ -1,0 +1,179 @@
+/*
+    FOX 文件拆解脚本
+*/
+
+api = """
+        <APIs>
+            <BIN file="kernel32.dll">
+                <stdcall name="FindFirstFileA" param="2" />
+                <stdcall name="FindNextFileA"  param="2" />
+                <stdcall name="FindClose"      param="1" />
+
+                <stdcall name="CreateDirectoryA"     param="2" />
+                <stdcall name="SetCurrentDirectoryA" param="1" />
+                <stdcall name="GetCurrentDirectoryA" param="2" />
+            </BIN>
+        </APIs>
+""";
+sys.importBin [sys.self, api];
+
+output  = "000000.XXXX";
+cur_dir = mem.alloc [1024];
+GetCurrentDirectoryA [1024, cur_dir];
+
+find_data = mem.alloc [4096];
+mem.fill [find_data, 0, 4096];
+
+goon = 1;
+find = FindFirstFileA ["*.*", find_data];
+
+while [(find != -1) & goon]
+[
+    fileName = find_data + 44;
+
+    fp = io.fopenA [fileName, "rb"];
+    if [fp == 0]
+    [
+        goon = FindNextFileA [find, find_data];
+        continue;
+    ]
+
+    if [io.readUint [fp] != 'FOX']
+    [
+        goon = FindNextFileA [find, find_data];
+        io.fclose [fp];
+        continue;
+    ]
+    io.fseek [fp, 12, io.seekSet];
+
+    count = io.readUint [fp];
+    if [count == 0]
+    [
+        goon = FindNextFileA [find, find_data];
+        io.fclose [fp];
+        continue;
+    ]
+
+    io.print [fileName, type.string];
+    io.print ["\r\n",   type.string];
+
+    i = 0;
+    do
+    [
+        t = mem.getByte [fileName, i];
+        if [t == '.']
+        [
+            break;
+        ]
+        i += 1;
+    ]
+    while [t != 0]
+
+    mem.setByte [fileName, i, 0];
+    CreateDirectoryA [fileName, 0];
+    SetCurrentDirectoryA [fileName];
+
+    offs = mem.alloc [count * 4];
+    size = mem.alloc [count * 4];
+    io.fseek [fp, 20, io.seekSet];
+
+    count -= 1;
+    for [i = 0; i < count; i += 1]
+    [
+        t = io.readUint [fp];
+        mem.setUint [size, i, t];
+        io.fseek [fp, 4, io.seekCur];
+
+        t = io.readUint [fp];
+        mem.setUint [offs, i, t];
+        io.fseek [fp, 4, io.seekCur];
+    ]
+    t = io.readUint [fp];
+    mem.setUint [size, i, t];
+    io.fseek [fp, 0, io.seekEnd];
+
+    t = io.ftell [fp];
+    mem.setUint [offs, i, t];
+
+    mem.fill [output, '0', 6];
+
+    count += 1;
+    for [i = 0; i < count; i += 1]
+    [
+        t1 = mem.getUint [offs, i];
+        t2 = mem.getUint [size, i];
+
+        if [(t1 == 0) | (t2 == 0)]
+        [
+            continue;
+        ]
+        io.fseek [fp, t1, io.seekSet];
+
+        tmp = mem.alloc [t2];
+        io.fread [tmp, t2, 1, fp];
+
+        t = mem.getUint [tmp, 0];
+        if   [t == 'ZCMP']
+        [
+            mem.setUint [output + 7, 0, 'Z'];
+        ]
+        elif [t == 'PSMF']
+        [
+            mem.setUint [output + 7, 0, 'MOV'];
+        ]
+        elif [t == 0x474E5089]
+        [
+            mem.setUint [output + 7, 0, 'PNG'];
+        ]
+        else
+        [
+            c1 = t       & 0xFF;
+            c2 = t >> 8  & 0xFF;
+            c3 = t >> 16 & 0xFF;
+            c4 = t >> 24;
+            if [(c4 == 0) & (c3 >= 'A') & (c3 <= 'Z') &
+                            (c2 >= 'A') & (c2 <= 'Z') &
+                            (c1 >= 'A') & (c1 <= 'Z')]
+            [
+                mem.setUint [output + 7, 0, t];
+            ]
+            else
+            [
+                mem.setUint [output + 7, 0, 'DAT'];
+            ]
+        ]
+        out = io.fopenA [output, "wb"];
+        io.fwrite [tmp, t2, 1, out];
+        mem.free  [tmp];
+        io.fclose [out];
+
+        if [mem.getByte [output, 5] == '9']
+        [
+            mem.setByte [output, 5, '0'];
+            if [mem.getByte [output, 4] == '9']
+            [
+                mem.setByte [output, 4, '0'];
+
+                t = mem.getByte [output, 3];
+                mem.setByte [output, 3, t + 1];
+            ]
+            else
+            [
+                t = mem.getByte [output, 4];
+                mem.setByte [output, 4, t + 1];
+            ]
+        ]
+        else
+        [
+            t = mem.getByte [output, 5];
+            mem.setByte [output, 5, t + 1];
+        ]
+    ]
+    io.fclose [fp];
+    mem.free [offs];
+    mem.free [size];
+    SetCurrentDirectoryA [cur_dir];
+
+    goon = FindNextFileA [find, find_data];
+]
+FindClose [find];

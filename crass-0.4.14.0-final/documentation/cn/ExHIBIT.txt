@@ -1,0 +1,63 @@
+﻿名称：		ExHIBIT
+描述：		RETOUCH开发的sketch/ExHIBIT系统（http://www.retouch.info/）
+封包：		.gyu
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.3.0
+成熟度：	开发版
+
+【TODO】
+1. 支持.v语音文件的提取。
+2. 支持.dlt视频文件的提取。
+3. 支持.rld文件的提取。
+
+【注意事项】
+·.dlt文件是动画文件，可以到http://www.retouch.info/去下载播放工具（delta.2.xx.zip）。
+·ExHIBIT系统在release版发布时允许将gyu内的key擦除，这将导致提取时因为缺少key而解图失败。通过指定“key”或者“dll”参数找到正确的key：
+－key参数（低级）：如果你知道gyu的key，可以利用该参数提取gyu。
+－dll参数（高级）：通常gyu的key内藏在“resident.dll”内，使用该参数指定该dll文件的路径。该方法仅适用于较新的系统。
+·空色の風琴的gyu key列在了“空色の風琴gyu_key_list.txt”文件里。该列表中key的顺序与游戏res/g/ev按名称排序后的顺序一一对应。
+
+【提取示例】
+以游戏“EVE ～new generation X～”为例：
+crage -p 1099.gyu -O dll="E:\Program Files\TYRELL LAB\EVEX\resident.dll"
+1099.gyu: 准备提取资源封包文件 ...
+1099.gyu：成功提取1 / 1个资源文件  |
+
+ExHIBIT：成功提取1个.gyu封包文件
+
+或者指定key提取：
+crage -p 1098.gyu -O key=9b165d9f
+1098.gyu: 准备提取资源封包文件 ...
+1098.gyu：成功提取1 / 1个资源文件  |
+
+ExHIBIT：成功提取1个.gyu封包文件
+
+【.gyu封包文件说明】
+    实际类型是无目录的封包资源文件。
+    元数据根是bmp。
+
+    	首部：
+    		s8 magic[4];		// "GYU\x1a"
+		u32 mode;		// 位段，分高16位和低16位2组。bit0 - 是否有alpha数据；bit1 - alpha取值[0,255](默认是[0,16])；bit24 - 无压缩；bit25 - lzss压缩；bit26 - lzss压缩：
+		u32 key;		// MT19937伪随机数生成用种子（-1表示不使用MT19937伪随机数生成算法解密）
+		u32 bits_count;		// 色深
+		u32 width;		// 宽度
+		u32 height;		// 高度
+		u32 length;		// 数据长度
+		u32 alpha_length;	// alpha数据长度
+		u32 palette_colors;	// 调色版颜色数
+	调色版数据：（如果有的话）
+		没有压缩，每象素对应4字节。
+	颜色数据：
+		编码方式依据mode字段。
+	alpha数据长度：（如果有的话）
+		编码方式依据mode字段。
+
+【ChangeLog】
+2009-06-21 21:23 ver 0.3.0 支持新的gyu压缩模式
+2009-03-07 14:13 ver 0.2.2 导出合理的alpha通道；支持32位bmp alpha bledning；支持alpha大区间
+2008-03-15 21:54 ver 0.2.1 修正了提取调色版颜色数非256的bmp的问题
+2007-10-27 02:06 ver 0.2.0 修改插件名为ExHIBIT
+2007-06-02 00:43 ver 0.0.4 修正了注册失败的错误
+2007-05-30 22:56 ver 0.0.3 修改插件名为sketch
+2007-03-22 22:47 ver 0.0.2 不支持音频文件和dlt导出

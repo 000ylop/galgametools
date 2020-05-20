@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="ManPAK.upk" 0 />
+
+	<文件 文件名="Gall0.dat" 插件="0" 数据文件="nurse\Gall0.dat.ini" />
+	<文件 文件名="Gall1.dat" 插件="0" 数据文件="nurse\Gall1.dat.ini" />
+	<文件 文件名="Gall2.dat" 插件="0" 数据文件="nurse\Gall2.dat.ini" />
+	<文件 文件名="Pall0.dat" 插件="0" 数据文件="nurse\Pall0.dat.ini" />
+	<文件 文件名="Pall1.dat" 插件="0" 数据文件="nurse\Pall1.dat.ini" />
+	<文件 文件名="Pall2.dat" 插件="0" 数据文件="nurse\Pall2.dat.ini" />
+
+</游戏脚本>

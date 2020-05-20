@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="Iks.dll" 接口名="PAK" 0 />
+	<插件 文件名="Iks.dll" 接口名="GRP" 1 />
+
+	<文件 文件名="DAT\GADAT0??.PAK" 插件="0" 数据文件="IksBase.dll" />
+
+</游戏脚本>

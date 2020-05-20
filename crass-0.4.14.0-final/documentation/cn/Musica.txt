@@ -1,0 +1,24 @@
+﻿名称：		Musica
+描述：		minori开发的Media Unification System Interpreter and Compiler Authorization
+封包：		.paz
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.3.4
+成熟度：	开发版
+
+【参考文档】
+·《以ef - the first tale. / Trial Version中资源文件的加密的解析简单介绍几个工具》
+作者：rednaxela
+http://bbs.sumisora.com/read.php?tid=208251
+·《ef - the first tale资源提取器(再次更新)＋简单教程》
+作者：kid23
+http://bbs.sumisora.com/read.php?tid=212672
+·《关于ef - the first tale 的破解问题》
+作者：kkaien
+http://bbs.sumisora.com/read.php?tid=10874064
+
+【ChangeLog】
+2008-05-31 13:28 ver 0.3.4 支持“ef - the latter tale.”
+2008-04-27 00:10 ver 0.3.3 支持“ef - the latter tale. TG Ver”
+2008-04-25 22:30 ver 0.3.2 支持“ef -the latter tale.- 体験版”
+2008-01-06 15:24 ver 0.3.1 参考了rednaxela、kid32和kkaien三人的技术文章，修正了一些错误，支持更多的游戏
+2008-01-03 20:55 ver 0.3.0 第一版发布(参考SDK源码)

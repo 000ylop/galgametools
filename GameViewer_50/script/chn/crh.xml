@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<手动指定文件插件 />
+
+	<插件 文件名="ScrPAK.upk"              0 />
+	<插件 文件名="ManPAK.upk"              1 />
+	<插件 文件名="UjLib.dll"  接口名="MAP" 2 />
+	<插件 文件名="UjLib.dll"  接口名="DDX" 3 />
+	<插件 文件名="UjLib.dll"  接口名="LZH" 4 />
+	<插件 文件名="UjLib.dll"  接口名="BIN" 5 />
+
+	<文件 文件名="Image\*.IMG" 插件="0" 数据文件="uj\DDX.pndr" />
+	<文件 文件名="Image\*.fbg" 插件="0" 数据文件="uj\FBG.pndr" />
+	<文件 文件名="Image\*.BKS" 插件="0" 数据文件="uj\BKS.pndr" />
+
+	<文件 文件名="SP\*.IMG" 插件="0" 数据文件="uj\DDX.pndr" />
+	<文件 文件名="SP\*.fbg" 插件="0" 数据文件="uj\FBG.pndr" />
+	<文件 文件名="SP\*.BKS" 插件="0" 数据文件="uj\BKS.pndr" />
+
+	<文件 文件名="CrhData.Bin"   插件="1" 数据文件="uj\crh_data.ini" />
+	<文件 文件名="CrhImage.Bin"  插件="1" 数据文件="uj\crh_image.ini" />
+	<文件 文件名="CrhSPData.Bin" 插件="1" 数据文件="uj\crhsp_data.ini" />
+	<文件 文件名="CrhImage.Bin"  插件="1" 数据文件="uj\CrhImage.Bin.ini" />
+
+	<文件 文件名="*.MAP"     插件="2" 数据文件="16" />
+	<文件 文件名="MAP\*.MAP" 插件="2" 数据文件="16" />
+
+	<文件 文件名="*.DDX" 插件="3" />
+	<文件 文件名="*.LZH" 插件="4" 数据文件="uj\lzh.ini" />
+
+	<文件 文件名="Static.Img" 插件="5" 数据文件="uj\lzh.ini" />
+
+	<文件 文件名="CrhRoleManHead"         插件="4" 数据文件="uj\lzh.ini" />
+	<文件 文件名="CrhDialogHeadImage"     插件="5" 数据文件="LZH" />
+	<文件 文件名="CrhRoleBodyImage"       插件="5" 数据文件="LZH" />
+	<文件 文件名="CrhManImage"            插件="5" 数据文件="LZH36" />
+	<文件 文件名="CrhItemImage"           插件="5" 数据文件="LZH2" />
+	<文件 文件名="CrhSmallItemImage"      插件="5" 数据文件="LZH2" />
+	<文件 文件名="CrhMartialArtIcon"      插件="5" 数据文件="LZH2" />
+	<文件 文件名="CrhMartialArtSmallIcon" 插件="5" 数据文件="LZH2" />
+	<文件 文件名="CrhAutoMapImage"        插件="5" 数据文件="LZH" />
+	<文件 文件名="CrhStaticPicture"       插件="5" 数据文件="uj\lzh.ini" />
+	<文件 文件名="CrhRoleManSmallHead"    插件="4" 数据文件="uj\lzh.ini" />
+
+	<文件 文件名="SPCrhRoleManHead"          插件="4" 数据文件="uj\lzh.ini" />
+	<文件 文件名="SPCrhDialogHeadImage"      插件="5" 数据文件="LZH" />
+	<文件 文件名="SPCrhRoleBodyImage"        插件="5" 数据文件="LZH" />
+	<文件 文件名="SPCrhManImage"             插件="5" 数据文件="LZH36" />
+	<文件 文件名="SPCrhItemImage"            插件="5" 数据文件="LZH2" />
+	<文件 文件名="SPCrhSmallItemImage"       插件="5" 数据文件="LZH2" />
+	<文件 文件名="SPCrhMartialArtIcon"       插件="5" 数据文件="LZH2" />
+	<文件 文件名="SPCrhMartialArtSmallIcon"  插件="5" 数据文件="LZH2" />
+	<文件 文件名="SPCrhAutoMapImage"         插件="5" 数据文件="LZH" />
+	<文件 文件名="SPCrhSpecialKillIcon"      插件="5" 数据文件="LZH2" />
+	<文件 文件名="SPCrhSpecialKillSmallIcon" 插件="5" 数据文件="LZH2" />
+	<文件 文件名="SPCrhStaticPicture"        插件="5" 数据文件="uj\lzh.ini" />
+
+</游戏脚本>

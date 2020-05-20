@@ -1,0 +1,10 @@
+﻿Name:		RAGE
+Description:	RAGE's Adventure Game Engine
+Archive:	.Pac
+Author:	        痴漢公賊 (glanser@163.com)
+Version:：	1.0.1
+Status:	        Beta
+
+【ChangeLog】
+2008-06-19 17:59 ver 1.0.1 matched extension case-sensitive no longer 
+2007-10-31 21:56 ver 1.0.0 1st version released

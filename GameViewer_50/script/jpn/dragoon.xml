@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="ScrPAK.upk" 0 />
+	<插件 文件名="BinImg.grp" 1 />
+	<插件 文件名="NARE.grp"   2 />
+
+	<文件 文件名="nare\Back.dat"    插件="0" 数据文件="dragoon\image.pndr" />
+	<文件 文件名="nare\Btlunit.dat" 插件="0" 数据文件="dragoon\image.pndr" />
+	<文件 文件名="nare\End.dat"     插件="0" 数据文件="dragoon\image.pndr" />
+	<文件 文件名="nare\Event.dat"   插件="0" 数据文件="dragoon\image.pndr" />
+	<文件 文件名="nare\Map.dat"     插件="0" 数据文件="dragoon\image.pndr" />
+	<文件 文件名="nare\Other.dat"   插件="0" 数据文件="dragoon\image.pndr" />
+	<文件 文件名="nare\Parts.dat"   插件="0" 数据文件="dragoon\image.pndr" />
+	<文件 文件名="nare\West1.dat"   插件="0" 数据文件="dragoon\image.pndr" />
+	<文件 文件名="nare\West1l.dat"  插件="0" 数据文件="dragoon\image.pndr" />
+	<文件 文件名="nare\West2.dat"   插件="0" 数据文件="dragoon\image.pndr" />
+	<文件 文件名="nare\West2l.dat"  插件="0" 数据文件="dragoon\image.pndr" />
+	<文件 文件名="nare\West3.dat"   插件="0" 数据文件="dragoon\image.pndr" />
+	<文件 文件名="nare\West3l.dat"  插件="0" 数据文件="dragoon\image.pndr" />
+	<文件 文件名="nare\West4.dat"   插件="0" 数据文件="dragoon\image.pndr" />
+	<文件 文件名="nare\West4l.dat"  插件="0" 数据文件="dragoon\image.pndr" />
+
+	<文件 文件名="BGM\*.dat" 插件="0" 数据文件="dragoon\sound.pndr" />
+
+	<文件 文件名="DATA\btsys.dat"    插件="1" 数据文件="dragoon\dragoon.ini" />
+	<文件 文件名="DATA\gameover.grp" 插件="1" 数据文件="dragoon\dragoon.ini" />
+	<文件 文件名="nare\nare.dat"     插件="1" 数据文件="dragoon\dragoon.ini" />
+
+</游戏脚本>

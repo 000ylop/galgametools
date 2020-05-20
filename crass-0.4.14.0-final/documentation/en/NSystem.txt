@@ -1,0 +1,44 @@
+﻿Name: 		NSystem
+Description: 	NSystem(conclude that IkuraGDL's next version)
+Archive: 	no extension
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	1.0.0
+Status: 	Beta
+MD5: 		8bfcaee0b7c063be1eddf9a53a611f27
+
+【NOTICE】
+Some games' MSD scripts are encrypted. To decrypt them, a decrypt string is needed. Specify the string by parameter "key_string". If the string is not specified, MSD scripts will not be decrypted.
+
+【EXAMPLE】
+Take game "秋のうららの外伝 まゆのおさな妻日記" as an example:
+·Extract encrypted msd archives under non-Japanese system: 
+crage -p l:\Msd -O key_string=廐偺偆傜傜偺奜揱丂傑備偺偍偝側嵢擔婰
+·Extract encrypted msd archives under Japanese system:
+crage -p l:\Msd -O key_string="秋のうららの外伝　まゆのおさな妻日記"
+
+【Decryption String】
+Generally, a decrypt string is the game's name.
+·秋のうららの外伝 まゆのおさな妻日記
+Non-Japanese system: "廐偺偆傜傜偺奜揱丂傑備偺偍偝側嵢擔婰"
+Japanese system: "秋のうららの外伝　まゆのおさな妻日記"
+·波の間に間に 外伝 裕美子さんの新婚日記
+Non-Japanese system: "桾旤巕偝傫偺怴崶擔婰"
+Japanese system: "裕美子さんの新婚日記"
+·その花びらにくちづけを
+Non-Japanese system: "偦偺壴傃傜偵偔偪偯偗傪"
+Japanese system: "その花びらにくちづけを"
+·秋のうららの～あかね色商店街～
+Non-Japanese system: "廐偺偆傜傜偺乣偁偐偹怓彜揦奨乣"
+Japanese system: "秋のうららの～あかね色商店街～"
+·母娘ねぶり ～誘う人妻_抱かれたい母娘～
+Non-Japanese system: "曣柡偹傇傝丂乣桿偆恖嵢丒書偐傟偨偄曣柡乣"
+Japanese system: "母娘ねぶり　～誘う人妻．抱かれたい母娘～"
+·おしえて巫女先生弐 外伝～ハーレム編
+non-japanese environment: "偍偟偊偰涋彈愭惗擉丒奜揱乣僴乕儗儉曇乣"
+japanese environment: "おしえて巫女先生弐．外伝～ハーレム編～"
+·孕ませ催眠プリンセス
+non-japanese environment: "泂傑偣嵜柊僾儕儞僙僗"
+japanese environment: "孕ませ催眠プリンセス"
+
+【ChangeLog】
+2007-10-14 19:22 ver 1.0.0 1st version released

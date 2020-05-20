@@ -1,0 +1,21 @@
+﻿名称：		Willadv
+描述：		Will开发的Willadv系统
+封包：		.arc（no magic）
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.2
+成熟度：	正式版
+
+【提取示例】
+crage -d "K:\WILL\Under the Moon体验版"  -u willadv
+Se.arc: 准备提取封包文件（含54个资源文件） ...
+Se.arc：成功提取54 / 54个资源文件  /
+
+Voice.arc: 准备提取封包文件（含801个资源文件） ...
+Voice.arc：成功提取801 / 801个资源文件  |
+
+Willadv：成功提取6个.arc封包文件
+
+【ChangeLog】
+2008-07-12 15:36 ver 1.0.2 支持.FIL资源的提取
+2007-11-28 22:55 ver 1.0.1 修正保存bmp时的长度错误（感谢pcicp）
+2007-10-25 22:04 ver 1.0.0 第一版发布

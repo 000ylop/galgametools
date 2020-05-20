@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<手动指定文件插件 />
+
+	<插件 文件名="ZIP.upk"                 0 />
+	<插件 文件名="ScrPAK.upk"              1 />
+	<插件 文件名="UjLib.dll"  接口名="PAK" 2 />
+	<插件 文件名="UjLib.dll"  接口名="IMG" 3 />
+	<插件 文件名="UjLib.dll"  接口名="PS2" 4 />
+	<插件 文件名="UjLib.dll"  接口名="LZH" 5 />
+	<插件 文件名="UjLib.dll"  接口名="BIN" 6 />
+
+	<文件 文件名="Pack\*.dat" 插件="0" />
+	<文件 文件名="Pack\*.pak" 插件="2" />
+
+	<文件 文件名="MAP\*.img"         插件="3" />
+	<文件 文件名="IMAGE\*.Bks"       插件="1" 数据文件="uj\BKS.pndr" />
+	<文件 文件名="Sound\Sound.bin"   插件="1" 数据文件="uj\Sound.pndr" />
+	<文件 文件名="Sound\spSound.bin" 插件="1" 数据文件="uj\Sound.pndr" />
+
+	<文件 文件名="*.PS2" 插件="4" />
+
+	<文件 文件名="AAHead.Hed"              插件="6" 数据文件="ZLIB" />
+	<文件 文件名="BottomLayer.Img"         插件="6" 数据文件="LZH1*" />
+	<文件 文件名="Head.HED"                插件="6" 数据文件="ZLIB" />
+	<文件 文件名="Items.img"               插件="6" 数据文件="LZH2" />
+	<文件 文件名="MartialArtIcon.IMG"      插件="6" 数据文件="LZH2" />
+	<文件 文件名="MartialArtSmallIcon.IMG" 插件="6" 数据文件="LZH2" />
+	<文件 文件名="PreviewMap.Img"          插件="6" 数据文件="LZH1*" />
+	<文件 文件名="RoleHead.Hed"            插件="5" 数据文件="uj\lzh.ini" />
+	<文件 文件名="RoleSmallHead.HED"       插件="5" 数据文件="uj\lzh.ini" />
+	<文件 文件名="SaveMap.Img"             插件="6" 数据文件="LZH1*" />
+	<文件 文件名="SmallITEMS.IMG"          插件="6" 数据文件="LZH2" />
+
+	<文件 文件名="MergeImage\BottomLayerSP.Img"    插件="6" 数据文件="LZH1*" />
+	<文件 文件名="MergeImage\Head.HED"             插件="6" 数据文件="ZLIB" />
+	<文件 文件名="MergeImage\ItemsSP.img"          插件="6" 数据文件="LZH2" />
+	<文件 文件名="MergeImage\MartialArtIconSP.IMG" 插件="6" 数据文件="LZH2" />
+	<文件 文件名="MergeImage\PreviewMapSP.Img"     插件="6" 数据文件="LZH1*" />
+	<文件 文件名="MergeImage\SaveMapSP.Img"        插件="6" 数据文件="LZH1*" />
+
+</游戏脚本>

@@ -1,0 +1,47 @@
+音量調節プラグイン
+
+・組み込み方
+
+　scenario\gvolume.ks をお手持ちの KAG3 のプロジェクトフォルダの scenario フォ
+ルダにコピーしてください。
+
+・使い方
+
+　シナリオの先頭などで
+
+@call storage=gvolume.ks
+
+　として gvolume.ks を呼び出すと、gvolmenu というタグが定義されます。
+　gvolume.ks は２回以上呼び出さないでください。マクロの定義と同じで、
+１回呼び出せば、それ以降、機能が使用可能になります。
+
+gvolmenu タグはメニューに「音量」メニューを追加し、その下に name タグで
+指定した名前のメニュー項目を作成します。
+
+gvolmenu の control 属性は bgm または数値を指定します。bgm を指定すると
+BGM の音量の制御を行います。0 や 1 などを指定すると、それで指定した
+効果音バッファの音量の制御を行います。効果音バッファを指定する場合は
+0,1,2 のようにカンマで区切って指定することができます。
+
+音量は bgmopt や seopt タグの gvolume タグで指定する「大域ボリューム」
+に設定されます。
+
+・例
+
+@call storage=gvolume.ks
+@gvolmenu name="BGM(&B)" control="bgm"
+@gvolmenu name="ボイス(&V)" control="0"
+@gvolmenu name="効果音(&S)" control="1,2"
+
+・音量がミュートの時に再生をしないようにするには
+
+BGM の場合は kag.bgm.buf1.volume2
+効果音の場合は kag.se[0].volume2 ( 0 は効果音バッファ番号 )
+
+が、ミュートの時に 0 になるので playse cond="kag.se[0].volume2!=0"
+のような指定をすれば再生されなくなります。
+
+
+・ライセンス
+
+KAG3に準じます。つまり、使用・改変自由です。

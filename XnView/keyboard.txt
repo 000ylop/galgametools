@@ -1,0 +1,133 @@
+Keyboard shortcuts:
+==================
+
+* View
+  ----
+
+Open                            Ctrl+O
+Open With Associated Program    F3
+Open With Associated Editor     F4
+View In Hexa                    Ctrl+H
+Browser                         Ctrl+B
+Reopen                          Ctrl+R
+Close                           Ctrl+W
+Print                           Ctrl+P
+Save                            Ctrl+S
+Save As                         Ctrl+Shift+S
+Quit                            Ctrl+Q
+
+Undo                            Ctrl+Z
+Cut                             Ctrl+X
+Copy                            Ctrl+C, Ctrl+Ins
+Paste                           Ctrl+V
+Canvas Size                     Shift+C
+Crop                            Shift+X
+Automatic crop                  Shift+Y
+Add Text                        Shift+T
+Red Eyes correction             Ctrl+E
+Import clipboard                Ctrl+Shift+V
+Select all                      Ctrl+A
+Selection - Swap width & height Tab
+Selection ratio - Free          A
+Selection ratio - Same as image D
+Custom Selection                C
+Copy into                       Alt+C
+Move into                       Alt+M
+Delete                          Del
+Rename                          F2
+Describe                        Ctrl+D
+Properties                      Alt+Enter
+Edit IPTC                       Ctrl+I
+Edit colormap                   Ctrl+M
+
+Resize                          Shift+S
+Rotate -90                      Shift+L
+Rotate 90                       Shift+R
+Rotate -90 lossless (jpeg)      Ctrl+Shift+L
+Rotate 90 lossless (jpeg)       Ctrl+Shift+R
+Vertical Flip                   Shift+V
+Horizontal Flip                 Shift+H
+Brightness/Contrast/...         Shift+E
+
+Adobe Photoshop Plugin          Ctrl+G
+
+Fullscreen                      F11, F
+Original Size                   *
+Fit window to image             Ctrl+T
+Fit image to window, all        /
+Zoom +                          +
+Zoom -                          -
+Lock Zoom                       Ctrl+NumPad /
+Next File                       PageDown
+Previous File                   PageUp
+First File                      Home
+Last File                       End
+Next Page                       Shift+PageDown
+Previous Page                   Shift+PageUp
+First Page                      Shift+Home
+Last Page                       Shift+End
+Quick Slide Show                Space, Pause
+ShowMask                        M
+Show information                I
+Tool Bar                        Ctrl+Shift+T
+Status Bar                      Ctrl+Shift+B
+Show Color Informations         Ctrl+Shift+I
+
+Search                          Ctrl+F
+SlideShow                       Ctrl+L
+Multiple Convert                Ctrl+U
+Sequence Convert                Ctrl+N
+Edit Multipage TIFF             Ctrl+J
+Options                         F12
+
+Help                            F1
+
+* Browser
+  -------
+
+Close                           Ctrl+W
+Print                           Ctrl+P
+Quit                            Ctrl+Q
+
+Copy                            Ctrl+C
+Paste                           Shift+C
+Copy image data                 Ctrl+Shift+C
+Import clipboard                Ctrl+Shift+V
+Select All                      Ctrl+A
+Copy into                       Alt+C
+Move into                       Alt+M
+Delete                          Del
+Rename                          F2
+New Folder                      F7
+Describe                        Ctrl+D
+Properties                      Alt+Enter, Ctrl+E
+
+Fullscreen                      F11
+Tool Bar                        Ctrl+Shift+T
+Folder Tree                     Ctrl+Shift+F
+Preview                         Ctrl+Shift+P
+Status Bar                      Ctrl+Shift+B
+Next Tab                        Ctrl+Tab, F8
+Previous Tab                    Ctrl+Shift+Tab
+Toggle Views                    F9
+Fit Image to Window             Ctrl+Shift+W
+Show text file                  Ctrl+Shift+A
+Show HexaView for unknown file  Ctrl+Shift+N
+Refresh                         Shift+R
+Stop                            Esc    
+
+Open                            Ctrl+O
+Open With Associated Program    F3
+Open With Associated Editor     F4
+Open in Hex mode or View In Hexa ? Ctrl+H
+Search                          Ctrl+F
+Slide Show                      Ctrl+L
+Start Slide Show                Pause
+Stop Slide Show                 Esc
+Quick Slide Show                Space, Pause
+Batch Convert                   Ctrl+U
+Page Web                        Ctrl+G
+Sequence Convert                Ctrl+N
+Options                         F12
+
+Help                            F1

@@ -1,0 +1,82 @@
+﻿Name:		CIRCUS
+Description:	cui plug-in for extracting Circus archive
+Archive:	.CRX .PCK(no magic) .pcm .DAT(no magic)
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	0.3.2
+Status:	        Alpha
+
+【TODO】
+1. Support extraction of type 1-3 .pcm files.
+2. True tears ～トゥルーティアーズ～'s AdvData\GRP\EVG\e1_07_a.crx caused an extraction error. Waiting for test results.
+
+【.CRX Resource Info】
+    meta-data is bmp(24-bit and 32-bit).
+    the file is used widely in Circus' game, mainly is used for storing various types of image datas.
+    
+    	header:
+    		s8 magic[4];	// "CRXG"
+		u32 zero;    	// all 0
+		u16 width;	// width
+		u16 height;	// height
+		u16 mode;	// 1 - no compression; 2 - zlib compression
+		u16 unknown1;	// unknown(if bigger than 1, file is invalid crx)
+		u32 color_type;	// 0 - 24-bit; 1 - 32bit; etc(usually be 0) - 8-bit
+	data:
+		on the basis of mode field. meta-data after decompressing is with encoding transformed bmp, first byte of every line means filtering transformation mode or RLE(0-3 means 4 filtering transformations, 4 means RLE)
+
+【.PCK Archive Info】
+    the .PCK is type of CRX archive with directory.
+    meta-data is CRX file.
+    internal CRX is continuous frame image, is used for producing anime effect.
+  
+    	header:
+		u32 entries;    // resource number
+	fast index segment:
+		u32 offset;	// resource data offset(count from file header)				
+		u32 length;	// resource data length  
+	index segment:
+		s8 name[56];	// resource name
+		u32 offset;	// resource data offset(count from file header)				
+		u32 length;	// resource data length  	
+	data:
+		CRX file.
+
+【.pcm Resource Info】
+    meta-data is PCM WAV file.
+    the file is used widely in Circus' game, mainly is used for storing various types of audio datas.
+    
+    	header:   
+		s8 magic[4];		// "XPCM"
+		u32 length;		// data length(actual meaning base on mode field)
+		u8 mode;		// 0 - PCM data; 1 - VQ compression + lz compression; 2 - ADPCM data; 3 - VQ compression + zlib compression
+		u8 parameter;		// when mode is 1 and 3, means using scale table.
+		u8 reserved[2];			
+		u16 wFormatTag; 	// about meaning of following field, please reference related WAVEFORMATEX description on MSDN.
+		u16 nChannels;
+		u32 nSamplesPerSec;
+		u32 nAvgBytesPerSec;
+		u16 nBlockAlign;
+		u16 wBitsPerSample;  
+	data:
+		on the basis of mode field. 
+
+【.DAT Archive Info】
+    the .DAT is type of pcm archive with directory.
+    meta-data is pcm file.
+    the file is used widely in Circus' game, mainly is used for storing character voice data(VOICE.DAT).
+    
+    	header:
+    		u32 entries;	// resource number(every item with 64 bytes)
+	index segemnt:
+		u8 name[60];	// resource name
+		u32 offset;	// resource offset(count from file header)	
+	data:
+		closely behind index segemnt. data content is mainly type 3 XPCM.	
+
+【ChangeLog】
+2008-04-24 12:06 ver 0.3.2 resumed extracting .DAT
+2008-04-03 12:48 ver 0.3.1 modified extraction mode about type 3 pcm
+2007-11-24 21:02 ver 0.3.0 supported extracting type 1 .CRX file; supported extracting type 2 CRX file in 8-bit
+2007-06-02 00:30 ver 0.2.1 closed temporarily function for extracing .dat because of .dat itself lacking definite magic to match and difficulty in extracting XPCM data at present 
+2007-05-02 11:53 ver 0.2.0 fixed a bug for detecting incorrectlly RLE's copying boundary when extracting crx
+2007-02-17 00:46 ver 0.1.0 1st version released, supported without probability of extracting type 1-3 .pcm 

@@ -1,0 +1,7 @@
+
+Function	GeneratePassword( String strFileName )
+
+	Return	strFileName
+
+EndFunc
+

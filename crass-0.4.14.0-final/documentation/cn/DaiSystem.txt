@@ -1,0 +1,68 @@
+﻿名称：		DaiSystem
+描述：		DaiSystem（DAI 氏）
+封包：		.pac
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.9.0
+成熟度：	开发版
+
+【TODO】
+支持解码控制字段的模式1。
+
+【.dat封包文件说明】
+    实际类型是有目录的封包资源文件。
+    元数据根据实际用途，是bmp、ogg、txt（脚本）等。
+    
+    	首部：
+		s8 magic[16];		// "DAI_SYSTEM_01000"
+		u16 index_entries;	// 资源文件数
+		u32 index_length;	// 索引段长度
+ 	索引段：需要解密；每个索引项变长
+		xxxx,yyyy,
+		xxxx表示资源文件的名字；yyyy是资源文件数据（从首部算起）；每个字段用“,”隔开。
+	数据：
+		紧接在索引段之后，格式可分为脚本类、cg类以及ogg类为：
+
+		【脚本类】
+	    	首部：
+			s8 magic[3];			// "HA0"
+			u8 parameter_length;		// 2字节
+			u32 uncomprlen;			// 实际资源数据长度
+			u8 mode[4];			// 解码控制字段（1 - ？；2 - 重排序；3 - 字节加密；4 - lz压缩）
+			u32 reserved;
+			s8 parameter[2];		// "OK"
+			u32 uncomprlen0;		// 实际资源数据长度
+			u32 flag_bitmap_bit_length;	// 有效的标志位位数
+			u32 flag_bitmap_byte_length;	// 标志位占用的字节数
+		数据：
+			紧接在首部之后，格式根据解码控制字段而定。
+
+		【cg类】总是24 bit。
+	    	首部：
+			s8 magic[3];			// "HA0"
+			u8 parameter_length;		// 5字节
+			u32 uncomprlen;			// 实际资源数据长度
+			u8 mode[4];			// 解码控制字段（1 - ；2 - 重排序；3 - 字节加密；4 - lz压缩）
+			u32 reserved;
+			u16 width;			// 图像宽度
+			u16 height;			// 图像高度
+			u8 have_alpha;			// 0 - 无alpha; 非0 - 有alpha
+			u32 uncomprlen0;		// 实际资源数据长度
+			u32 flag_bitmap_bit_length;	// 有效的标志位位数
+			u32 flag_bitmap_byte_length;	// 标志位占用的字节数
+		数据：
+			紧接在首部之后，具体格式根据解码控制字段而定。
+
+		【ogg类】
+	    	首部：
+			s8 magic[3];		// "HA0"
+			u8 parameter_length;	// 2字节
+			u32 uncomprlen;		// 实际资源数据长度
+			u8 mode[4];		// 总是0
+			u32 reserved;
+			s8 parameter[2];	// "OK"
+		数据：
+			紧接在首部之后；格式是ogg音频数据。
+
+【ChangeLog】
+2008-04-21 15:16 ver 0.9.0 支持解码控制字段模式2；重写了提取代码
+2007-05-07 04:11 ver 0.8.0 第一版发布

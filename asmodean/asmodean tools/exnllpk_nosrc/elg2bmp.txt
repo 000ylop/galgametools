@@ -1,0 +1,9 @@
+// elg2bmp.cpp, v1.1 2010/05/30
+// coded by asmodean
+
+// contact: 
+//   web:   http://asmodean.reverse.net
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+
+// This tool converts ELG images to bitmaps.

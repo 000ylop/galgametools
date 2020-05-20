@@ -1,0 +1,11 @@
+﻿名称：		AiSystem
+描述：		Studio AERO开发的系统AiSystem ver 0.01
+封包：		.ttd .bmp .stf(weak magic)
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.2
+成熟度：	测试版
+
+【ChangeLog】
+2009-03-13 21:31 ver 1.0.2 导出伪16位bmp为24位
+2008-03-18 08:20 ver 1.0.1 不再导出普通bmp资源
+2008-03-11 13:35 ver 1.0.0 第一版发布

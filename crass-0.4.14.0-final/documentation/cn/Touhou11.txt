@@ -1,0 +1,16 @@
+﻿名称：		Touhou11
+描述：		
+封包：		.dat
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.7.1
+成熟度：	正式版
+
+【注意事项】
+·提取thbgm.dat时要使用-l参数指定"th11.dat"文件的路径。
+·从thbgm.dat提取出来的音乐实际上在结尾处有和开头重复的部分，这是游戏为了循环播放BGM时产生平滑效果而故意增加的。
+
+【提取示例】
+crage -p "J:\Program Files\忋奀傾儕僗尪炠抍\搶曽抧楈揳\thbgm.dat" -l "J:\Program Files\忋奀傾儕僗尪炠抍\搶曽抧楈揳\th11.dat"
+
+【ChangeLog】
+2008-08-17 15:28 ver 0.7.1 第一版发布

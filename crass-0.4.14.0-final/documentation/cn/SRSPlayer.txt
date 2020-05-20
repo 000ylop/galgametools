@@ -1,0 +1,9 @@
+﻿名称：		SRSPlayer
+描述：		Sagiri no Miyako开发的游戏系统Sagiri Resource Set Gameplayer
+封包：		.pak
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.0
+成熟度：	正式版
+
+【ChangeLog】
+2009-01-18 15:04 ver 1.0.0 第一版发布

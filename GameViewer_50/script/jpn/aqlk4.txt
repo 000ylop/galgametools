@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="ETOILE.upk" 0 />
+	<插件 文件名="ManPAK.upk" 1 />
+
+	<文件 文件名="data\data00.pak" 插件="0" />
+	<文件 文件名="data\data01.pak" 插件="0" />
+	<文件 文件名="data\data02.pak" 插件="0" />
+	<文件 文件名="data\data03.pak" 插件="1" 数据文件="aqlk\aqlk4.ini" />
+	<文件 文件名="data\data04.pak" 插件="0" />
+	<文件 文件名="data\system.pak" 插件="0" />
+
+</游戏脚本>

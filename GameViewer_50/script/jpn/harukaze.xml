@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="TGL.dll" 接口名="IPAC" 0 />
+	<插件 文件名="TGL.dll" 接口名="CGR"  1 />
+	<插件 文件名="TGL.dll" 接口名="ACF"  2 />
+
+	<文件 文件名="Data\*.pak"       插件="0" />
+	<文件 文件名="Data\Bchr\*.pak"  插件="0" />
+	<文件 文件名="Data\Event\*.pak" 插件="0" />
+	<文件 文件名="Data\Field\*.pak" 插件="0" />
+
+	<文件 文件名="*.CGR"                插件="1" />
+	<文件 文件名="Data\Field\Eff\*.CGR" 插件="1" />
+
+	<文件 文件名="*.acf"                插件="2" />
+	<文件 文件名="Data\Event\*.acf"     插件="2" />
+	<文件 文件名="Data\Field\Eff\*.acf" 插件="2" />
+
+</游戏脚本>

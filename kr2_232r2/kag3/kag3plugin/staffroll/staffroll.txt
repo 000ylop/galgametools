@@ -1,0 +1,111 @@
+「スタッフロール」プラグイン
+
+　スタッフロールプラグインは、ゲームなどのエンディングのスタッフロールに良く
+ある、下から上に流れるテキストを簡単に実現するための物です。
+　縦に長いメッセージレイヤを準備し、そこに文字を書いて move タグで移動させて
+もよいのですが、文字以外の透明な部分に余分にメモリを使ってしまい、効率的でな
+いという問題があります。このプラグインは必要な分のメモリしか確保しないのでそ
+の点効率的です。
+　テキストが左から右に流れる、縦書きのスタッフロールもできます。
+
+・組み込み方
+
+　scenario\staffroll.ks をお手持ちの KAG3 のプロジェクトフォルダの各フォルダ
+にコピーしてください。
+
+・使い方
+
+　シナリオの先頭などで
+
+@call storage="staffroll.ks"
+
+　として staffroll.ks を呼び出すと、以下で説明するマクロが定義されます。
+　staffroll.ks は２回以上呼び出さないでください。マクロの定義と同じで、１回
+呼び出せば、それ以降、機能が使用可能になります。
+
+
+・staffrollinit
+
+　スタッフロールを初期化します。使う前に必ず記述してください。
+　この時点で、現在操作対象のメッセージレイヤが縦書きだった場合、縦書きのス
+タッフロールになります。
+　ただし、スタッフロールにメッセージレイヤは使わないので、メッセージレイヤは
+非表示にしておいてください。
+
+・staffrolltext
+
+　表示する文字を指定します。一行につき一つ、このタグを使用してください。
+　x 属性はその文字を表示する x 座標、y 属性はその文字を表示する y 座標です。
+　横書きの場合、y 座標は、前に staffrolltext や staffrollimage タグで指定し
+た位置からどれだけ下に表示するか、で指定します ( 最初にこのタグを使用すると
+きは そのまま y座標の値になります )。
+　縦書きの場合、x 座標と y 座標の値は逆になります。
+　text 属性は表示するテキストです。
+　すべてのスクロールさせるテキストは、staffrollstart よりも前にこのタグで指
+定する必要があります。
+　文字の大きさなどを変えたいときは font タグを使用してください。現在操作対象
+となっているメッセージレイヤの文字の設定に従います。
+
+・staffrollimage
+
+　文字ではなくて画像を表示します。ロゴを表示したいときなどに使用します。
+　x 属性と y 属性は staffrolltext タグと同じです。
+　storage 属性は、表示する画像を指定します。
+　すべてのスクロールさせる画像は、staffrollstart よりも前にこのタグで指定す
+る必要があります。
+
+・staffrollstart
+
+　スタッフロールのスクロールを開始します。
+　height 属性は、スクロールさせる高さまたは幅 ( ピクセル数単位 )、time 属性
+はスクロールさせる時間 ( ミリ秒単位 ) をしていします。
+　スタッフロールの終了を待つには wait タグなどを用いてください。
+
+・staffrolluninit
+
+　スタッフロールを終了させます。
+　使い終わったら必ず記述します。
+
+・注意
+
+　staffrollinit と staffrolluninit の間に、保存可能なラベル ( '|'付きのラベ
+ル ) を書かないでください。
+
+
+・例
+
+@call storage=staffroll.ks
+(略)
+@staffrollinit
+@font size=50 color=0xff0000
+@staffrolltext x=100 y=480 text="すたっふ"
+@resetfont
+@staffrolltext x=100 y=80 text="スタッフ１"
+@staffrolltext x=100 y=40 text="スタッフ２"
+@staffrolltext x=100 y=40 text="スタッフ３"
+@staffrolltext x=100 y=40 text="スタッフ４"
+@staffrolltext x=100 y=40 text="スタッフ５"
+@staffrolltext x=100 y=40 text="スタッフ６"
+@staffrolltext x=100 y=40 text="スタッフ７"
+@staffrolltext x=100 y=40 text="スタッフ８"
+@staffrolltext x=100 y=40 text="スタッフ９"
+@staffrolltext x=100 y=40 text="スタッフ１０"
+@staffrolltext x=100 y=40 text="スタッフ１１"
+@staffrolltext x=100 y=40 text="スタッフ１２"
+@staffrolltext x=100 y=40 text="スタッフ１３"
+@staffrolltext x=100 y=40 text="スタッフ１４"
+@staffrolltext x=100 y=40 text="スタッフ１５"
+@staffrolltext x=100 y=40 text="スタッフ１６"
+@staffrolltext x=100 y=40 text="スタッフ１７"
+@staffrolltext x=100 y=40 text="スタッフ１８"
+@staffrolltext x=100 y=40 text="スタッフ１９"
+@staffrolltext x=100 y=40 text="スタッフ２０"
+@staffrollimage x=100 y=40 storage=logo
+@staffrollstart height=1500 time=20000
+@wait time=20000
+@staffrolluninit
+
+
+・ライセンス
+
+KAG3に準じます。つまり、使用・改変自由です。

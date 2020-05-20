@@ -1,0 +1,16 @@
+﻿Name:		PJADV
+Description:	PajamasSoft Adventure Engine
+Archive:	.dat .pak .epa .bin
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.0.0
+Status:	        Alpha
+
+【TODO】
+Support of old-versioned .epa archives. (For example, ぱにっく！！けろけろ王国's extracted epas are completely different from new versions.)
+
+【Notice】
+·some .dat file is anime, can directly playback with media classic.
+
+【ChangeLog】
+2008-01-25 00:22 ver 1.0.1 added automatic decoding to encrypted textdata.bin; fixed a error in exporting wrong palette
+2007-09-01 13:11 ver 1.0.0 1st version released

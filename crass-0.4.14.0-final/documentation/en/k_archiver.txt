@@ -1,0 +1,12 @@
+﻿Name:		k_archiver
+Description:		
+Archive:	.arc
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	0.0.0
+Status:	        Alpha
+
+【Notice】
+this plug-in is only used to report a message to notice user to use tools\unarc.exe for extraction.
+
+【ChangeLog】
+2008-07-28 18:59 ver 0.0.0 1st version released

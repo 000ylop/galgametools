@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="MMV.grp"                 0 />
+	<插件 文件名="ZweiNa.dll" 接口名="BIN" 1 />
+	<插件 文件名="ZweiNa.dll" 接口名="IMG" 2 />
+
+	<文件 文件名="BIN.dat" 插件="1" />
+	<文件 文件名="wav.dat" 插件="1" />
+
+	<文件 文件名="Plugins\DATA.dat"  插件="1" />
+	<文件 文件名="Plugins\data1.dat" 插件="1" />
+
+</游戏脚本>

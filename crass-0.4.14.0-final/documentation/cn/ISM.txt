@@ -1,0 +1,9 @@
+﻿名称：		ISM
+描述：		ISM script engine（http://hp.vector.co.jp/authors/VA000482/）
+封包：		.isa
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.0
+成熟度：	开发版
+
+【ChangeLog】
+2007-4-27 10:36	ver 1.0.0 第一版发布

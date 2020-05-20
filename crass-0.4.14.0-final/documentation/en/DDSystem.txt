@@ -1,0 +1,11 @@
+﻿Name:		DDSystem
+Description:		
+Archive:	.dat
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.0.2
+Status: 	Beta
+
+【ChangeLog】
+2009-05-02 23:19 ver 1.0.2 support DDP2 and DDP3 format
+2008-07-04 17:03 ver 1.0.1 fixed a error in extracting uncompressed resource
+2008-06-12 20:58 ver 1.0.0 1st version released

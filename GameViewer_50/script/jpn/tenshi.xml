@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="TGL.dll" 接口名="MGF" 0 />
+	<插件 文件名="TGL.dll" 接口名="SGF" 1 />
+
+	<文件 文件名="Data\Ending\*.bmp"             插件="0" />
+	<文件 文件名="Data\Event\Graphic\*.bmp"      插件="0" />
+	<文件 文件名="Data\Event\Graphic\Bg\*.bmp"   插件="0" />
+	<文件 文件名="Data\Event\Graphic\Face\*.bmp" 插件="0" />
+	<文件 文件名="Data\Event\Sprite\*.sgf"       插件="1" />
+	<文件 文件名="Data\Field\Bmp\*.bmp"          插件="0" />
+	<文件 文件名="Data\Field\Map\*.bmp"          插件="0" />
+	<文件 文件名="Data\Field\Sprite\*.sgf"       插件="1" />
+	<文件 文件名="Data\Opening\Bg\*.bmp"         插件="0" />
+	<文件 文件名="Data\Opening\Sp\*.sgf"         插件="1" />
+	<文件 文件名="Data\Save\*.bmp"               插件="0" />
+	<文件 文件名="Data\Title\*.bmp"              插件="0" />
+	<文件 文件名="Data\Tune\*.bmp"               插件="0" />
+	<文件 文件名="Data\Tune\Tac\*.bmp"           插件="0" />
+
+</游戏脚本>

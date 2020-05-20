@@ -1,0 +1,22 @@
+﻿名称：		AI5WIN
+描述：		elf(http://www.elf-game.co.jp/)开发的游戏系统
+封包：		.arc(no magic) .VSD
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.1.0
+成熟度：	测试版
+
+【注意事项】
+·提取.arc封包文件需要指定-u参数提取。
+·可以指定game参数提取指定游戏的资源：
+以游戏“Dragon Knight 4”为例：
+crage -d g: -u ai5win -O game=DK4
+
+游戏名称列表：
+Dragon Knight 4：game=DK4
+らいむいろ流奇譚X cross ～恋、教ヘテクダサイ。～：game=LIME2
+
+·如果没有指定game参数或者待提取的游戏不在上述列表中，则会执行自动猜测操作（并非100％成功）来提取目标资源。如果发生提取错误，请到 http://tieba.baidu.com/f?kz=315671854 报告错误（注明游戏名称并上传一个最小的.arc文件）。
+
+【ChangeLog】
+ ver 1.1.0 在不指定game参数的情况下执行自动猜测模式；增加game=LIME2参数
+2008-03-29 19:22 ver 1.0.0 第一版发布

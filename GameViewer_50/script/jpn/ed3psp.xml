@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="ManPAK.upk" 0 />
+	<插件 文件名="RHG.grp"    1 />
+
+	<文件 文件名="F_BATTLE.BIN" 插件="0" 数据文件="ed3\F_BATTLE.BIN.ini" />
+	<文件 文件名="F_BGM_P.BIN"  插件="0" 数据文件="ed3\F_BGM_P.BIN.ini" />
+	<文件 文件名="F_CHR.BIN"    插件="0" 数据文件="ed3\F_CHR.BIN.ini" />
+	<文件 文件名="F_COMMON.BIN" 插件="0" 数据文件="ed3\F_COMMON.BIN.ini" />
+	<文件 文件名="F_DEBUG.BIN"  插件="0" 数据文件="ed3\F_DEBUG.BIN.ini" />
+	<文件 文件名="F_EFF_P.BIN"  插件="0" 数据文件="ed3\F_EFF_P.BIN.ini" />
+	<文件 文件名="F_FACE.BIN"   插件="0" 数据文件="ed3\F_FACE.BIN.ini" />
+	<文件 文件名="F_LOCAL.BIN"  插件="0" 数据文件="ed3\F_LOCAL.BIN.ini" />
+	<文件 文件名="F_MAP_P.BIN"  插件="0" 数据文件="ed3\F_MAP_P.BIN.ini" />
+	<文件 文件名="F_MOV.BIN"    插件="0" 数据文件="ed3\F_MOV.BIN.ini" />
+	<文件 文件名="F_SCN.BIN"    插件="0" 数据文件="ed3\F_SCN.BIN.ini" />
+	<文件 文件名="F_SE_P.BIN"   插件="0" 数据文件="ed3\F_SE_P.BIN.ini" />
+	<文件 文件名="F_WND.BIN"    插件="0" 数据文件="ed3\F_WND.BIN.ini" />
+
+</游戏脚本>

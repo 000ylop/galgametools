@@ -1,0 +1,26 @@
+﻿Name:		SLGSystem
+Description:	
+Archive:	.sz .alb .VOI(weak magic) .tig .SPD .SPL
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.0.3
+Status:	        Beta
+
+【Attention】
+specify .SPD and corresponding .SPL together to extract.
+For example:
+
+crage -p "Q:\gesen18\shihen2_trial_hard\voice\ne.SPD" -l "Q:\gesen18\shihen2_trial_hard\voice\ne.SPL"
+
+Start the extraction ...
+
+ne.SPD: start the extraction (containing 158 resources) ...
+ne.SPD: extracted resource 158 / 1588 -
+
+SLGSystem: extracted 1 packages
+
+
+【ChangeLog】
+2009-06-26 21:41 ver 1.0.3 fix the error while extracting from .alb, and can exactly export jpg image
+2009-06-10 20:21 ver 1.0.2 support extracting .SPD
+2008-11-20 20:24 ver 1.0.1 supported extracting .tig resource
+2007-12-30 00:13 ver 1.0.0 1st version released

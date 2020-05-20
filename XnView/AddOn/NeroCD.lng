@@ -1,0 +1,186 @@
+[en]
+-1=Nero burning...
+1013=Recorder
+1014=Speed
+1015=CD Type
+1005=Data (files)
+1007=Video CD (VCD)
+1008=Super Video CD (SVCD)
+1018=Remark: To be able to write animation, you must have the Nero MPEG2 encoder
+1004=Erase CD-RW (quick erase)
+1003=Eject CD after burn is complete
+1017=Name
+1016=Temporary Directory
+1009=Abort
+1=Burn
+2=Cancel
+
+[en-str]
+1000=Cannot connect to NeroAPI
+1001=You must have Nero v%d.%d.%d or more
+1002=No CD inserted
+1003=This CD recorder doesn't support CD-RW
+1004=This media is not rewritable
+1005=Erasing CD-RW. This will take %d seconds.
+1006=Error erasing the CD-RW
+1007=Creating movie...
+1008=Converting files...
+1009=CD sucessfully burned
+1010=Burn failed
+
+[fr]
+-1=Gravure 'Nero'
+1013=Graveur
+1014=Vitesse
+1015=Type cйdйrom
+1005=Donnйes (fichiers)
+1006=Donnйes (fichiers + XnView)
+1007=Cйdйrom Vidйo (VCD)
+1008=Cйdйrom Super Vidйo (SVCD)
+1018=Remarque: pour pouvoir йcrire une vidйo, vous devez avoir le codeur MPEG2 de Nero
+1004=Effacer CD-RW (rapide)
+1003=Йjecter le cйdйrom а la fin de la gravure
+1017=Nom
+1016=Rйpertoire temporaire
+1009=Arrкter
+1=Graver
+2=Annuler
+
+[fr-str]
+1000=Ne peut se connecter а NeroAPI
+1001=Vous devez avoir Nero v%d.%d.%d ou plus
+1002=Pas de cйdйrom insйrй
+1003=Ce graveur n'assume pas les cйdйroms rйinscriptibles
+1004=Ce support ne peut pas кtre modifiй
+1005=Effacement du cйdйrom rйinscriptible. Cela prendra %d secondes.
+1006=Erreur durant l'effacement du cйdйrom rйinscriptible
+1007=Crйation de l'animation...
+1008=Conversion des fichiers...
+1009=Cйdйrom correctement gravй
+1010=Йchec de gravure
+
+[de]
+-1=CD brennen (Nero Burning ROM)...
+1013=Rekorder
+1014=Geschwindigkeit
+1015=CD-Typ
+1005=Daten (Dateien)
+1006=Daten (Dateien + XnView)
+1007=Video-CD (VCD)
+1008=Super-Video-CD (SVCD)
+1018=Hinweis: Um ein Video auf CD zu brennen, benцtigen Sie den Nero MPEG2-Encoder
+1004=CD-RW lцschen (Schnelllцschung)
+1003=CD nach dem Brennen auswerfen
+1017=Bezeichnung
+1016=Temporдres Verzeichnis
+1009=Abbruch
+1=Brennen...
+2=Abbrechen
+
+[de-str]
+1000=Keine Verbindung zu Nero
+1001=Sie benцtigen Nero Version %d.%d.%d oder hцher
+1002=Keine CD eingelegt
+1003=Dieser CD-Rekorder unterstьtzt keine CD-RWs.
+1004=Diese CD ist nicht wiederbeschreibbar
+1005=CD-RW wird gelцscht. Bitte warten Sie %d Sekunden.
+1006=Fehler beim Lцschen der CD-RW
+1007=Erstelle Video...
+1008=Konvertiere Dateien...
+1009=Die CD wurde erfolgreich gebrannt
+1010=Fehler beim Brennen der CD
+
+[sv]
+-1=Brдnn CD (Nero Burning ROM)...
+1013=Brдnnare
+1014=Hastighet
+1015=CD-Typ
+1005=Data (filer)
+1006=Data (filer + XnView)
+1007=Video-CD (VCD)
+1008=Super-Video-CD (SVCD)
+1018=OBS: Fцr att en film pе en CD ska brдnnas mеste du ha Nero MPEG2-Encoder
+1004=Ta bort CD-RW (snabbt)
+1003=Mata ut CD efter brдnning
+1017=Namn
+1016=Temporдr lista
+1009=Stanna
+1=Brдnn...
+2=Avbryt
+
+[sv-str]
+1000=Ingen fцrbindelse med Nero
+1001=Du behцver Nero Version %d.%d.%d eller hцgre
+1002=Ingen CD insatt
+1003=Den hдr CD-brдnnaren stцdjer inte CD-RW.
+1004=Den hдr CD:n дr inte omskrivbar
+1005=CD-RW kommer tas bort. Var god vдnta %d sekunder.
+1006=Fel vid borttagning av CD-RW
+1007=Skapa film...
+1008=Konvertera filer...
+1009=CD:n lyckades brдnnas
+1010=Fel vid brдnning av CD
+
+[fi]
+-1=CD-Levyn poltto (Nero Burning ROM)...
+1013=Polttava asema
+1014=Nopeus
+1015=CD:n formaatti
+1005=Data-CD (tiedostot)
+1006=Data-CD (tiedostot + XnView)
+1007=Video-CD (VCD)
+1008=Super-Video-CD (SVCD)
+1018=Huomaa: Videon teko ei ole mahdollista, jos Nero MPEG2-Encoder ei ole asennettuna.
+1004=Tyhjennд CD-RW (Nopea tyhjennys)
+1003=Poista CD-levy polton jдlkeen
+1017=Nimi
+1016=Vдliaikainen kansio
+1009=Hylkдд
+1=Polta...
+2=Peruuta
+
+[fi-str]
+1000=Ei yhteyttд Neroon.
+1001=Tarvitset Nero-version %d.%d.%d tai uudemman.
+1002=CD-levyд ei ole asemassa
+1003=Tдmд CD-tallennin ei tue CD-RW-levyjд.
+1004=Tдmд CD ei ole pддllekirjoitettava.
+1005=CD-RW-levyд tyhjennetддn. Odota %d sekuntia.
+1006=Virhe CD-RW-levyд tyhjennettдessд.
+1007=Luo elokuva...
+1008=Muunnetaan tiedostoja
+1009=CD:n poltto onnistui
+1010=CD:n poltto epдonnistui
+
+
+[ru]
+-1=Запись в "Nero"
+1013=Рекордер:
+1014=Скорость:
+1015=Тип диска
+1005=Data (файлы)
+1006=Data (файлы + изображения из XnView)
+1007=Video CD (VCD)
+1008=Super Video CD (SVCD)
+1018=Примечание: Для возможности записи видео необходим Nero MPEG2 кодировщик
+1004=Стереть перезаписываемый RW-диск (быстрая очистка)
+1003=Извлечь диск после окончания прожига
+1017=Имя диска:
+1016=Временная папка:
+1009=Запись...
+1=Прервать
+2=Отмена
+
+[ru-str]
+1000=Невозможно запустить NeroAPI!
+1001=Необходимо иметь версию Nero v%d.%d.%d или новее...
+1002=Вставьте CD-диск!
+1003=Рекордер не поддерживает диски CD-RW!
+1004=Диск неперезаписываемый!
+1005=Очистка CD-RW. Это займёт %d секунд...
+1006=Ошибка очистки диска CD-RW!
+1007=Создание видео...
+1008=Конвертация файлов...
+1009=Диск успешно записан!
+1010=Ошибка записи!
+

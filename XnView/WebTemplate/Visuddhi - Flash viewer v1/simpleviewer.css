@@ -1,0 +1,44 @@
+/*
+'
+'**************************************
+' Visuddhi - http://visuddhi.com
+' Copyright (c) 2006 - Visuddhi
+' All right reserved. 
+'**************************************
+'
+*/
+
+html, body {
+	height: 99%;
+}
+body { 
+	font-family: verdana;
+	background-color:#fff;
+}
+img { 
+	border: 0;
+}
+td { 
+	vertical-align: top;
+}
+div.header { 
+	padding: 4px;
+	text-align: center;
+	font-size: 26px;
+	font-weight: bold;
+	font-variant: small-caps;
+	color: #555;
+	background: #eee url('images/sfondo.gif') repeat-x;
+	border: 1px solid #ddd;
+}
+
+div.footer {
+  margin: 20px;
+  text-align: center;
+}
+
+div#flashcontent {
+	width:100%;
+	height:80%;
+}
+

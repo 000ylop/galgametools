@@ -1,0 +1,4 @@
+# minimap
+0xC5BA06D5 1 1
+0x3DDF940B 1 1
+0x74E242E8 1 1

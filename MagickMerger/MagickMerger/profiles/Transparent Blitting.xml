@@ -1,0 +1,9 @@
+<Profile>
+    <Name>Transparent Blitting</Name>
+    <Setting>
+        <Match>(cg[A-Z]+\d+)([a-z])([A-Z])(\w+)\.bmp</Match>
+        <Catch>$1$3.bmp</Catch>
+        <Merge>$1$3$2$4.bmp</Merge>
+        <Command>convert [Catch] [Match] -transparent #00ff00 -composite +matte [Merge]</Command>
+    </Setting>
+</Profile>

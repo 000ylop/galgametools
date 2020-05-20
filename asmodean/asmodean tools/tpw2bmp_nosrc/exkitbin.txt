@@ -1,0 +1,11 @@
+// exkitbin.cpp, v1.0 2006/11/05
+// coded by asmodean
+
+// contact: 
+//   web:   http://plaza.rakuten.co.jp/asmodean
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+//   icq:   55244079
+
+// This tool cuts files from Kit's BIN format.
+// Decompress the graphics with tpw2bmp.

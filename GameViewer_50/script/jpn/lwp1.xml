@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="Hypatia.dll" 接口名="PAK" 0 />
+	<插件 文件名="Hypatia.dll" 接口名="WBM" 1 />
+
+	<文件 文件名="*.PAK"                插件="0" />
+	<文件 文件名="DATA\*.PAK"           插件="0" />
+	<文件 文件名="WAVE\SE\*.PAK"        插件="0" />
+	<文件 文件名="WAVE\INTM\*.PAK"      插件="0" />
+	<文件 文件名="COL8B\EVPACK\*.PAK"   插件="0" />
+	<文件 文件名="COL8B\MAPPACK\*.PAK"  插件="0" />
+	<文件 文件名="COL8B\PALFACE\*.PAK"  插件="0" />
+	<文件 文件名="COL24B\EVPACK\*.PAK"  插件="0" />
+	<文件 文件名="COL24B\MAPPACK\*.PAK" 插件="0" />
+	<文件 文件名="COL24B\PALFACE\*.PAK" 插件="0" />
+
+	<文件 文件名="*.Wbm"         插件="1" 数据文件="lwp1.act" />
+	<文件 文件名="noname_000023" 插件="1" 数据文件="lwp1.act" />
+	<文件 文件名="noname_000024" 插件="1" 数据文件="lwp1.act" />
+	<文件 文件名="noname_000025" 插件="1" 数据文件="lwp1.act" />
+	<文件 文件名="noname_000026" 插件="1" 数据文件="lwp1.act" />
+	<文件 文件名="noname_000027" 插件="1" 数据文件="lwp1.act" />
+
+</游戏脚本>

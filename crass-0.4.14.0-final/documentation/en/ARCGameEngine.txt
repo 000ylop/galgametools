@@ -1,0 +1,22 @@
+﻿Name:		ARCGameEngine
+Description:	gane system developed by ARC Software Laboratory
+Archive:	.ALF .BIN .AGF(weak magic)
+Author:		痴漢公賊(glanser@163.com)
+Version:	0.9.8
+Status: 	Alpha
+
+【TODO】
+·analyze .BIN script resource
+
+【Notice】
+·when extracting must specify "-l" parameter to import index file, index file usually is SYS3INI.BIN or SYS4INI.BIN under game folder.
+
+【Sample】
+take game "戦女神ZERO" for exsample:
+crage -d "M:\Eushully\戦女神ZERO" -l "M:\Eushully\戦女神ZERO\SYS4INI.BIN"
+
+【ChangeLog】
+2009-05-22 23:33 ver 0.9.8 support extracting 4 bit bmp image
+2009-02-27 20:33 ver 0.9.7 fix reading unaligned mask data
+2009-02-27 20:33 ver 0.9.6 supported extracting alpha
+2008-06-18 16:00 ver 0.9.5 1st version released

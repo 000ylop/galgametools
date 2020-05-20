@@ -1,0 +1,18 @@
+﻿Name: 		Xuse
+Description: 	ザウス【本醸造】(Xuse)
+Archive: 	.arc .xarc .bin(no magic) bv*(no magic) .4ag .wag .xsa(weak magic)
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	0.2.9
+Status: 	Alpha
+
+【TODO】
+support extracting old game
+
+【ChangeLog】
+2009-07-17 22:35 ver 0.2.9 fix the absolute path in 4ag again
+2009-05-20 20:05 ver 0.2.8 fix the absolute path in 4ag
+2009-04-04 23:33 ver 0.2.7 supported extracting the actual bmp from .bin
+2009-01-22 22:06 ver 0.2.6 supported extracting MikoArc、KOTORI and .wag format
+2008-07-27 10:23 ver 0.2.0 renamed plug-in to Xuse
+2007-08-15 21:08 ver 0.1.0 supported .4ag; fixed a error in extracting xarc and bv*
+2007-05-20 23:29 ver 0.0.2 1st version released

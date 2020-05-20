@@ -1,0 +1,16 @@
+﻿Name:		NekoBoard
+Description:	
+Archive:	.dat
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.1.3
+Status:	        Beta
+
+【Notice】
+.mng is png's enhanced image format, quite new，handling software much less than png's ones. suggest to view with XnView(i'm using version 1.92).
+
+【ChangeLog】
+2009-08-07 12:00 ver 1.1.3 avoid using mismatched method to extract archive
+2009-06-28 00:09 ver 1.1.2 decrypt the last byte to avoid the failure of crc checking for png file
+2009-03-14 12:58 ver 1.1.1 support new .dat format
+2008-07-06 14:21 ver 1.1.0 1st version released
+2008-02-29 17:06 ver 1.0.0 1st version released

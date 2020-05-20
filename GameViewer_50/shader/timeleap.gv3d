@@ -1,0 +1,179 @@
+/*
+    GameViewer TimeLeap ø®Õ®‰÷»æΩ≈±æ
+*/
+
+if   [gv.state == gv.LOOP]
+[
+/*
+    n = mem.getUint [gv.data, 0];
+    SetVSConstF [5, gv.data + 4, n * 4];
+*/
+    SetMVPMatToVS [gv.tran, 0];
+    SetDecl [gv.mesh];
+
+    DIP [gv.mesh];
+    return;
+]
+elif [gv.state == gv.LOAD]
+[
+    if   [gv.pass == 0]
+    [
+        // ªÊ÷∆»ÀŒÔ
+        SetRenderState [D3DRS_CULLMODE, D3DCULL_CCW];
+        SetViewToVS [4];
+        EnableVS [shader2];
+    ]
+    elif [gv.pass == 1]
+    [
+        // π¥±ﬂ
+        SetRenderState [D3DRS_CULLMODE, D3DCULL_CW];
+        mem.setUint [dir, 0, -1.0];
+        mem.setUint [dir, 1, -1.0];
+        mem.setUint [dir, 2, -1.0];
+        mem.setUint [dir, 3, -1.0];
+        SetVSConstF [4, dir, 1];
+        EnableVS [shader1];
+    ]
+    else
+    [
+        // π¥±ﬂ
+        mem.setUint [dir, 0, 1.0];
+        mem.setUint [dir, 1, 1.0];
+        mem.setUint [dir, 2, 1.0];
+        mem.setUint [dir, 3, 1.0];
+        SetVSConstF [4, dir, 1];
+        EnableVS [shader1];
+    ]
+    return;
+]
+elif [gv.state == gv.EXIT]
+[
+    SetRenderState [D3DRS_CULLMODE, D3DCULL_CCW];
+    DisableVS [shader1];
+    return;
+]
+elif [gv.state == gv.INIT]
+[
+    vs_line = """
+                struct  VS_INPUT1
+                {
+                        float4  Pos         :   POSITION;
+                        float4  Weights     :   BLENDWEIGHT;
+                        float4  WeightIndex :   COLOR0;
+                        float4  Normal      :   NORMAL;
+                        float2  Coord0      :   TEXCOORD0;
+                        float2  Weights2    :   TEXCOORD1;
+                };
+
+                struct  VS_OUTPUT1
+                {
+                        float4  Pos         :   POSITION;
+                        float4  Diffuse     :   COLOR0;
+                };
+
+                float4x4    MVP     :   register(c0);
+                float4      Nor     :   register(c4);
+                //float4x4    Bone[24]    :   register(c5);
+
+                VS_OUTPUT1  vs_main (VS_INPUT1 v)
+                {
+                    VS_OUTPUT1  Out;
+                /*
+                    int bi[4] =(int[4])D3DCOLORtoUBYTE4(v.WeightIndex);
+
+                    float4  pos = mul(v.Pos, Bone[bi[0]]) * v.Weights.x +
+                                  mul(v.Pos, Bone[bi[1]]) * v.Weights.y +
+                                  mul(v.Pos, Bone[bi[2]]) * v.Weights.z +
+                                  mul(v.Pos, Bone[bi[3]]) * v.Weights.w;
+
+                    float4  normal = mul(v.Normal, Bone[bi[0]]) * v.Weights.x +
+                                     mul(v.Normal, Bone[bi[1]]) * v.Weights.y +
+                                     mul(v.Normal, Bone[bi[2]]) * v.Weights.z +
+                                     mul(v.Normal, Bone[bi[3]]) * v.Weights.w;
+                */
+                    float4  pos = v.Pos + v.Normal * Nor * 0.003;
+
+                    Out.Pos = mul(pos, MVP);
+                    Out.Diffuse = float4(0, 0, 0, 1);
+                    return Out;
+                }
+    """;
+
+    vs_toon = """
+                struct  VS_INPUT1
+                {
+                        float4  Pos         :   POSITION;
+                        float4  Weights     :   BLENDWEIGHT;
+                        float4  WeightIndex :   COLOR0;
+                        float4  Normal      :   NORMAL;
+                        float2  Coord0      :   TEXCOORD0;
+                        float2  Weights2    :   TEXCOORD1;
+                };
+
+                struct  VS_OUTPUT1
+                {
+                        float4  Pos         :   POSITION;
+                        float4  Diffuse     :   COLOR0;
+                        float2  Coord0      :   TEXCOORD0;
+                        float2  Coord1      :   TEXCOORD1;
+                };
+
+                sampler s0 : register(s0);
+                sampler s1 : register(s1);
+                sampler s2 : register(s2);
+                sampler s3 : register(s3);
+
+                float4x4    MVP         :   register(c0);
+                float4      LightDir    :   register(c4);
+                //float4x4    Bone[24]    :   register(c5);
+
+                VS_OUTPUT1  vs_main (VS_INPUT1 v)
+                {
+                    VS_OUTPUT1  Out;
+                /*
+                    int bi[4] =(int[4])D3DCOLORtoUBYTE4(v.WeightIndex);
+
+                    float4  pos = mul(v.Pos, Bone[bi[0]]) * v.Weights.x +
+                                  mul(v.Pos, Bone[bi[1]]) * v.Weights.y +
+                                  mul(v.Pos, Bone[bi[2]]) * v.Weights.z +
+                                  mul(v.Pos, Bone[bi[3]]) * v.Weights.w;
+
+                    float4  normal = mul(v.Normal, Bone[bi[0]]) * v.Weights.x +
+                                     mul(v.Normal, Bone[bi[1]]) * v.Weights.y +
+                                     mul(v.Normal, Bone[bi[2]]) * v.Weights.z +
+                                     mul(v.Normal, Bone[bi[3]]) * v.Weights.w;
+                */
+                    float4  pos = mul(v.Pos, MVP);
+
+                    pos.z -= 0.02;
+                    Out.Pos = pos;
+
+                    float3  color = max(dot(v.Normal, -LightDir.xyz), 0);
+                    float   toon  = color.x * 0.3 + color.y * 0.59 + color.z * 0.11;
+
+                    Out.Coord0  = v.Coord0;
+                    Out.Coord1  = float2(toon, 0.5);
+                    Out.Diffuse = float4(1, 1, 1, 1);
+                    return Out;
+                }
+    """;
+
+    shader1 = CreateHlslShader [];
+    shader2 = CreateHlslShader [];
+    CompileVS [shader1, vs_line];
+    CompileVS [shader2, vs_toon];
+
+    UseDecl [];
+    gv.passNum = 3;
+
+    dir = mem.alloc [16];
+    SetTextureStageState [1, D3DTSS_COLOROP, D3DTOP_MODULATE];
+    SetTextureStageState [1, D3DTSS_COLORARG1, D3DTA_TEXTURE];
+    SetTextureStageState [1, D3DTSS_COLORARG2, D3DTA_CURRENT];
+]
+else
+[
+    mem.free [dir];
+    ReleaseShader [shader1];
+    ReleaseShader [shader2];
+]

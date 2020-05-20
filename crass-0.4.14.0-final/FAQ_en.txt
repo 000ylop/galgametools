@@ -1,0 +1,84 @@
+﻿Frequently asked questions are answered here.(Translated by superstar)
+
+【sometimes it propmts error "Crass Exception Occur.ACCESS VIOLATION! " when using gui to extract】
+it's not stable to use gui for extraction, please switch to command-line mode for extraction.
+
+【what can't crass do】
+in theory, so long as supported cui is existed and used properly, any game can be extracted by crass. but crass is only a pure resource extractor, any process will be carried out for extracted meta-file no more, including: format transformation(for example converting bmp to png or jpg), text extraction(extracting plain-text from binary script providing for chinese localization or making novel) and image postprocess(such as alpha blending: erase those like problematic border between character and background in fgimage). these functions often are perfected by other software, have beyond extractor's duty, and it's better to improve flexibility that player personally controls how to deal with original resource data extracted by crass.
+this is a good thread that it explains what can't crass do: http://tieba.baidu.com/f?kz=453146448
+
+【how to extract】
+gui: see "Crass图文提取教程 - 使用CrageGUI提取游戏.mht".
+console(recommended for advanced user): see INSTALL_en.txt.
+
+【what should be noted before extracting】
+·make sure current user is in administrators group.
+·goto update address recorded in README.txt to download newest version.
+·don't overwrite directly crass in new version into old version!
+·close game and any tool which may possibly accesses game file. 
+·it's recommended for using console to extract game, and mastering usage of four major parameter(-p, -d, -u, -O)(see INSTALL_en.txt).
+
+【what should be noted when extracting】
+·Make sure the game is in the support list.
+	·If the game is not in the list, you can try to extract with a mere parameter -p or -d. (CrageGUI's option "Source File" or "Source Path".)
+		·If no resource is extracted, you should refer to "cui_info.txt", in which you may find certain cui plugins that support your source file's extensions, then extract with those possible plugin(s). (Use parameter -u or choose "Specify Cui" in CrageGUI) 
+			·If it still doesn't work, the reason may be that the archive is not supported by any cui.
+	·If the game is in the support list, please refer to corresponding cui plugin's document in the directory "documentation" for detailed instructions.
+
+【why appear many gibberishes when extracting】
+This may be because you launch crass on non-simplified chinese system. usually it's caused by default console font without completely chinese character support.
+start->run->type cmd, enter. then select entry corresponding to cmd window just popuped in taskbar, right-click->preference->font.
+here usually there is two fonts, it's possible to try another one to verify actual result. save after completing configuration, it will occur a double selection tip, choose item below. so font config will been saved forever.
+
+【why extraction spped is very low】
+if using directory extraction, crass will read all file infos before extracting, then apply all cui to attempt extraction(suppose you install various of games under c:\Program Files folder, crass would been allowed to extract whole directory). when file number is large, it costs quite time to prepare before extracting. it's a good way to pick up extraction speed that -u parameter is used to specify a particular cui for extraction and -p parameter is used to extract single file; if wanting directory extraction, just extract directory which interests to oneself as far as possible.
+
+【what is the "no magic"】
+From 0.4.4, mark "no magic" is imported in every cui plugin. To be more accurate, mark "no magic" is added into every archive type that is supported by every cui. In default circumstance, crage does not extract with any cui plugin that contains a mark "no magic". The measure is used to increase stability of crage.
+If you would rather restore it as the versions before 0.4.4, please use the parameter -F (Choose "Force All CUIs" in CrageGUI), but it may decrease the stability of crage. It is more recommended to use parameter -u to specify a certain cui. (Choose "Specify CUI" and fill in the name of cui to use in CrageGUI)
+
+【what is the "weak magic"】
+essentially the archive is the same as archive in type of no magic, exists no "particular" mark pointing own format in intra 
+, but as opposed to archive in type of no magic, archive in type of weak magic has very special extension, for example .gsp in AGSD, .nsa in Nscripter and so on.
+but weak magic is essentially as identical as no magic,  so when a new system use same extension, archive in type of weak magic will been degraded to type of no magic.
+
+【How to start console?】
+Click "Start", choose "Run...", input "cmd" in the "Open" textbox (Quotes are not included.), then press Enter. If a window with black background appears, the console starts successfully.
+Both crage.exe and assage.exe in crass tool set are console applications, which can only be runned in this console.
+
+【How to config console parameters?】
+First, follow instructions of 【How to start the console?】 to startup the console, then right-click the console's icon on the task bar, choose "Attribution", then config console parameters in the window appeared.
+
+【How to copy text in console?】
+First config console parameters to make it support function of copy. 
+Follow instructions of 【How to config console parameters?】to open the config window of console parameter, then choose the label "Option"，choose "quick edit mode" and "insert mode" under "edit option"，then click "OK". The "Apply attribute" window will appear. Choose "Save ..." in it and then click "OK".
+
+After the configs above, texts in the console window now can be copied.
+Detailed instruction:
+1. Put mouse cursor on the text to be copied, click and hold left button.
+2. Drag mouse to cover the text with the white region generated.
+3. Release left button, click right button once. The white region will disappear, showing the text covered by it has been copied into clipboard.
+4. Press Ctrl-V at any proper position (Blank text file or qq's chatting window, etc.), the texts in console window will be copied.
+
+【How to use console command?】
+Windows's console can be traced back to time when DOS is used. Basic commands are also inherited from that time. Of course, users are not required to know all DOS commands, but the following commands should be mastered in order to use crass:
+Suppose that crage is placed in w:\crass. First follow instructions in 【How to start the console?】to start console, then input following commands in order. (The content in brackets are annotations, do NOT input them.)
+
+    w:     		(Switch to the specified disk)
+    cd "w:\crass"	(The command "cd" means "Change Directory", it is used to enter the specified directory.)
+    dir			(The command "dir" is used to show all files and sub-directories under current directory.)
+    If all commands are entered and executed correctly, crass tools and plugins' directory are listed under current directory.
+   
+    Other notes:
+
+    1. Absolute path and relative path   
+    Absolute path is path that begin with disk, for example, "C:\crass\"; "Z:\virtal\data\pak". In turn, relative path is path that do not begin with disk, for example, "crass\cui\"; "..\data\pak".
+
+    2. Current directory and parent directory
+    Current directory means the work directory we are currently in. The prompt in front of console, like "H:\source\crage\Release", is current directory. In turn, relative path means "Paths that relative to the current work directory"; Parent directory is expressed by "..".
+
+    3. Sometimes quotes are necessary in path.
+    If a path contains space, the whole path must be quoted. For exampke, "C:\Program Files\Common Files". To the paths do not contain space, quotes are optional.
+
+【when anything is helpless】
+please report useful infos together with crass version, used cui version, appeared error propmt etc. to here: https://www.yukict.com/bbs/thread-13010-1-1.html

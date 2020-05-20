@@ -1,0 +1,9 @@
+<Profile>
+    <Name>Page Cropping</Name>
+    <Setting>
+        <Match>(.+)\.bmp</Match>
+        <Catch></Catch>
+        <Merge>$1.bmp</Merge>
+        <Command>convert [Match] -crop 100%%x25%% +repage [Merge]</Command>
+    </Setting>
+</Profile>

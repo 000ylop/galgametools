@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="ManPAK.upk" 0 />
+	<插件 文件名="BinImg.grp" 1 />
+	<插件 文件名="PMRwav.snd" 2 />
+
+	<文件 文件名="data\pm1.dat"    插件="0" 数据文件="pm1\pm1.dat.ini" />
+	<文件 文件名="data\pm1-jp.dat" 插件="0" 数据文件="pm1\pm1-jp.dat.ini" />
+
+	<文件 文件名="data\*.maa" 插件="1" 数据文件="pm1\pm1p.ini" />
+
+	<文件 文件名="snd\*.pm1"   插件="2" />
+	<文件 文件名="voice\*.pm1" 插件="2" />
+
+</游戏脚本>

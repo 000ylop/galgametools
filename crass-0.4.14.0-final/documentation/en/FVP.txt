@@ -1,0 +1,11 @@
+﻿Name: 		FVP
+Description: 	FAVORITE VIEW POINT SYSTEM VER 2.5
+Archive: 	.bin
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	1.1.1
+Status: 	Beta
+
+【ChangeLog】
+2009-04-04 23:23 ver 1.1.1 fix the conflict with Xuse cui
+2009-02-28 10:21 ver 1.1.0 removed no magic signature for .bin; supported 32-bi bmp alpha blending; supported type4 image format
+2007-10-21 21:51 ver 1.0.0 1st version released

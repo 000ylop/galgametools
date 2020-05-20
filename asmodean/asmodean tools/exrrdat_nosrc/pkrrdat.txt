@@ -1,0 +1,11 @@
+// pkrrdat.cpp, v1.0 2007/01/21
+// coded by asmodean
+
+// contact: 
+//   web:   http://plaza.rakuten.co.jp/asmodean
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+
+// This tool repacks files to NEKOPACK (*.DAT) archives used in Navel's
+// game Really?Really!  Expectation is that files are in a tree as
+// originally extracted in the current directory.

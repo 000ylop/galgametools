@@ -1,0 +1,22 @@
+﻿Name:		AI5WIN
+Description:	game system developed by elf (http://www.elf-game.co.jp/)
+Archive:	.arc(no magic) .VSD
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.1.0
+Status:	        Beta
+
+【Notice】
+·when extracting .arc archive must specify -u parameter
+·it's able to specify game parameter to extract specified game resource:
+take game "Dragon Knight 4" for exsample:
+crage -d g: -u ai5win -O game=DK4
+
+game list:
+Dragon Knight 4: game=DK4
+らいむいろ流奇譚X cross ～恋、教ヘテクダサイ。～: game=LIME2
+
+·if game parameter isn't specified or wanted extracting game isn't in above lsit, it will process automatically prediction(not 100% successful) to extract target resource. if it occurs extraction error, please visit https://www.yukict.com/bbs/forumdisplay.php?fid=69&page=1 to report error(mark game name and upload to minimal.arc file)
+
+【ChangeLog】
+                 ver 1.1.0 implement automatical prediction mode under without specification of game parameter; added game=LIME2 parameter
+2008-03-29 19:22 ver 1.0.0 1st version released

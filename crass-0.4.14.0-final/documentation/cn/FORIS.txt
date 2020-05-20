@@ -1,0 +1,53 @@
+﻿名称：		FORIS
+描述：		STACK开发的游戏系统
+封包：		.GPK
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.2
+成熟度：	正式版
+
+【注意事项】
+提取时必须指定特殊参数exe指定游戏的exe文件路径。
+以游戏“Cross Days 動作チェッカー Ver0.1”为例：
+H:\Crass\crage\Release>crage -d "M:\Overflow\CrossDays_Checker\PACKS" -O exe="M:
+\Overflow\CrossDays_Checker\CrossDays.exe"
+
+初始化cui core ...
+GLib2_register_cui
+加载cui (164)
+
+初始化package core ...
+读取封包文件信息 (10)
+
+开始执行解包操作 ...
+
+BGM.GPK: 准备提取封包文件（含3个资源文件） ...
+BGM.GPK：成功提取3 / 3个资源文件  \
+
+Event1.GPK: 准备提取封包文件（含2个资源文件） ...
+Event1.GPK：成功提取2 / 2个资源文件  -
+
+Ini.GPK: 准备提取封包文件（含3个资源文件） ...
+Ini.GPK：成功提取3 / 3个资源文件  \
+
+Movie1.GPK: 准备提取封包文件（含16个资源文件） ...
+Movie1.GPK：成功提取16 / 16个资源文件  |
+
+Script.GPK: 准备提取封包文件（含2个资源文件） ...
+Script.GPK：成功提取2 / 2个资源文件  -
+
+Se.GPK: 准备提取封包文件（含1个资源文件） ...
+Se.GPK：成功提取1 / 1个资源文件  /
+
+System.GPK: 准备提取封包文件（含30个资源文件） ...
+System.GPK：成功提取30 / 30个资源文件  -
+
+Voice1.GPK: 准备提取封包文件（含16个资源文件） ...
+Voice1.GPK：成功提取16 / 16个资源文件  |
+
+FORIS：成功提取8个.GPK封包文件文件 |
+
+
+【ChangeLog】
+2009-07-21 10:18 ver 1.0.2 支持.GPK.*
+2009-06-03 19:45 ver 1.0.1 支持游戏“School Days”
+2008-11-05 23:34 ver 1.0.0 第一版发布

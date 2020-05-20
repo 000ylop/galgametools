@@ -1,0 +1,22 @@
+﻿名称：		ARCGameEngine
+描述：		ARC Software Laboratory开发的游戏系统
+封包：		.ALF .BIN .AGF(weak magic)
+作者：		痴漢公賊(glanser@163.com)
+版本：		0.9.8
+成熟度：	开发版
+
+【TODO】
+·.BIN脚本资源的解析。
+
+【注意事项】
+·提取时必须指定“-l”参数指定索引文件，索引文件通常是游戏目录下的SYS3INI.BIN或SYS4INI.BIN文件。
+
+【提取示例】
+以游戏“戦女神ZERO”为例：
+crage -d "M:\Eushully\戦女神ZERO" -l "M:\Eushully\戦女神ZERO\SYS4INI.BIN"
+
+【ChangeLog】
+2009-05-22 23:33 ver 0.9.8 支持提取4位bmp图像
+2009-04-25 11:10 ver 0.9.7 修正了错误读取未对齐的mask数据的问题
+2009-02-27 20:33 ver 0.9.6 支持alpha提取
+2008-06-18 16:00 ver 0.9.5 第一版发布

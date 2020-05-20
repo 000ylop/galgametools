@@ -1,0 +1,10 @@
+// exl4osa.cpp, v1.0 2007/03/08
+// coded by asmodean
+
+// contact: 
+//   web:   http://plaza.rakuten.co.jp/asmodean
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+
+// This tool extracts data from LINK4 (*.arc) archives used by
+// Atelier Kaguya's 幼なじみと甘～くエッチに過ごす方法.

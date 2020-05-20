@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  '
+  '**************************************
+  ' Christian Wolkersdorfer - http://wolkersdorfer.info
+  ' Copyright (c) 2009 - Wolkersdorfer
+  ' All rights reserved. 
+  '**************************************
+  '
+/-->
+<simpleviewergallery
+	
+	galleryStyle="MODERN"
+	title="#TITLE#"
+	textColor="FFFFFF"
+	frameColor="FFFFFF"
+	frameWidth="10"
+	thumbPosition="LEFT"
+	thumbColumns="#COLUMN_COUNT#"
+	thumbRows="4"
+	showOpenButton="TRUE"
+	showFullscreenButton="TRUE"	
+	maxImageWidth="640"
+	maxImageHeight="640"
+	useFlickr="false"
+	flickrUserName=""
+	flickrTags=""
+	languageCode="AUTO"
+	languageList=""		
+	imagePath=""
+	thumbPath=""
+>
+	
+  #THUMB_TABLE_START#
+  #THUMB_ROW_START#
+<image imageURL="#ORG_SUBPATH#/#FILENAME#" thumbURL="#THUMB_SUBPATH#/#PREFIX_THUMB##FILENAME#" linkURL="" linkTarget="" >
+	<caption><![CDATA[#PIC_TEXT#]]></caption>	
+</image>
+  #THUMB_ROW_END#
+  #THUMB_END#
+
+</simpleviewergallery>

@@ -1,0 +1,15 @@
+﻿Name:		AdvTry
+Description:	
+Archive:	.dat
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.1.1
+Status:	        Final
+
+【ChangeLog】
+2009-06-30 22:29 ver 1.1.1 optimize heuristic algorithm to speed up guessing; avoid allocating huge memory
+2009-03-21 12:37 ver 1.1.0 use heuristic algorithm to guess the values of key, init_offset and sec_offset
+2008-05-22 09:41 ver 1.0.6 added game "ゆ・め・く・み！ ～訳あり物件、妖精つき～" decryption parameter(thanks for Kyle's help)
+2008-05-05 00:18 ver 1.0.5 added game "ちょこっと☆ばんぱいあ!" decryption parameter(thanks for 卫道士's help)
+2008-04-03 20:27 ver 1.0.4 added decryption parameter of some games
+2007-12-14 21:35 ver 1.0.1 fixed a bug for extraction clash with ego plug-in
+2007-12-06 21:39 ver 1.0.0 1st version released

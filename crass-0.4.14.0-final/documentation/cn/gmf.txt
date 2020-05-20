@@ -1,0 +1,12 @@
+﻿名称：		gmf
+描述：		General Metafile Format（用于提取使用不标准扩展名的元文件）
+封包：		.dat .arc .nsa .ypf .fpk .odn .ngs .mpk
+作者：		痴漢公賊(glanser@163.com)
+版本：		0.2.0
+成熟度：	开发版
+
+【TODO】
+支持更多的元文件格式和非标准的扩展名，并将之前所有插件中对此类资源的支持取消。
+
+【ChangeLog】
+2008-07-09 20:32 ver 0.2.0 第一版发布

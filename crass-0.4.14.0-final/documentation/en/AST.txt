@@ -1,0 +1,38 @@
+﻿Name:            	AST
+Description:        	AST script
+Archive:   	 	no extension
+Author:            	痴漢公賊 (glanser@163.com)
+Version:        	1.1.4
+Status:			Final
+Translation:		ravenex
+
+【Notice】
+·open source code
+
+【Archive Info】
+    resource archive with directory structure within 
+    original data may be one of PNG (CGs), Ogg (sound and voice), *.scn or *.adv (plain text scripts).
+
+    	HEADER:
+		s8 magic[4];		// "ARC1" or "ARC2"
+            	u32 index_entries;	// file count
+ 	INDEX:
+         	u32 length;	// data length in archive. for "ARC1", all data is non-compressed
+                		// for "ARC2", the length may be uncompressed length or non-compressed length in archive, depend on reading the remarks in CONTENTS
+         	u32 offset;    	// offset (from head of archive)
+         	u8 name_length; // file name length (without the trailing zero terminator)
+         	s8 *name;   	// file name
+     	CONTENTS:
+         	Following INDEX;
+         	Because length of compressed data (comp_length) is not present, compr_length should be aquired by subtracting the offset from the current index entry by the one in the next entry.
+         	If comp_length equals to the length field, then the data is non-compresed; otherwise it's compressed with LZSS.
+         	For non-compressed data in "ARC2" archives, if it's not Ogg then the data is encrypted by inverting all bits
+
+【Changelog】
+2008-10-02 22:02 ver 1.1.4 fixed a problem on processing incorrectly last resource file info 
+2008-07-01 16:45 ver 1.1.3 fixed a extraction error due to invalid file item
+2008-02-26 14:39 ver 1.1.2 fixed a extraction error in lacking filename length 
+2007-10-01 18:33 ver 1.1.1 Fixed a bug extracting wav files from ARC2 archive
+2007-05-31 08:41 ver 1.1.0 Fixed a bug with long file names, and a bug when a compressed file is uncompressed to
+2007-05-26 00:41 ver 1.0.1 Fixed to handle zero-length files correctly
+2007-05-02 00:58 ver 1.0.0 First release

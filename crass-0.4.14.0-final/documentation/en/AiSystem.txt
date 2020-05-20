@@ -1,0 +1,11 @@
+﻿Name:		AiSystem
+Description:	AiSystem ver 0.01 developed by Studio AERO
+Archive:	.ttd .bmp .stf(weak magic)
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.0.2
+Status:	        Beta
+
+【ChangeLog】
+2009-03-13 21:31 ver 1.0.2 exported the fake 16 bit bmp to 24 bit
+2008-03-18 08:20 ver 1.0.1 exported common bmp no longer 
+2008-03-11 13:35 ver 1.0.0 1st version released

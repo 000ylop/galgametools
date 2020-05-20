@@ -1,0 +1,86 @@
+/*
+Common
+*/
+body, h1, table, td, a {
+ font-family: verdana, helvetica, arial, sans-serif;
+}
+body {
+ font-size: 80%;
+ color: #000;
+ background: #eee;
+ margin-left: 2%;
+ margin-right: 2%;
+ margin-top: 1.5em;
+ margin-bottom: 1.5em;
+}
+h1 {
+ color: #000;
+ font-weight: bold;
+ margin: 0;
+ font-size: 160%;
+}
+a:link, a:visited {
+ color: #555;
+ background: transparent;
+ text-decoration: underline;
+}
+a:active, a:hover {
+ color: #333;
+ background: transparent;
+ text-decoration: underline;
+}
+img {
+ border: none;
+}
+.center {
+ width: auto;
+ margin-left: auto;
+ margin-right: auto;
+ text-align: center;
+}
+div.footer {
+ font-style: italic;
+}
+
+/*
+Thumbs
+*/
+table {
+ background: #fff;
+ border: 1px solid #999;
+ margin: 1em 0 1.25em 0;
+ padding: 2px;
+}
+td {
+ background: #eee;
+ border: 1px solid #999;
+ width: auto;
+ line-height: 110%;
+ vertical-align: baseline;
+}
+div.caption {
+ font-size: 90%;
+}
+
+/*
+Page
+*/
+div#navt, div#navb {
+ margin-top: 1em;
+ margin-bottom: 1em;
+}
+div#navt a, div#navb a {
+ text-decoration: none;
+}
+div.content {
+ background: #fff;
+ border: 1px solid #999;
+ margin: 1em auto 1em auto;
+}
+div.content#pic {
+ padding: 10px;
+}
+div.content#caption {
+ min-width: 160px;
+ padding: 5px 10px 5px 10px ;
+}

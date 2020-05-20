@@ -1,0 +1,131 @@
+/*
+    安琪莉可4基本解包脚本
+*/
+
+api = """
+        <APIs>
+            <BIN file="kernel32.dll">
+                <stdcall name="FindFirstFileA" param="2" />
+                <stdcall name="FindNextFileA"  param="2" />
+                <stdcall name="FindClose"      param="1" />
+
+                <stdcall name="CreateDirectoryA"     param="2" />
+                <stdcall name="SetCurrentDirectoryA" param="1" />
+                <stdcall name="GetCurrentDirectoryA" param="2" />
+            </BIN>
+        </APIs>
+""";
+sys.importBin [sys.self, api];
+
+cur_dir = mem.alloc [1024];
+GetCurrentDirectoryA [1024, cur_dir];
+
+find_data = mem.alloc [4096];
+mem.fill [find_data, 0, 4096];
+
+goon = 1;
+find = FindFirstFileA ["*.pak", find_data];
+
+while [(find != -1) & goon]
+[
+    fileName = find_data + 44;
+
+    fp = io.fopenA [fileName, "rb"];
+    if [fp == 0]
+    [
+        goon = FindNextFileA [find, find_data];
+        continue;
+    ]
+
+    if [io.readUint [fp] != 'PACK']
+    [
+        goon = FindNextFileA [find, find_data];
+        io.fclose [fp];
+        continue;
+    ]
+
+    io.print [fileName, type.string];
+    io.print ["\r\n",   type.string];
+
+    i = 0;
+    do
+    [
+        t = mem.getByte [fileName, i];
+        if [t == '.']
+        [
+            break;
+        ]
+        i += 1;
+    ]
+    while [t != 0]
+
+    mem.setByte [fileName, i, 0];
+    CreateDirectoryA [fileName, 0];
+    SetCurrentDirectoryA [fileName];
+
+    nKey = io.readUint [fp];
+    if [nKey != 0]
+    [
+        pKey = mem.alloc [nKey];
+        io.fread [pKey, nKey, 1, fp];
+    ]
+
+    ioff = io.readUint [fp];
+    size = io.readUint [fp];
+    doff = io.readUint [fp];
+    io.fseek [fp, 8, io.seekCur];
+
+    fileNum  = io.readUint [fp];
+    fileInfo = mem.alloc [size];
+    io.fseek [fp, ioff, io.seekSet];
+    io.fread [fileInfo, size, 1, fp];
+
+    if [nKey != 0]
+    [
+        for [i = 0; i < size; i += 1]
+        [
+            t = mem.getByte [fileInfo, i];
+            k = mem.getByte [pKey, i % nKey];
+            mem.setByte [fileInfo, i, t ^ k];
+        ]
+    ]
+    info = fileInfo;
+
+    for [i = 0; i < fileNum; i += 1]
+    [
+        io.print [info,   type.string];
+        io.print ["\r\n", type.string];
+
+        out  = io.fopenA [info, "wb"];
+        ioff = mem.getUint [info + 20, 0] + doff;
+        size = mem.getUint [info + 24, 0];
+        info += 36;
+
+        io.fseek [fp, ioff, io.seekSet];
+        data = mem.alloc [size];
+        io.fread [data, size, 1, fp];
+        if [nKey != 0]
+        [
+            for [j = 0; j < size; j += 1]
+            [
+                t = mem.getByte [data, j];
+                k = mem.getByte [pKey, j % nKey];
+                mem.setByte [data, j, t ^ k];
+            ]
+        ]
+        io.fwrite [data, size, 1, out];
+        io.fclose [out];
+        mem.free [data];
+    ]
+
+    if [nKey != 0]
+    [
+        mem.free [pKey];
+    ]
+    mem.free [fileInfo];
+    io.fclose [fp];
+    SetCurrentDirectoryA [cur_dir];
+
+    goon = FindNextFileA [find, find_data];
+]
+FindClose [find];

@@ -1,0 +1,14 @@
+﻿名称：		AIMS
+描述：		D.N.A. Softwares开发的系统Actor-based Integrated Multimedia Script system
+封包：		.cfg
+作者：		绫波微步
+版本：		1.0.0
+成熟度：	正式版
+
+【TODO】
+.FMF解析
+
+【ChangeLog】
+2009-01-26 13:09 ver 1.0.0 由于AIMS系统是基于Luna系统的，因此将对.p和.mus的支持转到Luna中
+2007-10-28 11:59 ver 0.9.1 支持.cfg的提取
+2007-08-18 13:34 ver 0.9.0 第一版发布

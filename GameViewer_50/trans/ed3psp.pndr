@@ -1,0 +1,80 @@
+/*
+    ED3 PSP 索引生成脚本
+*/
+
+name = mem.getUint [sys.argv, 2];
+
+fp = io.fopenA [name, "rb"];
+
+if [io.readUint [fp] == 'GFL']
+[
+    count = io.readUint [fp];
+    offs  = mem.alloc [count * 4];
+    size  = mem.alloc [count * 4];
+    io.fseek [fp, 16, io.seekSet];
+
+    for [i = 0; i < count; i += 1]
+    [
+        t = io.readUint [fp];
+        mem.setUint [offs, i, t];
+        t = io.readUint [fp];
+        mem.setUint [size, i, t];
+    ]
+
+    for [i = 0; i < count; i += 1]
+    [
+        t1 = mem.getUint [offs, i];
+        t2 = mem.getUint [size, i];
+
+        if [(t1 == 0) | (t2 == 0)]
+        [
+            continue;
+        ]
+        io.fseek [fp, t1, io.seekSet];
+        t = io.readUint [fp];
+
+        io.print [t2,   type.int];
+        io.print [", ", type.string];
+        io.print [t1,   type.int];
+        io.print [", ", type.string];
+
+        if   [i < 10]     [ io.print ["00000", type.string]; ]
+        elif [i < 100]    [ io.print ["0000",  type.string]; ]
+        elif [i < 1000]   [ io.print ["000",   type.string]; ]
+        elif [i < 10000]  [ io.print ["00",    type.string]; ]
+        else              [ io.print ["0",     type.string]; ]
+
+        io.print [i, type.int];
+
+        if   [t == 'ZCMP']
+        [
+            io.print [".Z", type.string];
+        ]
+        elif [t == 'PSMF']
+        [
+            io.print [".MOV", type.string];
+        ]
+        elif [t == 0x474E5089]
+        [
+            io.print [".PNG", type.string];
+        ]
+        else
+        [
+            c1 = t       & 0xFF;
+            c2 = t >> 8  & 0xFF;
+            c3 = t >> 16 & 0xFF;
+            c4 = t >> 24;
+            if [(c4 == 0) & (c3 >= 'A') & (c3 <= 'Z') &
+                            (c2 >= 'A') & (c2 <= 'Z') &
+                            (c1 >= 'A') & (c1 <= 'Z')]
+            [
+                io.print [".", type.string];
+                io.print [@t,  type.string];
+            ]
+        ]
+        io.print ["]\r\n", type.string];
+    ]
+    mem.free [size];
+    mem.free [offs];
+]
+io.fclose [fp];

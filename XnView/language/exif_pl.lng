@@ -1,0 +1,1300 @@
+; ----------------------------------------------------
+[IFD]
+0101=IFD obrazu
+0102=IFD EXIF
+0103=IFD GPS
+0104=IFD danych wspÛ≥pracy
+A010=Dane producenta (Canon)
+A020=Dane producenta (Nikon)
+A030=Dane producenta (Nikon)
+A040=Dane producenta (Casio)
+A050=Dane producenta (Casio)
+A060=Dane producenta (Fuji)
+A070=Dane producenta (Olympus)
+A080=Dane producenta (Sigma)
+A090=Dane producenta (Sanyo)
+A0A0=Dane producenta (Minolta)
+A0B0=Dane producenta (Minolta)
+
+; --------------------- Main IFD ---------------------
+
+[0101-00FE]
+Label=
+
+[0101-0100]
+Label=SzerokoúÊ obrazu
+
+[0101-0101]
+Label=D≥ugoúÊ obrazu
+
+[0101-0102]
+Label=BitÛw na prÛbkÍ
+
+[0101-0103]
+Label=Kompresja
+
+[0101-0106]
+Label=Interpretacja fotometryczna
+
+[0101-010A]
+Label=Porzπdek wype≥niania
+
+[0101-010D]
+Label=Nazwa dokumentu
+
+[0101-010E]
+Label=Opis obrazu
+
+[0101-010F]
+Label=Producent aparatu
+
+[0101-0110]
+Label=Model aparatu
+
+[0101-0111]
+Label=PrzesuniÍcia pasm
+
+[0101-0112]
+Label=Orientacja
+ValueList=1#gÛra-lewa, 2#gÛra-prawa, 3#dÛ≥-prawa, 4#dÛ≥-lewa, 5#lewa-gÛra, 6#prawa-gÛra, 7#prawa-dÛ≥, 8#lewa-dÛ≥
+
+[0101-0115]
+Label=PrÛbek na piksel
+
+[0101-0116]
+Label=Linii na pasmo
+
+[0101-0117]
+Label=Liczniki bajtÛw pasm
+
+[0101-011A]
+Label=RozdzielczoúÊ X
+
+[0101-011B]
+Label=RozdzielczoúÊ Y
+
+[0101-011C]
+Label=Konfiguracja planarna
+
+[0101-0128]
+Label=Jednostka rozdzielczoúci
+
+[0101-012D]
+Label=Funkcja transferu
+
+[0101-0131]
+Label=Oprogramowanie
+
+[0101-0132]
+Label=Data modyfikacji
+
+[0101-013B]
+Label=Fotograf
+
+[0101-013E]
+Label=Punkt bieli
+
+[0101-013F]
+Label=Chromatycznoúci kolorÛw sk≥adowych
+
+[0101-0156]
+Label=Zakres transferu
+
+[0101-0200]
+Label=Procedura dla JPEG
+
+[0101-0201]
+Label=PrzesuniÍcie miniatury
+
+[0101-0202]
+Label=D≥ugoúÊ miniatury
+
+[0101-0211]
+Label=WspÛ≥czynniki YCbCr
+
+[0101-0212]
+Label=PodprÛbkowanie YCbCr
+
+[0101-0213]
+Label=Pozycjonowanie YCbCr
+ValueList=1#wyúrodkowane, 2#rozmieszczone
+
+[0101-0214]
+Label=Odniesienie czerni i bieli
+
+[0101-828D]
+Label=Rozmiar powtarzalnego wzoru CFA
+
+[0101-828E]
+Label=WzÛr CFA
+
+[0101-828F]
+Label=Poziom baterii
+
+[0101-8298]
+Label=Prawa autorskie
+
+; Camera IFD
+
+[0102-829A]
+Label=Czas naúwietlania [s]
+
+[0102-829D]
+Label=Liczba F
+
+[0102-83BB]
+Label=Dane IPTC/NAA
+
+[0102-8769]
+Label=PrzesuniÍcie EXIF
+
+[0102-8773]
+Label=Profil ICC
+
+[0102-8822]
+Label=Program naúwietlania
+ValueList=0#Niezidentyfikowany, 1#RÍczny, 2#Normalny, 3#Priorytet przes≥ony, 4#Priorytet migawki, 5#Kreatywny (duøa g≥Íbia), 6#Ruch (szybka migawka), 7#Tryb portretowy, 8#Tryb krajobrazowy
+
+[0102-8824]
+Label=Czu≥oúÊ spektralna
+
+[0102-8825]
+Label=Informacje GPS
+
+[0102-8827]
+Label=Czu≥oúÊ ISO
+
+[0102-8828]
+Label=Funkcja OECF
+
+[0102-9000]
+Label=Wersja EXIF
+
+[0102-9003]
+Label=Data wykonania
+
+[0102-9004]
+Label=Data digitalizacji
+
+[0102-9101]
+Label=Konfiguracja sk≥adowych
+
+[0102-9102]
+Label=Skompresowanych bitÛw na piksel
+
+[0102-9201]
+Label=SzybkoúÊ migawki [s]
+
+[0102-9202]
+Label=Przes≥ona
+
+[0102-9203]
+Label=JasnoúÊ
+
+[0102-9204]
+Label=Kompensacja naúwietlania
+
+[0102-9205]
+Label=Przes≥ona maksymalna
+
+[0102-9206]
+Label=Odleg≥oúÊ tematu (m)
+
+[0102-9207]
+Label=Tryb pomiaru úwiat≥a
+ValueList=0#Nieznany, 1#Uúredniony, 2#Centralnie waøony, 3#Punktowy, 4#Wielopunktowy, 5#Wielosegmentowy, 6#CzÍúciowy, -1#Inny
+
+[0102-9208]
+Label=Oúwietlenie
+ValueList=0#Nieznane, 1#Dzienne, 2#Fluorescencyjne, 3#Øarowe, 17#Standardowe A, 18#Standardowe B, 19#Standardowe C, 20#D55, 21#D65, 22#D75, -1#Inne
+
+[0102-9209]
+Label=B≥ysk
+
+[0102-920A]
+Label=D≥ugoúÊ ogniskowej [mm]
+
+[0102-927C]
+Label=Dane producenta
+
+[0102-9286]
+Label=Komentarz uøytkownika
+
+[0102-9290]
+Label=U≥amki sekundy
+
+[0102-9291]
+Label=U≥amki sekundy orygina≥u
+
+[0102-9292]
+Label=U≥amki sekundy digitalizacji
+
+[0102-A000]
+Label=Wersja FlashPix
+
+[0102-A001]
+Label=PrzestrzeÒ kolorÛw
+
+[0102-A002]
+Label=SzerokoúÊ EXIF obrazu
+
+[0102-A003]
+Label=WysokoúÊ EXIF obrazu
+
+[0102-A005]
+Label=PrzesuniÍcie danych wspÛ≥pracy
+
+[0102-A20B]
+Label=Energia b≥ysku
+
+[0102-A20C]
+Label=Przestrzenna odpowiedü czÍstotliwoúciowa
+
+[0102-A20E]
+Label=RozdzielczoúÊ X p≥aszczyzny ogniskowania
+
+[0102-A20F]
+Label=RozdzielczoúÊ Y p≥aszczyzny ogniskowania
+
+[0102-A210]
+Label=Jednostka rozdzielczoúci p≥aszczyzny ogniskowania
+ValueList=1#cale, 2#cale, 3#cm, 4#mm, 5#um
+
+[0102-A214]
+Label=Po≥oøenie tematu
+
+[0102-A215]
+Label=Indeks naúwietlania
+
+[0102-A217]
+Label=Typ sensora
+ValueList=1#Niezdefiniowany, 2#Jednouk≥adowy kolorowy, 3#Dwuuk≥adowy kolorowy, 4#TrÛjuk≥adowy kolorowy, 5#Kolorowy sekwencyjny, 6#TrÛjliniowy, 7#Kolorowy liniowy sekwencyjny
+
+[0102-A300]
+Label=èrÛd≥o pliku
+
+[0102-A301]
+Label=Typ sceny
+
+[0102-A302]
+Label=WzÛr CFA
+
+[0102-A401]
+Label=Renderowanie w≥asne
+ValueList=0#Proces normalny, 1#Proces w≥asny
+
+[0102-A402]
+Label=Tryb naúwietlania
+ValueList=0#Automatyczny, 1#RÍczny, 2#Seryjny
+
+[0102-A403]
+Label=Balans bieli
+ValueList=0#Automatyczny, 1#RÍczny
+
+[0102-A404]
+Label=PowiÍkszenie cyfrowe
+
+[0102-A405]
+Label=D≥ugoúÊ ogniskowej (35mm)
+
+[0102-A406]
+Label=Rodzaj sceny
+ValueList=0#Standardowa, 1#Krajobraz, 2#Portret, 3#Scena nocna
+
+[0102-A407]
+Label=Kontrola wzmocnienia
+ValueList=0#Brak, 1#Wzmocnienie przy niskim sygnale, 2#Wzmocnienie przy wysokim sygnale, 3#Zmniejszenie wzmocnienia przy niskim sygnale, 4#Zmniejszenie wzmocnienia przy wysokim sygnale
+
+[0102-A408]
+Label=Kontrast
+ValueList=0#Normalny, 1#Ma≥y, 2#Duøy
+
+[0102-A409]
+Label=Nasycenie
+ValueList=0#Normalne, 1#Niskie, 2#Wysokie
+
+[0102-A40A]
+Label=OstroúÊ
+ValueList=0#Normalna, 1#Ma≥a, 2#Duøa
+
+[0102-A40B]
+Label=Opis ustawieÒ urzπdzenia
+
+[0102-A40C]
+Label=Zakres odleg≥oúci tematu
+ValueList=0#Nieznany, 1#Makro, 2#Widok bliski, 3#Widok daleki
+
+[0102-A420]
+Label=Unikalny ID obrazu
+ValueList=
+
+; --------------------- GPS IFD ---------------------
+
+[0103-0000]
+Label=ID wersji
+
+[0103-0001]
+Label=Odniesienie szerokoúci
+ValueList=N#PÛ≥nocna, S#Po≥udniowa
+
+[0103-0002]
+Label=SzerokoúÊ
+
+[0103-0003]
+Label=Odniesienie d≥ugoúci
+ValueList=E#Wschodnia, W#Zachodnia
+
+[0103-0004]
+Label=D≥ugoúÊ
+
+[0103-0005]
+Label=Odniesienie wysokoúci
+ValueRef=0#Poziom morza
+
+[0103-0006]
+Label=WysokoúÊ
+
+[0103-0007]
+Label=Sygnatura czasowa
+
+[0103-0008]
+Label=Satelity
+
+[0103-0009]
+Label=Status
+ValueList=A#Pomiar w toku, V#Pomiar w trybie wspÛ≥pracy
+
+[0103-000A]
+Label=Tryb pomiaru
+ValueList=2#Pomiar 2-wymiarowy, 3#Pomiar 3-wymiarowy
+
+[0103-000B]
+Label=Dok≥adnoúÊ DOP
+
+[0103-000C]
+Label=Odniesienie szybkoúci
+
+[0103-000D]
+Label=SzybkoúÊ
+
+[0103-000E]
+Label=Odniesienie kierunku
+ValueList=M#pÛ≥noc magnetyczna, T#pÛ≥noc geograficzna
+
+[0103-000f]
+Label=Kierunek
+
+[0103-0010]
+Label=Odniesienie kierunku obrazu
+
+[0103-0011]
+Label=Kierunek obrazu
+
+[0103-0012]
+Label=Dane mapy
+
+[0103-0013]
+Label=Odniesienie szerokoúci celu
+ValueList=N#PÛ≥nocna, S#Po≥udniowa
+
+[0103-0014]
+Label=SzerokoúÊ celu
+
+[0103-0015]
+Label=Odniesienie d≥ugoúci celu
+ValueList=E#Wschodnia, W#Zachodnia
+
+[0103-0016]
+Label=D≥ugoúÊ celu
+
+[0103-0017]
+Label=Odniesienie wskazania celu
+ValueList=M#pÛ≥noc magnetyczna, T#pÛ≥noc geograficzna
+
+[0103-0018]
+Label=Wskazanie celu
+ValueList=K#kilometry, M#mile, N#mile morskie
+
+[0103-0019]
+Label=Odniesienie odleg≥oúci celu
+
+[0103-001A]
+Label=Odleg≥oúÊ celu
+
+[0103-001B]
+Label=Metoda przetwarzania
+
+[0103-001C]
+Label=Informacja o obszarze
+
+[0103-001D]
+Label=Sygnatura czasowa daty
+
+[0103-001E]
+Label=Korekta rÛønicowa
+ValueList=0#Bez korekty, 1#Korekta zastosowana
+
+; --------------------- IOP IFD ---------------------
+
+[0104-0001]
+Label=Indeks IOP
+
+[0104-0002]
+Label=Wersja IOP
+
+[0104-1001]
+Label=SzerokoúÊ IOP
+
+[0104-1002]
+Label=WysokoúÊ IOP
+
+; --------------------- Makernote (Canon) ---------------------
+
+[A010-0001]
+Label=Ustawienia aparatu 1
+
+[A010-0004]
+Label=Ustawienia aparatu 2
+
+[A010-0006]
+Label=Informacje o obrazie
+
+[A010-0007]
+Label=Wersja firmware
+
+[A010-0008]
+Label=Numer obrazu
+
+[A010-0009]
+Label=Nazwa w≥aúciciela
+
+[A010-000C]
+Label=Numer seryjny aparatu
+
+; --------------------- Makernote (Canon) - Camera Settings 1 ---------------------
+
+[A011-0001]
+Label=Makro
+ValueList=1#Makro, 2#Tryb normalny
+
+[A011-0002]
+Label=Samowyzwalacz
+ValueList=0#Wy≥πczony
+
+[A011-0003]
+Label=Ustawienie kompresji
+ValueList=2#Normalna, 3#Dok≥adna, 5#Bardzo dok≥adna
+
+[A011-0004]
+Label=Tryb b≥ysku
+ValueList=0#Bez b≥ysku, 1#Automatyczny, 2#W≥πczony, 3#Redukcja czerwonych oczu, 4#Synchronizacja z wolnπ migawkπ, 5#Autom. + redukcja czerw. oczu, 6#W≥πczony + redukcja czerw. oczu
+
+[A011-0005]
+Label=Tryb pracy
+ValueList=0#Pojedyczny lub samowyzwalacz, 1#Ciπg≥y
+
+[A011-0007]
+Label=Tryb ogniskowania
+ValueList=0#One-Shot, 1#AI Servo, 2#AI Focus, 3#RÍczne, 4#Pojedyncze, 5#Ciπg≥e, 6#RÍczne
+
+[A011-000A]
+Label=Rozmiar obrazu
+ValueList=0#Duøy, 1#åredni, 2#Ma≥y
+
+[A011-000B]
+Label=Easy shooting
+ValueList=0#Pe≥na automatyka, 1#RÍczny, 2#Krajobraz, 3#Szybka migawka, 4#Wolna migawka, 5#Noc, 6#Czarno-bia≥y, 7#Sepia, 8#Portret, 9#Sport, 10#Makro / Zbliøenie, 11#Ogniskowanie panoramiczne
+
+[A011-000D]
+Label=Kontrast
+ValueList=-1#Ma≥y, 0#Normalny, 1#Duøy
+
+[A011-000E]
+Label=Nasycenie
+ValueList=-1#Niskie, 0#Normalne, 1#Duøe
+
+[A011-000F]
+Label=OstroúÊ
+ValueList=-1#Ma≥a, 0#Normalna, 1#Duøa
+
+[A011-0010]
+Label=Czu≥oúÊ ISO
+ValueList=15#Automatycznie, 16#50, 17#100, 18#200, 19#400
+
+[A011-0011]
+Label=Tryb pomiaru úwiat≥a
+ValueList=3#Matrycowy, 4#CzÍúciowy, 5#Centralnie waøony
+
+[A011-0012]
+Label=Typ ogniskowania
+ValueList=0#RÍczne, 1#Automatyczne, 3#Zbliøenie (Makro), 7#NieskoÒczonoúÊ, 8#Zablokowane (Tryb panoramiczny)
+
+[A011-0013]
+Label=Punkt AF
+ValueList=12288#Brak (MF), 12289#WybÛr automatyczny, 12290#Prawy, 12291#årodkowy, 12292#Lewy
+
+[A011-0014]
+Label=Tryb naúwietlania
+ValueList=0#Easy shooting, 1#Program, 2#Priorytet migawki, 3#Priorytet przes≥ony, 4#RÍczny, 5#A-DEP
+
+[A011-0017]
+Label=D≥ugoúÊ ogniskowej [mm]
+
+[A011-0018]
+Label=D≥ugoúÊ najkrÛtszej ogniskowej [mm]
+
+[A011-0019]
+Label=Jednostka ogniskowej
+
+; --------------------- Makernote (Canon) - Camera Settings 2 ---------------------
+
+[A012-0007]
+Label=Balans bieli
+ValueList=0#Automatyczny, 1#S≥onecznie, 2#Pochmurno, 3#åwiat≥o øarowe, 4#åwiat≥o fluorescencyjne, 5#B≥ysk, 6#W≥asny
+[A012-0009]
+Label=Numer kolejny
+
+; --------------------- Makernote (Nikon) ---------------------
+
+[A020-0003]
+Label=JakoúÊ obrazu
+ValueList=1#VGA podstawowa, 2#VGA normalna, 3#VGA dobra, 4#SXGA podstawowa, 5#SXGA normalna, 6#SXGA dobra, 10#UXGA podstawowa, 11#UXGA normalna, 12#UXGA dobra
+
+[A020-0004]
+Label=Tryb kolorÛw
+ValueList=1#Kolorowy, 2#Monochromatyczny
+
+[A020-0005]
+Label=Dostosowanie obrazu
+ValueList=0#Normalny, 1#JasnoúÊ(+), 2#JasnoúÊ(-), 3#Kontrast(+), 4#Kontrast(-)
+
+[A020-0006]
+Label=Czu≥oúÊ CCD
+ValueList=0#ISO 80, 2#ISO 160, 4#ISO 320, 5#ISO 100
+
+[A020-0007]
+Label=Balans bieli
+ValueList=0#Automatyczny, 2#Ustawienie, 4#åwiat≥o dzienne, 5#åwiat≥o fluorescencyjne, 6#Pochmurno, 7#Speedlight
+
+[A020-0008]
+Label=Ogniskowanie
+
+[A020-000A]
+Label=PowiÍkszenie cyfrowe
+
+[A020-000B]
+Label=Adapter obiektywu
+ValueList=0#Brak, 2#Rybie oko
+
+; --------------------- Makernote (Nikon) ---------------------
+
+[A030-0001]
+Label=Wersja danych
+
+[A030-0002]
+Label=Ustawienie ISO
+
+[A030-0003]
+Label=Tryb kolorÛw
+
+[A030-0004]
+Label=JakoúÊ obrazu
+
+[A030-0005]
+Label=Balans bieli
+
+[A030-0006]
+Label=Wyostrzanie obrazu
+
+[A030-0007]
+Label=Tryb ogniskowania
+
+[A030-0008]
+Label=Ustawienie b≥ysku
+
+[A030-000B]
+Label=Strojenie balansu bieli
+
+[A030-000F]
+Label=WybÛr ISO
+
+[A030-0013]
+Label=Ustawienie ISO
+
+[A030-0016]
+Label=Granice obrazu
+
+[A030-0080]
+Label=Dostosowanie obrazu
+
+[A030-0081]
+Label=Kompensacja tonÛw
+
+[A030-0082]
+Label=Adapter obiektywu
+
+[A030-0083]
+Label=Typ obiektywu
+
+[A030-0084]
+Label=Obiektyw
+
+[A030-0085]
+Label=Odleg≥oúÊ ogniskowania
+
+[A030-0086]
+Label=PowiÍkszenie cyfrowe
+
+[A030-0087]
+Label=Tryb b≥ysku
+ValueList=0#Bez b≥ysku, 8#Z b≥yskiem, tryb Commander, 9#Z b≥yskiem, tryb TTL
+
+[A030-0088]
+Label=Punkt AF
+
+[A030-008D]
+Label=Kolor
+
+[A030-008F]
+Label=Typ sceny
+
+[A030-0090]
+Label=Oúwietlenie
+
+[A030-0092]
+Label=Dostosowanie koloru
+
+[A030-0094]
+Label=Nasycenie
+
+[A030-0095]
+Label=Redukcja szumÛw
+
+[A030-00A0]
+Label=Numer seryjny
+
+[A030-00A7]
+Label=Licznik migawki
+
+[A030-00A9]
+Label=Optymalizacja obrazu
+
+[A030-00AA]
+Label=Nasycenie
+
+[A030-00AB]
+Label=Program Vari
+
+; --------------------- Makernote (Casio) ---------------------
+
+[A040-0001]
+Label=Tryb rejestracji
+ValueList=1#Pojedynczy, 2#Panorama, 3#Scena nocna, 4#Portret, 5#Krajobraz
+
+[A040-0002]
+Label=JakoúÊ
+ValueList =1#Ekonomiczna, 2#Normalna, 3#Wysoka
+[A040-0003]
+Label=Tryb ogniskowania
+ValueList=2#Makro, 3#Autofokus, 4#RÍczny, 5#NieskoÒczonoúÊ
+
+[A040-0004]
+Label=Tryb b≥ysku
+ValueList=1#Automatyczny, 2#W≥πczony, 3#Wy≥πczony, 4#Redukcja czerwonych oczu
+
+[A040-0005]
+Label=Moc b≥ysku
+ValueList=1#Automatyczna, 2#w≥πczony, 3#wy≥πczony, 4#Redukcja czerwonych oczu, 11#Ma≥a, 13#Normalna, 15#Duøa
+
+[A040-0006]
+Label=Odleg≥oúÊ obiektu
+
+[A040-0007]
+Label=Balans bieli
+ValueList=1#Automatyczny, 2#åwiat≥o øarowe, 3#åwiat≥o dzienne, 4#åwiat≥o fluorescencyjne, 5#CieÒ, 129#RÍczny
+
+[A040-000A]
+Label=PowiÍkszenie cyfrowe
+ValueList=65536#Wy≥πczone, 65537#PowiÍkszenie cyfrowe 2X
+
+[A040-000B]
+Label=OstroúÊ
+ValueList=0#Normalna, 1#Ma≥a, 2#Duøa
+
+[A040-000C]
+Label=Kontrast
+ValueList=0#Normalny, 1#Niski, 2#Wysoki
+
+[A040-000D]
+Label=Nasycenie
+ValueList=0#Normalne, 1#Ma≥e, 2#Duøe
+
+[A040-0014]
+Label=Czu≥oúÊ CCD
+ValueList=64#Normalna, 125#+1.0, 250#+2.0, 244#+31.0, 80#Normalna, 100#Wysoka
+
+; --------------------- Makernote (Casio) ---------------------
+
+[A050-0002]
+Label=Rozmiar miniatury
+
+[A050-0003]
+Label=WielkoúÊ miniatury
+
+[A050-0004]
+Label=PrzesuniÍcie miniatury
+
+[A050-0008]
+Label=JakoúÊ
+ValueList=0#Ekonomiczna, 1#Normalna, 2#Wysoka
+
+[A050-0009]
+Label=Rozmiar obrazu
+ValueList=0#640x480, 4#1600x1200, 5#2048x1536, 20#2288x1712, 21#2592x1944, 22#2304x1728, 36#3008x2008
+
+[A050-000D]
+Label=Tryb ogniskowania
+ValueList=0#Normalny, 1#Makro
+
+[A050-0014]
+Label=Czu≥oúÊ ISO
+ValueList=3#50, 4#64, 6#100, 9#200
+
+[A050-0019]
+Label=Balans bieli
+ValueList=0#Automatyczny, 1#åwiat≥o dzienne, 2#CieÒ, 3#åwiat≥o øarowe, 4#åwiat≥o fluorescencyjne, 5#RÍczny
+
+[A050-001D]
+Label=D≥ugoúÊ ogniskowej
+
+[A050-001F]
+Label=Nasycenie
+ValueList=0#-1, 1#Normalne, 2#+1
+
+[A050-0020]
+Label=Kontrast
+ValueList=0#-1, 1#Normalny, 2#+1
+
+[A050-0021]
+Label=OstroúÊ
+ValueList=0#-1, 1#Normalna, 2#+1
+
+[A050-0e00]
+Label=Dane Print Image Matching
+
+[A050-2011]
+Label=Podstawa balansu bieli
+
+[A050-2012]
+Label=Balans bieli
+ValueList=12#B≥ysk, 0#RÍczny, 1#Automatyczny?, 4#B≥ysk?
+
+[A050-2022]
+Label=Odleg≥oúÊ obiektu [mm]
+
+[A050-2034]
+Label=Odleg≥oúÊ dla b≥ysku
+
+[A050-3000]
+Label=Tryb rejestracji
+ValueList=2#Normalny
+
+[A050-3001]
+Label=Samowyzwalacz
+ValueList=1#Wy≥πczony
+
+[A050-3002]
+Label=JakoúÊ
+ValueList=1#Ekonomiczna, 2#Normalna, 3#Wysoka
+
+[A050-3003]
+Label=Tryb ogniskowania
+ValueList=0#RÍczny?, 1#Ogniskowa sta≥a?, 3#Autofokus jednoobszarowy, 4#Autofokus wieloobszarowy
+
+[A050-3006]
+Label=Strefa czasowa
+
+[A050-3007]
+Label=Tryb Bestshot
+ValueList=0#W≥πczony, 1#Wy≥πczony
+
+[A050-3014]
+Label=Czu≥oúÊ ISO CCD
+
+[A050-3015]
+Label=Tryb kolorÛw
+ValueList=0#Wy≥πczony
+
+[A050-3016]
+Label=Korekta
+ValueList=0#Wy≥πczona
+
+[A050-3017]
+Label=Filtr
+ValueList=0#Wy≥πczony
+
+; --------------------- Makernote (Fuji) ---------------------
+
+[A060-0000]
+Label=Wersja danych producenta
+
+[A060-1000]
+Label=JakoúÊ
+
+[A060-1001]
+Label=OstroúÊ
+ValueList=1#Ma≥a, 2#Ma≥a, 3#Normalna, 4#Duøa, 5#Duøa
+
+[A060-1002]
+Label=Balans bieli
+ValueList=0#Automatyczny, 256#åwiat≥o dzienne, 512#Pochmurno, 768#åwiat≥o dzienne-fluorescencyjne, 769#åwiat≥o bia≥e dzienne-fluorescencyjne, 770#åwiat≥o bia≥e-fluorescyjne, 1024#åwiat≥o øarowe, 3840#W≥asny
+
+[A060-1003]
+Label=Nasycenie
+ValueList=0#Normalne, 256#Wysokie, 512#Niskie
+
+[A060-1004]
+Label=Kontrast
+ValueList=0#Normalny, 256#Duøy, 512#Ma≥y
+
+[A060-1010]
+Label=Tryb b≥ysku
+ValueList=0#Automatyczny, 1#W≥πczony, 2#Wy≥πczony, 3#Redukcja czerwonych oczu
+
+[A060-1011]
+Label=Si≥a b≥ysku
+
+[A060-1020]
+Label=Tryb makro
+ValueList=0#Wy≥πczony, 1#W≥πczony
+
+[A060-1021]
+Label=Tryb ogniskowania
+ValueList=0#Automatyczny, 1#RÍczny
+
+[A060-1030]
+Label=Tryb synchronizacji z wolnπ migawkπ
+ValueList=0#Wy≥πczony, 1#W≥πczony
+
+[A060-1031]
+Label=Tryb obrazu
+ValueList=0#Automatyczny, 1#Portret, 2#Krajobraz, 4#Sport, 5#Scena nocna, 6#Program AE, 256#Priorytet przes≥ony AE, 512#Priorytet migawki AE, 768#Tryb rÍczny
+
+[A060-1100]
+Label=Tryb ciπg≥y/seryjny
+ValueList=0#Wy≥πczony, 1#W≥πczony
+
+[A060-1300]
+Label=Status poruszenia
+ValueList=0#Brak, 1#Ostrzeøenie o poruszeniu
+
+[A060-1301]
+Label=Status ogniskowania
+ValueList=0#OK, 1#Nie zogniskowano
+
+[A060-1302]
+Label=Status naúwietlania
+ValueList=0#OK, 1#Przeúwietlone
+
+; --------------------- Makernote (Olympus) ---------------------
+
+[A070-0200]
+Label=Tryb fotografowania
+
+[A070-0201]
+Label=Ustawienie kompresji
+ValueList=0#SQ, 1#HQ, 2#SHQ
+
+[A070-0202]
+Label=Tryb makro
+ValueList=0#Normalny, 1#Makro
+
+[A070-0204]
+Label=PowiÍkszenie cyfrowe
+
+[A070-0207]
+Label=Wersja firmware
+
+[A070-0208]
+Label=Informacje o obrazie
+
+[A070-0209]
+Label=ID aparatu
+
+; --------------------- Makernote (Sigma) ---------------------
+
+[A080-0002]
+Label=Numer seryjny
+
+[A080-0003]
+Label=Tryb pracy
+
+[A080-0004]
+Label=Tryb rozdzielczoúci
+
+[A080-0005]
+Label=Tryb AF
+
+[A080-0006]
+Label=Ustawienie ogniskowania
+
+[A080-0007]
+Label=Balans bieli
+
+[A080-0008]
+Label=Tryb naúwietlania
+
+[A080-0009]
+Label=Tryb pomiaru úwiat≥a
+
+[A080-000A]
+Label=Obiektyw
+
+[A080-000B]
+Label=PrzestrzeÒ kolorÛw
+
+[A080-000C]
+Label=Kompensacja naúwietlania
+
+[A080-000D]
+Label=Kontrast
+
+[A080-000E]
+Label=Cienie
+
+[A080-000F]
+Label=åwiat≥a
+
+[A080-0010]
+Label=Nasycenie
+
+[A080-0011]
+Label=OstroúÊ
+
+[A080-0012]
+Label=åwiat≥o wype≥niajπce X3
+
+[A080-0014]
+Label=Dostosowanie kolorÛw
+
+[A080-0015]
+Label=Tryb dostosowania
+
+[A080-0016]
+Label=JakoúÊ
+
+[A080-0017]
+Label=Tryb firmware
+
+[A080-0018]
+Label=Oprogramowanie
+
+[A080-0019]
+Label=Seria automatyczna
+
+; --------------------- Makernote (Sanyo) ---------------------
+
+[A090-00ff]
+Label=PrzesuniÍcie danych producenta
+
+[A090-0100]
+Label=Miniatura
+
+[A090-0200]
+Label=Tryb specjalny
+
+[A090-0201]
+Label=JakoúÊ
+ValueList=0#Normalna/Bardzo niska, 1#Normalna/Niska, 2#Normalna/årednio niska, 3#Normalna/årednia, 4#Normalna/årednio wysoka, 5#Normalna/Wysoka, 6#Normalna/Bardzo wysoka, 7#Normalna/Super wysoka, 256#Wysoka/Bardzo niska, 257#Wysoka/Niska, 258#Wysoka/årednio niska, 259#Wysoka/årednia, 260#Wysoka/årednio wysoka, 261#Wysoka/Wysoka, 262#Wysoka/Bardzo wysoka, 263#Wysoka/Super wysoka, 512#Super wysoka/Bardzo niska, 513#Super wysoka/Niska, 514#Super wysoka/årednio niska, 515#Super wysoka/årednia, 516#Super wysoka/årednio wysoka, 517#Super wysoka/Wysoka, 518#Super wysoka/Bardzo wysoka, 519#Super wysoka/Super wysoka
+
+[A090-0202]
+Label=Makro
+ValueList=0#Normalne, 1#Makro, 2#Widok, 3#RÍcznie
+
+[A090-0204]
+Label=PowiÍkszenie cyfrowe
+
+[A090-0207]
+Label=Wersja oprogramowania
+
+[A090-0208]
+Label=Informacje o obrazie
+
+[A090-0209]
+Label=ID aparatu
+
+[A090-020E]
+Label=Tryb sekwencyjny
+ValueList=0#Brak, 1#Standardowy, 2#Najlepsze zdjÍcie, 3#Dostosowanie naúwietlania
+
+[A090-020F]
+Label=Szeroki zakres
+ValueList=0#Wy≥πczony, 1#W≥πczony
+
+[A090-0210]
+Label=Tryb dostosowania kolorÛw
+ValueList=0#Wy≥πczony, 1#W≥πczony
+
+[A090-0213]
+Label=QuickShot
+ValueList=0#Wy≥πczony, 1#W≥πczony
+
+[A090-0214]
+Label=Samowyzwalacz
+ValueList=0#Wy≥πczony, 1#W≥πczony
+
+[A090-0216]
+Label=Notatka g≥osowa
+ValueList=0#Wy≥πczona, 1#W≥πczona
+
+[A090-0217]
+Label=Zwolnienie migawki
+ValueList=0#Zwolnienie/zamkniÍcie przy naciúniÍciu, 1#Zwolnienie/zamkniÍcie przy naciúniÍciu/zwolnieniu
+
+[A090-0218]
+Label=Redukcja migotania
+ValueList=0#Wy≥πczona, 1#W≥πczona
+
+[A090-0219]
+Label=PowiÍkszenie optyczne
+ValueList=0#Wy≥πczone, 1#W≥πczone
+
+[A090-021B]
+Label=PowiÍkszenie cyfrowe
+ValueList=0#Wy≥πczone, 1#W≥πczone
+
+[A090-021D]
+Label=Specjalne ürÛd≥o úwiat≥a
+ValueList=0#Wy≥πczone, 1#W≥πczone
+
+[A090-021E]
+Label=Ponowny zapis
+ValueList=0#Nie, 1#Tak
+
+[A090-021F]
+Label=WybÛr sceny
+
+ValueList=0#Wy≥πczony, 1#Sport, 2#Priorytet migawki, 3#Noc, 4#Uøytkownika 1, 5#Uøytkownika 2
+[A090-0223]
+Label=Odleg≥oúÊ rÍcznego ogniskowania
+
+[A090-0224]
+Label=CzÍstotliwoúÊ sekwencji
+ValueList=0#5 zdjÍÊ/s, 1#10 zdjÍÊ/s, 2#15 zdjÍÊ/s, 3#20 zdjÍÊ/s
+
+[A090-0225]
+Label=Tryb b≥ysku
+ValueList=0#Automatyczny, 1#Wymuszony, 2#Wy≥πczony, 3#Redukcja czerwonych oczu
+
+; --------------------- Makernote (Minolta) ---------------------
+
+[A0A0-0000]
+Label=Wersja
+
+[A0A0-0040]
+Label=Obraz skompresowany
+
+[A0A0-0081]
+Label=Dane obrazu podglπdu
+
+[A0A0-0088]
+Label=Poczπtek obrazu podglπdu
+
+[A0A0-0089]
+Label=D≥ugoúÊ obrazu podglπdu
+
+[A0A0-0101]
+Label=Tryb kolorÛw
+ValueList=0#Naturalne, 1#Czarno-bia≥e, 2#Øywe, 3#Solaryzacja, 4#Adobe RGB
+
+[A0A0-0102]
+Label=JakoúÊ Minolta
+ValueList=0#Raw, 1#Super wysoka, 2#Wysoka, 3#Standardowa, 4#Ekonomiczna, 5#Ekstra wysoka
+
+[A0A0-0103]
+Label=JakoúÊ Minolta
+ValueList=0#Raw, 1#Super wysoka, 2#Wysoka, 3#Standardowa, 4#Ekonomiczna, 5#Ekstra wysoka
+
+; --------------------- Makernote (Minolta) ---------------------
+
+[A0B0-0001]
+Label=Tryb naúwietlania
+ValueList=0#Program, 1#Priorytet przes≥ony, 2#Priorytet migawki, 3#RÍczny
+
+[A0B0-0002]
+Label=Tryb b≥ysku
+ValueList=0#B≥ysk wype≥niajπcy, 1#Redukcja czerwonych oczu, 2#Synchronizacja na 2. kurtynÍ, 3#Bezprzewodowy
+
+[A0B0-0003]
+Label=Balans bieli
+ValueList=0#Automatyczny, 1#åwiat≥o dzienne, 2#Pochmurno, 3#åwiat≥o øarowe, 5#W≥asny, 7#åwiat≥o fluorescencyjne, 8#åwiat≥o fluorescencyjne 2, 11#W≥asny 2, 12#W≥asny 3
+
+[A0B0-0004]
+Label=Rozmiar obrazu
+ValueList=0#2560x1920 (2048x1536), 1#1600x1200, 2#1280x960, 3#640x480
+
+[A0B0-0005]
+Label=JakoúÊ obrazu
+
+[A0B0-0006]
+Label=Tryb pracy
+ValueList=0#Pojedyncze zdjÍcie, 1#Ciπg≥y, 2#Samowyzwalacz, 4#ZdjÍcia seryjne, 5#ZdjÍcia okresowe, 6#Ciπg≥y UHS, 7#Ciπg≥y HS
+
+[A0B0-0007]
+Label=Tryb pomiaru úwiat≥a
+ValueList=0#Wielosegmentowy, 1#Centralnie waøony, 2#Punktowy
+
+[A0B0-0008]
+Label=ISO
+
+[A0B0-0009]
+Label=SzybkoúÊ migawki
+
+[A0B0-000A]
+Label=Przes≥ona
+
+[A0B0-000B]
+Label=Tryb makro
+ValueList=0#Wy≥πczony, 1#W≥πczony
+
+[A0B0-000C]
+Label=PowiÍkszenie cyfrowe
+ValueList=0#Wy≥πczone, 1#PowiÍkszenie elektroniczne, 2#2x
+
+[A0B0-000D]
+Label=Kompensacja naúwietlania
+
+[A0B0-000E]
+Label=Krok dla serii
+ValueList=0#1/3 EV, 1#2/3 EV, 2#1 EV
+
+[A0B0-000F]
+Label=D≥ugoúÊ okresu
+
+[A0B0-0011]
+Label=Numer okresu
+
+[A0B0-0012]
+Label=D≥ugoúÊ ogniskowej
+
+[A0B0-0013]
+Label=Odleg≥oúÊ ogniskowania
+
+[A0B0-0014]
+Label=B≥ysk
+ValueList=0#Nie, 1#Tak
+
+[A0B0-0015]
+Label=Data
+
+[A0B0-0016]
+Label=Czas
+
+[A0B0-0017]
+Label=Przes≥ona maksymalna
+
+[A0B0-001A]
+Label=PamiÍÊ numerÛw plikÛw
+ValueList=0#Wy≥πczona, 1#W≥πczona
+
+[A0B0-001B]
+Label=Ostatni numer pliku
+
+[A0B0-001C]
+Label=Balans kolorÛw - Czerwony
+
+[A0B0-001D]
+Label=Balans kolorÛw - Zielony
+
+[A0B0-001E]
+Label=Balans kolorÛw - Niebieski
+
+[A0B0-001F]
+Label=Nasycenie
+
+[A0B0-0020]
+Label=Kontrast
+
+[A0B0-0021]
+Label=OstroúÊ
+ValueList=0#Duøa, 1#Normalna, 2#Ma≥a
+
+[A0B0-0022]
+Label=Program
+ValueList=0#Brak, 1#Portret, 2#Tekst, 3#Nocny portret, 4#ZachÛd s≥oÒca, 5#Sport
+
+[A0B0-0023]
+Label=Kompensacja b≥ysku
+
+[A0B0-0024]
+Label=Ustawienie ISO
+ValueList=0#100, 1#200, 2#400, 3#800, 4#Automatycznie
+
+[A0B0-0025]
+Label=Model
+ValueList=0#DiMAGE 7, 1#DiMAGE 5, 2#DiMAGE S304, 3#DiMAGE S404, 4#DiMAGE 7i, 5#DiMAGE 7Hi
+
+[A0B0-0026]
+Label=Tryb zdjÍÊ okresowych
+ValueList=0#Obrazy pojedyncze, 1#Film ze zdjÍÊ
+
+[A0B0-0027]
+Label=Nazwa foldera
+ValueList=0#Format standardowy, 1#Format daty
+
+[A0B0-0028]
+Label=Tryb kolorÛw
+
+[A0B0-0029]
+Label=Filtr kolorÛw
+
+[A0B0-002A]
+Label=Filtr cz-b
+
+[A0B0-002B]
+Label=Lampa wbudowana
+ValueList=0#Nie, 1#B≥ysk
+
+[A0B0-002C]
+Label=JasnoúÊ
+
+[A0B0-002D]
+Label=X punktu ogniskowania punktowego
+
+[A0B0-002E]
+Label=Y punktu ogniskowania punktowego
+
+[A0B0-002F]
+Label=Szeroka strefa ogniskowania
+ValueList=0#Brak strefy, 1#Strefa úrodkowa (orientacja pozioma), 2#Strefa úrodkowa (orientacja pionowa), 3#Strefa lewa, 4#Strefa prawa
+
+[A0B0-0030]
+Label=Tryb ogniskowania
+ValueList=0#Automatyczny, 1#RÍczny
+
+[A0B0-0031]
+Label=Obszar ogniskowania
+ValueList=0#Szeroki (normalny), 1#Punktowy
+
+[A0B0-0032]
+Label=Ustawienie DEC
+ValueList=0#Naúwietlanie, 1#Kontrast, 2#Nasycenie, 3#Filtr
+
+; --------------------- External words ---------------------
+
+[E000-0000]
+Label=
+ValueList=0#Nieskalibrowany, 1#Nieskompresowane RGB
+
+[E000-0001]
+Label=
+ValueList=2#Obraz sfotografowany bezpoúrednio
+
+[E000-0002]
+Label=
+ValueList=3#cale, 4#centymetry
+
+[E000-0003]
+Label=
+ValueList=5#Bez by≥sku, 6#Z b≥yskiem, 7#Nie wyryto úwiat≥a powrotnego stroboskopu, 8#Wykryto úwiat≥o powrotne stroboskopu
+

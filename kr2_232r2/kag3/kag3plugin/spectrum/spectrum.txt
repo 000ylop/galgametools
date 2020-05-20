@@ -1,0 +1,73 @@
+「スペアナ」プラグイン
+
+　いわゆるスペアナを表示するためのプラグインです。BGM の再生に同期してスペ
+アナを表示させることができます。スペアナは背景レイヤの指定位置に描画されま
+す。BGM の種類として Config.tjs で "Wave" を指定したときのみ有効です。
+
+
+・組み込み方
+
+　scenario\spectrum.ks をお手持ちの KAG3 のプロジェクトフォルダの各フォルダ
+にコピーしてください。
+　また、このプラグインは吉里吉里２用プラグインである fftgraph.dll を使用し
+ます。
+
+・使い方
+
+　シナリオの先頭などで
+
+@call storage="spectrum.ks"
+
+　として spectrum.ks を呼び出すと、以下で説明するマクロが定義されます。
+　なお、この中で fftgraph.dll は自動的に読み込まれるので、別の場所で
+fftgraph.dll を指定して読み込ませる必要はありません。
+
+
+・spectrumopt
+
+　スペアナのオプションを指定します。
+　left top width height 属性は、それぞれスペアナを表示する場所を指定します。
+表示する場所は画面からはみ出さないようにしてください。width height は大きく
+すると CPU 負荷が高くなります。現実的なサイズとして 64×32 ぐらいを推奨しま
+す。
+
+　type 属性は 0 を指定すると WinAmp の fire 風の表示になります。
+　1 を指定すると液晶表示風になります。
+
+　1 を指定した場合はさらに bgcolor ( 背景カラー )、oncolor ( 通電状態の色 )、
+offcolor ( 非通電状態の色 )、peakcolor ( ピークホールドの色 ) 、thick ( 表示
+素子の一つ一つの高さ )、division ( 分割数 ) を指定できます。色は 0xRRGGBB
+形式で指定します。
+
+・spectrumstart
+
+　スペアナの表示を開始します。
+
+・spectrumstop
+
+　スペアナの表示を停止します。
+
+・注意
+
+　スペアナが表示状態だったかそうでなかったかどうかの情報は栞に保存されませ
+ん。
+
+
+・例
+
+@loadplugin module="wuvorbis.dll"
+@call storage="spectrum.ks"
+@spectrumopt left=500 top=0 width=64 height=32 type=0
+@spectrumstart
+@playbgm storage="trk04.ogg"
+@l
+@stopbgm
+@l
+@spectrumstop
+@s
+
+
+
+・ライセンス
+
+KAG3に準じます。つまり、使用・改変自由です。

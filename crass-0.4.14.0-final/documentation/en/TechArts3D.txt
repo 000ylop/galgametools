@@ -1,0 +1,13 @@
+﻿Name: 		TechArts3D
+Description: 	for Tech Arts 3D game 3Dカスタム少女
+Archive: 	.tah
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	1.0.0
+Status: 	Beta
+
+【Guess about Format and Engine】
+·.tmo and .tso may be format developed by japan inc. イナズマ's 3D papermodel stretch software - 紙龍(しりゅう) (http://www.inazuma7.jp/craft/index.html) (the software only using group buying for a long time).
+·exe with ObsidianDX9 words. Obsidian is a foreign open source 3D engine under Linux+OpenGL, but no confirmation for their relationship.
+
+【ChangeLog】
+2008-04-16 17:58 ver 1.0.0 1st version released

@@ -1,0 +1,7 @@
+@charset "shift_jis";
+
+@import url("browser.css");
+
+body{
+	margin-left: 0em;
+}

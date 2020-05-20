@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="TMEMO.dll" 接口名="YHD" />
+
+	<文件 文件名="YHD\*.yhd"             插件="0" />
+	<文件 文件名="YHD\BG\AM\*.yhd"       插件="0" />
+	<文件 文件名="YHD\BG\AQ\*.yhd"       插件="0" />
+	<文件 文件名="YHD\BG\AR\*.yhd"       插件="0" />
+	<文件 文件名="YHD\BG\CO\*.yhd"       插件="0" />
+	<文件 文件名="YHD\BG\GA\*.yhd"       插件="0" />
+	<文件 文件名="YHD\BG\KA\*.yhd"       插件="0" />
+	<文件 文件名="YHD\BG\LO\*.yhd"       插件="0" />
+	<文件 文件名="YHD\BG\MA\*.yhd"       插件="0" />
+	<文件 文件名="YHD\BG\MO\*.yhd"       插件="0" />
+	<文件 文件名="YHD\BG\PA\*.yhd"       插件="0" />
+	<文件 文件名="YHD\BG\PA2\*.yhd"      插件="0" />
+	<文件 文件名="YHD\BG\PLA\*.yhd"      插件="0" />
+	<文件 文件名="YHD\BG\PO\*.yhd"       插件="0" />
+	<文件 文件名="YHD\BG\SC\*.yhd"       插件="0" />
+	<文件 文件名="YHD\BG\SEA\*.yhd"      插件="0" />
+	<文件 文件名="YHD\BG\SHOP\*.yhd"     插件="0" />
+	<文件 文件名="YHD\BG\SKA\*.yhd"      插件="0" />
+	<文件 文件名="YHD\BG\SKI\*.yhd"      插件="0" />
+	<文件 文件名="YHD\BG\ZOO\*.yhd"      插件="0" />
+	<文件 文件名="YHD\CHAR\ASA\*.yhd"    插件="0" />
+	<文件 文件名="YHD\CHAR\FUJI\*.yhd"   插件="0" />
+	<文件 文件名="YHD\CHAR\HIMO\*.yhd"   插件="0" />
+	<文件 文件名="YHD\CHAR\KAGA\*.yhd"   插件="0" />
+	<文件 文件名="YHD\CHAR\KATA\*.yhd"   插件="0" />
+	<文件 文件名="YHD\CHAR\KISA\*.yhd"   插件="0" />
+	<文件 文件名="YHD\CHAR\KIYO\*.yhd"   插件="0" />
+	<文件 文件名="YHD\CHAR\KOSI\*.yhd"   插件="0" />
+	<文件 文件名="YHD\CHAR\MIKI\*.yhd"   插件="0" />
+	<文件 文件名="YHD\CHAR\NIJI\*.yhd"   插件="0" />
+	<文件 文件名="YHD\CHAR\TATE\*.yhd"   插件="0" />
+	<文件 文件名="YHD\CHAR\YUMI\*.yhd"   插件="0" />
+	<文件 文件名="YHD\DEMO_L\*.yhd"      插件="0" />
+	<文件 文件名="YHD\DEMO_L\OPN\*.yhd"  插件="0" />
+	<文件 文件名="YHD\DEMO_L\OPN\*.tate"          />
+	<文件 文件名="YHD\DEMO_L\P_D\*.yhd"  插件="0" />
+	<文件 文件名="YHD\DEMO_L\P_I\*.yhd"  插件="0" />
+	<文件 文件名="YHD\ENDING\*.yhd"      插件="0" />
+	<文件 文件名="YHD\ENDING\*.yor"      插件="0" />
+	<文件 文件名="YHD\GAMEN\*.yhd"       插件="0" />
+	<文件 文件名="YHD\G_OVER\*.yhd"      插件="0" />
+	<文件 文件名="YHD\IVENT\ASA\*.yhd"   插件="0" />
+	<文件 文件名="YHD\IVENT\KAGA\*.yhd"  插件="0" />
+	<文件 文件名="YHD\IVENT\KATA\*.yhd"  插件="0" />
+	<文件 文件名="YHD\IVENT\KISA\*.yhd"  插件="0" />
+	<文件 文件名="YHD\IVENT\KIYO\*.yhd"  插件="0" />
+	<文件 文件名="YHD\IVENT\KOSI\*.yhd"  插件="0" />
+	<文件 文件名="YHD\IVENT\MIKI\*.yhd"  插件="0" />
+	<文件 文件名="YHD\IVENT\NIJI\*.yhd"  插件="0" />
+	<文件 文件名="YHD\IVENT\TATE\*.yhd"  插件="0" />
+	<文件 文件名="YHD\IVENT\YUMI\*.yhd"  插件="0" />
+	<文件 文件名="YHD\NAME_E\*.yhd"      插件="0" />
+	<文件 文件名="YHD\PRO\*.yhd"         插件="0" />
+	<文件 文件名="YHD\SEL\*.yhd"         插件="0" />
+	<文件 文件名="YHD\SENS\*.yhd"        插件="0" />
+	<文件 文件名="YHD\TITLE_D\*.yhd"     插件="0" />
+
+</游戏脚本>

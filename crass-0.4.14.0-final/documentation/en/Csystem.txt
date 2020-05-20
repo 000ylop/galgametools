@@ -1,0 +1,64 @@
+﻿Name:		Csystem
+Description:	game system developed by Cyberworks
+Archive:	(no magic).dat .00 .01 .02 .03. 04 .05 .06
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.0.3
+Status: 	Alpha
+
+【TODO】
+support old archive
+
+【Notice】
+·when extracting must specify "-u Csystem", "-l" index file and "-O game" parameter.
+·about choice of index file
+usually under game folder, there are Arc00.dat-Arc06.dat 7 archives.
+in them Arc00.dat is standalone configuration file, has no special valuable info, don't pay any attention.
+remaining 6 files, Arc04.dat corresponds to Arc01.dat, Arc05.dat corresponds to Arc02.dat, Arc06.dat corresponds to Arc03.dat, in which former one is data file, latter one is index file.
+·when extracting it will bring a great deal of trash without extension, please delete yourself.
+·about game parameter, it's requred to specify game parameter for particular game(same as exe name):
+
+なつドキ！ハーレム ～親せき宅での悩める受験勉強～：specify "game=Ndoki" parameter
+蝶ノ夢 ～二人の蝶～：specify "game=tyouR" parameter
+学校のヤラシイ怪談 ～こんな恥ずかしい除霊させないで！～ 体験版：specify "game=GYK" parameter
+恋妻びより ～由希乃さんは人妻管理人～ 体験版: specify "game=koituma" parameter
+保母さんといっしょっ！ ～双子とできるもん！～: specify "game=hobo" parameter
+淫妖蟲 蝕 ～凌触島退魔録～: specify "game=inyou_shock" parameter
+淫妖蟲 ～凌触学園退魔録～: specify "game=inyoutyu" parameter
+快楽依存症: specify "game=kairaku" parameter
+夢恋転生 体験版: specify "game=yumekoi" parameter
+はなマルッ！2: specify "game=hanamaru2" parameter
+義母の吐息～背徳心に漂う母の色香～: specify "game=gibo" parameter
+蝶ノ夢: specify "game=tyou" parameter
+はなマルッ！: specify "game=hanamaru" parameter
+人妻♪かすみさん2 ～奥様・未亡人オーナーと共同性活～: specify "game=kasumi2" parameter
+姫∽神1/2: specify "game=himekami" parameter
+蟲惑の刻: specify "game=kowakunotoki" parameter
+孕女 ～俺はこの学園で復讐を成しとげる～: specify "game=harame" parameter
+痴漢衝動: specify "game=tikansyou" parameter
+痴漢願望: specify "game=tikangan" parameter
+ご奉仕★プリンセス: specify "game=princess" parameter
+続・快楽依存症 ～その後の涼子さん～: specify "game=zoku_kairaku" parameter
+イカレタ教室 ～こんなのが当り前の授業風景！？～: specify "game=ikareta" parameter
+兄嫁はいじっぱり: specify "game=aniyomeiji" parameter
+
+【Sample】
+crage -u Csystem -p "Arc04.dat" -l "Arc01.dat" -O game=tikangan
+Arc04.dat: 准备提取封包文件（含64个资源文件） ...
+Arc04.dat：成功提取64 / 64个资源文件  |
+
+Csystem：成功提取1个.dat封包文件文件 /
+
+【ChangeLog】
+2009-06-20 13:01 ver 1.0.3 add "game=Ndoki" parameter
+2009-04-26 11:33 ver 1.0.2 added "game=tyouR" parameter
+2009-03-25 19:50 ver 1.0.1 disabled alpha blending
+2009-03-17 20:23 ver 1.0.0 exported alpha channel correctly; added "game=GYK" parameter
+2008-12-14 19:32 ver 0.9.9 blended automatically for 24-bit+mask image
+2008-10-22 20:16 ver 0.9.8 added "game=koituma" parameter
+2008-09-19 21:53 ver 0.9.7 added "game=inyou_shock" and "game=hobo" parameter
+2008-08-25 19:36 ver 0.9.6 added "game=inyoutyu" parameter(thank bmeio for debugging)
+2008-07-13 19:54 ver 0.9.4 fixed a problem on incorrectly processing resource after extracting
+2008-07-11 22:33 ver 0.9.3 added "game=yumekoi" parameter
+2008-06-27 00:11 ver 0.9.2 added "game=gibo" parameter
+2008-06-25 16:48 ver 0.9.1 fixed a extraction error, thank IamSM for providing help in debugging
+2008-06-25 15:18 ver 0.9.0 1st version released

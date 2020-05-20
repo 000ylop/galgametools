@@ -1,0 +1,9 @@
+﻿Name:		ADV+++
+Description:	Professional Adventure-Game System by YOX-Project (http://www.yox-project.com/)
+Archive:	.dat
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.0.0
+Status:	        Beta
+
+【ChangeLog】
+2008-02-03 01:25 ver 1.0.0 1st version released

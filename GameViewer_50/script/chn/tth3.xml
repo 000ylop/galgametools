@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<手动指定文件插件 />
+
+	<插件 文件名="ScrPAK.upk"              0 />
+	<插件 文件名="ManPAK.upk"              1 />
+	<插件 文件名="UjLib.dll"  接口名="IMG" 2 />
+	<插件 文件名="UjLib.dll"  接口名="PS2" 3 />
+	<插件 文件名="UjLib.dll"  接口名="LZH" 4 />
+	<插件 文件名="UjLib.dll"  接口名="BIN" 5 />
+
+	<文件 文件名="Image\*.IMG"      插件="0" 数据文件="uj\PS2.pndr" />
+	<文件 文件名="MergeImage\*.IMG" 插件="0" 数据文件="uj\PS2.pndr" />
+
+	<文件 文件名="Tth3DataChs.Bin"  插件="1" 数据文件="uj\tth3_data.ini" />
+	<文件 文件名="Tth3ImageChs.Bin" 插件="1" 数据文件="uj\tth3_image.ini" />
+
+	<文件 文件名="Map\*.img"    插件="2" />
+	<文件 文件名="Image\*.fbg"  插件="0" 数据文件="uj\FBG.pndr" />
+	<文件 文件名="Image\*.BKS"  插件="0" 数据文件="uj\BKS.pndr" />
+	<文件 文件名="Image\*.BKS3" 插件="0" 数据文件="uj\BKS.pndr" />
+	<文件 文件名="Image\*.BKS4" 插件="0" 数据文件="uj\BKS.pndr" />
+	<文件 文件名="Image\*.BKSH" 插件="0" 数据文件="uj\BKS.pndr" />
+	<文件 文件名="Sound\*.bin"  插件="0" 数据文件="uj\Sound.pndr" />
+
+	<文件 文件名="*.PS2" 插件="3" />
+	<文件 文件名="*.LZH" 插件="4" 数据文件="uj\lzh.ini" />
+
+	<文件 文件名="MergeImage\*.HED" 插件="5" 数据文件="ZLIB" />
+
+	<文件 文件名="Tth3RoleManHead"         插件="4" 数据文件="uj\lzh.ini" />
+	<文件 文件名="Tth3CombatActionArray0"  插件="5" 数据文件="ZLIB" />
+	<文件 文件名="Tth3CombatActionArray1"  插件="5" 数据文件="ZLIB" />
+	<文件 文件名="Tth3CombatActionArray2"  插件="5" 数据文件="ZLIB" />
+	<文件 文件名="Tth3CombatActionArray3"  插件="5" 数据文件="ZLIB" />
+	<文件 文件名="Tth3CombatActionArray4"  插件="5" 数据文件="ZLIB" />
+	<文件 文件名="Tth3CombatActionArray5"  插件="5" 数据文件="ZLIB" />
+	<文件 文件名="CrhItemImage"            插件="5" 数据文件="LZH2" />
+	<文件 文件名="CrhMartialArtIcon"       插件="5" 数据文件="LZH2" />
+	<文件 文件名="Tth3MartialArtSmallIcon" 插件="5" 数据文件="LZH2" />
+	<文件 文件名="CrhSmallItemImage"       插件="5" 数据文件="LZH2" />
+	<文件 文件名="Tth3MapBottomLayer"      插件="5" 数据文件="LZH1" />
+	<文件 文件名="Tth3PreviewMap"          插件="5" 数据文件="LZH1" />
+	<文件 文件名="Tth3RoleManSmallHead"    插件="4" 数据文件="uj\lzh.ini" />
+
+</游戏脚本>

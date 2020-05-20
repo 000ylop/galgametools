@@ -1,0 +1,26 @@
+﻿名称：		SLGSystem
+描述：		
+封包：		.sz .alb .VOI(weak magic) .tig .SPD .SPL
+作者：		痴汉公贼 (glanser@163.com)
+版本：		1.0.3
+成熟度：	测试版
+
+【注意事项】
+提取.SPD文件要同时指定对应的.SPL文件为索引文件。
+比如：
+
+crage -p "Q:\gesen18\shihen2_trial_hard\voice\ne.SPD" -l "Q:\gesen18\shihen2_trial_hard\voice\ne.SPL"
+
+开始执行解包操作 ...
+
+ne.SPD: 准备提取封包文件（含158个资源文件） ...
+ne.SPD: 成功提取158 / 158 个资源文件 -
+
+SLGSystem：成功提取1个.SPD封包文件
+
+
+【ChangeLog】
+2009-06-26 21:41 ver 1.0.3 修正提取.alb文件时发生的错误；并正确导出jpg图像
+2009-06-10 20:21 ver 1.0.2 支持.SPD资源的提取
+2008-11-20 20:24 ver 1.0.1 支持.tig资源的提取
+2007-12-30 00:13 ver 1.0.0 第一版发布

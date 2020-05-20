@@ -1,0 +1,11 @@
+﻿Name:		TACTICS_ARC
+Description:		
+Archive:	.arc
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.0.2
+Status:	        Final
+
+【ChangeLog】
+2008-12-27 10:36 ver 1.0.2 supported new arc format
+2008-04-20 11:03 ver 1.0.1 ignored extracting 0-length resource
+2007-10-09 23:34 ver 1.0.0 1st version released

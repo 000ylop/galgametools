@@ -1,0 +1,9 @@
+﻿名称：		Irrlicht Engine
+描述：		
+封包：		.ark .pack
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.0
+成熟度：	测试版
+
+【ChangeLog】
+2009-05-12 18:14 ver 1.0.0 第一版发布

@@ -1,0 +1,34 @@
+﻿Name:		ohgetsu
+Description:		
+Archive:	.PAC .BIN
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.0.4
+Status: 	Beta
+
+【Notice】
+·extracted .TM2 is PS2 standard image format, please use image viewer "XnView" to see and convert.
+·must specify "exe" parameter for extracting.
+
+take the game "Palmyra ～熱砂の海と美なる戦姫～" for example:
+crage -d "Q:\Palmyra_try\Palmyra懱尡斉\懱尡斉" -O exe=-O exe="Q:\Palmyra_try\Palmyra懱尡斉\懱尡斉\Palmyra.exe"
+
+MUSIC.PAC: 准备提取封包文件（含3个资源文件） ...
+MUSIC.PAC：成功提取3 / 3个资源文件  \
+
+SCRIPT.PAC: 准备提取封包文件（含1个资源文件） ...
+SCRIPT.PAC：成功提取1 / 1个资源文件  /
+
+VISUAL.PAC: 准备提取封包文件（含456个资源文件） ...
+VISUAL.PAC：成功提取456 / 456个资源文件  |
+
+VOICE.PAC: 准备提取封包文件（含141个资源文件） ...
+VOICE.PAC：成功提取141 / 141个资源文件  /
+
+ohgetsu：成功提取4个.PAC封包文件文件 |
+
+【ChangeLog】
+2009-04-19 18:59 ver 1.0.4 use "exe" parameter instead and support old archive format for extracting
+2009-02-14 19:41 ver 1.0.3 supported game "SilveryWhite ～君と出逢った理由～"
+2008-06-07 22:50 ver 1.0.2 supported game "Palmyra（パルミュラ）～熱砂の海と美なる戦姫～"(thanks for pcicp's help); modified special parameter to be game.
+2008-06-04 21:52 ver 1.0.1 supported game "Palmyra ～熱砂の海と美なる戦姫～ 体験版 version1.02"
+2008-04-30 00:13 ver 1.0.0 1st version released

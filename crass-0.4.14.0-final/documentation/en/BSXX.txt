@@ -1,0 +1,14 @@
+﻿Name:		BSXX
+Description:	BSXX システム
+Archive:	.bsa
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	0.5.1
+Status:	        Alpha
+
+【TODO】
+·make compatible with old archive structure
+·support to extract bsxx.dat
+
+【ChangeLog】
+2008-07-18 23:46 ver 0.5.1 supported ver2 archive
+2007-12-26 00:30 ver 0.5.0 1st version released

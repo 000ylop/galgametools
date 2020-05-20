@@ -1,0 +1,10 @@
+// exl5enj.cpp, v1.2 2011/04/23
+// coded by asmodean
+
+// contact: 
+//   web:   http://asmodean.reverse.net
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+
+// This tool extracts data from LINK5, LINK6 (*.arc) archives used by Atelier
+// Kaguya's ‰—ˆã and others.  Animations can be extracted raw or as frames.

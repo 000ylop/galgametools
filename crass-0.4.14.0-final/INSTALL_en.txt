@@ -1,0 +1,127 @@
+﻿【Install crass】
+    Unpack crass's archive, copy crass-x.x.x to any directory. To uninstall it, simply delete crass-x.x.x.
+
+【Use crage】
+    crage have two interfaces: console interface and GUI.
+
+    GUI:
+
+    Double-click CrageGUI.exe to start.
+
+    On top of the window is parameter of extraction path, by which the path of target archives can be specified.
+        
+	·Source File － Specify a single target archive's path
+
+	·Source Path － Extract all archives in specified directory, including those in sub-directories.
+
+         Among the three buttons on the bottom, "Execute" on the left  can start the process of extraction; "Result" on the right can show detail information of extraction. "Show Adv." on the middle provides finer control for advanced users. Including :
+
+	·Dest. Path  － Specify the path where  extracted resource is saved. If the target is a single archive, extracted resource will be saved in a directory named by the archive, which is put in the specified path. If the target is a path, extracted resource will be placed in a directory named "output_dir", which is put in the specified path.
+
+	·Import Index － If an additional index file is needed during extraction, this parameter can specify its path.
+
+	·Special Param － Provide additional parameters needed during extraction. (Decrypt key, e.g.)
+
+	·Test only － Extract archive but do not save the resource files extracted.
+
+	·Show Detail － Show detailed information during extraction.
+
+    Console interface：
+
+    When used in console interface, command line parameters can control crage's extraction process. Refer to FAQ for instructions of console's config and use.
+
+    Command line parameters are described below:
+
+
+	-p pkg  Extract archives in the specified path. The path can be either a absolute one or a relative one. Can be used with -d at the same time.
+	
+	Example:
+
+		crage.exe -p J:\CIRCUS\MHPC_DVD\AdvData\GRP\A.CRX
+		
+	In default circumstance, extracted resource data are saved in directories named by archive, which are placed in current directory.
+
+	-d dir  Extract all archives in specified directory, including those in sub-directories. Again, the path can be either a absolute one or a relative one. Can be use with -p at the same time.
+	
+	Example：
+
+		crage.exe -d ..\MHPC_DVD\AdvData\GRP
+		
+	In default circumstance, extracted resource data are saved in directory "output_dir", which is placed in current directory. 
+
+
+	-o dir	Specify the path where extracted resource files are saved.
+	
+         Example：
+
+		crage.exe -d J:\CIRCUS\MHPC_DVD\AdvData\GRP -o z:\bmp
+
+	Note: Resource files extracted by parameter -d will keep their original directory structure, while those extracted by -p will NOT.
+
+	
+	-l lst	Specify the path of additional index files. Instead of put inside archives, some archive system's index is a separate file.
+
+	Example：
+
+		crage.exe -p M:\SCORE\yakuchu\lcsebody1 -l M:\SCORE\yakuchu\lcsebody1.lst -u lc-scriptengine
+
+	Note: Archives with an additional index file can not be extracted by parameter -d.
+
+
+	-O  Additional extraction parameter provided by users. For example, RPM_ADV_SYSTEM plugin require a key for extraction.
+
+	Example：
+
+		crage.exe -d "H:\Crass\test_files\RPM_ADV_SYSTEM\姦染2" -O code=Kan2T -u "RPM ADV SYSTEM"
+
+
+	-F	Force crage to use all cui plugins with the mark "no magic". Generally, those marked plugins will decrease crage's stability, as those plugins can not guarantee that the archives they try to extract are supported. It is recommended to use parameter -u instead of -f, as -u can specify one suitable cui plugin to extract resource smoothly.
+
+	Example：
+
+		crage.exe -F "H:\Crass\test_files\NitroPlus"
+
+
+	-u name Specify a cui plugin by name(insensitive to case) to extract resource. This parameter is useful when user knows extractly which cui plugin can support target archives.
+
+	Example：
+
+		crage.exe -u Nitroplus -d "H:\Crass\test_files\NitroPlus"
+
+	This example showed that the user used plugin "Nitroplus" to extract archives.
+
+	Another important function of this parameter is extraction of no magic archives. In default circumstance, crage does not use cui plugins marked with "no magic" to extract archives.
+
+
+	-n	Extract archive but do not save the resource files extracted.
+	
+	Example：
+
+		crage.exe -p AdvData\GRP\BATTLE\C19.PCK -n
+
+
+	-r	Only extract the raw data from archive.
+
+
+	-v	Show detailed extraction information, only concise information is showed without this parameter.
+
+
+	-I	Show information of cuis. It can check information of either specified or all cuis.
+	
+	Example：
+	
+		crage.exe -I NeXAS
+		
+	If no parameters followed -I, crage will check information of all current cuis.
+
+
+	-f name	Only extract specify resource from archive.
+
+	Example：only extract yu_z0001.SPT from script.ar1
+	
+		crage -p "H:\Leaf\script.ar1" -f yu_z0001.SPT
+	
+	The resource name is case-insensitive.
+
+
+	-i	(Not implemented yet.) Export .idx index files.

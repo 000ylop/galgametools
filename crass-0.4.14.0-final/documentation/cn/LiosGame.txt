@@ -1,0 +1,109 @@
+﻿名称：		LiosGame
+描述：		Liar社的LiosGame系统
+封包：		xfl lwg wcg lim
+作者：		痴汉公贼 (glanser@163.com)
+版本：		0.9.7
+成熟度：	开发版
+
+【注意事项】
+1. 提取出来的部分wav文件需要安装Ogg Vorbis ACM Codec才能正常播放。
+2. Windows XP系统自带的图像预览功能不支持RGB565格式的16位BMP（显示“没有预览”），可以用Windows自带的画图(有错位)、PhotoShop、AcdSee(3.1不支持)或irfanview等软件查看。
+
+【TODO】
+完全解明wcg首部的flags字段的含义。
+
+【.xfl封包文件说明】
+    实际类型是有目录的封包资源文件。
+    元数据根据实际用途，是wcg、lwg、lim、wav（*注1）、gsc（二进制脚本）等。
+    
+    	首部：
+		s8 magic[2];		// "LB"
+		u16 version;		// 必须为1
+		u32 index_length;	// 索引段长度
+		u32 index_entries;	// 资源文件数
+ 	索引段：
+		s8 name[32];		// 资源文件名
+		32 offset;		// 资源文件数据偏移（从索引段结尾算起）
+		u32 length;		// 资源文件长度
+	数据：
+		紧接在索引段之后。
+
+	*注1：绝大多数wav文件需要由日本人开发的Vorbis ACM codec支持才能播放。
+
+【.lwg资源文件说明】
+    实际类型是有目录的封包资源文件。
+    该文件描述了一屏中所有组件图像元素的信息（比如“设定”那个页面）。
+    元数据是wcg。
+    
+    	首部：
+		s8 magic[2];		// "LG"
+		u16 version;		// 必须为1
+		u32 height;		// 图像宽度
+		u32 width;		// 图像高度
+		u32 entries;		// 图像元素数
+		u32 reserved;
+
+		接下来数据分为2部分：索引段和数据段，每段开始有4字节表示该段的长度。
+
+ 	索引段：每个索引项变长
+		u32 x_poisition;	// 该图像元素在整幅图像中x轴起点坐标的位置
+		u32 y_position;		// 该图像元素在整幅图像中y轴起点坐标的位置
+		u8 unknown;
+		u32 offset;		// 资源文件数据偏移（从数据段起始算起）
+		u32 length;		// 资源文件长度
+		u8 name_length;		
+		s8 *name;		// 资源文件名
+	数据段：
+		紧接在数据段长度字段之后；内容是wcg资源文件。
+
+【.wcg资源文件说明】
+    元数据是32 bit BMP。
+
+   	首部：
+		s8 magic[2];		// "WG"
+		u16 flags;		// 没有完全解明
+		u32 unknown;		// 0
+		u32 width;		// 图像宽度
+		u32 height;		// 图像高度
+
+		接下来数据段分为2部分：第一部分压缩的是每个象素的R（red）和A（alpha）数据；第二部分是每个象素的B（blue）和G（green）数据。每个数据段之前有个info数据结构。
+
+	info数据结构：
+		u32 uncomprlen;		// 解压后的长度
+		u32 comprlen;		// 查表+RLE压缩的长度
+		u16 code_number;	// 表项个数（每项2字节）
+		u16 unknown;		
+ 
+	数据段：
+		紧接在info数据结构之后。
+
+【.lim资源文件说明】
+    元数据BMP。
+
+   	首部：
+		s8 magic[2];		// "LM"
+		u8 flag0;		// [3:0]type - 2：元数据是16位BMP（根据flag1，可能还含有32位alpha）；3：元数据是32位BMP; etc：无效值
+					// [4]是否含有RGB数据：0 - 只有alpha；1 - 含有RGB和alpha；
+		u8 flag1;		// 仅对type2有意义：[0]表示是否含有alpha：0 - 没有alpha；1 - 含有alpha
+		u32 unknown;		// 0
+		u32 width;		// 图像宽度
+		u32 height;		// 图像高度
+
+		type 2：
+		根据flag1的[0]，数据部分可能只包含RGB565（*注1）一个部分，也可能包含包含RGB565＋alpha量个部分。每个数据段之前有个info数据结构。
+
+		type 3:
+		根据flag0的[4]，数据部分可能只包含alpha一个部分，也可能包含B、G、R、A四个部分。每个数据段之前有个info数据结构。
+
+	info数据结构：
+		u32 uncomprlen;		// 解压后的长度
+		u32 comprlen;		// 查表+RLE压缩的长度
+		u16 code_length;	// 表项个数（根据flag0和flag1的定义不同，每项长度可能是1或2字节）
+		u16 unknown;	
+	
+	*注1：Windows XP系统自带的图像预览功能不支持RGB565格式的16位BMP（显示“没有预览”），可以用Windows自带的画图、PhotoShop或者AcdSee等软件查看。
+
+【ChangeLog】
+2009-04-10 23:08 ver 0.9.7 支持alpha blending
+2007-10-21 16:18 ver 0.9.6 支持嵌套的.xfl资源提取
+2007-05-12 16:18 ver 0.9.5 开发版发布

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="CIRCUS.dll" 接口名="DAT" 0 />
+	<插件 文件名="CIRCUS.dll" 接口名="CRX" 1 />
+	<?插件 文件名="CIRCUS.dll" 接口名="PCM" 2 />
+
+	<文件 文件名="ADVDATA\VOICE.DAT"        插件="0" />
+	<文件 文件名="ADVDATA\GRP\BG\*.CRX"     插件="1" />
+	<文件 文件名="ADVDATA\GRP\END\*.CRX"    插件="1" />
+	<文件 文件名="ADVDATA\GRP\EVG\*.CRX"    插件="1" />
+	<文件 文件名="ADVDATA\GRP\STD\*.CRX"    插件="1" />
+	<文件 文件名="ADVDATA\GRP\SYSTEM\*.CRX" 插件="1" />
+
+	<?文件 文件名="*.PCM"               插件="2" />
+	<?文件 文件名="ADVDATA\MUSIC\*.PCM" 插件="2" />
+	<?文件 文件名="ADVDATA\SE\*.PCM"    插件="2" />
+
+</游戏脚本>

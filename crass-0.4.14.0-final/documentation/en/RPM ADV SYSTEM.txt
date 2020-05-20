@@ -1,0 +1,93 @@
+﻿Name:		RPM ADV SYSTEM
+Description:	system developed by rpm ENTERTAINMENT CREATIONAL STUDIO
+Archive:	.arc .bmp
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.2.1
+Status:	        Final
+
+【Notice】
+the plugin attempt use heuristic algorithm to conjecture decryption code automatically, if prediction failed, then
+when extracting must specify code and old(only for old game) parameter. detailed using method appear below:
+notice: if extracted archive is "system.arc" and "instdata.arc", it isn't required to specify code parameter, because their decryption key always is "while" and "inst".
+
+Below is the known code list:
+【Decryption list】(code is case-sensitive)
+·けもぱにっ! 
+use code=kemo parameter to extract
+·姦染3 ～首都崩壊～
+use code=Kan3 parameter to extract
+·狂イク指導 ～大和撫子再生計画
+use code=kiku parameter to extract
+·萌日記
+use code=moe parameter to extract
+·欲望の牢獄
+use code=pri parameter to extract
+·侍ジュピター
+use code=JUPITER parameter to extract
+·シャッターチャンス・ラブ EX
+use code=SclEx parameter to extract
+·Princess Frontier
+use code=PF parameter to extract
+·叔母の寝室
+use code=OBA parameter to extract
+·欲望の王国
+use code=kingdom parameter to extract
+·Witch'sSlave ～ワタシの脚をお舐め～
+use code=wslave parameter to extract
+·姦染2 ～淫罪都市～
+use code=Kan2 parameter to extract
+·シャッターチャンス·ラブ
+use code=Scl parameter to extract
+·Lesson～義母と叔母と女教師と～
+use code=Tul parameter to extract
+·さくらリラクゼーション
+use code=SAKURA-R parameter to extract
+·叔母の寝室
+use code=OBA parameter to extract
+·真章 幻夢館
+use code=HAMA parameter to extract
+·そらのいろ、みずのいろ
+use code=HAMA parameter to extract
+·After...
+use code=after,old parameter to extract
+·After... SweetKiss
+use code=aftersk,old parameter to extract
+·黎明のラヴェンデュラ
+use code=LAVENDURA parameter to extract
+·CROSS FIRE（クロスファイア）
+use code=TEST parameter to extract
+·キミの声がきこえる
+use code=KIMIKOE parameter to extract
+·ひだまり
+use code=HIDAMARI parameter to extract
+·恋する乙女と守護の楯
+use code=KOITATE parameter to extract
+·チュートリアルサマー
+use code=SUMMER parameter to extract
+·こいちゅ！ ～恋に恋するかたおもい～
+use code=KOICHU
+·姦染 ～淫欲の連鎖～
+use code=KANSEN parameter to extract
+·特命教師 瞳 DVDフルボイス
+use code=HITOMI_D,old parameter to extract
+·ハ～トフル・デイズ～陽のあたる場所へ～
+use code=rpm,old parameter to extract
+
+【EXAMPLE】
+Take game "年上Lesson～義母と叔母と女教師と～" as an example:
+crage -u rpm_adv_system -O code=Tul -p g:\msg.arc
+
+Take game "年上特命教師 瞳 DVDフルボイス" as another example:
+crage -d g: -u rpm_adv_system -O old,code=HITOMI_D
+
+【ChangeLog】
+2009-03-04 23:14 ver 1.2.1 distinguished properly between 24-bit and 32-bit bmp for saving normally
+2009-03-03 22:23 ver 1.2.0 saved correctly 32-bit bmp
+2009-01-31 10:54 ver 1.1.1 used code parameter to extract by priority
+2008-11-29 19:48 ver 1.1.0 introducted heuristic algorithm to conjecture decryption code automatically
+2008-03-30 13:28 ver 1.0.5 fixed a problem on treating new resource name as old one
+2008-03-15 13:45 ver 1.0.4 fixed a problem on cutting down extension due to long resource name
+2008-03-04 10:41 ver 1.0.3 fixed a error in extracting old "system.arc" and "instdata.arc"; fixed a problem on saving failure due to long resource name
+2008-02-21 16:00 ver 1.0.2 ignored possiblly code when extracting "system.arc" and "instdata.arc"
+2008-01-28 20:10 ver 1.0.1 supported extracting .lib resource; supported extracting .bmp archive
+2007-08-20 21:48 ver 1.0.0 1st version released

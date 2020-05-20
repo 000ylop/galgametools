@@ -1,0 +1,35 @@
+/*
+    ‰ô»Ã¤ÎÃÔŒm3½â°ü½Å±¾
+*/
+
+if   [gv.state == gv.LOOP]
+[
+    io.fread [gv.name, 32, 1, fp];
+    gv.offset = io.readUint [fp];
+    gv.size   = io.readUint [fp];
+    count -= 1;
+    if [count == 0]
+    [
+        gv.end = 1;
+    ]
+    return;
+]
+elif [gv.state == gv.INIT]
+[
+    gv.end  = 0;
+    gv.name = mem.alloc [32];
+
+    fp = io.fopenA [gv.fileName, "rb"];
+
+    io.fseek [fp, 8, io.seekSet];
+    count = io.readUint [fp];
+    if [count == 0]
+    [
+        gv.end = 1;
+    ]
+]
+else
+[
+    mem.free [gv.name];
+    io.fclose [fp];
+]

@@ -1,0 +1,23 @@
+﻿名称：		SystemNNN
+描述：		System-NNN（Naynit Kcalbwen Studio）(http://www2s.biglobe.ne.jp/~tinyan/nyanlib/index.htm)
+封包：		.spt(no magic) .fxf .vaw .wgq .dwq .gpk .gtb .vpk .vtb
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.2.1
+成熟度：	测试版
+
+【注意事项】
+.vpk和.gpk都需要提供相应的索引文件.vtb和.gtb才能提取。
+
+【提取示例】
+crage -p "E:\[trial]\嬍嬁乣懱尡斉乣\dwq\bg0.gpk" -l "E:\[trial]\嬍嬁乣懱尡斉乣\dwq\bg0.gtb"
+bg0.gpk: 准备提取封包文件（含53个资源文件） ..
+bg0.gpk：成功提取53 / 53个资源文件  |
+
+SystemNNN：成功提取1个.gpk封包文件文件 /
+
+【ChangeLog】
+2009-06-19 19:10 ver 1.2.1 正确处理负高度mask图
+2009-05-19 22:25 ver 1.2.0 严格检查没有mask的BMP+MASK图；正确处理负高度图像
+2009-05-16 15:39 ver 1.1.0 导出jpeg+mask与bmp+mask图像格式中的mask图
+2008-11-08 13:54 ver 1.0.1 支持PNG图像的提取
+2007-12-23 15:04 ver 1.0.0 第一版发布

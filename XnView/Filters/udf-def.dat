@@ -1,0 +1,5 @@
+# XnView UDF v1.0 (do not edit)
+average 3 | 3 1 0 | 1x9
+average 5 | 5 25 0 | 1x25
+blur | 3 16 0 | 1 2 1 2 4 2 1 2 1
+emboss | 3 1 128 | -1 0x7 -1

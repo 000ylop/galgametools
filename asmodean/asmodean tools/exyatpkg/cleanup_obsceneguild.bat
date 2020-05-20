@@ -1,0 +1,22 @@
+mkdir junk
+move vg00_00_0+*vg00_02_1* junk/
+move vg00_00_0+*vg00_02_3* junk/
+move vg00_00_0+*vg00_02_5* junk/
+move vg00_00_1+*vg00_02_0* junk/
+move vg00_00_1+*vg00_02_2* junk/
+move vg00_00_1+*vg00_02_4* junk/
+move vg03_00_0+vg03_01_6+vg03_02_0+vg03_03_4.png junk/
+move vg06_00_1+vg06_00_1_l1+vg06_01_1+vg06_02_1+vg06_03_1.png junk/
+move vg06_00_4+vg06_00_4_l1+vg06_02_1+vg06_03_0.png junk/
+move vg06_00_4+vg06_00_4_l1+vg06_02_1+vg06_03_1.png junk/
+move vg06_00_4+vg06_00_4_l1+vg06_02_1+vg06_03_1+vg06_04_1.png junk/
+move vg09_00_0+*vg09_03_1* junk/
+move vg09_00_1+*vg09_03_0* junk/
+move vg30_00_0+*vg30_02_0* junk/
+move vg30_00_0+*vg30_02_4* junk/
+move vg30_00_0+*vg30_02_5* junk/
+move vg30_00_1+*vg30_02_1* junk/
+move vg30_00_1+*vg30_02_2* junk/
+move vg30_00_1+*vg30_02_3* junk/
+move vg39_00_1+*vg39_03_2* junk/
+move vg39_00_1+*vg39_03_4* junk/

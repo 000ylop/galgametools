@@ -1,0 +1,150 @@
+                               CAD Image DLL
+                  LICENSE AGREEMENT AND LIMITED WARRANTY
+
+
+     IMPORTANT - READ CAREFULLY
+     ==========================
+     This Soft Gold License Agreement ("LICENSE AGREEMENT") is a
+     legal agreement between you (either individual or an entity) and
+     Soft Gold Limited ("SOFT GOLD") for CAD Image DLL Software
+     ("SOFTWARE"). By installing, copying, accessing, or otherwise
+     using the SOFTWARE, you agree to be bound by the terms of this
+     LICENSE AGREEMENT. If you do not agree to the terms of this
+     LICENSE AGREEMENT, you must cease using the SOFTWARE
+     immediately.
+
+
+1.OWNERSHIP
+  =========
+All copyrights to SOFTWARE and everything that comes
+with it are exclusively owned by the author - SOFT GOLD:
+     
+     Address:
+     Russia, 300057 Tula, Malye Gonchary 14.
+     Tel: +7-4872-34-82-95
+     Fax: +7-4872-34-87-65
+     World Wide Web: http://www.cadsofttools.com
+     E-mail: info@cadsofttools.com
+
+This SOFTWARE is protected by copyright laws and international
+copyright treaties. At all times SOFT GOLD retains full title to the
+SOFTWARE. Subject to your acceptance of and accordance with
+the terms and conditions stated in this LICENSE AGREEMENT,
+you shall be granted a SOFTWARE license. Any previous
+agreement with SOFT GOLD is superseded by this LICENSE AGREEMENT.
+
+
+2.UNREGISTERED VERSION
+  ====================
+You may distribute the unregistered version of 
+SOFTWARE freely, provided that all files are included and
+remain unmodified and that no extra files have been added
+to the package. You may not ask any money for the distribution.
+You may use the unregistered version of  SOFTWARE  free  
+of charge for testing purposes, but if you want to use it for
+other purposes than testing - you have to register it with the author.
+
+
+3.GRANT OF LICENSE AND SCOPE OF USE
+  =================================
+
+3.1.END USER LICENSE
+
+  Grant of License.
+  Subject to the terms and conditions of this License,
+  SOFT GOLD grants to you, if you are an individual, or,
+  if you are an entity, one (1) designated person in your
+  organization ("Named User") a personal, nonexclusive,
+  and limited license to use the SOFTWARE solely to
+  create your own application programs and other 
+  works ("Works"). You may install the SOFTWARE on
+  a reasonable number of machines provided that the
+  Named User is the only individual permitted to use the
+  SOFTWARE. You may also make a reasonable number of
+  copies of the SOFTWARE to backup devices such as
+  hard disks, optical media, or tape and one (1)
+  physical CD media backup copy of the SOFTWARE
+  solely to replace the original copy provided to you
+  if the original copy is damaged or destroyed.
+  All rights not specifically granted to you
+  herein are retained by SOFT GOLD.
+  
+  Multiple Licensed Copies.
+  You may purchase from SOFT GOLD or its authorized
+  reseller additional licenses to permit multiple Named
+  Users to use the SOFTWARE (each, a "Named User License").
+  Such rights will be effective only when granted by
+  SOFT GOLD or its authorized reseller and are
+  conditioned upon your payment of the applicable fees.
+  If you purchase additional Named User Licenses for
+  the SOFTWARE then you are granted for each Named User
+  License the personal, nonexclusive, nontransferable
+  and limited license to designate one individual in
+  your organization as the Named User and permit such
+  Named User to install and use the SOFTWARE. In such case, the
+  SOFTWARE may be used exclusively by the specifically
+  designated Named Users, subject to all the terms and
+  conditions of this License. You agree that you will
+  not designate more Named Users than the number of
+  Named User Licenses that SOFT GOLD or its authorized
+  reseller has expressly granted to you and you will
+  not allow the SOFTWARE to be used by any individuals
+  other than the Named Users designated by you from
+  time to time.  You agree to maintain accurate records
+  of the Named User designated by you to use the
+  SOFTWARE under each Named User License you hold.
+
+
+4.ENGAGING IN ANY OF THE ACTIVITIES LISTED BELOW WILL TERMINATE
+  THE SOFTWARE LICENSE.  IN ADDITION TO SOFTWARE LICENSE
+  TERMINATION, SOFTWARE MAY PURSUE CRIMINAL,
+  CIVIL, OR ANY OTHER AVAILABLE REMEDIES.
+  =============================================================
+4.1. Removal of  proprietary notices, labels or marks from the
+     SOFTWARE or SOFTWARE Documentation.
+
+4.2. Inclusion of the SOFTWARE in a development environment. 
+
+4.3. Creation of an application that does not differ materially
+     from the software published at www.cadsofttools.com.
+
+4.4. Utilize the SOFTWARE for the creation of  products (whether it be freeware, 
+     shareware or a commercial product) which competes directly or
+     indirectly with software published at www.cadsofttools.com.
+
+4.5. Disclose the SOFTWARE to any person or party, involved in the creation
+     of products which competes directly or indirectly with software published
+     at  www.cadsofttools.com.
+
+4.6. Development and/or distribution of a stand-alone Viewer 
+     application based on the SOFTWARE.
+
+4.7. Rent, lease or lend the SOFTWARE to another person or entity (except
+     permanent transfer by SOFT GOLD authority, if the person or entity
+     receiving SOFTWARE agrees to terms of this license. If the SOFTWARE is
+     an update, the transfer must include the update and all previous versions).
+
+
+5.LIMITED WARRANTY
+  ================
+THIS SOFTWARE IS DISTRIBUTED "AS IS" AND WITHOUT
+WARRANTIES AS TO PERFORMANCE  OF MERCHANTABILITY
+OR ANY OTHER WARRANTIES WHETHER EXPRESSED OR IMPLIED.
+YOU USE IT AT YOUR OWN RISK. THE AUTHOR WILL NOT
+BE LIABLE FOR DATA LOSS, DAMAGES,  LOSS OF PROFITS OR ANY
+OTHER KIND OF LOSS WHILE USING OR MISUSING THIS SOFTWARE.
+SOFT GOLD MAY NOT BEAR OTHER RESPONSIBILITY, EXCEPT FOR
+STATED IN THIS AGREEMENT. IN NO EVENT WILL SOFT GOLD BE
+LIABLE TO YOU FOR ANY DAMAGES, INCLUDING WITHOUT
+LIMITATION LOST PROFITS OR REVENUES, LOSS OF DATA,
+BUSINESS INTERRUPTION LOSS, RECOVERY OR SUBSTITUTION
+COSTS, OR CLAIMS BY THIRD PARTIES, OR OTHER INDIRECT
+INCIDENTAL OR CONSEQUENTIAL DAMAGES, ARISING OUT OF THE
+USE OR INABILITY TO USE THE SOFTWARE, EVEN IF SOFT GOLD
+HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+All rights not expressly granted here are reserved by SOFT GOLD.
+
+Thank you for using CAD Image DLL!
+
+Soft Gold Ltd., 2009

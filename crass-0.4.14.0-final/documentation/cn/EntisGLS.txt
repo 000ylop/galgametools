@@ -1,0 +1,37 @@
+﻿名称：		EntisGLS
+描述：		Leshade Entis, Entis-soft(Entis Generalized Library Set version 3) http://www.entis.jp/gls/
+封包：		.noa .dat .arc
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.5.0
+成熟度：	开发版
+
+【TODO】
+·支持csx、mio、eri和mei格式的提取。
+·支持压缩性noa的提取。
+
+【注意事项】
+·如果时报告crc错误，则需要指定exe或game参数（两种之一）。
+
+<exe参数>
+指定待提取的游戏的exe文件路径。
+以游戏“淫乳ファミレス～深夜の母乳サービスはいかが？”为例：
+
+crage -p "G:\Files\d05.dat" -O exe="G:\Files\fami.exe"
+
+d05.dat: 准备提取封包文件（含12个资源文件） ...
+d05.dat: 成功提取12 / 12 个资源文件 |
+
+EntisGLS：成功提取1个.dat封包文件
+
+<game参数>
+指定要提取的游戏名称，具体见下表。
+
+·请使用萌衣☆Player播放提取出的mio、eri和mei资源。
+下载：http://www.entis.jp/eri/player/index.html
+
+【game参数游戏支持列表】
+无
+
+【ChangeLog】
+2009-05-02 17:08 ver 0.5.0 完成exe提取参数；支持ERISACode解密
+2008-12-21 18:25 ver 0.1.0 第一版发布

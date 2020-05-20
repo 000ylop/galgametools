@@ -1,0 +1,12 @@
+﻿名称：		losterika
+描述：		
+封包：		.dat(no magic) .pak(no magic)
+作者：		痴漢公賊(glanser@163.com)
+版本：		1.0.0
+成熟度：	正式版
+
+【注意事项】
+·提取时必须指定“-u losterika”参数。
+
+【ChangeLog】
+2008-09-02 21:24 ver 1.0.0 第一版发布

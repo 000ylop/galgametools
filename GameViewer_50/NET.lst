@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏列表>
+
+	<分类 名称="日韩网游">
+				<游戏 名称="WonderKing[AP]"        文件="net\wonderking.xml" />
+				<游戏 名称="Dungeon & Fighter[AP]" 文件="net\pubarad.xml"    />
+	</分类>
+
+</游戏列表>

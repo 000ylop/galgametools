@@ -1,0 +1,70 @@
+﻿Name: 		ESCARC
+Description: 	game system developed by エスクード社
+Archive: 	.bin .c .h .dat .bmp .txt .mot .db .dif .zip
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	1.0.1
+Status: 	Beta
+
+【.bin Archive Info】
+    the .bin is actual type of archive with directory.
+    meta-data according to practical situation, can be bmp, ogg, bin(binary script) and so on.
+    
+    ESC-ARC1 format: 
+    	header: 
+		s8 magic[8];	// "ESC-ARC1"
+		u32 key;	// key for decrypting entries and index segment
+		u32 entries;	// resource number
+ 	index segment: 
+		s8 name[128];	// resource name
+		u32 offset;	// resource data offset(count from header)
+		u32 length;	// resource data length
+	data: 
+		closely behind index segment. 
+
+	    	header: 
+			s8 magic[4];	// "acp"
+			u32 uncomprlen;	// data length after lzw decompressing
+		data: 
+			closely behind header; compressed lzw code stream(bit stream).	
+
+    ESC-ARC2 format: 
+    	header: 
+		s8 magic[8];		// "ESC-ARC2"
+		u32 key;		// key for decrypting entries and index segment
+		u32 entries;		// resource number
+		u32 name_table_length;	// length of resource Name table 
+ 	index segment: 
+		u32 name_offset;	// resource name offset in resource name table
+		u32 offset;		// resource data offset(count from header)
+		u32 length;		// resource data length
+	resource name table: 
+		every name with NULL as separtor.
+	data: 
+		closely behind index segment.
+
+	    	header: 
+			s8 magic[4];	// "acp"
+			u32 uncomprlen;	// data length after lzw decompression
+		data: 
+			closely behind header; compressed lzw code stream(bit stream).	
+
+    old ACPXPK01 format:
+    	header:
+		s8 magic[8];		// "ACPXPK01"
+		u32 entries;		// resource number
+ 	index segment: 
+		s8 name[32];		// resource name 
+		u32 offset;		// resource data offset(count from header)
+		u32 length;		// resource data length
+	data:
+		closely behind index segment:
+
+	    	header:
+			s8 magic[4];	// "acp"
+			u32 uncomprlen;	// data length after lzw decompression
+		data:
+			closely behind header; compressed lzw code stream(bit stream).	
+
+【ChangeLog】
+2009-01-10 12:31 ver 1.0.1 supported extracting old version bin archive
+2008-06-11 18:02 ver 1.0.0 1st version released

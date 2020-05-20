@@ -1,0 +1,12 @@
+﻿Name: 		YSO
+Description: 	伊苏－起源
+Archive: 	.na .ni
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	0.9.5
+Status: 	Alpha
+
+【TODO】
+·support analysing .ni which flag is 1
+
+【ChangeLog】
+2008-03-04 17:03 ver 0.9.5 1st version released

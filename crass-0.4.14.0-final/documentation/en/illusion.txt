@@ -1,0 +1,64 @@
+﻿Name:		Illusion
+Description:	game system developed by Illusion 
+Archive:	.pp(weak magic)
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	0.0.2
+Status:	        Alpha
+
+【NOTICE】
+·.xx resource files extracted need to be further extracted by xx_tools.
+·.pp files require the parameter "game" to specify target game's name to be extracted correctly.
+
+【PARAMETERS】
+人工少女3 体験版 － “JS3T”
+同校生すくぅ～るメイト － “SchoolMate”
+
+【EXAMPLE】
+Take game "人工少女3 体験版" as an example:
+crage -d "E:\illusion\きゃらめいく～体験版～\data" -O game=JS3T
+base.pp: 准备提取封包文件（含8个资源文件） ...
+base.pp：成功提取8 / 8个资源文件  \
+
+Illusion：成功提取1个.pp封包文件
+
+js3_00_00_00.pp: 准备提取封包文件（含51个资源文件） ...
+js3_00_00_00.pp：成功提取51 / 51个资源文件  -
+
+js3_00_01_00.pp: 准备提取封包文件（含7个资源文件） ...
+js3_00_01_00.pp：成功提取7 / 7个资源文件  -
+
+js3_00_02_00.pp: 准备提取封包文件（含141个资源文件） ...
+js3_00_02_00.pp：成功提取141 / 141个资源文件  |
+
+js3_00_03_00.pp: 准备提取封包文件（含204个资源文件） ...
+js3_00_03_00.pp：成功提取204 / 204个资源文件  \
+
+js3_00_04_00.pp: 准备提取封包文件（含132个资源文件） ...
+js3_00_04_00.pp：成功提取132 / 132个资源文件  \
+
+js3_00_05_00.pp: 准备提取封包文件（含2个资源文件） ...
+js3_00_05_00.pp：成功提取2 / 2个资源文件  /
+
+js3_00_05_01.pp: 准备提取封包文件（含2个资源文件） ...
+js3_00_05_01.pp：成功提取2 / 2个资源文件  /
+
+js3_00_05_02.pp: 准备提取封包文件（含2个资源文件） ...
+js3_00_05_02.pp：成功提取2 / 2个资源文件  /
+
+js3_00_05_03.pp: 准备提取封包文件（含2个资源文件） ...
+js3_00_05_03.pp：成功提取2 / 2个资源文件  /
+
+js3_00_05_04.pp: 准备提取封包文件（含2个资源文件） ...
+js3_00_05_04.pp：成功提取2 / 2个资源文件  /
+
+js3_00_05_05.pp: 准备提取封包文件（含2个资源文件） ...
+js3_00_05_05.pp：成功提取2 / 2个资源文件  /
+
+js3_00_06_00.pp: 准备提取封包文件（含2个资源文件） ...
+js3_00_06_00.pp：成功提取2 / 2个资源文件  /
+
+Illusion：成功提取12个.pp封包文件
+
+【ChangeLog】
+2007-11-15 22:20 ver 0.0.2 supported extracting .eme resource
+2007-05-30 23:17 ver 0.0.1 1st version released

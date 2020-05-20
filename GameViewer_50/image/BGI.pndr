@@ -1,0 +1,19 @@
+/*
+    GameViewer BGI 32位色图片输出脚本
+*/
+
+if [gv.state == gv.LOOP]
+[
+    fp = io.fopenW [gv.fileName, L"wb"];
+
+    size = gv.width * gv.height;
+    io.writeWord [gv.width,  fp];
+    io.writeWord [gv.height, fp];
+
+    io.writeUint [32, fp];
+    io.writeUint [ 0, fp];
+    io.writeUint [ 0, fp];
+
+    io.fwrite [gv.image, size * 4, 1, fp];
+    io.fclose [fp];
+]

@@ -1,0 +1,195 @@
+﻿Name:		kirikiri2
+Description:	TVP(KIRIKIRI/吉里吉里) 2 core / Scripting Platform for Win32 developed by W.Dee (http://kikyou.info/)
+Archive:	.xp3 .exe .tlg .tlg5 .tlg6 .ksd .kdt
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.5.4
+Status:		Final
+
+【Notice】
+If ".xp3" files was specially encrypted, you can use 4 types parameter below for extraction.
+Before extraction, please confirm the game that you want to extract is not in the supported game listed below.
+·If it does, please follow the interrelated instructions to extract;
+·If it doesn't, then try the 1st type tpm parameter decrypting algorithm parameter's name to extract; If it still fail to extract, please pack all files EXCEPT ".xp3" files (if there are any small-sized ".xp3" files then include it) of the game into rar file & upload it to any reliable web storage, also leave a message at: https://www.yukict.com/bbs/thread-13010-1-1.html, I will help you analyst & extract it.
+
+1. Use "tpm1" or "tpm2" parameter (the differentiation is according to the difference of .tpm programming condition) to specify the .tpm files location (.tpm files usually in the game's folder or the plugin folder).
+·With game title "ヤりすぎ！人妻パラダイス 体験版" as an example:
+crage -d "H:\duma_para_trial" -O tpm1="H:\duma_para_trial\plugin\decoder.tpm"
+·With game title "桜花繚乱" as an example:
+crage -d "Q:\ES-pot\ouka-ryouran" -O tpm2="Q:\ES-pot\ouka-ryouran\xp3dec.tpm"
+
+Note: Those methods are easy, also can handle most tpm encryption, please use these parameter as possible when extraction.
+But the extraction success rate of those parameter are not 100%, if these methods do no good, please use the parameter introduced below.
+additionally game "ひまわり" use .xp2 as encryption plugin, extraction mode is identical with tpm parameter extraction.
+
+
+2. "cxdec" type algorithm parameter. This parameter are use to extract some specific encrypted algorithm. Because every game title using this kind of algorithm used difference encryption parameter, so you need to specify the game's title when you extract.
+With game title "FairChild ～フェアチャイルド～" as an example:
+crage -d "D:\FairChild" -O cxdec=FairChild
+
+Currently already supported games' title & their parameter name was:
+
+クレナイノツキ 体験版: use cxdec=kurenai parameter to extract
+天神乱漫 LUCKY or UNLUCKY!?: use cxdec=tenshin parameter to extract
+天神乱漫 LUCKY or UNLUCKY!? 体験版: use cxdec=tenshinTrial parameter to extract
+すまいるCubic! -水平線まで何マイル？アフター＆アナザーストーリーズ-：use cxdec=mogla parameter to extract.
+絶対可憐！お嬢様っ: use cxdec=ojo2 parameter to extract
+銀の冠碧の涙: use cxdec=silverblue parameter to extract
+フルハウスキス２～恋愛迷宮～: use cxdec=lovelaby parameter to extract
+人妻恥辱百貨店: use cxdec=hitozuma parameter to extract
+爆裂乙女SEXYマリィ: use cxdec=seiin parameter to extract
+聖淫の迷宮: use cxdec=seiin parameter to extract
+紅色天井艶妖綺譚: use cxdec=beniten parameter to extract
+コンチェルトノート WEB体験版: use cxdec=ConcertoNote parameter to extract
+水平線まで何マイル？ -Deep Blue Sky ＆ Pure White Wings-: use cxdec=mogla parameter to extract
+(C74)春色こみゅにけ～しょん番外編．春香と燁子のLoveバトル！: use cxdec=lovebattle parameter to extract
+遊具2 ～第二禁書ノ望ムモノ～: use cxdec=yu-gu parameter to extract
+遊具 ～女蜜玩具・艶姿～: use cxdec=yu_gu parameter to extract
+二代目は☆魔法少女: use cxdec=nidaime parameter to extract
+るいは智を呼ぶ: use cxdec=ruitomo parameter to extract
+ああっお嬢様っ: use cxdec=ojyo parameter to extract
+夏空カナタ: use cxdec=natukana parameter to extract
+きのみの～コスプレ研へようこそ～: use cxdec=kinomino parameter to extract
+ファンタジカル: using "cxdec=fanta" parameter to extract.
+春色☆こみゅにけ～しょん♪: using "cxdec=haruiroTrial" parameter to extract.
+11eyes -罪と罰と贖いの少女-: using "cxdec=11eyes" parameter to extract.
+るいは智を呼ぶ 体験版: using "cxdec=ruitomoTrial" parameter to extract.
+FairChild ～フェアチャイルド～: using "cxdec=FairChild" parameter to extract.
+FairChild ～フェアチャイルド～ 体験版: using "cxdec=FairChildTrial" parameter to extract.
+永遠ズ語リ ～少女凌辱秘抄～: using  "cxdec=towa" parameter to extract.
+E×E: using "cxdec=EXE" parameter to extract.
+Fate/hollow ataraxia: using "cxdec=FHA" parameter to extract.
+黄泉ビト知ラズ～甘い雌蕊の性徴詩～: using "cxdec=yomibito" parameter to extract.
+紅色天井艶妖綺譚 体験版: using cxdec=beniten parameter to extract
+二代目は☆魔法少女 体験版: using cxdec=nidaime parameter to extract
+るいは智を呼ぶ 体験版: using cxdec=ruitomoTrial parameter to extract
+夏空カナタ 体験版: using cxdec=natukanaTrial parameter to extract
+
+Note: These kind of parameters only suitable for those specific games listed above, using these parameters to extract other games was useless.
+
+
+3. Specific games' exclusive extraction parameter.
+With game title "Fate/stay night" as an example:
+crage -d "D:\Fate" -O game=FSN
+
+Currently already supported games' title & their parameter name was:
+はちゅかの: use game=love parameter to extract
+おいしい魔法のとなえかた。: use game=love parameter to extract
+なかだし孕メイド: use game=love parameter to extract
+Chower Defence 2: use game=chower2 parameter to extract
+クリムゾン・エンパイア: use game=c_emp parameter to extract
+ぱ・ぴ・こ・ん～双子の娘はどうきゅうせい～: use game=papicon parameter to extract
+Fate/stay night: Use parameter game=FSN to extract.
+中だし孕メイド２: use game=love parameter to extract
+Ｌ．Ｏ．Ｖ．Ｅ～告白～: Use parameter game=love to extract.
+みずのかけら-once summer of islet-ORIGIN: Use parameter "game=MIZUKAKE" to extract.
+
+Note: These kind of parameters only suitable for those specific games listed above, using these parameters to extract other games was useless.
+
+
+4. (the kind of parameter is removed, please use no longer)Specify decrypting algorithm name's parameter.
+notice: the extraction mode is relatively at low-level, and following game can be extracted with tpm parameter, so it will be replaced slowly by extraction mode with tpm parameter!
+
+With game title "ヤりすぎ！人妻パラダイス 体験版" as an example:
+crage -d "H:\duma_para_trial" -O dec=segdec
+
+Currently already supported games' title & their parameter name was:
+·Use parameter "dec=xror" to extract:
+魔女侵犯 -淫辱のジャッジメント-
+母娘妊術くのいちPonPon!!
+プリンセスサーガ
+プリンセスサーガⅤ～希望の美姫～
+プリンセスサーガIV～淫辱の女騎士
+プリンセスサーガI ～恥辱の姫君～
+彼女たちの禁忌
+桜花繚乱
+SWAN SONG
+なまたま
+マジカルチェンジ ゆうきくん
+CrimeRhymeParadox イナホノミライ
+クライミライ3 DVD-ROM版
+水恋 ～みずこい～
+絶対プリンセスのワンマンバトラー 通常シーン＆エッチシーン
+女教師 輪姦の教室
+
+·Use parameter "dec=nxorn" to extract:
+終末症候群 Terminal Syndrome
+母奪～禁断の触手相姦
+妹触手レイプ～復讐の処女貫通
+SYOKUSYULIEN ～淫獄の大地～
+征触者 第三討 ～堕ちゆく討魔の学園～
+征触者 ～堕ちゆく討魔の学園～
+僕と彼女の歪んだ関係
+いさましいちびの許婚
+
+·Use parameter "dec=ixorn" to extract:
+ぶらばん！
+(同人)St/P in FEZ
+征触者 第二討 ～堕ちゆく討魔の学園～
+とらぶる！シスタールーム
+らいでぃんぐ いんきゅばす
+
+·Use parameter "dec=rsftrx" to extract:
+おあずけフェティッシュ! 
+
+·Use parameter "dec=xorinc" to extract:
+すぺしゃりて！
+
+·Use parameter "dec=sftrx" to extract:
+
+·Use parameter "dec=segxor" to extract:
+陵辱学園チアガールズ公開調教
+
+·Use parameter "dec=segdec" to extract:
+ヤりすぎ！人妻パラダイス 体験版
+
+·Use parameter "dec=sufxor" to extract:
+ぶらばん！(only plugin.xp3)
+ときどきパクッちゃお！
+
+
+【ChangeLog】
+2009-07-07 19:30 ver 1.5.4 check out index length to avoid the failure extraction due to zeroed index length
+2009-06-20 11:59 ver 1.5.3 fix a bug in cxdec; add  cxdec=kurenai decryption parameter
+2009-05-28 09:18 ver 1.5.2 redefine tenshinTrial for trial version, while retail version uses cxdec=tenshin
+2009-05-01 11:06 ver 1.5.1 added cxdec=tenshin decryption parameter
+2009-04-21 20:09 ver 1.5.0 added cxdec=silverblue and cxdec=ojo2 decryption parameter
+2009-02-17 20:00 ver 1.4.9 fixed a error in second decryption about game=love type; added alpha blending for 32-bit bmp
+2009-01-31 19:55 ver 1.4.8 added game=chower2 decryption parameter
+2009-01-29 17:28 ver 1.4.7 added game=lovelaby decryption parameter
+2008-12-24 20:29 ver 1.4.6 added game=c_emp decryption parameter
+2008-12-12 20:25 ver 1.4.5 fixed a problem on incorrectly seek64 calculating parameter
+2008-12-11 22:22 ver 1.4.4 added cxdec=hitozuma decryption parameter
+2008-12-06 09:46 ver 1.4.3 fixed a error in extracting greater than 2G file
+2008-11-06 19:02 ver 1.4.2 checked error for maf_1_2_c.tlg in fgimage.xp3 of まままままま, to avoid crage running failed
+2008-10-30 19:35 ver 1.4.1 added cxdec=seiin decryption parameter
+2008-09-06 11:42 ver 1.4.0 added cxdec=ConcertoNote decryption parameter
+2008-08-24 14:28 ver 1.3.9 added cxdec=lovebattle decryption parameter
+2008-08-16 17:09 ver 1.3.8 added cxdec=yu_gu decryption parameter
+2008-07-19 14:19 ver 1.3.7 added cxdec=mogla decryption parameter
+2008-06-29 01:10 ver 1.3.6 added cxdec=nidaime decryption parameter
+2008-06-26 15:10 ver 1.3.5 added cxdec=ruitomo decryption parameter
+2008-06-23 16:55 ver 1.3.4 added game=papicon decryption parameter
+2008-06-17 19:35 ver 1.3.3 added cxdec=beniten decryption parameter
+2008-06-06 18:08 ver 1.3.2 added cxdec=ojyo and cxdec=nidaime decryption parameter
+2008-05-21 00:10 ver 1.3.1 added cxdec=kinomino decryption parameter; added cxdec=natukanaTrial decryption parameter; fixed cxdec=natukana decryption parameter
+2008-04-30 11:25 ver 1.3.0 added prompt info when checking crc error in extraction
+2008-04-30 09:52 ver 1.2.9 added cxdec=natukana decryption parameter
+2008-04-26 18:30 ver 1.2.8 added cxdec=haruiro decryption parameter
+2008-04-25 10:35 ver 1.2.7 added "cxdec=11eyes" decryption parameter
+2008-04-16 11:15 ver 1.2.6 fixed a problem on extracting 0-length resource failure
+2008-04-12 19:18 ver 1.2.5 added "cxdec=haruiroTrial" decryption parameter
+2008-04-06 21:58 ver 1.2.4 added "cxdec=11eyesTrial" decryption parameter
+2008-04-04 16:24 ver 1.2.3 added "game=MIZUKAKE" decryption parameter; fixed the problem of 24 bit depth TLG5 graphic will lean after extraction
+2008-03-30 17:28 ver 1.2.1 added "cxdec=yomibito" decryption parameter
+2008-03-27 13:45 ver 1.2.0 rearranged parameter types
+2008-03-26 18:35 ver 1.1.6 added "ruitomoTrial_cxdec" decryption parameter
+2008-03-24 13:17 ver 1.1.5 removed "tpm" parameter, change into "tpm1" & "tpm2" two special parameters
+2008-03-21 22:52 ver 1.1.4 added "segdec" decryption parameter; add "tpm" special parameter
+2008-03-18 22:53 ver 1.1.3 added "FairChildTrial_cxdec" decryption parameter
+2008-03-18 10:50 ver 1.1.2 added "fanta_cxdec", "FairChild_cxdec", "towa_cxdec", "EXE_cxdec", "FSN" & "FHA_cxdec" decryption parameter; supported ".kdt" resource extraction
+2008-03-12 20:28 ver 1.1.1 added "lovexor" decryption parameter
+2008-03-12 00:01 ver 1.1.0 added "sufxor" decryption parameter; fix the bug when extracting "TLG5" will cause memory leakage
+2008-03-10 22:02 ver 1.0.0 added "segxor" decryption parameter; support "TLG6" & ".ksd" (save file) types resource extraction
+2008-03-06 10:21 ver 0.9.0 supported "TLG sds" & "TLG5" types resource extraction
+2008-03-04 15:10 ver 0.8.0 supported encrypted & zipped files resource extraction
+2008-02-21 14:59 ver 0.7.0 first version release

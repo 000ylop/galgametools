@@ -1,0 +1,12 @@
+﻿名称：		SFA
+描述：		
+封包：		.aos .abm .scr(no magic) .msk
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.9.0
+成熟度：	开放版
+
+【TODO】
+·支持bpp2和bpp3两种类型的.abm提取。
+
+【ChangeLog】
+2008-04-06 20:30 ver 0.9.0 第一版发布

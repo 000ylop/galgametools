@@ -1,0 +1,12 @@
+﻿Name:		IPAC
+Description:		
+Archive:	.PAK .WST
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.0.3
+Status:         Beta
+
+【ChangeLog】
+2009-03-29 23:09 ver 1.0.3 fixed the fault when extracting bmp in .IES
+2007-11-29 23:01 ver 1.0.2 fixed a error in unextracting mask part in .IES(thanks pcicp)
+2007-10-20 01:18 ver 1.0.1 fixed a error in extracting .IES resource
+2007-08-26 20:15 ver 1.0.0 1st version released

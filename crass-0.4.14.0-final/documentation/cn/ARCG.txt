@@ -1,0 +1,14 @@
+﻿名称：		ARCG
+描述：		
+封包：		.arc .vpk .bmx .scb .wsm
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.9.6
+成熟度：	开发版
+
+【TODO】
+·.bal资源文件的提取。
+·支持WSM格式的音乐提取。（奴隷市場　Renaissance －DVD完全版－，感谢ziya186测试）
+
+【ChangeLog】
+2009-07-20 15:42 ver 0.9.6 修正.bmx提取错误
+2008-05-11 16:28 ver 0.9.5 第一版发布

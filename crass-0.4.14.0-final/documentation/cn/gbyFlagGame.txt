@@ -1,0 +1,18 @@
+﻿名称：		gbyFlagGame
+描述：		FOSTER开发的游戏系统
+封包：		.FA2 .C24
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.7.0
+成熟度：	开发版
+
+【注意事项】
+·以下游戏的某些资源文件提取时会失败，按y忽略即可。
+ ·DOLL
+    b110b.c24@DOLL.FA2
+ ·ここは楽園荘３
+    H0223.WAV@KR3C.FA2
+    H0224.WAV@KR3C.FA2
+    H0225.WAV@KR3C.FA2
+
+【ChangeLog】
+2009-01-29 12:25 ver 0.7.0 第一版发布

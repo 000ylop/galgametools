@@ -1,0 +1,10 @@
+// exlrlpk.cpp, v1.0 2006/12/17
+// coded by asmodean
+
+// contact: 
+//   web:   http://plaza.rakuten.co.jp/asmodean
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+
+// This tool extracts files from LPK1 (*.lpk) archives used in Lycoris Radiata.
+// Convert the ELG (*.elg) images using tools for older Terios games.

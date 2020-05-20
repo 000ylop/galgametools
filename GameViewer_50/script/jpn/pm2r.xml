@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="ManPAK.upk" 0 />
+	<插件 文件名="PMRwav.snd" 1 />
+
+	<文件 文件名="pic\girl_body.dat"        插件="0" 数据文件="pm2\girl_body.dat.ini" />
+	<文件 文件名="pic\girl_body_hiyake.dat" 插件="0" 数据文件="pm2\girl_body_hiyake.dat.ini" />
+	<文件 文件名="pic\girl_face.dat"        插件="0" 数据文件="pm2\girl_face.dat.ini" />
+	<文件 文件名="pic\girl_face_hiyake.dat" 插件="0" 数据文件="pm2\girl_face_hiyake.dat.ini" />
+	<文件 文件名="pic\girl_special.dat"     插件="0" 数据文件="pm2\girl_special.dat.ini" />
+	<文件 文件名="pic\part.dat"             插件="0" 数据文件="pm2\part.dat.ini" />
+
+	<文件 文件名="BGM\SE\*.dat"  插件="1" />
+	<文件 文件名="BGM\WAV\*.dat" 插件="1" />
+	<文件 文件名="VOICE\A\*.dat" 插件="1" />
+	<文件 文件名="VOICE\B\*.dat" 插件="1" />
+	<文件 文件名="VOICE\C\*.dat" 插件="1" />
+	<文件 文件名="VOICE\D\*.dat" 插件="1" />
+	<文件 文件名="VOICE\E\*.dat" 插件="1" />
+	<文件 文件名="VOICE\F\*.dat" 插件="1" />
+	<文件 文件名="VOICE\G\*.dat" 插件="1" />
+	<文件 文件名="VOICE\H\*.dat" 插件="1" />
+	<文件 文件名="VOICE\I\*.dat" 插件="1" />
+	<文件 文件名="VOICE\J\*.dat" 插件="1" />
+	<文件 文件名="VOICE\K\*.dat" 插件="1" />
+	<文件 文件名="VOICE\L\*.dat" 插件="1" />
+	<文件 文件名="VOICE\M\*.dat" 插件="1" />
+	<文件 文件名="VOICE\N\*.dat" 插件="1" />
+	<文件 文件名="VOICE\O\*.dat" 插件="1" />
+	<文件 文件名="VOICE\P\*.dat" 插件="1" />
+	<文件 文件名="VOICE\Q\*.dat" 插件="1" />
+	<文件 文件名="VOICE\R\*.dat" 插件="1" />
+	<文件 文件名="VOICE\S\*.dat" 插件="1" />
+	<文件 文件名="VOICE\T\*.dat" 插件="1" />
+	<文件 文件名="VOICE\U\*.dat" 插件="1" />
+	<文件 文件名="VOICE\V\*.dat" 插件="1" />
+	<文件 文件名="VOICE\W\*.dat" 插件="1" />
+
+</游戏脚本>

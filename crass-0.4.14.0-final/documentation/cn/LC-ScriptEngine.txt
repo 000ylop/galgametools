@@ -1,0 +1,43 @@
+﻿名称：		LC-ScriptEngine
+描述：		TacticsNet开发的LC-ScriptEngine系统
+封包：		.lst、SoundPackSEVo和无扩展名封包（通常是“lcsebody*”或“游戏名*”）(no magic)
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.2
+成熟度：	正式版
+
+【注意事项】
+·提取时指定“-u LC-ScriptEngine”和-l参数指定.lst索引文件。	
+
+【.lst封包文件说明】
+    实际类型是目录封包文件。
+    以下所有字段需要实现异或1得到明文数据。
+
+    	首部：
+		u32 index_entries;	// 资源文件数
+ 	索引段：
+		u32 offset;	// 资源文件数据偏移
+		u32 length;	// 资源文件数据长度
+		s8 name[64];	// 资源文件名
+		u32 type;	// 0 - lst；1 - SNX；2 - BMP；3 - PNG；4 - WAV；5 - OGG
+	数据：
+		数据保存在实际的数据封包中（该封包无扩展名，通常以“lcsebody*”或“游戏名*”命名）。
+		对于SNX资源文件还要再异或2才能得到正确的数据。
+
+【提取示例】
+以游戏“近衛騎士ラティス”为例：
+crage -p "E:\近衛騎士ラティス\SoundPackSEVo"  -l "E:\近衛騎士ラティス\SoundPackSEVo.lst" -u LC-ScriptEngine
+开始解包 ...
+
+SoundPackSEVo: 准备提取封包文件（含1061个资源文件） ...
+SoundPackSEVo：成功提取1061 / 1061个资源文件  |
+
+LC-ScriptEngine：成功提取1个封包文件
+
+                                                        ... 解包完成
+
+LC-ScriptEngine：成功提取1个封包文件
+
+【ChangeLog】
+2008-10-23 20:24 ver 1.0.2 修正了错误提取类型为-1时资源的问题
+2008-07-27 12:33 ver 1.0.1 修改为解密参数自适应模式
+2007-04-27 10:36 ver 1.0.0 第一版发布

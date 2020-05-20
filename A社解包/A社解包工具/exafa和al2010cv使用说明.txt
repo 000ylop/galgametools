@@ -1,0 +1,4 @@
+1把 大帝国CG.afa 复制到exafa文件夹里面.
+2拖动大帝国CG.afa到exafa.exe上面.便自动开始解压文件.
+3使用al2010cv转换上面的到的文件为PNG.
+4转换后的图片在al2010cv\convert里面.

@@ -1,0 +1,22 @@
+﻿【Crass】
+利用本工具造成任何恶劣后果的，Crass程序、cui和aui插件及相关文档之作者不负任何责任。
+Crass程序、cui和aui插件及相关文档之版权均属于软件原作者和文档著作者；所有Crass程序、cui和aui插件，制作的封包文件及相关文档仅出于学习和研究的目的开发、制作和编著，不得用于商业用途；游戏原始封包及其内部资源的版权归游戏制作公司所有。
+
+【zlib】
+zlib 1.2.3 is a general purpose data compression library.
+(C) 1995-2002 Jean-loup Gailly and Mark Adler
+http://www.gzip.org/zlib/
+
+【bzip2 and libbzip2】
+This program, "bzip2", the associated library "libbzip2", and all
+documentation, are copyright (C) 1996-2007 Julian R Seward.  All
+rights reserved.
+
+【openssl】
+This package was debianized by Christoph Martin martin@uni-mainz.de on
+Fri, 22 Nov 1996 21:29:51 +0100.
+
+Copyright (c) 1998-2004 The OpenSSL Project
+Copyright (c) 1995-1998 Eric A. Young, Tim J. Hudson
+
+The upstream sources were obtained from http://www.openssl.org/

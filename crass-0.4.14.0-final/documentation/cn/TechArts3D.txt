@@ -1,0 +1,13 @@
+﻿名称：		TechArts3D
+描述：		Tech Arts 3D开发的游戏3Dカスタム少女
+封包：		.tah
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.0
+成熟度：	测试版
+
+【关于文件格式和引擎的猜测】
+·.tmo和.tso可能是日本有限会社イナズマ开发的3D纸模型展开软件紙龍（しりゅう）（http://www.inazuma7.jp/craft/index.html）的格式（该软件早已经改为只能团购了）。
+·exe中有ObsidianDX9的字样。Obsidian是国外一个Linux+OpenGL下的开源的3D引擎，但是不确定两者有什么关联。
+
+【ChangeLog】
+2008-04-16 17:58 ver 1.0.0 第一版发布

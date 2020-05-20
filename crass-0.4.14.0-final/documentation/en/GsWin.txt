@@ -1,0 +1,14 @@
+﻿Name:		GsWin
+Description:		
+Archive:        .pak .pa_ .dat
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.1.0
+Status:	        Alpha
+
+【TODO】
+Analysis of unknown mass data extracted from .dat files.
+
+【ChangeLog】
+2009-02-14 13:27 ver 1.1.0 supported GsWin3 format
+2007-11-22 22:55 ver 1.0.1 fixed a problem on SysHistoryMap's resource name for scr.pak archive of メサイア and ファナティカ
+2007-05-24 12:24 ver 1.0.0 1st version released

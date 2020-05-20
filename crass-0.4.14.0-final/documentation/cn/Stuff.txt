@@ -1,0 +1,14 @@
+﻿名称：		Stuff
+描述：		Stuff スクリプトエンジン
+封包：		.mpk .msc（weak magic）
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.2
+成熟度：	正式版
+
+【注意事项】
+·.ogv文件需要安装Ogg Vorbis CODEC for MSACM才能听。
+
+【ChangeLog】
+2007-11-6 20:26 ver 1.0.2 支持.msc提取
+2007-8-17 17:28 ver 1.0.1 支持mpg提取
+2007-5-28 19:10	ver 1.0.0 第一版发布

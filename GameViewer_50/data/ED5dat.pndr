@@ -1,0 +1,32 @@
+/*
+    Falcom DAT ½â°ü½Å±¾
+*/
+
+if   [gv.state == gv.LOOP]
+[
+    io.fread [gv.name, 20, 1, fp];
+    gv.size   = io.readUint [fp];
+    gv.offset = io.readUint [fp];
+    mem.setByte [gv.name, 20, 0];
+
+    if [gv.offset + gv.size >= pack_size]
+    [
+        gv.end = 1;
+    ]
+    return;
+]
+elif [gv.state == gv.INIT]
+[
+    gv.end  = 0;
+    gv.name = mem.alloc [21];
+
+    fp = io.fopenA [gv.fileName, "rb"];
+    io.fseek [fp, 0, io.seekEnd];
+    pack_size = io.ftell [fp];
+    io.fseek [fp, 0, io.seekSet];
+]
+else
+[
+    mem.free [gv.name];
+    io.fclose [fp];
+]

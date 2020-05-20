@@ -1,0 +1,294 @@
+// SliderLayer.tjs - スライダーレイヤ
+// Copyright (C)2001-2002, W.Dee  改変・配布は自由です
+
+class SliderLayer extends Layer
+{
+	var Slider_min = 0; // 最小値
+	var Slider_max = 0; // 最大値
+	var Slider_position = 0; // 位置
+	var Slider_tabWidth = 10; // つまみサイズ
+	var Slider_dragging = false; // ドラッグ中かどうか
+	var Slider_dragOriginX; // ドラッグ開始 X 位置
+	var Slider_mouseOn = false; // マウスが領域内にあるかどうか
+
+	function SliderLayer(win, par)
+	{
+		super.Layer(win, par);
+
+		focusable = true; // フォーカスを得られる
+
+		hitType = htMask;
+		hitThreshold = 0;
+	}
+
+	function finalize()
+	{
+		super.finalize(...);
+	}
+
+	function assign(src)
+	{
+		// src の情報をこのオブジェクトにコピー
+		Slider_min = src.Slider_min;
+		Slider_max = src.Slider_max;
+		Slider_position = src.Slider_position;
+	}
+
+	function onPaint()
+	{
+		// onPaint イベント
+		// レイヤの内容を描画する
+		super.onPaint(...);
+
+		// よく使う値をローカル変数に用意する
+		var imw = imageWidth, imh = imageHeight;
+		var tabw = Slider_tabWidth;
+		var htabw = tabw >> 1;
+
+		// 下敷きを塗る
+		fillRect(0, 0, imw, imh, 0);
+
+		if(focused)
+		{
+			// フォーカスがあるのでハイライトする
+			colorRect(0, 0, width-1, 1, clHighlight, 128);
+			colorRect(0, 1, 1, height-2, clHighlight, 128);
+			colorRect(0, height-1, width, 1, clHighlight, 128);
+			colorRect(width-1, 0, 1, height-1, clHighlight, 128);
+		}
+
+		// 中央のへこみ線
+		{
+			var himh = imh >> 1;
+			var right = imw - tabw;
+			fillRect(htabw, himh - 1, right, 1, 0x80000000);
+			fillRect(htabw, himh    , right, 1, 0x80ffffff);
+		}
+
+		// タブ
+		var pos_x = int(
+			(Slider_position-Slider_min) * (imw - tabw - 2)/(Slider_max - Slider_min)) +
+			htabw + 1;
+		var x_htabw = pos_x - htabw;
+		fillRect(x_htabw, 0, tabw, imh, 0xffffff + (nodeEnabled ? 0 : 0xc0000000));
+		if(Slider_mouseOn)
+		{
+			colorRect(x_htabw, 0, tabw, imh, clHighlight, 64);
+		}
+		colorRect(x_htabw + 1, 0, tabw-2, 1, 0xffffff, 128);
+		colorRect(x_htabw + 1, imh - 1, tabw-2, 1, 0x000000, 128);
+		colorRect(x_htabw, 0, 1, height, 0xffffff, 128);
+		colorRect(pos_x + htabw - 1, 0, 1, height, 0x000000, 128);
+
+	}
+
+	function onKeyDown(key, shift, process)
+	{
+		// キーが押された
+		if(process)
+		{
+			if(key == VK_LEFT)
+			{
+				// 左
+				if(shift & ssAlt)
+					position = Slider_position - 1;
+				else
+					position = Slider_position - int((Slider_max - Slider_min)/ (Slider_tabWidth-2) / 2);
+				super.onKeyDown(key, shift, false); // 処理をしたのでprocessにfalseを渡す
+			}
+			else if(key == VK_RIGHT)
+			{
+				// 左
+				if(shift & ssAlt)
+					position = Slider_position + 1;
+				else
+					position = Slider_position + int((Slider_max - Slider_min)/ (Slider_tabWidth-2) / 2);
+				super.onKeyDown(key, shift, false); // 処理をしたのでprocessにfalseを渡す
+			}
+			else
+			{
+				super.onKeyDown(...);
+			}
+		}
+		else
+		{
+			// process が false の場合は処理は行わない
+			super.onKeyDown(...);
+		}
+	}
+
+	function onMouseDown(x, y, button)
+	{
+		// マウスボタンが押された
+		focus();
+
+		super.onMouseDown(...);
+
+		var tabw = Slider_tabWidth;
+		var htabw = tabw >> 1;
+		var pos_x = int(
+			(Slider_position-Slider_min) * (imageWidth - tabw - 2)/(Slider_max - Slider_min)) +
+			htabw + 1;
+		if(pos_x - htabw > x)
+		{
+			// タブより左
+			position = Slider_position - int((Slider_max - Slider_min)/ (tabw-2));
+		}
+		else if(pos_x + htabw < x)
+		{
+			// タブより右
+			position = Slider_position + int((Slider_max - Slider_min)/ (tabw-2));
+		}
+		else
+		{
+			// タブ
+			// タブのドラッグを開始
+			Slider_dragging = true;
+			Slider_dragOriginX = x - pos_x;
+		}
+	}
+
+	function onMouseUp(x, y, button)
+	{
+		// マウスボタンが離された
+		super.onMouseUp(...);
+
+		Slider_dragging = false;
+	}
+
+	function onMouseMove(x, y)
+	{
+		// マウスが移動した
+		super.onMouseMove(...);
+
+		if(Slider_dragging)
+		{
+			// タブをドラッグ
+			position = int(
+				(x - Slider_dragOriginX - (Slider_tabWidth >> 1)) * (Slider_max - Slider_min) /
+				(imageWidth - Slider_tabWidth - 2) + Slider_min);
+		}
+	}
+
+	function onMouseEnter()
+	{
+		// マウスがレイヤ領域内に入った
+		update();
+		Slider_mouseOn = true;
+		super.onMouseEnter(...);
+	}
+
+	function onMouseLeave()
+	{
+		// マウスがレイヤ領域から出ていった
+		update();
+		Slider_mouseOn = false;
+		Slider_dragging = false;
+		super.onMouseLeave(...);
+	}
+
+	function onFocus()
+	{
+		// フォーカスを得た
+		super.onFocus(...);
+		update();
+	}
+
+	function onBlur()
+	{
+		// フォーカスを失った
+		super.onBlur(...);
+		update();
+	}
+
+	function onNodeDisabled()
+	{
+		// レイヤのノードが不可になった
+		super.onNodeDisabled(...);
+		update();
+	}
+
+	function onNodeEnabled()
+	{
+		// レイヤのノードが有効になった
+		super.onNodeEnabled(...);
+		update();
+	}
+
+
+	property width
+	{
+		setter(x)
+		{
+			super.width = x;
+			imageWidth = x;
+			update();
+		}
+		getter
+		{
+			return super.width;
+		}
+	}
+	
+	property height
+	{
+		setter(x)
+		{
+			super.height = x;
+			imageHeight = x;
+			update();
+		}
+		getter
+		{
+			return super.height;
+		}
+	}
+	
+	property max
+	{
+		setter(x)
+		{
+			Slider_max = x;
+			update();
+		}
+		getter
+		{
+			return Slider_max;
+		}
+	}
+	
+	property min
+	{
+		setter(x)
+		{
+			Slider_min = x;
+			update();
+		}
+		getter
+		{
+			return Slider_min;
+		}
+	}
+	
+	property position
+	{
+		setter(x)
+		{
+			if(x < Slider_min) x = Slider_min;
+			if(x > Slider_max) x = Slider_max;
+			Slider_position = x;
+			update();
+			onChange(Slider_position);
+		}
+		getter
+		{
+			return Slider_position;
+		}
+	}
+
+	function onChange(pos)
+	{
+		// onChange
+		window.action(%[target:this, type:'onChange', position:pos]);
+	}
+}

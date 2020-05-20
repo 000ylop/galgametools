@@ -1,0 +1,9 @@
+// bmd2bmp.cpp, v1.0 2006/11/25
+// coded by asmodean
+
+// contact: 
+//   web:   http://plaza.rakuten.co.jp/asmodean
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+
+// This tool decompresses BMD (*.bmd) images used by BLACKRAINBOW and others.

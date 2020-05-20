@@ -1,0 +1,21 @@
+﻿Name:		DAC
+Description:	developed by Exception(エクセプション)(http://www.exception.jp/)
+Archive:	.dpk
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	0.8.1
+Status:	        Alpha
+
+【TODO】
+support extracting .DGC resource.
+
+【attentions】
+if the extracted file is invalid, please specify the special parameter game to extract:
+
+淫暴の惑星 ～破壊と欲望の衝動～: game=anti
+虜囚 -RYOSYU-: game=ingoku
+絶望少女 ～復讐の性裁教室: game=wana
+少女達のさえずり: game=tritri
+
+【ChangeLog】
+2009-06-13 08:57 ver 0.8.1 support the game "淫暴の惑星 ～破壊と欲望の衝動～"; use game=anti to extract
+2009-06-06 20:47 ver 0.8.0 1st version released

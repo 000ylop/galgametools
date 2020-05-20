@@ -1,0 +1,9 @@
+﻿Name:		AF
+Description:		
+Archive:	.dat(no magic)
+Author:	        joyful
+Version:	1.1.0
+Status:	        Final
+
+【ChangeLog】
+2007-08-21 16:22 ver 1.0.0 1st version released

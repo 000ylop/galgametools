@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="DataTop.upk" 0 />
+	<插件 文件名="TGLpac.upk"  1 />
+
+	<文件 文件名="data.pak"   插件="0" />
+	<文件 文件名="script.pak" 插件="1" />
+
+	<插件 文件名="TGLgrp.img" 2 />
+
+</游戏脚本>

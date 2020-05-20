@@ -1,0 +1,14 @@
+﻿Name: 		Stuff
+Description: 	Stuff スクリプトエンジン
+Archive: 	.mpk .msc(weak magic)
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	1.0.2
+Status: 	Final
+
+【NOTICE】
+·.ogv files require Ogg Vorbis CODEC for MSACM to be played.
+
+【ChangeLog】
+2007-11-06 20:26 ver 1.0.2 supported extracting .msc
+2007-08-17 17:28 ver 1.0.1 supported extracting mpg
+2007-05-28 19:10 ver 1.0.0 1st version released

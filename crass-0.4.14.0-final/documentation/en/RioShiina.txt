@@ -1,0 +1,37 @@
+﻿Name:		RioShiina
+Description:	椎名里緒
+Archive:	.WAR .WAA .S25 .MI4 .OGV
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	0.4.1
+Status:	        Alpha
+
+【TODO】
+·support WARC 1.7
+·support .PAD audio
+
+【Notice】
+·for older 椎名里緒v2.15, if extraction is failure, please try to use nodec parameter to extract.
+take game "シ・カ・エ・シ" for exsample:
+crage -d "Q:\Program Files\foster\僔僇僄僔" -O nodec
+
+WARC version: WARC 1.3
+FKS2.WAR: start the extraction (containing 15 resources) ...
+FKS2.WAR: extracted resource 15 / 155 \
+
+WARC version: WARC 1.3
+FKS3.WAR: start the extraction (containing 10 resources) ...
+FKS3.WAR: extracted resource 10 / 100 -
+
+WARC version: WARC 1.3
+FKS4.WAR: start the extraction (containing 118 resources) ...
+FKS4.WAR: extracted resource 118 / 1188 -
+
+WARC version: WARC 1.3
+FKS5.WAR: start the extraction (containing 2342 resources) ...
+FKS5.WAR: extracted resource 2342 / 23422 -
+
+RioShiina: extracted 5 packages
+
+【ChangeLog】
+2009-02-15 10:52 ver 0.4.1 added nodec parameter
+2009-02-11 22:23 ver 0.4.0 1st version released

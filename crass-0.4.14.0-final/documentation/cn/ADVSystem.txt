@@ -1,0 +1,21 @@
+﻿名称：		ADVSystem
+描述：		U-Me SOFT / Blue
+封包：		.GPK weak magic: .PK .TPK .WPK .MPK .PK0 .PKA .PKB .PKC .PKD .PKE .PKF .DAT(no magic)
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.1
+成熟度：	开发版
+
+【TODO】
+支持MPX类型的图像资源提取。
+
+【注意事项】
+·从.GPK中提取出的bmp文件是RGB565格式的16位BMP，这意味着Windows XP系统自带的图像预览功能不支持，可以用irfanview或XnView等软件查看。
+
+【ChangeLog】
+2009-06-15 20:44 ver 1.0.1 过滤FANI和CANI资源以避免提取错误
+2009-03-22 10:17 ver 1.0.0 支持.DAT文件的提取
+2009-01-10 17:14 ver 0.9.9 提取.GPK封包不再需要指定插件名称参数
+2008-11-05 22:57 ver 0.9.8 解决提取.GPK产生的冲突问题
+2008-06-12 10:26 ver 0.9.7 修正了提取结束后程序非法错误的问题
+2008-05-16 11:18 ver 0.9.6 支持.MPK文件的提取
+2007-12-10 22:28 ver 0.9.5 第一版发布

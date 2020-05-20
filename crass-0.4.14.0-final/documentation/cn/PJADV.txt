@@ -1,0 +1,16 @@
+﻿名称：		PJADV
+描述：		PajamasSoft Adventure Engine
+封包：		.dat .pak .epa .bin
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.1
+成熟度：	开发版
+
+【TODO】
+老版本的epa格式（比如ぱにっく！！けろけろ王国，解压后的epa的格式和新版本完全不同）。
+
+【TODO】
+·某些.dat文件是视频动画，可以用media classic直接播放。
+
+【ChangeLog】
+2008-01-25 00:22 ver 1.0.1 增加了自动对加密了的textdata.bin进行解码的处理;修正了导出错误调色版的错误
+2007-09-01 13:11 ver 1.0.0 第一版发布

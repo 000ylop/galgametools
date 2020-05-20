@@ -1,0 +1,21 @@
+﻿名称：		RealLive
+描述：		VisualArt's ScriptEngine RealLive
+封包：		.g00(weak magic) .nwa(weak magic) .txt(weak magic) .ovk(weak magic) .cgm(weak magic) .dat .nwk(weak magic)
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.7.6
+成熟度：	开发版
+
+【TODO】
+·支持音频.nwa变长压缩格式的提取。
+·支持AVG2000和KineticNovel系统。
+
+【ChangeLog】
+2009-05-10 11:35 ver 0.7.6 正确提取含有多个图像的.g00文件
+2009-03-26 20:03 ver 0.7.5 修正了alpha通道边缘有锯齿的问题
+2009-02-22 14:39 ver 0.7.4 修正了错误nwa通道数的问题
+2009-02-15 19:26 ver 0.7.3 支持.nwk格式的提取
+2008-08-24 13:48 ver 0.7.2 修正了.nwa提取时造成的内存泄漏的问题
+2008-07-15 18:49 ver 0.7.1 支持.dat资源的提取；修正了.g00解压缩时错误的边界检查的问题
+2008-07-03 23:01 ver 0.7.0 支持.nwa格式的音频的提取
+2008-07-01 10:48 ver 0.6.1 修正了g00 type1的提取错误
+2008-06-30 14:00 ver 0.6.0 第一版发布(感谢prz提供有关SEEN.txt内部格式的信息)

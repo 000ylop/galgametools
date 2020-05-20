@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="JBF.upk" 0 />
+
+	<文件 文件名="Ani\*.JBF"        插件="0" />
+	<文件 文件名="AniTexture\*.JBF" 插件="0" />
+	<文件 文件名="GameData\*.JBF"   插件="0" />
+	<文件 文件名="Script\*.JBF"     插件="0" />
+	<文件 文件名="Texture\*.JBF"    插件="0" />
+	<文件 文件名="XFile\*.JBF"      插件="0" />
+
+</游戏脚本>

@@ -1,0 +1,33 @@
+[en]
+
+[en-str]
+1000=ZIP32.dll can not be found in AddOn folder!
+
+
+[fr]
+
+[fr-str]
+1000=Le fichier ZIP32.dll ne peut être trouvé dans le répertoire 'AddOn'
+
+
+[de]
+
+[de-str]
+1000=Die Datei ZIP32.dll wurde im Verzeichnis "AddOn" nicht gefunden!
+
+
+[sv]
+
+[sv-str]
+1000=Filen ZIP32.dll kan inte hittas i katalogen "AddOn"
+
+
+[fi]
+
+[fi-str]
+1000= Tiedostoa ZIP32.dll ei löydy 'AddOn'-kansiosta
+
+[ru]
+
+[ru-str]
+1000=Ôàéë ZIP32.dll íå íàéäåí â ïàïêå "AddOn"

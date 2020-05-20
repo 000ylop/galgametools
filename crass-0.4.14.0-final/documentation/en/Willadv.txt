@@ -1,0 +1,21 @@
+﻿Name:		Willadv
+Description:	Willadv system developed by Will
+Archive:	.arc(no magic)
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.0.2
+Status:	        Final
+
+【EXAMPLE】
+crage -d "K:\WILL\Under the Moon体验版"  -u willadv
+Se.arc: 准备提取封包文件（含54个资源文件） ...
+Se.arc：成功提取54 / 54个资源文件  /
+
+Voice.arc: 准备提取封包文件（含801个资源文件） ...
+Voice.arc：成功提取801 / 801个资源文件  |
+
+Willadv：成功提取6个.arc封包文件
+
+【ChangeLog】
+2008-07-12 15:36 ver 1.0.2 supported extracting .fil resource
+2007-11-28 22:55 ver 1.0.1 fixed a length error in saving bmp(thank pcicp)
+2007-10-25 22:04 ver 1.0.0 1st version released

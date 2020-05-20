@@ -1,0 +1,23 @@
+﻿名称：		GXTH
+描述：		Experience Inc开发的游戏Generation Xth -Code Breaker-专用提取插件
+封包：		.uni .dat .dat(no magic) .EVT(no magic) .efc
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.0
+成熟度：	测试版
+
+【注意事项】
+·在不指定插件名参数的时候无法提取的文件，可以通过指定插件名参数提取。
+举例：
+不指定插件名参数提取：
+crage -d "Q:\Program Files\EXP\G-XTH1_TRIAL"
+GXTH：成功提取1650个.uni封包文件文件 -
+GXTH：成功提取111个.dat封包文件文件 \
+
+只有图像.uni和音频.dat被正确提取了。
+这时指定插件名参数提取其他文件：
+
+crage -d "Q:\Program Files\EXP\G-XTH1_TRIAL\TABLE" -u GXTH
+GXTH：成功提取16个.dat封包文件文件 |
+
+【ChangeLog】
+2009-01-11 19:06 ver 1.0.0 第一版发布

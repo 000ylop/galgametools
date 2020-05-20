@@ -1,0 +1,43 @@
+﻿Name:	              LC-ScriptEngine 
+Description:	LC-ScriptEngine system developed by TacticsNet 
+Archive:                 .lst SoundPackSEVo and archive without extension(usually is "lcsebody*" or "game name*")(no magic) 
+Author:	              痴汉公贼 (glanser@163.com) 
+Version:	              1.0.2 
+Status:	              Final 
+
+【Notice】 
+·To extract resource files, parameter "-l" is required to specify .lst index files for crage.  
+
+【.lst Archive Info】 
+ the lst is actual type of directory archive. 
+ all following segment require to do xor 1 so that can get plaintext data. 
+
+ 	header: 
+u32 index_entries;	// resource number 
+ 	index field: 
+u32 offset;	// resource data offset 
+u32 length;	// resource data length 
+s8 name[64];	// resource name 
+u32 type;	// 0 - lst; 1 - SNX; 2 - BMP; 3 - PNG; 4 - WAV; 5 - OGG 
+data: 
+data store in actual data archive(the archive without extension, usually is named by "lcsebody*" or "game name*"). 
+about SNX resource, also require to do xor 2 so that can get true data. 
+
+【EXAMPLE】 
+Take game "近卫骑士ラティス" as an example: 
+crage -p "E:\近衛騎士ラティス\SoundPackSEVo"  -l "E:\近衛騎士ラティス\SoundPackSEVo.lst" -u LC-ScriptEngine
+开始解包 ...
+
+SoundPackSEVo: 准备提取封包文件（含1061个资源文件） ...
+SoundPackSEVo：成功提取1061 / 1061个资源文件  |
+
+LC-ScriptEngine：成功提取1个封包文件
+
+                                                        ... 解包完成
+
+LC-ScriptEngine：成功提取1个封包文件
+
+【ChangeLog】 
+2008-10-23 20:24 ver 1.0.2 fixed a extraction error for resource which type is 1
+2008-07-27 12:33 ver 1.0.1 modified decryption parameter to adaptive pattern 
+2007-04-27 10:36 ver 1.0.0 1st version released

@@ -1,0 +1,71 @@
+「雪」プラグイン
+
+・組み込み方
+
+　scenario\snow.ks と image\ のすべての画像をお手持ちの KAG3 のプロジェクト
+フォルダの各フォルダにコピーしてください。
+
+・使い方
+
+　シナリオの先頭などで
+
+@call storage="snow.ks"
+
+　として snow.ks を呼び出すと snowinit と snowopt と snowuninit という３つ
+のタグが定義されます。
+　snow.ks は２回以上呼び出さないでください。マクロの定義と同じで、１回呼び
+出せば、それ以降、機能が使用可能になります。
+
+
+・snowinit
+
+　forevisible 属性は、表画面の雪が表示されているかどうかを指定します。
+　true を指定すると表示されます。false を指定すると非表示です。
+
+　backvisible 属性は、同様に裏画面での雪が表示されているかどうかを
+　指定します。
+
+・snowopt
+
+　雪のオプションを指定します。forevisible と backvisible 属性がありますが、
+snowinit タグのものと同じ意味です。
+
+・sonwuninit
+
+　雪を降らすのをやめます。一気にやみます。
+
+・例
+
+
+@call storage="snow.ks"
+@image layer=base page=fore storage=_24_3
+*start1|雪は非表示
+雪をふらせます[l]
+@backlay
+@snowinit forevisible=false backvisible=true
+@trans method=crossfade time=2000
+@wt
+*start2|雪は表示中
+背景を入れ替えます[l]
+@backlay
+@image layer=base page=back storage=_24
+@trans method=crossfade time=2000
+@wt
+@l
+@backlay
+@image layer=base page=back storage=_24_3
+@trans children=false method=crossfade time=2000
+@wt
+@l
+雪をやませます[l]
+@backlay
+@snowopt backvisible=false
+@trans method=crossfade time=2000
+@wt
+@snowuninit
+@jump target=*start1
+
+
+・ライセンス
+
+KAG3に準じます。つまり、使用・改変自由です。

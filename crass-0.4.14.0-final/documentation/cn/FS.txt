@@ -1,0 +1,16 @@
+﻿名称：		FS
+描述：		
+封包：		pd
+作者：		痴汉公贼 (glanser@163.com)
+版本：		4.0.0
+成熟度：	正式版
+
+【注意事项】
+源代码下载（FlyingShinePDFile-2.0.0.src.rar）：
+http://www.wiiupload.net/fl/3d03a5adea
+MD5：b6b00edd8f26fb14a4d0cac7ab85d53d
+
+【ChangeLog】
+2007-11-17 15:12 ver 4.0.0 更名为FS；支持另一种.pd格式
+2007-06-01 11:21 ver 2.0.0 修正了magic字段尾部由于没清0而判断错误的bug
+2007-05-02 00:58 ver 1.0.0 第一版发布

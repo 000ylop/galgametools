@@ -1,0 +1,21 @@
+﻿Name:		sas5
+Description:	Solfa Standard Novel System developed by 秋山構平
+Archive:	.iar .war .sec5
+Author:		痴漢公賊 (glanser@163.com)
+Version:	0.5.0
+Status: 	Alpha
+
+【TODO】
+·support completely analyzing .sec5 script file
+
+【Notice】
+·.sgt is dedicated audio format for DirectSound, should be able to directly playback
+·if specify -l parameter(import .sec5 as index file) during extracting，in that case extracted resource name will be named after readable name
+
+【Sample】
+take game "片恋いの月～体験版～" for exsample:
+crage -d "M:\すたじお緑茶\片恋いの月～体験版～" -l "M:\すたじお緑茶\片恋いの月～体験版～\katakoi_tr.sec5"
+
+【ChangeLog】
+ ver 0.5.0 1st version released
+

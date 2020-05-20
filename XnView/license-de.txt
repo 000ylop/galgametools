@@ -1,0 +1,10 @@
+Das Programm XnView ist urheberrechtlich geschützt. Ihnen wird das Recht gewährt eine unbegrenzte Anzahl von Kopien dieser Software zu erstellen.
+
+XnView ist für den privaten Gebrauch kostenlos und Freeware. Für die gewerbliche Nutzung müssen Sie eine gültige Lizenz erwerben.
+
+Der Programmautor übernimmt keine Haftung für Schäden, die aus der sachgemäßen oder unsachgemäßen Nutzung des Produktes, wie z. B. Datenverlust, Geldverluste oder sonstige Schäden jeglicher Art, resultieren.
+
+Es ist Ihnen nicht gestattet, das Programm XnView abzuändern, zu übersetzen, zurückzuentwickeln, zu dekompilieren oder zu disassemblieren.
+
+
+Copyright (C) 1997-2012 Pierre-e Gougelet. All rights reserved.

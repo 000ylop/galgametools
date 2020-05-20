@@ -1,0 +1,18 @@
+﻿Name:		VALKYRIA
+Description:	
+Archive:	.odn(weak magic) .dat(no magic)
+Author:		痴漢公賊 (glanser@163.com)
+Version:	0.9.7
+Status:	  	Alpha
+
+【TODO】
+·analyse data05.
+
+【Notice】
+·in fact .dat is same as .odn, but when extracting must specify "-u odn" parameter.
+·following 3 archive can't be extracted:
+content of data05 is unknown; data07 is savedata; data08 is installed file log
+
+【ChangeLog】
+2008-08-23 16:41 ver 0.9.7 support extracting bmp in resolution 800x600
+2008-05-04 21:25 ver 0.9.5 1st version released

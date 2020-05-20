@@ -1,0 +1,10 @@
+﻿名称：		ScenePlayer
+描述：		
+封包：		.Pmx(weak magic) .PMP(weak magic) .PMA(weak magic)
+作者：		痴漢公賊(glanser@163.com)
+版本：		0.9.1
+成熟度：	测试版
+
+【ChangeLog】
+2008-09-07 10:49 ver 0.9.1 资源解压长度采用自动探测的方式
+2008-09-05 22:03 ver 0.9.0 第一版发布

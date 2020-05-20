@@ -1,0 +1,15 @@
+﻿Name:		GMMSystem
+Description:		
+Archive:	.dat(no magic)
+Author:	        痴汉公贼
+Version:	1.0.0
+Status:	        Beta
+
+【Sample】
+crage -u gmmsystem -p G:\setup\AppData\mdt\ayu.dat
+ayu.dat: 准备提取封包文件（含59个资源文件） ...
+ayu.dat：成功提取59 / 59个资源文件  -
+GMMSystem：成功提取1个.dat封包文件文件 /
+
+【ChangeLog】
+2007-12-29 22:45 ver 1.0.0 1st version released

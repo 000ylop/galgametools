@@ -1,0 +1,21 @@
+﻿Name:		ADVSystem
+Description:	U-Me SOFT / Blue
+Archive:	weak magic: .GPK .PK .TPK .WPK .MPK .PK0 .PKA .PKB .PKC .PKD .PKE .PKF .DAT(no magic)
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.0.1
+Status:	        Alpha
+
+【TODO】
+support extracting MPX image resource
+
+【Notice】
+·image preview of Windows XP cann't support 16-bit image in RGB565 format(show "no preview"), it's able to view with Microsoft Paint(with dislocation), PhotoShop, irfanview and so on.
+
+【ChangeLog】
+2009-06-15 20:44 ver 1.0.1 filter FANI and CANI file to avoid the failure of extraction
+2009-03-22 10:17 ver 1.0.0 supported extracting .DAT file
+2009-01-10 17:14 ver 0.9.9 specified cui name as parameter no longer when extracting .GPK archive
+2008-11-05 22:57 ver 0.9.8 solved a clash problem due to extracting .GPK
+2008-06-12 10:26 ver 0.9.7 fixed a illegal error after program termination
+2008-05-16 11:18 ver 0.9.6 supported extracting .MPK file
+2007-12-10 22:28 ver 0.9.5 1st version released

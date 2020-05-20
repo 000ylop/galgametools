@@ -1,0 +1,60 @@
+﻿名称：		BaldrX
+描述：		戯画(GIGA) Team Baldr开发的系统
+封包：		.pac .grp .spr .dat(no magic)
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.9.1
+成熟度：	开发版
+
+【TODO】
+·.fnt资源的提取。
+·旧版.pac支持（ぷちチェリー ～あなたといる季節～）
+
+【注意事项】
+·RGB565的16位色BMP在xp下不能预览，可以用Windows自带的画图(有错位)、PhotoShop或irfanview等软件查看。
+·早期的.grp不区分RGB565和RGB555，颜色数都是16。直到最近的游戏才做区分（RGB565是16位色，RGB555是15位色）。如果导出的图效果不对，请使用“force_rgb555”参数，强制导出RGB555的16位BMP；通常只有较早的游戏才使用这个参数（像BALDR BULLET REVELLION则混用新旧格式）。
+
+【提取示例】
+以游戏“BALDR BULLET REVELLION”为例：
+crage -p "K:\BBR\BMP\etc\T_CG.GRP"
+这张图是RGB565的16位BMP。
+
+crage -p "K:\BBR\BMP\etc\TTT.GRP" -O force_rgb555
+这张图则是RGB555的16位BMP，如果不指定force_rgb555参数，则按照RGB565导出，效果不对。
+
+【.pac封包文件说明】
+    实际类型是有目录的封包资源文件。
+    元数据根据实际用途，可以是bmp、wav、bin（编译后的二进制脚本）或ani等。
+
+    	首部：
+    		s8 magic[4];	// "PAC"或"PACw"
+		u32 entries;	// 每项76字节
+		u32 cmode;	// 0：无压缩；1：lzss压缩；2：范式哈夫曼压缩
+	索引段：		
+		紧接在首部之后。				
+		s8 name[64];	// 资源文件名
+		u32 offset;	// 资源文件数据偏移（从文件头算起）
+		u32 uncomprLen;	// 解压缩后的数据长度（如果没压缩，该字段的值同comprLen）
+		u32 comprLen;	// 压缩的数据长度
+	数据：
+		紧接在索引段之后。
+    
+【.grp资源文件说明】
+    元数据是bmp文件。
+   	
+   	首部： 
+		s8 magic[3];	// "GR2"（5位copy_bytes；11位win_offset）
+		u16 bits_count;	// 色深
+		u32 width;	// 宽度
+		u32 height;	// 高度
+		u32 dib_len;	// 压缩的数据长度
+		u32 flag_bits;	// lzss标志位的位数
+	标志段：
+		lzss的标志位都被集中在该段，该段的实际长度是(flag_bits + 7) / 8。
+	数据：
+		紧接在标志段。
+
+【ChangeLog】
+2008-03-13 22:27 ver 0.9.1 支持一种旧版本的.pac格式
+2007-11-18 15:38 ver 0.9.0 修正了8位色图导出时调色版使用错误的问题；支持.spr文件的提取；引入force_rgb555参数
+2007-05-30 23:01 ver 0.0.2 对magic为"PACw"的pac封包文件提供支持
+2007-04-03 21:57 ver 0.0.1 第一版发布

@@ -1,0 +1,78 @@
+2019/5/7 星期二 23:23:25
+System.IO.FileNotFoundException: 未能找到文件“D:\Galgame\【汉硬】春音Alice＊Gram\exporter_address.txt”。
+文件名:“D:\Galgame\【汉硬】春音Alice＊Gram\exporter_address.txt”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   在 System.IO.StreamReader..ctor(String path, Boolean detectEncodingFromByteOrderMarks)
+   在 System.IO.File.OpenText(String path)
+   在 Clowwindy.XP3Dumper.Utils.FileUtils.ReadTextFile(String filename)
+   在 Clowwindy.XP3Dumper.Controller.Xp3Dumper.Start()
+
+2019/5/7 星期二 23:23:38
+System.IO.FileNotFoundException: 未能找到文件“D:\Galgame\【汉硬】春音Alice＊Gram\exporter_address.txt”。
+文件名:“D:\Galgame\【汉硬】春音Alice＊Gram\exporter_address.txt”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   在 System.IO.StreamReader..ctor(String path, Boolean detectEncodingFromByteOrderMarks)
+   在 System.IO.File.OpenText(String path)
+   在 Clowwindy.XP3Dumper.Utils.FileUtils.ReadTextFile(String filename)
+   在 Clowwindy.XP3Dumper.Controller.Xp3Dumper.Start()
+
+2019/5/7 星期二 23:24:41
+System.IO.FileNotFoundException: 未能找到文件“D:\Galgame\【汉硬】春音Alice＊Gram\exporter_address.txt”。
+文件名:“D:\Galgame\【汉硬】春音Alice＊Gram\exporter_address.txt”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   在 System.IO.StreamReader..ctor(String path, Boolean detectEncodingFromByteOrderMarks)
+   在 System.IO.File.OpenText(String path)
+   在 Clowwindy.XP3Dumper.Utils.FileUtils.ReadTextFile(String filename)
+   在 Clowwindy.XP3Dumper.Controller.Xp3Dumper.Start()
+
+2020/5/20 8:15:45
+System.IO.FileNotFoundException: 未能找到文件“D:\Galgame\CafeStella\exporter_address.txt”。
+文件名:“D:\Galgame\CafeStella\exporter_address.txt”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   在 System.IO.StreamReader..ctor(String path, Boolean detectEncodingFromByteOrderMarks)
+   在 System.IO.File.OpenText(String path)
+   在 Clowwindy.XP3Dumper.Utils.FileUtils.ReadTextFile(String filename)
+   在 Clowwindy.XP3Dumper.Controller.Xp3Dumper.Start()
+
+2020/5/20 8:16:25
+System.IO.FileNotFoundException: 未能找到文件“D:\Galgame\CafeStella\exporter_address.txt”。
+文件名:“D:\Galgame\CafeStella\exporter_address.txt”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   在 System.IO.StreamReader..ctor(String path, Boolean detectEncodingFromByteOrderMarks)
+   在 System.IO.File.OpenText(String path)
+   在 Clowwindy.XP3Dumper.Utils.FileUtils.ReadTextFile(String filename)
+   在 Clowwindy.XP3Dumper.Controller.Xp3Dumper.Start()
+
+2020/5/20 8:57:35
+System.IO.FileNotFoundException: 未能找到文件“D:\Galgame\CafeStella\exporter_address.txt”。
+文件名:“D:\Galgame\CafeStella\exporter_address.txt”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   在 System.IO.StreamReader..ctor(String path, Boolean detectEncodingFromByteOrderMarks)
+   在 System.IO.File.OpenText(String path)
+   在 Clowwindy.XP3Dumper.Utils.FileUtils.ReadTextFile(String filename)
+   在 Clowwindy.XP3Dumper.Controller.Xp3Dumper.Start()
+

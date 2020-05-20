@@ -1,0 +1,13 @@
+﻿Name:		KaGuYa
+Description:	アトリエかぐや used ADV game system
+Archive:	.arc .ari .bg_ .cg_ .cgw .sp_ .bgm .wav .vo* .aps(weak magic) .parts(weak magic)
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	0.6.0
+Status:	        Alpha
+
+【Notice】
+·ability to specify -l parameter cooperating with .ari file for extracting，the function is alternative because of mere independence on .arc file for fully extracting.
+·when extracting ダンジョンクルセイダーズ～TALES OF DEMON EATER～'s parts.arc, please specify CRUSADER parameter，to ignore pointless resource, and prevent program operational error.
+
+【ChangeLog】
+2008-01-30 21:16 ver 0.6.0 1st version released

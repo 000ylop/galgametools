@@ -1,0 +1,11 @@
+﻿Name:		666-SYSTEM
+Description:	666-SYSTEM
+Archive:	.dat .ml .gl .sl
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.0.2
+Status:	        Final
+
+【ChangeLog】
+2008-07-12 16:18 ver 1.0.2 supported extracting msg.dat of "SKMD"
+2008-02-04 23:46 ver 1.0.1 supported extracting .ml .gl .sl archive
+2007-12-18 23:20 ver 1.0.0 1st version released

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<手动指定文件插件 />
+
+	<插件 文件名="ZIP.upk"                 0 />
+	<插件 文件名="ScrPAK.upk"              1 />
+	<插件 文件名="ManPAK.upk"              2 />
+	<插件 文件名="UjLib.dll"  接口名="IMG" 3 />
+	<插件 文件名="UjLib.dll"  接口名="PS2" 4 />
+	<插件 文件名="UjLib.dll"  接口名="LZH" 5 />
+	<插件 文件名="UjLib.dll"  接口名="BIN" 6 />
+
+	<文件 文件名="MergeData\*.dat"     插件="0" />
+	<文件 文件名="MergeData\Data.Bin"  插件="2" 数据文件="uj\tthz_data.ini" />
+	<文件 文件名="MergeData\Image.Bin" 插件="2" 数据文件="uj\tthz_image.ini" />
+
+	<文件 文件名="MAP\*.img"   插件="3" />
+	<文件 文件名="Image\*.fbg" 插件="1" 数据文件="uj\FBG.pndr" />
+	<文件 文件名="Image\*.Bks" 插件="1" 数据文件="uj\BKS.pndr" />
+	<文件 文件名="Sound\*.bin" 插件="1" 数据文件="uj\Sound.pndr" />
+
+	<文件 文件名="*.PS2" 插件="4" />
+	<文件 文件名="*.LZH" 插件="5" 数据文件="uj\lzh.ini" />
+
+	<文件 文件名="FS2RoleManHead"        插件="5" 数据文件="uj\lzh.ini" />
+	<文件 文件名="TKCombatActionArray0"  插件="6" 数据文件="ZLIB" />
+	<文件 文件名="TKCombatActionArray1"  插件="6" 数据文件="ZLIB" />
+	<文件 文件名="TKCombatActionArray2"  插件="6" 数据文件="ZLIB" />
+	<文件 文件名="TKCombatActionArray3"  插件="6" 数据文件="ZLIB" />
+	<文件 文件名="TKCombatActionArray4"  插件="6" 数据文件="ZLIB" />
+	<文件 文件名="TKItemImage"           插件="6" 数据文件="LZH2" />
+	<文件 文件名="TKMartialArtIcon"      插件="6" 数据文件="LZH2" />
+	<文件 文件名="TKMartialArtSmallIcon" 插件="6" 数据文件="LZH2" />
+	<文件 文件名="TKSmallItemImage"      插件="6" 数据文件="LZH2" />
+	<文件 文件名="TTH0DialogHeadImage"   插件="6" 数据文件="ZLIB" />
+	<文件 文件名="TTH0MapBottomLayer"    插件="6" 数据文件="LZH1" />
+	<文件 文件名="TTH0MapTopLayer"       插件="6" 数据文件="LZH1" />
+	<文件 文件名="TTH0PreviewMap"        插件="6" 数据文件="LZH1" />
+	<文件 文件名="TTHZRoleManSmallHead"  插件="5" 数据文件="uj\lzh.ini" />
+
+</游戏脚本>

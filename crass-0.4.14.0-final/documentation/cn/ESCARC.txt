@@ -1,0 +1,70 @@
+﻿名称：		ESCARC
+描述：		エスクード社开发的游戏系统
+封包：		.bin .c .h .dat .bmp .txt .mot .db .dif .zip
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.1
+成熟度：	测试版
+
+【.bin封包文件说明】
+    实际类型是有目录的封包资源文件。
+    元数据根据实际用途，是bmp、ogg、bin（二进制脚本）等。
+    
+    ESC-ARC1格式：
+    	首部：
+		s8 magic[8];	// "ESC-ARC1"
+		u32 key;	// 解密entries和索引段用的key
+		u32 entries;	// 资源文件数
+ 	索引段：
+		s8 name[128];	// 资源文件名
+		u32 offset;	// 资源文件数据偏移（从首部算起）
+		u32 length;	// 资源文件数据长度
+	数据：
+		紧接在索引段之后：
+
+	    	首部：
+			s8 magic[4];	// "acp"
+			u32 uncomprlen;	// lzw解压缩后的数据长度
+		数据：
+			紧接在首部之后；lzw code stream压缩码字流（位数据流）。	
+
+    ESC-ARC2格式：
+    	首部：
+		s8 magic[8];		// "ESC-ARC2"
+		u32 key;		// 解密entries和索引段用的key
+		u32 entries;		// 资源文件数
+		u32 name_table_length;	// 资源文件名称表的长度
+ 	索引段：
+		u32 name_offset;	// 资源文件名在资源文件名称表内的偏移值
+		u32 offset;		// 资源文件数据偏移（从首部算起）
+		u32 length;		// 资源文件数据长度
+	资源文件名称表：
+		每个名称以NULL作分隔。
+	数据：
+		紧接在索引段之后：
+
+	    	首部：
+			s8 magic[4];	// "acp"
+			u32 uncomprlen;	// lzw解压缩后的数据长度
+		数据：
+			紧接在首部之后；lzw code stream压缩码字流（位数据流）。	
+
+    旧的ACPXPK01格式：
+    	首部：
+		s8 magic[8];		// "ACPXPK01"
+		u32 entries;		// 资源文件数
+ 	索引段：
+		s8 name[32];		// 资源文件名
+		u32 offset;		// 资源文件数据偏移（从首部算起）
+		u32 length;		// 资源文件数据长度
+	数据：
+		紧接在索引段之后:
+
+	    	首部：
+			s8 magic[4];	// "acp"
+			u32 uncomprlen;	// lzw解压缩后的数据长度
+		数据：
+			紧接在首部之后；lzw code stream压缩码字流（位数据流）。	
+
+【ChangeLog】
+2009-01-10 12:31 ver 1.0.1 支持旧版本的bin封包文件的提取
+2008-06-11 18:02 ver 1.0.0 第一版发布

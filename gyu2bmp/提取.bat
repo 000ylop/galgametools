@@ -1,0 +1,1 @@
+for /r %%i in (*.gyu) do gyu2bmp.exe %%i

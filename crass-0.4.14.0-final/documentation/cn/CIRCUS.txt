@@ -1,0 +1,82 @@
+﻿名称：		CIRCUS
+描述：		提取Circus的封包的cui插件
+封包：		.CRX .PCK(no magic) .pcm .DAT(no magic)
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.3.2
+成熟度：	开发版
+
+【TODO】
+1. 支持类型1-3的.pcm文件提取。
+2. True tears ～トゥルーティアーズ～的AdvData\GRP\EVG\e1_07_a.crx解压缩错误，不知别人测试结果如何。
+
+【.CRX资源文件说明】
+    元数据是bmp文件（24位和32位）。
+    该文件广泛用于Circus的游戏当中，主要用于存储各种类型的图像据。
+    
+    	首部：
+    		s8 magic[4];	// "CRXG"
+		u32 zero;    	// 全0
+		u16 width;	// 宽度
+		u16 height;	// 高度
+		u16 mode;	// 1 - 无压缩；2 - zlib压缩
+		u16 unknown1;	// 未知（如果大于1，那么该文件不是有效的crx文件）
+		u32 color_type;	// 0 - 24位；1 - 32位；其他（通常是0） - 8位
+	数据：
+		依据mode字段而定。解压后的原始数据是经过编码变换的bmp，每行第一个字节表示filtering变换模式或RLE（共0-3是4种filtering变换，4是RLE）
+
+【.PCK封包文件说明】
+    实际类型是有目录的CRX封包文件。
+    元数据是CRX文件。
+    内部的CRX是连续的帧图像，用于实现动画效果。
+  
+    	首部：
+		u32 entries;    // 资源文件数量
+	快速索引段：
+		u32 offset;	// 资源文件数据偏移（从文件头算起）				
+		u32 length;	// 资源文件数据长度	  
+	索引段：
+		s8 name[56];	// 资源文件名
+		u32 offset;	// 资源文件数据偏移（从文件头算起）				
+		u32 length;	// 资源文件数据长度	
+	数据：
+		CRX文件。
+
+【.pcm资源文件说明】
+    元数据是PCM WAV文件。
+    该文件广泛用于Circus的游戏当中，主要用于存储各种类型的音频数据。
+    
+    	首部：   
+		s8 magic[4];		// "XPCM"
+		u32 length;		// 数据长度（实际涵义依据mode字段而定）
+		u8 mode;		// 0 - PCM数据；1 - VQ压缩+lz压缩；2 - ADPCM数据；3 - VQ压缩+zlib压缩
+		u8 parameter;		// mode为1和3时，表示使用的scale table。
+		u8 reserved[2];			
+		u16 wFormatTag; 	// 以下字段的涵义请参考MSDN上有关WAVEFORMATEX的描述
+		u16 nChannels;
+		u32 nSamplesPerSec;
+		u32 nAvgBytesPerSec;
+		u16 nBlockAlign;
+		u16 wBitsPerSample;  
+	数据：
+		依据mode字段而定。  
+
+【.DAT封包文件说明】
+    实际类型是有目录的pcm封包文件。
+    元数据是pcm文件。
+    该文件广泛用于Circus的游戏当中，主要用于存储游戏人物语音数据（VOICE.DAT）。
+    
+    	首部：
+    		u32 entries;	// 资源文件数（每项64字节）
+	索引段：
+		u8 name[60];	// 资源文件名
+		u32 offset;	// 资源文件数据偏移（从文件头算起）	
+	数据：
+		紧接在索引段之后。数据内容主要是类型3的XPCM。	
+
+【ChangeLog】
+2008-04-24 12:06 ver 0.3.2 解禁.DAT的提取
+2008-04-03 12:48 ver 0.3.1 修正了pcm类型3的提取方式
+2007-11-24 21:02 ver 0.3.0 支持类型1的.CRX文件的提取；支持类型2的8位色CRX文件的提取
+2007-06-02 00:30 ver 0.2.1 .dat本身缺乏明确的magic作为匹配，而且现阶段还无法提取其中的XPCM数据，因此暂时关闭了对.dat的提取功能。
+2007-05-02 11:53 ver 0.2.0 修正了提取crx时没有正确检测RLE拷贝边界的bug
+2007-02-17 00:46 ver 0.1.0 第一版发布，不支持类型1-3的.pcm文件提取

@@ -1,0 +1,44 @@
+﻿Name:		CaramelBox
+Description:		
+Archive:	.bin .dat .ar3
+Author:	        痴漢公賊  (glanser@163.com)
+Version:	0.8.1
+Status:	        Alpha
+
+【TODO】
+·analyse type 1 and 3 resource
+
+【lz Resource Info】
+    the lz is in type of resource without directory.
+    meta-data is $$$, scb(binary script), anb and so on.
+	
+	summary: lz is made up of two parts - header and one or many compressed data blocks. file header describes total length after decompressing; header in most front of every compressed data block describes block length after decompressing. length sum of all date blocks after decompressing should be equal to recorded total length in file header.
+    	
+        header:
+		s8 magic[2];		// "lz" flag, means beginning of data 
+		u32 total_uncomprlen;	// total length after decompressing(be32)
+ 	compressed block header: closely behind file header.
+		s8 sync[2];		// "ze" flag, means beginning of compressed block 
+		u16 uncomprlen;		// length of current block after decompressing(be16)
+	compressed data: closely behind compressed block header, using variable length coding: set N-bit 0 value to express L's number of bits, the next N+1-bit express L's true value.
+
+		00000000............0000000XXX..................XXX
+		|-- N-bit "0", express number of bits of L --||-- value of L, take up N+1-bit --|
+
+	·L's actual meaning under requirement with 3 states:
+	byte number of direct output - B(need decrease by 1), position of waiting for output data in previous output buffer - O and byte number of beginning from O position to output - C.
+	·process based on following 4 steps when decompressing:
+	1. get B direct output byte number, then according to relevant number of bits to B byte number(multiply 8) read out compressed stream and directly output.
+	2. get O position of waiting for direct output data in previous output buffer.
+	3. get C byte number of waiting for output data.
+	4. output C byte data from O position from output buffer.
+	when total byte number is less than current block decompression length, repeat above four steps;
+	when to output total byte number is equal to current block decompression length, finish current block decompression. then re-read compressed block header, if compressed stream without termination, decompresser is initialized again, repeat above four steps.
+
+	decompresser need maintain waiting for using most 16-bit compressed data. since number of bits of data maintained by decompresser isn't enough，read 2 bytes compressed data, convert to little endian format and to be cache.
+
+【ChangeLog】
+2009-06-18 19:14 ver 0.8.1 support .ar3
+2009-03-28 20:53 ver 0.8.0 sopported extracting ARC4 archive, .fcb and .map resource
+2008-03-01 17:01 ver 0.7.0 sopported extracting lz resource
+2008-02-15 18:20 ver 0.6.0 1st version released

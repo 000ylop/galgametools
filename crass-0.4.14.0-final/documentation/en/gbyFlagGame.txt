@@ -1,0 +1,18 @@
+﻿Name:		gbyFlagGame
+Description:	game system developed by FOSTER
+Archive:	.FA2 .C24
+Author:		痴漢公賊 (glanser@163.com)
+Version:	0.7.0
+Status: 	Alpha
+
+【Notice】
+·some resource of following games will to failure when extracting, press y to ignore.
+ ·DOLL
+    b110b.c24@DOLL.FA2
+ ·ここは楽園荘３
+    H0223.WAV@KR3C.FA2
+    H0224.WAV@KR3C.FA2
+    H0225.WAV@KR3C.FA2
+
+【ChangeLog】
+2009-01-29 12:25 ver 0.7.0 1st version released

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Language" content="en-us">
+  <meta name="GENERATOR" content="XnView">
+  <link rel="stylesheet" type="text/css" href="../fooby.css">
+  <title>#TITLE# - #FILENAME#</title>
+  <script type="text/javascript">
+    // Hide the caption div if it's empty
+    function removeIfEmpty() {
+      var captionDiv = document.getElementById("caption");
+      if (captionDiv.innerHTML == "\n      \n    " | captionDiv.innerHTML == "")
+        captionDiv.style.display = "none";
+    }    
+  </script>
+</head>
+
+<body onload="removeIfEmpty();">
+  <div class="center">
+    <h1>#HEADER#</h1>
+    <div id="navt">
+      <a href="#PREV_PAGE#">&lt; #PREVIOUS_LABEL#</a> | <a href="#THUMB_PAGE#">#THUMBNAILS_LABEL#</a> | <a href="#NEXT_PAGE#">#NEXT_LABEL# &gt;</a>
+    </div>
+    <div id="pic" class="content" style="width: #PIC_WIDTH#px;">
+      <img src="#PIC_LINK#" width="#PIC_WIDTH#" height="#PIC_HEIGHT#" alt="#FILENAME#"><br>
+    </div>
+    <div id="caption" class="content" style="width: #PIC_WIDTH#px;">
+      #PIC_TEXT#
+    </div>
+    <div id="navb">
+    <a href="#PREV_PAGE#">&lt; #PREVIOUS_LABEL#</a> | <a href="#THUMB_PAGE#">#THUMBNAILS_LABEL#</a> | <a href="#NEXT_PAGE#">#NEXT_LABEL# &gt;</a>
+    </div>
+  </div>
+</body>
+
+</html>
+

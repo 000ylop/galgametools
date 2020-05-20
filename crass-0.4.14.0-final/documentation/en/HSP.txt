@@ -1,0 +1,23 @@
+﻿Name: 		HSP
+Description: 	Hot Soup Processor system developed by onion software (http://www.onionsoft.net/hsp/)
+Archive: 	.exe .mv .dpm .dat(no magic)
+Author: 	绫波微步
+Version: 	2.0.2
+Status: 	Beta
+
+【Notice】
+when extracting .dat resource must specify -u HSP parameter.
+
+【Sample】
+crage -d "Q:\Program Files\傠偔偊偸\data" -u hsp
+HSP：成功提取111个.dat封包文件文件
+
+【ChangeLog】
+2009-01-10 16:53 ver 2.0.2 supported extracting new mv resource
+2008-08-05 20:21 ver 2.0.1 supported extracting .dat resource
+2008-02-04 22:13 ver 2.0.0 re-programmed extraction algorithm, supported extracting absolute .dpm file
+2007-10-05 14:36 ver 1.0.1 fixed a extraction error in incapability of RIFF wav format
+2007-09-29 23:09 ver 1.0.0 re-implemented algorithm about HSP3's searching for DPMX offset and key in exe file
+2007-09-27 22:03 ver 0.9.5 supported extracting .dpm archive
+2007-09-18 23:48 ver 0.8.1 supported extracting unencrypted exe resource
+2007-08-18 19:59 ver 0.8.0 1st version released

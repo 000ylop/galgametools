@@ -1,0 +1,112 @@
+/*------------------ player ------------------*/
+class MyWindow extends Window
+{
+	var primlayer;
+	var digitlayer;
+	var buf;
+	var vistimer;
+	var timer;
+	var visoptions;
+	var lastdrawntime;
+
+
+	function MyWindow()
+	{
+		super.Window();
+		add(primlayer = new Layer(this, null));
+		add(digitlayer = new Layer(this, primlayer));
+		add(buf = new WaveSoundBuffer(this));
+		add(vistimer = new Timer(this));
+		vistimer.enabled = true;
+		vistimer.interval = 40;
+		digitlayer.loadImages("lcd_digits");
+		borderStyle = bsNone;
+		innerSunken = false;
+		with(primlayer)
+		{
+			.left = .top = 0;
+			.imageWidth = 64 + 80;
+			.imageHeight = 20;
+			.setSizeToImageSize();
+			setInnerSize(.width, .height);
+			.face = dfBoth;
+			.fillRect(0, 0, 64+80, 20, 0xffc0c0c0);
+		}
+		buf.useVisBuffer = true;
+		buf.looping = true;
+		visible = true;
+		visoptions = %[ type: 1 ];
+		drawTime(3, 4, 0);
+	}
+
+	function drawDigit(x, y, n)
+	{
+		primlayer.copyRect(x, y, digitlayer, n * 8, 0, 8, digitlayer.imageHeight);
+	}
+
+	function drawTime(x, y, time)
+	{
+		lastdrawntime = time;
+		drawDigit(x + (9*5+2), y, time % 10);
+		time \= 10;
+		drawDigit(x + (9*4+2), y, time % 6);
+		time \= 6;
+		drawDigit(x + (9*3+2), y, 11);
+		drawDigit(x + (9*2+2), y, time % 10);
+		time \= 10;
+		drawDigit(x + (9+2), y, time >= 1 ? time % 10 : 10);
+		time \= 10;
+		drawDigit(x + (0+2), y, time >= 1 ? time % 10 : 10);
+	}
+
+	function action(ev)
+	{
+		if(ev.type == "onTimer")
+		{
+			if(ev.target === vistimer)
+			{
+				var curtime = buf.position \ 1000;
+				if(lastdrawntime != curtime) drawTime(3, 4, lastdrawntime = curtime);
+				drawFFTGraph(primlayer, buf, 78, 0, 64, 20, visoptions);
+			}
+		}
+		if(ev.type == "onFileDrop" && ev.target == this)
+		{
+			try
+			{
+				buf.open(ev.files[0]);
+				drawTime(3, 4, lastdrawntime = buf.position \ 1000);
+				buf.play();
+			}
+			catch(e)
+			{
+				System.inform(e.message);
+			}
+		}
+		else if(ev.type == "onMouseDown" && ev.target == primlayer)
+		{
+			if(ev.button == mbRight)
+				buf.paused = !buf.paused;
+			else
+				beginMove();
+		}
+		else if(ev.type == "onKeyDown" && ev.key == #"V")
+		{
+			visoptions.type = !visoptions.type;
+		}
+	}
+}
+
+with(Plugins)
+{
+	.link("wutcwf.dll");
+	.link("wumsadp.dll");
+	.link("wuvorbis.dll");
+	.link("fftgraph.dll");
+}
+
+var a = new MyWindow();
+
+System.title = "Player";
+
+/*------------------ player ------------------*/

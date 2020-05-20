@@ -1,0 +1,12 @@
+label = "Old toolbar"
+width = 24
+height = 24
+browser = 1
+auto = 1
+version = 4
+main32 = 1
+browser32 = 1
+tabtree = 1
+icninfo = 1
+imbar = 1
+jpgbar = 1

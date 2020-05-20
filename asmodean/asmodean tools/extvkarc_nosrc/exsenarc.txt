@@ -1,0 +1,10 @@
+// exsenarc.cpp, v1.36 2008/09/12
+// coded by asmodean
+
+// contact: 
+//   web:   http://asmodean.reverse.net
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+
+// This tool extracts data from ARC archives used by various games.  See usage
+// to select a specific game.

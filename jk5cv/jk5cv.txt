@@ -1,0 +1,260 @@
+----------------------------------★ 注意 ★-----------------------------------
+
+                    このプログラムは、ゲームではありません。
+
+-------------------------------------------------------------------------------
+===============================================================================
+【名    称】  「JKと淫行教師5 ～借金姉妹編～」変換プログラム
+【著 作 権】  株式会社ウエストサイド
+【制作者名】  NT
+【制作月日】  2011/03/22
+【動作環境】  Windows XP + Service Pack2
+              (Windows 2000/Vista(32bit)/7(32bit)でも動作すると思います)
+              NTFSフォーマットで1GB以上空き容量のあるHDD
+【動作確認】  日本語版 Windows XP Professional + Service Pack3
+-------------------------------------------------------------------------------
+【概    要】
+    "JKと淫行教師5 ～借金姉妹編～" (ブルゲLIGHT)
+　　の *.pack ファイルを BMP, PNG, JPG, WAV, OGG ファイル等に変換するものです。
+
+【対応画像】
+    イベント、立ちキャラ、背景、システム画像に対応しています。
+
+【導入方法】
+　　"jk5cv.lzh" を任意のフォルダに解凍してください。
+　　ツールの実行ファイル名は "jk5cv.exe" です。
+
+【操作方法】
+　　実行ファイル jk5cv.exe を開いて下さい。
+　　以下に変換の手順を記述します。
+
+  1.　[ キーの指定 ]枠内の、[ fkey指定 ]ボタンを押して、key.fkey ファイルを
+    指定します。当該ファイルは、インストール先の DLL フォルダ内にあります。
+    次に、[ キーの指定 ]枠内の、[ exe指定 ]ボタンを押して、ゲームの
+    実行ファイルを指定します。
+    "JKと淫行教師5 ～借金姉妹編～" の場合は、jk5.exe を、ゲームの
+    インストール先のフォルダから選択します。
+
+    必ず、そのゲームに付属しているファイルを使用してください。
+    別のゲームの key.fkey 及び 実行ファイルでは、正しい変換が出来ません。
+
+　2．「変換」ボタンを押すと、ファイルオープンダイアログが出ます。
+　　ゲームのインストール先にある変換したいファイルを選択して下さい。 (複数選択可)
+　　　※変換が上手くいかない場合は、ゲームのCD/DVD-ROMメディアにある
+　　　　変換したいファイルを選択して下さい。
+
+　　　もしくは、「一括変換」ボタンを押すと、フォルダ選択ダイアログが出ますので
+　　変換したいファイルが存在するフォルダを選択して下さい。 (単一選択のみ)
+　　　「変換」は選択ファイルのみを変換します。
+　　　「一括変換」は選択フォルダ内の全ファイルを変換します。
+　　　「一括変換」(下位フォルダを含む)は選択フォルダ以下にある
+　　全てのフォルダ内の、全てのファイルを変換します。
+　　　※一度に全データを変換したい場合は、ゲームのインストール先の
+　　　　GameData フォルダを選択してください。
+
+　3．変換状況がプログレスバーで表示されます。
+　　jk5cv.exe のあるフォルダに変換元ファイル名のフォルダを作成し
+　　その中に変換ファイルを出力します。
+　　出力先に同名のファイルが存在する場合はファイル名の先頭に
+　　'_'を付けて出力します('は付けられません)。
+　　'_'は最大9個付けられますが、それでも同名のファイル名が
+　　存在する場合、変換フォルダ名01 ～ 変換フォルダ名99 まで
+　　フォルダの作成を順次試み(変換フォルダ名 は適時読み替えてください)
+　　作成したフォルダの中にファイルを作成しようと試みます。
+　　それでもファイルが作成できない場合はエラーとします。
+　　変換を中止したい場合は「中止」ボタンを押すと中止できます。
+　　変換を一時停止したい場合は「一時停止」ボタン型チェックボックスを
+　　オンにしている間、一時停止することができます。
+
+　※エラーメッセージなどはリストボックスに書き込まれます。
+　　一番上のログが一番最近のログで、一番下のログが一番古いログです。
+　　リストボックスの内容を保存したい場合は「ログ保存」ボタンを
+　　押すと、現在のフォルダに ツール名_log.txt ファイルを
+　　作成し、そのファイルに内容を出力します(ツール名は適時読み替えてください)。
+　　「ログ消去」ボタンを押すとログが全て消えます。
+　　リストボックスのログ保持限界数は10000件です。
+
+　※画像の出力フォーマット指定
+　　・全てBMPで出力
+　　　BMP形式に変換して出力します。
+　　・全てPNGで出力
+　　　PNG形式に変換して出力します。
+　　　出力サイズは小さくなりますが、BMP出力に比べて変換に時間がかかります。
+　　　αマスク成分を持つ画像ファイルはαチャンネル付きのPNGで出力されます。
+　　・α付きはPNGで出力 (他はBMPで出力)
+　　　αマスク成分を持つ画像ファイルのみをαチャンネル付きPNGで出力、
+　　　その他はBMP形式で出力します。
+
+　※PNG圧縮の指定
+　　・圧縮レベルの設定
+　　　0 から 9 までのPNGの圧縮レベルを選択します。
+　　　0 が無圧縮で、それ以外は 1 に近いほど高速圧縮・低圧縮率になり
+　　　9 に近いほど低速圧縮・高圧縮率になります。
+　　　起動時に9に設定されます。
+
+【制限事項】
+    ※本ツールは，Windows XP用です。
+    　その他のWindowsでの動作確認はしていません。
+    ※変換時にドライブの空き容量の計算を行っておりませんので
+    　変換ファイルを出力するドライブには十分な空きを作っておいて下さい。
+    ※本ツールが動作確認を行なったゲームのファイル情報は以下の通りです。
+    　ツールの性質上、その他のバージョンでは動作しない可能性があります。
+    　○JKと淫行教師5 ～借金姉妹編～ (パッケージ製品版)
+        ・ファイル名：jk5.exe
+        ・ファイルバージョン： 1.10.0.0
+        ・サイズ： 1,645,568 バイト
+        ・更新日時： 2011年1月25日 8:35:38
+
+【著 作 権】
+    本ツール(ドキュメント等を含む)は株式会社ウエストサイドの著作物です。
+    いかなる方法を用いた場合でも他の人に譲渡または配布する行為は著作権の
+    侵害となります。本ツールの転載や再配布は行なわないで下さい。
+
+【謝 辞】
+    本ツールは次のライブラリを使用させて頂いております。
+    この場を借りてお礼申し上げます。
+
+    ・zlib version 1.2.5, April 19th, 2010
+      Copyright (C) 1995-2010 Jean-loup Gailly and Mark Adler
+    ・libpng version 1.4.3 - June 26, 2010
+      Copyright (c) 1998-2010 Glenn Randers-Pehrson
+      (Version 0.96 Copyright (c) 1996, 1997 Andreas Dilger)
+      (Version 0.88 Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.)
+
+【免責事項】
+    本ツールを使用し変更を加えたデータ(画像ファイル等)を配布しないで下さい。
+    配布した際に起こる全てについては配布を行った本人に責任があるものとします。
+    ツール制作者及び株式会社ウエストサイドはいかなる責任も負いません。
+    また本ツールに起因するいかなる損害についても株式会社ウエストサイドは賠償の
+    責任を負わないものとします。ツールの適用は使用者の判断で行なって下さい。
+
+【注意事項】
+    本ツールに関して，ゲームの発売元は一切の関与をしておりません。
+    本ツールに関する質問は，ゲームの発売元や開発元には行わないで下さい。
+-------------------------------------------------------------------------------
+    ※本ドキュメント及びツールに記載の会社名および製品名は、各社の登録商標
+    　または商標です。
+===============================================================================
+Copyright (c) 2011 WESTSIDE All Rights Reserved.
+
+-------------------------------------------------------------------------------
+zlib copyright notice
+-------------------------------------------------------------------------------
+
+Copyright notice:
+
+ (C) 1995-2010 Jean-loup Gailly and Mark Adler
+
+  This software is provided 'as-is', without any express or implied
+  warranty.  In no event will the authors be held liable for any damages
+  arising from the use of this software.
+
+  Permission is granted to anyone to use this software for any purpose,
+  including commercial applications, and to alter it and redistribute it
+  freely, subject to the following restrictions:
+
+  1. The origin of this software must not be misrepresented; you must not
+     claim that you wrote the original software. If you use this software
+     in a product, an acknowledgment in the product documentation would be
+     appreciated but is not required.
+  2. Altered source versions must be plainly marked as such, and must not be
+     misrepresented as being the original software.
+  3. This notice may not be removed or altered from any source distribution.
+
+  Jean-loup Gailly        Mark Adler
+  jloup@gzip.org          madler@alumni.caltech.edu
+
+-------------------------------------------------------------------------------
+libpng copyright notice
+-------------------------------------------------------------------------------
+
+COPYRIGHT NOTICE, DISCLAIMER, and LICENSE:
+
+If you modify libpng you may insert additional notices immediately following
+this sentence.
+
+This code is released under the libpng license.
+
+libpng versions 1.2.6, August 15, 2004, through 1.4.3, June 26, 2010, are
+Copyright (c) 2004, 2006-2007 Glenn Randers-Pehrson, and are
+distributed according to the same disclaimer and license as libpng-1.2.5
+with the following individual added to the list of Contributing Authors
+
+   Cosmin Truta
+
+libpng versions 1.0.7, July 1, 2000, through 1.2.5 - October 3, 2002, are
+Copyright (c) 2000-2002 Glenn Randers-Pehrson, and are
+distributed according to the same disclaimer and license as libpng-1.0.6
+with the following individuals added to the list of Contributing Authors
+
+   Simon-Pierre Cadieux
+   Eric S. Raymond
+   Gilles Vollant
+
+and with the following additions to the disclaimer:
+
+   There is no warranty against interference with your enjoyment of the
+   library or against infringement.  There is no warranty that our
+   efforts or the library will fulfill any of your particular purposes
+   or needs.  This library is provided with all faults, and the entire
+   risk of satisfactory quality, performance, accuracy, and effort is with
+   the user.
+
+libpng versions 0.97, January 1998, through 1.0.6, March 20, 2000, are
+Copyright (c) 1998, 1999 Glenn Randers-Pehrson, and are
+distributed according to the same disclaimer and license as libpng-0.96,
+with the following individuals added to the list of Contributing Authors:
+
+   Tom Lane
+   Glenn Randers-Pehrson
+   Willem van Schaik
+
+libpng versions 0.89, June 1996, through 0.96, May 1997, are
+Copyright (c) 1996, 1997 Andreas Dilger
+Distributed according to the same disclaimer and license as libpng-0.88,
+with the following individuals added to the list of Contributing Authors:
+
+   John Bowler
+   Kevin Bracey
+   Sam Bushell
+   Magnus Holmgren
+   Greg Roelofs
+   Tom Tanner
+
+libpng versions 0.5, May 1995, through 0.88, January 1996, are
+Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.
+
+For the purposes of this copyright and license, "Contributing Authors"
+is defined as the following set of individuals:
+
+   Andreas Dilger
+   Dave Martindale
+   Guy Eric Schalnat
+   Paul Schmidt
+   Tim Wegner
+
+The PNG Reference Library is supplied "AS IS".  The Contributing Authors
+and Group 42, Inc. disclaim all warranties, expressed or implied,
+including, without limitation, the warranties of merchantability and of
+fitness for any purpose.  The Contributing Authors and Group 42, Inc.
+assume no liability for direct, indirect, incidental, special, exemplary,
+or consequential damages, which may result from the use of the PNG
+Reference Library, even if advised of the possibility of such damage.
+
+Permission is hereby granted to use, copy, modify, and distribute this
+source code, or portions hereof, for any purpose, without fee, subject
+to the following restrictions:
+
+1. The origin of this source code must not be misrepresented.
+
+2. Altered versions must be plainly marked as such and must not
+   be misrepresented as being the original source.
+
+3. This Copyright notice may not be removed or altered from any
+   source or altered source distribution.
+
+The Contributing Authors and Group 42, Inc. specifically permit, without
+fee, and encourage the use of this source code as a component to
+supporting the PNG file format in commercial products.  If you use this
+source code in a product, acknowledgment is not required but would be
+appreciated.

@@ -1,0 +1,41 @@
+﻿名称：		RioShiina
+描述：		椎名里緒
+封包：		.WAR .WAA .S25 .MI4 .OGV
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.4.1
+成熟度：	开发版
+
+【TODO】
+·支持WARC 1.7。
+·支持.PAD音频。
+
+【注意事项】
+·对于较老的椎名里緒v2.15，如果提取失败，请尝试使用nodec参数提取。
+以游戏“シ・カ・エ・シ”为例：
+crage -d "Q:\Program Files\foster\僔僇僄僔" -O nodec
+
+WARC version: WARC 1.3
+FKS1.WAR: 准备提取封包文件（含28个资源文件） ...
+FKS1.WAR: 成功提取28 / 28 个资源文件 |
+
+WARC version: WARC 1.3.WAR资源封包文件 /
+FKS2.WAR: 准备提取封包文件（含15个资源文件） ...
+FKS2.WAR: 成功提取15 / 15 个资源文件 \
+
+WARC version: WARC 1.3.WAR资源封包文件 -
+FKS3.WAR: 准备提取封包文件（含10个资源文件） ...
+FKS3.WAR: 成功提取10 / 10 个资源文件 -
+
+WARC version: WARC 1.3.WAR资源封包文件 \
+FKS4.WAR: 准备提取封包文件（含118个资源文件） ...
+FKS4.WAR: 成功提取118 / 118 个资源文件 -
+
+WARC version: WARC 1.3.WAR资源封包文件 |
+FKS5.WAR: 准备提取封包文件（含2342个资源文件） ...
+FKS5.WAR: 成功提取2342 / 2342 个资源文件 -
+
+RioShiina：成功提取5个.WAR封包文件
+
+【ChangeLog】
+2009-02-15 10:52 ver 0.4.1 加入nodec参数
+2009-02-11 22:23 ver 0.4.0 第一版发布

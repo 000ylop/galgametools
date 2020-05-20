@@ -1,0 +1,353 @@
+﻿2009-6-27 15:31 Ver 0.4.13.13 痴漢公賊
+【Majiro_mask_me】
+·update to 1.1.4, fix incorrect image composition with delta.
+【cui】
+·cui N2System updates to Final 1.0.5.
+add parameter "game=Smgsp" to extract the game "スマガスペシャル".
+·cui TEATIME updates to Beta 1.0.4.
+support encrypted .ODA.
+·cui Leaf updates to Alpha 0.5.2.
+fix the error while extracting from lag with palette; support new KCAP archive format; support .BJR image.
+·cui NekoSDK updates to Beta 1.0.5.
+match for the old .dat format in more strict method to avoid extracting by accident.
+·cui SLGSystem updates to Beta 1.0.3.
+fix the error while extracting from .alb, and can exactly export jpg image.
+·cui Majiro Script Engine updates to Final 1.2.0.
+introduce "scenario" parameter used to extract from encrypted .rct file and thus replace both game and ts_key parameters.
+·cui SOFTPAL ADV SYSTEM updates to Alpha 1.3.2.
+support new .pac archive format.
+
+2009-6-21 21:28 Ver 0.4.13.13 痴漢公賊
+【cui source】
+·release cui source package 1.0.4.
+【cui】
+·cui ExHIBIT update to Alpha 0.3.0.
+support new compression method for gyu.
+·cui NitroPlus update to Final 1.0.3.
+support ver1 archive format.
+·cui NScripter update to Final 1.2.1.
+support the game "新妻×義母 ～花嫁は女子校生～".
+·remove cui Illusion and ClassicalMoon.
+·cui Csystem update to Alpha 1.0.3.
+add "game=Ndoki" parameter, support the game "なつドキ！ハーレム ～親せき宅での悩める受験勉強～ 体験版".
+·cui kirikiri2 update to Final 1.5.3.
+fix a bug in cxdec; add  cxdec=kurenai decryption parameter, support the game "クレナイノツキ 体験版".
+·cui SystemNNN update to Beta 1.2.1.
+process negative height for mask correctly.
+·cui CaramelBox update to Alpha 0.8.1.
+support .ar3.
+·cui AFS update to Alpha 0.5.1.
+support .pak.
+·cui ADVSystem update to Alpha 1.0.1.
+filter FANI and CANI file to avoid the failure of extraction.
+·cui DAC update to Alpha 0.8.1.
+support the game "淫暴の惑星 ～破壊と欲望の衝動～"; use game=anti to extract.
+·cui YU-RIS update to Alpha 0.9.9.
+support extracting exe yser; support the game "催眠羞恥露出".
+
+2009-6-12 20:05 Ver 0.4.13.12 痴漢公賊
+【CrageGUI】
+·filter out the quotation mark from user input.
+【cui】
+·cui NekoSDK update to Beta 1.0.4.
+support extracting old .dat format.
+·cui SLGSystem update to Beta 1.0.2.
+support extracting .SPD.
+·add cui DAC Alpha 0.8.0.
+support the game "虜囚 -RYOSYU-"; use game=ingoku to extract.
+·add cui A98SYS ENGINE Alpha 0.8.0.
+support the game "DISCIPLINE LS".
+·cui FORIS update to Beta 1.0.1.
+support the game "School Days".
+
+2009-6-1 16:57 Ver 0.4.13.11 痴漢公賊
+【language】
+·fix the issue that unable to display Traditional Chinese on Traditional Chinese OS.
+【cui】
+·MalieSystem cui update to Beta 3.1.0.
+support game "どんちゃんがきゅ～ 体験版兼製品版", "どんちゃんがきゅ～ パッケージ版" and "タペストリー -you will meet yourself-"; fix incorrectly search the encrypted LIBU header due to invalid alignment.
+·MOONHIR cui update to Beta 1.0.3.
+support game "家族愛 ～お母さんと姉さんはボクの物～".
+·NeXAS cui update to Beta 1.0.0.
+support mode2 compression method for resource.
+·SystemC cui update to Beta 1.1.3.
+remove "no magic" flag from cui attribute.
+·ValkyrieComplex cui update to Final 1.0.1.
+support game "ヴァルキリーコンプレックス" retail version.
+·N2System cui update to Final 1.0.4.
+fix the error when extracting［Lamento -FRAGMENT-］.
+·kirikiri2 cui update to Final 1.5.2.
+redefine tenshinTrial for trial version, while retail version uses cxdec=tenshin.
+support game "天神乱漫 LUCKY or UNLUCKY!?", using cxdec=tenshin to extract.
+
+2009-5-27 19:35 Ver 0.4.13.10 痴漢公賊
+【CrageGUI】
+·protect special parameter with quotation mark.
+【tools】
+·Majiro_mask_me update to 1.1.3.
+fix invalid delta while specify -s,-m,-d together.
+【cui】
+·Majiro Script Engine cui update to Final 1.1.8.
+supported game "催眠ペット ～メスになったワタシ～", added parameter game=saimin
+·M45 cui rename to Stuff.
+·ARCGameEngine cui update to Alpha 0.9.8.
+support extracting 4 bit bmp image.
+·Xuse cui update to Alpha 0.2.8.
+fix the absolute path in 4ag.
+·SystemNNN cui update to Beta 1.1.0.
+strictly check BMP+MASK image although it actually doesn't contain mask; process negative height correctly.
+
+2009-5-16 16:21 Ver 0.4.13.9 痴漢公賊
+【cui】
+·SystemNNN cui update to Beta 1.1.0.
+export mask image for jpeg+mask and bmp+mask image format.
+·FPK cui renames as MOONHIR, and update to Beta 1.0.2.
+support new decryption key.
+·add Irrlicht Engine cui Beta 1.0.0.
+·RealLive cui update to Alpha 0.7.6.
+correctly extracting .g00 file containing multi-image.
+·AZSystem cui update to Alpha 0.7.2.
+support new arc archive.
+·DDSystem cui update to Beta 1.0.2.
+support DDP2 and DDP3 format.
+
+2009-5-2 17:17 Ver 0.4.13.8 痴漢公賊
+【tools】
+·Majiro_mask_me update to 1.1.1。
+add -a parameter to disable alpha blending.
+【cui】
+·EntisGLS cui update to Alpha0.5.0.
+complete the exe parameter to be used; support the decription for ERISACode.
+·AI6WIN cui update to Beta 1.1.2.
+fix the error while extracting .VSD from movie.arc.
+·SystemC cui update to Beta 1.1.2.
+calculate the index entry length in heuristic way.
+·kirikiri2 cui update to Final 1.5.1.
+added cxdec=tenshin decryption parameter.
+·Lucifen cui update to Beta 0.8.0.
+re-add game parameter to rip; support the game "真説 猟奇の檻 第2章".
+
+2009-4-26 17:32 Ver 0.4.13.7 痴漢公賊
+【cui】
+·Csystem cui update to Alpha 1.0.2.
+added "game=tyouR" parameter, support game "蝶ノ夢 ～二人の蝶～".
+·Majiro Script Engine cui update to Beta 1.1.7.
+supported game "姉ニモマケズ ～お姉ちゃんズは刺激的！～", added parameter game=anetai
+·add WGame cui Beta 1.0.0.
+·ARCGameEngine cui update to Alpha 0.9.7.
+fix reading unaligned mask data.
+·DJSYSTEM cui update to Beta 1.0.1.
+support the extract of encoded resource.
+·ohgetsu cui update to Beta 1.0.4.
+use "exe" parameter instead and support old archive format for extracting.
+·add RISUSOFT cui Beta 1.0.0.
+·AZSystem cui update to Alpha 0.7.1.
+support alpha blending.
+·kirikiri2 cui update to Final 1.5.0.
+added cxdec=silverblue and cxdec=ojo2 decryption parameter.
+·LiosGame cui update to Alpha 0.9.7.
+support alpha blending.
+·add AVGEngine cui Alpha 0.8.0.
+support the game "深霧の中で…".
+·Xuse cui update to Alpha 0.2.7.
+supported extracting the actual bmp from .bin.
+·FVP cui update to Beta 1.1.1.
+fix the conflict with Xuse cui.
+·route2 cui update to Beta 1.0.5.
+support .WPF format.
+
+2009-3-31 13:05 Ver 0.4.13.6 痴漢公賊
+【crage】
+fix the incorrect mismatch related to extension between archive and cui.
+【cui】
+·route2 cui update to Beta 1.0.4.
+supported varying length of .CG's entry.
+
+2009-3-30 8:56 Ver 0.4.13.5 痴漢公賊
+【cui】
+·IPAC cui update to Beta 1.0.3.
+fixed the fault when extracting bmp in .IES.
+·add C4 cui Alpha 0.5.0.
+·CaramelBox cui update to Alpha 0.8.0.
+sopported extracting ARC4 archive.
+·Majiro Script Engine cui update to Final 1.1.6.
+supported game "神出鬼没！異次元肉棒 ～こんなところからお邪魔します～", added parameter game=Nikubo.
+·NeXAS cui update to Alpha 0.9.6.
+supported extracting bmp compressed with zlib.
+
+2009-3-26 20:38 Ver 0.4.13.4 痴漢公賊
+【cui】
+·ego cui update to Beta 1.1.1.
+fixed the incorrect directory exported due to forgetting to consider the directory name length.
+·RealLive cui update to Alpha 0.7.5.
+fixed the alpha channel with sawtooth edge.
+·Csystem cui update to Alpha 1.0.1.
+disabled alpha blending.
+·SOFTPAL ADV SYSTEM cui update to Alpha 1.3.1.
+support type1 mode of new GE format.
+·ADVSystem cui update to Alpha 1.0.0.
+support extracting .DAT file.
+·NEJII cui update to Final 1.0.2.
+supported extracting mask image.
+·AdvTry cui update to Final 1.1.0.
+use behristics to guess the values of key, init_offset and sec_offset.
+·MBA cui update to Final 1.0.1.
+resolve the conflict with ggRMV cui.
+·add ggRMV cui Beta 1.0.0.
+
+2009-3-17 20:28 Ver 0.4.13.3 痴漢公賊
+【crage】
+·compatible with vista for x86_64.
+【utility】
+·fix invalid process to multiple special parameters.
+【cui】
+·Csystem cui update to Alpha 1.0.0.
+exported alpha channel correctly; added "game=GYK" parameter.
+·NEKOPACK cui update to Beta 1.1.1.
+support new .dat format.
+·AiSystem cui update to Beta 1.0.2.
+exported the fake 16 bit bmp to 24 bit.
+·route2 update to Beta 1.0.3.
+Only extracting valid .MHU.
+
+2009-3-9 19:37 Ver 0.4.13.2.1 痴漢公賊
+【cui】
+·SOFTPAL ADV SYSTEM update to Alpha 1.3.0.
+supported PGD3 format.
+·NEJII cui update to Final 1.0.1.
+supported alpha blending for 32 bit bmp; supported biCompression3 for 32 bit bmp.
+
+2009-3-7 17:20 Ver 0.4.13.2 痴漢公賊
+【cui】
+·ExHIBIT cui update to Alpha 0.2.2.
+export valid alpha channel; support alpha blending for 32 bit bmp; supported large alpha interval.
+·SOFTPAL cui rename as SOFTPAL ADV SYSTEM, and update to Beta 1.2.0.
+remove "no magic" for .pac; fixed corrupt 32 bit bmp; supported alpha bleding for 32 bit bmp.
+·EAGLS cui update to Beta 1.1.0.
+remove "no magic" for .pak.
+·MainProgramHoep cui update to Beta 1.0.1.
+remove "no magic" for .pck; picture is always saved as 24 bit colors.
+·RPM ADV SYSTEM cui update to Final 1.2.1.
+distinguish between 24 bit and 32 bit bmp so as to save them correctly.
+·KAAS cui update to Beta 1.0.0.
+support type1,2,5 decompression method.
+
+2009-3-3 22:27 Ver 0.4.13.1 痴漢公賊
+【cui】
+·RPM ADV SYSTEM cui update to Final 1.2.0.
+save 32bit bmp correctly.
+·MalieSystem cui update to 3.0.3.
+support game "タペストリー -you will meet yourself-"
+·add Adv cui Beta 1.0.0.
+·Majiro Script Engine cui update to Final 1.1.5.
+support "ふわりコンプレックス". added game=f_complex parameter; ts_key is：googlechrome.
+·FVP cui update to Beta 1.1.0.
+remove "no magic" mark from .bin; support alpha blending for 32 bit bmp; support type4 image format.
+·ARCGameEngine cui update to Alpha 0.9.6.
+support extracting the alpha.
+·DISTORTION cui update to Final 1.0.1.
+fix the conflict among cuis supporting .pac.
+·GameScripter cui update to Beta 1.0.2.
+fix the save mame truncation.
+·RealLive cui update to Alpha 0.7.4.
+fix the invalid nwa channels bug.
+·add ComicPlayer2 Final 1.0.0.
+·add KAAS cui Beta 0.9.0.
+·add BELLDA cui Beta 1.0.0.
+
+2009-2-17 20:28 Ver 0.4.13.0 痴漢公賊
+【crage】
+·Fix the bug of invalid save name for the unicode naming resource.
+·Fix the incorrect nested extraction.
+·Fix many bugs in crage while matching the name.
+【cui】
+·kirikiri2 cui update to Final 1.4.9.
+the twice decryption error for game=love; support alpha blending for 32 bit bmp
+·RealLive cui update to Alpha 0.7.3.
+supported .nwk format.
+·add ValkyrieComplex cui Beta 1.0.0。
+support game "ヴァルキリーコンプレックス 戦闘パート体験版 改".
+·RioShiina cui upgrades to Alpha 0.4.1.
+add nodec parameter.
+·System4 cui upgrades to Alpha 0.9.1.
+make 32 bits bmp alpha blending with white background.
+·ohgetsu cui upgrades to Beta 1.0.3.
+supported game "SilveryWhite ～君と出逢った理由～".
+·add AGS32i cui Final 1.0.0.
+·rename TeethingRing cui into GsWin, and upgrades to Alpha 1.1.0.
+support GsWin3 format.
+·add ZG-Engine cui Final 1.0.0.
+·Echeross cui upgrade to Final 1.0.1.
+Fix the crage crash if extracting from the unsupported resource.
+
+2009-2-11 22:29 Ver 0.4.12.2 痴漢公賊
+【locale】
+·fix the garbled character problem for Traditional Chinese OS.
+【cui】
+·add cui RioShiina Alpha 0.4.0.
+support the extraction for .WAR with the support WARC 1.2-1.6.
+·cui NScripter update to Final 1.2.0.
+support game "めっちゃママ"; need the parameter game=8 for extraction.
+·rename cui BSS to BSXX.
+·cui kirikiri2 update to Final 1.4.8.
+added game=chower2 decryption parameter.
+·add cui Lucifen Alpha 0.7.0。
+support game "俺たちに翼はない".
+·cui RPM ADV SYSTEM update to Final 1.1.1.
+priority to use code parameter.
+
+2009-1-29 21:20 Ver 0.4.12.1 痴漢公賊
+【tools】
+·add Majiro mask me ver 1.1.1.
+【language】
+·fix the garbled character problem for Traditional Chinese OS.
+【CrageGUI】
+·update to 1.0.7. It can automatically switch to the proper interface according the current locale setting.
+【locale】
+·add the locale interface to cui.
+【cui】
+·cui kirikiri2 update to stable 1.4.7.
+add cxdec parameter "lovelaby".
+suuport the game "フルハウスキス２～恋愛迷宮～".
+·add cui gbyFlagGame dev 0.7.0.
+·cui Luna update to stable 1.0.1.
+add the support for .p and .mus.
+·cui AIMS update to stable 1.0.0.
+move the support for .p and .mus to cui Luna because AIMS system essentially is based on Luna.
+·add cui usi stable 1.0.0.
+support game "さあ牛だ！体験版 VER 1.02".
+
+2009-1-25 16:59 Ver 0.4.12.0 痴漢公賊
+【crass】
+·add multi-language support; support Simplified/Traditional Chinese and English.
+【cui】
+·cui Majiro Script Engine update to stable 1.1.4.
+fix the bug leading to memory violation when extracting .rct with game parameter.
+support game "誰かのために出来ること ～Innocent Identity～ 体験版".
+
+2009-1-24 19:35 Ver 0.4.11.3 痴漢公賊
+【crage】
+·change start routine to _tmain()。
+【utility】
+·introduce the unicode version of get_options2().
+·re-implement bits operations.
+【cui】
+·cui ADVDX update to unstable 1.1.0.
+support the extraction for encrypted package .ads.
+support the extraction for the game "相姦遊戯2"。
+·cui Majiro Script Engine update to stable 1.1.3.
+add game parameter so as to allow non-jap and non-chn users to extract .rct, because they can't input ts_key parameter correctly.
+·change the name of cui Yuka to YukaScript. 
+·change the name of cui AVGSystem to QLIE. 
+·change the name of cui MINK to CScript. 
+·cui Xuse update to dev-ver 0.2.6.
+support game "輝光翼戦記 天空のユミナ".
+support the extraction for MikoArc，KOTORI and .wag.
+·cui MINK update to unstable 1.0.1.
+fix memory violation when uncompressing.
+·add cui SRSPlayer for stable 1.0.0.
+support game "東方冥異伝スラッシュバスター".
+·add cui pokoten2 for stable 1.0.0.
+support game "エロチックゴンドラ ナンバー2 ～恋の見習いウンディーネ～".
+·add cui FS3D for stable 1.0.0.
+·cui WindomXP update to stable 1.0.1.

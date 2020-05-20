@@ -1,0 +1,68 @@
+[en]
+1=OK
+2=Cancel
+
+-1=Flash export
+1011=Maximum size
+1022=Delay (seconds):
+1023=Filename:
+
+[en-str]
+
+
+[fr]
+1=OK
+2=Annuler
+
+-1=Crйation Flash
+1011=Taille maximum
+1022=Dйlai (secondes):
+1023=Nom de fichier:
+
+[fr-str]
+
+
+[de]
+1=OK
+2=Abbrechen
+
+-1=Flash-Export
+1011=Maximale GrцЯe
+1022=Verzцgerung [s]:
+1023=Dateiname:
+
+[de-str]
+
+
+[sv]
+1=OK
+2=Avbryt
+
+-1=Skapa Flash
+1011=Maximal storlek
+1022=Fцrdrцjning (sekunder):
+1023=Filnamn:
+
+[sv-str]
+
+[fi]
+1=OK
+2=Peruuta
+
+-1=Luo Flash
+1011=Enimmдiskoko
+1022=Viive (sekuntia):
+1023=Tiedostonimi:
+
+[fi-str]
+
+[ru]
+1=OK
+2=Отмена
+
+-1=Экспорт во Flash
+1011=Максималь. размер
+1022=Задержка (сек):
+1023=Имя файла:
+
+[ru-str]

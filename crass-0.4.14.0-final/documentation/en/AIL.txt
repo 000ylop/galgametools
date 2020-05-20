@@ -1,0 +1,19 @@
+﻿Name:		AIL
+Description:	アイル dedicated game system
+Archive:	.dat(no magic) .snl(weak magic) .anm(weak magic)
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.0.1
+Status:	        Beta
+
+【TODO】
+Analysis the detailed formats of extracted resource files from .anm.
+
+【Example】
+crage -p G:\setup.dat -u ail
+setup.dat: 准备提取封包文件（含3个资源文件） ...
+setup.dat：成功提取3 / 3个资源文件  -
+AIL：成功提取1个.dat封包文件
+
+【ChangeLog】
+2008-03-22 17:16 ver 1.0.1 fixed a error in extracting .ogg resource
+2007-11-23 00:43 ver 1.0.0 1st version released

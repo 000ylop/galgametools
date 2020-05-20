@@ -1,0 +1,50 @@
+﻿Name: 		MarbleEngine
+Description: 	system developed by マーブルソフト
+Archive: 	.mbl(weak magic)
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	0.8.1
+Status: 	Alpha
+
+【TODO】
+·Support decoding of WADY ADPCM sound resource files inside mg_se* archives. 
+·parse completely mg_anim format
+
+【Notice】
+·mg_mfX.mbl may be dummy file, please ignore its extraction error.
+·Inside mg_data.mbl are script files (.s). To decyrpt them, specify decrypt string through parameter dec_key. if extracting under japanese environment, please use string in parenthesis as dec_key's parameter
+
+- 永遠の終わりに
+eientamasoft
+- 人妻搾乳飯店
+恖嵢嶏擕斞揦-0630-2006（人妻搾乳飯店-0630-2006）
+- とらぶるサッキュバス 「ダーリン、今夜もい～っぱいえっちしちゃお」
+偲傜傇傞僒僢僉儏僶僗-0928-2007（とらぶるサッキュバス-0928-2007）
+- 風輪奸山「この身幾たび穢されようとも……」
+HIGONOKAMI
+- 触区 -学園妖触譚-
+you_ha_shock
+- 校内えっち 妹孕ませ特別授業
+absayuri070999
+- 嫁ぐるい～義父との秘密の関係～
+rui071099
+- 教え子の誘惑～家庭教師淫猥レッスン
+yumitan071199
+- 乱母～未亡人母の熟れた肉体～
+ranbo071299
+
+【EXAMPLE】
+Take game とらぶるサッキュバス 「ダーリン、今夜もい～っぱいえっちしちゃお」as an example：
+crage -p M:\MARINE\SUCCUBUS\mg_data.mbl -u marbleengine -O dec_key="偲傜傇傞僒僢僉儏僶僗-0928-2007"
+
+	mg_data.mbl: 准备提取封包文件（含881个资源文件） ...
+	mg_data.mbl：成功提取881 / 881个资源文件  |
+
+	MarbleEngine：成功提取1个.mbl封包文件
+if extracting under japanese environment, extraction command is as follows:
+crage -p M:\MARINE\SUCCUBUS\mg_data.mbl -u marbleengine -O dec_key="とらぶるサッキュバス-0928-2007"
+
+【ChangeLog】
+2008-06-11 23:36 ver 0.8.1 supported extracting simple mg_anim*.mbl format
+2007-10-01 00:58 ver 0.8.0 added zlib decompression mode; handled particularly for special mbl header
+2007-10-01 00:58 ver 0.7.0 fixed export mode of .S script; added special parameter using for decrypting different encrypted .S file
+2007-05-27 21:53 ver 0.6.0 1st version released

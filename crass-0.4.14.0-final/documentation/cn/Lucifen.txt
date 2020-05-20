@@ -1,0 +1,83 @@
+﻿名称：		Lucifen
+描述：		Lucifen Library
+封包：		.LPK .elg
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.8.0
+成熟度：	开发版
+
+【TODO】
+·支持老的Lucifen Library & Tools版本。
+·支持.lag资源的提取。
+
+【注意事项】
+·必须正确指定script或game参数才能提取.LPK；script参数意思是SCRIPT.LPK文件所在的路径；如果script参数无法提取，再使用game参数进行提取。
+·如果除了SCRIPT.LPK以外的其他LPK都无法提取，请上传SCRIPT.LPK以便痴漢公賊找到解密key。
+
+真説 猟奇の檻 第2章：指定game=sin_ryouki2提取
+
+【提取示例】
+·以游戏“ね～PON？×らいPON！”为例：
+crage -d "E:\Program Files\NaponLipon" -O script="E:\Program Files\NaponLipon\SCRIPT.LPK"
+
+BGM.LPK: 准备提取封包文件（含24个资源文件） ...
+BGM.LPK: 成功提取24 / 24 个资源文件 |
+
+CHR.LPK: 准备提取封包文件（含2149个资源文件） ...
+CHR.LPK: 成功提取2149 / 2149 个资源文件 /
+
+DATA.LPK: 准备提取封包文件（含1个资源文件） ...
+DATA.LPK: 成功提取1 / 1 个资源文件 /
+
+DESKTOP.LPK: 准备提取封包文件（含45个资源文件） ...
+DESKTOP.LPK: 成功提取45 / 45 个资源文件 /
+
+PIC.LPK: 准备提取封包文件（含440个资源文件） ...
+PIC.LPK: 成功提取440 / 440 个资源文件 |
+
+SCRIPT.LPK: 准备提取封包文件（含177个资源文件） ...
+SCRIPT.LPK: 成功提取177 / 177 个资源文件 /
+
+SE.LPK: 准备提取封包文件（含69个资源文件） ...
+SE.LPK: 成功提取69 / 69 个资源文件 /
+
+SYS.LPK: 准备提取封包文件（含867个资源文件） ...
+SYS.LPK: 成功提取867 / 867 个资源文件 \
+
+VOICE.LPK: 准备提取封包文件（含12457个资源文件） ...
+VOICE.LPK: 成功提取12457 / 12457 个资源文件 /
+
+Lucifen：成功提取9个.LPK封包文件
+
+·以游戏“真説 猟奇の檻 第2章 体験版”为例：
+crage -d "Q:\sin_ryouki2_trial\恀愢 椔婏偺烞 戞俀復 懱尡斉" -O game=sin_ryouki2
+
+BGM.LPK: 准备提取封包文件（含16个资源文件） ...
+BGM.LPK: 成功提取16 / 16 个资源文件 |
+
+CHR.LPK: 准备提取封包文件（含148个资源文件） ...
+CHR.LPK: 成功提取148 / 148 个资源文件 |
+
+DATA.LPK: 准备提取封包文件（含1个资源文件） ...
+DATA.LPK: 成功提取1 / 1 个资源文件 /
+
+PIC.LPK: 准备提取封包文件（含110个资源文件） ...
+PIC.LPK: 成功提取110 / 110 个资源文件 -
+
+SCRIPT.LPK: 准备提取封包文件（含305个资源文件） ...
+SCRIPT.LPK: 成功提取305 / 305 个资源文件 /
+
+SE.LPK: 准备提取封包文件（含43个资源文件） ...
+SE.LPK: 成功提取43 / 43 个资源文件 \
+
+SYS.LPK: 准备提取封包文件（含145个资源文件） ...
+SYS.LPK: 成功提取145 / 145 个资源文件 /
+
+VOICE.LPK: 准备提取封包文件（含3468个资源文件） ...
+VOICE.LPK: 成功提取3468 / 3468 个资源文件 |
+
+Lucifen：成功提取8个.LPK封包文件
+
+【ChangeLog】
+2009-04-30 22:49 ver 0.8.0 重新添加game参数用于提取
+2009-01-31 18:21 ver 0.7.0 加入script参数从而取代game参数，以便支持自动探测key的功能
+2009-01-31 15:11 ver 0.5.0 第一版发布

@@ -1,0 +1,48 @@
+﻿Name:		ym1n2
+Description:	
+Archive:	.bin .exe
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.0.0
+Status: 	Final
+
+【Notice】
+·when extracting must specify index file, index sc. game main program.
+
+【Sample】
+take game "夜勤雀棟 壱・弐 復刻版＋" for exsample:
+crage -p M:\yakinjongplus\archiv.bin -l M:\yakinjongplus\
+ym1n2.exe
+
+程序：  Crage - 使用cui插件扩展的通用游戏资源提取器
+作者：  痴漢公賊 (glanser@163.com)
+版本：  0.4.10.6
+日期：  2008-11-5 23:12
+发布：  https://www.yukict.com/bbs/thread-13007-1-1.html
+语法：
+        crage [[-d dir] | [-p package_file]]
+                [-h] [-I cui_name] [-i] [-l index_file]
+                [-n] [-o output_dir] [-r]
+                [-f res_name]
+
+
+初始化cui core ...
+GLib2_register_cui
+加载cui (165)
+
+初始化package core ...
+读取封包文件信息 (1)
+
+开始执行解包操作 ...
+
+archiv.bin: 准备提取封包文件（含503个资源文件） ...
+archiv.bin：成功提取503 / 503个资源文件  \
+
+ym1n2：成功提取1个.bin封包文件文件 /
+
+
+
+                                                        ... 解包操作执行完成
+
+
+【ChangeLog】
+2008-11-06 21:10 ver 1.0.0 1st version released

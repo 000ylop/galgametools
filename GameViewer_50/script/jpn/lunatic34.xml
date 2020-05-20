@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="Lunatic.grp" 0 />
+
+	<文件 文件名="Data\Character\Aa\*.til" 插件="0" />
+	<文件 文件名="Data\Character\Al\*.til" 插件="0" />
+	<文件 文件名="Data\Character\Ap\*.til" 插件="0" />
+	<文件 文件名="Data\Character\Ar\*.til" 插件="0" />
+	<文件 文件名="Data\Character\Ba\*.til" 插件="0" />
+	<文件 文件名="Data\Character\Bl\*.til" 插件="0" />
+	<文件 文件名="Data\Character\Bp\*.til" 插件="0" />
+	<文件 文件名="Data\Character\Br\*.til" 插件="0" />
+	<文件 文件名="Data\Character\Ca\*.til" 插件="0" />
+	<文件 文件名="Data\Character\Cl\*.til" 插件="0" />
+	<文件 文件名="Data\Character\Cp\*.til" 插件="0" />
+	<文件 文件名="Data\Character\Cr\*.til" 插件="0" />
+	<文件 文件名="Data\Character\Da\*.til" 插件="0" />
+	<文件 文件名="Data\Character\Dl\*.til" 插件="0" />
+	<文件 文件名="Data\Character\Dp\*.til" 插件="0" />
+	<文件 文件名="Data\Character\Dr\*.til" 插件="0" />
+	<文件 文件名="Data\Effect\*.til"       插件="0" />
+	<文件 文件名="Data\Map\Obj\Door\*.til" 插件="0" />
+	<文件 文件名="Data\Map\Obj\Trap\*.til" 插件="0" />
+	<文件 文件名="Data\Map\Til\Area\*.til" 插件="0" />
+	<文件 文件名="Data\Map\Til\Bld\*.til"  插件="0" />
+	<文件 文件名="Data\Monster\*.til"      插件="0" />
+	<文件 文件名="Data\Monster\Ex\*.til"   插件="0" />
+	<文件 文件名="Data\Range\*.til"        插件="0" />
+	<文件 文件名="Data\Shield\*.til"       插件="0" />
+	<文件 文件名="Data\Weapon\*.til"       插件="0" />
+
+	<文件 文件名="res\*.til" 插件="0" />
+	<文件 文件名="res\*.bmh" 插件="0" />
+	<文件 文件名="res\*.bmp"          />
+
+</游戏脚本>

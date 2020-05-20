@@ -1,0 +1,16 @@
+﻿Name: 		FS
+Description: 		
+Archive: 	.pd
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	4.0.0
+Status: 	Final
+
+【NOTICE】
+Source code download (FlyingShinePDFile-2.0.0.src.rar):
+http://www.wiiupload.net/fl/3d03a5adea
+MD5: b6b00edd8f26fb14a4d0cac7ab85d53d
+
+【ChangeLog】
+2007-11-17 15:12 ver 4.0.0 renamed to FS; supported another .pd format
+2007-06-01 11:21 ver 2.0.0 fixed a bug for judgment error due to unclearing zero off rear of magic field  
+2007-05-02 00:58 ver 1.0.0 1st version released

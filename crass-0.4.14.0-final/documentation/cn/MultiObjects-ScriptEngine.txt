@@ -1,0 +1,13 @@
+﻿名称：		MultiObjects-ScriptEngine
+描述：		Leaf开发的游戏系统
+封包：		.a .am
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.2.0
+成熟度：	开发版
+
+【TODO】
+·各种.px资源的提取。
+·.g资源的提取。
+
+【ChangeLog】
+2008-03-22 02:49 ver 0.2.0 第一版发布

@@ -1,0 +1,29 @@
+﻿crass软件包目录结构：
+
+crage.exe		游戏资源提取器主程序
+CrageGUI.exe		crage图形外壳程序
+acui_core.dll		aui和cui核心库
+io_request.dll		底层io处理库
+package_core.dll	封包文件核心库
+resource_core.dll	资源文件核心库
+utility.dll		辅助用函数库
+locale.dll		多语言支持库
+zlib1.dll		zlib压缩算法库
+libbz2.dll		bzip2压缩算法库
+libeay32.dll		openssl加密算法库
+README.txt		说明文档
+INSTALL.txt		安装和使用crass的说明信息
+FAQ.txt			常见问题解答
+NEWS.txt		最新的的更新信息
+HISTORY.txt		crass的更新历史记录
+COPYING.txt		版权和免责声明
+MANIFEST.txt		crass软件包的所有文件列表
+cui_info.txt		总结了所有cui插件的一般信息
+STAFFS.txt		crass工作组成员名单
+support_list*.txt	罗列了插件目前支持的游戏
+cui\			存放cui插件
+tools\			crass辅助工具集合
+documentation\		cui插件的说明信息
+language\		存放语言模块
+Crass图文提取教程 - 使用CrageGUI提取游戏.mht
+			教程文件

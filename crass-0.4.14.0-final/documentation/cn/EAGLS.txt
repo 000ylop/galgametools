@@ -1,0 +1,34 @@
+﻿名称：		EAGLS
+描述：		Tech-Arts开发的Enhanced Adventure Game Language System(EAGLS)
+封包：		.pak .idx
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.1.1
+成熟度：	测试版
+
+【注意事项】
+·提取时需要指定-l和-u参数。
+以游戏“遊撃警艦パトベセル ～こちら首都圏上空青空署～”为例：
+crage -p CGPACK.pak -l CGPACK.idx -u EAGLS
+·少部分游戏的CG和脚本需要使用game参数才能正确提取。
+双子姫乳×３：使用参数“game=TIKAN”提取
+へんし～ん！２：使用参数“game=hensin2”提取
+SixtyNine2：使用参数“game=ANEBOIN”提取
+姉とボイン：使用参数“game=ANEBOIN”提取
+お姉さん中出し痴漢列車：使用参数“game=TIKAN”提取
+うたうタンブリングダイス DVD-ROM版：使用参数“game=ALIS”提取
+Blue-Sky-Blue【s】－空を舞う翼－ DVD-ROM版：使用参数“game=ALIS”提取
+金曜日の仔猫：使用参数“game=ALIS”提取
+
+以游戏“お姉さん中出し痴漢列車”为例：
+crage -p CGPACK.pak -l CGPACK.idx -O game=TIKAN
+
+【ChangeLog】
+2009-07-21 17:00 ver 1.1.1 通过向压缩数据加入适当的填充而避免得到被截短的解压缩后的数据
+2009-03-07 13:01 ver 1.1.0 去除.pak的no magic标记
+2008-11-15 10:50 ver 1.0.6 支持旧版ALIS系统
+2008-08-26 20:50 ver 1.0.5 增加参数“game=hensin2”
+2008-08-11 20:04 ver 1.0.4 修正了解压大尺寸gr资源的解压错误的问题
+2008-06-24 19:00 ver 1.0.3 取消“sc_mode”参数， 增加“game”参数以支持特殊加密模式
+2008-06-24 16:50 ver 1.0.2 增加“sc_mode”参数以支持第二种cg加密模式。
+2008-03-31 10:31 ver 1.0.1 修正了保存bmp时存储长度错误的问题
+2008-03-30 15:26 ver 1.0.0 第一版发布

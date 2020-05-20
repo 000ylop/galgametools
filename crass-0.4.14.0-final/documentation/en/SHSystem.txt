@@ -1,0 +1,14 @@
+﻿Name:		SHSystem
+Description:		
+Archive:	.hxp
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.0.0
+Status:	        Beta
+
+【Notice】
+·some .hxp is video, can direcrly playback
+·some .tga can't be viewed with image preview of windows XP, must require image viewer
+
+【ChangeLog】
+2008-06-17 21:31 ver 1.0.1 supported special .tga
+2007-03-24 10:12 ver 1.0.0 1st version released

@@ -1,0 +1,65 @@
+﻿名称：		Csystem
+描述：		Cyberworks开发的游戏系统C,system
+封包：		(no magic).dat .00 .01 .02 .03. 04 .05 .06
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.3
+成熟度：	开发版
+
+【TODO】
+支持旧版本封包格式。
+
+【注意事项】
+·提取时必须执行"-u Csystem"、"-l"索引文件和"-O game"参数。
+·关于索引文件的选择
+通常游戏目录下，有Arc00.dat-Arc06.dat七个封包文件。
+其中Arc00.dat是单独的配置文件，没有什么特别有价值的信息，可以不理会。
+剩下的6个文件，Arc04.dat与Arc01.dat对应，Arc05.dat与Arc02.dat对应，Arc06.dat与Arc03.dat对应，
+其中前者是数据文件，后者是索引文件。
+·提取cg封包会出现大量的无后缀的垃圾数据，请自行删除。
+·关于game参数，需要为特定游戏指定特定的game参数(和游戏的exe同名)：
+
+なつドキ！ハーレム ～親せき宅での悩める受験勉強～：指定“game=Ndoki”参数
+蝶ノ夢 ～二人の蝶～：指定“game=tyouR”参数
+学校のヤラシイ怪談 ～こんな恥ずかしい除霊させないで！～：指定“game=GYK”参数
+恋妻びより ～由希乃さんは人妻管理人～：指定“game=koituma”参数
+保母さんといっしょっ！ ～双子とできるもん！～：指定“game=hobo”参数
+淫妖蟲 蝕 ～凌触島退魔録～：指定“game=inyou_shock”参数
+淫妖蟲 ～凌触学園退魔録～：指定“game=inyoutyu”参数
+快楽依存症：指定“game=kairaku”参数
+夢恋転生：指定“game=yumekoi”参数
+はなマルッ！2：指定“game=hanamaru2”参数
+義母の吐息～背徳心に漂う母の色香～：指定“game=gibo”参数
+蝶ノ夢：指定“game=tyou”参数
+はなマルッ！：指定“game=hanamaru”参数
+人妻♪かすみさん2 ～奥様・未亡人オーナーと共同性活～：指定“game=kasumi2”参数
+姫∽神1/2：指定“game=himekami”参数
+蠱惑の刻：指定“game=kowakunotoki”参数
+孕女 ～俺はこの学園で復讐を成しとげる～：指定“game=harame”参数
+痴漢衝動：指定“game=tikansyou”参数
+痴漢願望：指定“game=tikangan”参数
+ご奉仕★プリンセス：指定“game=princess”参数
+続・快楽依存症 ～その後の涼子さん～：指定“game=zoku_kairaku”参数
+イカレタ教室 ～こんなのが当り前の授業風景！？～：指定“game=ikareta”参数
+兄嫁はいじっぱり：指定“game=aniyomeiji”参数
+
+【提取示例】
+crage -u Csystem -p "Arc04.dat" -l "Arc01.dat" -O game=tikangan
+Arc04.dat: 准备提取封包文件（含64个资源文件） ...
+Arc04.dat：成功提取64 / 64个资源文件  |
+
+Csystem：成功提取1个.dat封包文件文件 /
+
+【ChangeLog】
+2009-06-20 13:01 ver 1.0.3 增加“game=Ndoki”参数
+2009-04-26 11:33 ver 1.0.2 增加“game=tyouR”参数
+2009-03-25 19:50 ver 1.0.1 取消alpha blending
+2009-03-17 20:23 ver 1.0.0 正确导出alpha通道；增加“game=GYK”参数
+2008-12-14 19:32 ver 0.9.9 对于24位+mask图进行自动合成
+2008-10-22 20:16 ver 0.9.8 增加“game=koituma”参数
+2008-09-19 21:53 ver 0.9.7 增加“game=inyou_shock”和“game=hobo”参数
+2008-08-25 19:36 ver 0.9.6 增加“game=inyoutyu”参数(感谢bmeio调试)
+2008-07-13 19:54 ver 0.9.4 修正了错误处理提取后资源的问题。
+2008-07-11 22:33 ver 0.9.3 增加“game=yumekoi”参数
+2008-06-27 00:11 ver 0.9.2 增加“game=gibo”参数
+2008-06-25 16:48 ver 0.9.1 修正了一个提取错误，感谢IamSM在除错过程中提供的帮助。
+2008-06-25 15:18 ver 0.9.0 第一版发布

@@ -1,0 +1,9 @@
+<Profile>
+  <Name>Transparent Blitting (Geometry)</Name>
+  <Setting>
+    <Match>(.+)h(?!00)\d{2}_(\d+)-(\d+)_\d+-\d+\.bmp</Match>
+    <Catch>$1h00.png</Catch>
+    <Merge>$1.bmp</Merge>
+    <Command>convert [Catch] [Match] -geometry +$2+$3 -transparent #00ff00 -composite +matte [Merge]</Command>
+  </Setting>
+</Profile>

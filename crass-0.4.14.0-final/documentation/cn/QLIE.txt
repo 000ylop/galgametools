@@ -1,0 +1,37 @@
+﻿名称：		QLIE
+描述：		由株式会社ワームスエンタテイメント开发的QLIE AVD GAME CREATE SYSTEM(http://qlie.net/)
+封包：		.pack .hash
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.8.3
+成熟度：	开发版
+
+【TODO】
+·解明hash索引段后面的hash_index_entries项的含意。
+·.b资源文件的提取。
+
+【注意事项】
+对于同时有.pack和.hash 2个封包的游戏来说，需要使用-p和-l参数分别指明（CrageGUI中分别对应“指定源文件”和“导入索引文件”）。
+
+【提取示例】
+·对于同时含有.pack和.hash 2个封包的：
+crage -p Q:\牝姫の虜体験版\GameData\data0.pack -l Q:\牝姫の虜体験版\GameData\data0.hash
+
+	data0.pack: 准备提取封包文件（含368个资源文件） ...
+	data0.pack：成功提取368 / 368个资源文件  \
+
+	AVGSystem：成功提取1个.pack封包文件
+
+·对于只含有.pack的封包的：
+crage -p Q:\KissyKissy体験版\GameData\data0.pack
+
+	data0.pack: 准备提取封包文件（含493个资源文件） ...
+	data0.pack：成功提取493 / 493个资源文件  
+
+	AVGSystem：成功提取1个.pack封包文件
+
+【ChangeLog】
+2008-12-13 15:44 ver 0.8.3 修正并兼容另一种FilePackVer1.0格式(感谢lighting协助)
+2008-08-14 22:36 ver 0.8.2 进一步修正提取FilePackVer1.0类型封包的错误的问题
+2008-05-20 16:47 ver 0.8.1 修正了提取FilePackVer1.0类型封包的错误
+2007-11-04 11:43 ver 0.8.0 支持.argb资源的提取；支持FilePackVer1.0提取
+2007-10-07 15:58 ver 0.7.0 第一版发布

@@ -1,0 +1,19 @@
+﻿Name:		Leaf
+Description:
+Archive:	.pak .ar1 .ar2 .cz2 .LAC .wmv
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	0.5.1
+Status:	        Alpha
+
+【TODO】
+·support extracting .px resource
+·support extracting .g resource
+·support extracting .cz1 resource
+·support extracting .bin resource
+·support extracting .apc video.
+
+【ChangeLog】
+2009-06-27 13:05 ver 0.5.2 support new KCAP archive format; support .BJR image
+2009-06-24 19:44 ver 0.5.1 fix the error while extracting from lag with palette
+2009-01-01 15:40 ver 0.5.0 supported extracting game "君が呼ぶ、メギドの丘で"
+2008-??-?? ??:?? ver 0.4.0 1st version released

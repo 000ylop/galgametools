@@ -1,0 +1,42 @@
+﻿2009-7-22 19:18 Ver 0.4.14.0 痴漢公賊
+【locale】
+·add japanese langauage support(thanks monster for translation).
+【JCrage】
+·a new GUI interface basing on java.
+【package_core】
+·support double suffixes for matching.
+【cui】
+·add cui kagura Beta 1.0.0.
+·cui NEKOPACK is renamed as NekoBoard, and update to Beta 1.1.2.
+decrypt the last byte to avoid the failure of crc checking for png file.
+·cui EAGLS updates to Beta 1.1.1.
+avoid to get truncated decompressed data though adding the proper padding for compressed data.
+·cui FORIS updates to Final 1.0.2.
+support .GPK.*.
+·cui ARCG updates to Alpha 0.9.6.
+fix the error while extracting from .bmx.
+·add cui TonyAlbum Final 1.0.0.
+·cui ACTGS updates to Beta 1.1.0.
+remove "no magic" flag; support old archive format.
+·cui Xuse updates to Alpha 0.2.9.
+fix the absolute path in 4ag again.
+·cui ZG-Engine updates to Final 1.0.1.
+support .bmp; fix the matching pattern for .wav.
+·cui kirikiri2 updates to Final 1.5.4.
+check out index length to avoid the failure extraction due to zeroed index length.
+·cui Majiro Script Engine updates to Final 1.2.1.
+enhance searching arithmetic for ts_key.
+·add cui SoW Alpha 0.9.0.
+·add cui DXArchive Beta 1.0.0.
+·cui NekoSDK updates to Beta 1.0.6.
+avoid allocating huge memory due to matching for the old .dat format.
+·cui AdvTry updates to Final 1.1.1.
+optimize heuristic algorithm to speed up guessing; avoid allocating huge memory.
+·cui YU-RIS updates to Alpha 1.0.0.
+use suffix identifier '.' to find the decryption key for resource name.
+·cui DXArchive updates to Beta 1.0.1.
+support the game "明日はきっと、晴れますように -She said so，and prayed to cloudy skies.-".
+·cui NeXAS updates to Beta 1.0.1.
+accurately matching for pac archive.
+·cui NekoBoard updates to Beta 1.1.3.
+avoid using mismatched method to extract archive.

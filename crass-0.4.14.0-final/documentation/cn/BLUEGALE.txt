@@ -1,0 +1,38 @@
+﻿名称：		BLUEGALE
+描述：		
+封包：		.zbm .bdt（no magic型） .inx（索引文件） .snn（no magic型）
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.0
+成熟度：	正式版
+
+【注意事项】
+·开放源代码。
+·要提取.snn文件需要使用-l参数指定.inx索引文件才行。
+
+【.zbm封包文件说明】
+    实际类型是无目录的封包文件。
+    元数据是bmp。
+
+	首部：
+		s8 magic[4];	// "amp_"
+		u16 version;	// 1
+		u32 uncomprlen;	// 解压后的数据长度
+		u32 data_offset;// 压缩数据的偏移值
+	数据：
+		lz变体压缩的数据。
+
+【.bdt封包文件说明】
+    数据取反即可。
+
+【.inx索引文件说明】
+    .snn数据文件的索引文件。
+
+	首部：
+		u32 index_entries;	// 资源文件数
+	索引段：
+		s8 name[64];		// 资源名称
+		u32 offset;		// 资源文件偏移（从首部算起）
+		u32 length;		// 资源文件长度
+
+【ChangeLog】
+2007-5-23 21:20	ver 1.0.0 第一版发布

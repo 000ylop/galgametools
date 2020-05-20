@@ -1,0 +1,9 @@
+﻿名称：		ADV+++
+描述：		Professional Adventure-Game System by YOX-Project（http://www.yox-project.com/）
+封包：		.dat
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.0
+成熟度：	测试版
+
+【ChangeLog】
+2008-02-03 01:25 ver 1.0.0 第一版发布

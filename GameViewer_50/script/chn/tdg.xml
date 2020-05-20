@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="tdg.upk" 0 />
+	<插件 文件名="SF2.grp" 1 />
+
+	<文件 文件名="multimedia\*.dat"         插件="0" />
+	<文件 文件名="multimedia\chs\*.dat"     插件="0" />
+	<文件 文件名="multimedia\cht\*.dat"     插件="0" />
+	<文件 文件名="multimedia\fight\*.dat"   插件="0" />
+	<文件 文件名="multimedia\map\*.dat"     插件="0" />
+	<文件 文件名="multimedia\map\Dat\*.dat" 插件="0" />
+	<文件 文件名="multimedia\Music\*.dat"   插件="0" />
+	<文件 文件名="multimedia\Sys\*.dat"     插件="0" />
+
+	<文件 文件名="*.SF2"                        插件="1" />
+	<文件 文件名="multimedia\chs\itf\*.SF2"     插件="1" />
+	<文件 文件名="multimedia\chs\menus\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\cht\menus\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\fight\att\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\fight\Audio\*.SF2" 插件="1" />
+	<文件 文件名="multimedia\fight\bak\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\fight\def\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\fight\eff\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\fight\flr\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\fight\hit\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\fight\itf\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\fight\mag\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\fight\mis\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\fight\mouse\*.SF2" 插件="1" />
+	<文件 文件名="multimedia\fight\mov\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\fight\Other\*.SF2" 插件="1" />
+	<文件 文件名="multimedia\fight\rec\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\fight\red\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\fight\sho\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\fight\stn\*.SF2"   插件="1" />
+
+	<文件 文件名="multimedia\map\Mp0608\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\map\mp0905\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\map\mp1006c\*.SF2"  插件="1" />
+	<文件 文件名="multimedia\map\mp1009g\*.SF2"  插件="1" />
+	<文件 文件名="multimedia\map\mp1015a\*.SF2"  插件="1" />
+	<文件 文件名="multimedia\map\mp1304\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\map\mp1405\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\map\mp2402\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\map\mp2403a\*.SF2"  插件="1" />
+	<文件 文件名="multimedia\map\mp2403b1\*.SF2" 插件="1" />
+	<文件 文件名="multimedia\map\mp2403b2\*.SF2" 插件="1" />
+	<文件 文件名="multimedia\map\mp2403c1\*.SF2" 插件="1" />
+	<文件 文件名="multimedia\map\mp2403c2\*.SF2" 插件="1" />
+	<文件 文件名="multimedia\map\mp2403c3\*.SF2" 插件="1" />
+	<文件 文件名="multimedia\map\mp2403c4\*.SF2" 插件="1" />
+	<文件 文件名="multimedia\map\mp2403c5\*.SF2" 插件="1" />
+	<文件 文件名="multimedia\map\mp2404\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\map\mp2406\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\map\mp2407\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\map\mp2407b\*.SF2"  插件="1" />
+	<文件 文件名="multimedia\map\mp2407c1\*.SF2" 插件="1" />
+	<文件 文件名="multimedia\map\mp2409a3\*.SF2" 插件="1" />
+	<文件 文件名="multimedia\map\mp2409d1\*.SF2" 插件="1" />
+	<文件 文件名="multimedia\map\mp2409J\*.SF2"  插件="1" />
+	<文件 文件名="multimedia\map\mp2409l1\*.SF2" 插件="1" />
+	<文件 文件名="multimedia\map\mp2410a\*.SF2"  插件="1" />
+	<文件 文件名="multimedia\map\mp2411b\*.SF2"  插件="1" />
+	<文件 文件名="multimedia\map\mp2412\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\map\mp2412a\*.SF2"  插件="1" />
+	<文件 文件名="multimedia\map\Mp2501a\*.SF2"  插件="1" />
+	<文件 文件名="multimedia\map\Mp2506\*.SF2"   插件="1" />
+	<文件 文件名="multimedia\map\Mp4001\*.SF2"   插件="1" />
+
+	<文件 文件名="multimedia\menus\*.SF2" 插件="1" />
+
+</游戏脚本>

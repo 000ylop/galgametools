@@ -1,0 +1,10 @@
+﻿Name:		ScenePlayer
+Description:		
+Archive:	.Pmx(weak magic) .PMP(weak magic) .PMA(weak magic)
+Author:		痴漢公賊(glanser@163.com)
+Version:	0.9.1
+Status:	 	Beta
+
+【ChangeLog】
+2008-09-07 10:49 ver 0.9.1 applied automatic detection about resource decompression length
+2008-09-05 22:03 ver 0.9.0 1st version released

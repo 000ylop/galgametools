@@ -1,0 +1,290 @@
+/*
+	超簡易ムービープレーヤ
+*/
+
+class MoviePlayerWindow extends Window
+{
+	var controlLayer; // コントロールレイヤ
+	var video; // VideoOverlay オブジェクト
+	var videoLayer; // ビデオを表示させるレイヤ
+	var layeredIndicatorLayer; // レイヤ再生中であることを示すレイヤ
+
+	var videoStatus = "unload"; // ビデオの状態
+
+	function MoviePlayerWindow()
+	{
+		// コンストラクタ
+		super.Window(...);
+
+		// ウィンドウの外観を設定
+		borderStyle = bsSingle;
+		innerSunken = false;
+		caption = System.title = "簡易ムービープレーヤ";
+
+		// メニューを初期化
+		menu.add(this.fileMenu = new MenuItem(this, "ファイル(&F)"));
+		fileMenu.add(this.openMenuItem = new CommandMenuItem(this, "開く(&O) ...", openFile));
+		fileMenu.add(new MenuItem(this, "-"));
+		fileMenu.add(this.exitMenuItem = new CommandMenuItem(this, "終了(&X)", close));
+		menu.add(this.playMenu = new MenuItem(this, "再生(&P)"));
+		playMenu.add(this.playMenuItem = new CommandMenuItem(this, "再生(&P)", play));
+		playMenu.add(this.pauseMenuItem = new CommandMenuItem(this, "一時停止(&H)", pause));
+		playMenu.add(this.stopMenuItem = new CommandMenuItem(this, "停止(&S)", stop));
+		playMenu.add(new MenuItem(this, "-"));
+		playMenu.add(this.playOverlayMenuItem = new CommandMenuItem(this, "オーバーレイ再生(&O)", playOverlay));
+		playOverlayMenuItem.radio = true;
+		playMenu.add(this.playLayeredMenuItem = new CommandMenuItem(this, "レイヤ再生(&L)", playLayered));
+		playLayeredMenuItem.radio = true;
+		playOverlayMenuItem.group = playLayeredMenuItem.group = 1;
+
+		menu.visible = true;
+
+		// primaryLayer を作成
+		add(new Layer(this, null));
+
+		// コントロール用レイヤを作成
+		add(controlLayer = new ControlLayer(this, primaryLayer));
+
+		// ビデオを表示させるレイヤを作成
+		add(videoLayer = new Layer(this, primaryLayer));
+		with(videoLayer)
+		{
+			.visible = false;
+			.type = ltOpaque; // 完全不透明
+			.name = "ビデオ表示用レイヤ";
+		}
+
+		// レイヤ再生中であることを示すレイヤを作成
+		add(layeredIndicatorLayer = new Layer(this, videoLayer));
+		with(layeredIndicatorLayer)
+		{
+			var text = "レイヤでムービーを再生中";
+			var bw = 4;
+			var bl = 9012;
+			.font.height = 20;
+			var tw = .font.getTextWidth(text);
+			var th = .font.getTextHeight(text);
+			.setImageSize(tw + bw*2, th + bw*2);
+			.drawText(bw, bw, text, 0, 256, true, bl, 0xffffff, bw, 0, 0);
+			.colorRect(0, 0, .imageWidth, .imageHeight, 0, -128); // 全体を半透明にする
+			.setSizeToImageSize();
+			.visible = true;
+		}
+
+		// VideoOverlay オブジェクトを作成
+		add(video = new VideoOverlay(this));
+		playOverlay(); // 最初はオーバーレイ再生で
+
+		// ウィンドウサイズを調整
+		adjustWindowSize();
+
+		// 表示状態に
+		visible = true;
+	}
+
+	function finalize()
+	{
+		// finalize メソッド
+		super.finalize(...);
+	}
+
+	function adjustWindowSize()
+	{
+		// ウィンドウサイズをムービーのサイズに合わせて調整する
+		var ww, wh;
+		if(videoStatus == 'unload')
+		{
+			// まだムービーがロードされていない場合は
+			ww = 320;
+			wh = 240;
+		}
+		else
+		{
+			// ムービーがロードされている場合は
+			ww = video.originalWidth; // ビデオの横幅
+			wh = video.originalHeight; // ビデオの縦幅
+		}
+
+		var cw = controlLayer.width; // コントロールレイヤの縦幅
+		var ch = controlLayer.height; // コントロールレイヤの横幅
+
+		// 横幅は コントロールレイヤとビデオのどちらか大きい方
+		// 縦幅は コントロールレイヤとビデオを合わせた値
+		var w = ww>cw?ww:cw;
+		var h = wh + ch;
+
+		// クライアントサイズを設定
+		setInnerSize(w, h);
+
+		// ビデオの左上の位置を決定
+		// クライアントサイズはプログラムで指定した値にならない場合
+		// (ウィンドウのサイズが小さすぎるときや大きすぎるとき)
+		// があるので再取得する。ウィンドウのサイズが大きすぎる
+		// 場合はここでは考えない。
+		w = innerWidth;
+		h = innerHeight;
+
+		video.left = (w - ww) \ 2;
+		video.top = (h - ch - wh) \ 2 + ch;
+
+		// プライマリレイヤのサイズ調整と塗りつぶし
+		with(primaryLayer)
+		{
+			.setImageSize(w, h);
+			.setSizeToImageSize();
+			.fillRect(0, 0, w, h, System.toActualColor(clBtnFace));
+		}
+	}
+
+	function open(fn)
+	{
+		// fn で示されたムービーを開く
+		try
+		{
+			video.open(fn);
+		}
+		catch(e)
+		{
+			Debug.message("ファイル       : %s".sprintf(fn));
+			Debug.startLogToFile();
+			Debug.message(e.message);
+			System.inform("エラーが発生しました。\n"
+				"*.console.log を dee@kikyou.info まで送ってください。\n" +
+					e.message);
+			return;
+		}
+		adjustWindowSize();
+		video.visible = true;
+		if(video.mode == vomOverlay)
+		{
+			// オーバーレイモードの時はビデオ表示領域のサイズを
+			// 指定
+			video.setSize(video.originalWidth, video.originalHeight);
+		}
+
+		// 各種情報を コンソールに一応出力
+		Debug.message("ファイル       : %s".sprintf(fn));
+		Debug.message("ビデオサイズ   : %d x %d".sprintf(
+			video.originalWidth, video.originalHeight));
+		Debug.message("フレームレート : %f fps".sprintf(
+			video.fps));
+		Debug.message("総フレーム数   : %d".sprintf(
+			video.numberOfFrame));
+		Debug.message("総時間         : %d:%02d.%03d (%d ms)".sprintf(
+			video.totalTime \ 1000 \ 60,
+			video.totalTime \ 1000 % 60, video.totalTime % 1000,
+			video.totalTime));
+
+		// 再生開始
+		video.play();
+	}
+
+	function openFile(fn)
+	{
+		// ファイルオープンダイアログを開き、ムービーを開く
+		var params = %[
+			filter : [ "MPEGストリーム(*.mpg;*.mpeg;*.mpv)|*.mpg;*.mpeg;*.mpv" ],
+			filterIndex : 1,
+			name : "",
+			title : "ファイルを開く",
+			save : false,
+			];
+		if(Storages.selectFile(params))
+			open(params.name);
+	}
+
+	function play()
+	{
+		// 再生を開始する
+		if(videoStatus != 'unload')
+		{
+			if(video.mode == vomLayer)
+				videoLayer.visible = true;
+			else
+				video.visible = true;
+			video.play();
+		}
+	}
+
+	function pause()
+	{
+		// 一時停止する
+		video.pause();
+	}
+
+	function stop()
+	{
+		// 停止する
+		video.stop();
+		video.rewind();
+	}
+
+	function playLayered()
+	{
+		// レイヤ再生に切り替える
+		video.stop(); // 再生は停止する
+		video.close(); // クローズもする
+
+		video.mode = vomLayer;
+		video.layer1 = videoLayer;
+		playLayeredMenuItem.checked = true;
+	}
+
+	function playOverlay()
+	{
+		// オーバーレイ再生に切り替える
+		video.stop(); // 再生は停止する
+		video.close(); // クローズもする
+
+		video.mode = vomOverlay;
+		videoLayer.visible = false;
+		playOverlayMenuItem.checked = true;
+	}
+
+	function action(ev)
+	{
+		// イベント集約ハンドラ
+		var type = ev.type;
+		var target = ev.target;
+		switch(target)
+		{
+		case video:
+			if(type == 'onStatusChanged')
+			{
+				// video のステータスが変わった
+				Debug.message("ステータス: " + ev.status);
+				if(videoStatus == "play" && ev.status == "stop")
+				{
+					// 再生状態から停止状態への移行
+					video.rewind(); // 巻き戻す
+				}
+				videoStatus = ev.status;
+				controlLayer.displayStatus(videoStatus);
+			}
+			else if(type == 'onPeriod')
+			{
+				// period イベントが発生した
+				var txt = "onPeriod: ";
+				switch(ev.reason)
+				{
+				case perLoop:   txt  += "loop";    break;
+				case perPeriod: txt  += "period";  break;
+				case perPrepare: txt += "prepare"; break;
+				}
+				Debug.message(txt);
+			}
+			break;
+		}
+	}
+
+	function onFileDrop(list)
+	{
+		// ファイルがウィンドウにドロップされたとき
+		super.onFileDrop(...);
+		open(list[0]);
+	}
+
+}
+
+
+

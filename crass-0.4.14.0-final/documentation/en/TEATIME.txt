@@ -1,0 +1,14 @@
+﻿Name:		TEATIME
+Description:		
+Archive:	.bmp .wav .ODF .TEA(weak magic) .txt(no magic) .pak(no magic) .ODA
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.0.4
+Status: 	Beta
+
+【Notice】
+when extracting.txt and .pak must specify -u parameter to extract
+
+【ChangeLog】
+2009-06-27 13:43 ver 1.0.4 support encrypted .ODA
+2008-05-04 13:42 ver 1.0.2 supported extracting encrypted .tga file
+2008-04-03 11:56 ver 1.0.1 1st version released

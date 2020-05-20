@@ -1,0 +1,14 @@
+﻿Name:		SystemC.
+Description:	system developed by INTERHEART
+Archive:	.fpk
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.1.3
+Status:	        Beta
+
+【ChangeLog】
+2009-05-30 10:37 ver 1.1.3 remove "no magic" flag from cui attribute
+2009-05-01 12:39 ver 1.1.2 calculate the index entry length in heuristic way
+2008-06-28 10:33 ver 1.1.1 supported RLE0 resource format
+2008-04-24 11:38 ver 1.1.0 supported new fpk format(つよきす2学期)
+2008-04-02 11:41 ver 1.0.1 removed extracting dump file(DM1.FPK)
+2007-09-21 23:17 ver 1.0.0 1st version released

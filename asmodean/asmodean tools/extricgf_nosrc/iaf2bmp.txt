@@ -1,0 +1,9 @@
+// iaf2bmp.cpp, v1.01 2007/03/31
+// coded by asmodean
+
+// contact: 
+//   web:   http://asmodean.reverse.net
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+
+// This tool decompresses Delta/Triangle's IAF images

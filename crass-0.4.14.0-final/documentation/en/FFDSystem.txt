@@ -1,0 +1,35 @@
+﻿Name:		FFDSystem
+Description:	FLOATING FRAME DIRECTOR
+Archive:	.dat
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.0.4
+Status:	        Beta
+
+【TODO】
+support batch extracting version 5 archive 
+
+【Notice】
+·code0, code1, code2, code3 parameter 
+if wanted extracted game isn't in "support_list", it's required to specify 4 parameters for properly decrypting archive.
+·name parameter 
+about version 5 and above dat archive, it must be required to specify wanted resource name for properly extracting, otherwise only using force crack mode to extract.
+·crack parameter 
+about version 5 and above dat archive, if resource name isn't specified, please specify parameter to force crack(very slow).
+about version 4 dat archive, saved resource is named after meaningful denomination, instead of pointless md5.
+
+【Sample】
+·specify name parameter to extract:
+crage -p "G:\program files\Littlewitch\ロマネスク\System.dat" -O name=font.def
+font.def: extract OK
+·specify crack parameter to force extract:
+crage -p "G:\program files\Littlewitch\ロマネスク\System.dat" -O crack
+·specify codeX parameter to extract:
+give an example of ピリオド(extract font.def resource):
+crage -p c:\System.dat -O name=font.def,code0=0xDED5A4D1,code1=0xFA871AB2,code2=0x8128CFA5,code3=0xFA871AB2
+
+【ChangeLog】
+2008-06-24 14:50 ver 1.0.4 added extraction about ver3 archive; fixed a error in extracting ver4 archive
+2008-04-30 22:30 ver 1.0.3 modified extraction method about ver5; added "少女魔法学リトルウィッチロマネスク editio perfecta" decryption code
+2008-03-10 10:35 ver 1.0.2 modified decryption parameter about ver2; added 白詰草話番外編's and 少女魔法学 リトルウィッチロマネスク特別企画番外編's decryption code
+2007-12-20 22:11 ver 1.0.1 added ピリオド's decryption code(no longer with specifing codeX parameter so as example)
+2007-12-17 21:22 ver 1.0.0 1st version released

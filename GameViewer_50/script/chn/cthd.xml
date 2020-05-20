@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="RAYS.dll" 接口名="MDA" 0 />
+	<插件 文件名="RAYS.dll" 接口名="CAK" 1 />
+	<插件 文件名="RAYS.dll" 接口名="IMG" 2 />
+
+	<文件 文件名="ani\*.mda"                       插件="0" />
+	<文件 文件名="cg\*.mda"                        插件="0" />
+	<文件 文件名="efc\*.mda"                       插件="0" />
+	<文件 文件名="fightmap\*.map"                  插件="0" />
+	<文件 文件名="fightnpc\*.mda"                  插件="0" />
+	<文件 文件名="Map\*.map"                       插件="0" />
+	<文件 文件名="mda\*.mda"                       插件="0" />
+	<文件 文件名="mda\*.cak"                       插件="1" />
+	<文件 文件名="npc\*.mda"                       插件="0" />
+	<文件 文件名="npccg\*.mda"                     插件="0" />
+	<文件 文件名="object\*.mda"                    插件="0" />
+	<文件 文件名="smallgames\hew\*.cak"            插件="1" />
+	<文件 文件名="smallgames\point\*.cak"          插件="1" />
+	<文件 文件名="smallgames\recovery\*.cak"       插件="1" />
+	<文件 文件名="smallgames\sidestep\*.cak"       插件="1" />
+	<文件 文件名="smallgames\weight lifting\*.cak" 插件="1" />
+	<文件 文件名="smallgames\za-zen\*.cak"         插件="1" />
+
+</游戏脚本>

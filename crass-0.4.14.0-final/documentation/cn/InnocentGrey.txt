@@ -1,0 +1,33 @@
+﻿名称：		InnocentGrey
+描述：		Innocent Grey的游戏系统(http://www.gungnir.co.jp/innocentgrey/)
+封包：		.dat .d .s(weak magic)
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.9.3
+成熟度：	开发版
+
+【TODO】
+完全解明mode字段。
+
+【.dat封包文件说明】
+    实际类型是有目录的封包资源文件。
+    元数据根据实际用途，是bmp、ogg、s（二进制脚本）等。
+    
+    	首部：
+		s8 magic[8];		// "PACKDAT."
+		u32 index_entries0;	// 资源文件数（不使用）
+		u32 index_entries;	// 资源文件数	
+	索引段：
+		s8 name[32];		// 资源文件名
+		u32 offset;		// 资源文件数据偏移（从文件头算起）
+		u32 mode;		// 低24位中有位置1表示需要解密；否则是明文数据
+		u32 uncomprlen;		// 解密后的数据长度
+		u32 comprlen;		// 资源文件数据长度
+	数据：
+		紧接在索引段之后。
+		如果资源文件是.s二进制脚本，则需要字节数据取反。
+
+【ChangeLog】
+2008-07-30 10:18 ver 0.9.3 支持垃圾文件.d的提取 - -!!
+2008-05-15 10:47 ver 0.9.2 支持.s文件的提取
+2008-05-04 11:55 ver 0.9.1 支持模式0x10000的解密
+2007-04-17 21:21 ver 0.9.0 第一版发布

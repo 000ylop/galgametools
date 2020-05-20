@@ -1,0 +1,76 @@
+/* Page */
+body{
+margin:1em 2% 1.5em 2%;
+color:#555;
+background:#ccc;
+font-size:80%;
+}
+body,h1,td{
+font-family:verdana,helvetica,arial,sans-serif;
+}
+div#please_hover{
+margin:0 0 0.75em 0;
+padding:0;
+font-style:italic;
+}
+div.center{
+width:auto;
+margin:0 auto 0 auto;
+text-align:center;
+}
+div.footer{
+margin:2em 0 0 0;
+font-style:italic;
+}
+h1{
+margin:0 0 0.25em 0;
+color:#fff;
+font-weight:bold;
+font-size:200%;
+}
+/*html{
+overflow:scroll;
+}*/
+img{
+border:none;
+}
+/* Gallery */
+#gallery{
+margin:0 auto -1px auto;
+border:1px solid #999;
+background:#eee;
+}
+#gallery hr{
+border:0;
+border-bottom:1px solid #999;
+}
+/*#gallery tr:first-child td{
+padding:10px 10px 0 10px;
+}*/
+#gallery td{
+padding:10px 10px 0 10px;
+}
+#gallery tr:last-child td{
+padding:0 10px 10px 10px;
+}
+/*landscape*/
+#gallery td img{
+width:160px;
+height:120px;
+}
+/*portrait
+#gallery td img{
+width:120px;
+height:160px;
+}*/
+#gallery td a{
+outline: none;
+}
+#gallery td a:active img, #gallery td a:focus img {
+width:auto;
+height:auto;
+border:2px solid #999;
+}
+#gallery tr:last-child hr{
+display:none;
+}

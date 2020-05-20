@@ -1,0 +1,15 @@
+﻿Name:		System4
+Description:	AliceSoft System4.0
+Archive:	.ald .ain(weak magic) .AJP .bgi(weak magic) .alk
+Author:		痴漢公賊 (glanser@163.com)
+Version:	0.9.1
+Status:	        Alpha
+
+【TODO】
+·support extracting type PM image
+·it seems hard to transform ajp directly form ald
+
+【ChangeLog】
+2009-02-14 19:57 ver 0.9.1 added alpha blending with 32-bit bmp and white background
+2008-10-03 09:56 ver 0.9.0 supported extracting .alk resource
+2008-08-15 19:28 ver 0.8.0 1st version released

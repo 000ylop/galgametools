@@ -1,0 +1,7 @@
+mkdir -p objs
+$CELL_SDK/host-win32/ppu/bin/ppu-lv2-g++ -c -g -O2 -std=c++98 -Wp,-MMD,objs/decrsdat.ppu.d,-MT,objs/decrsdat.ppu.o -o objs/decrsdat.ppu.o decrsdat.cpp
+$CELL_SDK/host-win32/ppu/bin/ppu-lv2-g++ objs/decrsdat.ppu.o -lgcm_cmd -lgcm_sys_stub -lio_stub -lsysmodule_stub -lfs_stub -o decrsdat.elf
+$CELL_SDK/host-win32/ppu/bin/ppu-lv2-strip -s decrsdat.elf -o objs/decrsdat.elf
+$CELL_SDK/host-win32/bin/make_fself.exe objs/decrsdat.elf EBOOT.BIN
+$CELL_SDK/host-win32/bin/make_fself_npdrm.exe objs/decrsdat.elf PS3_GAME/USRDIR/EBOOT.BIN
+$CELL_SDK/host-win32/bin/make_package_npdrm.exe decrsdat.conf PS3_GAME/

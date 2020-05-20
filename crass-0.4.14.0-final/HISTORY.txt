@@ -1,0 +1,1125 @@
+﻿2009-6-27 15:31 Ver 0.4.13.14 痴漢公賊
+【Majiro_mask_me】
+·升级为1.1.4，修正带delta合成的错误。
+【cui】
+·插件N2System升级为正式版1.0.5。
+加入参数“game=Smgsp”，支持“スマガスペシャル”的提取。
+·插件TEATIME升级为测试版1.0.4。
+支持对加密的.ODA文件的提取。
+·插件Leaf升级为开发版0.5.2。
+修正提取带palette的lag时产生的错误；支持新的KCAP封包的提取；支持.BJR图像的提取。
+·插件NekoSDK升级为测试版1.0.5。
+使用更严格的方式对旧的.dat格式进行匹配，避免误提取。
+·插件SLGSystemto升级为测试版1.0.3。
+修正提取.alb文件时发生的错误；正确导出jpg图像。
+·插件Majiro Script Engine升级为正式版1.2.0。
+加入scenario参数，用于直接提取加密rct文件因而取代game和ts_key参数。
+·插件SOFTPAL ADV SYSTEM升级为开发版1.3.2。
+支持新.pac封包格式。
+
+2009-6-21 21:28 Ver 0.4.13.13 痴漢公賊
+【cui source】
+·发布cui源码包1.0.4。
+【cui】
+·插件ExHIBIT升级为开发版0.3.0。
+支持新的gyu压缩模式。
+·插件NitroPlus升级为正式版1.0.3。
+支持ver1的pak封包。
+·插件NScripter升级为正式版1.2.1。
+支持游戏“新妻×義母 ～花嫁は女子校生～”。
+·移除插件Illusion和ClassicalMoon。
+·插件Csystem升级为开发版1.0.3。
+增加“game=Ndoki”参数，支持游戏“なつドキ！ハーレム ～親せき宅での悩める受験勉強～ 体験版”。
+·插件kirikiri2升级为正式版1.5.3。
+修正cxdec解密算法的bug；加入cxdec=kurenai解密参数，支持游戏“クレナイノツキ 体験版”。
+·插件SystemNNN升级为测试版1.2.1。
+正确处理负高度mask图。
+·插件CaramelBox升级为开发版0.8.1。
+支持.ar3。
+·插件AFS升级为开发版0.5.1。
+支持.pak。
+·插件ADVSystem升级为开发版1.0.1。
+过滤FANI和CANI资源以避免提取错误。
+·插件DAC升级为开发版0.8.1。
+支持游戏“淫暴の惑星 ～破壊と欲望の衝動～”；使用game=anti提取。
+·插件YU-RIS升级为开发版0.9.9。
+支持exe yser提取；支持游戏“催眠羞恥露出”。
+
+2009-6-12 20:05 Ver 0.4.13.12 痴漢公賊
+【CrageGUI】
+·过滤掉用户输入的引号。
+【cui】
+·插件NekoSDK升级为测试版1.0.4。
+支持旧.dat格式的提取。
+·插件SLGSystem升级为测试版1.0.2。
+支持.SPD资源的提取。
+·加入插件DAC开发版0.8.0。
+支持游戏“虜囚 -RYOSYU-”；使用game=ingoku参数提取。
+·加入插件A98SYS ENGINE开发版0.8.0。
+支持游戏“DISCIPLINE LS”。
+·插件FORIS升级为测试版1.0.1。
+支持游戏“School Days”。
+
+2009-6-1 16:57 Ver 0.4.13.11 痴漢公賊
+【language】
+·修正不能在繁体系统上显示繁体中文的问题。
+【cui】
+·插件MalieSystem升级为测试版3.1.0。
+支持游戏“どんちゃんがきゅ～ 体験版兼製品版”，“どんちゃんがきゅ～ パッケージ版”以及“タペストリー -you will meet yourself-”；修正了因不正确的对齐问题导致错误查找内嵌加密LIBU首部的问题。
+·插件MOONHIR升级为测试版1.0.3。
+支持游戏“家族愛 ～お母さんと姉さんはボクの物～”。
+·插件MalieSystem升级为测试版3.1.0。
+支持游戏“どんちゃんがきゅ～ 体験版兼製品版”，“どんちゃんがきゅ～ パッケージ版”以及“タペストリー -you will meet yourself-”；修正了因不正确的对齐问题导致错误查找内嵌加密LIBU首部的问题。
+·插件NeXAS升级为测试版1.0.0。
+支持提取压缩模式2的资源。
+·插件SystemC升级为测试版1.1.3。
+去掉no magic标记。
+·插件ValkyrieComplex升级为正式版1.0.1。
+支持ヴァルキリーコンプレックス製品版游戏。
+·插件N2System升级为正式版1.0.4。
+修正提取游戏［Lamento -FRAGMENT-］时发生的错误。
+·插件kirikiri2升级为正式版1.5.2。
+将体验版的解密参数重定义为tenshinTrial，而正式版使用cxdec=tenshin解密参数。
+支持游戏“天神乱漫 LUCKY or UNLUCKY!?”，用cxdec=tenshin提取。
+
+2009-5-27 19:35 Ver 0.4.13.10 痴漢公賊
+【CrageGUI】
+·使用引号保护特殊参数的传递。
+【tools】
+·Majiro_mask_me升级为1.1.3。
+修正了-s,-m,-d混合使用时delta无效的问题。
+【cui】
+·插件Majiro Script Engine升级为正式版1.1.8。
+支持游戏“催眠ペット ～メスになったワタシ～”，加入参数game=saimin。
+·插件M45更名为Stuff。
+·插件ARCGameEngine升级为开发版0.9.8。
+支持提取4位bmp图像。
+·插件Xuse升级为开发版0.2.8。
+修正4ag中的绝对资源路径。
+·插件SystemNNN升级为测试版1.2.0。
+严格检查没有mask的BMP+MASK图；正确处理负高度图像。
+
+2009-5-16 16:21 Ver 0.4.13.9 痴漢公賊
+【cui】
+·插件SystemNNN升级为测试版1.1.0。
+导出jpeg+mask与bmp+mask图像格式中的mask图。
+·插件FPK更名为MOONHIR，并升级为测试版1.0.2。
+支持新的解密key。
+·加入插件Irrlicht Engine测试版1.0.0。
+·插件RealLive升级为开发版0.7.6。
+正确提取含有多个图像的.g00文件。
+·插件AZSystem升级为开发版0.7.2。
+支持新的arc的封包。
+·插件DDSystem升级为测试版1.0.2。
+支持DDP2和DDP3格式的封包。
+
+2009-5-2 17:17 Ver 0.4.13.8 痴漢公賊
+【tools】
+·Majiro_mask_me升级为1.1.1。
+增加-a参数不做alpha blending。
+【cui】
+·插件EntisGLS升级为开发版0.5.0。
+完成exe提取参数；支持ERISACode解密。
+·插件AI6WIN升级为测试版1.1.2。
+修正从movie.arc中提取.VSD资源时出错的问题。
+·插件SystemC升级为测试版1.1.2。
+以启发式方式计算索引项的实际长度。
+·插件kirikiri2升级为正式版1.5.1。
+加入cxdec=tenshin解密参数。
+·插件Lucifen升级为开发版0.8.0。
+重新添加game参数用于提取; 支持游戏“真説 猟奇の檻 第2章”。
+
+2009-4-26 17:32 Ver 0.4.13.7 痴漢公賊
+【cui】
+·插件Csystem升级为开发版1.0.2。
+增加“game=tyouR”参数，支持游戏“蝶ノ夢 ～二人の蝶～”。
+·插件Majiro Script Engine升级为测试版1.1.7。
+支持游戏“姉ニモマケズ ～お姉ちゃんズは刺激的！～”，加入参数game=anetai
+·加入插件WGame测试版1.0.0。
+·插件ARCGameEngine升级为开发版0.9.7。
+修正了错误读取未对齐的mask数据的问题。
+·插件DJSYSTEM升级为测试版1.0.1。
+支持加密资源的提取。
+·插件ohgetsu升级为测试版1.0.4。
+改用exe参数并支持旧格式的提取。
+·加入插件RISUSOFT测试版1.0.0。
+·插件AZSystem升级为开发版0.7.1。
+支持alpha blending。
+·插件kirikiri2升级为正式版1.5.0。
+加入cxdec=silverblue和cxdec=ojo2解密参数。
+·插件LiosGame升级为开发版0.9.7。
+支持alpha blending。
+·加入插件AVGEngine开发版0.8.0。
+支持游戏“深霧の中で…”。
+·插件Xuse升级为开发版0.2.7。
+支持实际为bmp的.bin的提取。
+·插件FVP升级为测试版1.1.1。
+解决了与插件Xuse的冲突。
+·插件route2升级为测试版1.0.5。
+支持.WPF格式。
+
+2009-3-31 13:05 Ver 0.4.13.6 痴漢公賊
+【crage】
+修正了扩展名与cui扩展名不精确匹配导致错误匹配的问题。
+【cui】
+·插件route2升级为测试版1.0.4。
+支持变长的.CG索引项长度。
+
+2009-3-30 8:56 Ver 0.4.13.5 痴漢公賊
+【cui】
+·插件IPAC升级为测试版1.0.3。
+修正了提取.IES中bmp的错误。
+·加入插件C4开发版0.5.0。
+·插件CaramelBox升级为开发版0.8.0.
+支持ARC4类型的封包提取。
+·插件Majiro Script Engine升级为正式版1.1.6。
+支持游戏“神出鬼没！異次元肉棒 ～こんなところからお邪魔します～”，加入参数game=Nikubo。
+·插件NeXAS升级为开发版0.9.6。
+支持zlib压缩的bmp。
+
+2009-3-26 20:38 Ver 0.4.13.4 痴漢公賊
+【cui】
+·插件ego升级为测试版1.1.1。
+修正了由于没有考虑目录名长度而错误导出目录结构的问题。
+·插件RealLive升级为开发版0.7.5。
+修正了alpha通道边缘有锯齿的问题。
+·插件Csystem升级为开发版1.0.1。
+取消alpha blending。
+·插件SOFTPAL ADV SYSTEM升级为开发版1.3.1。
+支持新GE格式的type1模式。
+·插件ADVSystem升级为开发版1.0.0。
+支持.DAT的提取。
+·插件NEJII升级为正式版1.0.2。
+支持mask图的提取。
+·插件AdvTry升级为正式版1.1.0。
+采用启发式算法自动猜测key、init_offset以及sec_offset。
+·插件MBA升级为正式版1.0.1。
+解决与ggRMV插件的冲突。
+·加入插件ggRMV测试版1.0.0。
+
+2009-3-17 20:28 Ver 0.4.13.3 痴漢公賊
+【crage】
+·兼容vista for x86_64。
+【utility】
+·修正了不正确处理多个特殊参数的问题。
+【cui】
+·插件Csystem升级为开发版1.0.0。
+正确提取alpha通道；增加“game=GYK”参数。
+·插件NEKOPACK升级为测试版1.1.1。
+支持新的.dat格式。
+·插件AiSystem升级为测试版1.0.2。
+导出伪16位bmp为24位。
+·插件route2升级为测试版1.0.3。
+只提取有效的.MHU。
+
+2009-3-9 19:37 Ver 0.4.13.2.1 痴漢公賊
+【cui】
+·插件SOFTPAL ADV SYSTEM升级为开发版1.3.0。
+支持PGD3格式的提取。
+·插件NEJII升级为正式版1.0.1。
+支持32 bit bmp alpha blending；支持biCompression3的32位bmp的提取
+
+2009-3-7 17:20 Ver 0.4.13.2 痴漢公賊
+【cui】
+·插件ExHIBIT升级为开发版0.2.2。
+导出合理的alpha通道；支持32位bmp alpha bledning；支持alpha大区间。
+·插件SOFTPAL更名为SOFTPAL ADV SYSTEM，并升级为测试版1.3.0。
+去掉.pac的no magic标志；修正32位bmp错误图像错误内容的问题；支持32位bmp alpha bleding；
+·插件EAGLS升级为测试版1.1.0。
+去除.pak的no magic标记。
+·插件MainProgramHoep升级为测试版1.0.1。
+去除.pck的no magic标记；图像资源总保存为24位色。
+·插件RPM ADV SYSTEM升级为正式版1.2.1。
+正确区分24位和32位bmp以便正常保存。
+·插件KAAS升级为测试版1.0.0。
+支持type1,2,5解压算法。
+
+2009-3-3 22:27 Ver 0.4.13.1 痴漢公賊
+【cui】
+·插件RPM ADV SYSTEM升级为正式版1.2.0。
+正确保存32位bmp。
+·插件MalieSystem升级为测试版3.0.3。
+支持游戏“タペストリー -you will meet yourself-”。
+·加入插件Adv测试版1.0.0。
+·插件Majiro Script Engine升级为正式版1.1.5.
+支持游戏“ふわりコンプレックス”，加入参数game=f_complex；解密ts_key为：googlechrome。
+·插件FVP升级为测试版1.1.0。
+去除.bin的no magic标记；支持32位bmp alpha blending；支持type4图像格式
+·插件ARCGameEngine升级为开发版0.9.6。
+支持alpha提取。
+·插件DISTORTION升级为正式版1.0.1。
+解决了与其他支持.pac插件的冲突问题。
+·插件GameScripter升级为测试版1.0.2。
+修正了错误截短文件名的问题。
+·插件RealLive升级为开发版0.7.4。
+修正了错误nwa通道数的问题。
+·加入插件ComicPlayer2正式版1.0.0。
+·加入插件KAAS测试版0.9.0。
+·加入插件BELLDA测试版1.0.0。
+
+2009-2-17 20:28 Ver 0.4.13.0 痴漢公賊
+【crage】
+·修正了保存给UNICODE命名的资源错误命名的问题。
+·修正了无效的嵌套提取错误。
+·修正了数个crage进行名称匹配时的bug。
+【cui】
+·插件kirikiri2升级为正式版1.4.9。
+修正了对game=love类型进行二次解密的错误；对32位bmp进行alpha blending
+·插件RealLive升级为开发版0.7.3。
+支持.nwk格式的提取。
+·加入插件ValkyrieComplex测试版1.0.0。
+支持游戏“ヴァルキリーコンプレックス 戦闘パート体験版 改”。
+·插件RioShiina升级为开发版0.4.1。
+加入nodec参数。
+·插件System4升级为开发版0.9.1。
+32位bmp与白色背景进行alpha blending。
+·插件ohgetsu升级为测试版1.0.3。
+支持游戏“SilveryWhite ～君と出逢った理由～”。
+·加入插件AGS32i正式版1.0.0。
+·插件TeethingRing更名为GsWin，并升级为开发版1.1.0。
+支持GsWin3格式。
+·加入插件ZG-Engine正式版1.0.0。
+·插件Echeross升级为正式版1.0.1。
+修正了提取不匹配资源时导致crage崩溃的问题。
+
+2009-2-11 22:29 Ver 0.4.12.2 痴漢公賊
+【locale】
+·修正繁体系统乱码的问题。
+【cui】
+·加入插件RioShiina开发版0.4.0。
+支持WARC 1.2到WARC 1.6格式的.WAR文件的提取。
+·插件NScripter升级为正式版1.2.0。
+支持游戏“めっちゃママ”；需解密参数game=8提取。
+·插件BSS更名为BSXX。
+·插件kirikiri2升级为正式版1.4.8。
+加入game=chower2解密参数。
+·加入插件Lucifen开发版0.7.0。
+支持游戏“俺たちに翼はない”。
+·插件RPM ADV SYSTEM升级为正式版1.1.1。
+优先使用code参数进行提取。
+
+2009-1-29 21:20 Ver 0.4.12.1 痴漢公賊
+【tools】
+·加入Majiro mask me ver 1.1.1。
+【language】
+·修正繁体系统乱码的问题。
+【CrageGUI】
+·升级为1.0.7，能根据当前系统语言自动切换界面。
+【locale】
+·添加面向cui的locale接口。
+【cui】
+·插件kirikiri2升级为正式版1.4.7。
+加入cxdec参数lovelaby。
+支持游戏“フルハウスキス２～恋愛迷宮～”。
+·加入插件gbyFlagGame开发版0.7.0。
+·插件Luna升级为正式版1.0.1。
+添加对.p和.mus的支持。
+·插件AIMS升级为正式版1.0.0。
+由于AIMS系统是基于Luna系统的，因此将对.p和.mus的支持转到Luna中。
+·加入插件usi正式版1.0.0。
+支持游戏“さあ牛だ！”。
+
+2009-1-25 16:59 Ver 0.4.12.0 痴漢公賊
+【crass】
+·加入多语言支持功能; 目前支持简体/繁体中文和英文。
+【cui】
+·插件Majiro Script Engine升级为正式版1.1.4。
+修正使用game参数提取错误导致内存违例的问题。
+支持游戏“誰かのために出来ること ～Innocent Identity～ 体験版”。
+
+2009-1-24 19:35 Ver 0.4.11.3 痴漢公賊
+【crage】
+·起始函数变更为_tmain()。
+【utility】
+·加入unicode版的get_options2()。
+·修正了bits的错误实现。
+【doc】
+·faq中加入了“为什么提取时有很多乱码”的解释。
+【cui】
+·插件ADVDX升级为1.1.0测试版。
+支持.adx加密封包的提取。
+支持游戏“相姦遊戯2”。
+·插件Majiro Script Engine升级为1.1.3正式版。
+加入game参数以便非日文中文系统的用户因为无法输入ts_key而无法正常提取.rct。
+·插件Yuka更名为YukaScript。
+·插件AVGSystem更名为QLIE。
+·插件MINK更名为CScript。
+·插件Xuse升级为开发版0.2.6。
+支持游戏“輝光翼戦記 天空のユミナ”。
+支持MikoArc、KOTORI和.wag格式的提取。
+·插件MINK升级为测试版1.0.1。
+修正解压时发生的非法内存访问的问题。
+·加入插件SRSPlayer正式版1.0.0。
+支持游戏“東方冥異伝スラッシュバスター”。
+·加入插件pokoten2正式版1.0.0。
+支持游戏“エロチックゴンドラ ナンバー2 ～恋の見習いウンディーネ～”。
+·加入插件FS3D正式版1.0.0。
+·插件WindomXP升级为正式版1.0.1。
+
+2009-1-15 19:15 Ver 0.4.11.2 痴漢公賊
+【crass】
+·清理了一些无用和多余的文件。
+【cui】
+·加入插件WindomXP正式版1.0.0。
+·加入插件bakuretsu正式版1.0.0。
+
+2009-1-11 19:11 Ver 0.4.11.1 痴漢公賊
+【acui_core】
+·修正遍历插件的扩展名支持时的bug。
+【cui】
+·补充自0.4.8.16开始被遗忘的插件Luna（感谢某匿名提醒）。
+·加入插件GXTH测试版1.0.0。
+支持游戏“Generation Xth -Code Breaker- 体験版”。
+·插件MINK升级为开发版0.6.1。
+增强了.dat自动识别的能力，排除了与插件GXTH冲突的可能。
+·插件ADVSystem升级为开发版0.9.9。
+提取.GPK封包不再需要指定插件名称参数。
+·插件HSP升级为测试版2.0.2。
+支持新的mv资源的提取。
+·插件ESCARC升级为测试版1.0.1。
+支持旧版本的bin封包文件的提取。
+·插件NeXAS升级为开发版0.9.5。
+支持内部使用zlib压缩的资源的提取。
+·加入插件Echeross正式版1.0.0。
+·插件DenSDK升级为测试版1.1.1。
+修正了新旧版封包兼容问题。
+
+2009-1-3 12:00 Ver 0.4.11 痴漢公賊
+【crage】
+·修正了递归资源提取时错误使用多个匹配模式的问题。
+【cui】
+·插件Leaf升级为开发版0.5.0。
+支持游戏“君が呼ぶ、メギドの丘で”的提取。
+
+2008-12-31 19:16 Ver 0.4.10.9 痴漢公賊
+【cui】
+·加入插件Selene正式版1.0.0。
+支持游戏“悪戯麻雀”。
+·插件NScripter升级为正式发版1.1.9。
+提取nscript.dat时不区分其文件名的大小写。
+·插件TACTICS_ARC升级为正式发版1.0.2。
+支持游戏“真・恋姫†無双 ～乙女繚乱☆三国志演義～”。
+·插件kirikiri2升级为正式发版1.4.6。
+加入解密参数“game=c_emp”，支持游戏“クリムゾン・エンパイア”。
+·插件N2System升级为正式发版1.0.3。
+加入参数“game=SweetPool”，支持游戏“Sweet Pool”的提取，感谢扬帆之翼提供调试信息
+·加入插件EntisGLS开发版0.1.0。
+
+2008-12-19 23:02 Ver 0.4.10.8 痴漢公賊
+【cui】
+·插件AI6WIN升级为测试版1.1.1。
+取消.akb图像资源的CG自动合成。
+·加入插件SaiSys正式版1.0.0。
+·插件Csystem升级为开发版0.9.9。
+对于24位+mask图进行自动合成。
+·插件AVGSystem升级为正式版0.8.3。
+修正并兼容另一种FilePackVer1.0格式。(感谢lighting协助)
+·插件NScripter升级为正式版1.1.8。
+支持游戏“キスより甘くて深いもの”。
+支持加密和非加密.nsa的识别。
+·插件kirikiri2升级为正式版1.4.5。
+修正了seek64错误计算参数的问题。
+加入cxdec=hitozuma解密参数。
+修正了提取>=2G文件错误的问题。
+·加入插件SPack开发版0.7.0。
+·插件AI6WIN升级为测试版1.1.0。
+支持.akb图像资源的提取和CG自动合成。
+·插件MINK升级为开发版0.6.0。
+支持mov.dat内资源的提取。
+
+2008-12-4 18:52 Ver 0.4.10.7 痴漢公賊
+【cui】
+·插件NScripter升级为正式版1.1.8。
+支持游戏“超外道勇者”的提取。
+·插件RPM ADV SYSTEM升级为正式版1.1.0。
+使用启发式算法自动猜测解密code。
+·插件MINK升级为开发版0.5.0。
+使用启发式算法计算索引项大小。
+·加入插件mts正式版1.0.0。
+·加入插件taskforce正式版1.0.0。
+·插件DenSDK升级为测试版1.1.0。
+支持新的DAF2格式封包。
+·插件GameSys升级为正式版1.0.3。
+忽略0长度资源。
+·插件NScripter升级为正式版1.1.7。
+支持游戏“キスより甘くて深いもの 体験版”的提取。
+·插件SLGSystem升级为测试版1.0.1。
+支持.tig资源的提取。
+·插件EAGLS升级为开发版1.0.6。
+支持旧版ALIS系统。
+·插件YU-RIS升级为开发版0.9.8。
+支持.ymv格式封包的提取。
+·插件SystemNNN升级为正式版1.0.1。
+支持PNG图像的提取。
+·加入插件ym1n2正式版1.0.0。
+支持游戏“夜勤雀棟 壱・弐 復刻版＋”。
+·插件kirikiri2升级为正式版1.4.2。
+对まままままま中fgimage.xp3里的maf_1_2_c.tlg资源进行错误检查，以避免crage程序运行失败。
+
+2008-11-5 23:10 Ver 0.4.10.6 痴漢公賊
+【cui】
+·加入插件FORIS正式版1.0.0。
+·插件ADVSystem升级为开发版0.9.8。
+解决提取.GPK产生的冲突问题。
+·插件ExHIBIT升级为开发版0.2.2。
+正确保存带有alpha的图像并自动进行alpha blending合成处理。
+
+2008-11-2 22:18 Ver 0.4.10.5 痴漢公賊
+【cui】
+·插件Lambda升级为正式版1.0.2。
+支持.la封包文件的提取。
+·插件EMengine升级为开发版0.9.1。
+修正了提取bpp=7的bmp图像歪斜的问题。
+·插件kirikiri2升级为正式版1.4.1。
+加入cxdec=seiin解密参数。
+·插件NScripter升级为正式版1.1.6。
+支持游戏“触装天使セリカ”的提取。
+·插件LC-ScriptEngine升级为正式版1.0.2。
+修正了错误提取类型为-1时资源的问题。
+·插件Csystem升级为开发版0.9.8。
+·插件GameSys升级为正式版1.0.2。
+支持.dow资源的提取。
+·插件ScenePlayer升级为测试版0.9.2。
+支持.PMW封包文件的提取。
+·插件route2升级为测试版1.0.2。
+修正了旧版本.IAF文件提取错误的问题。
+
+2008-10-11 10:42 Ver 0.4.10.4 痴漢公賊
+【cui】
+·插件Yuka升级为正式版1.0.2。
+·插件YU-RIS升级为开发版0.9.7。
+支持0.118、0.133、0.220和0.223四个旧版本；修正高版本.ybn解密错误的问题。
+·插件System4升级为开发版0.9.0。
+支持.alk资源的提取。
+·插件AST升级为正式版1.1.4。
+修正了错误处理最后一个资源文件信息的问题。
+·插件KScriptEngine升级为测试版1.0.1。
+修正了非图像资源提取长度为0的问题。
+·插件N2System升级为正式版1.0.2。
+加入参数“game=SMG”，支持“スマガ”的提取，感谢緋色の欠片提供调试信息。
+·插件NScripter升级为正式版1.1.5。
+支持游戏“スレイブorラバーズ”的提取。
+
+2008-9-26 16:56 Ver 0.4.10.3 痴漢公賊
+【gui】
+·去掉“强制使用全部插件”选项，替换为“忽略所有错误提示”。
+【cui】
+·插件Yuka升级为测试版1.0.1。
+·插件Csystem升级为开发版0.9.7。
+增加“game=inyou_shock”和“game=hobo”参数。
+·插件NScripter升级为正式版1.1.4。
+支持游戏“魔法少女マナ Little Witch Mana”，提取时使用game=3参数提取。
+·加入插件KScriptEngine测试版1.0.0。
+·插件ScenePlayer升级为测试版0.9.1。
+资源解压长度采用自动探测的方式。
+·插件kirikiri2升级为正式版1.4.0。
+支持游戏“コンチェルトノート WEB体験版”，提取时使用cxdec=ConcertoNote参数提取。
+·加入插件ScenePlayer测试版0.9.0。
+支持.Pmx、.PMP、.PMA资源的提取。
+
+2008-9-2 21:28 Ver 0.4.10.2 痴漢公賊
+【cui】
+·加入插件losterika正式版1.0.0。
+支持游戏“千年紀のロスティリカ-円環大地の銀の魔女”。
+·加入插件MINK开发版0.3.0。
+支持游戏“Lingeries 新パッケージ版”。
+·插件EAGLS升级为正式版1.0.5。
+增加参数“game=hensin2”，支持游戏“へんし～ん！２”。
+·加入插件MBA正式版1.0.0。
+支持游戏“(C74)(同人)マジカルバトルアリーナ・魔法少女武闘祭”。
+·插件Csystem升级为开发版0.9.6。
+增加“game=inyoutyu”参数(感谢bmeio调试)。
+
+2008-8-24 14:37 Ver 0.4.10.1 痴漢公賊
+【document】
+·增加英文文档“game package, resource and extractor.txt”。
+【cui】
+·插件kirikiri2升级为正式版1.3.9。
+加入cxdec=lovebattle解密参数。
+·插件RealLive升级为开发版0.7.2。
+修正了.nwa提取时造成的内存泄漏的问题。
+·插件VALKYRIA升级为开发版0.9.7。
+支持800x600的bmp的提取。
+·加入插件EtherVapor正式版1.0.0。
+·加入插件Touhou11开发版0.7.1。
+·插件YaneuraoGame升级为开发版0.9.1。
+修正了对版本3索引项uncomprlen和comprlen字段定义颠倒导致的提取错误。
+·插件kirikiri2升级为正式版1.3.8。
+加入cxdec=yu_gu解密参数。
+·插件GameScripter升级为测试版1.0.1。
+修正.pga提取错误的问题(感谢pcicp测试)。
+·加入插件GPK2测试版1.0.0。
+·插件gmf升级为开发版0.2.2。
+·加入插件System4开发版0.8.0。
+·插件AVGSystem升级为开发版0.8.2。
+进一步修正提取FilePackVer1.0类型封包的错误的问题。
+·插件Csystem升级为开发版0.9.5。
+·插件MalieSystem升级为测试版3.0.2。
+修正了错误处理空目录(.lib)的问题。
+·插件VALKYRIA升级为开发版0.9.6。
+支持加密ogg资源的提取。
+·插件EAGLS升级为测试版1.0.4。
+修正了解压大尺寸gr资源的解压错误的问题。
+·插件HSP升级为测试版2.0.1。
+
+2008-7-28 19:01 Ver 0.4.10.0 痴漢公賊
+【tools】
+·增加crass辅助工具文件分割器dd。
+·增加crass辅助工具k_archiver封包提取器unarc。
+【document】
+·增加support_list_unarc.txt。
+【cui】
+·加入插件k_archiver开发版0.0.0。
+·插件LC-ScriptEngine升级为正式版1.0.1。
+修改为解密参数自适应模式。
+·加入插件System4开发版0.7.0。
+·插件Narukana更名为Xuse,并重新设定为开发版0.2.0。
+·插件MalieSystem升级为测试版3.0.1。
+支持游戏“あるすまぐな！ -ARS:MAGNA-”（感谢John_He提供的技术上的帮助）
+·加入插件ANOS升级为开发版1.0.0。
+支持游戏“そう、あたしたちはこんなにも理不尽な世界に生きているのだらよ3”。
+·插件FPK升级为测试版1.0.1。
+支持嵌套的.fpk资源的提取。
+
+2008-7-25 19:32 Ver 0.4.9.2 痴漢公賊
+【utility】
+·修正了2位色bmp文件存储的错误。
+【cui】
+·插件AVG32升级为开发版0.8.2 
+支持PDT11类型的资源的提取。
+·插件kirikiri2升级为正式版1.3.7。
+加入cxdec=mogla解密参数。
+·插件BSS升级为开发版0.5.1。
+支持版本2格式的封包。
+·插件N2System升级为测试版1.0.1。
+加入参数“game=SMGTrial”，支持“スマガ 3％体験版”的提取。
+·插件NekoSDK升级为测试版1.0.3。
+修正了错误识别.dat资源的错误。
+·插件gmf升级为开发版0.2.1。
+支持另外2种类型的mpg文件的提取。
+·插件Csystem升级为开发版0.9.4。
+修正了错误处理提取后资源的问题。
+·插件RealLive升级为开发版0.7.1。
+支持.dat资源的提取；修正了.g00解压缩时错误的边界检查的问题。
+·插件AVG32升级为开发版0.8.1。
+修正了使用不正确的.KOE格式语音采样率的问题。
+·插件666-SYSTEM升级为正式版1.0.2。
+支持“SKMD”的msg.dat的提取。
+·插件Willadv升级为正式版1.0.2。
+支持.FIL资源的提取。
+·插件SOFTPAL升级为测试版1.1.1。
+修正了"00_C"类型图像提取的错误。
+
+2008-7-10 19:10 Ver 0.4.9.1 痴漢公賊
+【CrageGUI】
+·上一个版本是一个有bug的中间版本。
+【cui】
+·加入插件gmf开发版0.2.0。
+用于提取使用不标准扩展名的元文件(比如mpg)。
+·插件NekoSDK升级为测试版1.0.2。
+避免mpg文件发生提取错误。
+·插件NEKOPACK升级为测试版1.1.0。
+支持旧版本格式的封包提取。
+
+2008-7-5 20:07 Ver 0.4.9.0 痴漢公賊
+【crage】
+·修正了封包资源名称中带有日文时名称转换失败的错误。
+【CrageGUI】
+·修正了错误处理目录路径的错误。
+·使用更加可靠的方式捕获控制台信息。
+【document】
+·加入“Crass图文提取教程 - 使用CrageGUI提取游戏.mht”。
+【utility】
+·修正了保存非对齐反向bmp文件时的问题。
+【cui】
+·加入插件sas5开发版0.5.0。
+·插件DDSystem升级为测试版1.0.1。
+修正了提取非压缩资源时的错误。
+
+2008-7-3 23:02 Ver 0.4.8.28 痴漢公賊
+【crage】
+·修正了封包资源名称中带有日文时名称转换失败的错误。
+【document】
+·增加了“support_list_RealLive.txt”。
+·增加了“Crass图文提取教程 - 使用CrageGUI提取游戏.txt”。
+【cui】
+·插件RealLive升级为开发版0.7.0。
+支持.nwa格式的音频的提取。
+·插件InnocentGrey升级为开发版0.9.3。
+支持垃圾文件.d的提取 - -!!
+
+2008-7-1 17:05 Ver 0.4.8.27 痴漢公賊
+【crage】
+·修正了路径符号转换错误导致无法使用-f参数的问题。
+【package core】
+·确保32位IO操作的有效偏移范围始终在有效范围内。
+【cui】
+·插件AST升级为正式版1.1.3。
+修正了无效文件项导致的提取错误。
+·插件RealLive升级为开发版0.6.1。
+修正了g00 type1的提取错误。
+
+2008-6-30 18:42 Ver 0.4.8.26 痴漢公賊
+【document】
+·FAQ更新。
+【cui】
+·加入插件RealLive开发版0.6.0。
+·插件kirikiri2升级为正式版1.3.6。
+加入cxdec=nidaime解密参数，支持游戏“二代目は☆魔法少女”。
+加入cxdec=ruitomo解密参数，支持游戏“るいは智を呼ぶ”。
+·插件SystemC升级为测试版1.1.1。
+支持RLE0资源格式。
+·插件Csystem升级为开发版0.9.2。
+增加“game=gibo”参数，支持游戏“義母の吐息～背徳心に漂う母の色香～”，感谢Kyle在过程中提供的帮助。
+修正了一个提取错误，感谢IamSM在除错过程中提供的帮助。
+
+2008-6-25 15:19 Ver 0.4.8.25 痴漢公賊
+【cui】
+·加入插件Csystem开发板0.9.0。
+·插件EAGLS升级为测试版1.0.3。
+增加“game”参数以支持特殊加密模式。
+·插件FFDSystem升级为测试版1.0.4。
+增加了对ver3封包的提取；修正了ver4封包提取的错误。
+·插件kirikiri2升级为正式版1.3.4。
+加入game=papicon解密参数。
+·插件RAGE升级为测试版1.0.1。
+不再区分扩展名大小写。
+
+2008-6-18 16:04 Ver 0.4.8.24 痴漢公賊
+【cui】
+·加入插件ARCGameEngine开发版0.9.5。
+支持游戏“戦女神ZERO”。
+·插件AZSystem升级为开发版0.6.1。
+修正了一处内存释放错误的bug。
+·插件BGI升级为测试版1.0.1。
+忽略对无有效数据负载的封包的提取。
+·插件SHSystem升级为正式版1.0.1。
+·插件kirikiri2升级为正式版1.3.3。
+加入cxdec=beniten解密参数。
+·加入插件ags开发版0.9.0。
+
+2008-6-14 10:16 Ver 0.4.8.23 痴漢公賊
+【crage】
+·允许插件自身遍历。
+【cui】
+·插件MalieSystem升级为测试版3.0.0。
+·加入插件DDSystem测试版1.0.0。
+·插件MMSystem更名为ACTGS，并升级为1.0.1。
+增加了对.BMP资源的提取。
+·插件ADVSystem升级为开发版0.9.7。
+修正了提取结束后程序非法错误的问题。
+·插件MarbleEngine升级为开发版0.8.1。
+支持简单格式的mg_anim*.mbl的提取。
+·加入插件ESCARC测试版1.0.0。
+·插件GScripter升级为正式版1.0.2。
+·插件ohgetsu升级为测试版1.0.2。
+支持游戏“Palmyra（パルミュラ）～熱砂の海と美なる戦姫～”；
+修改特殊参数为game。
+·插件kirikiri2升级为测试版1.3.2。
+
+2008-5-31 13:28 Ver 0.4.8.22 痴漢公賊
+【crage】
+·鉴于“-O”和“-0”容易混淆的缘故，加入“-0”参数，用途同“-O”。
+·取消了“当指定-l参数时不会使用无需-l参数提取的插件进行提取”的设定。
+【cui】
+·插件Muscia升级为开发版0.3.4。
+支持游戏“ef - the latter tale.”。
+·插件Lua升级为测试版1.0.1。
+避免提取0长度资源引发的错误。
+·插件Touhou更名为Touhou105，并升级为正式版1.0.1。
+取消对体验版的支持，只支持正式版的提取。
+支持游戏“東方緋想天”。
+·插件ego升级为测试版1.1.0。
+支持旧版本的.dat封包的提取
+·插件kirikiri2升级为测试版1.3.1。
+加入cxdec=kinomino解密参数；加入cxdec=natukanaTrial解密参数；修正cxdec=natukana解密参数
+·插件AdvTry升级为正式版1.0.6。
+·插件NEKOSDK改名为NekoSDK，并升级为1.0.1。
+支持.dat资源的提取，支持游戏“揺れるバスガイド アペンドDISC 体験版”
+·插件AVGSystem升级为开发版0.8.1。
+修正了提取FilePackVer1.0类型封包的错误。
+
+2008-5-20 9:48 Ver 0.4.8.21 痴漢公賊
+【cui】
+·插件hcsystem正式版1.1.1。
+修正了8位bmp调色板保存错误的问题。
+·插件route2升级为测试版1.0.1。
+修正了.CG文件提取时发生冲突的错误。
+·插件NScripter升级为正式版1.1.3。
+支持游戏“.fuckコンプリーツ”的提取。
+·插件MAI升级为开发版0.9.9。
+修正了资源类型匹配错误的问题。
+支持mask图的提取。
+·插件GScripter升级为正式版1.0.1。
+修正了资源类型匹配错误的问题。
+·插件InnocentGrey升级为开发版0.9.2。
+支持.s文件的提取。
+·加入插件ARCG开发版0.9.5。
+
+2008-5-9 21:08 Ver 0.4.8.20 痴漢公賊
+【crage】
+·加入bzip2压缩算法库libbz2.dll。
+【cui source】
+·见http://tieba.baidu.com/f?kz=369508935
+【cui】
+·加入插件Lua测试版1.0.0。
+·插件AdvTry正式版升级为1.0.5。
+·加入插件VALKYRIA开发版0.9.5。
+·插件TEATIME升级为测试版1.0.2。
+
+2008-5-4 13:21 Ver 0.4.8.19 痴漢公賊
+【document】
+·faq的【提取前应当注意什么】更新。
+【cui】
+·插件InnocentGrey升级为开发版0.9.1。
+·插件SOFTPAL升级为测试版1.1.0。
+·加入插件Touhou正式版1.0.0。
+·插件FFDSystem升级为测试版1.0.3
+·加入插件GScripter正式版1.0.0。
+
+2008-4-30 11:44 Ver 0.4.8.18 痴漢公賊
+【crage】
+·针对日文系统路径名的特性做出了修改。
+【document】
+·修改文档INSTALL.txt和FAQ.txt。
+·修改文档RPM ADV SYSTEM.txt和kirikiri2.txt。
+【cui】
+·插件kirikiri2升级为测试版1.3.0。
+·加入插件ohgetsu测试版1.0.0。
+
+2008-4-27 0:12 Ver 0.4.8.17 痴漢公賊
+【document】
+·kirikiri2和NScripter的游戏支持列表文件独立为support_list_kirikiri2.txt和support_list_NScripter.txt。
+·修订了kirikiri2的英文文档，感谢whackomy。
+·感谢pcicp翻译和维护英文文档。
+【cui】
+·插件Musica升级为开发版0.3.3。
+·插件kirikiri2升级为测试版1.2.8。
+·插件ADVDX升级为测试版1.0.1。
+·插件AGSD升级为测试版1.0.2。
+
+2008-4-25 11:04 Ver 0.4.8.16 痴漢公賊
+【crass】
+·修正了负值偏移转换为64位正值偏移的错误。
+·底层完全改写为64位IO操作。
+【crage】
+·修正了递归提取资源阶段时无限递归的错误。
+·当指定-l参数时不会使用无需-l参数提取的插件进行提取。
+·允许资源型封包的递归提取。
+·增加-f参数，允许从封包中只提取出指定的资源，详见INSTALL.txt。
+·修正了ADV+++注册失败的问题
+·修正显示提取完成报告数的显示错误问题。
+【utility】
+·支持特殊参数使用通配符*。
+【document】
+·补完和更新了剩下的全部英文文档，感谢pcicp翻译。
+·增加kirikiri2的英文文档，感谢whackomy翻译。
+·FAQ文档更新。
+【cui】
+·插件kirikiri2升级为测试版1.2.7。
+·加入插件N2System测试版1.0.0。
+·插件SystemC升级为测试版1.1.0。
+·加入插件NPS测试版1.0.0。
+·插件DaiSystem升级为开发版0.9.0。
+·插件TACTICS_ARC升级为正式版1.0.1。
+·插件GameSys升级为正式版1.0.1。
+·插件hcsystem升级为测试版1.1.0。
+·插件YU-RIS升级为开发版0.9.6。
+·加入插件TechArts3D测试版1.0.0。
+·插件YaneuraoGame升级为开发版0.9.0。
+·加入插件SFA开发版0.9.0。
+·加入插件MAIKA测试版1.0.0。
+·插件AdvTry升级为正式版1.0.4。
+·插件CIRCUS升级为开发版0.3.1。
+·加入插件MAI开发版0.9.8。
+·插件eroi3D更名为TEATIME，并升级为测试版1.0.1。
+·加入插件route2测试版1.0.0。
+·加入插件EAGLS测试版1.0.1。
+·插件RPM ADV SYSTEM升级为正式版1.0.5。
+·加入插件AI5WIN测试版1.0.0。
+·插件MainProgramHoep升级为测试版1.1.0。
+·加入插件AI6WIN测试版1.0.0。
+·加入插件bruns-system开发版0.5.0。
+·插件AIL升级为测试版1.0.1。
+·加入插件MultiObjects-ScriptEngine开发版0.2.0。
+·插件MajiroScriptEngine更名为Majiro Script Engine。
+·加入插件AVG32开发版0.8.0。
+·插件LCScriptEngine更名为LC-ScriptEngine。
+·插件Lambda升级为正式版1.0.1。
+·插件AiSystem升级为测试版1.0.1。
+·插件BaldrX升级为开发版0.9.1。
+·插件NScripter升级为正式版1.1.0。
+·加入插件AiSystem测试版1.0.0。
+
+2008-3-10 23:08 Ver 0.4.8 痴漢公賊
+【crass】
+·加入png图像处理库libpng13.dll。
+·加入openssl加密算法库libeay32.dll。
+·为了避免写大文件时造成内存分配失败，改为分块写入。
+【crage】
+·彻底清除出现多次提示信息的问题。
+·支持使用通配符进行后缀名匹配。
+·增加-F参数，用于提取时即使遇到提取错误也继续提取。
+·提取错误时增加了错误重试的提示。
+·磁盘空间满时，增加了错误重试的提示。
+【acui_core】
+·支持加载插件名带有特殊符号的cui插件。
+【utility】
+·允许设定调色版颜色数。
+·修正了计算错误调色板长度的问题。
+·修改了高度为负数时bmp图的导出方式。
+·修正了发生错误时错误信息显示2次的问题。
+【cui】
+·由痴漢公賊本人开发的cui插件源码根据实际需要可以随时发布，源码一律遵照LGPL许可协议。
+·插件kirikiri2升级为测试版1.0.0。
+·插件FFDSystem升级为1.0.2。
+·加入插件YSO（0.9.5开发版）。
+·插件SystemYURIS更名为YU-RIS。
+·插件Majiro更名为MajiroScriptEngine。
+·加入插件CaramelBox（0.7.0开发版）。
+·加入插件NEKOPACK（1.0.0测试版）。
+·加入插件Leaf（0.4.0开发版）。
+·加入插件GameSys（1.0.0正式版）。
+·插件IAGS升级为1.0.1。
+·插件AST升级为1.1.2。
+·插件RPM_ADV_SYSTEM更名为RPM ADV SYSTEM，升级为1.0.2测试版。
+·加入插件kirikiri2（0.7.0开发版）。
+·加入插件aselia（1.0.0正式版）。
+·加入插件MMSystem（1.0.0测试版）。
+·插件SYSTEM666更名为666-SYSTEM，升级为1.0.1正式版。
+·插件HSP升级为2.0.0测试版。
+·加入插件ADVEngineMoon（0.9.0开发版）。
+·加入插件NEKOSDK（1.0.0测试版）。
+·加入插件ADV+++（1.0.0测试版）。
+·加入插件ADVDX（1.0.0测试版）。
+·加入插件EMengine（0.9.0开发版）。
+·加入插件KaGuYa（0.6.0开发版）。
+·加入插件ARCX（1.0.0正式版）。
+·加入插件AFS（0.5.0开发版）。
+·插件PJADV升级为1.0.1。
+·插件SystemYURIS升级为0.9.3。
+·加入插件Musica（0.3.1开发版）。
+·加入插件Luna（1.0.0正式版）。
+·加入插件TmrHiroADVSystem（1.0.1测试版）。
+·加入插件SHSystem（1.0.0测试版）。
+·加入插件SLGSystem（1.0.0测试版）。
+·加入插件GMMSystem（1.0.0测试版）。
+·加入插件BSS（0.5.0开发版）。
+·插件NeXAS升级为0.9.4。
+·加入插件SystemNNN（1.0.0测试版）。
+·插件MalieSystem升级为2.0.1。
+·插件Majiro升级为1.1.2。
+·插件DenSDK升级为1.0.1。
+·加入插件SYSTEM666（1.0.0正式版）。
+·加入插件FFDSystem（1.0.1测试版）。
+·插件MainProgramHoep升级为1.0.2。
+·加入插件ADVSystem（0.9.5开发版）。
+·加入插件BladeEngine（1.0.0正式版）。
+·加入插件AdvTry（1.0.1正式版）。
+·插件NScripter升级为1.0.1。
+·插件SystemYURIS升级为0.9.1。
+·插件IPAC升级为1.0.2。
+·插件Willadv升级为1.0.1。
+·插件CIRCUS升级为0.3.0。
+·插件TeethingRing升级为1.0.1。
+·加入插件AIL（1.0.0测试版）。
+
+2007-11-19 8:13 Ver 0.4.7 痴漢公賊
+【crage】
+·去掉了0.3.0版本加入的图形界面。
+【cui】
+·插件BaldrX升级为0.9.0。
+·插件yuLib升级为1.0.1。
+·插件FlyingShinePDFile更名为FS，并升级为4.0.0。
+·加入插件DenSDK（1.0.0测试版）。
+·插件SchoolMate更名为Illusion，并升级为0.0.2。
+·加入插件GameScripter（1.0.0测试版）。
+·插件ego升级为1.0.1。
+·插件Circus更名为CIRCUS，并升级为0.2.2。
+·插件HyPACK更名为Hypatia，并升级为0.9.1。
+·插件RPM_ADV_SYSTEM改回原来的“必须输入密钥才能提取”的功能。
+·插件Crowd更名为MainProgramHoep。
+·插件BulletButlers更名为M45，并升级为1.0.2。
+·插件IkuraGDL升级为0.9.2。
+·插件AVGSystem升级为0.8.0。
+·加入插件NScripter（1.0.0正式版），并公开源代码。
+·加入插件Yuka（1.0.0测试版）。
+·加入插件yuLib（1.0.0测试版）。
+·为了避免和RAGE插件的冲突，修改了插件NeXAS的匹配方式。
+·加入插件RAGE（1.0.0测试版）。
+
+2007-10-28 14:47 Ver 0.4.6 痴漢公賊
+【crage】
+·区分cui注册的扩展名是否大小写敏感。
+【CrageGUI】
+·升级为1.0.3，修正程序在不同DPI下显示的问题。
+【cui】
+·加入插件AZSystem（0.5.0开发版）。
+·插件AIM升级为0.9.1。
+·插件RPM_ADV_SYSTEM升级为2.0.0。
+·插件sketch更名为ExHIBIT，并升级为0.2.0。
+·加入插件Willadv（1.0.0正式版），并发布源码。
+·加入插件ego（1.0.0测试版）。
+·加入插件FVP（1.0.0测试版）。
+·LiosGame升级为0.9.6。
+·MalieSystem更改为测试版，并升级到2.0.0。
+·IPAC升级为1.0.1。
+·加入插件FPK（1.0.0测试版）。
+·加入插件Crowd（1.0.0测试版）。
+·加入插件DISTORTION（1.0.0正式版）。
+·加入插件NSystem（1.0.0测试版）。
+·加入插件SOFTPAL（1.0.0测试版）。
+·加入插件TACTICS_ARC（1.0.0测试版）。
+·Majiro升级为正式版，并公开源代码。
+·PJADV变更为开发版。
+
+2007-10-7 16:44 Ver 0.4.5 痴漢公賊
+【crage】
+·引入“weak magic”标记。
+【CrageGUI】
+·加入“指定插件”和“强制使用所有插件”的选项。
+·加入英文版程序CrageGUI_Eng.exe；中文版程序改名为CrageGUI_Chn.exe。
+【cui】
+·加入插件SystemC（1.0.0）。
+·加入插件AVGSystem（0.7.0）。
+·插件SM2MPX10更名为IkuraGDL并升级为0.9.1。
+·插件eXceed更名为HSP并升级为1.0.1。
+·MarbleEngine升级为0.7.0。
+·AST升级为1.1.1。
+·RPM_ADV_SYSTEM变更为开发版。
+·MalieSystem变更为开发版。
+
+2007-9-16 12:55 Ver 0.4.4 痴漢公賊
+【CrageGUI】
+·修正“当前目录”造成crage.exe无法打开CUI插件的问题。
+【crage】
+·增加-F和-u参数，默认情况下不使用no magic的cui插件以保证程序运行稳定。
+【cui】
+·引入no magic标志。
+·加入插件IPAC（1.0.0）、PJADV（1.0.0）、NEJII（1.0.0）、SM2MPX10（0.9.0）和SystemYURIS（0.9.0）。
+·AST升级为1.1.0。
+·FlyingShinePDFile升级为3.0.0。
+·发布AST、BLUEGALE、FlyingShinePDFile、ISM、LCScriptEngine和NEJII源码。
+
+2007-8-22 20:38 Ver 0.4.3 痴漢公賊
+【CrageGUI】
+·感谢Lighting为crage编写的图形外壳程序，详细使用说明见INSTALL。
+【crage】
+·修正了路径中带有“%”而导致处理不当的错误。
+·加入-v和-O参数。
+【package_core】
+·修正了处理递归型封包的错误。
+·修正了路径中带有“%”而导致处理不当的错误。
+【io_request】
+·修正read_only返回地址错误的bug。
+【cui】
+·更新全部插件的open()调用。
+·BulletButlers升级为1.0.1，并发布源码。
+·Majiro升级为1.1.0。
+·发布插件Lambda源码。
+·加入插件AIMS（0.9.0）。
+·加入插件eXceed（0.8.0）。
+·NitroPlus插件升级为1.0.1。
+·加入插件RPM_ADV_SYSTEM(1.0.0）。
+·加入插件AF(1.0.0）。
+
+2007-8-15 21:52 Ver 0.4.2 痴漢公賊
+【crass】
+·更改了软件包的目录结构。
+·更改了版本号命名。
+·今后再发布的新cui插件，凡是版本高于或等于1.0.0的，由痴漢公賊本人开发的，一律遵照LGPL许可协议发布源码。
+【package_core】
+·增加了create()、read_only()和readvec_only()三个接口。
+【resource_core】
+·增加了create()、read_only()和readvec_only()三个接口。
+【acui_core】
+·接口部分增加了索引文件后缀名的参数。
+【crage】
+·命令行界面增加了提取发生错误时的提示信息。
+·需要额外索引文件的封包可以不使用-l参数指定索引文件。
+·修正了导出非解码型资源文件的实际长度总为0的错误信息。
+【cui】
+·增加插件Majiro。
+·FlyingShinePDFile升级为2.0.0。
+·sketch修正了注册失败的错误。
+·Circus暂时去掉了.dat的提取功能。
+·AGSD升级为Ver1.0.1。
+·Narukana升级为Ver1.0.0，并发布源码。
+
+2007-5-31 0:27 Ver 0.4.1 痴漢公賊
+【crage】
+·修正了“为lst文件创建pacakge失败”的问题。
+·修正了无安全match()的提取对无扩展名资源的错误处理。
+·如果需要，在进一步处理前优先修改资源文件扩展名。
+【package_core】
+·修正了没有正确计算递归资源型带目录封包的base_offset的错误。
+【utility】
+·增加MyBuildBMP16File()，支持创建16位RGB565、RGB555或自定义掩码的bmp。
+【cui】
+·插件EVEngX更名为sketch
+·AST升级为1.0.1
+·增加NitroPlus、LiosGame、BLUEGALE、Narukana、AGSD、SchoolMate、FlyingShinePDFile、
+MarbleEngine、BulletButlers、ktg、TeethingRing十一个插件。
+
+2007-5-7 19:03 Ver 0.4.0 痴漢公賊
+【crage:】
+·修正了处理多层目录结构时偏移值错误的问题。
+【io_request】
+·将访问封包的方式由原来的fio方式转变为内存映射方式。
+【package_core】
+·重新定义了package io接口层。
+【resource_core】
+·重新定义了resource io接口层。
+【cui】
+·修正了全部插件的接口部分。
+·增加IAGS、DaiSystem和NAGS 3个插件。
+·MalieSystem升级为1.1.0。
+
+2007-5-2 11:55 Ver 0.3.1 痴漢公賊
+【utility】
+·修正了指定文件名长度时转码错误的问题。
+【cui】
+·增加AST插件；NeXAS升级为0.9.3；Circus升级为0.2.0。
+
+2007-4-28 22:06 Ver 0.3.0 痴漢公賊
+【crage】
+·增加了一个非常简单的封包路径选择图形界面；修正了少许错误；支持-l参数。
+【package_core】
+·重写了package、resource和io_request的继承和共享关系。
+【cui】
+·增加BGI、DJSYSTEM、hcsystem、InnocentGrey、ISM、LCScriptEngine和MalieSystem 7个插件。
+·NeXAS升级为0.9.2。
+
+2007-4-3 21:59 Ver 0.2.6 痴漢公賊
+【crage】
+·-d和-p参数可以同时使用；从crage功能中拆分出2个管理用核心库，为assage做准备。
+【cui】
+·增加BaldrX插件；NeXAS插件支持GR3类型的grp资源文件。
+
+2007-3-31 14:10	Ver 0.2.5 痴漢公賊
+【cui】
+·HyPack插件支持提取mode2类型的封包。
+
+2007-3-29 18:34	Ver 0.2.4 痴漢公賊
+【crage】
+·增加-I参数，用于显示cui信息。
+【cui】
+·增加HyPack插件。
+
+2007-3-25 11:06	Ver 0.2.3 痴漢公賊
+【crage】
+·框架基本完成，测试稳定。
+【cui】
+·增加EVEngX、Giga和Lambda三个插件。
+【doc】
+·how_to增加了文档“如何使用控制台命令.txt”。
+
+2007-2-17 0:46	Ver 0.1.0 痴漢公賊
+【crage】
+·完成目录型封包文件的公用提取框架。
+【doc】
+·how_to增加了2份文档：“如何启动控制台.txt”和“如何设置控制台.txt”。
+
+2007-2-13 10:54	Ver 0.0.1 痴漢公賊
+【crass】
+·为了舞-HiME 運命の系統樹 修羅的汉化而推出的临时版本。

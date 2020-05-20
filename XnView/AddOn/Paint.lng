@@ -1,0 +1,256 @@
+[en]
+1=OK
+2=Cancel
+
+1010=Thickness
+1013=Opacity
+1051=Corner size
+1005=R:
+1006=G:
+1007=B:
+
+-1=Text settings
+1027=Bold
+1028=Underlined
+1029=Striked
+1030=Italic
+1036=Outlined
+1040=Shadow
+1054=Font
+1055=Size
+
+1500=Modify...
+1502=Delete
+1503=Move to front
+1504=Move to back
+
+[en-str]
+1500=Original size
+1501=Fit to window
+1502=Undo
+1503=Redo
+1504=Move
+1505=Color information
+1506=Add a text
+1507=Draw a line
+1508=Draw a rectangle
+1509=Draw a rounded rectangle
+1510=Draw a circle
+1511=Add a watermark
+1512=Zoom in
+1513=Zoom out
+
+[fr]
+1=OK
+2=Annuler
+
+1010=Epaisseur
+1013=Opacitй
+1051=Arrondi
+1005=R:
+1006=V:
+1007=B:
+
+-1=Paramиtres texte
+1027=Gras
+1028=Soulignй
+1029=Barrй
+1030=Italique
+1050=Emplir
+1036=Bordure
+1040=Ombrage
+1054=Police
+1055=Taille
+
+1500=Modifier...
+1502=Effacer
+1503=Mettre en avant
+1504=Mettre en arriиre
+
+[fr-str]
+1500=Echelle 1:1
+1501=Adapter а la fenкtre
+1502=Annuler
+1503=Rйpйter
+1504=Dйplacer
+1505=Information couleur
+1506=Ajouter un texte
+1507=Dessiner une ligne
+1508=Dessiner un rectangle
+1509=Dessiner un rectangle arrondi
+1510=Dessiner une ellipse
+1511=Ajouter un filigrane
+1512=Zoom avant
+1513=Zoom arriиre
+
+[de]
+1=OK
+2=Abbrechen
+
+1010=Stдrke
+1013=Deckkraft
+1051=Rundung
+1005=R:
+1006=G:
+1007=B:
+
+-1=Texteinstellungen
+1027=Fett
+1028=Unterstrichen
+1029=Durchgestrichen
+1030=Kursiv
+1050=Fьllung
+1036=Umriss
+1040=Schattiert
+1054=Schriftart
+1055=GrцЯe
+
+1500=Дndern...
+1502=Lцschen
+1503=Ganz nach vorne
+1504=Ganz nach hinten
+
+[de-str]
+1500=OriginalgrцЯe
+1501=In Fenster einpassen
+1502=Rьckgдngig
+1503=Wiederholen
+1504=Verschieben
+1505=Farbinformation
+1506=Text hinzufьgen
+1507=Linie zeichnen
+1508=Rechteck zeichnen
+1509=Abgerundetes Rechteck zeichnen
+1510=Kreis zeichnen
+1511=Wasserzeichen hinzufьgen
+1512=GrцЯer zoomen
+1513=Kleiner zoomen
+
+[sv]
+1=OK
+2=Avbryt
+
+1010=Styrka
+1013=Opacitet
+1051=Rundning
+1005=R:
+1006=G:
+1007=B:
+
+-1=Textinstдllningar
+1027=Fet
+1028=Understruken
+1029=Genomstruken
+1030=Kursiv
+1050=Fyllning
+1036=Kant
+1040=Skuggning
+1054=Teckensnitt
+1055=Storlek
+
+1500=Дndra...
+1502=Ta bort
+1503=Framеt
+1504=Bakеt
+
+[sv-str]
+1500=Originalstorlek
+1501=Passa in i fцnster
+1502=Еngra
+1503=Gцr om
+1504=Flytta
+1505=Fдrginformation
+1506=Lдgg till text
+1507=Rita linje
+1508=Rita rektangel
+1509=Rita rundad rektangel
+1510=Rita cirkel
+1511=Lдgg till vattenmдrke
+1512=Zooma in
+1513=Zooma ut
+
+[fi]
+1=OK
+2=Peruuta
+
+1010=Paksuus
+1013=Lдpinдkyvyys
+1051=Pyцristys
+1005=R:
+1006=G:
+1007=B:
+
+-1=Tekstin asetukset
+1027=Lihavoitu
+1028=Alleviivattu
+1029=Yliviivattu
+1030=Kursivoitu
+1050=Tдyttц
+1036=Reunat
+1040=Varjo
+1054=Fontti
+1055=Koko
+
+1500=Muokkaa...
+1502=Poista
+1503=Siirrд eteen
+1504=Siirrд taakse
+
+[fi-str]
+1500=Alkuperдinen koko
+1501=Sovita ikkunaan
+1502=Peruuta
+1503=Tee uudelleen
+1504=Siirrд
+1505=Poimi vдritieto
+1506=Lisдд teksti
+1507=Piirrд viiva
+1508=Piirrд suorakulmio
+1509=Piirrд pyцristetty suorakulmio
+1510=Piirrд ympyrд
+1511=Lisдд vesileima
+1512=Lдhennд
+1513=Loitonna
+
+[ru]
+1=OK
+2=Отмена
+
+1010=Толщина
+1013=Непрозрачность
+1051=Скругление
+1005=R:
+1006=V:
+1007=B:
+
+-1=Настройка текста
+1027=Полужирный
+1028=Подчёркнутый
+1029=Зачёркнутый
+1030=Курсив
+1050=Залить фон
+1036=Обрамление
+1040=Тень
+1054=Шрифт
+1055=Размер
+
+1500=Изменить...
+1502=Удалить
+1503=Переместить на передний план
+1504=Переместить на задний план
+
+[ru-str]
+1500=Истинный размер
+1501=Подогнать под размер окна
+1502=Шаг назад
+1503=Шаг вперед
+1504=Указатель
+1505=Информация о цвете
+1506=Добавить текст
+1507=Нарисовать линию
+1508=Нарисовать прямоугольник
+1509=Нарисовать скругленный прямоугольник
+1510=Нарисовать овал
+1511=Добавить водяной знак
+1512=Увеличить
+1513=Уменьшить

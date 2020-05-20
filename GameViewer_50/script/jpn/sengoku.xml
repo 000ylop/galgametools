@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="LzBMP.dec"              0 />
+	<插件 文件名="TGL.dll"   接口名="ACF" 1 />
+	<插件 文件名="TGL.dll"   接口名="BMR" 2 />
+
+	<文件 文件名="Data\Battle\Back\*.bmr"   插件="2" />
+	<文件 文件名="Data\Battle\Chr\*.acf"    插件="1" />
+	<文件 文件名="Data\Battle\Effect\*.acf" 插件="1" />
+	<文件 文件名="Data\Battle\Effect\*.bmr" 插件="2" />
+	<文件 文件名="Data\Cloth\*.bmr"         插件="2" />
+	<文件 文件名="Data\Face\*.bmr"          插件="2" />
+	<文件 文件名="Data\Field\Char\*.acf"    插件="1" />
+	<文件 文件名="Data\Field\Face\*.bmp"    插件="0" />
+	<文件 文件名="Data\Field\Grp\*.bmp"     插件="0" />
+	<文件 文件名="Data\Field\Map\*.bmp"     插件="0" />
+	<文件 文件名="Data\Grp\*.acf"           插件="1" />
+	<文件 文件名="Data\Grp\*.bmr"           插件="2" />
+	<文件 文件名="Data\Mapchar\*.acf"       插件="1" />
+
+</游戏脚本>

@@ -1,0 +1,113 @@
+kirikiri2CSV.jar
+
+
+[java -jar ]kirikiri2CSV.jar -C <(path of csv directory)> [-d <(path of evimage/fgimage directory)>]
+
+支持游戏：
+//すまいるCubic！-水平線まで何マイル？ アフター＆アナザーストーリーズ-（立绘）
+//天神乱漫 LUCKY or UNLUCKY!?（事件）
+//メルクリア～水の都に恋の花束を～（事件）
+イモウトノカタチ
+流星☆キセキ ‐SHOOTING PROBE‐
+
+使用步骤：
+1，装Java Runtime Environment (Java SE 7) Windows x86与ImageMagick (Windows Binary) (版本要求6.7.2或其以上)
+2，确保图像png
+3，某些游戏需要保留源tlg
+4，以命令行方式运行kirikiri2CSV.jar，需要参数: csv文件夹，事件/立绘文件夹
+命令格式为: [java -jar ]kirikiri2CSV.jar -C <(path of csv directory)> [-d <(path of evimage/fgimage directory)>]
+5，运行生成的bat
+
+
+
+
+MusicaKit.jar
+独立游戏型合成软件
+
+支持游戏：
+eden*
+eden* PLUS＋MOSAIC
+天使の日曜日 “ef - a fairy tale of the two.” Pleasurable Box.
+すぴぱら STORY ＃01 - Spring Has Come！
+夏空のペルセウス
+
+ChangeLog：
+v1.8，重写代码
+v1.7，微调代码
+v1.6，增大支持范围
+v1.5，修正不移动差分图的问题
+v1.4，修正分组规则
+v1.3，修正不能合成的问题
+v1.2，重写程序
+v1.1，微调代码
+
+使用步骤：
+1，装Java Runtime Environment (Java SE 7) Windows x86与DirectMuxer
+2，确保图像是bmp或png
+3，以命令行方式运行MusicaKit.jar，需要参数：bg文件夹
+命令格式为: [java -jar ]MusicaKit.jar -d <(path of bg directory)>
+4，复制同层tasks文件夹的所有xml到DirectMuxer的tasks文件夹，使用DirectMuxer的Queue来合成
+
+下载见：
+http://www.box.net/shared/dn56frzcon
+
+
+
+
+
+kirikiri2TXT.jar
+
+
+信息文件型合成软件（目前支持立绘）
+
+支持游戏：
+???
+AQUA
+かしましコミュニケーション
+キッキングホース★ラプソディ
+のーぶる☆わーくす
+メルクリア～水の都に恋の花束を～
+リアル妹がいる大泉くんのばあい
+るいは智を呼ぶファンディスク -明日のむこうに視える風-
+光輪の町、ラベンダーの少女
+幻月のパンドオラ
+黄昏のシンセミア
+失われた未来を求めて
+鬼ごっこ！
+めちゃ婚！
+11eyes－Resona Forma－
+愛しい対象（カノジョ）の護り方
+
+ChangeLog：
+v1.23，取消定义文件父目录限制
+v1.22，增大支持范围
+v1.21，增大支持范围，微调代码
+v1.20，增大支持范围，重写部分代码
+v1.19，增大支持范围，修改命名方式
+v1.18，增大支持范围，微调代码
+v1.17，修正有时崩溃的问题
+v1.16，增大支持范围，修正有时无法产生坐标的问题
+v1.15，增大支持范围
+v1.14，增大支持范围
+v1.13，重写程序
+v1.12，微调代码
+v1.11，调整文件名方式
+v1.10，全部重写程序，支持游戏待测试
+v1.9，改进递归目录
+v1.8，支持递归目录
+v1.7，程序重命名，微调代码
+v1.6，调整非法符号成短横线
+v1.5，调整日文间隔符成短横线
+v1.4，避免重复文件，增加父节点信息
+v1.3，增大支持范围
+v1.2，针对IM新版本修改命令生成
+v1.1，改进重命名命令
+
+使用步骤：
+1，装Java Runtime Environment
+2，若是bmp则转换到alpha png
+3，以命令行方式运行kirikiri2TXT.jar，需要参数: txt所在文件夹
+命令格式为: kirikiri2TXT.jar -T <(path of txt directory)>
+4，使用DirectMuxer的Complex Composite去合成
+
+http://www.box.net/shared/pp6pt445rj

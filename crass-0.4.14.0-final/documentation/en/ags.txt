@@ -1,0 +1,13 @@
+﻿Name:		ags
+Description:		
+Archive:	.pk .px
+Author:		痴漢公賊(glanser@163.com)
+Version:	0.9.0
+Status:	        Alpha
+
+【TODO】
+·extract resource in type of cRGB mode2
+·extract resource in type of cSGX
+
+【ChangeLog】
+2008-06-15 16:24 ver 0.9.0 1st version released

@@ -1,0 +1,258 @@
+// startup.tjs - ボタンレイヤ
+// Copyright (C)2001-2002, W.Dee  改変・配布は自由です
+
+class KAGLayer extends Layer // KAG 用の ButtonLayer.tjs をそのまま流用するため
+{
+	function KAGLayer()
+	{
+		super.Layer(...);
+	}
+
+	function finalize()
+	{
+		super.finalize(...);
+	}
+}
+
+Scripts.execStorage("ButtonLayer.tjs");
+Scripts.execStorage("SliderLayer.tjs");
+
+
+class LSliderLayer extends SliderLayer
+{
+	function LSliderLayer()
+	{
+		super.SliderLayer(...);
+	}
+
+	function finalize()
+	{
+		super.finalize(...);
+	}
+
+	function onChange(pos)
+	{
+		// 親 ( ContolLayer ) にもイベントを通知
+		parent.sliderLayerChange(this, pos);
+	}
+}
+
+class ControlLayer extends Layer // コントロールレイヤクラス
+{
+	var startButton;
+	var timeSlider;
+	var vagueSlider;
+	var dragOriginX;
+	var dragOriginY;
+	var dragging = false; // ドラッグ中かどうか
+
+	function ControlLayer()
+	{
+		super.Layer(...);
+		setPos(32, 32);
+		setImageSize(200, 85);
+		setSizeToImageSize();
+		fillRect(0, 0, width, height, 0xC0ffffff);
+		fillRect(2, 2, width-4, 7, 0xffffffff);
+
+		drawText(5, 15, "Time", 0, 255);
+		timeSlider = new LSliderLayer(window, this);
+		timeSlider.left = 75;
+		timeSlider.top = 15;
+		timeSlider.width = 120;
+		timeSlider.height = 12;
+		timeSlider.visible = true;
+		timeSlider.min = 200;
+		timeSlider.max = 10000;
+		timeSlider.position = 1500;
+		timeSlider.cursor = crArrow;
+
+		drawText(5, 30, "Vague", 0, 255);
+		vagueSlider = new LSliderLayer(window, this);
+		vagueSlider.left = 75;
+		vagueSlider.top = 30;
+		vagueSlider.width = 120;
+		vagueSlider.height = 12;
+		vagueSlider.visible = true;
+		vagueSlider.min = 1;
+		vagueSlider.max = 512;
+		vagueSlider.position = 128;
+		vagueSlider.cursor = crArrow;
+
+		startButton = new ButtonLayer(window, this);
+		startButton.left = 5;
+		startButton.top = 60;
+		startButton.width = width - 10;
+		startButton.height = 16;
+		startButton.caption = 'スタート';
+		startButton.visible = true;
+
+		visible = true;
+	}
+
+	function finalize()
+	{
+		invalidate startButton;
+		super.finalize(...);
+	}
+
+	function onMouseMove(x, y)
+	{
+		// マウスが移動した
+		if(dragging)
+		{
+			var px = parent.cursorX;
+			var py = parent.cursorY;
+			var l = px - dragOriginX;
+			var t = py - dragOriginY;
+			setPos(l, t);
+		}
+
+		if(y < 10)
+			cursor = crSizeAll;
+		else
+			cursor = crDefault;
+	}
+
+	function onMouseDown(x, y, button)
+	{
+		// マウスボタンが押された
+		if(y < 10)
+		{
+			dragging = true;
+			dragOriginX = x;
+			dragOriginY = y;
+		}
+	}
+
+	function onMouseUp(x, y, button)
+	{
+		// マウスボタンが離された
+		dragging = false;
+	}
+
+	function onMouseLeave()
+	{
+		// マウスがレイヤ領域から出ていった
+//		dragging = false;
+		super.onMouseLeave(...);
+	}
+
+	function dispFileName(fn)
+	{
+		// ファイル名を表示
+		if(fn != '')
+			fn = Storages.extractStorageName(fn);
+		else
+			fn = "ルール画像をドロップしてください";
+		fillRect(5, 45, width-5, 12, 0xC0ffffff);
+		drawText(5, 45, fn, 0, 255);
+	}
+
+	function sliderLayerChange(object, pos)
+	{
+		// スライダーの位置が変更されたとき
+		if(object == timeSlider)
+		{
+			fillRect(32, 15, 50, 12, 0xc0ffffff);
+			drawText(32, 15, pos + "ms",0,255);
+		}
+		else if(object == vagueSlider)
+		{
+			if(pos == 512) pos = 60000;
+			fillRect(40, 30, 50, 12, 0xc0ffffff);
+			drawText(40, 30, pos, 0, 255);
+		}
+	}
+}
+
+class MainWindow extends Window // メインウィンドウクラス
+{
+	var foreLayer; // 表
+	var backLayer; // 裏
+	var controlLayer; // コントロールレイヤの作成
+	var phase = true;
+	var transFile;
+
+	function MainWindow()
+	{
+		// MainWindow コンストラクタ
+		super.Window();
+		setInnerSize(640, 480);
+
+		caption = System.title = "トランジションビューア";
+
+		// プライマリレイヤ(表)を作成
+		add(foreLayer = new Layer(this, null));
+		foreLayer.loadImages('1');
+		foreLayer.setSizeToImageSize();
+
+		// 裏レイヤの作成
+		add(backLayer = new Layer(this, primaryLayer));
+		backLayer.type = ltCoverRect;
+
+		// コントロールレイヤの作成
+		add(controlLayer = new ControlLayer(this, primaryLayer));
+		controlLayer.dispFileName("");
+
+		// 表示状態に
+		visible = true;
+	}
+
+	function finalize()
+	{
+		super.finalize(...);
+	}
+
+	function action(ev)
+	{
+		// イベント集約ハンドラ
+		var type = ev.type;
+		var target = ev.target;
+		if(type == 'onTransitionCompleted')
+		{
+			// トランジションが終了した
+			// 裏と表の管理情報を入れ替える
+			var tmp = foreLayer;
+			foreLayer = backLayer;
+			backLayer = tmp;
+		}
+		else if(controlLayer !== void && target == controlLayer.startButton &&
+			type == 'onClick')
+		{
+			// 「スタート」ボタンが押された
+			beginTransition();
+		}
+	}
+
+	function beginTransition()
+	{
+		// トランジションの開始
+		if(transFile != '')
+		{
+			foreLayer.stopTransition();
+			backLayer.loadImages(phase?'2':'1'); // 裏の画像を読み込む
+			backLayer.setSizeToImageSize();
+			phase = !phase;
+			var vague = controlLayer.vagueSlider.position;
+			if(vague == 512) vague = 60000;
+			foreLayer.beginTransition('universal', false, backLayer,
+				%[rule:transFile, time:controlLayer.timeSlider.position,
+				vague:vague]);
+		}
+		else
+		{
+			System.inform("エクスプローラなどから「トランジションビューア」ウィンドウに\n"
+				"ルール画像ファイルをドロップしてください。");
+		}
+	}
+
+	function onFileDrop(list)
+	{
+		// ファイルがウィンドウにドロップされたとき
+		super.onFileDrop(...);
+		controlLayer.dispFileName(transFile = list[0]);
+	}
+}
+
+var win = new MainWindow();

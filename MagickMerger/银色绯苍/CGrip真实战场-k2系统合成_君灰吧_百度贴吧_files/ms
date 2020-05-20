@@ -1,0 +1,7 @@
+<!--STATUS OK-->
+var redmsg="";
+var msgnum = 0;
+var sysnum = 0;
+var tv = (msgnum > 0) ? "<span style='color:#FF0000'>" + msgnum + "</span>" : msgnum;
+var sv = (sysnum > 0) ? "<span style='color:#FF0000'>" + sysnum + "</span>" : sysnum;
+redmsg +="<a href='http://msg.baidu.com' class='bluelink' target='_blank'>к╫пе("+tv+"/29)</a>";

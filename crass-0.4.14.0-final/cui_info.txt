@@ -1,0 +1,201 @@
+﻿插件成熟度按照功能性、稳定性和兼容性从高到低分为3阶：正式版、测试版和开发版。
+
+功能性 － 尽可能多的支持该系统的各种封包和资源文件的提取或封装。
+稳定性 － 尽可能不导致程序非法错误以及不出现解包中途报错的情况。
+兼容性 － 尽可能支持使用相同系统但不在支持游戏列表中列出的游戏(包括体验版和新出的没来得及测试的游戏)。
+
+正式版 － 功能完善，程序稳定，兼容性好。能够完美处理已经支持的游戏，并且对支持游戏列表以外的游戏也能提供良好支持。
+测试版 － 功能完善，稳定性和兼容性需要进一步的长期测试。
+开发版 － 功能不完善，稳定性一般，不保证对支持游戏列表以外的游戏提供100％支持。
+
+【cui list】
+name			archive				author		rev	status
+
+666-SYSTEM		.dat .ml .gl .sl		痴漢公賊	1.0.2	正式版
+A98SYS ENGINE		.PAK .edt .ed8 .sal		痴漢公賊	0.8.0	开发版
+ACTGS			.dat .cg .scr. wav		痴漢公賊	1.1.0	测试版
+Adv			.GR2 .PAC .VIC			痴漢公賊	1.0.0	测试版
+ADV+++			.dat				痴漢公賊	1.0.0	测试版
+ADVDX			.dat(no magic) .pak(no magic) .ads(weak magic)
+							痴漢公賊	1.1.0	测试版
+ADVEngineMoon		no extension			绫波微步	0.9.0	开发版
+ADVSystem		.GPK weak magic: .PK .TPK .WPK .MPK .PK0 .PKA .PKB .PKC .PKD 
+			.PKE .PKF .DAT(no magic)	痴漢公賊	1.0.1	开发版
+AdvTry			.dat				痴漢公賊	1.1.1	正式版
+AF			.dat(no magic)			joyful		1.0.0	正式版
+AFS			.AFS .pak			痴漢公賊	0.5.1	开发版
+ags			.pk .px				痴漢公賊	0.9.0	开发版
+AGS32i			.GSS .GSL			痴漢公賊	1.0.0	正式版
+AGSD			.gsp(weak magic) .bmz(weak magic)	
+							痴漢公賊	1.0.2	测试版
+AI5WIN			.arc(no magic) .VSD		痴漢公賊	1.0.0	测试版
+AI6WIN			.arc(no magic) .rmt .VSD .akb	痴漢公賊	1.1.2	测试版
+AIL			.dat(no magic) .snl(weak magic) .anm(no magic)
+							痴漢公賊	1.0.1	测试版
+AIMS			.cfg				绫波微步	1.0.0	正式版
+AiSystem		.ttd .bmp .stf(weak magic)	痴漢公賊	1.0.2	测试版
+ANOS			.dat				痴漢公賊	1.0.0	开发版
+ARCG			.arc .vpk .bmx .scb .wsm	痴漢公賊	0.9.6	开发版
+ARCGameEngine		.ALF .BIN .AGF(weak magic)	痴漢公賊	0.9.8	开发版
+ARCX			.arc				痴漢公賊	1.0.0	正式版
+aselia			.gd(no magic) .dll		绫波微步	1.0.0	正式版
+AST			no extension			痴漢公賊	1.1.4	正式版
+AVG32			.PDT .CGM SEEN.TXT .KOE		痴漢公賊	0.8.2	开发版
+AVGEngine		.pck				痴漢公賊	0.8.0	开发版
+AZSystem		.arc				痴漢公賊	0.7.2	开发版
+BaldrX			.pac .grp .spr .dat(no magic)	痴漢公賊	0.9.1	开发版
+BELLDA			.DAT				痴漢公賊	1.0.0	测试版
+BGI			.arc .gdb			痴漢公賊	1.0.1	测试版
+BladeEngine		.pkd				痴漢公賊	1.0.0	正式版
+BLUEGALE		.zbm .bdt .inx .snn		痴漢公賊	1.0.0	正式版
+bruns-system		.um3 .brs .bmp .scm .bso .dat .cfg .png .brs
+							痴漢公賊	0.5.0	开发版
+BSXX			.bsa				痴漢公賊	0.5.1	开发版
+C4			.GD				痴漢公賊	0.5.0	开发版
+CaramelBox		.bin .dat .ar3			痴漢公賊	0.8.1	开发版
+CIRCUS			.CRX .PCK(no magic) .pcm .DAT(no magic)	
+							痴漢公賊	0.3.2	开发版
+ComicPlayer2		.cpf				痴漢公賊	1.0.0	正式版
+CScript			.dat				痴漢公賊	1.0.1	测试版
+Csystem			(no magic).dat .00 .01 .02 .03. 04 .05 .06
+							痴漢公賊	1.0.3	开发版
+DAC			.dpk				痴漢公賊	0.8.1	开发版
+DaiSystem		.pac				痴漢公賊	0.9.0	开发版
+DDSystem		.dat				痴漢公賊	1.0.2	测试版
+DenSDK			.dat				痴漢公賊	1.1.1	测试版
+DISTORTION		.pac				痴漢公賊	1.0.1	正式版
+DJSYSTEM		.dat				痴漢公賊	1.0.1	测试版
+DXArchive		.dxa .dat .hud			痴漢公賊	1.0.1	测试版
+EAGLS			.pak .idx			痴漢公賊	1.1.1	测试版
+Echeross		no extension			痴漢公賊	1.0.1	正式版
+ego			.dat .dat(no magic for old version)
+							痴漢公賊	1.1.1	测试版
+EMengine		.eme .rre .ecf .rcf emesys.dat rresys.dat
+							痴漢公賊	0.9.1	开发版
+EntisGLS		.noa .dat .arc			痴漢公賊	0.5.0	开发版
+ESCARC			.bin .c .h .dat .bmp .txt .mot .db .dif .zip
+							痴漢公賊	1.0.1	测试版
+EtherVapor		.pac				痴漢公賊	1.0.0	正式版
+ExHIBIT			.gyu				痴漢公賊	0.3.0	开发版
+FFDSystem		.dat				痴漢公賊	1.0.4	测试版
+FORIS			.GPK .GPK.*			痴漢公賊	1.0.2	正式版
+FS			.pd				痴漢公賊	4.0.0	正式版
+FS3D			.pak .bmp .dat			痴漢公賊	1.0.0	正式版
+FVP			.bin				痴漢公賊	1.1.1	测试版
+GameScripter		.pak				痴漢公賊	1.0.2	测试版
+GameSys			.pak(no magic)			痴漢公賊	1.0.3	正式版
+gbyFlagGame		.FA2 .C24			痴漢公賊	0.7.0	开发版
+ggRMV			.ggm .gdp .rsd(weak magic)	痴漢公賊	1.0.0	测试版
+GMMSystem		.dat(no magic)			痴漢公賊	1.0.0	测试版
+GPK2			no extension .scb		痴漢公賊	1.0.0	测试版
+GScripter		no extension			痴漢公賊	1.0.2	正式版
+GsWin			.pak .dat .pa_ .dat		痴漢公賊	1.1.0	开发版
+GXTH			.uni .dat .dat(no magic) .EVT(no magic) .efc
+							痴漢公賊	1.0.0	测试版
+hcsystem		.pak .op2			痴漢公賊	1.1.1	测试版
+HSP			.dpm .mv .exe .dat(no magic)	绫波微步	2.0.2	测试版
+Hypatia			.pak .dat			痴漢公賊	0.9.0	开发版
+IAGS			.IFP				痴漢公賊	1.0.1	正式版
+IkuraGDL		no extension			痴漢公賊	0.9.2	开发版
+InnocentGrey		.dat .d	.s(weak magic)		痴漢公賊	0.9.3	开发版
+Irrlicht Engine		.ark .pack			痴漢公賊	1.0.0	测试版
+IPAC			.PAK .WST			痴漢公賊	1.0.3	测试版
+ISM			.isa				痴漢公賊	1.0.0	开发版
+KAAS			.pd(weak magic) .pb(weak magic) .id(weak magic)
+							痴漢公賊	1.0.0	测试版
+kagura			.pak				痴漢公賊	1.0.0	测试版
+KaGuYa			.arc .ari .bg_ .cg_ .cgw .sp_ .bgm .wav .vo* .aps(weak magic)
+			.parts(weak magic)		痴漢公賊	0.6.0	开发版
+k_arvhiver		.arc				痴漢公賊	0.0.0	开发版
+KScriptEngine		.kpc				痴漢公賊	1.0.0	测试版
+kirikiri2		.xp3 .exe .tlg .tlg5 .tlg6 .ksd	.kdt
+							痴漢公賊	1.5.4	正式版
+ktg			.arc				痴漢公賊	0.0.1	开发版
+Lambda			.dat .dmf			痴漢公賊	1.0.2	正式版
+LC-ScriptEngine		no extension			痴漢公賊	1.0.2	正式版
+Leaf			.pak .ar1 .ar2 .LAC .wmv	痴漢公賊	0.5.2	开发版
+LiosGame		.xfl .lwg .wcg .lim		痴漢公賊	0.9.7	开发版
+losterika		.dat(no magic) .pak(no magic)	痴漢公賊	1.0.0	正式版
+Lua			.pck				痴漢公賊	1.0.1	测试版
+Lucifen			.LPK .elg			痴漢公賊	0.8.0	开发版
+Luna			.bin .p .mus			痴漢公賊	1.0.1	开发版
+MAI			.arc				痴漢公賊	0.9.9	开发版
+MAIKA			.DAT				痴漢公賊	1.0.0	测试版
+MainProgramHoep		.sce(weak magic) .amw(weak magic) .amb .amp .pck
+			.eog .cwp .dat .cwd .cw_ .cwl	痴漢公賊	1.1.1	测试版
+Majiro Script Engine	.arc .rct			痴漢公賊	1.1.8	正式版
+MalieSystem		.lib .mgf .mls			痴漢公賊	3.1.0	测试版
+MarbleEngine		.mbl				痴漢公賊	0.8.1	开发版
+MBA			.gdp				痴漢公賊	1.0.1	正式版
+MOONHIR			.fpk .dat			痴漢公賊	1.0.3	测试版
+MultiObjects-ScriptEngine
+			.a .am				痴漢公賊	0.2.0	开发版
+Musica			.paz				痴漢公賊	0.3.4	开发版
+N2System		.npa .ngs			痴漢公賊	1.0.5	正式版
+NAGS			.nfs(weak magic)		痴漢公賊	1.0.0	测试版
+NEJII			.cdt .vdt .ovd .pdt .dat	痴漢公賊	1.0.2	正式版
+NekoBoard		.dat				痴漢公賊	1.1.3	测试版
+NekoSDK			.pak .dat(no magic)		痴漢公賊	1.0.6	测试版
+NeXAS			.pac				痴漢公賊	1.0.1	测试版
+NitroPlus		.pak				痴漢公賊	1.0.3	正式版
+NPS			.npp				痴漢公賊	1.0.0	测试版
+NScripter		.nsa(weak magic) nscript.dat
+							痴漢公賊	1.2.1	正式版
+NSystem			no extension			痴漢公賊	1.0.0	测试版
+ohgetsu			.PAC .BIN			痴漢公賊	1.0.4	测试版
+PJADV			.dat .pak .epa .bin		痴漢公賊	1.0.1	开发版
+pokoten2		.gpp .bm_ .mus .b(weak magic)	痴漢公賊	1.0.0	正式版
+QLIE			.pack .hash			痴漢公賊	0.8.3	开发版
+RAGE			.Pac				痴漢公賊	1.0.1	测试版
+RealLive		.g00(weak magic) .nwa(weak magic) .txt(weak magic) 
+			.ovk(weak magic) .cgm(weak magic) .dat .nwk(weak magic)
+							痴漢公賊	0.7.6	开发版
+RioShiina		.WAR .WAA .S25 .MI4 .OGV	痴漢公賊	0.4.1	开发版
+RISUSOFT		no extension and .properties				痴漢公賊	1.0.0	测试版
+route2			.MHU(weak magic) .CGF(weak magic) .CG(weak magic) 
+			.IAF(weak magic) .SUD(weak magic) .WPF(weak magic)
+							痴漢公賊	1.0.5	测试版
+RPM ADV SYSTEM		.arc .bmp			痴漢公賊	1.2.0	正式版
+SaiSys			.ssb(weak magic)		痴漢公賊	1.0.0	正式版
+sas5			.iar .war .sec5			痴漢公賊	0.5.0	开发版
+ScenePlayer		.Pmx(weak magic) .PMP(weak magic) .PMA(weak magic)
+							痴漢公賊	0.9.2	测试版
+SFA			.aos .abm .scr(no magic) .msk	痴漢公賊	0.9.0	开发版
+SHSystem		.hxp				痴漢公賊	1.0.0	测试版
+SLGSystem		.sz .alb .VOI(weak magic) .tig	痴漢公賊	1.0.2	测试版
+SOFTPAL ADV SYSTEM	.pac .PGD			痴漢公賊	1.3.2	开发版
+SoW			.aod(weak magic)		痴漢公賊	0.9.0	开发版
+SPack			.dat				痴漢公賊	0.7.0	开发版
+SRSPlayer		.pak				痴漢公賊	1.0.0	正式版
+Stuff			.mpk .msc(weak magic)		痴漢公賊	1.0.2	正式版
+System4			.ald .AJP .ain(weak magic) .bgi(weak magic)
+							痴漢公賊	0.9.2	开发版
+SystemC			.fpk(no magic)			痴漢公賊	1.1.1	测试版
+SystemNNN		.spt(no magic) .fxf .vaw .wgq .dwq .gpk .gtb .vpk .vtb
+							痴漢公賊	1.2.1	测试版
+TACTICS_ARC		.arc				痴漢公賊	1.0.2	正式版
+taskforce		.dat				痴漢公賊	1.0.0	正式版
+TEATIME			.bmp .tga .wav. ODF .TEA(weak magic) 
+			.txt(no magic) .pak(no magic) .ODA
+							痴漢公賊	1.0.4	测试版
+TechArts3D		.tah				痴漢公賊	1.0.0	测试版
+TmrHiroADVSystem	.pac(no magic)			痴漢公賊	1.0.1	测试版
+TonyAlbum		.arc				痴漢公賊	1.0.0	正式版
+Touhou105		.dat(no magic)			痴漢公賊	1.0.1	正式版
+Touhou11		.dat				痴漢公賊	0.7.1	开发版
+usi			.UCG				痴漢公賊	1.0.0	正式版
+VALKYRIA		.odn(weak magic) .dat(no magic)	痴漢公賊	0.9.7	开发版
+ValkyrieComplex		.pak .pac			痴漢公賊	1.0.1	正式版
+WGame			.bmp				痴漢公賊	1.0.0	测试版
+Willadv			.arc(no magic)			痴漢公賊	1.0.2	正式版
+WindomXP		.png .jpg .bmp .x .spt .dds	痴漢公賊	1.0.1	正式版
+Xuse			.arc .xarc .bin bv* .4ag .wag .xsa(weak magic)	
+							痴漢公賊	0.2.9	开发版
+YaneuraoGame		.dat .lay .scp			痴漢公賊	0.9.1	开发版
+ym1n2			.bin .exe			痴漢公賊	1.0.0	正式版
+YSO			.na .ni				痴漢公賊	0.9.5	开发版
+YU-RIS			.ypf .ybn .ymv .exe		痴漢公賊	1.0.0	开发版
+YukaScript		.ykc .dat			痴漢公賊	1.0.2	正式版
+yuLib			.arc(no magic) .kthb .kmap(weak magic)
+							痴漢公賊	1.0.2	测试版
+ZG-Engine		.wav .png .map .bmp		痴漢公賊	1.0.1	正式版

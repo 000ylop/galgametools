@@ -1,0 +1,12 @@
+﻿Name:		ACTGS
+Description:	ACTRESS Game System
+Archive:	.dat .cg .scr. wav
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.1.0
+Status:	        Beta
+
+【ChangeLog】
+2009-07-18 12:59 ver 1.0.3 support old archive format
+2009-07-07 21:21 ver 1.0.2 remove "no magic" flag
+2008-06-12 11:13 ver 1.0.1 added extraction of .BMP resource
+2008-02-07 11:47 ver 1.0.0 1st version released

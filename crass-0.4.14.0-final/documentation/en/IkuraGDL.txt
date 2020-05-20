@@ -1,0 +1,27 @@
+﻿Name: 		IkuraGDL
+Description: 	IKURA Game Development Library
+Archive: 	ISF GRP SNR GGD WMSC VOICE SE DATA MIDI
+Author: 	痴漢公賊
+Version: 	0.9.1
+Status:         Alpha
+
+【TODO】
+·Extraction of .FAG resource.
+·Extraction of .GAN resource.
+·Extraction of .ANM resource.
+
+【NOTICE】
+·Some .ISF used encrypt formations of SECRETFILTER100a, which are corresponded to every specified game. Parameter "SECRETFILTER" is required to specify the number:
+crage -p Q:\TRABULANCE\PURUC\ISF -O SECRETFILTER=1
+
+	ISF: 准备提取封包文件（含93个资源文件） ...
+	ISF：成功提取93 / 93个资源文件  |
+
+	IkuraGDL：成功提取1个封包文件
+
+【Correspondence with game and number】
+·海道～うみのみち～：3
+
+【ChangeLog】
+2007-10-02 18:03 ver 0.9.1 supported decrypting .ISF; supported extracting encrypted .ISF resource in type of SECRETFILTER100a
+2007-09-09 22:21 ver 0.9.0 1st version released

@@ -1,0 +1,74 @@
+/*
+'
+'**************************************
+' Visuddhi - http://visuddhi.com
+' Copyright (c) 2006 - Visuddhi
+' All right reserved. 
+'**************************************
+'
+*/
+
+body { 
+	font-family: verdana;
+	color:#555;
+	background-color:#fff;
+}
+img { 
+	border: 0;
+}
+td { 
+	vertical-align: top;
+}
+div.header { 
+	padding: 4px;
+	text-align: center;
+	font-size: 26px;
+	font-weight: bold;
+	font-variant: small-caps;
+	background: #eee url('images/sfondo.gif') repeat-x;
+	border: 1px solid #ddd;
+}
+div.center {
+	text-align: center;
+}
+table.container {
+	margin: 30px auto;
+}
+table.dia {
+	margin: 5px;
+	width: 100px;
+	height: 100px;
+	border: 1px solid #ddd;
+	border-collapse: collapse;
+}
+div.smalldesc { 
+	margin: 0 5px 10px 5px;
+	width: 100px;
+	font-size: 10px;
+	text-align: center;
+}
+table.dia td { 
+	text-align: center;
+	vertical-align: middle;
+	background: #eee url('images/sfondo.gif') repeat-x;
+}
+table.dia img { 
+	display: block;
+	margin: auto; 
+}
+
+div.footer {
+  margin: 20px;
+  text-align: center;
+}
+
+table.dia a img { 
+	filter:alpha(opacity=80);
+	-moz-opacity:0.8;
+	opacity: 0.8;
+}
+table.dia a:hover img { 
+	filter:alpha(opacity=100);
+	-moz-opacity:1;
+	opacity: 1;
+}

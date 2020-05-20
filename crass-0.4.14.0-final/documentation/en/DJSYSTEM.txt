@@ -1,0 +1,25 @@
+﻿Name:		DJSYSTEM
+Description:	DJSYSTEM system
+Archive:	.dat
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.0.1
+Status:	        Beta
+
+【.dat Archive Info】
+    the .dat is actual type of archive with directory.
+    meta-data according to practical situation, can be bmp, ogg, dds(*1) and so on(also can extract data folder, including script grammar and package program).
+    
+    	header:
+    		s8 magic[21];	// "FILECMB-DATA-LIST-IN\n"
+	index segment:
+		xxxx\tyyyyyy\tzzzzzz\n
+		xxxx means resource name; yyyyy means beginning position of resource(begin from header); zzzz means ending position(begin from header).
+		"LIST-END\n" marks ending of index segment
+	data:
+		closely behind index segment.
+
+    *1:DirectDraw ® Surface (DDS) format is used for storing texture whether or not with mipmap level and cube environment mapping. the format can be used for storing uncompressed or compressed pixel format, and is best choice for storing DXTn compressed data. developer of the format is Microsoft®. photoshop can open and edit it(requiring add-on plug-in support).
+
+【ChangeLog】
+2009-04-20 21:45 ver 1.0.1 support the extract of encoded resource
+2007-04-25 13:58 ver 1.0.0 1st version released

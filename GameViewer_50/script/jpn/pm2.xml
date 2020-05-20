@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="LzBMP.dec" 0 />
+
+	<文件 文件名="data\Battle\*.dat"   插件="0" />
+	<文件 文件名="data\Dance\*.dat"    插件="0" />
+	<文件 文件名="data\Dress\*.dat"    插件="0" />
+	<文件 文件名="data\Ending\*.dat"   插件="0" />
+	<文件 文件名="data\Event\*.dat"    插件="0" />
+	<文件 文件名="data\Face\*.dat"     插件="0" />
+	<文件 文件名="data\Festival\*.dat" 插件="0" />
+	<文件 文件名="data\Girl\*.dat"     插件="0" />
+	<文件 文件名="data\Job\*.dat"      插件="0" />
+	<文件 文件名="data\Last\*.dat"     插件="0" />
+	<文件 文件名="data\Monster\*.dat"  插件="0" />
+	<文件 文件名="data\Name_in\*.dat"  插件="0" />
+	<文件 文件名="data\Opening\*.dat"  插件="0" />
+	<文件 文件名="data\Pattern\*.dat"  插件="0" />
+	<文件 文件名="data\Room\*.dat"     插件="0" />
+	<文件 文件名="data\Rpg\*.dat"      插件="0" />
+	<文件 文件名="data\School\*.dat"   插件="0" />
+	<文件 文件名="data\Vacance\*.dat"  插件="0" />
+
+	<文件 文件名="mdata\Battle\*.dat"   插件="0" />
+	<文件 文件名="mdata\Dance\*.dat"    插件="0" />
+	<文件 文件名="mdata\Dress\*.dat"    插件="0" />
+	<文件 文件名="mdata\Ending\*.dat"   插件="0" />
+	<文件 文件名="mdata\Event\*.dat"    插件="0" />
+	<文件 文件名="mdata\Face\*.dat"     插件="0" />
+	<文件 文件名="mdata\Festival\*.dat" 插件="0" />
+	<文件 文件名="mdata\Girl\*.dat"     插件="0" />
+	<文件 文件名="mdata\Job\*.dat"      插件="0" />
+	<文件 文件名="mdata\Last\*.dat"     插件="0" />
+	<文件 文件名="mdata\Monster\*.dat"  插件="0" />
+	<文件 文件名="mdata\Name_in\*.dat"  插件="0" />
+	<文件 文件名="mdata\Opening\*.dat"  插件="0" />
+	<文件 文件名="mdata\Pattern\*.dat"  插件="0" />
+	<文件 文件名="mdata\Res\*.bmp"               />
+	<文件 文件名="mdata\Room\*.dat"     插件="0" />
+	<文件 文件名="mdata\Rpg\*.dat"      插件="0" />
+	<文件 文件名="mdata\School\*.dat"   插件="0" />
+	<文件 文件名="mdata\Vacance\*.dat"  插件="0" />
+
+</游戏脚本>

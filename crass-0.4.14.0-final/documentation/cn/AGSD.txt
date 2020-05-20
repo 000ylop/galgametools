@@ -1,0 +1,11 @@
+﻿名称：		AGSD
+描述：		Advanced Game Script Decoder
+封包：		.gsp(weak magic) .bmz(weak magic)
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.2
+成熟度：	测试版
+
+【ChangeLog】
+2008-04-26 11:45 ver 1.0.2 支持.bmz的提取
+2007-06-02 21:04 ver 1.0.1 修正了0长度资源提取错误的问题
+2007-05-24 16:06 ver 1.0.0 发布

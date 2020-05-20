@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="GCA.upk"  0 />
+	<插件 文件名="ARGB.grp" 1 />
+
+	<文件 文件名="gd"           插件="0" 数据文件="kingformation" />
+	<文件 文件名="data"         插件="0" 数据文件="kingformation" />
+	<文件 文件名="sound\se"     插件="0" 数据文件="kingformation" />
+	<文件 文件名="sound\sys_se" 插件="0" 数据文件="kingformation" />
+	<文件 文件名="sound\voice"  插件="0" 数据文件="kingformation" />
+
+</游戏脚本>

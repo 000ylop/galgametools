@@ -1,0 +1,9 @@
+<Profile>
+    <Name>Mask Addition</Name>
+    <Setting>
+        <Match>m(.+)\.bmp</Match>
+        <Catch>$1.bmp</Catch>
+        <Merge>$1.png</Merge>
+        <Command>composite [Match] [Catch] -compose Copy_Opacity [Merge]</Command>
+    </Setting>
+</Profile>

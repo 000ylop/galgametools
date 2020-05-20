@@ -1,0 +1,23 @@
+﻿Name:		SystemNNN
+Description:	System-NNN(Naynit Kcalbwen Studio) (http://www2s.biglobe.ne.jp/~tinyan/nyanlib/index.htm)
+Archive:	.spt(no magic) .fxf .vaw .wgq .dwq .gpk .gtb .vpk .vtb
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.2.1
+Status:	        Beta
+
+【Notice】
+.vpk and .gpk must depend on relevant .vtb and .gtb index for extracting
+
+【Sample】
+crage -p "E:\[trial]\嬍嬁乣懱尡斉乣\dwq\bg0.gpk" -l "E:\[trial]\嬍嬁乣懱尡斉乣\dwq\bg0.gtb"
+bg0.gpk: 准备提取封包文件（含53个资源文件） ..
+bg0.gpk：成功提取53 / 53个资源文件  |
+
+SystemNNN：成功提取1个.gpk封包文件文件 /
+
+【ChangeLog】
+2009-06-19 19:10 ver 1.2.1 process negative height for mask correctly
+2009-05-19 22:25 ver 1.2.0 strictly check BMP+MASK image although it actually doesn't contain mask; process negative height correctly
+2009-05-16 15:39 ver 1.1.0 export mask image for jpeg+mask and bmp+mask image format
+2008-11-08 13:54 ver 1.0.1 supported extracting PNG image
+2007-12-23 15:04 ver 1.0.0 1st version released

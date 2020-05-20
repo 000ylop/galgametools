@@ -1,0 +1,79 @@
+﻿名称：		NitroPlus
+描述：		
+封包：		.pak
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.3
+成熟度：	正式版
+
+【.pak封包文件说明】
+    实际类型是有目录的封包资源文件。
+    元数据根据实际用途，是png、jpg、ogg、ini、nps（脚本）、txt（脚本）等。
+
+    	首部：
+		u32 version;	// 1、2、3或4
+		
+		根据version字段的不同，分为4种不同的封包。
+
+【.pak（Ver2）封包文件说明】
+	首部：	
+		u32 version;		// 2
+		u32 index_entries;	// 资源文件数
+		u32 uncomprlen;		// 索引段解压后的长度
+		u32 comprlen;		// zlib压缩的索引段长度
+		u32 unknown1;		// 0 或 0x100(和is_compr有关？)	
+		s8 magic[256];		// 通常是游戏的英文名称
+ 	索引段：zlib压缩，索引项长度变长
+		u32 name_length;	// 资源文件名长度
+		s8 *name;		// 资源文件名
+		u32 offset;		// 资源文件数据偏移（从索引段结尾算起）
+		u32 uncomprlen;		// 解压后的数据长度
+		u32 act_length;		// 实际的数据长度
+		u32 is_compr;		// 是否经过zlib压缩（0 - 没有经过zlib压缩；1 - 经过zlib压缩）
+		u32 comprlen;		// zlib压缩的数据长度（如果is_compr为0，则该字段为0）
+	数据：
+		紧接在索引段之后；对于is_compr为0的情况，数据为明文；如果is_compr为1，则需要解压缩。
+
+【.pak（Ver3）封包文件说明】
+	首部：	
+		u32 version;		// 3
+		u32 index_entries;	// 资源文件数
+		u32 uncomprlen;		// 索引段解压后的长度
+		u32 comprlen;		// zlib压缩的索引段长度
+		u32 unknown[2];
+		s8 magic[256];		// 通常是游戏的英文名称
+ 	索引段：zlib压缩，索引项长度变长
+		u32 name_length;	// 资源文件名长度
+		s8 *name;		// 资源文件名
+		u32 offset;		// 资源文件数据偏移（从索引段结尾算起）
+		u32 uncomprlen;		// 解压后的数据长度
+		u32 act_length;		// 实际的数据长度
+		u32 is_compr;		// 是否经过zlib压缩（0 - 没有经过zlib压缩；1 - 经过zlib压缩）
+		u32 comprlen;		// zlib压缩的数据长度（如果is_compr为0，则该字段为0）
+	数据：
+		紧接在索引段之后；对于is_compr为0的情况，数据为明文；如果is_compr为1，则需要解压缩。
+
+注意：ver3存在一个变种，格式和ver4完全一样，但是只有version字段是3。
+
+【.pak（Ver4）封包文件说明】
+	首部：	
+		u32 version;		// 4
+		s8 magic[256];		// xor解密用key（通常是游戏的英文名称）
+		u32 xor_factor;		// xor解密comprlen字段用
+		u32 uncomprlen;		// 索引段解压后的长度（加密）
+		u32 index_entries;	// 资源文件数（加密）
+		u32 comprlen;		// zlib压缩的索引段长度（加密）
+ 	索引段：zlib压缩，索引项长度变长
+		u32 name_length;	// 资源文件名长度
+		s8 *name;		// 资源文件名，同时也是xor解密用key
+		u32 offset;		// 资源文件数据偏移（从索引段结尾算起）（加密）
+		u32 uncomprlen;		// 解压后的数据长度（加密）
+		u32 next_offset;	// 下一个索引项在索引段的偏移（加密）
+		u32 is_compr;		// 是否经过zlib压缩（0 - 没有经过zlib压缩；1 - 经过zlib压缩）（加密）
+		u32 comprlen;		// zlib压缩的数据长度（如果is_compr为0，则该字段为0）（加密）
+	数据：加密
+		紧接在索引段之后；对于is_compr为0的情况，数据需要经过xor解码（最多对前1024字节进行解码）；如果is_compr为1，则整个解压后的数据进行完全xor解码。
+
+【ChangeLog】
+2009-06-21 12:53 ver 1.0.3 支持ver1的pak封包
+2007-08-19 22:41 ver 1.0.1 支持ver2和ver3的一个变种
+2007-05-10 00:13 ver 0.9.0 第一版发布

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="RAYS.dll" 接口名="CAK" 0 />
+	<插件 文件名="RAYS.dll" 接口名="MAP" 1 />
+
+	<文件 文件名="Fight\fmenu\common\*.cak"           插件="0" />
+	<文件 文件名="Fight\fmenu\info\*.cak"             插件="0" />
+	<文件 文件名="Fight\fmenu\info\Head\*.cak"        插件="0" />
+	<文件 文件名="Fight\fmenu\info\Number\*.cak"      插件="0" />
+	<文件 文件名="Fight\fmenu\magicmenu\*.cak"        插件="0" />
+	<文件 文件名="Fight\fmenu\mainmenu\*.cak"         插件="0" />
+	<文件 文件名="Fight\fmenu\monster\*.cak"          插件="0" />
+	<文件 文件名="Fight\fmenu\monster\floor\*.cak"    插件="0" />
+	<文件 文件名="Fight\fmenu\monster\icon\*.cak"     插件="0" />
+	<文件 文件名="Fight\fmenu\monster\Magic\*.cak"    插件="0" />
+	<文件 文件名="Fight\fmenu\monster\Property\*.cak" 插件="0" />
+	<文件 文件名="Fight\fmenu\scroll\*.cak"           插件="0" />
+	<文件 文件名="Fight\fmenu\Upgrade\*.cak"          插件="0" />
+	<文件 文件名="Fight\info\*.cak"                   插件="0" />
+	<文件 文件名="Fight\MAP\*.map"                    插件="1" />
+	<文件 文件名="Head\*.cak"                         插件="0" />
+	<文件 文件名="MAP\*.map"                          插件="1" />
+	<文件 文件名="Menu\dialog\*.cak"                  插件="0" />
+	<文件 文件名="Menu\game\*.cak"                    插件="0" />
+	<文件 文件名="Menu\i_menu\Beast\*.cak"            插件="0" />
+	<文件 文件名="Menu\i_menu\Beast\Select\*.cak"     插件="0" />
+	<文件 文件名="Menu\i_menu\Common\*.cak"           插件="0" />
+	<文件 文件名="Menu\i_menu\Equip\*.cak"            插件="0" />
+	<文件 文件名="Menu\i_menu\Equip\head\*.cak"       插件="0" />
+	<文件 文件名="Menu\i_menu\Magic\*.cak"            插件="0" />
+	<文件 文件名="Menu\i_menu\saves\*.cak"            插件="0" />
+	<文件 文件名="Menu\i_menu\Setup\*.cak"            插件="0" />
+	<文件 文件名="Menu\i_menu\System\*.cak"           插件="0" />
+	<文件 文件名="Menu\i_menu\Tools\*.cak"            插件="0" />
+	<文件 文件名="Menu\i_menu\trade\*.cak"            插件="0" />
+	<文件 文件名="Menu\i_menu\trade\head\*.cak"       插件="0" />
+	<文件 文件名="Menu\image\equip\*.cak"             插件="0" />
+	<文件 文件名="Menu\image\prop\*.cak"              插件="0" />
+	<文件 文件名="Menu\MainInterface\*.cak"           插件="0" />
+	<文件 文件名="Menu\mouse\*.cak"                   插件="0" />
+	<文件 文件名="Menu\name\equip\*.cak"              插件="0" />
+	<文件 文件名="Menu\name\equip1\*.cak"             插件="0" />
+	<文件 文件名="Menu\name\imagic\*.cak"             插件="0" />
+	<文件 文件名="Menu\name\imagic1\*.cak"            插件="0" />
+	<文件 文件名="Menu\name\magic\*.cak"              插件="0" />
+	<文件 文件名="Menu\name\magic2\*.cak"             插件="0" />
+	<文件 文件名="Menu\name\prop\*.cak"               插件="0" />
+	<文件 文件名="Menu\name\prop1\*.cak"              插件="0" />
+	<文件 文件名="Menu\name\property\*.cak"           插件="0" />
+	<文件 文件名="Menu\name\property2\*.cak"          插件="0" />
+	<文件 文件名="object\addnew\*.cak"                插件="0" />
+	<文件 文件名="object\ani\*.cak"                   插件="0" />
+	<文件 文件名="object\FIGHTNPC\*.cak"              插件="0" />
+	<文件 文件名="object\item\*.cak"                  插件="0" />
+	<文件 文件名="object\ladder\*.cak"                插件="0" />
+	<文件 文件名="object\mag\*.cak"                   插件="0" />
+	<文件 文件名="object\MAGIC\*.cak"                 插件="0" />
+	<文件 文件名="object\NPC\*.cak"                   插件="0" />
+	<文件 文件名="object\other\*.cak"                 插件="0" />
+	<文件 文件名="object\paste\*.cak"                 插件="0" />
+	<文件 文件名="object\rug\*.cak"                   插件="0" />
+	<文件 文件名="object\tree\*.cak"                  插件="0" />
+	<文件 文件名="picneed\*.cak"                      插件="0" />
+
+</游戏脚本>

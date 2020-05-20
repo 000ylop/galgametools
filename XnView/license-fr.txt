@@ -1,0 +1,22 @@
+Veuillez lire les modalités et les conditions suivantes avant l'utilisation de ces logiciels.  L'utilisation de ce logiciel indique l'acceptation des termes et conditions de la licence. 
+
+1. Déni de garantie
+
+XnView (ou NConvert, XnView Shell Extension) sont fournis "tel-que", et aucune garantie de quelque sorte n'est exprimée ou impliquée, incluant sans limitation, toute garantie de valeur marchande ou format physique pour un but particulier. 
+
+Dans aucun cas, l'auteur de ce logiciel ne sera jugé responsable de la perte de données, des dommages, du manque à gagner ou de n'importe quel autre genre de perte par l'utilisation correcte ou non de ce logiciel. 
+
+Le logiciel ne doit pas être modifié, vous ne devez pas le décompiler ou le désassembler. 
+
+2. Licence
+
+XnView (ou NConvert) est fourni en tant que gratuiciel pour une utilisation privée (non commerciale), ou dans l'éducation (incluant les organismes à but non lucratif). 
+
+Dans ce cas, Vous avez le droit d'utiliser et de faire un nombre illimité de copie de ce logiciel. 
+
+Pour une utilisation ou distribution commerciale, il est nécessaire de vous enregistrer. Ceci est une aide pour le développement de versions futures. 
+
+L'installation et l'utilisation des ces logiciels signifie l'acceptation des termes et conditions de la license.
+
+
+Copyright (C) 1997-2012 Pierre-e Gougelet. All rights reserved.

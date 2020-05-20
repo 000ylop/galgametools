@@ -1,0 +1,169 @@
+
+Harry's Filters 3.01
+------------------------------------------------------
+Copyright 1997-2007 by Harald Heim
+
+
+Harry's Filters 3 is a Photoshop-compatible plugin which can be used in dozens of different image editing appliations e.g. Photoshop, Paint Shop Pro, Corel Photo-Paint and many many other. It includes 69 effect filters, an Animation feature, options for saving and opening presets and a instant preview feature.
+
+Harry's Filters 3 is freeware. You can use them for whatever you like, but you aren't allowed to distribute them without my permission. 
+
+Please notice that Harry's Filters 3 will appear on the "The Plugin Site" sub menu in your graphic application and not on the "Harry's Filters" sub menu like Version 2.0. For installation instructions see below.
+
+Have a look at the successor of Harry's Filters called Plugin Galaxy (a set of 21 professional plugins with more than 159 effects) and our PhotoWiz plugins at http://thepluginsite.com/products/
+
+This plugin was created with Filter Meister. Check it out at
+http://www.filtermeister.com/
+
+Please send any preset file you generated with Harry's Filters to info@thepluginsite.com
+
+Enjoy this plugin!
+
+Harald Heim
+www.ThePluginSite.com
+
+
+
+QUICK INSTRUCTIONS
+==================
+
+* The Grup and FX combo boxes:
+The first box contains the main groups of filters, while the second box lets you select a specific filter effect. With both boxes you can select each of the 69 included filters.
+
+* The up to eight sliders:
+Use them to adjust the image effect.
+
+* The Brightness slider and Blend feature:
+The Brightness slider lets you adjust the brightness of the image. The combo box below lets you choose one of 20 blending methods. The slider to the right defines the blending ratio.
+
+* The numbers at the left corner of the preview:
+The first number indicates the time in miliseconds that was needed to calculate the effect. The second number is the maximum number of frames per second that your processor can render at the current zoom level. Finally, the third number is the estmated time that it would need to render the effect to the image.
+
+* The Zoom buttons:
+You can choose a zoom setting from 6% to 100%. By default the image is fit into the preview.
+
+* The Instant Preview check box:
+If it is activated it will display the effect while you drag a slider. If the rendering is too slow or inconveniant, you can deactivate this check box.
+
+* The Play Button:
+Display as an animation in the preview. The animation is produced with the help of random slider settings. While the animation plays you can use the other controls. e.g. change the zoom, drag a slider, change the effect. To stop the animation, click on the same button again. The Play button is a nice way to see what effects a filter can produce and a big help for finding an fitting effect. If you have a slow computer, try decreasing the zoom to make the animation run more smoother.
+
+* The f/s and Speed combo boxes:
+The two combo boxes left of the Play button let you influence the animation. The f/s combo box lets you choose the number of frames per second that are displayed. The "Auto f/s" option automatically chooses a frame rate that is suitable for your computer's processor. The Speed combo box lets you choose the speed with which the animation is running. You can choose a speed from "Slower" to "Faster".
+
+* The Jump button:
+Clicking on it generates random slider settings.
+
+* The ? button:
+Displays this file
+
+* The Open and Save buttons:
+The Save button displays a file dialog for saving the current slider settings as a preset file. The Open button lets you restore settings from a preset file. The saved preset files have the file extension .HFP and are 13 or 14 bytes large. Several preset files are already delivered with Harry's Filters. The 10 byte large preset files from Version 2.0 of Harry's Filters are still supported, but some may not produce the same effect, because some slider ranges have been altered in Version 3.0.
+
+* The OK and Cancel buttons
+OK applies the current effect and Cancel exits the plugin.
+
+
+
+
+Using Harry's Filters with different applications
+=================================================
+
+Adobe Photoshop / Adobe Illustrator / Adobe ImageReady 
+
+Make sure you installed the Harry's Filters plugin into the "Plugins" or "Plug-ins" sub folder inside the Photoshop, Illustrator or ImageReady folder. After restarting the application, you will find them in the Filter menu. 
+
+Adobe PhotoDeluxe 
+
+Make sure you installed the Harry's Filters plugin into the "Plugins" or "Plug-ins" sub folder inside the PhotoDeluxe folder. After restarting the application, you need to make PhotoDeluxe display all menu items if you didn't already do that. To do that go to the Preferences sub menu of the File menu and choose the last item ("Extend Menu" or something similar) on the sub menu. You will find the Harry's Filters plugin in the Effects menu. 
+
+Adobe PageMaker 
+
+Make sure you installed the Harry's Filters plugin into Rsrc/.../Plugins/Effects folder inside the PageMaker folder. After restarting PageMaker, you will find them in the Element> Image> Photoshop Effects menu. 
+
+CiEBV Photoline 32 
+
+Choose 'File options' or 'Extended' from the Options menu, click on the 'Plug In Path' tab and select the folder where the Harry's Filters plugin is located. After pressing OK, the plugins will appear at the bottom of the the Filter menu. 
+
+Corel Photo-Paint 
+
+Press <Ctl + J> to display the Options dialog, select Plugins from the list box on the left, press the Add button and choose the location of the Harry's Filters plugin. The plugins will appear in the Effects menu right after the Options dialog disappeared. 
+
+Corel Photo House 
+
+Select Effects > Plug-in Effects > Add/Remove Plug-in Effects. Press the Add button and select the folder where the Harry's Filters plugin is located. After pressing OK, the Harry's Filters plugin will appear on the Effects > Plug-in Effects menu. 
+
+Deneba Canvas 
+
+Select "Preferences" from the File menu. In the Preferences dialog select the Paint tab. Press the Plug-ins button and select the folder where the Harry's Filters plugin is located. After restarting Canvas, Harry's FIlters will appear on the Image > Filter sub menu. 
+
+imageN 
+
+Select "Plug-ins" from the Configure menu. In the appearing Plugins dialog press the Search button. After imageN has searched all your drives for plugins (which can take some time), Harry's Filters will appear on the plugin list, too. To apply a plugin, select it from the list and press the Test buton. 
+
+IrfanView (Version 3.85 and higher) 
+
+Make sure that an image is displayed in IrfanView. Then select Image > Effects > Adobe 8BF filters. In the appearing dialog press the "Add 8BF filters" button and choose the folder where you installed Harry's Filters. Harry's Filters will now appear in the list on the left. To run Harry's Filters double click on the Harry's Filters entry or select it and press the "Start selected filter" button. 
+
+Jasc Paintshop Pro 4 - 6 
+
+Choose "Preferences" from the File menu, press the Plug-in Filters tab and select the folder, where you installed the Harry's Filters plugin, in the Plugin Filters tab of the Preferences dialog. After pressing OK, the plugins will appear on the Plugin Filters sub menu of the Image menu. 
+
+Jasc Paint Shop Pro 7 
+
+Choose Preferences > File Locations from the File menu, press the Plug-in Filters tab and select the folder where you installed the Harry's Filters plugin. After pressing OK, the Harry's Filters plugin will appear in the Plug-in Filters sub menu of the Effects menu. 
+
+Jasc Paint Shop Pro 8 
+
+Choose Preferences > File Locations from the File menu, select the Plug-ins item from the list box, press the Add button, press the Browse button and select the folder where you installed the Harry's Filters plugin. After pressing two times OK, the Harry's Filters plugin will appear in the Plug-in Filters sub menu of the Effects menu.
+
+Macromedia Freehand
+
+Make sure you installed the Harry's Filters plugin into the English/Xtras sub folder inside the Freehand folder. After restarting Freehand, you will find Harry's Filters in the Xtras menu. 
+
+Macromedia Fireworks
+
+Choose "Preferences" from the File menu and activate the Photoshop Plug-ins checkbox in the Folders section of the Preferences dialog. Then select the folder, where you installed the Harry's Filters plugin, by pressing the "..." or Browse button. After restarting Fireworks the plugins will be displayed at the bottom of the Xtras menu. 
+
+Megalux Ultimate Paint 
+
+Choose "Preferences" from the Options menu, click on the Plugins tab and select the folder where the Harry's Filters plugin is located. After pressing OK, the plugins will appear in the Adobe sub menu of the Image menu. 
+
+Metacreations Painter / Fractal Design Detailer 
+
+Choose Preferences > Plugins... from the Edit menu and select the folder where the Harry's Filters plugin is located. After restarting Painter/Detailer, the plugins will appear on the Effects menu. 
+
+Microfrontier Color It! 
+
+Make sure you installed the Harry's Filters plugin into the "Plug-ins" sub folder inside the ColorIt! folder. After restarting the application, you will find them in the Filter menu. 
+
+Microsoft Photodraw 2000 
+
+Select Tools > Options and press the Plug-in tab. Press the Browse button and select the folder where the Harry's Filters plugin is located. Finally press OK on the Options dialog. Choose Format > Effects > Plug-ins and select the Harry's Filters plugin in the combo box at the top of the Plug-ins dialog. 
+
+Micrografx Picture Publisher 
+
+Make sure you installed the Harry's Filters plugin into the "Plugins" sub folder inside the Picture Publisher folder. After restarting Picture Publisher you will find them in the Effects menu. 
+
+Right Hemisphere Deep Paint 
+
+Select File > Preferences > Directories and press the Browse button next to the Photoshop Plugins text box. In the file dialog, select the folder where the Harry's Filters plugin is located and press OK. Then press OK on the Directories dialog. After restarting Deep Paint, you will find the Harry's Filters plugin in the Filters menu. 
+
+SPG Colorworks: WEB 
+
+Choose "Preferences" from the File menu and select the folder, where you installed the Harry's Filters plugin, at the bottom of the Preferences dialog. After pressing OK the plugin will be accessible from the Plug-in Filter Selector dialog which is available from the Effects menu. 
+
+Ulead Photo Impact 
+
+Choose "Preferences" from the File menu and select the folder, where you installed the Harry's Filters plugin, in the Plugins tab of the Preferences dialog. After restarting Photo Impact the plugins will be displayed at the bottom of the Effect menu. 
+
+Ulead Gif Animator 
+
+Choose "Preferences" from the File menu, click on the Plugin Filters tab and select the folder where the Harry's Filters plugin is located. After restarting Gif Animator the plugins will appear in the Filters menu. 
+
+Ulead PhotoExpress 
+
+Choose "Preferences" from the File menu and select the folder, where you installed the Harry's Filters plugin, in the Plug-Ins tab of the Preferences dialog. After restarting PhotoExpress the plugins will be displayed in the Photo menu. 
+
+
+

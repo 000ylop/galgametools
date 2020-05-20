@@ -1,0 +1,68 @@
+/*
+    ED4 & ED5 PSP 索引生成脚本
+*/
+
+tbl = io.fopenA ["GVF_TBL.BIN", "rb"];
+dat = io.fopenA ["GVF_DAT.BIN", "rb"];
+
+io.fseek [tbl, 0x00, io.seekEnd];
+fend = io.ftell [tbl];
+io.fseek [tbl, 0x94, io.seekSet];
+
+i = 0;
+while [io.ftell [tbl] < fend]
+[
+    off  = io.readUint [tbl];
+    size = io.readUint [tbl];
+    if [(off == 0) | (size == 0)]
+    [
+        continue;
+    ]
+    io.fseek [dat, off, io.seekSet];
+
+    t = io.readUint [dat];
+
+    io.print [size, type.int];
+    io.print [", ", type.string];
+    io.print [off,  type.int];
+    io.print [", ", type.string];
+
+    if   [i < 10]     [ io.print ["00000", type.string]; ]
+    elif [i < 100]    [ io.print ["0000",  type.string]; ]
+    elif [i < 1000]   [ io.print ["000",   type.string]; ]
+    elif [i < 10000]  [ io.print ["00",    type.string]; ]
+    else              [ io.print ["0",     type.string]; ]
+
+    io.print [i, type.int];
+
+    if   [t == 'ZCMP']
+    [
+        io.print [".Z", type.string];
+    ]
+    elif [t == 'PSMF']
+    [
+        io.print [".MOV", type.string];
+    ]
+    elif [t == 0x474E5089]
+    [
+        io.print [".PNG", type.string];
+    ]
+    else
+    [
+        c1 = t       & 0xFF;
+        c2 = t >> 8  & 0xFF;
+        c3 = t >> 16 & 0xFF;
+        c4 = t >> 24;
+        if [(c4 == 0) & (c3 >= 'A') & (c3 <= 'Z') &
+                        (c2 >= 'A') & (c2 <= 'Z') &
+                        (c1 >= 'A') & (c1 <= 'Z')]
+        [
+            io.print [".", type.string];
+            io.print [@t,  type.string];
+        ]
+    ]
+    io.print ["]\r\n", type.string];
+    i += 1;
+]
+io.fclose [tbl];
+io.fclose [dat];

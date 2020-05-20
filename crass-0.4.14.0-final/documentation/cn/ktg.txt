@@ -1,0 +1,12 @@
+﻿名称：		ktg
+描述：		工畫堂スタジオ（KOGADO）游戏ケータイ少女PC专用插件
+封包：		.arc
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.0.1
+成熟度：	开发版
+
+【TODO】
+支持string.arc和script.arc以外的封包提取。
+
+【ChangeLog】
+2007-5-24 16:06 ver 0.0.1 发布

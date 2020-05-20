@@ -1,0 +1,67 @@
+/*
+    ZCMP 文件解码脚本
+*/
+
+api = """
+        <APIs>
+            <BIN file="kernel32.dll">
+                <stdcall name="FindFirstFileA" param="2" />
+                <stdcall name="FindNextFileA"  param="2" />
+                <stdcall name="FindClose"      param="1" />
+            </BIN>
+
+            <BIN file="core.dll">
+                <cdecl name="ZlibDecode" param="4" />
+            </BIN>
+        </APIs>
+""";
+sys.importBin [sys.self, api];
+
+find_data = mem.alloc [4096];
+mem.fill [find_data, 0, 4096];
+
+goon = 1;
+find = FindFirstFileA ["*.Z", find_data];
+
+while [(find != -1) & goon]
+[
+    fileName = find_data + 44;
+
+    fp = io.fopenA [fileName, "rb"];
+    if [fp == 0]
+    [
+        goon = FindNextFileA [find, find_data];
+        continue;
+    ]
+
+    if [io.readUint [fp] != 'ZCMP']
+    [
+        goon = FindNextFileA [find, find_data];
+        io.fclose [fp];
+        continue;
+    ]
+
+    io.print [fileName, type.string];
+    io.print ["\r\n",   type.string];
+
+    dsize = io.readUint [fp];
+    ddata = mem.alloc [dsize];
+    io.fseek [fp, 0, io.seekEnd];
+
+    rsize = io.ftell [fp];
+    rdata = mem.alloc [rsize];
+    io.fseek [fp, 8, io.seekSet];
+    io.fread [rdata, rsize, 1, fp];
+    io.fclose [fp];
+
+    ZlibDecode [ddata, dsize, rdata, rsize];
+
+    fp = io.fopenA [fileName, "wb"];
+    io.fwrite [ddata, dsize, 1, fp];
+    io.fclose [fp];
+
+    goon = FindNextFileA [find, find_data];
+    mem.free [ddata];
+    mem.free [rdata];
+]
+FindClose [find];

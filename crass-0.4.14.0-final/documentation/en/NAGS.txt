@@ -1,0 +1,38 @@
+﻿Name: 		NAGS
+Description: 	NAGS system
+Archive: 	.nfs(weak magic)
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	1.0.0
+Status: 	Beta
+
+【.nfs Archive Info】
+    the nfs is actual type of archive with directory.
+    original data according to practical situation, can be bmp, ogg, wav, scb(binary script) and so on.
+    
+    	header: 
+		u32 index_entries;	// resource number
+ 	index segment: need decrypt
+		s8 name[24];		// resource name
+		u32 offset;		// resource data offset(count from data segment)
+		u32 length;		// resource data length
+	data: 
+		closely behind index segment.
+
+【.ngp Resource Info】
+	original data is bmp.
+
+    	header: 
+		s8 magic[16];		// "NGP            "
+		u8 unknown;		// 0
+		u8 zlib_flag;		// must be 0x80
+		u32 comprlen;		// zlib compressed data length
+		u32 width;		// image width
+		u32 height;		// image height
+		u16 bpp;		// bytes number of every pixel
+		u8 reserved[0xe0];
+		u32 uncomprlen;		// zlib compressed data length
+	data: 
+		closely behind index segment, format is zlib compresssed data stream.
+
+【ChangeLog】
+2007-05-07 13:58 ver 1.0.0 1st version released

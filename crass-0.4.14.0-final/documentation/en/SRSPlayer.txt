@@ -1,0 +1,9 @@
+﻿Name:		SRSPlayer
+Description:	game system Sagiri Resource Set Gameplayer developed by Sagiri no Miyako
+Archive:	.pak
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.0.0
+Status: 	Final
+
+【ChangeLog】
+2009-01-18 15:04 ver 1.0.0 1st version released

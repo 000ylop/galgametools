@@ -1,0 +1,26 @@
+说明：
+
+nsout 解包资源
+nsdec 解密
+nsaarc 打包
+nscmake  nscript.txt打包dat
+
+BY：huoyanyan
+一、首先介绍一下软件，给那些已经了解移植的童鞋使用
+
+NS通用开发组件：里面有独立的说明文件，特别说明的是nscmake.exe打包的TXT文件名字必须是01.txt等序号，如果你命名为：nscript.txt 那就肯定会打包失败。
+
+default GBK.ttf 简体中文字体文件，使用的时候请改名为：default.ttf
+default JP.TTF 日语字体文件，使用的时候请改名为：default.ttf
+ONScripter-GBK.apk 简体中文ONS模拟器，运行中文游戏时请安装这个，并配合default GBK.ttf使用
+ONScripter-JP.apk 日语ONS模拟器，运行日语游戏时请安装这个，并配合default JP.TTF使用
+
+二、ONS for android的文件构成
+
+要运行一个移植的ONS游戏，必须有以下几个部分（以我做的水仙移植为例）：
+
+arc.nsa 各种多媒体素材，比如BGM、语音、图片等都打包在这个文件里
+default.ttf 运行游戏需要的字体文件，简体中文的就放简体中文的，日语的就放日语的
+nscript.dat 脚本文件，控制游戏的各种命令，台词等
+
+是的，你没看错，要完整运行一个游戏，只需要仅仅三个文件！

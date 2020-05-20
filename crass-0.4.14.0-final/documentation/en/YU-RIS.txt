@@ -1,0 +1,24 @@
+﻿Name:		YU-RIS
+Description:	YU-RIS Script Engine (http://yu-ris.net/)
+Archive:	.ypf .ybn .ymv .exe
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.0.0
+Status:	        Alpha
+
+【TODO】
+Support YSArc archives of old versions.
+Currently, ypfs from 0.237 (inclusive), and ybns from 0.238 (inclusive) are supported.
+Ypfs earlier than 0.223 (inclusive) are not supported. It remains unknown that which versions of ybns are not supported.
+
+【ChangeLog】
+2009-08-07 12:00 ver 1.0.0 use suffix identifier '.' to find the decryption key for resource name
+2009-06-12 21:52 ver 0.9.9 support extracting exe yser
+2008-11-08 15:10 ver 0.9.8 supported extracting .ymv archive
+2008-10-04 01:11 ver 0.9.7 supported four old version 0.118, 0.133, 0.220 and 0.223; fixed a decryption error for .ybn high version
+2008-04-18 10:41 ver 0.9.6 removed using special parameter, became automatic judgement and discernment
+2008-04-17 23:11 ver 0.9.5 modified discernment mode for special game parameter
+2008-04-10 20:51 ver 0.9.4 supported いな☆こい！ ファンディスク
+2008-01-25 00:31 ver 0.9.3 fixed special support of game "MagusTale"(thanks zzyqjljl)
+2007-12-27 22:54 ver 0.9.2 supported extracting ypf and ybn β3 version 
+2007-09-16 10:33 ver 0.9.1 added "game" parameter
+2007-09-16 10:33 ver 0.9.0 1st version released

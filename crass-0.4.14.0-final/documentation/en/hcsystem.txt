@@ -1,0 +1,57 @@
+﻿Name: 		hcsystem
+Description: 	Ｈ℃ hcsystem
+Archive: 	.pak .op2
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	1.1.1
+Status: 	Beta
+
+【.pak Archive Info】
+    the .pak is actual type of archive with directory.
+    meta-data according to practical situation, can be bmp, ogg, bin(binary script) and so on.
+    
+    	header:
+		s8 magic[4];		// "PACK"
+		u32 index_entries;	// resource number(every item with variable length)
+		u32 swap_flag;		// index segment byte data whether need swap high/low nibble
+	index segment:
+		s8 name[32];	// resource name(*new pak archive saving 32 wchar_t)
+		u32 uncomprlen;	// resource data length	after decompressing
+		u32 comprlen;	// resource data length(if in no compression, value of field is 0) 
+		u32 offset;	// resource data offset(count from header)
+	data: 	
+		closely behind index segment. if comprlen isn't 0, data is lzss compressed; otherwise is uncompressed data.
+
+【.opf Resource Info】
+    the .opf is actual type of resource without directory.
+    meta-data is bmp.
+    
+    	header: 
+		s8 magic[4];		// "OPF "
+		u32 width;		// image width
+		u32 height;		// image height
+		u32 color_depth;	// image color depth
+		u32 line_length;	// image line length
+		u32 dib_offset;		// RGB data offset(count from header)
+		u32 dib_length;		// RGB data length
+		u32 reserved;		// 0
+	data: 	
+		closely behind index segment. usually value of dib_offset is 32; if image is in 8-bit, next to header is 1024 bytes palette data, so value of dib_offset become 1024+32。
+
+【.op2 Resource Info】
+    the op2 is actual type of resource without directory.
+    meta-data is bmp.
+    
+    	header:
+		s8 magic[4];		// "OPF2"
+		u32 width;		// image width
+		u32 height;		// image height
+		u32 color_depth;	// image color depth
+		u32 line_length;	// image line length
+		u32 dib_offset;		// RGB data offset(count from header)
+		u32 dib_length;		// RGB data length
+		u32 comprlen;		// compressed RGB data length(lzss)
+
+【ChangeLog】
+2008-05-20 09:31 ver 1.1.1 fixed a error in saving 8-bit bmp palette
+2008-04-19 13:36 ver 1.1.0 supported new .pak and OPF2 format
+2007-04-24 14:44 ver 1.0.0 1st version released

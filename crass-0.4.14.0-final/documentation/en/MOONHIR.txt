@@ -1,0 +1,12 @@
+﻿Name: 		MOONHIR
+Description: 	
+Archive: 	.fpk .dat
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	1.0.3
+Status: 	Beta
+
+【ChangeLog】
+2009-06-01 13:55 ver 1.0.3 support game "家族愛 ～お母さんと姉さんはボクの物～"
+2009-05-16 13:00 ver 1.0.2 support new decryption key
+2008-07-26 14:20 ver 1.0.1 suported extracting nested .fpk resource
+2007-10-20 12:05 ver 1.0.0 1st version released

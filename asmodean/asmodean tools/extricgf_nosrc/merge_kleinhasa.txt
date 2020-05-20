@@ -1,0 +1,9 @@
+// merge_kleinhasa.cpp, v1.03 2010/12/28
+// coded by asmodean
+
+// contact: 
+//   web:   http://asmodean.reverse.net
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+
+// This tool merges event images from 魔動装兵クラインハーゼ.

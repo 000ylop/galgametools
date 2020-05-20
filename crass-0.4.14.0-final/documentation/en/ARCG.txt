@@ -1,0 +1,14 @@
+﻿Name:		ARCG
+Description:		
+Archive:	.arc .vpk .bmx .scb .wsm
+Author:		痴漢公賊 (glanser@163.com)
+Version:	0.9.6
+Status:	        Alpha
+
+【TODO】
+·extract .bal resource
+·support extracting music in WSM format(奴隷市場　Renaissance －DVD完全版－, thank ziya186 for testing)
+
+【ChangeLog】
+2009-07-20 15:42 ver 0.9.6 fix the error while extracting from .bmx
+2008-05-11 16:28 ver 0.9.5 1st version released

@@ -1,0 +1,299 @@
+@charset "shift_jis";
+
+body{
+	padding: 0px;
+	background-color: white;
+	background-attachment: fixed;
+	color: black;
+	line-height: 127%;
+}
+
+h1:before{
+	content: "Åü ";
+}
+
+h1{
+	background-color: #001591;
+	color: white;
+	background-image: url("./grad.png");
+	background-position: left;
+	background-repeat: repeat-y;
+	margin: 0em 0em 1em 0em;
+	padding: 0.1em;
+	border-top: 1px solid #70a0e0;
+	border-left: 1px solid #70a0e0;
+	border-bottom: 1px solid #002040;
+	border-right: 1px solid #002040;
+	font-size: 1.04em;
+	letter-spacing: 0.05em;
+}
+
+
+img{
+	border: 0;
+	vertical-align: middle;
+}
+
+div.para {
+	margin: 0px;
+	border: 0px;
+	padding: 0em 0em 4em 0em;
+}
+
+dt {
+	display: list-item;
+	list-style: disc;
+}
+
+dl dt{
+	margin-left: 2em;
+	margin-top: 1em;
+	font-weight: bold;
+}
+
+dl dd{
+	margin-left: 3em;
+}
+
+dl{
+	margin-bottom: 1em;
+}
+
+div.taggenre{
+	text-align: right;
+}
+
+span.b{
+	font-weight: bold;
+}
+
+span.i{
+	font-style: italic;
+}
+
+span.comlink{
+	font-size: 0.85em;
+}
+
+code.inlinecode{
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	font-family: monospace;
+	white-space: pre;
+}
+
+code em {
+	font-style: normal;
+	font-weight: bold;
+}
+
+div.descimg{
+	background-color: transparent;
+	color: #303030;
+	text-align: center;
+}
+
+span.weak{
+	background-color: transparent;
+	color: gray;
+}
+
+span.comment{
+	background-color: transparent;
+	color: #0000a0;
+}
+
+span.linenumber{
+	background-color: transparent;
+	color: gray;
+}
+
+span.arg{
+	background-color: transparent;
+	color:blue;
+}
+
+span.defarg{
+	background-color: transparent;
+	color:gray;
+}
+
+span.defargval{
+	background-color: transparent;
+	color:red;
+}
+
+
+span.tagrequiredattrib{
+	background-color: transparent;
+	color:red;
+}
+
+
+code.bq{
+	display: block;
+	overflow: auto;
+	padding: 0.3em;
+	border: 2px solid #808080;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	font-family: monospace;
+	white-space: nowrap;
+}
+
+dfn{
+	font-style: normal;
+}
+
+div a.jump{
+	background-color: transparent;
+	color: #2d903c;
+	text-decoration: underline;
+	border: 0px;
+	padding: 1px 2px 1px 2px;
+}
+
+div a.jump:visited{
+	background-color: transparent;
+	color: #2d608c;
+}
+
+div a.jump:hover{
+	background : #e0e0f0;
+	color: #2d303c;
+	text-decoration: none;
+	border: 1px solid #808080;
+	padding: 0px 1px 0px 1px;
+}
+
+
+
+table.keywords a{
+	background-color: transparent;
+	color: #2d903c;
+	text-decoration: none;
+	border: 0px;
+	padding: 1px 2px 1px 2px;
+}
+
+table.keywords a:visited{
+	background-color: transparent;
+	color: #2d608c;
+}
+
+table.keywords a:hover{
+	background-color : #e0e0f0;
+	color: #2d303c;
+	text-decoration: none;
+	border: 1px solid #808080;
+	padding: 0px 1px 0px 1px;
+}
+
+ol > li{
+	list-style-type: decimal;
+}
+
+div.note{
+	margin-left: 4em;
+	margin-right: 4em;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	border-left: 0.1em solid #808080;
+	padding-left: 1em;
+	font-size: 0.8em;
+	line-height: 110%;
+}
+
+div.note div.notehead{
+	margin: 0em;
+	border: 0em;
+	padding: 0em 0em 1em 0em;
+}
+
+div.note div.notehead span.noteheadspan {
+	margin: 0em;
+	border-top: 0em;
+	border-left: 0em;
+	border-right: 0em;
+	border-bottom: 1px solid black;
+	padding: 0em 1em 0em 1em;
+}
+
+table.keywords{
+	font-size: 0.9em;
+	line-height: 1em;
+	margin: 1em 0em 1em 0em;
+	border: 0px;
+	padding: 0px;
+}
+
+table.keywords td{
+	white-space: nowrap;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+table.keywords a span{
+	background-color: transparent;
+	color: black;
+}
+
+table.tagparams {
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+table.tagparams td{
+	border-top: 1px solid black;
+	padding-top: 0.1em;
+	padding-bottom: 0.1em;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+table.tagparams td.tagattribname{
+	background-color: transparent;
+	color: blue;
+}
+
+div.tagremarks {
+	margin-bottom: 1em;
+}
+
+span.toindexanchor:before {
+	content: "Å¢ ";
+}
+
+span.toindexanchor:after {
+	content: " Å¢";
+}
+
+div.toindex{
+	margin-top: 1em;
+	text-align: center;
+}
+
+div.toindex a{
+	text-decoration: none;
+}
+
+div.taggenrehead {
+	font-weight: bold;
+	background-color: transparent;
+	color: #000080;
+	margin-top: 1em;
+}
+
+span.taglistlink {
+	font-weight: bold;
+}
+
+table.taglist td.taglistodd{
+	background-color: #f0f0ff;
+	color: black;
+}
+table.taglist td.taglisteven{
+	background-color: #f0fff0;
+	color: black;
+}

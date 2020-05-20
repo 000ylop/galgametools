@@ -1,0 +1,39 @@
+﻿Name:		AZSystem
+Description:	AZSystem developed by casper 
+Archive:	.arc
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	0.7.2
+Status:	        Alpha
+Translation:	superstar
+
+【TODO】
+·Extract resources of old edition.
+·support extraction of .map resource
+
+【NOTICE】
+If the error message mentions the requirement for particular parameter, it means two parameters are required to decrypt the archives: One is decrypt algorithm, the other is decrypt key.
+·Decrypt key is included in system.arc, use parameter "system" to specify the path of "system.arc". If target game have only one .arc archive, there is no need to use this parameter.
+·Decrypt algorithm's parameter is "mt", the value enabled is "SFMT19937"(default) and "SFMT132049".
+·Two decrypt parameters are required to extract some .asb files: "string" and "crc", which are one string and a hex number, respectively. 
+
+【EXAMPLE】
+·game requiring to specify system parameter:
+-犯ワレルココロ
+-MARIONETTE ZERO
+-凌辱学園長／奴隷倶楽部 ～読心調教録～
+-Maria～天使のキスと悪魔の花嫁～
+-√ after and another
+-剣乙女ノア
+extraction command:
+crage -d "G:\√aaa" -O system="G:\√aaa\system.arc"
+·specify system and mt parameter:
+-テレビの消えた日
+extraction command:
+crage -d "E:\テレビの消えた日" -O mt=SFMT132049,system="E:\テレビの消えた日\system.arc"
+
+【ChangeLog】
+2009-05-06 22:33 ver 0.7.2 support new arc archive
+2009-04-18 20:34 ver 0.7.1 support alpha blending
+2008-06-18 08:43 ver 0.6.1 fixed a bug for a memory leak error
+2007-10-28 18:20 ver 0.6.0 supported selecting from SFMT19937 and SFMT132049 two algorithm modes
+2007-10-28 14:33 ver 0.5.0 1st version released

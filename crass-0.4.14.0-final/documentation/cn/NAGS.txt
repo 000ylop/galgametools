@@ -1,0 +1,38 @@
+﻿名称：		NAGS（no magic型）
+描述：		NAGS系统
+封包：		.nfs(weak magic)
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.0
+成熟度：	测试版
+
+【.nfs封包文件说明】
+    实际类型是有目录的封包资源文件。
+    元数据根据实际用途，是bmp、ogg、wav、scb（二进制脚本）等。
+    
+    	首部：
+		u32 index_entries;	// 资源文件数
+ 	索引段：需要解密
+		s8 name[24];		// 资源文件名
+		u32 offset;		// 资源文件数据偏移（从数据段算起）
+		u32 length;		// 资源文件数据长度
+	数据：
+		紧接在索引段之后。
+
+【.ngp资源文件说明】
+	元数据是bmp。
+
+    	首部：
+		s8 magic[16];		// "NGP            "
+		u8 unknown;		// 0
+		u8 zlib_flag;		// 必须是0x80
+		u32 comprlen;		// zlib压缩的数据长度
+		u32 width;		// 图像宽度
+		u32 height;		// 图像高度
+		u16 bpp;		// 每象素字节数
+		u8 reserved[0xe0];
+		u32 uncomprlen;		// zlib解压后的数据长度
+	数据：
+		紧接在索引段之后；格式为zlib压缩数据流。
+
+【ChangeLog】
+2007-5-7 13:58	ver 1.0.0	第一版发布

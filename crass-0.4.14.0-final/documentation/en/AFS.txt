@@ -1,0 +1,13 @@
+﻿Name:		AFS
+Description:	regular ps2 archive format
+Archive:	.AFS .pak
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	0.5.1
+Status:	        Alpha
+
+【Attention】
+·.adx is a regular format in ps2; foobar2000 can play it.
+
+【ChangeLog】
+2009-06-18 19:05 ver 0.5.1 support .pak
+2007-12-30 11:00 ver 1.0.0 1st version released

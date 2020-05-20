@@ -1,0 +1,68 @@
+﻿Name: 		MalieSystem
+Description: 	MalieSystem developed by GREEN WOOD
+Archive: 	.lib .mgf .mls
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	3.1.0
+Status: 	Beta
+
+【.lib Archive(ansi) Info】
+    the lib is actual type of archive with directory.
+    meta-data according to practical situation, can be png, ogg and so on.
+
+	header: 
+		s8 magic[4];	// "LIB"
+		u32 unknown0;	// 0x00010000
+		u32 entries;	// resource number
+		u32 unknown1;	// unknown
+	index segment: 
+		s8 name[36];	// resource name	
+		u32 length;	// resource data length
+		u32 offset;	// resource data offset(count from header)
+		u32 reserved;	// 0
+	data: 
+		closely behind index segment.
+
+【.lib Archive(unicode) Info】
+    the lib is actual type of archive with directory.
+    meta-data according to practical situation, can be png, ogg and so on.
+
+	header: 
+		s8 magic[4];	// "LIBU"
+		u32 unknown0;	// 0x00010000
+		u32 entries;	// resource number
+		u32 unknown1;	// 0
+	index segment: 
+		WCHAR name[34];	// resource name
+		u32 length;	// resource data length
+		u32 offset;	// resource data offset(count from header)
+		u32 reserved;	// 0
+	data: 
+		closely behind index segment; if first 4 bytes of resource is "LIB" or "LIBU", means current resource is sub-directory.
+
+【.mgf Archive/Resource Info】
+    meta-data is png.	
+
+	header: 
+		s8 magic[8];	// "MalieGF"
+	replace "MalieGF" with 8 bytes of PNG header so that can get png data
+
+【.mls Archive Info】
+   the mls is actual type of archive without directory.
+
+	header: 
+		s8 magic[13];	// "MalieScenario"
+	data: 
+		closely behind header，zlib compressed data
+
+notice: after Malie System 5, all data is encrypted by camellia encryption algorithm.
+
+【ChangeLog】
+2009-06-01 16:55 ver 3.1.0 support game "どんちゃんがきゅ～ 体験版兼製品版", "どんちゃんがきゅ～ パッケージ版" and "タペストリー -you will meet yourself-"; fix incorrectly search the encrypted LIBU header due to invalid alignment
+2009-03-02 22:40 ver 3.0.3 supported game "タペストリー -you will meet yourself-"
+2008-08-14 00:26 ver 3.0.2 fixed a problem on processing incorrectly null directory(.lib)
+2008-07-27 01:24 ver 3.0.1 supported game "あるすまぐな！ -ARS:MAGNA-"
+2008-06-14 01:22 ver 3.0.0 re-wrote implement of whole plug-in, supported recursion extraction of .lib again
+2007-12-22 19:03 ver 2.0.1 aborted recursion extraction of encrypted .lib archive(bigger archive will result in memory distribution failure); processed specially for bigger .lib
+2007-10-20 22:21 ver 2.0.0 supported extracting Malie System 5 archive encrypted by camellia
+2007-05-02 13:52 ver 1.1.0 fixed multi-directory processing mode 
+2007-04-23 19:10 ver 1.0.0 1st version released

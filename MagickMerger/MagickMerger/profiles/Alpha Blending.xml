@@ -1,0 +1,9 @@
+<Profile>
+  <Name>Alpha Blending</Name>
+  <Setting>
+    <Match>(\w+)_sec\.png</Match>
+    <Catch>$1__cut.png</Catch>
+    <Merge>$1__cut__sec.png</Merge>
+    <Command>composite [Match] [Catch] [Merge]</Command>
+  </Setting>
+</Profile>

@@ -1,0 +1,14 @@
+// exscharc.cpp, v1.0 2009/05/31
+// coded by asmodean
+
+// contact: 
+//   web:   http://asmodean.reverse.net
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+
+// This tool extracts data from ARC archives used by Trample on Schatten!!.
+
+// Copyright notice:
+// SIMD oriented Fast Mersenne Twister (SFMT)
+// Copyright (C) 2006,2007 Mutsuo Saito, Makoto Matsumoto and Hiroshima
+// University. All rights reserved.

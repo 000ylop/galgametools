@@ -1,0 +1,9 @@
+// extricgf, v2.13 2010/12/27
+// coded by asmodean
+
+// contact: 
+//   web:   http://asmodean.reverse.net
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+
+// This tool extracts data from Delta/Triangle's CGF archive format.

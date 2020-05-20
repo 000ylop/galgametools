@@ -1,0 +1,99 @@
+﻿名称：		BGI
+描述：		Ethornell - Buriko General Interpreter系统(Darios Sawm 氏・株式会社BURIKO)
+封包：		.arc .gdb
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.1
+成熟度：	测试版
+
+【.arc封包文件说明】
+    实际类型是有目录的封包资源文件。
+    元数据根据实际用途，是bmp、ogg、_bp（二进制脚本）等。
+    
+    	首部：
+		s8 magic[12];	// "PackFile    "
+		u32 entries;	//资源文件数（每项长度32字节）		
+	索引段：
+		s8 name[16];	// 资源文件名
+		u32 offset;	// 资源文件数据偏移（从索引段算起）
+		u32 length;	// 资源文件数据长度
+		u32 reserved[2];
+	数据：明文资源文件或经过dsc格式封装的资源文件
+		紧接在索引段之后。
+
+【dsc格式资源文件说明】
+    图像资源以外的资源文件通常被编码为dsc格式：
+	
+    	首部：
+		s8 magic[16];	// "DSC FORMAT 1.00"
+		u32 key;	// 解密512字节depth用key
+		u32 uncomprlen;	// 解压后的数据长度
+		u32 dec_counts;	// 解压循环的次数
+		u32 reserved;
+	数据：	lz压缩＋哈夫曼编码
+		u8 depth[512];	// 加密过的512字节哈夫曼树叶节点深度信息（即编码位长度，用于重建哈夫曼树）；
+				// 其中code小于256的叶节点是lz压缩时直接输出的字节数据；
+				// code大于等于256的叶节点是lz压缩时用于寻址window的copy_bytes长度（实际长度还要＋2）。
+		接下来是哈夫曼编码的位数据。如果叶节点的code小于256，则输出数据就是code本身；如果code大于等于256，则位数据中的12位用于window索引，code - 256表示copy_bytes长度（实际长度还要＋2）。（典型的lz压缩算法）
+
+【CompressedBG格式资源文件说明】
+    只有图像资源文件使用该格式，无扩展名。
+    元数据是bmp。
+
+	首部：
+		s8 magic[16];		// "CompressedBG___"
+		u16 width;		// 图像宽度
+		u16 height;		// 图像高度
+		u32 color_depth;	// 图像色深
+		u32 reserved0[2];
+		u32 zero_comprlen;	// 哈夫曼解码后的0值字节压缩的数据长度
+		u32 key;		// 解密叶节点权值段用key
+		u32 encode_length;	// 加密了的叶节点权值段的长度
+		u8 sum_check;		// 对解密后的叶节点权值段的累加校验值
+		u8 xor_check;		// 对解密后的叶节点权值段的累异或校验值
+		u16 reserved1;
+	数据：哈夫曼编码数据
+		紧接在首部之后，哈夫曼解码后得到的数据是0值字节压缩的数据（即使用类似RLE压缩算法对所有的0字节值压缩），解压后再进行均值defilting即可得到标准RGB数据。
+
+【.gdb封包文件说明】
+    实际类型是无目录的封包文件。
+    保存BGI系统配置信息。	
+
+    	首部：
+		s8 magic[16];	// "SDC FORMAT 1.00"
+		u32 key;	// 解密数据用key
+		u32 comprlen;	// 数据长度（lz压缩）
+		u32 uncomprlen;	// 解压后的数据长度
+		u16 sum_check;	// 累加校验值
+		u16 xor_check;	// 累异或校验值
+	数据：
+		紧接在首部之后，解密后是lz压缩数据。
+
+【音频资源文件说明】
+    实际类型是无目录的资源文件，无扩展名。
+    元数据是ogg。
+
+	首部：
+		u32 header_length;	// 首部长度（64字节）
+		u32 unknown0;		
+		u32 length;		// ogg数据长度
+		u32 unknown[13];
+	数据：
+		紧接在首部之后。
+
+【图像资源文件说明】
+    实际类型是无目录的资源文件，无扩展名，该格式存在于sysgrp.arc，graphic.arc封包中。
+    元数据是bmp。
+
+	首部：
+		u16 width;		// 图像宽度
+		u16 height;		// 图像高度
+		u32 color_depth;	// 图像色深
+		u32 reserved0[2];
+	数据：
+		紧接在首部之后。
+
+	注意：因为该格式实在没有很好的标识符，因此如果封包的名称不是sysgrp.arc或graphic.arc，crage遇到这种数据时会输出很多无扩展名的数据。如果遇到这种情况，请将游戏名称、公司和arc封包的名称发送给我，以便今后支持这种封包。
+
+【ChangeLog】
+2008-06-18 08:33 ver 1.0.1 忽略对无有效数据负载的封包的提取
+2007-04-23 11:53 ver 1.0.0 第一版发布

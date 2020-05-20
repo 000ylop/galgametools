@@ -1,0 +1,14 @@
+﻿名称：		route2
+描述：		
+封包：		.MHU(weak magic) .CGF(weak magic) .CG(weak magic) .IAF(weak magic) .SUD(weak magic) .WPF(weak magic)
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.5
+成熟度：	测试版
+
+【ChangeLog】
+2009-03-31 15:58 ver 1.0.5 支持.WPF格式
+2009-03-31 13:01 ver 1.0.4 支持变长的.CG索引项长度
+2009-03-11 22:36 ver 1.0.3 只提取有效的.MHU
+2008-10-18 12:48 ver 1.0.2 修正了旧版本.IAF文件提取错误的问题
+2008-05-17 17:05 ver 1.0.1 修正了.CG文件提取时发生冲突的错误
+2008-04-01 00:25 ver 1.0.0 第一版发布

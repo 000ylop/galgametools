@@ -1,0 +1,113 @@
+[en]
+1=OK
+2=Cancel
+
+-1=Send by FTP
+1011=Resize
+1012=Erase
+1013=Overwrite
+1014=Passive mode
+1019=To Remote Host:
+1020=Port:
+1021=Username:
+1022=Password:
+1023=Directory:
+
+[en-str]
+1=Transfering
+2=seconds remaining
+3=The file <%s> exists, do you want to overwrite it?
+4=File can not be opened
+5=FTP open error
+6=FTP write error
+
+[fr]
+1=OK
+2=Annuler
+
+-1=Envoi par FTP
+1011=Dimension
+1012=Effacer
+1013=Ecraser si prйsent
+1014=Mode passif
+1019=Hфte:
+1020=Port:
+1021=Utilisateur:
+1022=Mot de passe:
+1023=Rйpertoire:
+
+[fr-str]
+1=Transfert
+2=secondes restantes
+3=Le fichier <%s> existe, voulez-vous l'йcraser?
+4=Le fichier ne peut кtre ouvert
+5=Erreur d'ouverture FTP
+6=Erreur d'йcriture FTP
+
+[de]
+1=OK
+2=Abbrechen
+
+-1=Per FTP ьbertragen
+1011=GrцЯe
+1012=Lцschen
+1013=Ьberschreiben falls vorhanden
+1019=Host:
+1020=Port:
+1021=Benutzer:
+1022=Kennwort:
+1023=Verzeichnis:
+
+[de-str]
+1=Transfer
+2=Verbleibende Zeit [s]
+3=Die Datei <%s> ist bereits vorhanden, wollen Sie die Datei ьberschreiben?
+4=Die Datei kann nicht geцffnet werden
+5=Fehler beim Цffnen per FTP
+6=Fehler beim Schreiben per FTP
+
+[fi]
+1=OK
+2=Peruuta
+
+-1=Lдhetд FTP:llд
+1011=Muuta kokoon:
+1012=Poista
+1013=Ylikirjoita
+1019=Etдpalvelin:
+1020=Portti:
+1021=Kдyttдjдnimi:
+1022=Salasana:
+1023=Hakemisto:
+
+[fi-str]
+1=Siirretддn tiedostoa
+2=sekuntia jдljellд
+3=Tiedosto <%s> on jo olemassa, haluatko ylikirjoittaa sen?
+4=Tiedostoa ei voi avata
+5=FTP-yhteysvirhe
+6=FTP-kirjoitusvirhe
+
+[ru]
+1=OK
+2=Отмена
+
+-1=Отправить на FTP-сервер
+1002=Порт:
+1011=Изменять размер:
+1012=Удалить
+1013=Перезаписывать
+1014=Пассив. режим обмена
+1019=FTP-сервер:
+1020=Порт:
+1021=Логин:
+1022=Пароль:
+1023=Папка на сервере:
+
+[ru-str]
+1=Передача данных
+2=секунд осталось
+3=Файл "%s" уже существует, желаете перезаписать его?
+4=Невозможно открыть файл
+5=Ошибка чтения FTP
+6=Ошибка записи FTP

@@ -1,0 +1,10 @@
+// exscharc.cpp, v1.2 2010/07/24
+// coded by asmodean
+
+// contact: 
+//   web:   http://asmodean.reverse.net
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+
+// This tool extracts data from ARC archives used by Trample on Schatten!!
+// and other games.  Compile with -DRUNELORD for Rune Lord variation.

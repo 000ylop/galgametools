@@ -1,0 +1,11 @@
+// exmarupac.cpp, v1.0 2006/11/25
+// coded by asmodean
+
+// contact: 
+//   web:   http://plaza.rakuten.co.jp/asmodean
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+//   icq:   55244079
+
+// This tool extracts files from *.PAC archives used by STRIKE's ƒ}ƒ‹”él–•”—½J‰Û.
+// Use pgd2tga for the graphics.

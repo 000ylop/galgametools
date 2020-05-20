@@ -1,0 +1,21 @@
+﻿Name:		RealLive
+Description:	VisualArt's ScriptEngine RealLive
+Archive:	.g00(weak magic) .nwa(weak magic) .txt(weak magic) .ovk(weak magic) .cgm(weak magic) .dat .nwk(weak magic)
+Author:		痴漢公賊 (glanser@163.com)
+Version:	0.7.6
+Status:	        Alpha
+
+【TODO】
+·support to extract audio .nwa variable-length compression format
+·support AVG2000 and KineticNovel system
+
+【ChangeLog】
+2009-05-10 11:35 ver 0.7.6 correctly extracting .g00 file containing multi-image
+2009-02-22 14:39 ver 0.7.5 fixed the alpha channel with sawtooth edge
+2009-02-22 14:39 ver 0.7.4 fixed the invalid nwa channels bug
+2009-02-15 19:26 ver 0.7.3 supported extracting .nwk format
+2008-08-24 13:48 ver 0.7.2 fixed a problem on leaking memory when extracting .nwa
+2008-07-15 18:49 ver 0.7.1 supported extracting .dat resource; fixed a problem on boundary checking when decompressing .g00
+2008-07-03 23:01 ver 0.7.0 supported audio .nwa format
+2008-07-01 10:48 ver 0.6.1 fixed a error in extracting g00 type1
+2008-06-30 14:00 ver 0.6.0 1st version released(thanks to prz for providing relevant infos about intra format of SEEN.txt)

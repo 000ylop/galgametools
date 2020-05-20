@@ -1,0 +1,38 @@
+﻿Name:		BLUEGALE
+Description:		
+Archive:	.zbm .bdt(no magic) .inx(index file) .snn(no magic)
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.0.0
+Status:	        Final
+
+【Notice】
+·open source code.
+·To extract .snn archives, parameter "-l" is required to specify .inx index files.
+
+【.zbm Archive Info】
+    the .zbm is actual type of archive without directory.
+    meta-data is bmp.
+
+	header:
+		s8 magic[4];	// "amp_"
+		u16 version;	// 1
+		u32 uncomprlen;	// decompressed data length
+		u32 data_offset;// compressed data offset
+	data:
+		evolved lz compressed data.
+
+【.bdt Archive Info】
+    complement data.
+
+【.inx Index Info】
+    index file of .snn data file.
+
+	header:
+		u32 index_entries;	// resource number
+	index segment:
+		s8 name[64];		// resource name
+		u32 offset;		// resource offset(count from header)
+		u32 length;		// resource length
+
+【ChangeLog】
+2007-05-23 21:20 ver 1.0.0 1st version released

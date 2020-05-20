@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="KID.dll" 接口名="FLD" 0 />
+	<插件 文件名="KID.dll" 接口名="IMG" 1 />
+	<插件 文件名="KID.dll" 接口名="WAF" 2 />
+
+	<文件 文件名="BG.DAT"     插件="0" 数据文件="ForImgOnly" />
+	<文件 文件名="CHR.DAT"    插件="0" 数据文件="ForImgOnly" />
+	<文件 文件名="SYSTEM.DAT" 插件="0" 数据文件="ForImgOnly" />
+
+	<文件 文件名="BGM.DAT"      插件="0" />
+	<文件 文件名="SAVER.DAT"    插件="0" />
+	<文件 文件名="SCENE00.DAT"  插件="0" />
+	<文件 文件名="SE.DAT"       插件="0" />
+	<文件 文件名="SYSVOICE.DAT" 插件="0" />
+	<文件 文件名="VOICE.DAT"    插件="0" />
+	<文件 文件名="WALL.DAT"     插件="0" />
+
+</游戏脚本>

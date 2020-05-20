@@ -1,0 +1,40 @@
+/*
+    宇峻 Bin 索引生成脚本
+*/
+
+// 打开的文件，根据情况修改
+idx   = io.fopenA ["Bin.idx",   "rb"];
+data  = io.fopenA ["Data.bin",  "rb"];
+image = io.fopenA ["Image.bin", "rb"];
+name  = mem.alloc [40];
+
+io.fseek [idx, 64, io.seekSet];
+count = io.readUint [idx];
+sys.changeCall [sys.self, "str.sprintf", 5];
+for [i = 0; i < count; i += 1]
+[
+    offset = io.readUint [idx];
+    size   = io.readUint [idx];
+    str.sprintf [name, "%u, %u, %06u\]\n", size, offset, i];
+    io.print [name, type.string];
+]
+io.print ["\n", type.string];
+
+count = io.readUint [idx];
+sys.changeCall [sys.self, "str.sprintf", 4];
+for [i = 0; i < count; i += 1]
+[
+    offset = io.readUint [idx];
+    size   = io.readUint [idx];
+    io.fseek [image, offset, io.seekSet];
+    str.sprintf [name, "%u, %u, ", size, offset];
+    io.print [name, type.string];
+    io.fread [name, 40, 1, image];
+    io.print [name, type.string];
+    io.print ["\]\n", type.string];
+]
+
+mem.free  [name];
+io.fclose [image];
+io.fclose [data];
+io.fclose [idx];

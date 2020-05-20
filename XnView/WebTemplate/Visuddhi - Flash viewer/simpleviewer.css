@@ -1,0 +1,57 @@
+/*
+'
+'**************************************
+' Visuddhi - http://visuddhi.com
+' Copyright (c) 2006 - Visuddhi
+' All right reserved. 
+'**************************************
+'
+' V 2.0 2009-11-29 Christian Wolkersdorfer http://wolkersdorfer.info
+'
+*/
+
+html, body	{ height:95%; }
+
+body {			
+	margin:0;
+	padding:0;
+	overflow:auto;
+	background-color: #222;
+	color:#666;
+	font-family:verdana;
+	font-size:20px;		
+}
+
+a {	
+	color:#ff0000;	
+}
+
+img { 
+	border: 0;
+}
+
+div.header {
+	text-align: left;
+	font-size: 26px;
+	font-weight: normal;
+	font-variant: small-caps;
+	color: #FFFFFF;
+	background: #eee url('images/sandstone.jpg') repeat-x;
+	padding-top: 4px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+	padding-left: 40px;
+}
+
+div.footer {
+	margin: 20px;
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+}
+
+div#flashcontent {
+	width:100%;
+	height:80%;
+}

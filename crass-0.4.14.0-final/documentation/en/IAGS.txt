@@ -1,0 +1,24 @@
+﻿Name: 		IAGS
+Description: 	Inc. WINTERS IAGS system
+Archive: 	.ifp
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	1.0.1
+Status: 	Final
+
+【.IFP Archive Info】
+    the .ifp is actual type of archive(no extension) with directory.
+    meta-data according to practical situation, can be png, binary script and so on.
+    
+    	header: 
+		s8 magic[16];	// "IAGS_IFP_01     "
+ 	index segment: 
+		u32 type;	// 0 - no data; 1 - index segment description item; C - index item */
+		u32 offset;	// resource data offset(count from header)
+		u32 length;	// resource data length
+		u32 reserved;
+	data: 
+		closely behind index segment.
+
+【ChangeLog】
+2008-02-26 20:14 ver 1.0.1 supported exporting .jpg resource
+2007-04-27 10:36 ver 1.0.0 1st version released

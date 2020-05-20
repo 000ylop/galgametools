@@ -1,0 +1,1305 @@
+; ----------------------------------------------------
+[IFD]
+0101=IFD Image
+0102=IFD Exif
+0103=IFD GPS
+0104=IFD Interoperability
+A010=MakerNote (Canon)
+A020=MakerNote (Nikon)
+A030=MakerNote (Nikon)
+A040=MakerNote (Casio)
+A050=MakerNote (Casio)
+A060=MakerNote (Fuji)
+A070=MakerNote (Olympus)
+A080=MakerNote (Sigma)
+A090=MakerNote (Sanyo)
+A0A0=MakerNote (Minolta)
+A0B0=MakerNote (Minolta)
+
+; --------------------- Main IFD ---------------------
+
+[0101-00FE]
+Label=
+
+[0101-0100]
+Label=Широчина
+
+[0101-0101]
+Label=Дължина
+
+[0101-0102]
+Label=Бита за отчет
+
+[0101-0103]
+Label=Компресия
+
+[0101-0106]
+Label=Цветна интерпретация
+ValueList=0#Неизвестна, 1#Чернобяло, 2#RGB, 6#YCbCr
+
+[0101-010A]
+Label=Ред на попълване
+
+[0101-010D]
+Label=Документ
+
+[0101-010E]
+Label=Описание
+
+[0101-010F]
+Label=Производител
+
+[0101-0110]
+Label=Модел
+
+[0101-0111]
+Label=Бели ивици
+
+[0101-0112]
+Label=Ориентация
+ValueList=1#Нормална, 2#Огледална, 3#С главата надолу, 4#Завъртяна на 180°, 5#Огледална и на 90° по ЧС, 6#Завъртяна на 270° по ЧС, 7#Огледална и на 270° по ЧС, 8#Завъртяна на 90° по ЧС
+
+[0101-0115]
+Label=Отчета за пиксел
+
+[0101-0116]
+Label=Реда за ивица
+
+[0101-0117]
+Label=Байта за ивица
+
+[0101-011A]
+Label=X Резолюция
+
+[0101-011B]
+Label=Y Резолюция
+
+[0101-011C]
+Label=Planar configuration
+
+[0101-0128]
+Label=Единица за резолюция
+ValueList=1#Инч, 2#Инч, 3#cm, 4#mm, 5#um
+
+[0101-012D]
+Label=Начин на предаване
+
+[0101-0131]
+Label=Софтуер
+
+[0101-0132]
+Label=Последна промяна
+
+[0101-013B]
+Label=Фотогроф
+
+[0101-013E]
+Label=Бяла точка
+
+[0101-013F]
+Label=Осномвен цвят
+
+[0101-0156]
+Label=Диапазон
+
+[0101-0200]
+Label=JPEGProc
+
+[0101-0201]
+Label=Позиция на миниатюрата
+
+[0101-0202]
+Label=Размер на миниатюрата
+
+[0101-0211]
+Label=YCbCr Коефициенти
+
+[0101-0212]
+Label=YCbCr SubSampling
+
+[0101-0213]
+Label=YCbCr Позициониране
+ValueList=1#централно, 2#съпоставено
+
+[0101-0214]
+Label=Отправни черно бяло
+
+[0101-828D]
+Label=CFA Повтарящ се мотив
+
+[0101-828E]
+Label=CFA Шаблон
+
+[0101-828F]
+Label=Ниво но батерията
+
+[0101-8298]
+Label=Авторско право
+
+; Camera IFD
+
+[0102-829A]
+Label=Експозиция [s]
+
+[0102-829D]
+Label=F-Число
+
+[0102-83BB]
+Label=IPTC/NAA
+
+[0102-8769]
+Label=Exif данни
+
+[0102-8773]
+Label=Цветен профил
+
+[0102-8822]
+Label=Програмен режим
+ValueList=0#Неназован, 1#Ръчен, 2#Нормелен, 3#Приоритет на блендата, 4#Приоритет на времето, 5#Авторски (бавен), 6#Спортен (скоростен), 7#Портрет, 8#Пейзаж
+
+[0102-8824]
+Label=Спактрална чувствителност
+
+[0102-8825]
+Label=GPS инфо
+
+[0102-8827]
+Label=ISO скорост
+
+[0102-8828]
+Label=OECF
+
+[0102-9000]
+Label=EXIF версия
+
+[0102-9003]
+Label=Дата на снимане
+
+[0102-9004]
+Label=Дата на конвертиране
+
+[0102-9101]
+Label=Компоненти
+
+[0102-9102]
+Label=Компресирани бита за пиксел
+
+[0102-9201]
+Label=Скорост [s]
+
+[0102-9202]
+Label=Бленда
+
+[0102-9203]
+Label=Яркост
+
+[0102-9204]
+Label=Компенсация
+
+[0102-9205]
+Label=Максимална бленда
+
+[0102-9206]
+Label=Разстояние (m)
+
+[0102-9207]
+Label=Фокус
+ValueList=0#Неуказан, 1#Усредняване, 2#Централно претеглено усредняване, 3#В точка, 4#Многоточков, 5#Многосегментен, 6#Частичен, -1#Друг
+
+[0102-9208]
+Label=Светлинен източник
+ValueList=0#Автоматичен, 1#Естествен, 2#Флуоресцентетен, 3#Крушка, 10#Светкавица, 17#Стандартен A, 18#Стандартен B, 19#Стандартен C, 20#D55, 21#D65, 22#D75, #255Друг, -1#Друг
+
+[0102-9209]
+Label=Светкавица
+ValueList=0#Изключена, 1#Включена, 5#Включена - без отблясъци, 7#Включена - с отблясъци, 9#Принудително включена, 13#Принудително включена - без отблясъци, 15#Принудително включена - с отблясъци, 16#Изключена, 24#Изключена, 25#Включена - автоматичен режим, 29#Включена - автоматичен режим - без отблясъци, 31#Включена - автоматичен режим - с отблясъци, 32#Изключена, 65#Намаляване на червените очи, 69#Намаляване на червените очи - без отблясъци, 71#Намаляване на червените очи - с отблясъци, 73#Намаляване на червените очи - принудително включена, 77#Намаляване на червените очи - принудително включена - с отблясъци , 79#Намаляване на червените очи - принудително включена - с отблясъци, 89#Намаляване на червените очи - автоматичен режим , 93#Намаляване на червените очи - автоматичен режим - без отблясъци, 95#Намаляване на червените очи - автоматичен режим - с отблясъци
+
+[0102-920A]
+Label=Фокусно разстояние [mm]
+
+[0102-927C]
+Label=Бележка
+
+[0102-9286]
+Label=Коментар
+
+[0102-9290]
+Label=SubSecTime
+
+[0102-9291]
+Label=SubSecTimeOriginal
+
+[0102-9292]
+Label=SubSecTimeDigitized
+
+[0102-A000]
+Label=FlashPix версия
+
+[0102-A001]
+Label=Цветна схема
+
+[0102-A002]
+Label=EXIF широчина
+
+[0102-A003]
+Label=EXIF височина
+
+[0102-A005]
+Label=Отместване за предаване
+
+[0102-A20B]
+Label=Енергия на светкавицата
+
+[0102-A20C]
+Label=Spatial frequency response
+
+[0102-A20E]
+Label=Фокусна равнина X-резолюция
+
+[0102-A20F]
+Label=Фокусна равнина Y-резолюция
+
+[0102-A210]
+Label=Единица за резолюция
+ValueList=1#Инч, 2#Инч, 3#cm, 4#mm, 5#um
+
+[0102-A214]
+Label=Положение на предмета
+
+[0102-A215]
+Label=Индекс експозиция
+
+[0102-A217]
+Label=Метод на измерване
+ValueList=1#Неуточнен, 2#Еднослоен цветен сензор, 3#Двуслоен цветен сензор, 4#Трислоен цветен сензор, 5#Цветен сензор, 6#Трилинеен сензор, 7#Линеен цветен сензор
+
+[0102-A300]
+Label=Файл
+
+[0102-A301]
+Label=Тип сцена
+
+[0102-A302]
+Label=CFA шаблон
+
+[0102-A401]
+Label=Потребителски рендер
+ValueList=0#Нормелен процес, 1#Ръчен процес
+
+[0102-A402]
+Label=Експозиция
+ValueList=0#Автоматична, 1#Ръчна, 2#Автоматична - ограничена
+
+[0102-A403]
+Label=Баланс на бялото
+ValueList=0#Автомотичен, 1#Ръчен
+
+[0102-A404]
+Label=Цифрово увеличение
+
+[0102-A405]
+Label=Фокусно разстояние (35mm)
+
+[0102-A406]
+Label=Тип сцена
+ValueList=0#Стандартна, 1#Пейзаж, 2#Портрет, 3#Нощна
+
+[0102-A407]
+Label=Усилване
+ValueList=0#Намя, 1#Леко усилване, 2#Голямо усилване, 3#Леко зътъмняване, 4#Силно зятъмняване
+
+[0102-A408]
+Label=Контраст
+ValueList=0#Нормален, 1#Омекотен, 2#Усилен
+
+[0102-A409]
+Label=Цветност
+ValueList=0#Нормална, 1#Отслбена, 2#Усилена
+
+[0102-A40A]
+Label=Острота
+ValueList=0#Нормална, 1#Омекотена, 2#Усилена
+
+[0102-A40B]
+Label=Описание на настройките
+
+[0102-A40C]
+Label=Разстояние до обекта
+ValueList=0#Неустановено, 1#Макро, 2#Близък план, 3#Далечен план
+
+[0102-A420]
+Label=Номер на изображение
+ValueList=
+
+; --------------------- GPS IFD ---------------------
+
+[0103-0000]
+Label=Версия
+
+[0103-0001]
+Label=Широчинна база
+ValueList=N#Север, S#Юг
+
+[0103-0002]
+Label=Ширина
+
+[0103-0003]
+Label=Височинна база
+ValueList=E#Изток, W#Запад
+
+[0103-0004]
+Label=Дължина
+
+[0103-0005]
+Label=Височинна база
+ValueRef=0#Надморска височина
+
+[0103-0006]
+Label=Височина
+
+[0103-0007]
+Label=Дата/Час
+
+[0103-0008]
+Label=Сателити
+
+[0103-0009]
+Label=Състояние
+ValueList=A#Измерване, V#Известяване
+
+[0103-000A]
+Label=Режим на измерване
+ValueList=2#Двумерно, 3#Тримерно
+
+[0103-000B]
+Label=DOP
+
+[0103-000C]
+Label=Индекс скорост
+
+[0103-000D]
+Label=Скорост
+
+[0103-000E]
+Label=Индекс маршрут 
+ValueList=M#Магнитен север, T#Полярен север
+
+[0103-000f]
+Label=Маршрут
+
+[0103-0010]
+Label=Индекс посока
+
+[0103-0011]
+Label=Посока на снимане
+
+[0103-0012]
+Label=Дата на картата
+
+[0103-0013]
+Label=Отправна ширина
+ValueList=N#Север, S#Юг
+
+[0103-0014]
+Label=Отправна ширина
+
+[0103-0015]
+Label=Отправна дължина
+ValueList=E#Изток, W#Запад
+
+[0103-0016]
+Label=Отправна дължина
+
+[0103-0017]
+Label=Dest Bearing Ref
+ValueList=M#Магнитен север, T#Земен север
+
+[0103-0018]
+Label=Dest Bearing
+ValueList=K#Километри, M#Мили, N#Морски мили
+
+[0103-0019]
+Label=Dest Distance Ref
+
+[0103-001A]
+Label=Dest Distance
+
+[0103-001B]
+Label=Processing Method
+
+[0103-001C]
+Label=Area Information
+
+[0103-001D]
+Label=Дата
+
+[0103-001E]
+Label=Корекция на разминаването
+ValueList=0#Без корекция, 1#Коригирано разминаване
+
+; --------------------- IOP IFD ---------------------
+
+[0104-0001]
+Label=IOP индекс
+
+[0104-0002]
+Label=IOP версия
+
+[0104-1001]
+Label=IOP ширина
+
+[0104-1002]
+Label=IOP височина
+
+; --------------------- Makernote (Canon) ---------------------
+
+[A010-0001]
+Label=Настройки 1
+
+[A010-0004]
+Label=Настройки 2
+
+[A010-0006]
+Label=Информация
+
+[A010-0007]
+Label=Версия Firmware
+
+[A010-0008]
+Label=Пореден номер
+
+[A010-0009]
+Label=Собственик
+
+[A010-000C]
+Label=Сериен номер
+
+; --------------------- Makernote (Canon) - Camera Settings 1 ---------------------
+
+[A011-0001]
+Label=Макро
+ValueList=1#Макро, 2#Нормален
+
+[A011-0002]
+Label=Таймер
+ValueList=0#Изключен
+
+[A011-0003]
+Label=Компресия
+ValueList=2#Нормална, 3#Фина, 5#Супер фина
+
+[A011-0004]
+Label=Светкавица
+ValueList=0#Без светкавица, 1#Автоматична, 2#Включена, 3#Намаляване на ефекта червени очи, 4#Забавена синхронизация, 5#Автоматича + намаляване на ефекта червени очи, 6#Включена + + намаляване на ефекта червени очи
+
+[A011-0005]
+Label=Режим на снимане
+ValueList=0#Единичен, 1#Поредица
+
+[A011-0007]
+Label=Фокусиране
+ValueList=0#Единствен, 1#AI Серво, 2#AI Фокус, 3#Ръчно, 4#Единичен, 5#Поредица, 6#Ръчен
+
+[A011-000A]
+Label=Размер на изображението
+ValueList=0#Голямо, 1#Средно, 2#Малко
+
+[A011-000B]
+Label=Любителска програма
+ValueList=0#Пълно авто, 1#Рачно, 2#Пейзаж, 3#Бърза скорост, 4#Бавна скорост, 5#Нощна снимка, 6#Ч/Б, 7#Стар филм, 8#Портрет, 9#Спорт, 10#Макро / Близък план, 11#Широк обхват
+
+[A011-000D]
+Label=Контраст
+ValueList=-1#Слаб, 0#Нормален, 1#Висок
+
+[A011-000E]
+Label=Цветност
+ValueList=-1#Слаба, 0#Нормална, 1#Висока
+
+[A011-000F]
+Label=Острота
+ValueList=-1#Слаба, 0#Нормална, 1#Висока
+
+[A011-0010]
+Label=ISO стойност
+ValueList=0#Виж Exif ISO,15#Авто, 16#50, 17#100, 18#200, 19#400
+
+[A011-0011]
+Label=Режим на фокусиране
+ValueList=3#Оценъчен, 4#Частично, 5#Централно-претеглено
+
+[A011-0012]
+Label=Фокус
+ValueList=0#Ръчен, 1#Автоматичен, 3#Близък план (макро), 7#Далечен план, 8#Заключване на фокуса
+
+[A011-0013]
+Label=Точка на автофокус 
+ValueList=12288#Ръчен фокус, 12289#Автоматично избрана, 12290#Дясна, 12291#Централна, 12292#Лява
+
+[A011-0014]
+Label=Режим на експозицията
+ValueList=0#Лесна снимка, 1#Прогрема, 2#Приоритет на затвора, 3#Приоритет на блендата, 4#Ръчен, 5#Дълбочина на фокуса
+
+[A011-0017]
+Label=Фокусно разстояние [mm]
+
+[A011-0018]
+Label=Близко фокусно разстояние [mm]
+
+[A011-0019]
+Label=Фокус единица
+
+; --------------------- Makernote (Canon) - Camera Settings 2 ---------------------
+
+[A012-0007]
+Label=Баланс на бялото
+ValueList=0#Auto, 1#Sunny, 2#Cloudy, 3#Tungsten, 4#Fluorescent, 5#Flash, 6#Custom
+
+[A012-0009]
+Label=Номер
+
+; --------------------- Makernote (Nikon) ---------------------
+
+[A020-0003]
+Label=Image quality
+ValueList=1#VGA Basic, 2#VGA Normal, 3#VGA Fine, 4#SXGA Basic, 5#SXGA Normal, 6#SXGA Fine, 10#UXGA Basic, 11#UXGA Normal, 12#UXGA Fine
+
+[A020-0004]
+Label=Color mode
+ValueList=1#Color, 2#Monochrome
+
+[A020-0005]
+Label=Image adjustement
+ValueList=0#Normal, 1#Bright(+), 2#Bright(-), 3#Contrast(+), 4#contrast(-)
+
+[A020-0006]
+Label=CCD sensitivity
+ValueList=0#ISO 80, 2#ISO 160, 4#ISO 320, 5#ISO 100
+
+[A020-0007]
+Label=White balance
+ValueList=0#Auto, 2#Preset, 4#Daylight, 5#Fluorescent, 6#Cloudy, 7#Speedlight
+
+[A020-0008]
+Label=Focus
+
+[A020-000A]
+Label=Digital zoom
+
+[A020-000B]
+Label=Lens adapter
+ValueList=0#None, 2#Fisheye
+
+; --------------------- Makernote (Nikon) ---------------------
+
+[A030-0001]
+Label=Data version
+
+[A030-0002]
+Label=ISO Setting
+
+[A030-0003]
+Label=Color mode
+
+[A030-0004]
+Label=Image quality
+
+[A030-0005]
+Label=White balance
+
+[A030-0006]
+Label=Image Sharpening
+
+[A030-0007]
+Label=Focus mode
+
+[A030-0008]
+Label=Flash setting
+
+[A030-000B]
+Label=White Balance Fine Tune
+
+[A030-000F]
+Label=ISO Selection
+
+[A030-0013]
+Label=ISO Setting
+
+[A030-0016]
+Label=Image Boundary
+
+[A030-0080]
+Label=Image adjustement
+
+[A030-0081]
+Label=Tone Compensation
+
+[A030-0082]
+Label=Lens adapter
+
+[A030-0083]
+Label=Lens type
+
+[A030-0084]
+Label=Lens
+
+[A030-0085]
+Label=Focus distance
+
+[A030-0086]
+Label=Digital zoom
+
+[A030-0087]
+Label=Flash mode
+ValueList=0#Did not fire, 8#Fired, Commander Mode, 9#Fired, TTL Mode
+
+[A030-0088]
+Label=AF Point
+
+[A030-008D]
+Label=Color hue
+
+[A030-008F]
+Label=Scene mode
+
+[A030-0090]
+Label=Light source
+
+[A030-0092]
+Label=Hue Adjustment
+
+[A030-0094]
+Label=Saturation
+
+[A030-0095]
+Label=Noise Reduction
+
+[A030-00A0]
+Label=Serial Number
+
+[A030-00A7]
+Label=Shutter Count
+
+[A030-00A9]
+Label=Image Optimization
+
+[A030-00AA]
+Label=Saturation
+
+[A030-00AB]
+Label=Vari Program
+
+; --------------------- Makernote (Casio) ---------------------
+
+[A040-0001]
+Label=Recording Mode
+ValueList=1#Single Shutter, 2#Panorama, 3#Night scene, 4#Portrait, 5#Landscape
+
+[A040-0002]
+Label=Quality setting
+ValueList = 1#Economy, 2#Normal, 3#Fine
+
+[A040-0003]
+Label=Focus mode
+ValueList=2#Macro, 3#Auto Focus, 4#Manual Focus, 5#Infinity
+
+[A040-0004]
+Label=Flash mode
+ValueList=1#Auto, 2#On, 3#Off, 4#Red eyes reduction
+
+[A040-0005]
+Label=Flash intensity
+ValueList=1#Auto, 2#on, 3#off, 4#Red eyes reduction, 11#Weak, 13#Normal, 15#Strong
+
+[A040-0006]
+Label=Object distance
+
+[A040-0007]
+Label=White balance
+ValueList=1#Auto, 2#Tungsten, 3#Daylight, 4#Fluorescent, 5#Shade, 129#Manual
+
+[A040-000A]
+Label=Digital zoom
+ValueList=65536#Off, 65537#2X Digital Zoom
+
+[A040-000B]
+Label=Sharpness
+ValueList=0#Normal, 1#Soft, 2#Hard
+
+[A040-000C]
+Label=Contrast
+ValueList=0#Normal, 1#Soft, 2#Hard
+
+[A040-000D]
+Label=Saturation
+ValueList=0#Normal, 1#Soft, 2#Hard
+
+[A040-0014]
+Label=CCD Sensitivity
+ValueList=64#Normal, 125#+1.0, 250#+2.0, 244#+31.0, 80#Normal, 100#High
+
+; --------------------- Makernote (Casio) ---------------------
+
+[A050-0002]
+Label=Thumbnail Dimensions
+
+[A050-0003]
+Label=Thumbnail Size
+
+[A050-0004]
+Label=Thumbnail Offset
+
+[A050-0008]
+Label=Quality Mode
+ValueList=0#Economy, 1#Normal, 2#Fine
+
+[A050-0009]
+Label=Image Size
+ValueList=0#640x480, 4#1600x1200, 5#2048x1536, 20#2288x1712, 21#2592x1944, 22#2304x1728, 36#3008x2008
+
+[A050-000D]
+Label=Focus Mode
+ValueList=0#Normal, 1#Macro
+
+[A050-0014]
+Label=Iso Sensitivity
+ValueList=3#50, 4#64, 6#100, 9#200
+
+[A050-0019]
+Label=White Balance
+ValueList=0#Auto, 1#Daylight, 2#Shade, 3#Thungsten, 4#Fluorescent, 5#Manual
+
+[A050-001D]
+Label=Focal Length
+
+[A050-001F]
+Label=Saturation
+ValueList=0#-1, 1#Normal, 2#+1
+
+[A050-0020]
+Label=Contrast
+ValueList=0#-1, 1#Normal, 2#+1
+
+[A050-0021]
+Label=Sharpness
+ValueList=0#-1, 1#Normal, 2#+1
+
+[A050-0e00]
+Label=Print Image Matching Info
+
+[A050-2011]
+Label=White Balance Bias
+
+[A050-2012]
+Label=White Balance
+ValueList=12#Flash, 0#Manual, 1#Auto?, 4#Flash?
+
+[A050-2022]
+Label=Object Distance [mm]
+
+[A050-2034]
+Label=Flash Distance
+
+[A050-3000]
+Label=Record Mode
+ValueList=2#Normal
+
+[A050-3001]
+Label=Self Timer
+ValueList=1#Off
+
+[A050-3002]
+Label=Quality
+ValueList=1#Economic, 2#Normal, 3#Fine
+
+[A050-3003]
+Label=Focus Mode
+ValueList=0#Manual?, 1#Fixation?, 3#Single-Area Auto Focus, 4#Multi-Area Auto Focus
+
+[A050-3006]
+Label=Time Zone
+
+[A050-3007]
+Label=Bestshot Mode
+ValueList=0#On, 1#Off
+
+[A050-3014]
+Label=CCD ISO Sensitivity
+
+[A050-3015]
+Label=Colour Mode
+ValueList=0#Off
+
+[A050-3016]
+Label=Enhancement
+ValueList=0#Off
+
+[A050-3017]
+Label=Filter
+ValueList=0#Off
+
+; --------------------- Makernote (Fuji) ---------------------
+
+[A060-0000]
+Label=Maker Note Version
+
+[A060-1000]
+Label=Quality Setting
+
+[A060-1001]
+Label=Sharpness
+ValueList=1#Soft, 2#Soft, 3#Normal, 4#Hard, 5#Hard
+
+[A060-1002]
+Label=White balance
+ValueList=0#Auto, 256#Daylight, 512#Cloudy, 768#DaylightColour-fluorescence, 769#DaywhiteColour-fluorescence, 770#White-fluorescence, 1024#Incandenscense, 3840#Custom
+
+[A060-1003]
+Label=Chroma Saturation
+ValueList=0#Normal, 256#High, 512#Low
+
+[A060-1004]
+Label=Contrast
+ValueList=0#Normal, 256#High, 512#Low
+
+[A060-1010]
+Label=Flash mode
+ValueList=0#Auto, 1#On, 2#Off, 3#Red eyes reduction
+
+[A060-1011]
+Label=Flash Strength
+
+[A060-1020]
+Label=Macro mode
+ValueList=0#Off, 1#On
+
+[A060-1021]
+Label=Focus mode
+ValueList=0#Auto, 1#Manual
+
+[A060-1030]
+Label=Slow Synchro Mode
+ValueList=0#Off, 1#On
+
+[A060-1031]
+Label=Picture Mode
+ValueList=0#Auto, 1#Portrait, 2#Landscape, 4#Sports scene, 5#Night scene, 6#Program AE, 256#Aperture Prior AE, 512#Shutter Prior AE, 768#Manual Exposure
+
+[A060-1100]
+Label=Continuous/Bracketing Mode
+ValueList=0#Off, 1#On
+
+[A060-1300]
+Label=Blur Status
+ValueList=0#None, 1#Blur Warning
+
+[A060-1301]
+Label=Focus Status
+ValueList=0#Ok, 1#Out of Focus
+
+[A060-1302]
+Label=Exposure Status
+ValueList=0#Ok, 1#Over Exposed
+
+; --------------------- Makernote (Olympus) ---------------------
+
+[A070-0200]
+Label=Shooting mode
+
+[A070-0201]
+Label=Compression setting
+ValueList=0#SQ, 1#HQ, 2#SHQ
+
+[A070-0202]
+Label=Macro mode
+ValueList=0#Normal, 1#Macro
+
+[A070-0204]
+Label=Digital zoom
+
+[A070-0207]
+Label=Firmware version
+
+[A070-0208]
+Label=Picture info
+
+[A070-0209]
+Label=Camera ID
+
+; --------------------- Makernote (Sigma) ---------------------
+
+[A080-0002]
+Label=Serial Number
+
+[A080-0003]
+Label=Drive mode
+
+[A080-0004]
+Label=Resolution Mode
+
+[A080-0005]
+Label=AF Mode
+
+[A080-0006]
+Label=Focus Setting
+
+[A080-0007]
+Label=White balance
+
+[A080-0008]
+Label=Exposure mode
+
+[A080-0009]
+Label=Metering mode
+
+[A080-000A]
+Label=Lens
+
+[A080-000B]
+Label=Color Space
+
+[A080-000C]
+Label=Exposure Compensation
+
+[A080-000D]
+Label=Contrast
+
+[A080-000E]
+Label=Shadow
+
+[A080-000F]
+Label=Highlight
+
+[A080-0010]
+Label=Saturation
+
+[A080-0011]
+Label=Sharpness
+
+[A080-0012]
+Label=X3 Fill Light
+
+[A080-0014]
+Label=Color Adjustement
+
+[A080-0015]
+Label=Adjustment Mode
+
+[A080-0016]
+Label=Quality
+
+[A080-0017]
+Label=Firmware Mode
+
+[A080-0018]
+Label=Software
+
+[A080-0019]
+Label=Auto Bracket
+
+; --------------------- Makernote (Sanyo) ---------------------
+
+[A090-00ff]
+Label=Maker Note Offset
+
+[A090-0100]
+Label=Thumbnail
+
+[A090-0200]
+Label=Special Mode
+
+[A090-0201]
+Label=Quality
+ValueList=0#Normal/Very Low, 1#Normal/Low, 2#Normal/Medium Low, 3#Normal/Medium, 4#Normal/Medium High, 5#Normal/High, 6#Normal/Very High, 7#Normal/Super High, 256#Fine/Very Low, 257#Fine/Low, 258#Fine/Medium Low, 259#Fine/Medium, 260#Fine/Medium High, 261#Fine/High, 262#Fine/Very High, 263#Fine/Super High, 512#Super Fine/Very Low, 513#Super Fine/Low, 514#Super Fine/Medium Low, 515#Super Fine/Medium, 516#Super Fine/Medium High, 517#Super Fine/High, 518#Super Fine/Very High, 519#Super Fine/Super High
+
+[A090-0202]
+Label=Macro
+ValueList=0#Normal, 1#Macro, 2#View, 3#Manual
+
+[A090-0204]
+Label=Digital zoom
+
+[A090-0207]
+Label=Software Version
+
+[A090-0208]
+Label=Picture Info
+
+[A090-0209]
+Label=Camera ID
+
+[A090-020E]
+Label=Sequential Shot
+ValueList=0#None, 1#Standard, 2#Best, 3#Adjust Exposure
+
+[A090-020F]
+Label=Wide Range
+ValueList=0#Off, 1#On
+
+[A090-0210]
+Label=Color Adjustment Mode
+ValueList=0#Off, 1#On
+
+[A090-0213]
+Label=QuickShot
+ValueList=0#Off, 1#On
+
+[A090-0214]
+Label=Self Timer
+ValueList=0#Off, 1#On
+
+[A090-0216]
+Label=Voice Memo
+ValueList=0#Off, 1#On
+
+[A090-0217]
+Label=Record Shutter Release
+ValueList=0#Record while down, 1#Press start, press stop
+
+[A090-0218]
+Label=Flicker Reduce
+ValueList=0#Off, 1#On
+
+[A090-0219]
+Label=Optical Zoom
+ValueList=0#Off, 1#On
+
+[A090-021B]
+Label=Digital Zoom
+ValueList=0#Off, 1#On
+
+[A090-021D]
+Label=Light Source Special
+ValueList=0#Off, 1#On
+
+[A090-021E]
+Label=Resaved
+ValueList=0#No, 1#Yes
+
+[A090-021F]
+Label=Scene Select
+
+ValueList=0#Off, 1#Sport, 2#Tv, 3#Night, 4#User 1, 5#User 2
+[A090-0223]
+Label=Manual Focus Distance
+
+[A090-0224]
+Label=Sequence Shot Interval
+ValueList=0#5 frames/sec, 1#10 frames/sec, 2#15 frames/sec, 3#20 frames/sec
+
+[A090-0225]
+Label=Flash mode
+ValueList=0#Auto, 1#Force, 2#Disabled, 3#Red eye
+
+; --------------------- Makernote (Minolta) ---------------------
+
+[A0A0-0000]
+Label=Version
+
+[A0A0-0040]
+Label=Compressed Image
+
+[A0A0-0081]
+Label=Preview Image Data
+
+[A0A0-0088]
+Label=Preview Image Start
+
+[A0A0-0089]
+Label=Preview Image Length
+
+[A0A0-0101]
+Label=Color Mode
+ValueList=0#Natural color, 1#Black&white, 2#Vivid color, 3#Solarization, 4#Adobe RGB
+
+[A0A0-0102]
+Label=Minolta Quality
+ValueList=0#Raw, 1#Super fine, 2#Fine, 3#Standard, 4#Economy, 5#Extra fine
+
+[A0A0-0103]
+Label=Minolta Quality
+ValueList=0#Raw, 1#Super fine, 2#Fine, 3#Standard, 4#Economy, 5#Extra fine
+
+; --------------------- Makernote (Minolta) ---------------------
+
+[A0B0-0001]
+Label=Exposure mode
+ValueList=0#Program, 1#Aperture priority, 2#Shutter priority, 3#Manual
+
+[A0B0-0002]
+Label=Flash mode
+ValueList=0#Fill flash, 1#Red eyes reduction, 2#Rear flash sync, 3#Wireless
+
+[A0B0-0003]
+Label=White balance
+ValueList=0#Auto, 1#Daylight, 2#Cloudy, 3#Tungsten, 5#Custom, 7#Fluorescent, 8#Fluorescent 2, 11#Custom 2, 12#Custom 3
+
+[A0B0-0004]
+Label=Image size
+ValueList=0#2560x1920 (2048x1536), 1#1600x1200, 2#1280x960, 3#640x480
+
+[A0B0-0005]
+Label=Image quality
+
+[A0B0-0006]
+Label=Drive mode
+ValueList=0#Single, 1#Continuous, 2#Self-timer, 4#bracketing, 5#interval, 6#UHS continuous, 7#HS continuous
+
+[A0B0-0007]
+Label=Metering mode
+ValueList=0#Multi-segment, 1#Center-weighted, 2#Spot
+
+[A0B0-0008]
+Label=ISO
+
+[A0B0-0009]
+Label=Shutter speed
+
+[A0B0-000A]
+Label=Aperture
+
+[A0B0-000B]
+Label=Macro mode
+ValueList=0#Off, 1#On
+
+[A0B0-000C]
+Label=Digital zoom
+ValueList=0#Off, 1#Electronic magnification, 2#2x
+
+[A0B0-000D]
+Label=Exposure Compensation
+
+[A0B0-000E]
+Label=Bracket Step
+ValueList=0#1/3 EV, 1#2/3 EV, 2#1 EV
+
+[A0B0-000F]
+Label=Interval Length
+
+[A0B0-0011]
+Label=Interval Number
+
+[A0B0-0012]
+Label=Focal length
+
+[A0B0-0013]
+Label=Focal distance
+
+[A0B0-0014]
+Label=Flash fired
+ValueList=0#No, 1#Yes
+
+[A0B0-0015]
+Label=Date
+
+[A0B0-0016]
+Label=Time
+
+[A0B0-0017]
+Label=Max aperture
+
+[A0B0-001A]
+Label=File Number Memory
+ValueList=0#Off, 1#On
+
+[A0B0-001B]
+Label=Last File Number
+
+[A0B0-001C]
+Label=Color Balance Red
+
+[A0B0-001D]
+Label=Color Balance Green
+
+[A0B0-001E]
+Label=Color Balance Blue
+
+[A0B0-001F]
+Label=Saturation
+
+[A0B0-0020]
+Label=Contrast
+
+[A0B0-0021]
+Label=Sharpness
+ValueList=0#Hard, 1#Normal, 2#Soft
+
+[A0B0-0022]
+Label=Subject Program
+ValueList=0#None, 1#Portrait, 2#Text, 3#Night portrait, 4#Sunset, 5#Sports action
+
+[A0B0-0023]
+Label=Flash Exposure Comp
+
+[A0B0-0024]
+Label=ISO setting
+ValueList=0#100, 1#200, 2#400, 3#800, 4#Auto
+
+[A0B0-0025]
+Label=Model
+ValueList=0#DiMAGE 7, 1#DiMAGE 5, 2#DiMAGE S304, 3#DiMAGE S404, 4#DiMAGE 7i, 5#DiMAGE 7Hi
+
+[A0B0-0026]
+Label=Interval mode
+ValueList=0#Still image, 1#Time-lapse Movie
+
+[A0B0-0027]
+Label=Folder name
+ValueList=0#Standard Form, 1#Data form
+
+[A0B0-0028]
+Label=Color mode
+
+[A0B0-0029]
+Label=Color filter
+
+[A0B0-002A]
+Label=BWFilter
+
+[A0B0-002B]
+Label=Internal Flash
+ValueList=0#No, 1#Fired
+
+[A0B0-002C]
+Label=Brightness
+
+[A0B0-002D]
+Label=SpotFocusPointX
+
+[A0B0-002E]
+Label=SpotFocusPointY
+
+[A0B0-002F]
+Label=Wide Focus Zone
+ValueList=0#No zone, 1#Center zone (horizontal orientation), 2#Center zone (vertical orientation), 3#Left zone, 4#Right zone
+
+[A0B0-0030]
+Label=Режим на фокуса
+ValueList=0#АФ, 1#РФ
+
+[A0B0-0031]
+Label=Фокусна площ
+ValueList=0#Wide Focus (normal), 1#Spot Focus
+
+[A0B0-0032]
+Label=DECPosition
+ValueList=0#Exposure, 1#Contrast, 2#Saturation, 3#Filter
+
+; --------------------- External words ---------------------
+
+[E000-0000]
+Label=
+ValueList=0#Uncalibrated, 1#RGB uncompressed
+
+[E000-0001]
+Label=
+ValueList=2#A directly photographed image
+
+[E000-0002]
+Label=Единица
+ValueList=3#Inch, 4#Centimeter
+
+[E000-0003]
+Label=Светкавица
+ValueList=5#No flash, 6#Flash fired, 7#Strobe return light not detected, 8#Strobe return light detected
+

@@ -1,0 +1,9 @@
+﻿名称：		bruns-system
+描述：		
+封包：		.um3 .brs .bmp .scm .bso .dat .cfg .png .brs
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.5.0
+成熟度：	开发版
+
+【ChangeLog】
+2008-03-25 18:53 ver 0.8.0 第一版发布

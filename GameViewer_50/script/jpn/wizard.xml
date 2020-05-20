@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="LiveMaker.dll" 接口名="VFF" />
+	<插件 文件名="LiveMaker.dll" 接口名="GAL" />
+
+	<文件 文件名="game.dat" 插件="0" 数据文件="game.ext" />
+
+</游戏脚本>

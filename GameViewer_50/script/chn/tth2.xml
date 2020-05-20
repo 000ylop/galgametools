@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<手动指定文件插件 />
+
+	<插件 文件名="ScrPAK.upk"              0 />
+	<插件 文件名="ManPAK.upk"              1 />
+	<插件 文件名="UjLib.dll"  接口名="MAP" 2 />
+	<插件 文件名="UjLib.dll"  接口名="DDX" 3 />
+	<插件 文件名="UjLib.dll"  接口名="LZH" 4 />
+	<插件 文件名="UjLib.dll"  接口名="BIN" 5 />
+
+	<文件 文件名="Image\*.IMG" 插件="0" 数据文件="uj\DDX.pndr" />
+	<文件 文件名="Image\*.fbg" 插件="0" 数据文件="uj\FBG.pndr" />
+	<文件 文件名="Image\*.BKS" 插件="0" 数据文件="uj\BKS.pndr" />
+
+	<文件 文件名="ChsData2.Bin"   插件="1" 数据文件="uj\tth2_data.ini" />
+	<文件 文件名="ChsImage2.Bin"  插件="1" 数据文件="uj\tth2_image.ini" />
+	<文件 文件名="SPData2.Bin"    插件="1" 数据文件="uj\tth2sp_data.ini" />
+	<文件 文件名="ChsSPData2.Bin" 插件="1" 数据文件="uj\tth2sp_data.ini" />
+	<文件 文件名="ChsImage2.Bin"  插件="1" 数据文件="uj\ChsImage2.Bin.ini" />
+
+	<文件 文件名="*.MAP"     插件="2" 数据文件="8" />
+	<文件 文件名="MAP\*.MAP" 插件="2" 数据文件="8" />
+
+	<文件 文件名="*.DDX" 插件="3" />
+	<文件 文件名="*.LZH" 插件="4" 数据文件="uj\lzh.ini" />
+
+	<文件 文件名="RoleManHead2"     插件="4" 数据文件="uj\lzh.ini" />
+	<文件 文件名="DialogHeadImage2" 插件="5" 数据文件="LZH" />
+	<文件 文件名="RoleBodyImage2"   插件="5" 数据文件="LZH" />
+	<文件 文件名="MANIMAGE2"        插件="5" 数据文件="LZH36" />
+	<文件 文件名="ItemImage2"       插件="5" 数据文件="LZH2" />
+	<文件 文件名="AutoMapImage2"    插件="5" 数据文件="LZH" />
+	<文件 文件名="StaticPicture2"   插件="5" 数据文件="uj\lzh.ini" />
+	<文件 文件名="SPItemImage2"     插件="5" 数据文件="LZH2" />
+	<文件 文件名="SPStaticPicture2" 插件="5" 数据文件="uj\lzh.ini" />
+
+</游戏脚本>

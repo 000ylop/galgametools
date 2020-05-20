@@ -1,0 +1,53 @@
+﻿Name:		N2System
+Description:	game system Nitroplus system 2 developed by 株式会社ニトロプラス
+Archive:	.npa
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.0.5
+Status:	        Final
+
+【Notice】
+when extracting must specify "game" parameter, relationship between parameter value and particular game as following:
+
+·スマガスペシャル － use "game=Smgsp" parameter to extract
+·装甲悪鬼村正 Web体験版 - use "game=Muramasa" parameter to extract
+·Sweet Pool - use "game=SweetPool" parameter to extract
+·スマガ - use "game=SMG" parameter to extract
+·スマガ 3％体験版 - use "game=SMGTrial" parameter to extract
+·CHAOS；HEAD - using "game=ChaosHead" parameter to extract
+·CHAOS；HEAD 体験版 Ver.2 - use "game=ChaosHeadTrial2" parameter to extract
+·CHAOS；HEAD 体験版 - use "game=ChaosHeadTrial" parameter to extract
+·続・殺戮のジャンゴ －地獄の賞金首－ - use "game=Django" parameter to extract
+·続・殺戮のジャンゴ －地獄の賞金首－ 体験版 - using "game=DjangoTrial" parameter to extract
+·Lamento -BEYOND THE VOID- - use "game=LamentoBTV" parameter to extract
+·予告編［Lamento -FRAGMENT-］- use "game=LamentoF" parameter to extract
+
+【Sample】
+take game "続・殺戮のジャンゴ －地獄の賞金首－" for example
+crage -d "E:\Program Files\Nitroplus\懕丒嶦滳偺僕儍儞僑亅抧崠偺徿嬥庱亅" -O game=Django
+cg.npa: 准备提取封包文件（含1817个资源文件） ...
+cg.npa：成功提取1817 / 1817个资源文件  /
+
+nss.npa: 准备提取封包文件（含249个资源文件） ...
+nss.npa：成功提取249 / 249个资源文件  /
+
+sound.npa: 准备提取封包文件（含628个资源文件） ...
+sound.npa：成功提取628 / 628个资源文件  |
+
+system.npa: 准备提取封包文件（含1个资源文件） ...
+system.npa：成功提取1 / 1个资源文件  /
+
+voice.npa: 准备提取封包文件（含3516个资源文件） ...
+voice.npa：成功提取3516 / 3516个资源文件  |
+
+N2System：成功提取5个.npa封包文件文件 /
+
+N2System：成功提取35个封包文件
+
+【ChangeLog】
+2009-06-27 15:23 ver 1.0.5 add parameter "game=Smgsp" to extract the game "スマガスペシャル"
+2009-05-28 10:34 ver 1.0.4 fix the error when extracting［Lamento -FRAGMENT-］
+2008-12-23 19:34 ver 1.0.3 added parameter "game=SweetPool", supported extracting "Sweet Pool", thank 扬帆之翼 for providing debugging info
+2008-09-28 21:03 ver 1.0.2 added parameter "game=SMG", supported extracting "スマガ", thank 緋色の欠片 for providing debugging info
+2008-07-18 21:28 ver 1.0.1 added parameter "game=SMGTrial", supported extracting "スマガ 3％体験版"
+2008-04-25 10:18 ver 1.0.0 supported extracting "CHAOS；HEAD"(thank famervan and famergui for providing memory dump data)
+2008-04-22 22:21 ver 0.8.0 1st version released

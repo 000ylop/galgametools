@@ -1,0 +1,60 @@
+﻿Name:		BaldrX
+Description:	system developed by 戯画(GIGA) Team Baldr 	
+Archive:	.pac .grp .spr .dat(no magic)
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	0.9.1
+Status:	        Alpha
+
+【TODO】
+·Extraction of .fnt archives.
+·Support of previous version .pac archives. (ぷちチェリー ～あなたといる季節～)
+
+【NOTICE】
+·Windows XP's function of preview is not aviliable for RGB565's 16-bit BMP images. Paintbursh (May cause image disorder), Photoshop, AcdSee (Not supported by 3.1) and irfanview can be used to view those images.
+·In early games, RGB565 and RGB 555 are not distinguished, both are 16-bit colors. They are distinguished only in recent games. (RGB565 is 16-bit color, while RGB 555 is 15-bit color.) If extracted images seem to have wrong color, please use the parameter "force_rgb555" to force crage export RGB555's 16-bit BMP images. Generally, only early games need this parameter. (Some games, like BALDR BULLET REVELLION use both new and old form at the same time.)
+
+【EXAMPLE】
+Take game "BALDR BULLET REVELLION" as an example:
+crage -p "K:\BBR\BMP\etc\T_CG.GRP"
+This image is a 16-bit BMP one of RGB565.
+
+crage -p "K:\BBR\BMP\etc\TTT.GRP" -O force_rgb555
+This image is a 16-bit BMP one of RGB555. If parameter "force_rgb555" is not used, the image will be exported by RGB565, causing bad effect.
+
+【.pac Archive Info】
+    the pac is actual type of archive with directory.
+    meta-data according to practical situation, can be bmp, wav, bin(compiled binary script) or ani and so on.
+
+    	header:
+    		s8 magic[4];	// "PAC" or "PACw"
+		u32 entries;	// every item with 76 bytes
+		u32 cmode;	// 0: no compression; 1: lzss compression; 2: normal huffman compression
+	index segment:		
+		closely behind header.			
+		s8 name[64];	// resource name
+		u32 offset;	// resource data offse(count from header)
+		u32 uncomprLen;	// decompressed data length(if in no compression, field vaule is equal to ones in comprLen)
+		u32 comprLen;	// compressed data length
+	data:
+		closely behind index segment.	
+    
+【.grp Resource Info】
+    meta-data is bmp.
+   	
+   	header: 
+		s8 magic[3];	// "GR2"(5-bit copy_bytes; 11-bit win_offset)
+		u16 bits_count;	// color depth
+		u32 width;	// width
+		u32 height;	// height
+		u32 dib_len;	// compressed data length
+		u32 flag_bits;	// number of bits of lzss's flag-bit
+	flag segment:
+		all lzss flag-bit are gathered to the field, actual length is equal to (flag_bits+7)/8.
+	data:
+		closely behind flag segment.
+
+【ChangeLog】
+2008-03-13 22:27 ver 0.9.1 supported a version of old .pac 
+2007-11-18 15:38 ver 0.9.0 fixed a problem on using incorrectlly palette to export 8-bit bitmap; supported extracting .spr file; imported force_rgb555 parameter
+2007-05-30 23:01 ver 0.0.2 supported pac archive with magic is "PACw"
+2007-04-03 21:57 ver 0.0.1 1st version released

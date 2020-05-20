@@ -1,0 +1,19 @@
+﻿名称：		ADVDX
+描述：		ADVDX系统
+封包：		.dat(no magic) .pak(no magic) .ads(weak magic)
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.1.0
+成熟度：	测试版
+
+【TODO】
+支持.spt中文本的解密。
+
+【注意事项】
+解包时必须指定-u参数才能提取。
+例如：
+crage -d "Q:\blackrainbow" -u advdx
+
+【ChangeLog】
+2009-01-24 16:45 ver 1.1.0 支持.adx加密封包的提取
+2008-04-26 12:25 ver 1.0.1 修正了由于长名称导致长度字段被覆盖引起的提取错误的问题
+2008-02-02 12:24 ver 1.0.0 第一版发布

@@ -1,0 +1,20 @@
+﻿Name:		aselia
+Description:	game 永遠のアセリア special plug-in
+Archive:	.gd(no magic) .dll
+Author:	        绫波微步
+Version:	1.0.0
+Status:	        Final
+
+【Notice】
+·open source code.
+·it isn't required to extract data13.gd and above .gd archive.
+·when extracting must specify -l and -u parameters.
+example:
+crage -p data07.gd -l data07.dll -u aselia
+data07.gd: 准备提取封包文件（含16个资源文件） ...
+data07.gd：成功提取16 / 16个资源文件  \
+
+aselia：成功提取1个.gd封包文件文件 /
+
+【ChangeLog】
+2008-02-13 16:12 18:41 ver 1.0.0 1st version released

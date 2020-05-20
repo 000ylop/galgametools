@@ -1,0 +1,193 @@
+﻿名称：		kirikiri2
+描述：		W.Dee开发的TVP(KIRIKIRI/吉里吉里) 2 core / Scripting Platform for Win32（http://kikyou.info/）
+封包：		.xp3 .exe .tlg .tlg5 .tlg6 .ksd .kdt
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.5.4
+成熟度：	正式版
+
+【注意事项】
+如果.xp3封包文件经过了特殊加密，可以通过以下4类参数进行提取。
+提取前先确认你要提取的游戏在不在下面的各类列表里。
+·如果在的话，请按照相关的说明进行提取即可；
+·如果不在，则尝试使用第一类tpm参数来提取；如果依旧失败，请将游戏中除了.xp3以外的全部文件（如果有比较小的.xp3文件就请一起）按照原始的目录结构打包rar上传到网盘，并在这里留言：https://www.yukict.com/bbs/thread-13010-1-1.html 同时注明游戏名称，我会尽力帮忙分析并提取。
+
+1. 使用tpm1或tpm2参数(根据.tpm编译条件的不同而有所区别)，指定.tpm文件所在的路径（.tpm文件通常在游戏目录或plugin目录下）。
+·以游戏“ヤりすぎ！人妻パラダイス 体験版”为例：
+crage -d "H:\duma_para_trial" -O tpm1="H:\duma_para_trial\plugin\decoder.tpm"
+·以游戏“桜花繚乱”为例：
+crage -d "Q:\ES-pot\ouka-ryouran" -O tpm2="Q:\ES-pot\ouka-ryouran\xp3dec.tpm"
+
+注意：该方法简便，也能处理大多数的tpm加密，请提取时尽量使用这组参数。但该类参数提取成功率并非100％，如果此方法不行，请使用下面介绍的提取参数。
+另外就是像游戏“ひまわり”使用的加密插件就是.xp2，提取方法与.tpm完全一致。
+
+
+2. cxdec类算法参数。该参数用于提取特定一类的加密算法。由于使用该算法的每个游戏都采用了不同的加密参数，所以提取时需要指定游戏名称。
+以游戏“FairChild ～フェアチャイルド～”为例：
+crage -d "D:\FairChild" -O cxdec=FairChild
+
+目前使用这种特殊加密的游戏及它们的参数名称是：
+
+クレナイノツキ 体験版：使用cxdec=kurenai参数提取。
+天神乱漫 LUCKY or UNLUCKY!?：使用cxdec=tenshin参数提取。
+天神乱漫 LUCKY or UNLUCKY!? 体験版：使用cxdec=tenshinTrial参数提取。
+すまいるCubic! -水平線まで何マイル？アフター＆アナザーストーリーズ-：使用cxdec=mogla参数提取。
+絶対可憐！お嬢様っ：使用cxdec=ojo2参数提取。
+銀の冠碧の涙：使用cxdec=silverblue参数提取。
+フルハウスキス２～恋愛迷宮～：使用cxdec=lovelaby参数提取。
+人妻恥辱百貨店：使用cxdec=hitozuma参数提取。
+爆裂乙女SEXYマリィ：使用cxdec=seiin参数提取。
+聖淫の迷宮：使用cxdec=seiin参数提取。
+紅色天井艶妖綺譚：使用cxdec=beniten参数提取。
+コンチェルトノート：使用cxdec=ConcertoNote参数提取。
+水平線まで何マイル？ -Deep Blue Sky ＆ Pure White Wings-：使用cxdec=mogla参数提取。
+(C74)春色こみゅにけ～しょん番外編．春香と燁子のLoveバトル！：使用cxdec=lovebattle参数提取。
+遊具2 ～第二禁書ノ望ムモノ～：使用cxdec=yu-gu参数提取。
+遊具 ～女蜜玩具・艶姿～：使用cxdec=yu-gu参数提取。
+二代目は☆魔法少女：使用cxdec=nidaime参数提取。
+るいは智を呼ぶ：使用cxdec=ruitomo参数提取。
+ああっお嬢様っ：使用cxdec=ojyo参数提取。
+夏空カナタ：使用cxdec=natukana参数提取。
+きのみの～コスプレ研へようこそ～：使用cxdec=kinomino参数提取。
+ファンタジカル：使用cxdec=fanta参数提取。
+春色☆こみゅにけ～しょん♪：使用cxdec=haruiro参数提取。
+11eyes -罪と罰と贖いの少女-：使用cxdec=11eyes参数提取。
+FairChild ～フェアチャイルド～：使用cxdec=FairChild参数提取。
+FairChild ～フェアチャイルド～ 体験版：使用cxdec=FairChildTrial参数提取。
+永遠ズ語リ ～少女凌辱秘抄～：使用cxdec=towa参数提取。
+E×E：使用cxdec=EXE参数提取。
+Fate/hollow ataraxia：使用cxdec=FHA参数提取。
+黄泉ビト知ラズ～甘い雌蕊の性徴詩～：使用cxdec=yomibito参数提取。
+二代目は☆魔法少女 体験版：使用cxdec=nidaimeTrial参数提取。
+るいは智を呼ぶ 体験版：使用cxdec=ruitomoTrial参数提取。
+夏空カナタ 体験版：使用cxdec=natukanaTrial参数提取。
+
+注意：这类参数只适用于上面列出的这些特定游戏，使用这些参数提取别的游戏完全没有意义。
+
+
+3. 特定游戏的专用提取参数。
+以游戏“Fate/stay night”为例：
+crage -d "D:\Fate" -O game=FSN
+
+目前这些特定的游戏及它们的参数名称是：
+はちゅかの：使用game=love参数提取。
+おいしい魔法のとなえかた。：使用game=love参数提取。
+なかだし孕メイド：使用game=love参数提取。
+Chower Defence 2：使用game=chower2参数提取。
+クリムゾン・エンパイア：使用game=c_emp参数提取。
+ぱ・ぴ・こ・ん～双子の娘はどうきゅうせい～：使用game=papicon参数提取。
+Fate/stay night：使用game=FSN参数提取。
+中だし孕メイド２：使用game=love参数提取。
+Ｌ．Ｏ．Ｖ．Ｅ～告白～：使用game=love参数提取。
+みずのかけら-once summer of islet-ORIGIN：使用game=MIZUKAKE参数提取。
+
+注意：这类参数只适用于上面列出的这些特定游戏，使用这些参数提取别的游戏完全没有意义。
+
+
+4. （该类参数已经废除，请不要再使用）指定解密算法名称的参数。
+注意：这种提取方式相对低级，而且下面的游戏几乎也都能用tpm参数提取，因此这种提取方式逐渐会被使用tpm参数的提取方式所代替！
+
+以游戏“ヤりすぎ！人妻パラダイス 体験版”为例：
+crage -d "H:\duma_para_trial" -O dec=segdec
+
+目前已知的这些解密算法参数的名字和它们所能支持的游戏是：
+·使用dec=xror参数提取：
+魔女侵犯 -淫辱のジャッジメント-
+母娘妊術くのいちPonPon!!
+プリンセスサーガ
+プリンセスサーガⅤ～希望の美姫～
+プリンセスサーガIV～淫辱の女騎士
+プリンセスサーガI ～恥辱の姫君～
+彼女たちの禁忌
+桜花繚乱
+SWAN SONG
+なまたま
+マジカルチェンジ ゆうきくん
+CrimeRhymeParadox イナホノミライ
+クライミライ3 DVD-ROM版
+水恋 ～みずこい～
+絶対プリンセスのワンマンバトラー 通常シーン＆エッチシーン
+女教師 輪姦の教室
+
+·使用dec=nxorn参数提取：
+終末症候群 Terminal Syndrome
+母奪～禁断の触手相姦
+妹触手レイプ～復讐の処女貫通
+SYOKUSYULIEN ～淫獄の大地～
+征触者 第三討 ～堕ちゆく討魔の学園～
+征触者 ～堕ちゆく討魔の学園～
+僕と彼女の歪んだ関係
+いさましいちびの許婚
+
+·使用dec=ixorn参数提取：
+ぶらばん！
+(同人)St/P in FEZ
+征触者 第二討 ～堕ちゆく討魔の学園～
+とらぶる！シスタールーム
+らいでぃんぐ いんきゅばす
+
+·使用dec=rsftrx参数提取：
+おあずけフェティッシュ! 
+
+·使用dec=xorinc参数提取：
+すぺしゃりて！
+
+·使用dec=sftrx参数提取：
+
+·使用dec=segxor参数提取：
+陵辱学園チアガールズ公開調教
+
+·使用dec=segdec参数提取：
+ヤりすぎ！人妻パラダイス
+
+·使用dec=sufxor参数提取：
+ぶらばん！(仅plugin.xp3)
+ときどきパクッちゃお！
+
+
+【ChangeLog】
+2009-07-07 19:30 ver 1.5.4 加入对索引段长度的检查以避免因提取0长度索引而产生错误
+2009-06-20 11:59 ver 1.5.3 修正cxdec解密算法的bug；加入cxdec=kurenai解密参数
+クレナイノツキ 体験版：使用cxdec=kurenai参数提取
+2009-05-28 09:18 ver 1.5.2 将体验版的解密参数重定义为tenshinTrial，而正式版使用cxdec=tenshin解密参数
+2009-05-01 11:06 ver 1.5.1 加入cxdec=tenshin解密参数
+2009-04-21 20:09 ver 1.5.0 加入cxdec=silverblue和cxdec=ojo2解密参数
+2009-02-17 20:00 ver 1.4.9 修正了对game=love类型进行二次解密的错误；对32位bmp进行alpha blending
+2009-01-31 19:55 ver 1.4.8 加入game=chower2解密参数
+2009-01-29 17:28 ver 1.4.7 加入game=lovelaby解密参数
+2008-12-24 20:29 ver 1.4.6 加入game=c_emp解密参数
+2008-12-12 20:25 ver 1.4.5 修正了seek64错误计算参数的问题
+2008-12-11 22:22 ver 1.4.4 加入cxdec=hitozuma解密参数
+2008-12-06 09:46 ver 1.4.3 修正了提取>=2G文件错误的问题
+2008-11-06 19:02 ver 1.4.2 对まままままま中fgimage.xp3里的maf_1_2_c.tlg资源进行错误检查，以避免crage程序运行失败
+2008-10-30 19:35 ver 1.4.1 加入cxdec=seiin解密参数
+2008-09-06 11:42 ver 1.4.0 加入cxdec=ConcertoNote解密参数
+2008-08-24 14:28 ver 1.3.9 加入cxdec=lovebattle解密参数
+2008-08-16 17:09 ver 1.3.8 加入cxdec=yu_gu解密参数
+2008-07-19 14:19 ver 1.3.7 加入cxdec=mogla解密参数
+2008-06-29 01:10 ver 1.3.6 加入cxdec=nidaime解密参数
+2008-06-26 15:10 ver 1.3.5 加入cxdec=ruitomo解密参数
+2008-06-23 16:55 ver 1.3.4 加入game=papicon解密参数
+2008-06-17 19:35 ver 1.3.3 加入cxdec=beniten解密参数
+2008-06-06 18:08 ver 1.3.2 加入cxdec=ojyo和cxdec=nidaime解密参数
+2008-05-21 00:10 ver 1.3.1 加入cxdec=kinomino解密参数；加入cxdec=natukanaTrial解密参数；修正cxdec=natukana解密参数
+2008-04-30 11:25 ver 1.3.0 提取时如果crc校验错误，增加提示信息
+2008-04-30 09:52 ver 1.2.9 加入cxdec=natukana解密参数
+2008-04-26 18:30 ver 1.2.8 加入cxdec=haruiro解密参数
+2008-04-25 10:35 ver 1.2.7 加入cxdec=11eyes解密参数
+2008-04-16 11:15 ver 1.2.6 修正了提取0长度资源提取失败的问题
+2008-04-12 19:18 ver 1.2.5 加入cxdec=haruiroTrial解密参数
+2008-04-06 21:58 ver 1.2.4 加入cxdec=11eyesTrial解密参数
+2008-04-04 16:24 ver 1.2.3 加入game=MIZUKAKE解密参数; 修正了24位色TLG5提取后画面倾斜的问题
+2008-03-30 17:28 ver 1.2.1 加入cxdec=yomibito解密参数
+2008-03-27 13:45 ver 1.2.0 重新规整了参数类型
+2008-03-26 18:35 ver 1.1.6 加入ruitomoTrial_cxdec解密参数
+2008-03-24 13:17 ver 1.1.5 去掉tpm参数，改为tpm1和tpm2两种特殊参数
+2008-03-21 22:52 ver 1.1.4 加入segdec解密参数；加入tpm特殊参数
+2008-03-18 22:53 ver 1.1.3 加入FairChildTrial_cxdec解密参数
+2008-03-18 10:50 ver 1.1.2 加入fanta_cxdec、FairChild_cxdec、towa_cxdec、EXE_cxdec、FSN和FHA_cxdec解密参数；支持.kdt资源的提取
+2008-03-12 20:28 ver 1.1.1 加入lovexor解密参数
+2008-03-12 00:01 ver 1.1.0 加入sufxor解密参数；修正了提取TLG5时内存泄漏的bug
+2008-03-10 22:02 ver 1.0.0 加入segxor解密参数；支持TLG6和.ksd（存档）类型的资源的提取
+2008-03-06 10:21 ver 0.9.0 支持TLG sds和TLG5类型的资源的提取
+2008-03-04 15:10 ver 0.8.0 支持加密和压缩的文本资源的提取
+2008-02-21 14:59 ver 0.7.0 第一版发布

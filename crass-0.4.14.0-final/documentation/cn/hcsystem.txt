@@ -1,0 +1,57 @@
+﻿名称：		hcsystem
+描述：		Ｈ℃ hcsystem系统
+封包：		.pak .op2
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.1.1
+成熟度：	测试版
+
+【.pak封包文件说明】
+    实际类型是有目录的封包资源文件。
+    元数据根据实际用途，是bmp、ogg、bin（二进制脚本）等。
+    
+    	首部：
+		s8 magic[4];		// "PACK"
+		u32 index_entries;	// 资源文件数（每项长度变长）
+		u32 swap_flag;		// 索引段字节数据是否需要高低4位交换
+	索引段：
+		s8 name[32];	// 资源文件名(*新的pak格式保存的是32个wchar_t)
+		u32 uncomprlen;	// 解压后资源文件数据长度	
+		u32 comprlen;	// 资源文件数据长度（如果数据没有压缩，该字段为0）
+		u32 offset;	// 资源文件数据偏移（从首部算起）
+	数据：	
+		紧接在索引段之后。如果comprlen不为0，数据是lzss压缩的；否则为明文数据。
+
+【.opf资源文件说明】
+    实际类型是无目录的资源文件。
+    元数据是bmp。
+    
+    	首部：
+		s8 magic[4];		// "OPF "
+		u32 width;		// 图像宽度
+		u32 height;		// 图像高度
+		u32 color_depth;	// 图像色深
+		u32 line_length;	// 图像行长
+		u32 dib_offset;		// RGB数据的偏移（从首部算起）
+		u32 dib_length;		// RGB数据长度
+		u32 reserved;		// 0
+	数据：	
+		紧接在索引段之后。通常时候dib_offset值为32；如果图像是8位色深，那么首部后面是1024字节的调色版数据，则dib_offset值为1024+32。
+
+【.op2资源文件说明】
+    实际类型是无目录的资源文件。
+    元数据是bmp。
+    
+    	首部：
+		s8 magic[4];		// "OPF2"
+		u32 width;		// 图像宽度
+		u32 height;		// 图像高度
+		u32 color_depth;	// 图像色深
+		u32 line_length;	// 图像行长
+		u32 dib_offset;		// RGB数据的偏移（从首部算起）
+		u32 dib_length;		// RGB数据长度
+		u32 comprlen;		// 压缩的RGB数据长度(lzss)
+
+【ChangeLog】
+2008-05-20 09:31 ver 1.1.1 修正了8位bmp调色板保存错误的问题。
+2008-04-19 13:36 ver 1.1.0 支持新的.pak和OPF2格式
+2007-04-24 14:44 ver 1.0.0 第一版发布

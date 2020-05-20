@@ -1,0 +1,8 @@
+label = "Gnome (scratch)"
+width = 24
+height = 24
+browser = 1
+auto = 1
+version = 2
+main32=1
+browser32=1

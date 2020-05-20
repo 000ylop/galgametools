@@ -1,0 +1,14 @@
+﻿Name:		route2
+Description: 	
+Archive:	.MHU(weak magic) .CGF(weak magic) .CG(weak magic) .IAF(weak magic) .SUD(weak magic) .WPF(weak magic)
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.0.5
+Status:		Beta
+
+【ChangeLog】
+2009-03-31 15:58 ver 1.0.5 support .WPF format
+2009-03-31 13:01 ver 1.0.4 supported varying length of .CG's entry
+2009-03-11 22:36 ver 1.0.3 Only extracting valid .MHU
+2008-10-18 12:48 ver 1.0.2 fixed a extraction error for old .IAF file
+2008-05-17 17:05 ver 1.0.1 fixed a clash error in extracting .CG file
+2008-04-01 00:25 ver 1.0.0 1st version released

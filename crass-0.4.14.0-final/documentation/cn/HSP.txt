@@ -1,0 +1,23 @@
+﻿名称：		HSP
+描述：		onion software开发的系统Hot Soup Processor（http://www.onionsoft.net/hsp/）
+封包：		.dpm .mv .exe .dat(no magic)
+作者：		绫波微步
+版本：		2.0.2
+成熟度：	测试版
+
+【注意事项】
+提取.dat资源时需要指定-u HSP参数。
+
+【提取示例】
+crage -d "Q:\Program Files\傠偔偊偸\data" -u hsp
+HSP：成功提取111个.dat封包文件文件
+
+【ChangeLog】
+2009-01-10 16:53 ver 2.0.2 支持新的mv资源的提取
+2008-08-05 20:21 ver 2.0.1 支持.dat资源的提取
+2008-02-04 22:13 ver 2.0.0 重写了提取算法，支持独立的.dpm文件提取
+2007-10-05 14:36 ver 1.0.1 修正了不能提取RIFF wav格式提取的错误
+2007-09-29 23:09 ver 1.0.0 重新实现了HSP3的搜索DPMX在exe文件中偏移和密钥的算法
+2007-09-27 22:03 ver 0.9.5 支持提取.dpm封包文件
+2007-09-18 23:48 ver 0.8.1 支持无加密的exe的资源提取
+2007-08-18 19:59 ver 0.8.0 第一版发布

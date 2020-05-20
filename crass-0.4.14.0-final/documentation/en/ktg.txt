@@ -1,0 +1,12 @@
+﻿Name: 		ktg
+Description: 	工畫堂スタジオ(KOGADO) game ケータイ少女PC special plug-in
+Archive: 	.arc
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	0.0.1
+Status: 	Alpha
+
+【TODO】
+Support extraction of archives other than string.arc and script.arc.
+
+【ChangeLog】
+2007-05-24 16:06 ver 0.0.1 1st version released

@@ -1,0 +1,74 @@
+/*
+    GameViewer ª„±‡ Shader ≤‚ ‘Ω≈±æ
+*/
+
+if   [gv.state == gv.LOOP]
+[
+    SetMVPMatToVS [gv.tran, 0];
+
+    SetDecl [gv.mesh];
+
+    DIP [gv.mesh];
+
+    return;
+]
+elif [gv.state == gv.LOAD]
+[
+    c = math.sin [t] + 1.25;
+    mem.setUint [mm, 0, c];
+    mem.setUint [mm, 1, c];
+    mem.setUint [mm, 2, c];
+    mem.setUint [mm, 3, 1.0];
+    SetPSConstF [0, mm, 1];
+    t += 0.2;
+
+    EnableVS [shader];
+    EnablePS [shader];
+    return;
+]
+elif [gv.state == gv.EXIT]
+[
+    DisablePS [shader];
+    DisableVS [shader];
+    return;
+]
+elif [gv.state == gv.INIT]
+[
+
+    vs = """
+            vs_1_1
+
+            dcl_position    v0
+            dcl_color0      v2
+            dcl_texcoord0   v4
+
+            m4x4    oPos, v0, c0
+            mov     oD0, v2
+            mov     oT0.xy, v4
+    """;
+
+    ps = """
+            ps_1_1
+
+            def     c1, 0.3, 0.59, 0.11, 1.0
+
+            tex     t0
+            mul     r0, t0, v0
+            mul     r0, r0, c0
+            dp3     r0.rgb, r0, c1
+    """;
+
+    shader = CreateAsmShader [];
+    CompileVS [shader, vs];
+    CompilePS [shader, ps];
+
+    t  = 0.1;
+    mm = mem.alloc [16];
+
+    UseDecl [];
+]
+else
+[
+    mem.free [mm];
+    ReleaseShader [shader];
+]

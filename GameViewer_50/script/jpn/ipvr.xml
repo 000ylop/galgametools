@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="Illusion.dll" 接口名="FPK" 0 />
+	<插件 文件名="Illusion.dll" 接口名="BXN" 0 />
+
+	<文件 文件名="data\x\x.fpk" 插件="0" 数据文件="ipvr.tbl" />
+	<文件 文件名="data\m\*.bxn" 插件="1" />
+
+</游戏脚本>

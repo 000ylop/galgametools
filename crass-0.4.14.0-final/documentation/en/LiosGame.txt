@@ -1,0 +1,110 @@
+﻿Name: 		LiosGame
+Description: 	Inc. Liar LiosGame system 
+Archive: 	.xfl .lwg .wcg .lim
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	0.9.7
+Status: 	Alpha
+
+【NOTICE】
+1. Ogg Vorbis ACM Codec is needed to play some extracted .wav files.
+2. RGB565 16-bit BMPs are not supported by Windows XP's image preview ("No preview" will appear). Those files can be viewed by Windows's pringbursh (May cause disorder), Photoshop, AcdSee (Not supported by 3.1) and irfanview.
+
+【TODO】
+Analysis the field "flags" at the beginning of wcg completely.
+
+【.xfl Archive Info】
+    the xfl is actual type of archive with directory.
+    original data according to practical situation, can be wcg, lwg, lim, wav(*note1), gsc(binary script) and so on.
+    
+    	header: 
+		s8 magic[2];		// "LB"
+		u16 version;		// must be 1
+		u32 index_length;	// index segment length
+		u32 index_entries;	// resource number
+ 	index segment: 
+		s8 name[32];		// resource name
+		32 offset;		// resource data offset(count from index segment ending)
+		u32 length;		// resource length
+	data: 
+		closely behind index segment.
+
+	*note1: playback of most wav depend on support of Vorbis ACM codec developed by japanese.
+
+【.lwg Resource Info】
+    the lwg is actual type of archive with directory.
+    the file describe image element info of all components in a frame(such as "config" page).
+    original data is wcg.
+    
+    	header: 
+		s8 magic[2];		// "LG"
+		u16 version;		// must be 1
+		u32 height;		// image width
+		u32 width;		// image height
+		u32 entries;		// image element number
+		u32 reserved;
+
+		following data is divided into 2 parts: index segment and data segment, beginning of every field use 4 bytes to express the segment length .
+
+ 	index segment: every index item with variable length
+		u32 x_poisition;	// the origin x coordinate of image element in whole frame 
+		u32 y_position;		// the origin y coordinate of image element in whole frame
+		u8 unknown;
+		u32 offset;		// resource data offset(count from data segment beginning)
+		u32 length;		// resource length
+		u8 name_length;		
+		s8 *name;		// resource name
+	data field: 
+		closely behind length field of data segment; content is wcg resource.
+
+【.wcg Resource Info】
+    original data is 32 bit BMP.
+
+   	header: 
+		s8 magic[2];		// "WG"
+		u16 flags;		// uncompleted analysis
+		u32 unknown;		// 0
+		u32 width;		// image width
+		u32 height;		// image height
+
+		following data segment is divided into 2 parts: first part is compressed R(red) and A(alpha) data in every pixel; second one is B(blue)and G(green) data in every pixel. before every data field has a info data structure.
+
+	info data structure: 
+		u32 uncomprlen;		// decompressed length
+		u32 comprlen;		// searching table + RLE compressed length
+		u16 code_number;	// table item number(every item with 2 bytes)
+		u16 unknown;		
+ 
+	data segment: 
+		closely behind info data structure
+
+【.lim Resource Info】
+    original data is BMP.
+
+   	header: 
+		s8 magic[2];		// "LM"
+		u8 flag0;		// [3:0]type - 2: original data is 16-bit BMP(according to flag1, may also contain 32-bit alpha); 3: original data is 32-bit BMP: etc: invalid value
+					// [4]whether with RGB data: 0 - only alpha; 1 - RGB and alpha;
+		u8 flag1;		// worth only for type2; [0]whether with alpha: 0 - no alpha; 1 - alpha
+		u32 unknown;		// 0
+		u32 width;		// image width
+		u32 height;		// image height
+
+		type 2: 
+		according to [0] in flag1, data may only contain a piece of RGB565(*note1), may also contain RGB565 + alpha 2 pieces. before every data field has a info data structure.
+
+		type 3:
+		according to [4] in flag0, ata may only contain alpha piece, may also contain B, G, R, A 4 pieces. before every data field has a info data structure.
+
+	info data structure: 
+		u32 uncomprlen;		// decompressed length
+		u32 comprlen;		// searching table + RLE compressed length
+		u16 code_length;	// table item number(difference according to flag0 and flag1 definition, every item length may be 1 or 2 bytes)
+		u16 unknown;	
+	
+	*note1: the image preview of Windows XP cann't support 16-bit image in RGB565 format(show "no preview")，can view with Microsoft Paint including with Windows, PhotoShop or AcdSee and so on.
+
+
+【ChangeLog】
+2009-04-10 23:08 ver 0.9.7 support alpha blending
+2007-10-21 16:18 ver 0.9.6 supported extracting nested .xfl resource
+2007-05-12 16:18 ver 0.9.5 1st version released

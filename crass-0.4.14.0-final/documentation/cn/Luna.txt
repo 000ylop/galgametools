@@ -1,0 +1,10 @@
+﻿名称：		Luna
+描述：		葉迩倭开发的DirectX Library "Luna for DirectX 9.0c"(http://luna.sumomo.ne.jp/)
+封包：		.bin .p .mus
+作者：		痴汉公贼 (glanser@163.com)
+版本：		1.0.1
+成熟度：	正式版
+
+【ChangeLog】
+2009-01-26 13:13 ver 1.0.1 添加对.p和.mus的支持
+2008-01-03 20:55 ver 1.0.0 第一版发布(参考SDK源码)

@@ -1,0 +1,17 @@
+xp3maker 0.01
+目前仅为测试版，改进什么的之后再看情况恩。
+
+~xp3maker.tpm是server插件
+在游戏运行加载后，其会监听本地的12000(10进制)端口。
+
+xp3enc.dll是krkr附带releaser用的插件，其进行加密的时候通过连接本地建立好的Server，
+然后将数据传递给Server，Server尝试对解密函数求逆，再将结果返回即得到加密结果。
+
+所以使用策略是：
+先~xp3maker.tpm放到游戏目录下（也许你还需要放!dumpHelper插件来辅助），然后启动游戏恩。
+接着再将xp3enc.dll放到krkrrel.exe的目录下然后用其打包文件即可:)
+
+高级策略：(一般情况请无视)
+该插件会在目录下查找xp3maker.txt文件，并读入解密函数在内存中存放的地址(16进制)，然后去取地址内的值。
+也就是你可以用od跟踪void ::TVPSetXP3ArchiveExtractionFilter(tTVPXP3ArchiveExtractionFilter)相关的一个函数
+看实际上最后应该会得到mov [xxx], eax这个指令，把xxx填到文件内就可。

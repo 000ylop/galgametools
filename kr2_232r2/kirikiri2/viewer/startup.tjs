@@ -1,0 +1,106 @@
+/*------------------ viewer ------------------*/
+class MyWindow extends Window
+{
+	var primlayer;
+	var graphlayer;
+	var checkers;
+	var filemenu;
+	var exitmenu;
+
+	function MyWindow()
+	{
+		super.Window();
+		menu.add(filemenu = new MenuItem(this, "ファイル(&F)"));
+		filemenu.add(exitmenu = new MenuItem(this, "終了(&X)"));
+
+		// 下敷き(プライマリレイヤ)
+		add(primlayer = new Layer(this, null));
+		primlayer.left = primlayer.top = 0;
+		primlayer.imageWidth = 400;
+		primlayer.imageHeight = 70;
+		primlayer.setSizeToImageSize();
+		setInnerSize(primlayer.width, primlayer.height);
+
+		// 画像
+		add(graphlayer = new Layer(this, primlayer));
+		graphlayer.width = primlayer.width;
+		graphlayer.height = primlayer.height;
+		graphlayer.setPos(0, 0);
+		graphlayer.visible = true;
+		graphlayer.font.height = 18;
+//		graphlayer.face = dfMain;
+		graphlayer.drawText(10, 10, "Explorer 等から表示させたい画像を",
+			0xff0000, 255, true, 200, 0x000000, 3, 2, 2);
+		graphlayer.drawText(10, 30, "ここにドロップしてください",
+			0xff0000, 255, true, 200, 0x000000, 3, 2, 2);
+
+		// 市松模様保存場所
+		add(checkers = new Layer(this, primlayer));
+		checkers.type = ltCoverRect;
+		checkers.face = dfMain;
+		checkers.imageWidth = 320;
+		checkers.imageHeight = 320;
+		for(var y = 0; y<320; y+=8)
+			for(var x = 0; x<320; x+=8)
+				checkers.colorRect(x, y, 8, 8, ((x^y)&0b1000)?0xc0c0c0:0x808080, 255);
+
+		visible = true;
+
+//		loadImage("../../../../tlg4comp/sakura.tlg");
+	}
+
+	function loadImage(file)
+	{
+		// 画像読み込み
+		try
+		{
+			var start = System.getTickCount();
+			var dic = graphlayer.loadImages(file);
+			Debug.message((System.getTickCount() - start) + " ms");
+			graphlayer.type = ltAlpha;
+			if(dic)
+			{
+				var ar = [];
+				ar.assign(dic);
+				for(var i = 0; i < ar.count; i+= 2)
+					Debug.message(ar[i] + '=' + ar[i+1]);
+
+				if(dic.mode !== void)
+				{
+					var layertypeinfo = imageTagLayerType[dic.mode];
+					if(layertypeinfo !== void)
+						graphlayer.type = layertypeinfo.type;
+				}
+			}
+		}
+		catch(e)
+		{
+			System.inform("画像を読み込むことができません : " + e.message);
+		}
+		graphlayer.setSizeToImageSize();
+		setInnerSize(graphlayer.width, graphlayer.height);
+
+		// 市松模様描画
+		primlayer.setImageSize(graphlayer.imageWidth, graphlayer.imageHeight);
+		primlayer.setSizeToImageSize();
+		for(var y = 0; y<primlayer.height; y += 320)
+			for(var x = 0; x<primlayer.width; x += 320)
+				primlayer.copyRect(x, y, checkers, 0, 0, 320, 320);
+	}
+
+	function action(ev)
+	{
+		if(ev.type == "onFileDrop" && ev.target == this)
+		{
+			loadImage(ev.files[0]);
+		}
+		else if(ev.type == "onClick" && ev.target == exitmenu)
+		{
+			close();
+		}
+	}
+}
+
+var a = new MyWindow();
+
+/*------------------ viewer ------------------*/

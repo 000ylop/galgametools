@@ -1,0 +1,38 @@
+﻿Name:		QLIE
+Description:	QLIE AVD GAME CREATE SYSTEM(http://qlie.net/) developed by 株式会社ワームスエンタテイメント
+Archive:	.pack .hash
+Author:		痴漢公賊 (glanser@163.com)
+Version:	0.8.3
+Status:		Alpha
+Translation:	superstar
+
+【TODO】
+·Analysis the item "hash_index_entries" that follows hash index.
+·Extraction of .b archives.
+
+【NOTICE】
+To the game that have .pack and .hash archives at the same time, Parameter -p and -l is needed to specify them respectively. (In CrageGUI, corresponding parameters are "Source File" and "Import Index", respectively.)
+
+【EXAMPLE】
+·To those have .pack and .hash archives at the same time:
+crage -p Q:\牝姫の虜体験版\GameData\data0.pack -l Q:\牝姫の虜体験版\GameData\data0.hash
+
+	data0.pack: 准备提取封包文件（含368个资源文件） ...
+	data0.pack：成功提取368 / 368个资源文件  \
+
+	AVGSystem：成功提取1个.packArchive文件
+
+·To those have .pack only:
+crage -p Q:\KissyKissy体験版\GameData\data0.pack
+
+	data0.pack: 准备提取封包文件（含493个资源文件） ...
+	data0.pack：成功提取493 / 493个资源文件  
+
+	AVGSystem：成功提取1个.pack封包文件
+
+【ChangeLog】
+2008-12-13 15:44 ver 0.8.3 fixed and done compatible with another FilePackVer1.0 format(thanks lighting's assistance)
+2008-08-14 22:36 ver 0.8.2 fixed further a error in extracting archive in type of FilePackVer1.0 
+2008-05-20 16:47 ver 0.8.1 fixed a error in extracting archive in type of FilePackVer1.0
+2007-11-04 11:43 ver 0.8.0 supported extracting .argb resource; supported extracting FilePackVer1.0
+2007-10-07 15:58 ver 0.7.0 1st version released

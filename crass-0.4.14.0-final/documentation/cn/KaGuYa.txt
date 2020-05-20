@@ -1,0 +1,13 @@
+﻿名称：		KaGuYa
+描述：		アトリエかぐや使用的ADV游戏系统
+封包：		.arc .ari .bg_ .cg_ .cgw .sp_ .bgm .wav .vo* .aps(weak magic) .parts(weak magic)
+作者：		痴漢公賊 (glanser@163.com)
+版本：		0.6.0
+成熟度：	开发版
+
+【注意事项】
+·可以指定-l参数配合.ari文件提取，该功能可选，因为仅凭.arc就完全可以提取了。
+·当提取“ダンジョンクルセイダーズ～TALES OF DEMON EATER～”的parts.arc时，请指定CRUSADER参数，以忽略数据意义不明的资源文件，避免程序运行错误。
+
+【ChangeLog】
+2008-01-30 21:16 ver 0.6.0 第一版发布

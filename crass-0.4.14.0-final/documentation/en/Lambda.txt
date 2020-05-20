@@ -1,0 +1,26 @@
+﻿Name: 		Lambda
+Description: 	Lambda system
+Archive: 	.dat .dmf
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	1.0.2
+Status: 	Final
+
+【.dat/.dmf Archive Info】
+    the .dat/.dmf is actual type of archive with directory.
+    meta-data according to practical situation, can be png, ogg, scn and so on(also can extract data folder, including script grammar and package program).
+    
+    	header: 
+    		s8 magic[4];	// "DMF "
+		u32 entries;	// resource number(every item with variable length)
+	index segment: 
+		s8 *name;	// resource name
+		u32 name_length;// resource name length
+		u32 offset;	// resource data offset(count from header)
+		u32 length;	// resource data length	
+	data: 
+		closely behind index segment.
+
+【ChangeLog】
+2008-11-02 22:13 ver 1.0.2 supported extracting .la archive
+2008-03-18 08:54 ver 1.0.1 supported extracting .dmf archive
+2007-03-24 19:58 ver 1.0.0 1st version released

@@ -1,0 +1,53 @@
+﻿Name:		YaneuraoGame
+Description:		
+Archive:	.dat .lay .scp
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	0.9.1
+Status:	        Alpha
+
+【TODO】
+
+【.dat Archive Info】
+    the dat is actual type of archive with directory.
+    meta-data according to practical situation, may be variable types of resource.
+    
+    	header:
+		s8 magic[8];		// with 3 version: version 1 - "yanepack" version 2 - "yanepkEx" version 3 - "yanepkDx" 
+		u32 index_entries;	// resource number
+ 	index segment: (on the basis of ver，may exist following 3 version)
+	    version 1:
+		s8 name[32];	// resource name
+		u32 offset;	// resource data offset(count from header)
+		u32 length;	// data length
+
+	    version 2:
+		s8 name[32];	// resource name
+		u32 offset;	// resource data offset(count from header)
+		u32 comprlen;	// compressed data length
+		u32 uncomprlen;	// decompressed data length(if decompressed data length equal to compressed data length, means data without compression)
+
+	    version 3:
+		s8 name[256];	// resource name
+		u32 offset;	// resource data offset(count from header)
+		u32 comprlen;	// compressed data length
+		u32 uncomprlen;	// decompressed data length(if decompressed data length equal to compressed data length, means data without compression)
+	data:
+		closely behind index segment
+
+【.yga Resource Info】
+    the yga is actual type of bmp.
+
+    	header:
+		s8 magic[4];	// "yga"
+		u32 width;	// image width
+		u32 height;	// image height
+		u32 color_type;	// color type: 0 - ?? non-0 - 32 bit 
+		u32 uncomprlen;	// actual data length of lzss decompression
+		u32 comprlen;	// data length of lzss decompression
+	data:
+		closely behind index segment, format is lzss compressed data stream
+
+【ChangeLog】
+2008-08-17 10:41 ver 0.9.1 fixed a extraction error due to definition inversion of index item uncomprlen and comprlen field in version 3
+2008-04-08 12:26 ver 0.9.0 supported extracting .scp and .lay resource
+2007-06-10 15:15 ver 0.8.0 1st version released

@@ -1,0 +1,63 @@
+﻿Name:		ExHIBIT
+Description:	sketch/ExHIBIT system developed by RETOUCH (http://www.retouch.info/)
+Archive:	.gyu
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	0.3.0
+Status:	        Alpha
+
+【TODO】
+1. Support extraction for .v voice file.
+2. Support extraction for .dlt anime file.
+3. Support extraction for .rld file.
+
+【NOTICE】
+·.dlt is a kind of movie file. Player can be found at http://www.retouch.info/ (delta.2.xx.zip)
+·In release edition, ExHIBIT system enable erasion of key inside gyu, which will cause extraction failure due to missing of key. Specify parameters "key" or "dll" to find correct key:
+-key (normal): If you know gyu's key, you can use this parameter to extract gyu.
+-dll (advanced): Generally, gyu's key is placed inside "resident.dll", use this parameter to specify this file's path. This method can only to newer systems.
+·空色の風琴's gyu keys are listed in "空色の風琴gyu_key_list.txt", in which the order of keys is correspond to the order of games' reg/g/ev sorted by name.
+
+【EXAMPLE】
+Take game "EVE ～new generation X～" as an example:
+crage -p 1099.gyu -O dll="E:\Program Files\TYRELL LAB\EVEX\resident.dll"
+1099.gyu: 准备提取资源封包文件 ...
+1099.gyu：成功提取1 / 1个资源文件  |
+
+ExHIBIT：成功提取1个.gyu封包文件
+
+Or extract through specified key:
+crage -p 1098.gyu -O key=9b165d9f
+1098.gyu: 准备提取资源封包文件 ...
+1098.gyu：成功提取1 / 1个资源文件  |
+
+ExHIBIT：成功提取1个.gyu封包文件
+ 
+【.gyu Archive Info】
+    the .gyu is actual type of archive without directory.
+    meta-data is bmp.
+
+    	header:
+    		s8 magic[4];		// "GYU\x1a"
+		u32 mode;		// bit field, separating into two groups of high 16-bit and low 16-bit. bit0 - whether with alpha data; bit1 - alpha value interval is [0,255]([0,16] by default); bit24 - no compression; bit25 - lzss compression; bit26 - lzss compression;
+		u32 key;		// MT19937 pseudo random number generation seed(-1 means no using MT19937 pseudo random number generation algorithm decryption)
+		u32 bits_count;		// color depth
+		u32 width;		// width
+		u32 height;		// height
+		u32 length;		// data length
+		u32 gray_length;	// alpha data length
+		u32 palette_colors;	// palette color number
+	palette data: (if existing)
+		no compression, every pixel matching 4 bytes.
+	color data:
+		coding mode on the basis of mode field.
+	alpha data length: (if existing)
+		coding mode on the basis of mode field.
+
+【ChangeLog】
+2009-06-21 21:23 ver 0.3.0 support new compression method for gyu
+2009-03-07 14:13 ver 0.2.2 exported reasonable alpha channel; supported 32-bit bmp alpha bledning; supported alpha large interval
+2008-03-15 21:54 ver 0.2.1 fixed a problem on extracting bmp whose palette color number isn't 256
+2007-10-27 02:06 ver 0.2.0 renamed plug-in to ExHIBIT
+2007-06-02 00:43 ver 0.0.4 fixed a register error
+2007-05-30 22:56 ver 0.0.3 renamed plug-in to sketch
+2007-03-22 22:47 ver 0.0.2 didn't support exporting audio and dlt 

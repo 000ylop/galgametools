@@ -1,0 +1,16 @@
+﻿Name:		Touhou11
+Description:		
+Archive:	.dat
+Author:		痴漢公賊 (glanser@163.com)
+Version:	0.7.1
+Status:	  	Final
+
+【Notice】
+·when extracting thbgm.dat, use -l parameter to specify "th11.dat" file path
+·music extracting from thbgm.dat in fact repeated opening part at ending, it's purposely to add for better generating smooth effect when looping playing BGM
+
+【Sample】
+crage -p "J:\Program Files\忋奀傾儕僗尪炠抍\搶曽抧楈揳\thbgm.dat" -l "J:\Program Files\忋奀傾儕僗尪炠抍\搶曽抧楈揳\th11.dat"
+
+【ChangeLog】
+2008-08-17 15:28 ver 0.7.1 1st version released

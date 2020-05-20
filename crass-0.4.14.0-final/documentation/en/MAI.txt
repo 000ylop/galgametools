@@ -1,0 +1,14 @@
+﻿Name: 		MAI
+Description: 		
+Archive: 	.arc
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	0.9.9
+Status: 	Alpha
+
+【TODO】
+·analyse completely data format in mask.arc and data.arc
+·deal with jpg swaping B and R division
+
+【ChangeLog】
+2008-05-16 21:08 ver 0.9.9 fixed a error on matching resource type; supported extracting mask image
+2008-04-03 18:26 ver 0.9.8 1st version released

@@ -1,0 +1,1656 @@
+;Français - Traduction complémentaire, corrections, contrôles, marquage décimal :  Claude Charries “Clo" et Paul Vansumsen “Ouistiti”
+; ----------------------------------------------------
+[IFD]
+0101=IFD Immagine
+0102=IFD Exif
+0103=IFD GPS
+0104=IFD Interoperabilità
+A010=Nota costruttore (Canon)
+A020=Nota costruttore (Nikon)
+A030=Nota costruttore (Nikon)
+A040=Nota costruttore (Casio)
+A050=Nota costruttore (Casio)
+A060=Nota costruttore (Fuji)
+A070=Nota costruttore (Olympus)
+A080=Nota costruttore (Sigma)
+A090=Nota costruttore (Sanyo)
+A0A0=Nota costruttore (Minolta)
+A0B0=Nota costruttore (Minolta)
+
+; --------------------- IFD principal ---------------------
+; 1
+[0101-00FE]
+Label=
+
+;2
+[0101-0100]
+Label=Larghezza dell'immagine
+
+;3
+[0101-0101]
+Label=Altezza dell'immagine
+
+;4
+[0101-0102]
+Label=Bits per échantillon
+
+;5
+[0101-0103]
+Label=Compressione
+
+;6
+[0101-0106]
+Label=Interpretazione fotometrica
+
+;7
+[0101-010A]
+Label=Ordine dei byte
+
+;8
+[0101-010D]
+Label=Nome del documento
+
+;9
+[0101-010E]
+Label=Descrizione dell'immagine
+
+;10
+[0101-010F]
+Label=Costruttore
+
+;11
+[0101-0110]
+Label=Modello
+
+;12
+[0101-0111]
+Label=Décalage des blocs
+
+;13
+[0101-0112]
+Label=Orientamento
+ValueList=1#alto-sinistra, 2#alto-destra, 3#basso-destra, 4#basso-sinistra, 5#sinistra-alto, 6#destra-alto, 7#destra-basso, 8#sinistra-basso
+
+;14
+[0101-0115]
+Label=Échantillons per pixel
+
+;15
+[0101-0116]
+Label=Linee per bloc
+
+;16
+[0101-0117]
+Label=Numero di byte dei blocchi
+
+;17
+[0101-011A]
+Label=Risoluzione X
+ 
+;18
+[0101-011B]
+Label=Risoluzione Y
+
+;19
+[0101-011C]
+Label=Configurazione di plans
+
+;20
+[0101-0128]
+Label=Valore risoluzione
+
+;21
+[0101-012D]
+Label=Funzione di trasferimento
+
+;22
+[0101-0131]
+Label=Software
+
+;23
+[0101-0132]
+Label=Data di modifica
+
+;24
+[0101-013B]
+Label=Modo Flash Auto
+
+;25
+[0101-013E]
+Label=Punto di bianco
+
+;26
+[0101-013F]
+Label=Crominanza primaria
+
+;27
+[0101-0156]
+Label=Intervallo di trasferimento
+
+;28
+[0101-0200]
+Label=JPEGProc
+
+;29
+[0101-0201]
+Label=Décalage de la vignette
+
+;30
+[0101-0202]
+Label=Dimensione immagine
+
+;31
+[0101-0211]
+Label=Coefficienti YCbCr
+
+;32
+[0101-0212]
+Label=Sous-échantillonage YCbCr
+
+;33
+[0101-0213]
+Label=Posizionamento YCbCr
+ValueList=1#centrato, 2#accollé
+
+;34
+[0101-0214]
+Label=Riferimento nero¦bianco
+
+;35
+[0101-828D]
+Label=Ripetere il modello dim. CFA
+
+;36
+[0101-828E]
+Label=Modello CFA
+
+;37
+[0101-828F]
+Label=Stato della batteria
+
+;38
+[0101-8298]
+Label=Copyright©
+
+
+;  _____________________IDF Appareil_____________________
+
+;39
+[0102-829A]
+Label=Tempo d'esposizione [s]
+
+;40
+[0102-829D]
+Label=Valore-F
+
+;41
+[0102-83BB]
+Label=IPTC¦NAA
+
+;42
+[0102-8769]
+Label=Décalage dell'EXIF
+
+;43
+[0102-8773]
+Label=Profilo inter-couleur
+
+;44
+[0102-8822]
+Label=Programma d'esposizione
+ValueList=0#Sconosciuto, 1#Manuale, 2#Normale, 3#Priorità diaframma, 4#Priorità otturatore, 5#Creativo (lento), 6#Azione (rapido), 7#Ritratto, 8#Paesaggio
+
+;45
+[0102-8824]
+Label=Sensibilità spettro
+
+;46
+[0102-8825]
+Label=Info GPS
+
+;47
+[0102-8827]
+Label=Sensibilità equivalente ISO
+
+;48
+[0102-8828]
+Label=OECF
+
+;49
+[0102-9000]
+Label=Versione EXIF
+
+;50
+[0102-9003]
+Label=Data¦ora originale
+
+;51
+[0102-9004]
+Label=Data¦ora digitalizzata
+
+;52
+[0102-9101]
+Label=Configurazione dei componenti
+
+;53
+[0102-9102]
+Label=Bits per pixel compressi
+
+;54
+[0102-9201]
+Label=Velocità otturatore [s]
+
+;55
+[0102-9202]
+Label=Valore diaframma
+
+;56
+[0102-9203]
+Label=Luminosità
+
+;57
+[0102-9204]
+Label=Compensazione dell'esposiziozne
+
+;58
+[0102-9205]
+Label=Apertura massima
+
+;59
+[0102-9206]
+Label=Distanza dal soggetto (m)
+
+;60
+[0102-9207]
+Label=Modalità calcolo esposizione
+ValueList=0#Sconosciuta, 1#Media, 2#Media ponderata al centro, 3#Ponctuel, 4#Multi-ponct., 5#Multi-segmento, 6#Parziale, -1#Altro
+
+;61
+[0102-9208]
+Label=Sorgente luminosa
+ValueList=0#Sconosciuta, 1#Luce del giorno, 2#Fluorescente, 3#Incandescente, 17#Lampada standard A, 18#Lampada standard B, 19#Lampada standard C, 20#D55, 21#D65, 22#D75, -1#Altro
+
+;62
+[0102-9209]
+Label=Flash
+
+;63
+[0102-920A]
+Label=Lunghezza focale [mm]
+
+;64
+[0102-927C]
+Label=Nota del costruttore
+
+;65
+[0102-9286]
+Label=Commento utente
+
+;66
+[0102-9290]
+Label=Ora frazioni di sec.
+
+;67
+[0102-9291]
+Label=Ora originale frazioni di sec.
+
+;68
+[0102-9292]
+Label=Ora digitalizzata frazioni di sec.
+
+;69
+[0102-A000]
+Label=Versione FlashPix
+
+;70
+[0102-A001]
+Label=Spazio Colore (BPP)
+
+;71
+[0102-A002]
+Label=Larghezza dell'immagine
+
+;72
+[0102-A003]
+Label=Altezza dell'immagine
+
+;73
+[0102-A005]
+Label=Posizione interoperabilità
+
+;74
+[0102-A20B]
+Label=Energia del Flash
+
+;75
+[0102-A20C]
+Label=Risposta frequenza spaziale
+
+;76
+[0102-A20E]
+Label=Risoluzione piano focale X
+
+;77
+[0102-A20F]
+Label=Risoluzione piano focale Y
+
+;78
+[0102-A210]
+Label=Unità risoluzione piano focale
+ValueList=1#Pollici, 2#Pollici, 3#cm, 4#mm, 5#um
+
+;79
+[0102-A214]
+Label=Posizione soggetto
+
+;80
+[0102-A215]
+Label=Indice d'esposizione
+
+;81
+[0102-A217]
+Label=Metodo di cattura
+ValueList=1#Indefinito, 2#1 componente di superfice sensibile al colore, 3#2 componenti di superfice sensibili al colore, 4#3 componente di superfice sensibile al colore, 5#Cattura sequenziale sensibile al colore, 6#Cattura trilineare, 7#Cattura lineare sequenziale di colore
+
+;82
+[0102-A300]
+Label=Origine del file
+
+;83
+[0102-A301]
+Label=Tipo di scena
+
+;84
+[0102-A302]
+Label=Modello CFA
+
+;85
+[0102-A401]
+Label=Resa personalizzata
+ValueList=0#Processo normale, 1#Processo personalizzato
+
+;86
+[0102-A402]
+Label=Modo d'esposizione
+ValueList=0#Auto, 1#Manuale, 2#Tranche durée auto
+
+;87
+[0102-A403]
+Label=Bilanciamento del Bianco
+ValueList=0#Auto, 1#Manuale
+
+;88
+[0102-A404]
+Label=Gros plan numérique
+
+;89
+[0102-A405]
+Label=Lunghezza focale (35mm)
+
+;90
+[0102-A406]
+Label=Tipo di cattura della scena 
+ValueList=0#Standard, 1#Paesaggio, 2#Ritratto, 3#Scena notturna
+
+;91
+[0102-A407]
+Label=Controllo di guadagno
+ValueList=0#Nessuno, 1#Gain faible : M, 2#Gain fort : M, 3#Gain faible : A, 4#Gain fort : A
+
+;92
+[0102-A408]
+Label=Contrasto
+ValueList=0#Normale, 1#Basso, 2#Alto
+
+;93
+[0102-A409]
+Label=Saturazione
+ValueList=0#Normale, 1#Bassa, 2#Alta
+
+;94
+[0102-A40A]
+Label=Nitidezza
+ValueList=0#Normale, 1#Bassa, 2#Alta
+
+;95
+[0102-A40B]
+Label=Descrizione agencement dispositivo
+ 
+;96
+[0102-A40C]
+Label=Rapporto distanza dal soggetto
+ValueList=0#Sconosciuto, 1#Macro, 2#Vista ravvicinata, 3#Vista da lontano
+
+;97
+[0102-A420]
+Label=ID unico dell'immagine
+ValueList=
+
+; --------------------- GPS IFD ---------------------
+;98
+[0103-0000]
+Label=Versione ID
+ 
+;99
+[0103-0001]
+Label=Rif. Latitudine
+ValueList=N#Nord, S#Sud
+
+;100
+[0103-0002]
+Label=Latitudine
+
+;101
+[0103-0003]
+Label=Rif. Longitudine
+ValueList=E#Est, W#Ovest
+
+;102
+[0103-0004]
+Label=Longitude
+
+;103
+[0103-0005]
+Label=Rif. Altitudine
+ValueRef=0#Livello del mare
+
+;104
+[0103-0006]
+Label=Altitudine
+
+;105
+[0103-0007]
+Label=Estampille-H-D
+
+;106
+[0103-0008]
+Label=Satelliti
+
+ ;107
+[0103-0009]
+Label=Stato
+ValueList=A#Misurazione in corso, V#Misura l'interoperabilità
+
+;108
+[0103-000A]
+Label=Modalità di misurazione
+ValueList=2#Misurazione… 2-D, 3#Misurazione 3-D
+
+;109
+[0103-000B]
+Label=DOP
+
+;110
+[0103-000C]
+Label=Rif. velocità
+
+;111
+[0103-000D]
+Label=Velocità
+
+;112
+[0103-000E]
+Label=Rif. Poli
+ValueList=M#Nord magnetico, T#Nord geograf.
+
+;113
+[0103-000f]
+Label=Poli
+
+;114
+[0103-0010]
+Label= Rif. Direzione img.
+ 
+;115
+[0103-0011]
+Label=Direzione img. 
+
+;116
+[0103-0012]
+Label=Donnée carte
+ 
+;117
+[0103-0013]
+Label=Rif. Latitudine dest. 
+ValueList=N#Nord, S#Sud
+
+;118
+[0103-0014]
+Label=Latitudine dest.
+ 
+;119
+[0103-0015]
+Label=Rif. longitudine dest. 
+ValueList=E#Est, W#Ovest
+
+;120
+[0103-0016]
+Label=longitudine dest.
+ 
+;121
+[0103-0017]
+Label=Rif. azimuth dest.
+ValueList=M#Nord magnetico, T#Nord geograf.
+
+;122
+[0103-0018]
+Label=Azimuth dest.
+ValueList=K#Chilometri, M#Miglia, N#Miglia marine
+
+;123
+[0103-0019]
+Label=Rif. distanza dest.
+ 
+;124
+[0103-001A]
+Label=Distanza dest
+. 
+;125
+[0103-001B]
+Label=Metodo di trattamento
+
+;126
+[0103-001C]
+Label=Informazioni superficie
+
+;127
+[0103-001D]
+Label=Estampille date
+
+;128
+[0103-001E]
+Label=Différentiel
+ValueList=0#Nessuna correzione, 1#Différentiel corrigé
+
+; --------------------- IOP IFD ---------------------
+;129
+[0104-0001]
+Label=Indice IOP
+
+;130
+[0104-0002]
+Label=Versione IOP
+
+;131
+Label=Larghezza IOP
+
+;132
+[0104-1002]
+Label=Altezza IOP
+
+; ---------------------  Nota fabricant (Canon) ---------------------
+;133
+[A010-0001]
+Label=Agencements “1” appareil
+
+;134
+[A010-0004]
+Label=Agencements “2” appareil
+
+;135
+[A010-0006]
+Label=Info immagine
+
+;136
+[A010-0007]
+Label=Version log. Sté.
+
+;137
+[A010-0008]
+Label=N° immagine
+
+;138
+[A010-0009]
+Label=Nome del proprietario
+
+;139
+[A010-000C]
+Label=N° di serie dell'apparecchio
+
+; --------------------- Nota fabricant (Canon) - Agencements “1” appareil ---------------------
+;140
+[A011-0001]
+Label=Macro
+ValueList=1#Macro, 2#Normale
+
+;141
+[A011-0002]
+Label=Tempo. auto.
+ValueList=0#Inattivo
+
+;142
+[A011-0003]
+Label=Parametro di compressione
+ValueList=2#Normale, 3#Fin, 5#Super fin
+
+;143
+[A011-0004]
+Label=Modalità del flash
+ValueList=0#Non emesso, 1#Auto, 2#Attivo, 3#Correzione occhi rossi, 4#Sincro lento, 5#Auto + Correzione occhi rossi, 6#Attivo + Correzione occhi rossi
+
+;144
+[A011-0005]
+Label=Mode Prise en continu
+ValueList=0#Unique ou temporisat., 1#Continu
+
+;145
+[A011-0007]
+Label=Mode focalisation
+ValueList=0#Prise active, 1#AI Servo, 2#Focal. AI, 3#MF, 4#Unique, 5#Continu, 6#MF
+
+;146
+[A011-000A]
+Label=Grndezza immagine
+ValueList=0#Grande, 1#Media, 2#Piccola
+
+;147
+[A011-000B]
+Label=Prise facile
+ValueList=0#Tout autom., 1#Manuale, 2#Paesaggio, 3#Obturateur rapide, 4#Obturateur lent, 5#Nuit, 6#Nr.&Bl., 7#Sépia, 8#Portrait, 9#Sports, 10#Macro / Close-Up, 11#Focalis. panoram.
+
+;148
+[A011-000D]
+Label=Contrasto
+ValueList=-1#Basso, 0#Normale, 1#Alto
+
+;149
+[A011-000E]
+Label=Saturazione
+ValueList=-1#Bassa, 0#Normale, 1#Alta
+
+;150
+[A011-000F]
+Label=Sharpness
+ValueList=-1#Bassa, 0#Normale, 1#Alto
+
+;151
+[A011-0010]
+Label=Valore ISO
+ValueList=15#Auto, 16#50, 17#100, 18#200, 19#400
+
+;152
+[A011-0011]
+Label=Modalità misurazione
+ValueList=3#Stimata, 4#Parziale, 5#Media ponderata
+
+;153
+[A011-0012]
+Label=Messa a fuoco
+ValueList=0#Manuale, 1#Auto, 3#Plan serré (Modo “Macro” ), 7#Modo “all'infinito”, 8#Verrouillé (modo panor.)
+
+;154
+[A011-0013]
+Label=Punto AF
+ValueList=12288#Nessuno (MF), 12289#Sélect. auto, 12290#Destra, 12291#Centro, 12292#Gauche
+
+;155
+[A011-0014]
+Label=Modo esposizione
+ValueList=0#Prise facile, 1#Programme, 2#Priorité-Tv, 3#Priorité-Av, 4#Manuel, 5#A-DEP
+
+;156
+[A011-0017]
+Label=Lunghezza della focale [mm]
+
+;157
+[A011-0018]
+Label=Lunghezza della focale corta[mm]
+
+;158
+[A011-0019]
+Label=Unités de focale
+
+; --------------------- Nota fabricant (Canon) - Agencements “2” appareil ---------------------
+;159
+[A012-0007]
+Label=Équilibrage des blancs
+ValueList=0#Auto, 1#Ensoleillé, 2#Nuageux, 3#Incandescence, 4#Fluorescence, 5#Flash, 6#>Perso
+
+;160
+[A012-0009]
+Label=N° de séquence
+
+; --------------------- Nota fabricant (Nikon) ---------------------
+;161
+[A020-0003]
+Label=Qualità immagine
+ValueList=1#VGA di base, 2#VGA normale, 3#VGA buona, 4#SXGA di base, 5#SXGA normale, 6#SXGA buona, 10#UXGA di base, 11#UXGA normale, 12#UXGA buona
+
+;162
+[A020-0004]
+Label=Modalità colore
+ValueList=1#Colore, 2#Monocromatico
+
+;163
+[A020-0005]
+Label=Aggiustamento immagine
+ValueList=0#Normale, 1#Luminosità(+), 2#Luminosità(-), 3#Contrasto(+), 4#Contrasto(-)
+
+;164
+[A020-0006]
+Label=Sensibilità CCD
+ValueList=0#ISO 80, 2#ISO 160, 4#ISO 320, 5#ISO 100
+
+;165
+[A020-0007]
+Label=Bilanciamento del Bianco
+ValueList=0#Auto, 2#Prestabilito, 4#Luce del giorno, 5#Fluorescente, 6#Nuvoloso, 7#Flash intern. auto
+
+;166
+[A020-0008]
+Label=Messa a fuoco
+
+;167
+[A020-000A]
+Label=Gros plan numérique
+
+;168
+[A020-000B]
+Label=Adaptateur de lentille
+ValueList=0#Nessuno, 2#Grandangolo
+
+; --------------------- Nota fabricant  (Nikon 2) ---------------------
+;169
+[A030-0001]
+Label=Versione des données
+
+;170
+[A030-0002]
+Label=Sensibilità ISO
+
+;171
+[A030-0003]
+Label=Modalità colore (BPP)
+
+;172
+[A030-0004]
+Label=Qualità immagine
+
+;173
+[A030-0005]
+Label=Bilanciamento del bianco
+
+;174
+[A030-0006]
+Label=Nitidezza immagine
+
+;175
+[A030-0007]
+Label=Modalità messa a fuoco
+
+;176
+[A030-0008]
+Label=Sensibiità flash
+
+;177
+[A030-000B]
+Label=Bilanciamento del bianco aggiust. fine
+
+;178
+[A030-000F]
+Label=Selezione ISO
+ 
+;178
+[A030-0013]
+Label=Sensibilità ISO
+
+;179
+[A030-0016]
+Label=Limite d'image
+
+;180
+[A030-0080]
+Label=Regolazione immagine
+
+;181
+[A030-0081]
+Label=Compensazione della tonalità
+ 
+;182
+[A030-0082]
+Label=Adaptateur lentille
+
+;183
+[A030-0083]
+Label=Tipo di lentille
+
+;184
+[A030-0084]
+Label=Lentille
+
+;185
+[A030-0085]
+Label=Distanza focale
+
+;186
+[A030-0086]
+Label=Gros plan numérique
+
+;187
+[A030-0087]
+Label=Modo flash 
+ValueList=0#Non emesso, 8#Emesso, Modalità “Commander” , 9#Emesso, Modalità TTL
+ 
+;188
+[A030-0088]
+Label=Punto AF
+ 
+;189
+[A030-008D]
+Label=Nuance di colore
+
+;190
+[A030-008F]
+Label=Modo scene
+ 
+;191
+[A030-0090]
+Label=Sorgente luminosa
+
+;192
+[A030-0092]
+Label=Ajustement nuance
+ 
+;193
+[A030-0094]
+Label=Saturazione
+
+;194
+[A030-0095]
+Label=Riduzione del rumore
+
+;195
+[A030-00A0]
+Label=N° di serie
+
+;196
+[A030-00A7]
+Label=Conteggio scatti
+
+;197
+[A030-00A9]
+Label=Ottimizzazione immagine 
+
+;198
+[A030-00AA]
+Label=Saturazione
+
+;199
+[A030-00AB]
+Label=Vari. programma  
+
+; --------------------- Nota fabricant (Casio) --------------------- ¤
+;200
+[A040-0001]
+Label=Mode enregistrement
+ValueList=1#Obturateur unique, 2#Panorama, 3#Scène nocturne, 4#Portrait, 5#Paysage
+
+;201
+[A040-0002]
+Label=Agencement qualité
+ValueList = 1#Économique, 2#Normale, 3#Bonne
+
+;202
+[A040-0003]
+Label=Mode focalisation
+ValueList=2#Macro, 3#Focalis. auto, 4#Focalis. manuelle, 5#À l'infini
+
+;203
+[A040-0004]
+Label=Mode flash
+ValueList=1#Auto, 2#Actif, 3#Inactif, 4#Correction yeux rouges
+
+;204
+[A040-0005]
+Label=Intensité du flash
+ValueList=1#Auto, 2#Active, 3#Inactive, 4#Correction yeux rouges, 11#Faible, 13#Normale, 15#Forte
+
+;205
+[A040-0006]
+Label=Distance de l'objet
+
+;206
+[A040-0007]
+Label=Équilibrage des blancs
+ValueList=1#Auto, 2#Incandescence, 3#Lumière du jour, 4#Fluorescence, 5#Ombre, 129#Manuel
+
+;207
+[A040-000A]
+Label=Gros plan numérique
+ValueList=65536#Inactif, 65537#2X Gros plan numérique
+
+;208
+[A040-000B]
+Label=Sharpness
+ValueList=0#Normale, 1#Media, 2#Alta
+
+;209
+[A040-000C]
+Label=Contrasto
+ValueList=0#Normale, 1#Medio, 2#Alto
+
+;210
+[A040-000D]
+Label=Saturazione
+ValueList=0#Normale, 1#Media, 2#Alta
+
+;211
+[A040-0014]
+Label=CCD Sensibilità
+ValueList=64#Normale, 125#+1.0, 250#+2.0, 244#+31.0, 80#Normale, 100#Alta
+
+; --------------------- Nota fabricant (Casio 2) ---------------------
+;212
+[A050-0002]
+Label=Dimensions vignette
+
+;213
+[A050-0003]
+Label=Taille vignette
+
+;214
+[A050-0004]
+Label=Décalage vignette
+
+;215
+[A050-0008]
+Label=Mode de qualité
+ValueList=0#Économique, 1#Normale, 2#Bonne
+
+;216
+[A050-0009]
+Label=Taille image
+ValueList=0#640x480, 4#1600x1200, 5#2048x1536, 20#2288x1712, 21#2592x1944, 22#2304x1728, 36#3008x2008
+
+;217
+[A050-000D]
+Label=Mode focalisation
+ValueList=0#Normale, 1#Macro
+
+;218
+[A050-0014]
+Label=Sensibilité ISO
+ValueList=3#50, 4#64, 6#100, 9#200
+
+;219
+[A050-0019]
+Label=Équilibrage des blancs
+ValueList=0#Auto, 1#Lumière du jour, 2#Ombre, 3#Incandescence, 4#Fluorescence, 5#Manuel
+
+;220
+[A050-001D]
+Label=Longueur de focale
+
+;221
+[A050-001F]
+Label=Saturation
+ValueList=0#-1, 1#Normale, 2#+1
+
+;222
+[A050-0020]
+Label=Contraste
+ValueList=0#-1, 1#Normal, 2#+1
+
+;223
+[A050-0021]
+Label=Netteté
+ValueList=0#-1, 1#Normale, 2#+1
+
+;224
+[A050-0e00]
+Label=Imprimer l'image selon les infos
+
+;225
+[A050-2011]
+Label=Polarisation équilibrage des blancs 
+
+;226
+[A050-2012]
+Label=Équilibrage des blancs
+ValueList=12#Flash, 0#Manuel, 1#Auto?, 4#Flash?
+
+;227
+[A050-2022]
+Label= Distance objet [mm]
+
+;228
+[A050-2034]
+Label=Distance flash 
+
+;229
+[A050-3000]
+Label=Mode enregistrement
+ValueList=2#Normal
+
+;230
+[A050-3001]
+Label=Temporisateur
+ValueList=1#Inactif
+
+;231
+[A050-3002]
+Label=Qualité
+ValueList=1#Économique, 2#Normale, 3#Bonne
+
+;232
+[A050-3003]
+Label=Mode focalisation
+ValueList=0#Manuel?, 1#Fixation?, 3#Focalis. auto: zone unique, 4#Focalis. auto: plusieurs zones
+
+;233
+[A050-3006]
+Label=Fuseau horaire
+
+;234
+[A050-3007]
+Label=Mode “Meilleure prise” 
+ValueList=0#Actif, 1#Inactif
+
+;235
+[A050-3014]
+Label=Sensibilité CCD ISO
+
+;236
+[A050-3015]
+Label=Mode de couleur
+ValueList=0#Inactif
+
+;237
+[A050-3016]
+Label=Extension
+ValueList=0#Inactive
+
+;238
+[A050-3017]
+Label=Filtre
+ValueList=0#Inactif
+
+; --------------------- Nota fabricant (Fuji) ---------------------
+;239
+[A060-0000]
+Label=Version nota fabricant
+
+;240
+[A060-1000]
+Label=Agencement qualité
+
+;241
+[A060-1001]
+Label=Netteté
+ValueList=1#Adoucie, 2#Adoucie, 3#Normale, 4#Élevée, 5#Élevée
+
+;242
+[A060-1002]
+Label=Équilibrage des blancs
+ValueList=0#Auto, 256#Lumière du jour, 512#Nuageux, 768#, 769#Fluorescence colorée “naturelle”, 770#Fluorescence blanche, 1024#Incandescence, 3840#Perso.
+
+;243
+[A060-1003]
+Label=Saturation chrom. 
+ValueList=0#Normale, 256#Forte, 512#Basse
+
+;244
+[A060-1004]
+Label=Contraste
+ValueList=0#Normal, 256#Élevé, 512#Faible
+
+;245
+[A060-1010]
+Label=Mode flash 
+ValueList=0#Auto, 1#Actif, 2#Inactif, 3#Correction yeux rouges
+
+;246
+[A060-1011]
+Label=Puissance flash
+
+;247
+[A060-1020]
+Label=mode macro
+ValueList=0#Inactif, 1#Actif
+
+;248
+[A060-1021]
+Label=Mode focalisation
+ValueList=0#Auto, 1#Manuel
+
+;249
+[A060-1030]
+Label=Mode synchro lente 
+ValueList=0#Inactif, 1#Actif
+
+;250
+[A060-1031]
+Label=Type d'image
+ValueList=0#Auto, 1#Portrait, 2#Paysage, 4#Scène de Sports, 5#Scène nocturne, 6#Programme AE, 256#Priorité à l'ouverture AE, 512#Priorité à l'obturateur AE, 768#Exposition manuelle
+
+;251
+[A060-1100]
+Label=Mode Continu¦Entre crochets
+ValueList=0#Inactif, 1#Actif
+
+;252
+[A060-1300]
+Label=État du flou
+ValueList=0#Aucun, 1#Risque de “bougé”
+
+;253
+[A060-1301]
+Label=État focalisation
+ValueList=0#Correct, 1#Hors focalisation
+
+;254
+[A060-1302]
+Label=État exposition
+ValueList=0#Correcte, 1#Sur-exposition
+
+; -------------------- Nota fabricant (Olympus) ---------------------
+;255
+[A070-0200]
+Label=Mode de prise de vue
+
+;256
+[A070-0201]
+Label=Agencement compression
+ValueList=0#SQ, 1#HteQual, 2#TrèsHteQual. 
+
+;257
+[A070-0202]
+Label=Mode macro
+ValueList=0#Normale, 1#Macro
+
+;258
+[A070-0204]
+Label=Gros plan numérique
+
+;259
+[A070-0207]
+Label=Versione programma Sté.
+
+;260
+[A070-0208]
+Label=Informations image
+
+;261
+[A070-0209]
+Label=ID appareil 
+
+; --------------------- Nota fabricant (Sigma) ---------------------
+;262
+[A080-0002]
+Label=N° de série
+
+;263
+[A080-0003]
+Label=Mode Prise en continu
+
+;264
+[A080-0004]
+Label=Mode résolution 
+
+;265
+[A080-0005]
+Label=Mode focalis. autom.
+
+;266
+[A080-0006]
+Label=Agencement focalisation
+
+;267
+[A080-0007]
+Label=Équilibrage des blancs
+
+;268
+[A080-0008]
+Label=Mode exposition
+
+;269
+[A080-0009]
+Label=Mode mesure
+
+;270
+[A080-000A]
+Label=Lentille
+
+;271
+[A080-000B]
+Label=Mode couleurs (BPP)
+
+;272
+[A080-000C]
+Label=Compensation exposition
+
+;273
+[A080-000D]
+Label=Contraste
+
+;274
+[A080-000E]
+Label=Ombre
+
+;275
+[A080-000F]
+Label=Éclairé
+
+;276
+[A080-0010]
+Label=Saturation
+
+;277
+[A080-0011]
+Label=Netteté
+
+;278
+[A080-0012]
+Label=Appoint de flash X3
+
+;279
+[A080-0014]
+Label=Ajustement couleur
+
+;280
+[A080-0015]
+Label=Mode ajustment 
+
+;281
+[A080-0016]
+Label=Qualité
+
+;282
+[A080-0017]
+Label=Mod logic. Sté
+
+;283
+[A080-0018]
+Label=Programma
+
+;284
+[A080-0019]
+Label=Crochets auto
+
+; --------------------- Nota fabricant (Sanyo) ---------------------
+;285
+[A090-00ff]
+Label=Décalage nota fabricant
+
+;286
+[A090-0100]
+Label=Vignette
+
+;287
+[A090-0200]
+Label=Mode spécial
+
+;288
+[A090-0201]
+Label=Qualité
+ValueList=0#Normale¦Très basse, 1#Normale¦Basse, 2#Normale¦Passable, 3#Normale¦Moyenne, 4#Normale¦Améliorée, 5#Normale¦Haute, 6#Normale¦Très haute, 7#Normale¦Excellente, 256#Bonne¦Très basse, 257#Bonne¦Basse, 258#Bonne¦Passable, 259#Bonne¦Moyenne, 260#Bonne¦Améliorée, 261#Bonne¦Haute, 262#Bonne¦Très haute, 263#Bonne¦Hors pair, 512#Excellente¦Très basse, 513#Excellente¦Basse, 514#Excellente¦Passable, 515#Excellente¦Moyenne, 516#Excellente¦Améliorée, 517#Excellente¦Haute, 518#Excellente¦Très haute, 519#Excellente¦Excellente
+
+;289
+[A090-0202]
+Label=Macro
+ValueList=0#Normale, 1#Macro, 2#Vue, 3#Manuale
+
+;290
+[A090-0204]
+Label=Gros plan numérique
+
+;291
+[A090-0207]
+Label=Versione programma
+
+;292
+[A090-0208]
+Label=Informazioni immagine
+
+;293
+[A090-0209]
+Label=ID fotocamera
+
+;294
+[A090-020E]
+Label=Prise séquentielle
+ValueList=0#Aucune, 1#Standard, 2#Meilleure, 3#Ajuster exposition
+
+;295
+[A090-020F]
+Label=Gamme large
+ValueList=0#Inactive, 1#Active
+
+;296
+[A090-0210]
+Label=Mode d'ajustement des couleurs
+ValueList=0#Inactif, 1#Actif
+
+;297
+[A090-0213]
+Label=Intantané
+ValueList=0#Inactif, 1#Actif
+
+;298
+[A090-0214]
+Label=Temporisateur
+ValueList=0#Inactif, 1#Actif
+
+;299
+[A090-0216]
+Label=Mémor. Voix 
+ValueList=0#Inactive, 1#Active
+
+;300
+[A090-0217]
+Label=Enregistrer les lâchers obturateur
+ValueList=0#Enregistr. quand bas, 1#Appuy. M, Appuy. AR
+
+;301
+[A090-0218]
+Label=Réduire papillotement
+ValueList=0#Inactif, 1#Actif
+
+;302
+[A090-0219]
+Label=Gros plan optique
+ValueList=0#Inactif, 1#Actif
+
+;303
+[A090-021B]
+Label=Gros plan numérique
+ValueList=0#Inactif, 1#Actif
+
+;304
+[A090-021D]
+Label=Source lumière spéciale
+ValueList=0#Inactive, 1#Active
+
+;305
+[A090-021E]
+Label=Re-enregistré
+ValueList=0#Non, 1#Oui
+
+;306
+[A090-021F]
+Label=Sélection de scène
+ValueList=0#Inactive, 1#Sport, 2#Tv, 3#Nuit, 4#Utilis.1, 5#Utilis. 2
+
+;307
+[A090-0223]
+Label=Distance focalisation manuelle
+
+;308;
+[A090-0224]
+Label=Intervalle prise en séquence
+ValueList=0#5 cadres/sec, 1#10 cadres/sec, 2#15 cadres/sec, 3#20 cadres/sec
+
+309
+[A090-0225]
+Label=Mode flash
+ValueList=0#Auto, 1#Forcé, 2#Désactivé, 3#Yeux rouges
+
+; --------------------- Nota fabricant (Minolta) ---------------------
+;310
+[A0A0-0000]
+Label=Version
+
+;311
+[A0A0-0040]
+Label=Image compressée
+
+;312
+[A0A0-0081]
+Label=Données aperçu image
+
+;313
+[A0A0-0088]
+Label=Départ aperçu image
+
+;314
+[A0A0-0089]
+Label=Longueur aperçu image
+
+;315
+[A0A0-0101]
+Label=Mode de couleur
+ValueList=0#Couleurs naturelles, 1#Noir & blanc, 2#Couleurs vives, 3#Ensoleiller, 4#RVB Adobe
+
+;316
+[A0A0-0102]
+Label=Qualité Minolta
+ValueList=0#Brute, 1#Excellente, 2#bonne, 3#Standard, 4#Économique, 5#Hors-pair
+
+;317
+[A0A0-0103]
+Label=Qualité Minolta
+ValueList=0#Brute, 1#Excellente, 2#bonne, 3#Standard, 4#Économique, 5#Hors-pair
+
+; --------------------- Nota fabricant (Minolta 2) ---------------------
+;318
+[A0B0-0001]
+Label=Mode exposition
+ValueList=0#Programme, 1#Priorité ouverture, 2#Priorité obturateur, 3#Manuel
+
+;319
+[A0B0-0002]
+Label=Mode flash
+ValueList=0#Emplir flash, 1#Correction yeux rouges, 2#Synchr. flash relevée, 3#Sans fil
+
+;320
+[A0B0-0003]
+Label=Équilibrage des blancs
+ValueList=0#Auto, 1#Lumière du jour, 2#Nuageux, 3#Incandescence, 5#Perso, 7#Fluorescence, 8#Fluorescence 2, 11#Perso 2, 12#Perso 3
+
+;321
+[A0B0-0004]
+Label=Taille image
+ValueList=0#2560x1920 (2048x1536), 1#1600x1200, 2#1280x960, 3#640x480
+
+;322
+[A0B0-0005]
+Label=Qualité image
+
+;323
+[A0B0-0006]
+Label=Mode Prise en continu
+ValueList=0#Unique, 1#Continue, 2#Par temporisateur, 4#Crochets, 5#Intervalle, 6#Continue UHS, 7#Continu HS 
+
+;324
+[A0B0-0007]
+Label=Mode mesure
+ValueList=0#Multi-segment, 1#Moyenne pondérée, 2#Ponctuelle
+
+;325
+[A0B0-0008]
+Label=ISO
+
+;326
+[A0B0-0009]
+Label=Vitesse obturateur
+
+;327
+[A0B0-000A]
+Label=Ouverture
+
+;328
+[A0B0-000B]
+Label=Mode macro
+ValueList=0#Inactif, 1#Actif
+
+;329
+[A0B0-000C]
+Label=Gros plan numérique
+ValueList=0#Inactif, 1#Agrandissement électronique, 2#2x
+
+;330
+[A0B0-000D]
+Label=Compensation exposition
+
+;331
+[A0B0-000E]
+Label=Pas de crochet
+ValueList=0#1/3 EV, 1#2/3 EV, 2#1 EV
+
+;332
+[A0B0-000F]
+Label=Longueur intervalle
+
+;333
+[A0B0-0011]
+Label=N° intervalle
+
+;334¤
+[A0B0-0012]
+Label=Longueur focale
+
+;335
+[A0B0-0013]
+Label=Distance focale
+ 
+;336
+[A0B0-0014]
+Label=Flash allumé
+ValueList=0#Non, 1#Oui
+
+;337
+[A0B0-0015]
+Label=Date
+
+;338
+[A0B0-0016]
+Label=Heure
+
+;339
+[A0B0-0017]
+Label=Ouverture maxi.
+
+;340
+[A0B0-001A]
+Label=Mémoire N° fichier
+ValueList=0#Inactive, 1#Active
+
+;341
+[A0B0-001B]
+Label=Ultimo file N°
+
+;342
+[A0B0-001C]
+Label=Équilibrage des couleurs Rouge
+
+;343
+[A0B0-001D]
+Label=Équilibrage des couleurs Vert
+
+;344
+[A0B0-001E]
+Label=Équilibrage des couleurs Bleu
+
+;345
+[A0B0-001F]
+Label=Saturazione
+
+;346
+[A0B0-0020]
+Label=Contrasto
+
+;347
+[A0B0-0021]
+Label=Netteté
+ValueList=0#Élevée, 1#Normale, 2#Adoucie
+
+;348
+[A0B0-0022]
+Label=Programme sujet 
+ValueList=0#Aucun, 1#Portrait, 2#Texte, 3#Portrait nocturne, 4#Coucher de soleil, 5#Action sportive
+ 
+;349
+[A0B0-0023]
+Label=Compens. exposition flash
+
+;350
+[A0B0-0024]
+Label=Agencement ISO
+ValueList=0#100, 1#200, 2#400, 3#800, 4#Auto
+
+;351
+[A0B0-0025]
+Label=Modèle
+ValueList=0#DiMAGE 7, 1#DiMAGE 5, 2#DiMAGE S304, 3#DiMAGE S404, 4#DiMAGE 7i, 5#DiMAGE 7Hi
+
+;352
+[A0B0-0026]
+Label=Mode intervalle 
+ValueList=0#Image encore, 1#Attente film
+
+;353
+[A0B0-0027]
+Label=Nom dossier
+ValueList=0#Form. Standard, 1#Form. Données
+
+;354
+[A0B0-0028]
+Label=Mode de couleur
+
+;355
+[A0B0-0029]
+Label=Filtre couleur
+
+;356
+[A0B0-002A]
+Label=Filtre N&Bl.
+
+;357
+[A0B0-002B]
+Label=Flash interne 
+ValueList=0#Non, 1#Allumé
+
+;358
+[A0B0-002C]
+Label=Luminosité
+
+;359
+[A0B0-002D]
+Label=PointX Focalis. ponctuelle
+
+;360
+[A0B0-002E]
+Label=PointY Focalis. ponctuelle
+
+;361
+[A0B0-002F]
+Label=Zone focalis. large 
+ValueList=0#Aucune, 1#Zone centrale (orientation horizontale), 2# zone centrale (orientation verticale), 3#Zone gauche , 4#Zone droite
+ 
+;362
+[A0B0-0030]
+Label=Mode focalisation
+ValueList=0#Auto, 1#Manuel
+
+;363
+[A0B0-0031]
+Label=Surface focalisée
+ValueList=0# Focalisation large (normale), 1#Focalisation ponctuelle
+
+;364
+[A0B0-0032]
+Label=Position DEC
+ValueList=0#Exposition 1#Contraste, 2#Saturation, 3#Filtre
+
+; --------------------- Mots extérieurs ---------------------
+;365
+[E000-0000]
+Label=
+ValueList=0#Non calibrato, 1#RVB Non compressa
+
+;366
+[E000-0001]
+Label=
+ValueList=2#Immagine fotografata direttamente
+
+;367
+[E000-0002]
+Label=
+ValueList=3#Pollici, 4#Centimetri
+
+;368
+[E000-0003]
+Label=
+ValueList=5#Non emesso, 6#Flash emesso, 7#Flash emesso senza misura della luce, 8#Flash emesso con misura della luce
+
+

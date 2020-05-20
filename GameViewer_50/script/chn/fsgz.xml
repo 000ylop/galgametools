@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="RAYS.dll" 接口名="CAK" 0 />
+	<插件 文件名="RAYS.dll" 接口名="MAP" 1 />
+
+	<文件 文件名="CityIntro\*.cak"               插件="0" />
+	<文件 文件名="FIGHT\*.map"                   插件="1" />
+	<文件 文件名="FIGHT\dead\*.cak"              插件="0" />
+	<文件 文件名="FIGHT\map\*.map"               插件="1" />
+	<文件 文件名="FMENU\common\*.cak"            插件="0" />
+	<文件 文件名="FMENU\confirmmenu\*.cak"       插件="0" />
+	<文件 文件名="FMENU\end\*.cak"               插件="0" />
+	<文件 文件名="FMENU\magicmenu\*.cak"         插件="0" />
+	<文件 文件名="FMENU\mainmenu\*.cak"          插件="0" />
+	<文件 文件名="FMENU\npcinfo\*.cak"           插件="0" />
+	<文件 文件名="FMENU\npcinfo\npc\*.cak"       插件="0" />
+	<文件 文件名="FMENU\npcinfo\num\*.cak"       插件="0" />
+	<文件 文件名="FMENU\npcinfo\status\*.cak"    插件="0" />
+	<文件 文件名="FMENU\timeproc\*.cak"          插件="0" />
+	<文件 文件名="FMENU\toolsmenu\*.cak"         插件="0" />
+	<文件 文件名="FMENU\upgrade\*.cak"           插件="0" />
+	<文件 文件名="GAME\mini\jm\*.cak"            插件="0" />
+	<文件 文件名="GAME\mini\map\*.cak"           插件="0" />
+	<文件 文件名="GAME\mini\object\*.cak"        插件="0" />
+	<文件 文件名="GAME\smallgame\*.cak"          插件="0" />
+	<文件 文件名="HEAD\*.cak"                    插件="0" />
+	<文件 文件名="MAP\*.map"                     插件="1" />
+	<文件 文件名="menu\*.cak"                    插件="0" />
+	<文件 文件名="menu\dialog\*.cak"             插件="0" />
+	<文件 文件名="menu\main\*.cak"               插件="0" />
+	<文件 文件名="menu\name\equipment\*.cak"     插件="0" />
+	<文件 文件名="menu\name\magic\*.cak"         插件="0" />
+	<文件 文件名="menu\name\magic2\*.cak"        插件="0" />
+	<文件 文件名="menu\name\property\*.cak"      插件="0" />
+	<文件 文件名="menu\ui\*.cak"                 插件="0" />
+	<文件 文件名="menu\ui\charhead\*.cak"        插件="0" />
+	<文件 文件名="menu\ui\charname\*.cak"        插件="0" />
+	<文件 文件名="menu\ui\COMMON\*.cak"          插件="0" />
+	<文件 文件名="menu\ui\confirm\*.cak"         插件="0" />
+	<文件 文件名="menu\ui\EQUIPMENT\*.cak"       插件="0" />
+	<文件 文件名="menu\ui\ITEM\*.cak"            插件="0" />
+	<文件 文件名="menu\ui\MAGIC\*.cak"           插件="0" />
+	<文件 文件名="menu\ui\SLTPLR\*.cak"          插件="0" />
+	<文件 文件名="menu\ui\STATE\*.cak"           插件="0" />
+	<文件 文件名="menu\ui\SYSTEM\*.cak"          插件="0" />
+	<文件 文件名="menu\ui\SYSTEM\SAVELOAD\*.cak" 插件="0" />
+	<文件 文件名="menu\ui\SYSTEM\SETUP\*.cak"    插件="0" />
+	<文件 文件名="menu\ui\TRADE\*.cak"           插件="0" />
+	<文件 文件名="menu\ui\TRADE\wpn\*.cak"       插件="0" />
+	<文件 文件名="menu\ui\TRADE\YC\*.cak"        插件="0" />
+	<文件 文件名="obj\STONE\*.cak"               插件="0" />
+	<文件 文件名="OBJECT\ADDNEW\*.cak"           插件="0" />
+	<文件 文件名="OBJECT\ANI\*.bma"              插件="1" />
+	<文件 文件名="OBJECT\BRIDGE\*.cak"           插件="0" />
+	<文件 文件名="OBJECT\fightnpc\*.cak"         插件="0" />
+	<文件 文件名="OBJECT\GRASS\*.cak"            插件="0" />
+	<文件 文件名="OBJECT\HOUSE\*.cak"            插件="0" />
+	<文件 文件名="OBJECT\HOUSE\*.bma"            插件="1" />
+	<文件 文件名="OBJECT\ITEM\*.cak"             插件="0" />
+	<文件 文件名="OBJECT\LADDER\*.cak"           插件="0" />
+	<文件 文件名="OBJECT\mag\*.cak"              插件="0" />
+	<文件 文件名="OBJECT\MAGIC\*.cak"            插件="0" />
+	<文件 文件名="OBJECT\NPC\*.cak"              插件="0" />
+	<文件 文件名="OBJECT\OTHER\*.cak"            插件="0" />
+	<文件 文件名="OBJECT\PASTE\*.cak"            插件="0" />
+	<文件 文件名="OBJECT\RUG\*.cak"              插件="0" />
+	<文件 文件名="OBJECT\STONE\*.cak"            插件="0" />
+	<文件 文件名="OBJECT\TREE\*.cak"             插件="0" />
+	<文件 文件名="picneed\*.cak"                 插件="0" />
+
+</游戏脚本>

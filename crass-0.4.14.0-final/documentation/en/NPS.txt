@@ -1,0 +1,12 @@
+﻿Name:		NPS
+Description:	game system developed by 株式会社ニトロプラス
+Archive:	.npp
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.0.0
+Status:	        Beta
+
+【TODO】
+test "天使の二挺拳銃" official edition whether can be extracted.
+
+【ChangeLog】
+2008-04-23 01:08 ver 1.0.0 1st version released

@@ -1,0 +1,11 @@
+// exrrdat.cpp, v1.0 2006/11/23
+// coded by asmodean
+
+// contact: 
+//   web:   http://plaza.rakuten.co.jp/asmodean
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+//   icq:   55244079
+
+// This tool extracts/de-obfuscates data from NEKOPACK (*.DAT) archives used
+// in Navel's game Really?Really!

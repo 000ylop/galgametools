@@ -1,0 +1,3350 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<tdb>
+	<tag id="tag_animstart">
+		<tagname>animstart</tagname>
+		<tagshortinfo>アニメーションの開始</tagshortinfo>
+		<tagremarks>　アニメーションを、指定したセグメントで、指定したラベルから開始します。<br />　セグメントは、一つのレイヤ、一つのアニメーション定義ファイル ( asd ファイル ) で複数のアニメーションを同時に実行するための概念で、一つのレイヤで複数のセグメントを使用でき、各セグメントで同時に別々のラベルからアニメーションを開始することができます。<br />　セグメント 0 は特別なセグメントで、レイヤに画像が読み込まれたのと同時に実行されるアニメーションで、このタグや <ref>animstop</ref> タグではセグメント 0 は指定できません。<br /></tagremarks>
+		<attr id="attr_animstart_layer">
+			<attrname>layer</attrname>
+			<attrshortinfo>対象レイヤ</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>&quot;base&quot; または 0 以上の整数</attrformat>
+			<attrinfo>　アニメーションを開始するレイヤを指定します。<br />&quot;base&quot; を指定すると 背景レイヤ、 0 以上の整数を指定すると、対応する前景レイヤを表します。　指定したレイヤには、アニメーション情報が読み込まれていないとなりません。</attrinfo>
+		</attr>
+		<attr id="attr_animstart_page">
+			<attrname>page</attrname>
+			<attrshortinfo>ページ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;back&quot; または &quot;fore&quot;</attrformat>
+			<attrinfo>　表(fore)画面を対象とするか、裏(back)画面を対象とするかを指定します。省略すると表ページであると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_animstart_seg">
+			<attrname>seg</attrname>
+			<attrshortinfo>セグメント</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>1 以上の整数</attrformat>
+			<attrinfo>　この属性で指定したセグメント番号でアニメーションを開始します。<br />　異なるセグメント番号では同時に複数のアニメーションを実行できます。<br />　セグメント番号は任意の番号を指定できますが、必要以上に大きな番号を指定しないでください。また、セグメント 0 は指定できません。<br /></attrinfo>
+		</attr>
+		<attr id="attr_animstart_target">
+			<attrname>target</attrname>
+			<attrshortinfo>開始ラベル</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>開始ラベル名</attrformat>
+			<attrinfo>　アニメーションを開始するための asd ファイル中のラベルを指定します。<br />　<ref>link</ref>タグなどと同じように、* (アステリスク) を忘れないようにしてください。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_animstop">
+		<tagname>animstop</tagname>
+		<tagshortinfo>アニメーションの停止</tagshortinfo>
+		<tagremarks>　任意のセグメントのアニメーションを停止します。<br />　このタグはアニメーションの終了を待ちません。アニメーションの終了を待つには<ref>wa</ref> タグを使用してください。<br />　アニメーションがループしている場合、asd ファイル上で home タグを通過するまでアニメーションは停止しません。<br /></tagremarks>
+		<attr id="attr_animstop_layer">
+			<attrname>layer</attrname>
+			<attrshortinfo>対象レイヤ</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>&quot;base&quot; または 0 以上の整数</attrformat>
+			<attrinfo>　アニメーションを停止するレイヤを指定します。<br />&quot;base&quot; を指定すると 背景レイヤ、 0 以上の整数を指定すると、対応する前景レイヤを表します。　指定したレイヤには、アニメーション情報が読み込まれていないとなりません。</attrinfo>
+		</attr>
+		<attr id="attr_animstop_page">
+			<attrname>page</attrname>
+			<attrshortinfo>ページ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;back&quot; または &quot;fore&quot;</attrformat>
+			<attrinfo>　表(fore)画面を対象とするか、裏(back)画面を対象とするかを指定します。省略すると表ページであると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_animstop_seg">
+			<attrname>seg</attrname>
+			<attrshortinfo>セグメント</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>1 以上の整数</attrformat>
+			<attrinfo>　この属性で指定したセグメント番号のアニメーションを停止します。<br />　セグメント番号 0 は指定できません。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_autowc">
+		<tagname>autowc</tagname>
+		<tagshortinfo>自動ウェイト</tagshortinfo>
+		<tagremarks>　特定の文字の後に指定文字数分のウェイトを入れることができます。<br />　ch 属性で指定した文字が表示された後、time 属性で指定した時間がウェイトとして入ります。<br />　文字は ch タグで複数指定できて、それに対応してそれぞれの文字に time 属性でタイミングを指定できます。<br /></tagremarks>
+		<tagexample>[autowc enabled=true ch=&quot;、。・&quot; time=&quot;3,5,3&quot;]<br />; ↑ &quot;、。・&quot; の各文字に対してそれぞれ 3, 5, 3 文字数分のウェイトを入れる</tagexample>
+		<attr id="attr_autowc_enabled">
+			<attrname>enabled</attrname>
+			<attrshortinfo>自動ウェイトを有効にするか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false</attrformat>
+			<attrinfo>　自動ウェイトを有効にする場合は true を、無効にするには false を指定します。<br />　省略すれば設定は変更されません。</attrinfo>
+		</attr>
+		<attr id="attr_autowc_ch">
+			<attrname>ch</attrname>
+			<attrshortinfo>自動ウェイトを入れる文字</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>対象の文字</attrformat>
+			<attrinfo>　自動ウェイトを入れる文字を指定します。指定された文字のあとに、time 属性で指定した文字数分のウェイトが入ります。<br />　省略すれば設定は変更されません。</attrinfo>
+		</attr>
+		<attr id="attr_autowc_time">
+			<attrname>time</attrname>
+			<attrshortinfo>ウェイト</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ウェイト(文字数単位)</attrformat>
+			<attrinfo>　自動ウェイトを入れる時間を文字数単位で指定します。<br />　ch 属性で指定した文字それぞれに対して、カンマで区切って時間を指定できます。<br />　一つしか時間を指定しなかった場合は ch タグで指定したすべての文字にその時間が設定されます。<br />　この属性を省略した場合は 4 を指定したと見なされます。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_backlay">
+		<tagname>backlay</tagname>
+		<tagshortinfo>レイヤ情報の表ページから裏ページへのコピー</tagshortinfo>
+		<tagremarks>　指定したレイヤ、あるいはすべてのレイヤの情報を、表ページから裏ページにコピーします。<br />　コピーされるのは、<ref>copylay</ref> タグでコピーされる情報と同じです。<br />　<ref>trans</ref> タグは表ページのレイヤの画像を裏ページのレイヤの画像に置き換えます。そのため、トランジション前にこの backlay タグで画像を裏ページに転送し、裏ページでレイヤを操作してから、トランジションを行うという方法に用います。<br /></tagremarks>
+		<attr id="attr_backlay_layer">
+			<attrname>layer</attrname>
+			<attrshortinfo>対象レイヤ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;base&quot; または 0 以上の整数2 または message0 または message1 または message</attrformat>
+			<attrinfo>　対象となるレイヤを指定します。<br />　base を指定すると 背景レイヤ になります。<br />　0 以上の整数を指定すると前景レイヤになります。<br />　message0 または message1 を指定するとメッセージレイヤになります。単に message とのみ指定した場合は、<ref>current</ref> タグで指定した現在の操作対象のメッセージレイヤが対象になります ( 裏ページのメッセージレイヤが操作対象であってもそのメッセージレイヤの表ページ→裏ページへのコピーが行われます )。<br />　省略すると、すべてのレイヤの情報が裏ページにコピーされます。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_bgmopt">
+		<tagname>bgmopt</tagname>
+		<tagshortinfo>BGM の設定</tagshortinfo>
+		<tagremarks>　BGM のさまざまな設定を変更します。</tagremarks>
+		<attr id="attr_bgmopt_volume">
+			<attrname>volume</attrname>
+			<attrshortinfo>音量</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>音量% (0〜100)</attrformat>
+			<attrinfo>　BGM の音量を % で指定します。初期状態の KAG では100 % です。省略すれば音量は変更されません。<br />　100 が上限です。音量の抑制のみをサポートします(増幅は音源の特性上、できません)。</attrinfo>
+		</attr>
+		<attr id="attr_bgmopt_gvolume">
+			<attrname>gvolume</attrname>
+			<attrshortinfo>大域音量</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>音量% (0〜100)</attrformat>
+			<attrinfo>　BGM の大域音量を % で指定します。初期状態の KAG では100 % です。省略すれば音量は変更されません。<br />　大域音量は volume 属性で指定する通常の音量とは別に、BGM の音量を制御することができるもう一つのものです。実際に再生される音量は、通常の音量と大域音量を掛け合わせた音量になります( たとえば volume=50 で gvolume=75 ならば 50(%)*75(%)=37.5(%) )<br />　大域音量はシステム変数に記録され、次回起動時にも引き継がれます ( 各栞に保存されるわけではありません )。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_button">
+		<tagname>button</tagname>
+		<tagshortinfo>グラフィカルボタン</tagshortinfo>
+		<tagremarks>　現在のメッセージレイヤ上に <ref>link</ref> タグと同様にリンクを作成しますが、画像を用いたボタンを作成します。<br />　ボタンが作成される位置は <ref>locate</ref> タグで指定した位置が画像の左上点になりますので、このタグを使う前に locate タグで位置を指定してください。このタグは文字表示位置を移動しません。<br />　graphic 属性で指定する画像は、<br />・通常の状態<br />・ボタンが押された状態<br />・ボタンの上にマウスカーソルがある状態<br />　の3つの画像が左から順に横並びになった画像です。一つの画像に、同じサイズの３つの状態の画像が横に並んだ形式になっています。つまり、この属性で指定する画像は、ボタンの横幅の３倍の横幅を持つことになります。<br />　このタグを使う場合は、なるべく s タグですぐに選択肢待ちにしてください。</tagremarks>
+		<attr id="attr_button_graphic">
+			<attrname>graphic</attrname>
+			<attrshortinfo>ボタンにする画像</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>画像ファイル名</attrformat>
+			<attrinfo>　ボタンにする画像を指定します。<br />　<ref>image</ref>タグの storage 属性を参照してください。<br /></attrinfo>
+		</attr>
+		<attr id="attr_button_graphickey">
+			<attrname>graphickey</attrname>
+			<attrshortinfo>画像のカラーキー</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式 または パレットインデックス番号 または &quot;adapt&quot;</attrformat>
+			<attrinfo>ボタンにする画像のカラーキーを指定します。<br />　<ref>image</ref>タグの key 属性を参照してください。<br /></attrinfo>
+		</attr>
+		<attr id="attr_button_storage">
+			<attrname>storage</attrname>
+			<attrshortinfo>シナリオファイル名</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>シナリオファイル名</attrformat>
+			<attrinfo>　ジャンプ先のシナリオファイルを指定します。省略すると、現在のシナリオファイル内であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_button_target">
+			<attrname>target</attrname>
+			<attrshortinfo>ラベル名</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ラベル名</attrformat>
+			<attrinfo>　ジャンプ先のラベルを指定します。<br />　省略すると、ファイルの先頭から実行されます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_button_recthit">
+			<attrname>recthit</attrname>
+			<attrshortinfo>矩形で当たり判定を行うかどうか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true(デフォルト) または false</attrformat>
+			<attrinfo>　矩形で当たり判定を行うかどうかを指定します。true が指定されていると、ボタンの表示されている矩形全域でマウスのクリックなどに反応します。false が指定されていると、ボタンの不透明度が 64 未満の領域ではマウスのクリックなどに反応しなくなります。<br />　省略すると true が指定されたと見なされます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_button_exp">
+			<attrname>exp</attrname>
+			<attrshortinfo>TJS 式</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>TJS 式</attrformat>
+			<attrinfo>　クリックされたときに実行される TJS 式を指定します。省略すれば式は実行されません。storage や target が指定されていた場合、この式が実行されてからジャンプ先に移動します。</attrinfo>
+		</attr>
+		<attr id="attr_button_hint">
+			<attrname>hint</attrname>
+			<attrshortinfo>ツールチップヒント</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ヒントとして表示させる文字列</attrformat>
+			<attrinfo>　リンクを選択し、マウスカーソルを静止させたときに表示されるツールチップヒントを指定します。<br />　省略すると表示は行われません。<br /></attrinfo>
+		</attr>
+		<attr id="attr_button_onenter">
+			<attrname>onenter</attrname>
+			<attrshortinfo>マウス進入時</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>TJS 式</attrformat>
+			<attrinfo>　ボタン内にマウスカーソルが入ってきたときに実行される TJS 式を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_button_onleave">
+			<attrname>onleave</attrname>
+			<attrshortinfo>マウス退出時</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>TJS 式</attrformat>
+			<attrinfo>　ボタン内からマウスカーソルが出ていった時に実行される TJS 式を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_button_countpage">
+			<attrname>countpage</attrname>
+			<attrshortinfo>このジャンプを「読んだ」と見なすか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true(デフォルト) または false</attrformat>
+			<attrinfo>　ボタンを選択して他のラベルに移行するときに、このリンクのある場所のラベルを「読んだ」とみなすかどうかを指定します。<br />　[s] タグを実行する前にボタンが選択されてジャンプする際に、そのページが「読んだ」ことになっては困る場合に false を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_button_clickse">
+			<attrname>clickse</attrname>
+			<attrshortinfo>クリック時の効果音</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音ファイル名</attrformat>
+			<attrinfo>　クリックされたときに再生する効果音を指定します。指定しなければ効果音は再生されません。</attrinfo>
+		</attr>
+		<attr id="attr_button_clicksebuf">
+			<attrname>clicksebuf</attrname>
+			<attrshortinfo>クリック時の効果音のバッファ番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音バッファ番号</attrformat>
+			<attrinfo>　clickse で指定した効果音を鳴らす効果音バッファを指定します。省略すると 0 であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_button_enterse">
+			<attrname>enterse</attrname>
+			<attrshortinfo>マウス進入時の効果音</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音ファイル名</attrformat>
+			<attrinfo>　マウスが進入したときに再生する効果音を指定します。指定しなければ効果音は再生されません。</attrinfo>
+		</attr>
+		<attr id="attr_button_entersebuf">
+			<attrname>entersebuf</attrname>
+			<attrshortinfo>マウス進入時の効果音のバッファ番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音バッファ番号</attrformat>
+			<attrinfo>　enterse で指定した効果音を鳴らす効果音バッファを指定します。省略すると 0 であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_button_leavese">
+			<attrname>leavese</attrname>
+			<attrshortinfo>マウス退出時の効果音</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音ファイル名</attrformat>
+			<attrinfo>　マウスが退出したときに再生する効果音を指定します。指定しなければ効果音は再生されません。</attrinfo>
+		</attr>
+		<attr id="attr_button_leavesebuf">
+			<attrname>leavesebuf</attrname>
+			<attrshortinfo>マウス退出時の効果音のバッファ番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音バッファ番号</attrformat>
+			<attrinfo>　leavese で指定した効果音を鳴らす効果音バッファを指定します。省略すると 0 であると見なされます。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_call">
+		<tagname>call</tagname>
+		<tagshortinfo>サブルーチンの呼び出し</tagshortinfo>
+		<tagremarks>　指定されたシナリオファイルの指定されたラベルで示されるサブルーチンを呼び出します。<br />　呼び出されたサブルーチンは、 <ref>return</ref> タグで呼び出し元や任意の場所に戻ることができます。<br /></tagremarks>
+		<attr id="attr_call_storage">
+			<attrname>storage</attrname>
+			<attrshortinfo>シナリオファイル名</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>シナリオファイル名</attrformat>
+			<attrinfo>　呼び出したいサブルーチンのあるのシナリオファイルを指定します。省略すると、現在のシナリオファイル内であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_call_target">
+			<attrname>target</attrname>
+			<attrshortinfo>ラベル名</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ラベル名</attrformat>
+			<attrinfo>　呼び出すサブルーチンのラベルを指定します。<br />　省略すると、ファイルの先頭から実行されます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_call_countpage">
+			<attrname>countpage</attrname>
+			<attrshortinfo>このジャンプを「読んだ」と見なすか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>false(デフォルト) または true</attrformat>
+			<attrinfo>　他のラベルに移行するときに、このタグのある場所のラベルを「読んだ」とみなすかどうかを指定します。<br />　サブルーチンを呼び出す際に、呼び出し元のページがその時点で「読まれた」ことにしたい場合に true を指定します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_cancelautomode">
+		<tagname>cancelautomode</tagname>
+		<tagshortinfo>「自動的に読み進む」の解除</tagshortinfo>
+		<tagremarks>　「自動的に読み進む」を強制的に解除します。<br /></tagremarks>
+	</tag>
+	<tag id="tag_cancelskip">
+		<tagname>cancelskip</tagname>
+		<tagshortinfo>スキップの解除</tagshortinfo>
+		<tagremarks>　スキップ状態の解除を行います。<br />　スキップ状態とは、クリックスキップ ( メッセージ表示途中で画面をクリックすることによりクリック待ちまで一気に文章を表示する機能 ) と、「次の選択肢まですすむ」でスキップが行われている状態の事です。<br />　「次の選択肢まで進む」機能自体が無効になったり、クリックスキップの機能自体がそれ以降無効になったりするわけではありません。</tagremarks>
+	</tag>
+	<tag id="tag_cancelvideoevent">
+		<tagname>cancelvideoevent</tagname>
+		<tagshortinfo>ピリオドイベントの解除</tagshortinfo>
+		<tagremarks><ref>videoevent</ref>タグで設定したピリオドイベントを解除します。<br /></tagremarks>
+		<attr id="attr_cancelvideoevent_slot">
+			<attrname>slot</attrname>
+			<attrshortinfo>ムービーオブジェクト番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ムービーオブジェクト番号(0〜)</attrformat>
+			<attrinfo>この操作を行うムービーオブジェクト番号を指定します。<br />省略すると 0 が指定されたと見なされます。<br />複数のムービーを同時に操作する場合は、Config.tjs の numMovies の値も、必要な個数に変更してください。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_cancelvideosegloop">
+		<tagname>cancelvideosegloop</tagname>
+		<tagshortinfo>ビデオのセグメントループ再生の解除</tagshortinfo>
+		<tagremarks><ref>videosegloop</ref>タグで設定したセグメントループを解除します。<br /></tagremarks>
+		<attr id="attr_cancelvideosegloop_slot">
+			<attrname>slot</attrname>
+			<attrshortinfo>ムービーオブジェクト番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ムービーオブジェクト番号(0〜)</attrformat>
+			<attrinfo>この操作を行うムービーオブジェクト番号を指定します。<br />省略すると 0 が指定されたと見なされます。<br />複数のムービーを同時に操作する場合は、Config.tjs の numMovies の値も、必要な個数に変更してください。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_ch">
+		<tagname>ch</tagname>
+		<tagshortinfo>文字を表示する</tagshortinfo>
+		<tagremarks>　文字を current タグで指定したメッセージレイヤに表示します。普通は使いません。<br />　KAG 内部では、通常の文字は、一文字一文字すべてがこのタグに分解されて処理されます。</tagremarks>
+		<attr id="attr_ch_text">
+			<attrname>text</attrname>
+			<attrshortinfo>表示する文字</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>文字</attrformat>
+			<attrinfo>　ここで指定した文字が表示されます。<br />　複数の文字を指定できますが、自動改行はされません ( メッセージ履歴レイヤもここで複数の文字を指定された場合は改行されません )。また、複数の文字を指定した場合は一気に表示されます ( nowait で表示するよりもかなり高速 )。通常は一文字のみを指定します。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_checkbox">
+		<tagname>checkbox</tagname>
+		<tagshortinfo>チェックボックスの作成</tagshortinfo>
+		<tagremarks>　現在操作対象になっているメッセージレイヤの、現在の位置に、チェックボックスを作成します。<br />　チェックボックスの状態は、<ref>commit</ref> タグが実行されるまで、指定した変数に代入されることはありません。<br />　commit タグが実行されると、チェックボックスがチェックされていれば 1 が、チェックされていなければ 0 が変数に入ります。<br /></tagremarks>
+		<attr id="attr_checkbox_name">
+			<attrname>name</attrname>
+			<attrshortinfo>変数名</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>変数名</attrformat>
+			<attrinfo>　チェックボックスの状態を格納する変数を指定します。<br />　変数が 0 (または未定義)ならばチェックされていない、0 でなければチェックされているとみなされます。<br />　もし変数がすでに 0 以外であれば、チェックボックスはチェックされた状態で作成されます。</attrinfo>
+		</attr>
+		<attr id="attr_checkbox_bgcolor">
+			<attrname>bgcolor</attrname>
+			<attrshortinfo>背景色</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式</attrformat>
+			<attrinfo>　背景色を 0xRRGGBB 形式で指定します。</attrinfo>
+		</attr>
+		<attr id="attr_checkbox_opacity">
+			<attrname>opacity</attrname>
+			<attrshortinfo>背景色の不透明度</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0(完全透明) 〜 255(完全不透明)</attrformat>
+			<attrinfo>　bgcolor 属性で指定した背景色の不透明度を 0 〜 255 で指定します。</attrinfo>
+		</attr>
+		<attr id="attr_checkbox_color">
+			<attrname>color</attrname>
+			<attrshortinfo>チェックマークの色</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式</attrformat>
+			<attrinfo>　チェックマークの色を 0xRRGGBB 形式で指定します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_clearsysvar">
+		<tagname>clearsysvar</tagname>
+		<tagshortinfo>システム変数の全消去</tagshortinfo>
+		<tagremarks>　システム変数をすべて消去します。</tagremarks>
+	</tag>
+	<tag id="tag_clearvar">
+		<tagname>clearvar</tagname>
+		<tagshortinfo>ゲーム変数の全消去</tagshortinfo>
+		<tagremarks>　ゲーム変数をすべて消去します。すべてのゲーム変数は未定義になります。</tagremarks>
+	</tag>
+	<tag id="tag_clearvideolayer">
+		<tagname>clearvideolayer</tagname>
+		<tagshortinfo>ビデオレイヤ解除</tagshortinfo>
+		<tagremarks>　<ref>videolayer</ref>タグで設定したレイヤを解除します。<br /></tagremarks>
+		<attr id="attr_clearvideolayer_slot">
+			<attrname>slot</attrname>
+			<attrshortinfo>ムービーオブジェクト番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ムービーオブジェクト番号(0〜)</attrformat>
+			<attrinfo>この操作を行うムービーオブジェクト番号を指定します。<br />省略すると 0 が指定されたと見なされます。<br />複数のムービーを同時に操作する場合は、Config.tjs の numMovies の値も、必要な個数に変更してください。<br /></attrinfo>
+		</attr>
+		<attr id="attr_clearvideolayer_channel">
+			<attrname>channel</attrname>
+			<attrshortinfo>チャンネル</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>1 または 2</attrformat>
+			<attrinfo>　レイヤ描画モードによる描画を解除したいチャンネルを指定します。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_clickskip">
+		<tagname>clickskip</tagname>
+		<tagshortinfo>クリックスキップの設定</tagshortinfo>
+		<tagremarks>　クリックスキップとは、メッセージ表示途中で画面をクリックすることにより、トランジションや自動移動を中断したり、クリック待ちまで一気に文章を表示する機能です。<br />　デモシーンなどでは無効にしていたほうがいい場合があります。<br /></tagremarks>
+		<attr id="attr_clickskip_enabled">
+			<attrname>enabled</attrname>
+			<attrshortinfo>有効・無効の設定</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>true または false</attrformat>
+			<attrinfo>　クリックスキップ機能を有効にする場合は true、無効にする場合はfalse を指定します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_close">
+		<tagname>close</tagname>
+		<tagshortinfo>ウィンドウを閉じる</tagshortinfo>
+		<tagremarks>　ウィンドウを閉じます。ask 属性に false を指定しない限り、終了確認があります( バージョン情報ダイアログでは終了確認は出ません )。<br /></tagremarks>
+		<attr id="attr_close_ask">
+			<attrname>ask</attrname>
+			<attrshortinfo>確認をするか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true(デフォルト) または false</attrformat>
+			<attrinfo>　true を指定すると、終了するかどうかの確認をします。false を指定するとこの確認はありません。この属性を省略すると、 true を指定したとみなされます。<br />　この確認でユーザが「いいえ」を選んだ場合、実行はそのまま継続します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_cm">
+		<tagname>cm</tagname>
+		<tagshortinfo>すべてのメッセージレイヤのクリア</tagshortinfo>
+		<tagremarks>　すべてのメッセージレイヤのクリアを行います。<br />　すべてのメッセージレイヤの文字は消去されますが、<ref>ct</ref> タグのように操作対象のメッセージレイヤが表ページの message0 に指定されるようなことはありません。このタグを実行後も操作対象のレイヤは同じです。<br />　<ref>font</ref> タグで指定した文字の属性、<ref>style</ref> タグで指定したスタイルはすべて標準状態に戻ります。ただし、<ref>position</ref> タグや <ref>layopt</ref> タグで指定した属性は引き継がれます。<br />　「*ラベル名|見出し名」 形式のラベルの次には、この cm タグあるいは <ref>ct</ref> タグを書くべきです。( 栞のロード時にはラベルから実行が始まるが、ロード時には必ずメッセージレイヤ上の文字がクリアされるため )。<br /></tagremarks>
+	</tag>
+	<tag id="tag_commit">
+		<tagname>commit</tagname>
+		<tagshortinfo>フォーム内容の確定</tagshortinfo>
+		<tagremarks>　現在操作対象になっているメッセージレイヤ上のすべてのエディットやチェックボックスなどの「フォーム要素」の内容を確定します。<br />　内容が確定されると、フォーム要素で編集されていた文字列や状態が、各変数に実際に代入されます。<br />　各フォーム要素は <ref>er</ref> や <ref>ct</ref> タグのようなメッセージレイヤを消去する系のタグで消去されてしまいますので、そのまえにcommit タグを実行する必要があります。</tagremarks>
+		<tagexample>*editname<br />@er<br />名字 : [edit name=&quot;f.sname&quot; length=200][r]<br />名前 : [edit name=&quot;f.name&quot; length=200][r]<br />[link target=*ok]OK[endlink][r]<br />[link target=*cancel]キャンセル[endlink][s]<br />*ok<br />; OK が選択された<br />; commit を行って変数に代入を行う<br />[commit]<br />[jump target=*exit]<br />*cancel<br />; キャンセルが選択された<br />; commit は行わない<br />[jump target=*exit]<br /></tagexample>
+	</tag>
+	<tag id="tag_copybookmark">
+		<tagname>copybookmark</tagname>
+		<tagshortinfo>栞のコピー</tagshortinfo>
+		<tagremarks>　非フリーセーブモードにおいて、from 属性で指定された番号の栞から to 属性で指定された番号の栞へ内容のコピーを行います。</tagremarks>
+		<attr id="attr_copybookmark_from">
+			<attrname>from</attrname>
+			<attrshortinfo>コピー元の栞番号</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>0または正の整数</attrformat>
+			<attrinfo>　コピー元の栞の番号を指定します。省略すると 0 が指定されたと見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_copybookmark_to">
+			<attrname>to</attrname>
+			<attrshortinfo>コピー先の栞番号</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>0または正の整数</attrformat>
+			<attrinfo>　コピー先の栞の番号を指定します。省略すると 0 が指定されたと見なされます。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_copylay">
+		<tagname>copylay</tagname>
+		<tagshortinfo>レイヤ情報のコピー</tagshortinfo>
+		<tagremarks>　指定したレイヤの情報をコピーします。<br />　ただし、同種のレイヤ ( 背景レイヤ同士、前景レイヤ同士、メッセージレイヤ同士 )でのみコピーできます。<br /></tagremarks>
+		<attr id="attr_copylay_srclayer">
+			<attrname>srclayer</attrname>
+			<attrshortinfo>コピー元レイヤ</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>&quot;base&quot; または 0 または 1 または 2 または message0 または message1 または message</attrformat>
+			<attrinfo>　コピー元となるレイヤを指定します。<br />　この属性と srcpage 属性で指定したレイヤがコピー元になります。<br />　base を指定すると 背景レイヤ になります。<br />　0 または 1 または 2 を指定すると前景レイヤになります。<br />　message0 または message1 を指定するとメッセージレイヤになります。単に message とのみ指定した場合は、<ref>current</ref> タグで指定した現在の操作対象のメッセージレイヤが対象になります。<br /></attrinfo>
+		</attr>
+		<attr id="attr_copylay_destlayer">
+			<attrname>destlayer</attrname>
+			<attrshortinfo>コピー先レイヤ</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>&quot;base&quot; または 0 または 1 または 2 または message0 または message1 または message</attrformat>
+			<attrinfo>　コピー先となるレイヤを指定します。<br />　この属性と destpage 属性で指定したレイヤがコピー先になります。<br />　base を指定すると 背景レイヤ になります。<br />　0 または 1 または 2 を指定すると前景レイヤになります。<br />　message0 または message1 を指定するとメッセージレイヤになります。単に message とのみ指定した場合は、<ref>current</ref> タグで指定した現在の操作対象のメッセージレイヤが対象になります。<br /></attrinfo>
+		</attr>
+		<attr id="attr_copylay_srcpage">
+			<attrname>srcpage</attrname>
+			<attrshortinfo>コピー元ページ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;fore&quot; または &quot;back&quot;</attrformat>
+			<attrinfo>　コピー元となるページを指定します。<br />　この属性と srclayer 属性で指定したレイヤがコピー元になります。<br />　&quot;fore&quot; を指定すると表ページ、&quot;back&quot; を指定すると裏ページになります。省略すると &quot;fore&quot; を指定したと見なされます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_copylay_destpage">
+			<attrname>destpage</attrname>
+			<attrshortinfo>コピー先ページ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;fore&quot; または &quot;back&quot;</attrformat>
+			<attrinfo>　コピー先となるページを指定します。<br />　この属性と destlayer 属性で指定したレイヤがコピー元になります。<br />　&quot;fore&quot; を指定すると表ページ、&quot;back&quot; を指定すると裏ページになります。省略すると &quot;fore&quot; を指定したと見なされます。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_ct">
+		<tagname>ct</tagname>
+		<tagshortinfo>メッセージレイヤのリセット</tagshortinfo>
+		<tagremarks>　メッセージレイヤをリセットします。<br />　すべてのメッセージレイヤの文字は消去され、操作対象のメッセージレイヤは表ページの message0 に指定されます。<br />　<ref>font</ref> タグで指定した文字の属性、<ref>style</ref> タグで指定したスタイルはすべて標準状態に戻ります。ただし、<ref>position</ref> タグや <ref>layopt</ref> タグで指定した属性は引き継がれます。<br />　これに対し、<ref>er</ref> タグは、現在の操作対象のメッセージレイヤ上の文字を消去したり文字やスタイルの属性を標準状態に戻したりするだけです。<br />　「*ラベル名|見出し名」 形式のラベルの次には、この ct タグあるいは <ref>cm</ref> タグを書くべきです。( 栞のロード時にはラベルから実行が始まるが、ロード時には必ずメッセージレイヤ上の文字がクリアされるため )。<br /></tagremarks>
+	</tag>
+	<tag id="tag_current">
+		<tagname>current</tagname>
+		<tagshortinfo>操作対象のメッセージレイヤの指定</tagshortinfo>
+		<tagremarks>　操作対象とするメッセージレイヤを指定します。以後、文章や<ref>font</ref> タグでの文字属性の指定、<ref>l</ref>タグ等のクリック待ちなどは、このレイヤに対して行われます。<br />　message0 はデフォルトで可視の状態ですが、message1 は <ref>layopt</ref> タグ等で visible=true としないと表示されないので注意してください。</tagremarks>
+		<attr id="attr_current_layer">
+			<attrname>layer</attrname>
+			<attrshortinfo>レイヤ名</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;message0&quot; または &quot;message1&quot;</attrformat>
+			<attrinfo>　操作対象とするメッセージレイヤを指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_current_page">
+			<attrname>page</attrname>
+			<attrshortinfo>ページ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;fore&quot;(デフォルト) または &quot;back&quot;</attrformat>
+			<attrinfo>　 表(fore)画面のレイヤを対象とするか、裏(back)画面のレイヤを対象とするかを指定します。省略すると表ページであると見なされます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_current_withback">
+			<attrname>withback</attrname>
+			<attrshortinfo>裏ページにも描画するか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false (デフォルト)</attrformat>
+			<attrinfo>　表ページが対象の場合、裏ページにも同様に文字を描画するかを指定します。この属性を省略すると false が指定されたとみなされます。　裏ページに同時に文字を描画する必要があるのは、同時にトランジションを進行させる場合などです。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_cursor">
+		<tagname>cursor</tagname>
+		<tagshortinfo>マウスカーソルの変更</tagshortinfo>
+		<tagremarks>　マウスカーソルを変更します。いずれの属性も省略すれば設定は変わりません。<br />　cr で始まるマウスカーソル定数については、吉里吉里 SDK ヘルプの「マウスカーソル定数一覧」を参照してください。また、その場合は <TT>default=&amp;crArrow</TT> のように、定数の前に &amp; 記号をつけて指定してください。<br />　マウスカーソルファイルには、.cur または .ani の拡張子を持つマウスカーソルファイルを指定することができます ( 拡張子は省略しないでください )。<br /></tagremarks>
+		<attr id="attr_cursor_default">
+			<attrname>default</attrname>
+			<attrshortinfo>通常のマウスカーソル</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>cr で始まるカーソル定数 または カーソルファイル名</attrformat>
+			<attrinfo>通常のマウスカーソルを指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_cursor_pointed">
+			<attrname>pointed</attrname>
+			<attrshortinfo>ポイントした時のマウスカーソル</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>cr で始まるカーソル定数 または カーソルファイル名</attrformat>
+			<attrinfo>リンクやボタンをポイントしたときのマウスカーソルを指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_cursor_click">
+			<attrname>click</attrname>
+			<attrshortinfo>クリック待ちのマウスカーソル</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>cr で始まるカーソル定数 または カーソルファイル名</attrformat>
+			<attrinfo>クリック待ちのマウスカーソルを指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_cursor_draggable">
+			<attrname>draggable</attrname>
+			<attrshortinfo>ドラッグ可能の時のマウスカーソル</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>cr で始まるカーソル定数 または カーソルファイル名</attrformat>
+			<attrinfo><ref>position</ref> タグで draggable=true としたときに、マウスがメッセージレイヤをドラッグ可能な位置に来たときに表示されるマウスカーソルを指定します。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_deffont">
+		<tagname>deffont</tagname>
+		<tagshortinfo>デフォルトの文字属性設定</tagshortinfo>
+		<tagremarks>　現在操作対象のメッセージレイヤに対する、デフォルトの文字属性を指定します。<br />　各属性の詳細については <ref>font</ref>タグを指定してください。ただし属性の値として &quot;default&quot; を指定することはできません。<br />　ここで指定した属性は、<ref>resetfont</ref> タグで実際に反映されます。<br />　逆に言うと、このタグを実行しただけではすぐにはフォントの属性は反映されません。resetfont タグを実行する必要があります。</tagremarks>
+		<attr id="attr_deffont_size">
+			<attrname>size</attrname>
+			<attrshortinfo>文字サイズ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>文字サイズ(pixel単位)</attrformat>
+			<attrinfo>　デフォルトの文字サイズを指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_deffont_face">
+			<attrname>face</attrname>
+			<attrshortinfo>フォント名</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>フォント名 または &quot;user&quot;</attrformat>
+			<attrinfo>　デフォルトのフォント名を指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_deffont_color">
+			<attrname>color</attrname>
+			<attrshortinfo>文字色</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式</attrformat>
+			<attrinfo>　デフォルトの文字色を指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_deffont_rubysize">
+			<attrname>rubysize</attrname>
+			<attrshortinfo>ルビのサイズ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ルビの文字サイズ(pixel単位)</attrformat>
+			<attrinfo>　デフォルトのルビの文字のサイズを指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_deffont_rubyoffset">
+			<attrname>rubyoffset</attrname>
+			<attrshortinfo>ルビの表示位置</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ルビの表示オフセット(pixel単位)</attrformat>
+			<attrinfo>　デフォルトのルビの表示オフセットを指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_deffont_shadow">
+			<attrname>shadow</attrname>
+			<attrshortinfo>影を表示するか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false</attrformat>
+			<attrinfo>　デフォルトで文字に影をつけるかを指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_deffont_edge">
+			<attrname>edge</attrname>
+			<attrshortinfo>袋文字にするか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false</attrformat>
+			<attrinfo>　デフォルトで文字を袋文字 ( 縁取り文字 ) にするかを指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_deffont_edgecolor">
+			<attrname>edgecolor</attrname>
+			<attrshortinfo>袋文字の袋の色</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式</attrformat>
+			<attrinfo>　デフォルトの文字の袋の色を指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_deffont_shadowcolor">
+			<attrname>shadowcolor</attrname>
+			<attrshortinfo>影の色</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式</attrformat>
+			<attrinfo>　デフォルトの影の色を指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_deffont_bold">
+			<attrname>bold</attrname>
+			<attrshortinfo>太文字にするか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false</attrformat>
+			<attrinfo>　デフォルトで文字を太文字にするかを指定します。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_defstyle">
+		<tagname>defstyle</tagname>
+		<tagshortinfo>デフォルトのスタイルの設定</tagshortinfo>
+		<tagremarks>　現在操作対象のメッセージレイヤに対する、デフォルトの行のスタイルを指定します。<br />　各属性の詳細については <ref>style</ref>タグを指定してください。ただし属性の値として &quot;default&quot; を指定することはできません。<br />　ここで指定した属性は、<ref>resetstyle</ref> タグで実際に反映されます。<br />　逆に言うと、このタグを実行しただけではすぐにはフォントの属性は反映されません。resetstyle タグを実行する必要があります。</tagremarks>
+		<attr id="attr_defstyle_linespacing">
+			<attrname>linespacing</attrname>
+			<attrshortinfo>行間</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>行間 (pixel単位)</attrformat>
+			<attrinfo>　デフォルトの行間を指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_defstyle_pitch">
+			<attrname>pitch</attrname>
+			<attrshortinfo>字間</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>字間オフセット(pixel単位)</attrformat>
+			<attrinfo>　デフォルトの字間のオフセットを pixel 単位で指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_defstyle_linesize">
+			<attrname>linesize</attrname>
+			<attrshortinfo>文字サイズの予約サイズ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>予約サイズ(pixel単位)</attrformat>
+			<attrinfo>　デフォルトの行の幅を指定します。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_delay">
+		<tagname>delay</tagname>
+		<tagshortinfo>文字の表示速度の設定</tagshortinfo>
+		<tagremarks>　文字の表示速度を指定します。<br />　文字表示をノーウェイトにするには <ref>nowait</ref> タグをつかうこともできます。</tagremarks>
+		<attr id="attr_delay_speed">
+			<attrname>speed</attrname>
+			<attrshortinfo>文字ウェイト</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>&quot;nowait&quot; または &quot;user&quot; またはウェイトの値(ms単位)</attrformat>
+			<attrinfo>　&quot;nowait&quot; を指定すると、文字の表示にウェイトをかけずに、一気に文字が表示されます。&quot;user&quot; を指定すると、[システム|文字速度] でユーザーが指定した速度になります(デフォルト)。ウェイトの値を指定すると、値で示した時間につき 1 文字の速度で文字を表示します。<br />　文字表示速度は、すべてのメッセージレイヤで同じになります。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_disablestore">
+		<tagname>disablestore</tagname>
+		<tagshortinfo>栞の機能の一時的な使用不可</tagshortinfo>
+		<tagremarks>　「栞をはさむ」の機能を一時的に使用不可能にします。<br />　以後、セーブ可能なラベルを通過しない限り「栞をはさむ」の機能は使用不可能になります。<br />　KAG 起動直後は、この「使用不可能」で「栞をはさむ」が使用不可の状態になっており、セーブ可能なラベルを通過しない限り「栞をはさむ」の機能は使用できません。<br />　ゲームのメインメニューなど、栞をはさんでも仕方のないところに記述します。<br />　このタグに対し、<ref>store</ref> タグでは栞をはさむ・たどるの両方の機能を恒久的に使用不可・可に設定できます。</tagremarks>
+		<attr id="attr_disablestore_store">
+			<attrname>store</attrname>
+			<attrshortinfo>「栞をはさむ」の機能</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true(デフォルト) または false</attrformat>
+			<attrinfo>　「栞をはさむ」の機能を使用不可にするかを指定します。<br />　使用不可にするときに true を設定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_disablestore_restore">
+			<attrname>restore</attrname>
+			<attrshortinfo>「栞をたどる」の機能</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　「栞をたどる」の機能を使用不可にするかを指定します。<br />　使用不可にするときに true を設定します。<br />　store 属性と違い、こちらは属性を省略するとfalse であると見なされます。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_edit">
+		<tagname>edit</tagname>
+		<tagshortinfo>単一行エディットの作成</tagshortinfo>
+		<tagremarks>　現在操作対象になっているメッセージレイヤの、現在の位置に、現在のフォントで、一行のみの文字列を編集できる入力欄(エディット)を作成します。　編集がおこなわれた文字列は、<ref>commit</ref> タグが実行されるまで、指定した変数に代入されることはありません。</tagremarks>
+		<attr id="attr_edit_name">
+			<attrname>name</attrname>
+			<attrshortinfo>変数名</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>変数名</attrformat>
+			<attrinfo>　入力した文字列を格納する変数を指定します。<br />　もし変数にすでに文字列が入っていた場合は、単一行エディットの初期文字列として表示されます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_edit_length">
+			<attrname>length</attrname>
+			<attrshortinfo>幅</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>幅 (pixel 単位)</attrformat>
+			<attrinfo>　単一行エディットの幅 ( 縦書きの場合は高さ ) をピクセル単位で指定します。</attrinfo>
+		</attr>
+		<attr id="attr_edit_bgcolor">
+			<attrname>bgcolor</attrname>
+			<attrshortinfo>背景色</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式</attrformat>
+			<attrinfo>　背景色を 0xRRGGBB 形式で指定します。</attrinfo>
+		</attr>
+		<attr id="attr_edit_opacity">
+			<attrname>opacity</attrname>
+			<attrshortinfo>背景色の不透明度</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0(完全透明) 〜 255(完全不透明)</attrformat>
+			<attrinfo>　bgcolor 属性で指定した背景色の不透明度を 0 〜 255 で指定します。</attrinfo>
+		</attr>
+		<attr id="attr_edit_color">
+			<attrname>color</attrname>
+			<attrshortinfo>文字色</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式</attrformat>
+			<attrinfo>　文字色を 0xRRGGBB 形式で指定します。</attrinfo>
+		</attr>
+		<attr id="attr_edit_maxchars">
+			<attrname>maxchars</attrname>
+			<attrshortinfo>最大文字数</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>最大文字数</attrformat>
+			<attrinfo>　入力できる最大文字数を指定します。0 を指定すると無制限になります。<br />　デフォルトでは無制限です。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_else">
+		<tagname>else</tagname>
+		<tagshortinfo>if の中身が実行されなかったときに実行</tagshortinfo>
+		<tagremarks>　<ref>if</ref> タグもしくは <ref>elsif</ref> タグと <ref>endif</ref> タグの間で用いられます。if または elsif ブロックの中身がひとつも実行されていないとき、else から endif までの間を実行します。<br />　使い方の例については、<ref>if</ref> タグの項目を参照してください。</tagremarks>
+	</tag>
+	<tag id="tag_elsif">
+		<tagname>elsif</tagname>
+		<tagshortinfo>それまでの if の中身が実行されていなかったときに、条件付きで実行</tagshortinfo>
+		<tagremarks>　<ref>if</ref> タグと <ref>endif</ref> タグの間で用いられます。それまでの if タグまたは elsif タグの中身がひとつも実行されていないときに式を評価し、その結果が真ならば elsif から次の elsif・else・endif までの間を実行します。<br />　使い方の例については、<ref>if</ref> タグの項目を参照してください。</tagremarks>
+		<attr id="attr_elsif_exp">
+			<attrname>exp</attrname>
+			<attrshortinfo>TJS 式</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>TJS 式</attrformat>
+			<attrinfo>　評価する TJS 式を指定します。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_emb">
+		<tagname>emb</tagname>
+		<tagshortinfo>式評価結果の埋め込み</tagshortinfo>
+		<tagremarks>　exp で示された式を評価(実行)し、その結果を埋め込みます。<br />　変数をシナリオ中に表示させたい場合に使います。<br />　通常は、<ref>eval</ref> タグで代入した 変数の内容に置き換えます。</tagremarks>
+		<tagexample>[eval exp=&quot;f.value1=&apos;変数の値だよ〜ん&apos;&quot;]<br /><br />とどこかで書いておいて、<br /><br />[emb exp=&quot;f.value1&quot;]<br /><br />と書くと、この emb タグが 変数の値だよ〜ん という内容に置き換わります。<br /></tagexample>
+		<attr id="attr_emb_exp">
+			<attrname>exp</attrname>
+			<attrshortinfo>TJS 式</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>TJS 式</attrformat>
+			<attrinfo>　評価する TJS 式を指定します。ここで評価された式の結果が、この emb タグと置き換わります。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_endhact">
+		<tagname>endhact</tagname>
+		<tagshortinfo>メッセージ履歴アクションの終了</tagshortinfo>
+		<tagremarks><ref>hact</ref> タグで設定したメッセージ履歴アクションを終了(設定をクリア)します。</tagremarks>
+	</tag>
+	<tag id="tag_endif">
+		<tagname>endif</tagname>
+		<tagshortinfo>条件によりシナリオを実行(の終了)</tagshortinfo>
+		<tagremarks>　<ref>if</ref> タグの終了を示します。endignore とまったく同一の動作をします。</tagremarks>
+	</tag>
+	<tag id="tag_endignore">
+		<tagname>endignore</tagname>
+		<tagshortinfo>条件によりシナリオを無視(の終了)</tagshortinfo>
+		<tagremarks>　<ref>ignore</ref> タグの終了を示します。</tagremarks>
+	</tag>
+	<tag id="tag_endindent">
+		<tagname>endindent</tagname>
+		<tagshortinfo>インデントの解除</tagshortinfo>
+		<tagremarks>　<ref>indent</ref> タグで設定したインデントを解除します。通常は改行の前に記述します。</tagremarks>
+	</tag>
+	<tag id="tag_endlink">
+		<tagname>endlink</tagname>
+		<tagshortinfo>ハイパーリンク(の終了)</tagshortinfo>
+		<tagremarks>　<ref>link</ref> タグで開始したハイパーリンクの終了を示します。</tagremarks>
+	</tag>
+	<tag id="tag_endmacro">
+		<tagname>endmacro</tagname>
+		<tagshortinfo>マクロの記述(の終了)</tagshortinfo>
+		<tagremarks>　<ref>macro</ref> タグで記述を開始したマクロの終了を示します。</tagremarks>
+	</tag>
+	<tag id="tag_endnowait">
+		<tagname>endnowait</tagname>
+		<tagshortinfo>文字表示ノーウェイト(の終了)</tagshortinfo>
+		<tagremarks>　文字の表示速度を、<ref>nowait</ref> タグでノーウェイトにする直前の文字表示速度に戻します。<br /></tagremarks>
+	</tag>
+	<tag id="tag_endscript">
+		<tagname>endscript</tagname>
+		<tagshortinfo>TJS スクリプトの記述(の終了)</tagshortinfo>
+		<tagremarks>　[<ref>iscript</ref>] で記述したスクリプトの記述の終了を示します。<br />このタグのある行には、このタグしか書いてはいけません ( 行末の \ 記号も不可 )。</tagremarks>
+	</tag>
+	<tag id="tag_er">
+		<tagname>er</tagname>
+		<tagshortinfo>メッセージレイヤの文字の消去</tagshortinfo>
+		<tagremarks>　現在の操作対象のメッセージレイヤ上の文字を消去します。<br />　<ref>ct</ref> タグと違うのは、er タグは現在のメッセージレイヤ上の文字を消去し、文字属性とスタイルをリセットするだけで、ct タグのようにすべてのメッセージレイヤ上の文字を消去したり、操作対象のレイヤを message0 に戻したりしません。</tagremarks>
+	</tag>
+	<tag id="tag_erasebookmark">
+		<tagname>erasebookmark</tagname>
+		<tagshortinfo>栞の消去</tagshortinfo>
+		<tagremarks>　非フリーセーブモードにおいて、指定した番号の栞を消去します。栞は&quot;(未設定)&quot;になります。</tagremarks>
+		<attr id="attr_erasebookmark_place">
+			<attrname>place</attrname>
+			<attrshortinfo>消去する栞の番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0または正の整数(0がデフォルト)</attrformat>
+			<attrinfo>　栞の番号を指定します。省略すると 0 が指定されたと見なされます。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_erasemacro">
+		<tagname>erasemacro</tagname>
+		<tagshortinfo>マクロの消去</tagshortinfo>
+		<tagremarks>　<ref>macro</ref> タグで記述したマクロを消去します。</tagremarks>
+		<attr id="attr_erasemacro_name">
+			<attrname>name</attrname>
+			<attrshortinfo>タグ名</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>タグ名</attrformat>
+			<attrinfo>　消去するタグを指定します。マクロとして定義されたタグのみを消去することが出来ます。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_eval">
+		<tagname>eval</tagname>
+		<tagshortinfo>式の評価</tagshortinfo>
+		<tagremarks>　exp で示された式を評価します。通常は変数への値の代入に用います。<br />　exp には任意の TJS 式を指定できるので、TJS として有効な式であれば何でも評価できます。<br /></tagremarks>
+		<tagexample>[eval exp=&quot;f.test=500&quot;]<br />;↑ゲーム変数 test に数値を代入している<br />[eval exp=&quot;f.test2=&apos;文字列&apos;&quot;]<br />;↑ゲーム変数 test2 に文字列を代入している<br />[eval exp=&quot;sf.test=400&quot;]<br />;↑システム変数 test に数値を代入している<br />[eval exp=&quot;f.test2=f.test*3&quot;]<br />;↑ゲーム変数 test2 に ゲーム変数 test の 3 倍の数値を代入している<br /></tagexample>
+		<attr id="attr_eval_exp">
+			<attrname>exp</attrname>
+			<attrshortinfo>TJS 式</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>TJS 式</attrformat>
+			<attrinfo>　評価する TJS 式を指定します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_fadebgm">
+		<tagname>fadebgm</tagname>
+		<tagshortinfo>BGMのフェード</tagshortinfo>
+		<tagremarks>　現在演奏中の BGM を指定音量までフェードします。<br />　フェード終了後も曲は演奏されたままです。<br />　このタグはフェードの終了を待ちません。フェードの終了を待つには、<ref>wb</ref> タグを使用してください。<br /></tagremarks>
+		<attr id="attr_fadebgm_volume">
+			<attrname>volume</attrname>
+			<attrshortinfo>音量</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>音量% (0〜100)</attrformat>
+			<attrinfo>　フェード後に到達させる BGM の音量を % で指定します。<br />　100 が上限です。音量の抑制のみをサポートします(増幅は音源の特性上、できません)。<br /></attrinfo>
+		</attr>
+		<attr id="attr_fadebgm_time">
+			<attrname>time</attrname>
+			<attrshortinfo>フェード時間</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>時間(ms単位)</attrformat>
+			<attrinfo>　フェードを行っている時間を ms 単位で指定します。3000 と指定すれば 3 秒間の間、フェードを行っています。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_fadeinbgm">
+		<tagname>fadeinbgm</tagname>
+		<tagshortinfo>フェードインしながらのBGM再生開始</tagshortinfo>
+		<tagremarks>　BGM ファイルを演奏しますが、曲の先頭でフェードインを行います。<br />　このタグはフェードの終了を待ちません。フェードの終了を待つには、wb タグを使用してください。<br /></tagremarks>
+		<attr id="attr_fadeinbgm_storage">
+			<attrname>storage</attrname>
+			<attrshortinfo>再生する曲</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>BGM ファイル名 または CD トラック番号</attrformat>
+			<attrinfo>　演奏する BGM ファイル名または CD トラック番号を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_fadeinbgm_loop">
+			<attrname>loop</attrname>
+			<attrshortinfo>ループするか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true(デフォルト) または false</attrformat>
+			<attrinfo>　BGM をループするかを指定します。<br />　true を指定するとループします。false を指定するとループしません。<br />　省略すると true であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_fadeinbgm_time">
+			<attrname>time</attrname>
+			<attrshortinfo>フェード時間</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>時間(ms単位)</attrformat>
+			<attrinfo>　フェードインを行っている時間を ms 単位で指定します。3000 と指定すれば 3 秒間の間、フェードインを行っています。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_fadeinse">
+		<tagname>fadeinse</tagname>
+		<tagshortinfo>効果音のフェードイン再生</tagshortinfo>
+		<tagremarks>　効果音をフェードインしながら再生します。<br />　このタグはフェードの終了を待ちません。待つには <ref>wf</ref> タグを使用してください。<br /></tagremarks>
+		<attr id="attr_fadeinse_buf">
+			<attrname>buf</attrname>
+			<attrshortinfo>効果音バッファ番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音バッファ番号( 0(デフォルト) 〜 )</attrformat>
+			<attrinfo>　効果音を再生するバッファを指定します。一つのバッファでは同時には一つの効果音を鳴らすことができます。<br />　省略すると 0 であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_fadeinse_storage">
+			<attrname>storage</attrname>
+			<attrshortinfo>効果音ファイル名</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>効果音ファイル名</attrformat>
+			<attrinfo>　演奏する効果音ファイル名を指定します。<br />　拡張子は省略可能ですが、省略した場合に自動的に探し出されるのは.wav または .ogg または .mp3 の拡張子を持つファイルだけです。( ただし ogg と mp3 の再生には SDK 付属のプラグインが必要 )<br />そのほかのプラグインで使用可能になるそのほかのファイル形式を指定する場合は拡張子も指定してください。</attrinfo>
+		</attr>
+		<attr id="attr_fadeinse_time">
+			<attrname>time</attrname>
+			<attrshortinfo>フェードイン時間</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>フェードイン時間(ms)</attrformat>
+			<attrinfo>　フェードインを行っている時間をミリ秒単位で指定します。</attrinfo>
+		</attr>
+		<attr id="attr_fadeinse_loop">
+			<attrname>loop</attrname>
+			<attrshortinfo>繰り返し再生を行うか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　効果音を繰り返し再生するかどうかを指定します。<br />　true を指定すると繰り返し再生されます。false を指定すると一回限りの再生となります。省略するとfalse であると見なされます。<br />　true を指定した場合は <ref>ws</ref> タグで効果音再生の終了を待つことはできません。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_fadeoutbgm">
+		<tagname>fadeoutbgm</tagname>
+		<tagshortinfo>BGMのフェードアウト</tagshortinfo>
+		<tagremarks>　現在演奏中の BGM をフェードアウトします。<br />　フェードアウトが終了すると曲は自動的に停止します。<br />　このタグはフェードの終了を待ちません。フェードの終了を待つには、wb タグを使用してください。<br /></tagremarks>
+		<attr id="attr_fadeoutbgm_time">
+			<attrname>time</attrname>
+			<attrshortinfo>フェード時間</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>時間(ms単位)</attrformat>
+			<attrinfo>　フェードアウトを行っている時間を ms 単位で指定します。3000 と指定すれば 3 秒間の間、フェードアウトを行っています。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_fadeoutse">
+		<tagname>fadeoutse</tagname>
+		<tagshortinfo>効果音のフェードアウト</tagshortinfo>
+		<tagremarks>　効果音をフェードアウトします。フェードアウトし終わると再生は自動的に停止します。<br />　このタグはフェードの終了を待ちません。待つには <ref>wf</ref> タグを使用してください。<br /></tagremarks>
+		<attr id="attr_fadeoutse_buf">
+			<attrname>buf</attrname>
+			<attrshortinfo>効果音バッファ番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音バッファ番号( 0(デフォルト) 〜 )</attrformat>
+			<attrinfo>　効果音をフェードアウトするバッファを指定します。<br />　省略すると 0 であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_fadeoutse_time">
+			<attrname>time</attrname>
+			<attrshortinfo>フェードアウト時間</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>フェードアウト時間(ms)</attrformat>
+			<attrinfo>　フェードアウトを行っている時間をミリ秒単位で指定します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_fadese">
+		<tagname>fadese</tagname>
+		<tagshortinfo>効果音のフェード</tagshortinfo>
+		<tagremarks>　効果音を指定の到達音量までフェードします。<br />　このタグはフェードの終了を待ちません。待つには <ref>wf</ref> タグを使用してください。<br /></tagremarks>
+		<attr id="attr_fadese_buf">
+			<attrname>buf</attrname>
+			<attrshortinfo>効果音バッファ番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音バッファ番号( 0(デフォルト) 〜 )</attrformat>
+			<attrinfo>　効果音をフェードするバッファを指定します。<br />　省略すると 0 であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_fadese_time">
+			<attrname>time</attrname>
+			<attrshortinfo>フェード時間</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>フェード時間(ms)</attrformat>
+			<attrinfo>　フェードを行っている時間をミリ秒単位で指定します。</attrinfo>
+		</attr>
+		<attr id="attr_fadese_volume">
+			<attrname>volume</attrname>
+			<attrshortinfo>到達音量</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>音量% (0〜100)</attrformat>
+			<attrinfo>　フェードの到達音量を % で指定します。　100 が上限です。音量の抑制のみをサポートします(増幅は音源の特性上、できません)。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_font">
+		<tagname>font</tagname>
+		<tagshortinfo>文字属性設定</tagshortinfo>
+		<tagremarks>　文字の様々な属性を指定します。<br />　これらの属性は、メッセージレイヤごとに個別に設定できます。<br />　いずれの属性も、省略すると前の状態を引き継ぎます。また、default を指定するとConfig.tjs 内で指定したデフォルトの値に戻ります。<br />　edge と shadow は同時に true にした場合は、袋文字のみが有効になり、影は無視されます。<br />　これらの属性は、<ref>resetfont</ref> タグや <ref>ct</ref> <ref>cm</ref> <ref>er</ref> タグが実行されると、Config.tjs 内や <ref>deffont</ref> タグで指定したデフォルトの値に戻ります。</tagremarks>
+		<attr id="attr_font_size">
+			<attrname>size</attrname>
+			<attrshortinfo>文字サイズ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>文字サイズ(pixel単位) または &quot;default&quot;</attrformat>
+			<attrinfo>　文字サイズを pixel 単位で指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_font_face">
+			<attrname>face</attrname>
+			<attrshortinfo>フォント名</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>フォント名 または &quot;default&quot; または &quot;user&quot;</attrformat>
+			<attrinfo>　フォント名を指定します。<br />　フォント名には曖昧な指定はできません。スペース、半角／全角も正確に指定してください。<br />　複数のフォント名をカンマで区切って指定できます。この場合は、最初の方に書いたフォントが存在すれば、それが優先されて選択されます。<br />　例 : face=&quot;HG行書体,ＭＳ Ｐゴシック&quot;<br />　縦書き用フォントは自動的に設定されますので、フォント名の先頭に @ マークをつける必要はありません。　&quot;user&quot; を指定すれば、メニューの [文字表示|フォント] でユーザが選択したフォントになります。</attrinfo>
+		</attr>
+		<attr id="attr_font_color">
+			<attrname>color</attrname>
+			<attrshortinfo>文字色</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式 または &quot;default&quot;</attrformat>
+			<attrinfo>　文字色を 0xRRGGBB 形式で指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_font_italic">
+			<attrname>italic</attrname>
+			<attrshortinfo>斜体にするか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false または &quot;default&quot;</attrformat>
+			<attrinfo>　文字を斜体にするかどうかを指定します。true を指定すると斜体になります。<br /></attrinfo>
+		</attr>
+		<attr id="attr_font_rubysize">
+			<attrname>rubysize</attrname>
+			<attrshortinfo>ルビのサイズ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ルビの文字サイズ(pixel単位) または &quot;default&quot;</attrformat>
+			<attrinfo>　ルビ(読み仮名)の文字のサイズを pixel 単位で指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_font_rubyoffset">
+			<attrname>rubyoffset</attrname>
+			<attrshortinfo>ルビの表示位置</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ルビの表示オフセット(pixel単位) または &quot;default&quot;</attrformat>
+			<attrinfo>　ルビの表示オフセットを pixel 単位で指定します。負の数を指定すると本文により近い位置に表示されます。</attrinfo>
+		</attr>
+		<attr id="attr_font_shadow">
+			<attrname>shadow</attrname>
+			<attrshortinfo>影を表示するか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false または &quot;default&quot;</attrformat>
+			<attrinfo>　文字に影をつけるかを指定します。true を指定すると影がつきます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_font_edge">
+			<attrname>edge</attrname>
+			<attrshortinfo>袋文字にするか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false または &quot;default&quot;</attrformat>
+			<attrinfo>　文字を袋文字 ( 縁取り文字 ) にするかを指定します。true を指定すると袋文字になります。<br /></attrinfo>
+		</attr>
+		<attr id="attr_font_edgecolor">
+			<attrname>edgecolor</attrname>
+			<attrshortinfo>袋文字の袋の色</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式 または &quot;default&quot;</attrformat>
+			<attrinfo>　文字の袋の色を 0xRRGGBB 形式で指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_font_shadowcolor">
+			<attrname>shadowcolor</attrname>
+			<attrshortinfo>影の色</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式 または &quot;default&quot;</attrformat>
+			<attrinfo>　影の色を 0xRRGGBB 形式で指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_font_bold">
+			<attrname>bold</attrname>
+			<attrshortinfo>太文字にするか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false または &quot;default&quot;</attrformat>
+			<attrinfo>　文字を太文字にするかを指定します。 true を指定すると太文字になります。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_freeimage">
+		<tagname>freeimage</tagname>
+		<tagshortinfo>レイヤ画像の解放</tagshortinfo>
+		<tagremarks>　レイヤの画像を解放します。<br />　とくにアニメーション情報を保持しているレイヤは、非表示にしていても CPU パワーを使用するので、不必要になった時点でこのタグを使って解放するといいかと思います。</tagremarks>
+		<attr id="attr_freeimage_layer">
+			<attrname>layer</attrname>
+			<attrshortinfo>対象レイヤ</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>&quot;base&quot; または 0 以上の整数</attrformat>
+			<attrinfo>　画像を解放するレイヤを指定します。<br />&quot;base&quot; を指定すると 背景レイヤ、 0 以上の整数を指定すると、対応する前景レイヤを表します。</attrinfo>
+		</attr>
+		<attr id="attr_freeimage_page">
+			<attrname>page</attrname>
+			<attrshortinfo>ページ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;back&quot; または &quot;fore&quot;</attrformat>
+			<attrinfo>　表(fore)画面を対象とするか、裏(back)画面を対象とするかを指定します。省略すると表ページであると見なされます。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_glyph">
+		<tagname>glyph</tagname>
+		<tagshortinfo>クリック待ち記号の指定</tagshortinfo>
+		<tagremarks>　クリック待ちに用いる画像を指定します。<br />　line や page 属性で指定されたファイル名の画像が記号として、そのファイル名に .asd をつけたファイル名が アニメーションレイヤのスクリプトとして読み込まれます。<br />　アニメーションレイヤ用の画像やスクリプトの書き方については、AnimationLayer.tjs を参照してください。<br />　これらの設定は、メッセージレイヤごとに個別に設定できます。</tagremarks>
+		<attr id="attr_glyph_line">
+			<attrname>line</attrname>
+			<attrshortinfo>行末クリック待ち記号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>行末クリック待ち記号ファイル名</attrformat>
+			<attrinfo>　行末クリック待ち記号画像のファイル名を指定します。拡張子は指定しないでください。</attrinfo>
+		</attr>
+		<attr id="attr_glyph_linekey">
+			<attrname>linekey</attrname>
+			<attrshortinfo>行末クリック待ち記号のカラーキー</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式 または パレットインデックス番号 または &quot;adapt&quot;</attrformat>
+			<attrinfo>カラーキーを指定します。<br />　<ref>image</ref>タグの key 属性を参照してください。<br /></attrinfo>
+		</attr>
+		<attr id="attr_glyph_page">
+			<attrname>page</attrname>
+			<attrshortinfo>改ページクリック待ち記号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>改ページクリック待ち記号ファイル名</attrformat>
+			<attrinfo>　改ページ待ち記号画像のファイル名を指定します。<br />拡張子は指定しないでください。</attrinfo>
+		</attr>
+		<attr id="attr_glyph_pagekey">
+			<attrname>pagekey</attrname>
+			<attrshortinfo>改ページクリック待ち記号のカラーキー</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式 または パレットインデックス番号 または &quot;adapt&quot;</attrformat>
+			<attrinfo>カラーキーを指定します。<br />　<ref>image</ref>タグの key 属性を参照してください。<br /></attrinfo>
+		</attr>
+		<attr id="attr_glyph_fix">
+			<attrname>fix</attrname>
+			<attrshortinfo>記号表示位置を固定するか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false</attrformat>
+			<attrinfo>　記号表示位置を指定位置に固定するかどうかを指定します。true を指定すると記号は left および top を指定した位置に表示されます。<br />　false を指定すると left および top 属性は無視され、記号は現在の文字表示位置に表示されるようになります。</attrinfo>
+		</attr>
+		<attr id="attr_glyph_left">
+			<attrname>left</attrname>
+			<attrshortinfo>記号表示位置を固定するか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>左端位置(pixel単位)</attrformat>
+			<attrinfo>　fix 属性を true にしたときに記号を表示する位置のうち、左端位置を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_glyph_top">
+			<attrname>top</attrname>
+			<attrshortinfo>記号表示位置を固定するか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>上端位置(pixel単位)</attrformat>
+			<attrinfo>　fix 属性を true にしたときに記号を表示する位置のうち、上端位置を指定します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_goback">
+		<tagname>goback</tagname>
+		<tagshortinfo>前に戻る</tagshortinfo>
+		<tagremarks>　メニューから システム|前に戻る を選択したときと同じ動作をします。</tagremarks>
+		<attr id="attr_goback_ask">
+			<attrname>ask</attrname>
+			<attrshortinfo>確認をするか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　true を指定すると、前に戻るかどうかの確認をします。false を指定すると前に戻るかどうかの確認はありません。この属性を省略すると false を指定したとみなされます。<br />　前に戻るかどうかの確認でユーザが「いいえ」を選んだ場合、実行はそのまま継続します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_gotostart">
+		<tagname>gotostart</tagname>
+		<tagshortinfo>最初に戻る</tagshortinfo>
+		<tagremarks>　<ref>startanchor</ref> タグで指定された場所に戻ります。<br />　メニューから システム|最初に戻る を選択したときと同じ動作をします。</tagremarks>
+		<attr id="attr_gotostart_ask">
+			<attrname>ask</attrname>
+			<attrshortinfo>確認をするか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　true を指定すると、最初に戻るかどうかの確認をします。false を指定すると最初に戻るかどうかの確認はありません。この属性を省略すると false を指定したとみなされます。<br />　最初に戻るかどうかの確認でユーザが「いいえ」を選んだ場合、実行はそのまま継続します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_graph">
+		<tagname>graph</tagname>
+		<tagshortinfo>インライン画像表示</tagshortinfo>
+		<tagremarks>　任意の画像をメッセージレイヤの文字位置に表示します。<br />　読み込み可能な形式は <ref>image</ref> タグで表示することのできる前景画像と同じです。<br />　通常は、普通のフォントでは含まれていないような特殊な記号を画像として用意し、それを表示させる用途に使用します。<br />　記号でなく、画像を表示する場合は char 属性に false を指定してください。<br />　よく使う記号はマクロを組んでおくと楽かと思います。<br /></tagremarks>
+		<tagexample>; heart にはハートマークの画像<br />[macro name=&quot;heart&quot;][graph storage=&quot;heart&quot; alt=&quot;(は〜と)&quot;][endmacro]<br />; 以後、[heart] タグでハートマークを使用可能<br /></tagexample>
+		<attr id="attr_graph_storage">
+			<attrname>storage</attrname>
+			<attrshortinfo>画像ファイル名</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>画像ファイル名</attrformat>
+			<attrinfo>　表示させたい画像ファイル名を指定します。読み込める形式は <ref>image</ref>タグで読み込める形式と同じです。　ここで指定したファイル名 (拡張子を除く) 部分に _m を追加したファイルが、もしあれば、マスク画像として読み込まれます。マスク画像は必ず 256 色グレースケールで保存してください。</attrinfo>
+		</attr>
+		<attr id="attr_graph_key">
+			<attrname>key</attrname>
+			<attrshortinfo>カラーキー</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式 または パレットインデックス番号 または &quot;adapt&quot;</attrformat>
+			<attrinfo>　どの色を抜き色とするかを指定します。省略すると抜き色は無効になります。 　key=0xRRGGBB という形式で 16 進数で抜き色を指定すると、RR(赤) GG(緑) BB(青)で塗られた部分を抜き色として透明にします。たとえば、key=0xff00ff では (r,g,b)=(255,0,255) つまり真マゼンダの部分を抜き色として透明にするという指定になります。<br />　ただ単に数値を指定すれば、そのパレットインデックスの数値が抜き色となります。16色/256色の画像に対して有効です。<br />　key=adapt と指定すれば、自動的に抜き色が決定されます。使用される抜き色は、画像の一番上のラインにて、一番多く使われている色です。16色/256色の画像に対して有効です。<br />　マスク画像を使用する場合は、このタグを指定する必要はありません。</attrinfo>
+		</attr>
+		<attr id="attr_graph_char">
+			<attrname>char</attrname>
+			<attrshortinfo>文字として処理するか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true (デフォルト) または false</attrformat>
+			<attrinfo>　true を指定すると、画像は<ref>font</ref> タグで指定した色、影、袋文字の状態が、文字同様に表示されます。そのため、true を設定すると画像の色情報は無視されます。また、画像が影や袋文字である必要はありません。<br />　graph タグが特殊記号の表示に使われることが多いことを想定してデフォルトでは true になっているので、普通の画像を表示する場合は注意してください。</attrinfo>
+		</attr>
+		<attr id="attr_graph_alt">
+			<attrname>alt</attrname>
+			<attrshortinfo>代替文字</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>代替文字</attrformat>
+			<attrinfo>　メッセージ履歴に表示する、この画像の代替文字を指定します。メッセージ履歴は文字情報しか表示できませんので、alt 属性に指定された文字が代わりに表示されます。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_hact">
+		<tagname>hact</tagname>
+		<tagshortinfo>メッセージ履歴アクション</tagshortinfo>
+		<tagremarks>　メッセージ履歴に対するアクションを指定します。このタグと <ref>endhact</ref> タグで囲まれた部分は、メッセージ履歴上でクリックできるようになり、クリックされた時に実行する TJS 式を指定することができます。過去にメッセージと共に再生した声を、メッセージ履歴のクリックで再生できるようにするなどに応用できます。</tagremarks>
+		<attr id="attr_hact_exp">
+			<attrname>exp</attrname>
+			<attrshortinfo>実行する式</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>TJS式</attrformat>
+			<attrinfo>　メッセージをクリックしたときに実行する TJS 式を指定します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_hch">
+		<tagname>hch</tagname>
+		<tagshortinfo>縦中横を表示する</tagshortinfo>
+		<tagremarks>　縦中横 ( 縦書き中に算用数字２桁を書くような場合にそこだけ横書きにする書き方 ) で文字を表示します。<br />　現在対象となっているメッセージレイヤが縦書きモードである必要があります。<br /></tagremarks>
+		<tagexample>今日は平成[hch text=&quot;15&quot;]年[hch text=&quot;12&quot;]月[hch text=&quot;30&quot;]日</tagexample>
+		<attr id="attr_hch_text">
+			<attrname>text</attrname>
+			<attrshortinfo>表示する文字</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>文字</attrformat>
+			<attrinfo>　ここで指定した文字がそこだけ横書きで表示されます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_hch_expand">
+			<attrname>expand</attrname>
+			<attrshortinfo>行間を拡張するか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　true を指定すると、長い縦中横を描画しようとしたときに行間を自動的に拡張します。false を指定すると、縦中横が行からはみ出て正常に描画されない可能性がありますが、行間はそのままになります ( 通常半角２桁ならば false で OK )。<br />この属性を指定しないと false であると見なされます。<br /><br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_hidemessage">
+		<tagname>hidemessage</tagname>
+		<tagshortinfo>メッセージを消す</tagshortinfo>
+		<tagremarks>　メッセージレイヤを一時的に隠します。メニューから「メッセージを消す」を選んだのと同じ動作を行います。<br />　クリック待ちを行った後、メッセージレイヤは表示され、実行は継続します。</tagremarks>
+	</tag>
+	<tag id="tag_history">
+		<tagname>history</tagname>
+		<tagshortinfo>メッセージ履歴の設定</tagshortinfo>
+		<tagremarks>　メッセージ履歴の機能に関する設定を行います。</tagremarks>
+		<attr id="attr_history_output">
+			<attrname>output</attrname>
+			<attrshortinfo>文字情報の出力</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false</attrformat>
+			<attrinfo>　メッセージ履歴への文字情報の出力をするかどうかを指定します。<br />　true を指定すると、メッセージレイヤに表示した文字がメッセージ履歴に表示されるようになります。<br />　シナリオを最初に実行したときは true の状態になっています。<br />　false を指定するとメッセージ履歴には文字情報は出力されません。</attrinfo>
+		</attr>
+		<attr id="attr_history_enabled">
+			<attrname>enabled</attrname>
+			<attrshortinfo>メッセージ履歴の表示可能・不可能</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false</attrformat>
+			<attrinfo>　メッセージ履歴を表示可能かどうかを指定します。<br />　true を指定すると表示可能に、false を指定すると表示不可能になります。<br />　ユーザーにメッセージ履歴を表示させたくない場合に false にしてください。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_hr">
+		<tagname>hr</tagname>
+		<tagshortinfo>メッセージ履歴の改行/改ページ</tagshortinfo>
+		<tagremarks>　メッセージ履歴を改行または改ページします。</tagremarks>
+		<attr id="attr_hr_repage">
+			<attrname>repage</attrname>
+			<attrshortinfo>改ページかどうか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　改ページを行うかどうかを指定します。<br />　true を指定すると改行ではなく改ページが行われます。false を指定すると改行が行われます。<br />　この属性を省略すると false が指定されたと見なされます。<br />　改ページは、Config.tjs のメッセージ履歴の設定で everypage が true になってないと動作しません。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_if">
+		<tagname>if</tagname>
+		<tagshortinfo>条件によりシナリオを実行</tagshortinfo>
+		<tagremarks>式を評価し、その結果が true ( または 0 以外 ) ならば、elsif・else・endif のいずれかまでにある文章やタグを実行し、そうでない場合は無視します。<br />　if 〜 endif の間にはラベルを挟まないでください。<br /></tagremarks>
+		<tagexample>; 例1[if exp=&quot;false&quot;]<br />ここは表示されない<br />[else]<br />ここは表示される<br />[endif]<br /><br />; 例2[if exp=&quot;false&quot;]<br />ここは表示されない<br />[elsif exp=&quot;false&quot;]<br />ここは表示されない<br />[else]<br />ここは表示される<br />[endif]<br /><br />; 例3[if exp=&quot;false&quot;]<br />ここは表示されない<br />[elsif exp=&quot;true&quot;]<br />ここは表示される<br />[else]<br />ここは表示されない<br />[endif]<br /><br />; 例4[if exp=&quot;true&quot;]<br />ここは表示される<br />[elsif exp=&quot;true&quot;]<br />ここは表示されない<br />[else]<br />ここは表示されない<br />[endif]<br /><br /></tagexample>
+		<attr id="attr_if_exp">
+			<attrname>exp</attrname>
+			<attrshortinfo>TJS 式</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>TJS 式</attrformat>
+			<attrinfo>　評価する TJS 式を指定します。この式の結果が false ( または 0 ならば、elsif・else・endif タグまでの文章やタグが無視されます。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_ignore">
+		<tagname>ignore</tagname>
+		<tagshortinfo>条件によりシナリオを無視</tagshortinfo>
+		<tagremarks>　式を評価し、その結果が true ( または 0 以外 ) ならば、endignore タグまでにある文章やタグが無視されます。<br />　ignore 〜 endignore の間にはラベルを挟まないでください。<br /></tagremarks>
+		<attr id="attr_ignore_exp">
+			<attrname>exp</attrname>
+			<attrshortinfo>TJS 式</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>TJS 式</attrformat>
+			<attrinfo>　評価する TJS 式を指定します。この式の結果が true ( または 0 以外 )ならば、endignore タグまでの文章やタグが無視されます。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_image">
+		<tagname>image</tagname>
+		<tagshortinfo>画像の読み込み</tagshortinfo>
+		<tagremarks>　画像を読み込みます。img でも image でも同じ意味です。多くの属性がありますが、必須なのは storage と layer のみです。<br />　前景レイヤは KAG 初期状態では非表示状態なので、visible=true とすれば表示されるようになります。<br /><br />　色調補正は読み込む画像に対して、<br />・grayscale によるグレースケール化<br />・?gamma , ?floor , ?ceil によるガンマ補正<br />・mcolor, mopacity による色ブレンド<br />の順番で行われます。<br />　アニメーション情報の作成の方法は AnimationLayer.tjs 内を参照してください。<br />　クリッカブルマップの使い方については KAG システムリファレンスを参照してください。</tagremarks>
+		<attr id="attr_image_storage">
+			<attrname>storage</attrname>
+			<attrshortinfo>画像ファイル名</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>画像ファイル名</attrformat>
+			<attrinfo>　読み込みたい画像を指定します。拡張子は省略可能です。<br />　ここで指定したファイル名 (拡張子を除く) 部分に _m を追加したファイルが、もしあれば、マスク画像として読み込まれます。　また、同様に _p を追加したファイルが、もしあれば、クリッカブルマップ用の領域画像として読み込まれます。<br />　マスク画像は必ず 256 色グレースケールで保存してください。<br />　領域画像はかならず 256 色で保存してください。<br />　また、拡張子が asd のファイルが存在すればアニメーションシーケンスデータとしてアニメーションの情報も読み込みまれ、拡張子が ma のファイルが存在すれば、クリッカブルマップ用の領域アクション定義ファイルとして読み込まれます。</attrinfo>
+		</attr>
+		<attr id="attr_image_layer">
+			<attrname>layer</attrname>
+			<attrshortinfo>対象レイヤ</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>&quot;base&quot; または 0 以上の整数</attrformat>
+			<attrinfo>　画像を読み込むレイヤを指定します。<br />&quot;base&quot; を指定すると 背景レイヤ、 0 以上の整数を指定すると、対応する前景レイヤに画像を読み込みます。</attrinfo>
+		</attr>
+		<attr id="attr_image_page">
+			<attrname>page</attrname>
+			<attrshortinfo>ページ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;back&quot; または &quot;fore&quot;</attrformat>
+			<attrinfo>　表(fore)画面を対象とするか、裏(back)画面を対象とするかを指定します。省略すると表ページであると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_image_key">
+			<attrname>key</attrname>
+			<attrshortinfo>カラーキー</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式 または パレットインデックス番号 または &quot;adapt&quot;</attrformat>
+			<attrinfo>　どの色を抜き色とするかを指定します。省略すると抜き色は無効になります。 <br />　key=0xRRGGBB という形式で 16 進数で抜き色を指定すると、RR(赤) GG(緑) BB(青)で塗られた部分を抜き色として透明にします。たとえば、key=0xff00ff では (r,g,b)=(255,0,255) つまり真マゼンダの部分を抜き色として透明にするという指定になります。<br />　ただ単に数値を指定すれば、そのパレットインデックスの数値が抜き色となります。16色/256色の画像に対して有効です。<br />　key=adapt と指定すれば、自動的に抜き色が決定されます。使用される抜き色は、画像の一番上のラインにて、一番多く使われている色です。16色/256色の画像に対して有効です。<br />　マスク画像を使用する場合は、この属性は指定する必要はありません。</attrinfo>
+		</attr>
+		<attr id="attr_image_mode">
+			<attrname>mode</attrname>
+			<attrshortinfo>前景レイヤ透過モード</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;alpha&quot;(デフォルト) または &quot;transp&quot; &quot;opaque&quot; &quot;rect&quot; &quot;add&quot; &quot;sub&quot; &quot;mul&quot; &quot;dodge&quot; &quot;darken&quot; &quot;lighten&quot; &quot;screen&quot; &quot;psadd&quot; &quot;pssub&quot; &quot;psmul&quot; &quot;psscreen&quot; &quot;psoverlay&quot; &quot;pshlight&quot; &quot;psslight&quot; &quot;psdodge&quot; &quot;psdodge5&quot; &quot;psburn&quot; &quot;pslighten&quot; &quot;psdarken&quot; &quot;psdiff&quot; &quot;psdiff5&quot; &quot;psexcl&quot; のいずれか</attrformat>
+			<attrinfo>　前景レイヤの透過モードを指定します。前景レイヤ以外には指定しないでください。<br />　&quot;alpha&quot; または &quot;transp&quot; を指定するとαチャネルが有効になって画像を透過して表示することができます。&quot;alpha&quot; でも &quot;transp&quot; でも同じ意味です。<br />　&quot;opaque&quot; または &quot;rect&quot; を指定すると画像は透過されません (矩形で表示されます)。&quot;opaque&quot; でも &quot;rect&quot; でも同じ意味です。<br />　&quot;addalpha&quot; を指定すると、画像を透過して表示することができます。&quot;alpha&quot; はアルファ合成ですが、&quot;addalpha&quot; は加算アルファ合成を表します。この違いについては「吉里吉里２ リファレンス」を参照してください。<br />　&quot;add&quot; を指定すると加算合成が行われます。<br />　&quot;sub&quot; を指定すると減算合成が行われます。<br />　&quot;mul&quot; を指定すると乗算合成が行われます。<br />　&quot;dodge&quot; を指定すると「覆い焼き」合成が行われます。<br />　&quot;darken&quot; を指定すると「比較(暗)」合成が行われます。<br />　&quot;lighten&quot; を指定すると「比較(明)」合成が行われます。<br />　&quot;screen&quot; を指定すると「スクリーン乗算」合成が行われます。<br />　&quot;psadd&quot; を指定すると、Photoshop互換の「覆い焼き(リニア)」合成が行われます。<br />　&quot;pssub&quot; を指定すると、Photoshop互換の「焼き込み(リニア)」合成が行われます。<br />　&quot;psmul&quot; を指定すると、Photoshop互換の「乗算」合成が行われます。<br />　&quot;psscreen&quot; を指定すると、Photoshop互換の「スクリーン」合成が行われます。<br />　&quot;psoverlay&quot; を指定すると、Photoshop互換の「オーバーレイ」合成が行われます。<br />　&quot;pshlight&quot; を指定すると、Photoshop互換の「ハードライト」合成が行われます。<br />　&quot;psslight&quot; を指定すると、Photoshop互換の「ソフトライト」合成が行われます。<br />　&quot;psdodge&quot; を指定すると、Photoshop互換の「覆い焼きカラー」合成が行われます。<br />　&quot;psdodge5&quot; を指定すると、Photoshop互換の「覆い焼きカラー」合成(Photoshop 5.x 以下と互換)が行われます。<br />　&quot;psburn&quot; を指定すると、Photoshop互換の「焼き込みカラー」合成が行われます。<br />　&quot;pslighten&quot; を指定すると、Photoshop互換の「比較(明)」合成が行われます。<br />　&quot;psdarken&quot; を指定すると、Photoshop互換の「比較(暗)」合成が行われます。<br />　&quot;psdiff&quot; を指定すると、Photoshop互換の「差の絶対値」合成が行われます。<br />　&quot;psdiff5&quot; を指定すると、Photoshop互換の「差の絶対値」合成(Photoshop 5.x 以下と互換)が行われます。<br />　&quot;psexcl&quot; を指定すると、Photoshop互換の「除外」合成が行われます。<br />　透明度情報を持たない画像を指定する場合は &quot;opaque&quot; に指定する方が負荷が軽くて済みます。<br /><br />　省略すると &quot;alpha&quot; であるとみなされます。例外的に、TLG5/6 画像の場合は、画像中に透過モードを表す情報が埋め込まれています。この場合は、この属性を省略すると、その画像が情報として持っている透過モードに従って表示されます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_image_grayscale">
+			<attrname>grayscale</attrname>
+			<attrshortinfo>画像をグレースケールにするか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false</attrformat>
+			<attrinfo>　画像をグレースケールにするかどうかを指定します。grayscale=true と指定すると、画像をグレースケールにします。省略すると false であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_image_rgamma">
+			<attrname>rgamma</attrname>
+			<attrshortinfo>ガンマ補正値</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ガンマ補正値 (0.1 〜 1.0(デフォルト) 〜 9.9)</attrformat>
+			<attrinfo>　r (赤) 、g (緑) 、 b (青) の各成分のガンマ値を指定します。 たとえば画像をセピア調にするには、<TT>grayscale=true rgamma=1.3 ggamma=1.1</TT> と指定します。</attrinfo>
+		</attr>
+		<attr id="attr_image_ggamma">
+			<attrname>ggamma</attrname>
+			<attrshortinfo>ガンマ補正値</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ガンマ補正値 (0.1 〜 1.0(デフォルト) 〜 9.9)</attrformat>
+			<attrinfo>　r (赤) 、g (緑) 、 b (青) の各成分のガンマ値を指定します。 たとえば画像をセピア調にするには、<TT>grayscale=true rgamma=1.3 ggamma=1.1</TT> と指定します。</attrinfo>
+		</attr>
+		<attr id="attr_image_bgamma">
+			<attrname>bgamma</attrname>
+			<attrshortinfo>ガンマ補正値</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ガンマ補正値 (0.1 〜 1.0(デフォルト) 〜 9.9)</attrformat>
+			<attrinfo>　r (赤) 、g (緑) 、 b (青) の各成分のガンマ値を指定します。 たとえば画像をセピア調にするには、<TT>grayscale=true rgamma=1.3 ggamma=1.1</TT> と指定します。</attrinfo>
+		</attr>
+		<attr id="attr_image_rfloor">
+			<attrname>rfloor</attrname>
+			<attrshortinfo>輝度最低値</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>輝度最低値 ( 0(デフォルト) 〜 255 )</attrformat>
+			<attrinfo>　各成分の輝度最低値を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_image_gfloor">
+			<attrname>gfloor</attrname>
+			<attrshortinfo>輝度最低値</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>輝度最低値 ( 0(デフォルト) 〜 255 )</attrformat>
+			<attrinfo>　各成分の輝度最低値を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_image_bfloor">
+			<attrname>bfloor</attrname>
+			<attrshortinfo>輝度最低値</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>輝度最低値 ( 0(デフォルト) 〜 255 )</attrformat>
+			<attrinfo>　各成分の輝度最低値を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_image_rceil">
+			<attrname>rceil</attrname>
+			<attrshortinfo>輝度最高値</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>輝度最高値 ( 0 〜 255(デフォルト) )</attrformat>
+			<attrinfo>　各成分の輝度最高値を指定します。 たとえば、<TT>rfloor=255 gfloor=255 bfloor=255 rceil=0 gceil=0 bceil=0</TT> と指定すると、色が反転します。</attrinfo>
+		</attr>
+		<attr id="attr_image_gceil">
+			<attrname>gceil</attrname>
+			<attrshortinfo>輝度最高値</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>輝度最高値 ( 0 〜 255(デフォルト) )</attrformat>
+			<attrinfo>　各成分の輝度最高値を指定します。 たとえば、<TT>rfloor=255 gfloor=255 bfloor=255 rceil=0 gceil=0 bceil=0</TT> と指定すると、色が反転します。</attrinfo>
+		</attr>
+		<attr id="attr_image_bceil">
+			<attrname>bceil</attrname>
+			<attrshortinfo>輝度最高値</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>輝度最高値 ( 0 〜 255(デフォルト) )</attrformat>
+			<attrinfo>　各成分の輝度最高値を指定します。 たとえば、<TT>rfloor=255 gfloor=255 bfloor=255 rceil=0 gceil=0 bceil=0</TT> と指定すると、色が反転します。</attrinfo>
+		</attr>
+		<attr id="attr_image_mcolor">
+			<attrname>mcolor</attrname>
+			<attrshortinfo>ブレンド色</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式</attrformat>
+			<attrinfo>　色ブレンドによる色調効果において、ブレンドする色を 0xRRGGBB 形式で指定します。濃度は mopacity 属性で指定します。<br />　省略すると色ブレンドによる色調効果は行われません。</attrinfo>
+		</attr>
+		<attr id="attr_image_mopacity">
+			<attrname>mopacity</attrname>
+			<attrshortinfo>ブレンド色濃度</attrshortinfo>
+			<attrrequired>mcolor を指定した場合</attrrequired>
+			<attrformat>不透明度(0 〜 255)</attrformat>
+			<attrinfo>　色ブレンドによる色調効果で、mcolor で指定した色をどれぐらいの不透明度でブレンドするかを指定します。</attrinfo>
+		</attr>
+		<attr id="attr_image_clipleft">
+			<attrname>clipleft</attrname>
+			<attrshortinfo>クリップ矩形左端位置</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>クリップ矩形左端位置(pixel単位)</attrformat>
+			<attrinfo>　画像クリップ矩形の左端位置を指定します。clipleft, cliptop, clipwidth, clipheight で矩形を指定すると、storage 属性で指定された画像のその矩形のみが切り取られ、指定されたレイヤの画像になります。画像の一部だけを切り取って表示したいときなどに使用します。<br />　これらの属性を省略すると、storage 属性で指定された画像全部がレイヤの画像になります。<br /></attrinfo>
+		</attr>
+		<attr id="attr_image_cliptop">
+			<attrname>cliptop</attrname>
+			<attrshortinfo>クリップ矩形上端位置</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>クリップ矩形上端位置(pixel単位)</attrformat>
+			<attrinfo>　画像クリップ矩形の上端位置を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_image_clipwidth">
+			<attrname>clipwidth</attrname>
+			<attrshortinfo>クリップ矩形幅</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>クリップ矩形幅(pixel単位)</attrformat>
+			<attrinfo>　画像クリップ矩形の幅を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_image_clipheight">
+			<attrname>clipheight</attrname>
+			<attrshortinfo>クリップ矩形高さ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>クリップ矩形高さ(pixel単位)</attrformat>
+			<attrinfo>　画像クリップ矩形の高さを指定します</attrinfo>
+		</attr>
+		<attr id="attr_image_flipud">
+			<attrname>flipud</attrname>
+			<attrshortinfo>上下反転</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　画像の上下反転を行いたい場合に true を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_image_fliplr">
+			<attrname>fliplr</attrname>
+			<attrshortinfo>左右反転</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　画像の左右反転を行いたい場合に true を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_image_visible">
+			<attrname>visible</attrname>
+			<attrshortinfo>レイヤの可視・不可視</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false</attrformat>
+			<attrinfo>　layer 属性で指定したレイヤを表示するか、しないかを指定します。visible=true と指定すれば、レイヤは表示状態になります。visible=false と指定すれば、非表示状態になります。省略すると表示状態は変わりません。layer=base を指定した場合はこの属性は指定しないでください。</attrinfo>
+		</attr>
+		<attr id="attr_image_left">
+			<attrname>left</attrname>
+			<attrshortinfo>レイヤ左端位置</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>左端位置(pixel単位)</attrformat>
+			<attrinfo>　layer 属性で指定したレイヤの左端位置を指定します。省略すると、画像読み込み前の位置を保持します。layer=base と指定した場合はこの属性は指定しないでください。</attrinfo>
+		</attr>
+		<attr id="attr_image_top">
+			<attrname>top</attrname>
+			<attrshortinfo>レイヤ上端位置</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>上端位置(pixel単位)</attrformat>
+			<attrinfo>　layer 属性で指定したレイヤの上端位置を指定します。省略すると、画像読み込み前の位置を保持します。layer=base と指定した場合はこの属性は指定しないでください。</attrinfo>
+		</attr>
+		<attr id="attr_image_pos">
+			<attrname>pos</attrname>
+			<attrshortinfo>前景レイヤ位置</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>left または left_center または center または right_center または right</attrformat>
+			<attrinfo>　レイヤ位置を自動的に決定します。前景レイヤに対して使います。<br />　横方向の位置は、この属性で指定した left ( 左端 ) 、left_center ( 左より )、center ( 中央 )、right_center ( 右より )、right ( 右端 ) の位置に表示されます。各横方向の座標の中心位置は Config.tjs で指定することができます。<br />　left, left_center, center, right_center, right の代わりに、それぞれ l, lc, c, rc, r を指定することもできます ( 動作は同じです )。<br />　縦方向の位置については、レイヤの下端は画面の下端に合わせて ( 下側に詰められて ) 表示されます。<br />　この属性を指定した場合は left 属性や top 属性は無視されます。<br />　layer=base と指定した場合にはこの属性は指定しないでください。<br /></attrinfo>
+		</attr>
+		<attr id="attr_image_opacity">
+			<attrname>opacity</attrname>
+			<attrshortinfo>不透明度</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>不透明度 ( 0 (全くの透明) 〜 255 (全くの不透明 ) )</attrformat>
+			<attrinfo>　layer 属性で指定したレイヤの不透明度を指定します。<br />　デフォルトで 255 (全くの不透明) です。つまり、この属性を指定しないで画像を読み込むと、そのレイヤの opacity が 255 以外でも、255 に設定しなおされます。<br />　128 を指定すると半分程度の透明度になり、透けて表示されます。<br />　opacity=0 としてもレイヤを見えなくすることが出来ますが、全くの透明になっただけで非表示になるわけではありません。<br />　この属性を設定してもレイヤの画像自体が変化するわけではありません。変化するのは表示の状態です。<br /></attrinfo>
+		</attr>
+		<attr id="attr_image_mapimage">
+			<attrname>mapimage</attrname>
+			<attrshortinfo>領域画像</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>画像ファイル名</attrformat>
+			<attrinfo>　クリッカブルマップに用いる領域画像を指定します。<br />　ここで指定を行わなくても、storage 属性で指定したファイル名 (拡張子を除く) 部分に_p を追加したファイルが もしあれば自動的に領域画像として読み込まれますが、別のファイルを代わりに読み込みたい場合にこの属性を用います。</attrinfo>
+		</attr>
+		<attr id="attr_image_mapaction">
+			<attrname>mapaction</attrname>
+			<attrshortinfo>領域アクション定義ファイル</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>領域アクション定義ファイル名</attrformat>
+			<attrinfo>　クリッカブルマップに用いる領域アクション定義ファイルを指定します。<br />　ここで指定しなくても、storage 属性で指定したファイル名と同名で拡張子が ma のファイルがあれば自動的に涼気アクション定義ファイルとして読み込まれますが、別のファイルを代わりに読み込みたい場合にこの属性を用います。<br />　拡張子 ( 通常は .ma ) は省略できませんので拡張子も含めて指定してください。</attrinfo>
+		</attr>
+		<attr id="attr_image_index">
+			<attrname>index</attrname>
+			<attrshortinfo>重ね合わせ順序</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>正の整数</attrformat>
+			<attrinfo>　背景レイヤには指定しないでください。<br />　重ね合わせ順序を指定します。値が大きいほど手前に表示されます。<br />　標準では、前景レイヤ 0 が 1000、前景レイヤ 1 が 2000 ( 以降 1000 ずつ増える )、メッセージレイヤ 0 が 1000000、メッセージレイヤ 1 が 1001000 ( 以降 1000 ずつ増える )、　メッセージ履歴を表示するためのレイヤが 2000000 となっています。<br />　背景レイヤの重ね合わせ順序は変更することはできません。<br />　<ref>laycount</ref> タグを実行すると、この重ね合わせ順序は標準の状態に戻されてしまう場合があるので注意してください。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_indent">
+		<tagname>indent</tagname>
+		<tagshortinfo>インデントの設定</tagshortinfo>
+		<tagremarks>　このタグの位置に左インデント ( 縦書きの場合は頭インデント ) を設定します。発言者インデントなどとして使うことができます。インデントを解除する場合は、改行の前に <ref>endindent</ref> タグを使用します。</tagremarks>
+		<tagexample>【あんぱん】[indent]このように発言者インデントなどとして使うことができます。[endindent]</tagexample>
+	</tag>
+	<tag id="tag_input">
+		<tagname>input</tagname>
+		<tagshortinfo>文字列の入力</tagshortinfo>
+		<tagremarks>　文字列を入力するためにダイアログボックスを開き、ユーザーに入力を求めます。<br />　ユーザー名の入力などに使用することができます。<br /></tagremarks>
+		<tagexample>[eval exp=&quot;f.username=&apos;太郎&apos;&quot;]<br />[input name=f.username prompt=&quot;名前を入力してください&quot; title=&quot;名前の入力&quot;]<br />名前は : [emb exp=f.username]<br /></tagexample>
+		<attr id="attr_input_name">
+			<attrname>name</attrname>
+			<attrshortinfo>変数名</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>変数名</attrformat>
+			<attrinfo>　入力したい文字列を格納する変数を指定します。<br />　もし変数にすでに文字列が入っていた場合は、その文字列がダイアログボックスの初期文字列として表示されます。<br />　ユーザーがダイアログボックスのキャンセルボタンや ESC キーを押したときは変数の値は変わりません。<br />　変数には KAG からアクセスできるすべての変数を指定することができます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_input_prompt">
+			<attrname>prompt</attrname>
+			<attrshortinfo>プロンプト</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>プロンプトとして表示する文字列</attrformat>
+			<attrinfo>　ダイアログボックスのプロンプト ( 入力欄のすぐ上に表示される文字列 ) を指定します。省略すると空欄になります。<br />　「名前を入力してください」などにします。</attrinfo>
+		</attr>
+		<attr id="attr_input_title">
+			<attrname>title</attrname>
+			<attrshortinfo>タイトル</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ダイアログボックスのタイトル</attrformat>
+			<attrinfo>　ダイアログボックスのタイトルを指定します。<br />　省略するとタイトルは空欄になります。<br />　「名前の入力」などにします。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_iscript">
+		<tagname>iscript</tagname>
+		<tagshortinfo>TJS スクリプトの記述</tagshortinfo>
+		<tagremarks>　[iscript] のみの行と、[<ref>endscript</ref>] のみの行で囲まれた部分に TJS スクリプトを書き込むことが出来ます。<br />　[iscript] のみの行というのは、その行には [iscript] タグのみしか記述してはいけないと言うことです(endscript も同様)。<br />　また、マクロ中にこのタグを書くことはできません。<br /></tagremarks>
+		<tagexample>[iscript]<br />kag.restoreBookMark(0); // 0 番目の栞をたどる<br />[endscript]<br /></tagexample>
+	</tag>
+	<tag id="tag_jump">
+		<tagname>jump</tagname>
+		<tagshortinfo>シナリオのジャンプ</tagshortinfo>
+		<tagremarks>　指定されたシナリオファイルの指定されたラベルにジャンプします。<br />　サブルーチン内でジャンプする場合は、call 〜 return のバランスに注意してください。<br /></tagremarks>
+		<attr id="attr_jump_storage">
+			<attrname>storage</attrname>
+			<attrshortinfo>シナリオファイル名</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>シナリオファイル名</attrformat>
+			<attrinfo>　ジャンプ先のシナリオファイルを指定します。省略すると、現在のシナリオファイル内であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_jump_target">
+			<attrname>target</attrname>
+			<attrshortinfo>ラベル名</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ラベル名</attrformat>
+			<attrinfo>　ジャンプ先のラベルを指定します。<br />　省略すると、ファイルの先頭から実行されます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_jump_countpage">
+			<attrname>countpage</attrname>
+			<attrshortinfo>このジャンプを「読んだ」と見なすか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true(デフォルト) または false</attrformat>
+			<attrinfo>　他のラベルに移行するときに、このタグのある場所のラベルを「読んだ」とみなすかどうかを指定します。<br />　ジャンプする際にそのページが「読んだ」ことになっては困る場合に false を指定します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_l">
+		<tagname>l</tagname>
+		<tagshortinfo>行末クリック待ち</tagshortinfo>
+		<tagremarks>　行末のクリック待ちを行います。<ref>p</ref> タグとは、メッセージ履歴への改行の出力の違いや、「文字表示 &gt; ページ末まで一気に」を使用したときの挙動の違いなどがあります。<br />　<ref>current</ref> タグで裏ページのメッセージレイヤを指定している場合はこの記号は表示されません。表示したい場合は表ページのメッセージレイヤを指定してください。</tagremarks>
+	</tag>
+	<tag id="tag_laycount">
+		<tagname>laycount</tagname>
+		<tagshortinfo>レイヤの数の変更</tagshortinfo>
+		<tagremarks>　前景レイヤまたはメッセージレイヤの数を変更します。いずれの属性も省略すれば設定は変更されません。<br />　レイヤ数に制限はありませんが、実行環境の OS やメモリによって制限を受ける可能性があります。<br />　レイヤの数は必要最小限にしておくべきです。たくさんのレイヤを確保してそれを使い終わったら、なるべく必要最小限の状態に戻しておくのが良いでしょう。<br /></tagremarks>
+		<attr id="attr_laycount_layers">
+			<attrname>layers</attrname>
+			<attrshortinfo>前景レイヤの数</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0 または正の整数</attrformat>
+			<attrinfo>　前景レイヤの数を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_laycount_messages">
+			<attrname>messages</attrname>
+			<attrshortinfo>メッセージレイヤの数</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>正の整数</attrformat>
+			<attrinfo>　メッセージレイヤの数を指定します。<br />　0 は指定できません。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_layopt">
+		<tagname>layopt</tagname>
+		<tagshortinfo>レイヤの属性</tagshortinfo>
+		<tagremarks>　レイヤの属性を指定します。</tagremarks>
+		<attr id="attr_layopt_layer">
+			<attrname>layer</attrname>
+			<attrshortinfo>対象レイヤ</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>0 以上の整数または message0 または message1 または message</attrformat>
+			<attrinfo>　対象となる前景レイヤまたはメッセージレイヤを指定します。　message とのみ指定した場合は、<ref>current</ref>タグで指定した、現在の操作対象のメッセージレイヤが対象となります。</attrinfo>
+		</attr>
+		<attr id="attr_layopt_page">
+			<attrname>page</attrname>
+			<attrshortinfo>ページ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;fore&quot;(デフォルト) または &quot;back&quot;</attrformat>
+			<attrinfo>　 表(fore)画面のレイヤを対象とするか、裏(back)画面のレイヤを対象とするかを指定します。省略すると表ページであると見なされます。<br />　ただし、layer=message とのみ指定した場合でこの属性を省略した場合は現在操作対象のページのメッセージレイヤが選択されます。</attrinfo>
+		</attr>
+		<attr id="attr_layopt_visible">
+			<attrname>visible</attrname>
+			<attrshortinfo>レイヤの可視・不可視</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false</attrformat>
+			<attrinfo>　layer 属性で指定したレイヤを表示するか、しないかを指定します。visible=true と指定すれば、レイヤは表示状態になります。visible=false と指定すれば、非表示状態になります。省略すると表示状態は変わりません。</attrinfo>
+		</attr>
+		<attr id="attr_layopt_left">
+			<attrname>left</attrname>
+			<attrshortinfo>レイヤ左端位置</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>左端位置(pixel単位)</attrformat>
+			<attrinfo>　layer 属性で指定したレイヤの左端位置を指定します。省略すると位置は変更しません。<br />　layer 属性に message0 や message1 を指定した場合は、むしろ<ref>position</ref> タグで位置等を指定してください。<br />　ただし、position タグはメッセージレイヤをクリアしてしまいますが、このタグではクリアしません。内容を維持したまま表示位置を変えたい場合はこのタグを使います。</attrinfo>
+		</attr>
+		<attr id="attr_layopt_top">
+			<attrname>top</attrname>
+			<attrshortinfo>レイヤ上端位置</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>上端位置(pixel単位)</attrformat>
+			<attrinfo>　layer 属性で指定したレイヤの上端位置を指定します。省略すると位置は変更しません。<br />　layer 属性に message0 や message1 を指定した場合は、むしろ<ref>position</ref> タグで位置等を指定してください。<br />　ただし、position タグはメッセージレイヤをクリアしてしまいますが、このタグではクリアしません。内容を維持したまま表示位置を変えたい場合はこのタグを使います。</attrinfo>
+		</attr>
+		<attr id="attr_layopt_opacity">
+			<attrname>opacity</attrname>
+			<attrshortinfo>不透明度</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>不透明度 ( 0 (全くの透明) 〜 255 (全くの不透明 ) )</attrformat>
+			<attrinfo>　レイヤの不透明度を指定します。<br />　デフォルトで 255 (全くの不透明) です。128 を指定すると半分程度の透明度になり、透けて表示されます。<br />　opacity=0 としてもレイヤを見えなくすることが出来ますが、全くの透明になっただけで非表示になるわけではありません。<br />　また、この属性を設定してもレイヤの画像自体が変化するわけではありません。たとえば opacity=128 として半透明にした後に 255 に戻しても正常に表示されます。<br />　メッセージレイヤに対してもこの属性を指定できますが、<ref>position</ref> タグで指定する opacity 属性とは意味が違います。<br /></attrinfo>
+		</attr>
+		<attr id="attr_layopt_autohide">
+			<attrname>autohide</attrname>
+			<attrshortinfo>メッセージレイヤとともに隠すか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false</attrformat>
+			<attrinfo>　前景レイヤ以外には指定しないでください。<br />　[システム|メッセージを消す] メニューを選択したときにメッセージレイヤが隠れますが、それと同時にこの前景レイヤも隠すかどうかを指定します。</attrinfo>
+		</attr>
+		<attr id="attr_layopt_index">
+			<attrname>index</attrname>
+			<attrshortinfo>重ね合わせ順序</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>正の整数</attrformat>
+			<attrinfo>　背景レイヤには指定しないでください。<br />　重ね合わせ順序を指定します。値が大きいほど手前に表示されます。<br />　標準では、前景レイヤ 0 が 1000、前景レイヤ 1 が 2000 ( 以降 1000 ずつ増える )、メッセージレイヤ 0 が 1000000、メッセージレイヤ 1 が 1001000 ( 以降 1000 ずつ増える )、　メッセージ履歴を表示するためのレイヤが 2000000 となっています。<br />　背景レイヤの重ね合わせ順序は変更することはできません。<br />　<ref>laycount</ref> タグを実行すると、この重ね合わせ順序は標準の状態に戻されてしまう場合があるので注意してください。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_link">
+		<tagname>link</tagname>
+		<tagshortinfo>ハイパーリンク</tagshortinfo>
+		<tagremarks>　link タグと <ref>endlink</ref> タグで囲まれた部分の文章を、マウスやキーボードで選択可能にし、そこでクリックされたりキーを押されたときに、ジャンプする先を指定できます。<br />exp 属性を指定すれば、リンクをクリックされたときに変数に値を代入するというような動作も行わせることができます。<br />　囲まれた文章は、ページをまたぐことは出来ません(行をまたぐことはできます)。<br />　一画面中に最大で 255 個のリンクを作成することができます。</tagremarks>
+		<attr id="attr_link_storage">
+			<attrname>storage</attrname>
+			<attrshortinfo>シナリオファイル名</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>シナリオファイル名</attrformat>
+			<attrinfo>　ジャンプ先のシナリオファイルを指定します。省略すると、現在のシナリオファイル内であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_link_target">
+			<attrname>target</attrname>
+			<attrshortinfo>ラベル名</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ラベル名</attrformat>
+			<attrinfo>　ジャンプ先のラベルを指定します。<br />　省略すると、ファイルの先頭から実行されます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_link_exp">
+			<attrname>exp</attrname>
+			<attrshortinfo>TJS 式</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>TJS 式</attrformat>
+			<attrinfo>　クリックされたときに実行される TJS 式を指定します。省略すれば式は実行されません。storage や target が指定されていた場合、この式が実行されてからジャンプ先に移動します。</attrinfo>
+		</attr>
+		<attr id="attr_link_color">
+			<attrname>color</attrname>
+			<attrshortinfo>リンクの強調色</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式</attrformat>
+			<attrinfo>　リンクが選択されたときに出る半透明の矩形の色を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_link_hint">
+			<attrname>hint</attrname>
+			<attrshortinfo>ツールチップヒント</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ヒントとして表示させる文字列</attrformat>
+			<attrinfo>　リンクを選択し、マウスカーソルを静止させたときに表示されるツールチップヒントを指定します。<br />　省略すると表示は行われません。<br />　リンクの説明の補足に使えますが、hint 属性のみを指定し、target, storage, exp 属性は指定しないで空のリンクを作成し、小難しい単語の説明をすることなどもできます。</attrinfo>
+		</attr>
+		<attr id="attr_link_onenter">
+			<attrname>onenter</attrname>
+			<attrshortinfo>マウス進入時</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>TJS 式</attrformat>
+			<attrinfo>　リンク内にマウスカーソルが入ってきたときに実行される TJS 式を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_link_onleave">
+			<attrname>onleave</attrname>
+			<attrshortinfo>マウス退出時</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>TJS 式</attrformat>
+			<attrinfo>　リンク内からマウスカーソルが出ていった時に実行される TJS 式を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_link_countpage">
+			<attrname>countpage</attrname>
+			<attrshortinfo>このジャンプを「読んだ」と見なすか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true(デフォルト) または false</attrformat>
+			<attrinfo>　リンクを選択して他のラベルに移行するときに、このリンクのある場所のラベルを「読んだ」とみなすかどうかを指定します。<br />　[s] タグを実行する前にリンクが選択されてジャンプする際に、そのページが「読んだ」ことになっては困る場合に false を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_link_clickse">
+			<attrname>clickse</attrname>
+			<attrshortinfo>クリック時の効果音</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音ファイル名</attrformat>
+			<attrinfo>　クリックされたときに再生する効果音を指定します。指定しなければ効果音は再生されません。</attrinfo>
+		</attr>
+		<attr id="attr_link_clicksebuf">
+			<attrname>clicksebuf</attrname>
+			<attrshortinfo>クリック時の効果音のバッファ番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音バッファ番号</attrformat>
+			<attrinfo>　clickse で指定した効果音を鳴らす効果音バッファを指定します。省略すると 0 であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_link_enterse">
+			<attrname>enterse</attrname>
+			<attrshortinfo>マウス進入時の効果音</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音ファイル名</attrformat>
+			<attrinfo>　マウスが進入したときに再生する効果音を指定します。指定しなければ効果音は再生されません。</attrinfo>
+		</attr>
+		<attr id="attr_link_entersebuf">
+			<attrname>entersebuf</attrname>
+			<attrshortinfo>マウス進入時の効果音のバッファ番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音バッファ番号</attrformat>
+			<attrinfo>　enterse で指定した効果音を鳴らす効果音バッファを指定します。省略すると 0 であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_link_leavese">
+			<attrname>leavese</attrname>
+			<attrshortinfo>マウス退出時の効果音</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音ファイル名</attrformat>
+			<attrinfo>　マウスが退出したときに再生する効果音を指定します。指定しなければ効果音は再生されません。</attrinfo>
+		</attr>
+		<attr id="attr_link_leavesebuf">
+			<attrname>leavesebuf</attrname>
+			<attrshortinfo>マウス退出時の効果音のバッファ番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音バッファ番号</attrformat>
+			<attrinfo>　leavese で指定した効果音を鳴らす効果音バッファを指定します。省略すると 0 であると見なされます。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_load">
+		<tagname>load</tagname>
+		<tagshortinfo>栞の読み込み</tagshortinfo>
+		<tagremarks>　非フリーセーブモードにおいて、栞から読み込みます。メニューから「栞をたどる」を選んだときと同じ動作です。</tagremarks>
+		<attr id="attr_load_place">
+			<attrname>place</attrname>
+			<attrshortinfo>保存場所</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0または正の整数(0がデフォルト)</attrformat>
+			<attrinfo>　栞の番号を指定します。省略すると 0 が指定されたと見なされます。<br />　どのような数値を指定してもかまいませんが、999 〜 1999 は特別な意味を持つ栞です。</attrinfo>
+		</attr>
+		<attr id="attr_load_ask">
+			<attrname>ask</attrname>
+			<attrshortinfo>確認をするか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　true を指定すると、栞をたどるかどうかの確認をします。false を指定すると栞をたどるかどうかの確認はありません。この属性を省略すると false を指定したとみなされます。<br />　栞をたどる確認でユーザが「いいえ」を選んだ場合、実行はそのまま継続します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_loadplugin">
+		<tagname>loadplugin</tagname>
+		<tagshortinfo>プラグインの読み込み</tagshortinfo>
+		<tagremarks>　このタグで読み込むプラグインは、<br />・プロジェクトフォルダ直下<br />・吉里吉里実行可能ファイルのあるフォルダ以下の plugin フォルダ<br />・吉里吉里実行可能ファイルのあるフォルダ<br />のいずれかに置いておく必要があります。<br />　module 属性で指定するプラグインの拡張子は省略できません。</tagremarks>
+		<attr id="attr_loadplugin_module">
+			<attrname>module</attrname>
+			<attrshortinfo>プラグイン名</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>プラグインファイル名</attrformat>
+			<attrinfo>読み込みたいプラグインファイル名を指定します。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_locate">
+		<tagname>locate</tagname>
+		<tagshortinfo>文字表示位置の指定</tagshortinfo>
+		<tagremarks>　文字表示位置を指定します。<br />　<ref>position</ref> タグで指定した marginl と margint の属性の値が実際には加算されます。<br />　横書きの場合は y を、縦書きの場合は x を省略することにより同じ行内での文字表示位置の変更が可能となります。</tagremarks>
+		<attr id="attr_locate_x">
+			<attrname>x</attrname>
+			<attrshortinfo>横方向位置</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>横方向位置 (pixel単位)</attrformat>
+			<attrinfo>　文字を表示する x 座標位置を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_locate_y">
+			<attrname>y</attrname>
+			<attrshortinfo>縦方向位置</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>縦方向位置 (pixel単位)</attrformat>
+			<attrinfo>　文字を表示する y 座標位置を指定します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_locklink">
+		<tagname>locklink</tagname>
+		<tagshortinfo>リンクのロック</tagshortinfo>
+		<tagremarks>　すべてのメッセージレイヤのリンクをロックします。リンクがロックされると、メッセージレイヤ上のリンク ( ボタン、エディット、チェックボックスも含む ) はすべて選択や操作が不能になります。<br />　時間制限付きの選択肢などで、時間を経過したら選択肢を選択不能にする場合などに使用します。<br />　リンクのロックは、新しい別のリンクが作成されると自動的に解除されます。<br />　逆の動作をする <ref>unlocklink</ref> タグもあります。<br /></tagremarks>
+	</tag>
+	<tag id="tag_locksnapshot">
+		<tagname>locksnapshot</tagname>
+		<tagshortinfo>スナップショットのロック</tagshortinfo>
+		<tagremarks>　スナップショットをロックします。栞でサムネイルを保存する場合に画面のスナップショットを撮りますが、スナップショットをロックすると、次に<ref>unlocksnapshot</ref> タグでロックを解除するまで、スナップショットをロックした時点での画像をサムネイルとして保存するようになります。<br />　これを利用して、右クリックサブルーチンに入ったときにこのタグを使用すれば、右クリックサブルーチン内で栞を保存しても、保存されるサムネイルは右クリックサブルーチンに入ったときのスナップショットが使われるようになります ( ロックをしないと右クリックサブルーチンに入っている最中のスナップショットが保存されてしまう )。<br />　locksnapshot タグを使ったら、かならず unlocksnapshot タグも使用しなければなりません ( 右クリックサブルーチンに使ったならば、右クリックサブルーチンを抜けるときには必ず unlocksnapshot タグを実行するようにしてください )。<br /></tagremarks>
+	</tag>
+	<tag id="tag_macro">
+		<tagname>macro</tagname>
+		<tagshortinfo>マクロの記述</tagshortinfo>
+		<tagremarks>　マクロ記述を開始します。新しいタグを定義することが出来ます。<br />　このタグから、<ref>endmacro</ref> タグまでにある文章やタグは、name 属性で指定されたタグとして登録され、以後使用できるようになります。<br />　ただし、マクロ中に <ref>iscript</ref> タグを使用することはできません。<br />　マクロ中に書かれたタグには、特別に % を頭につけた属性の値を指定することができます。% 以降にはマクロに渡された属性名を指定します。すると、マクロに渡された属性の値をその属性の値とすることができます。このとき、| を使って属性の省略値を指定することもできます ( 下の例参照 )。属性名には小文字を用いてください。<br />　また、属性の代わりに * を書くと、マクロに渡されたすべての属性をそのタグに渡すことができます。</tagremarks>
+		<tagexample>[macro name=&quot;newtag&quot;][font color=0xff0000]新しいタグです[resetfont][endmacro]<br />[newtag]<br />[macro name=&quot;colortag&quot;][font color=%iro]iro 属性付きのタグ[resetfont][endmacro]<br />[colortag iro=0x332211]<br />; ↑ colotag に渡された iro 属性の値が font タグの color 属性に渡される<br />[macro name=&quot;transwait&quot;][trans *][wt][endmacro]<br />; ↑ この transwait に渡されたすべての属性が trans タグに渡される<br />[macro name=&quot;colortag&quot;][font color=%iro|0xff0000]iro 属性付きで省略値をしていしたタグ[resetfont][endmacro]<br />; ↑ % の属性の値では、 | のあとに続けて、その属性の省略値を指定することができます<br /></tagexample>
+		<attr id="attr_macro_name">
+			<attrname>name</attrname>
+			<attrshortinfo>タグ名</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>タグ名</attrformat>
+			<attrinfo>　タグ名を指定します。以後、この名前で新しいタグが定義され、マクロを使用できるようになります。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_mapaction">
+		<tagname>mapaction</tagname>
+		<tagshortinfo>クリッカブルマップ用領域アクション定義ファイルの指定</tagshortinfo>
+		<tagremarks>　指定したレイヤのクリッカブルマップの領域アクション定義に使用するファイルを指定します。<br />　このタグや <ref>image</ref> タグで領域アクション定義ファイルを読み込むと実際にクリッカブルマップが使用可能になります。<ref>mapdisable</ref> タグでクリッカブルマップを使用不可能にすることができます。<br />　詳しくは KAG System リファレンスをご覧ください。<br /></tagremarks>
+		<attr id="attr_mapaction_layer">
+			<attrname>layer</attrname>
+			<attrshortinfo>対象レイヤ</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>&quot;base&quot; または 0 以上の整数</attrformat>
+			<attrinfo>　対象とするレイヤを指定します。<br />&quot;base&quot; を指定すると 背景レイヤ、 0 以上の整数を指定すると、対応する前景レイヤを表します。</attrinfo>
+		</attr>
+		<attr id="attr_mapaction_page">
+			<attrname>page</attrname>
+			<attrshortinfo>ページ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;back&quot; または &quot;fore&quot;</attrformat>
+			<attrinfo>　表(fore)画面を対象とするか、裏(back)画面を対象とするかを指定します。省略すると表ページであると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_mapaction_storage">
+			<attrname>storage</attrname>
+			<attrshortinfo>領域アクション定義ファイル</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>領域アクション定義ファイル名</attrformat>
+			<attrinfo>　領域アクション定義ファイルを指定します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_mapdisable">
+		<tagname>mapdisable</tagname>
+		<tagshortinfo>クリッカブルマップの無効化</tagshortinfo>
+		<tagremarks>　指定したレイヤのクリッカブルマップを無効にします。　以降は <ref>image</ref> タグや <ref> mapaction </ref> タグを使って領域アクション定義ファイルを読み込まなければクリッカブルマップは使用できません。<br /></tagremarks>
+		<attr id="attr_mapdisable_layer">
+			<attrname>layer</attrname>
+			<attrshortinfo>対象レイヤ</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>&quot;base&quot; または 0 以上の整数</attrformat>
+			<attrinfo>　対象とするレイヤを指定します。<br />&quot;base&quot; を指定すると 背景レイヤ、 0 以上の整数を指定すると、対応する前景レイヤを表します。</attrinfo>
+		</attr>
+		<attr id="attr_mapdisable_page">
+			<attrname>page</attrname>
+			<attrshortinfo>ページ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;back&quot; または &quot;fore&quot;</attrformat>
+			<attrinfo>　表(fore)画面を対象とするか、裏(back)画面を対象とするかを指定します。省略すると表ページであると見なされます。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_mapimage">
+		<tagname>mapimage</tagname>
+		<tagshortinfo>クリッカブルマップ用領域画像の指定</tagshortinfo>
+		<tagremarks>　指定したレイヤのクリッカブルマップの領域画像に使用するファイルを指定します。<br />　<ref>image</ref> タグや <ref>mapaction</ref> タグで領域アクション定義ファイルを読み込まないとクリッカブルマップは使用できません。<br />　詳しくは KAG System リファレンスをご覧ください。<br /></tagremarks>
+		<attr id="attr_mapimage_layer">
+			<attrname>layer</attrname>
+			<attrshortinfo>対象レイヤ</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>&quot;base&quot; または 0 以上の整数</attrformat>
+			<attrinfo>　対象とするレイヤを指定します。<br />&quot;base&quot; を指定すると 背景レイヤ、 0 以上の整数を指定すると、対応する前景レイヤを表します。</attrinfo>
+		</attr>
+		<attr id="attr_mapimage_page">
+			<attrname>page</attrname>
+			<attrshortinfo>ページ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;back&quot; または &quot;fore&quot;</attrformat>
+			<attrinfo>　表(fore)画面を対象とするか、裏(back)画面を対象とするかを指定します。省略すると表ページであると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_mapimage_storage">
+			<attrname>storage</attrname>
+			<attrshortinfo>画像ファイル名</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>画像ファイル名</attrformat>
+			<attrinfo>　クリッカブルマップの領域画像として用いるファイルを指定します。　ファイルは 256 色で保存されている必要があります。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_mappfont">
+		<tagname>mappfont</tagname>
+		<tagshortinfo>レンダリング済みフォントの割り当て</tagshortinfo>
+		<tagremarks>　現在操作対象になっているメッセージレイヤの現在のフォントに、指定したレンダリング済みフォントを割り当てます。このタグ以降、吉里吉里でそのフォントを描画するときは常に指定したレンダリング済みフォントが使用されます。<br />　割り当てるフォントは実際に存在していなくてもかまいません。たとえば、&quot;ほげほげフォント&quot; というフォントが選択されている状態で mappfont を使えば、その &quot;ほげほげフォント&quot; に任意のレンダリング済みフォントを割り当てることができます。一つのフォント名には一つのレンダリング済みフォントしか割り当てることしかできません ( たとえば、一つのフォント名に対して複数のサイズの違うレンダリング済みフォントを割り当てるようなことはできません )。<br />　また、複数のレンダリング済みフォントをそれぞれ別のフォントに割り当てることができます。</tagremarks>
+		<attr id="attr_mappfont_storage">
+			<attrname>storage</attrname>
+			<attrshortinfo>ファイル名</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>ファイル名</attrformat>
+			<attrinfo>現在のフォントに割り当てたいレンダリング済みフォントファイルを指定します。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_move">
+		<tagname>move</tagname>
+		<tagshortinfo>レイヤの自動移動</tagshortinfo>
+		<tagremarks>　指定したレイヤに自動移動をさせます。<br />　レイヤは現在の位置・表示濃度からスタートして、path で指定された位置・表示濃度を元にして移動したり表示濃度を変化させます。現在の位置や表示濃度から移動がスタートするので、path 属性の最初の位置/濃度には、一番最初のレイヤの位置や表示濃度を指定する必要はありません。( つまり一番最初の位置や表示濃度は <ref>layopt</ref> タグなどで指定する必要があります )。<br />　複数のレイヤに対して move タグを非同期に実行することができます。<br />　このタグはレイヤの自動移動の終了を待ちません。待つには <ref>wm</ref> タグを指定してください。<br />　前景レイヤに画面よりも大きな画面を読み込み、このタグを使って移動させればスクロールの効果を得ることができます。斜めスクロールも可能です。<br />　自動移動中は、メッセージレイヤへの文字描画ができなかったり、文字描画が遅くなったりします。<br />　マウスのクリック等で自動移動は中断されます。中断されないようにするには <ref>clickskip</ref> タグでクリックスキップを禁止してください。</tagremarks>
+		<tagexample>[image storage=s1 layer=0 page=fore visible=true left=0 top=480 opacity=0]<br />[image storage=s2 layer=1 page=fore visible=true left=320 top=240 opacity=0]<br />[move time=4000 path=&quot;(0,240,255) (0,0,255) (0,-240,255) (0,-480,0)&quot; layer=0]<br />[move time=4000 path=&quot;(320,240,0) (320,240,511) (320,240,0) (320, 240,0)&quot; layer=1]<br />[wm][wm]</tagexample>
+		<attr id="attr_move_layer">
+			<attrname>layer</attrname>
+			<attrshortinfo>対象レイヤ</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>0 以上の整数 または message0 または message1 または message</attrformat>
+			<attrinfo>　対象となるレイヤを指定します。<br />　0 以上の整数を指定すると前景レイヤになります。<br />　message0 または message1 を指定するとメッセージレイヤになります。単に message とのみ指定した場合は、<ref>current</ref> タグで指定した現在の操作対象のメッセージレイヤが対象になります。<br />　背景レイヤは指定しないでください。<br /></attrinfo>
+		</attr>
+		<attr id="attr_move_page">
+			<attrname>page</attrname>
+			<attrshortinfo>ページ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;back&quot; または &quot;fore&quot;</attrformat>
+			<attrinfo>　layer 属性で指定したレイヤが、表(fore)画面であるか、裏(back)画面であるかを指定します。省略すると表ページであると見なされます。<br />　ただし、layer=message とのみ指定した場合でこの属性を省略した場合は現在操作対象のページのメッセージレイヤが選択されます。</attrinfo>
+		</attr>
+		<attr id="attr_move_spline">
+			<attrname>spline</attrname>
+			<attrshortinfo>スプライン補間</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　true を指定すると、path 属性で指定した位置をＢスプラインで曲線補間した線上をレイヤが移動するようになります。<br />　false を指定すると、path 属性で指定した位置を直線補間した線上をレイヤが移動します。<br />　true を指定した場合は path には最低 2 点を指定してください。</attrinfo>
+		</attr>
+		<attr id="attr_move_time">
+			<attrname>time</attrname>
+			<attrshortinfo>1点を通過する時間</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>時間(ms単位)</attrformat>
+			<attrinfo>　レイヤが path を指定した点から点を移動するのに必要な時間を指定します。<br />　そのため、移動には、通過する点間の区間の数×この属性の値の時間がかかります。<br />　ただし、accel 属性に 0 以外を指定した場合は 一点を通過する時間は変化します ( 移動全体に要する時間は 通過する区間の数×この属性の値です )。</attrinfo>
+		</attr>
+		<attr id="attr_move_delay">
+			<attrname>delay</attrname>
+			<attrshortinfo>動作を開始するまでの時間</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>時間(ms単位)</attrformat>
+			<attrinfo>　レイヤの自動移動が開始されるまでの時間を ms で指定します。<br />　省略すると 0 であるとみなされます。</attrinfo>
+		</attr>
+		<attr id="attr_move_path">
+			<attrname>path</attrname>
+			<attrshortinfo>移動位置</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>&quot;(x1,y1,opacity1) (x2,y2,opacity2) ...&quot;</attrformat>
+			<attrinfo>　移動位置を指定します。<br />　移動位置は、x(レイヤ左端位置), y(レイヤ上端位置), opacity(レイヤ濃度) を３つづつ、カンマや空白、( ) で区切って指定します。<br />　これらの間を、スプライン補間または直線補間にてレイヤが移動します。<br />　opacity にはレイヤの表示濃度を指定します。レイヤの濃度も点から点を移動する間に連続的に変化します。レイヤの濃度を連続的ではなく、突発的 ? に変化させたい場合は濃度に 256 を足した数値を指定してください。<br />　レイヤを移動させずに表示濃度変化のみを行う場合は、レイヤ位置にはすべて同じ位置を指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_move_accel">
+			<attrname>accel</attrname>
+			<attrshortinfo>加速度的な動きをするかどうか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>-1 未満の数または 0(デフォルト) または 1 より大きい数</attrformat>
+			<attrinfo>　加速度的な動きを行わせるかどうかを指定します。<br />　0 を指定すると、最初から最後まで一定の割合で移動処理が進行します ( 各通過点を等間隔の時間で通過します )。省略すると 0 が指定されたと見なされます。<br />　-1 未満の数を指定すると、最初は早く、徐々に遅くなります。<br />　1 より大きい数を指定すると、最初は遅く、徐々に早くなります。<br />　実数を指定することもできます。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_nextskip">
+		<tagname>nextskip</tagname>
+		<tagshortinfo>「次の選択肢まですすむ」の設定</tagshortinfo>
+		<tagremarks>　ユーザーが「次の選択肢まで進む」の機能を使用できるようにするか否かを指定できます。<br />　デモシーンなどでは無効にしていたほうがいい場合があります。<br /></tagremarks>
+		<attr id="attr_nextskip_enabled">
+			<attrname>enabled</attrname>
+			<attrshortinfo>有効・無効の設定</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>true または false</attrformat>
+			<attrinfo>　「次の選択肢まで進む」の機能を有効にする場合は true、無効にする場合は false を指定します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_nowait">
+		<tagname>nowait</tagname>
+		<tagshortinfo>文字表示ノーウェイト</tagshortinfo>
+		<tagremarks>　文字の表示速度をノーウェイトに設定します。<br />　このタグは、ノーウェイトに設定する前に、直前の文字表示速度を記憶します。この記憶した文字表示速度に戻すには <ref>endnowait</ref> タグを使うことができます。<br />　このタグと endnowait タグの間には、保存可能なラベルを記述しないでください。</tagremarks>
+	</tag>
+	<tag id="tag_openvideo">
+		<tagname>openvideo</tagname>
+		<tagshortinfo>ビデオ/SWFの再生準備</tagshortinfo>
+		<tagremarks>　ビデオまたはSWF(Shockwave Flash)の再生の準備をします。<br />　一般的にビデオの再生準備には時間がかかるので、再生のタイミングをほかのものと同期させたい場合など、このタグを使って再生準備のみを先に行わせることができます。<br />　再生準備をしたビデオやSWFを再生するには <ref>playvideo</ref> タグを使用します。<br />　このタグを使用しなくても playvideo タグで再生するファイル名を指定して再生をさせることはできます。<br /></tagremarks>
+		<attr id="attr_openvideo_slot">
+			<attrname>slot</attrname>
+			<attrshortinfo>ムービーオブジェクト番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ムービーオブジェクト番号(0〜)</attrformat>
+			<attrinfo>この操作を行うムービーオブジェクト番号を指定します。<br />省略すると 0 が指定されたと見なされます。<br />複数のムービーを同時に操作する場合は、Config.tjs の numMovies の値も、必要な個数に変更してください。<br /></attrinfo>
+		</attr>
+		<attr id="attr_openvideo_storage">
+			<attrname>storage</attrname>
+			<attrshortinfo>ファイル名</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>ファイル名</attrformat>
+			<attrinfo>　再生準備するファイル名を指定します。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_p">
+		<tagname>p</tagname>
+		<tagshortinfo>改ページクリック待ち</tagshortinfo>
+		<tagremarks>　改ページのクリック待ちを行います。<br />　行末に [p] と書いた場合は、そのあとに \ があってもなくても改行はしません( Config.tjs で global.ignoreCR を false に設定した場合 )。<br />　<ref>current</ref> タグで裏ページのメッセージレイヤを指定している場合はこの記号は表示されません。表示したい場合は表ページのメッセージレイヤを指定してください。</tagremarks>
+	</tag>
+	<tag id="tag_pausebgm">
+		<tagname>pausebgm</tagname>
+		<tagshortinfo>BGM 演奏の一時停止</tagshortinfo>
+		<tagremarks>　BGM 演奏を一時停止します。Config.tjs で BGM 再生メディアに &quot;Wave&quot; を指定した場合のみに有効です。<br />　BGM の一時停止状態は栞に保存されますが、一時停止していた場合の BGM の再生位置の情報は保存されないので注意してください。<br />　一時停止した BGM を再開するには <ref>resumebgm</ref> タグを使用してください。</tagremarks>
+	</tag>
+	<tag id="tag_pausevideo">
+		<tagname>pausevideo</tagname>
+		<tagshortinfo>ビデオの一時停止</tagshortinfo>
+		<tagremarks>　ビデオの再生を一時停止します。</tagremarks>
+		<attr id="attr_pausevideo_slot">
+			<attrname>slot</attrname>
+			<attrshortinfo>ムービーオブジェクト番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ムービーオブジェクト番号(0〜)</attrformat>
+			<attrinfo>この操作を行うムービーオブジェクト番号を指定します。<br />省略すると 0 が指定されたと見なされます。<br />複数のムービーを同時に操作する場合は、Config.tjs の numMovies の値も、必要な個数に変更してください。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_pimage">
+		<tagname>pimage</tagname>
+		<tagshortinfo>画像の部分追加読み込み</tagshortinfo>
+		<tagremarks>　指定したレイヤに画像を追加して読み込みます。<br />　指定したレイヤの指定した部分に、別の画像ファイルの一部分を重ね合わせたり、コピーしたりすることができます。<br />　いくらでも画像を追加して読み込むことができます。ただし、いくらでも、といっても、画像を追加して読み込むとその「画像を追加して読み込んだ」という情報がどんどんと蓄積されていってしまうので注意してください。<br />　新しく <ref>image</ref> タグでレイヤに画像を読み込んだり、<ref>freeimage</ref> タグで画像を解放すると、追加して読み込んだ画像やその情報は消えます。<br />　たとえば、一定時間間隔でレイヤに画像を追加して読み込んでアニメーション、という用途にはこのタグではなくてアニメーションの機能を使ったほうが良いでしょう。<br />　このタグは、image タグで画像を読み込んだが、その画像の一部分だけを変えたい、というときに、該当する image タグの直後に記述する、という用途に使います。</tagremarks>
+		<attr id="attr_pimage_storage">
+			<attrname>storage</attrname>
+			<attrshortinfo>画像ファイル名</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>画像ファイル名</attrformat>
+			<attrinfo>　追加して読み込む画像を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_pimage_layer">
+			<attrname>layer</attrname>
+			<attrshortinfo>対象レイヤ</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>&quot;base&quot; または 0 以上の整数</attrformat>
+			<attrinfo>　画像を追加して読み込むレイヤを指定します。<br />&quot;base&quot; を指定すると 背景レイヤ、 0 以上の整数を指定すると、対応する前景レイヤに画像を読み込みます。</attrinfo>
+		</attr>
+		<attr id="attr_pimage_page">
+			<attrname>page</attrname>
+			<attrshortinfo>ページ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;back&quot; または &quot;fore&quot;</attrformat>
+			<attrinfo>　表(fore)画面を対象とするか、裏(back)画面を対象とするかを指定します。省略すると表ページであると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_pimage_key">
+			<attrname>key</attrname>
+			<attrshortinfo>カラーキー</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式 または パレットインデックス番号 または &quot;adapt&quot;</attrformat>
+			<attrinfo>　storage で指定した画像の、どの色を抜き色とするかを指定します。省略すると抜き色は無効になります。 　key=0xRRGGBB という形式で 16 進数で抜き色を指定すると、RR(赤) GG(緑) BB(青)で塗られた部分を抜き色として透明にします。たとえば、key=0xff00ff では (r,g,b)=(255,0,255) つまり真マゼンダの部分を抜き色として透明にするという指定になります。<br />　ただ単に数値を指定すれば、そのパレットインデックスの数値が抜き色となります。16色/256色の画像に対して有効です。<br />　key=adapt と指定すれば、自動的に抜き色が決定されます。使用される抜き色は、画像の一番上のラインにて、一番多く使われている色です。16色/256色の画像に対して有効です。<br />　マスク画像を使用する場合は、この属性は指定する必要はありません。</attrinfo>
+		</attr>
+		<attr id="attr_pimage_dx">
+			<attrname>dx</attrname>
+			<attrshortinfo>画像読み込み先 x 座標</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>ピクセル単位</attrformat>
+			<attrinfo>重ね合わせ、あるいはコピーする先の左端 x 座標を(対象のレイヤ内の座標で)指定します。</attrinfo>
+		</attr>
+		<attr id="attr_pimage_dy">
+			<attrname>dy</attrname>
+			<attrshortinfo>画像読み込み先 y 座標</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>ピクセル単位</attrformat>
+			<attrinfo>重ね合わせ、あるいはコピーする先の上端 y 座標を(対象のレイヤ内の座標で)指定します。</attrinfo>
+		</attr>
+		<attr id="attr_pimage_sx">
+			<attrname>sx</attrname>
+			<attrshortinfo>画像読み込み元 x 座標</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ピクセル単位</attrformat>
+			<attrinfo>重ね合わせ、あるいはコピーする元の左端 x 座標を(追加して読み込む画像内の座標で)指定します。<br />　省略すると 0 であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_pimage_sy">
+			<attrname>sy</attrname>
+			<attrshortinfo>画像読み込み元 y 座標</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ピクセル単位</attrformat>
+			<attrinfo>重ね合わせ、あるいはコピーする元の上端 y 座標を(追加して読み込む画像内の座標で)指定します。<br />　省略すると 0 であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_pimage_sw">
+			<attrname>sw</attrname>
+			<attrshortinfo>画像読み込み元幅</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ピクセル単位</attrformat>
+			<attrinfo>　重ね合わせ、あるいはコピーする幅を指定します。<br />　省略すると、追加して読み込む画像の幅すべてであると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_pimage_sh">
+			<attrname>sh</attrname>
+			<attrshortinfo>画像読み込み元高さ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ピクセル単位</attrformat>
+			<attrinfo>　重ね合わせ、あるいはコピーする高さを指定します。<br />　省略すると、追加して読み込む画像の高さすべてであると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_pimage_mode">
+			<attrname>mode</attrname>
+			<attrshortinfo>重ね合わせモード</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;copy&quot;または &quot;opaque&quot; または &quot;pile&quot;  (デフォルト) または &quot;alpha&quot; または &quot;add&quot; または &quot;sub&quot; または &quot;mul&quot; または &quot;dodge&quot; または &quot;darken&quot; または &quot;lighten&quot; または &quot;screen&quot; または &quot;psadd&quot; または &quot;pssub&quot; または &quot;psmul&quot; または &quot;psscreen&quot; または &quot;psoverlay&quot; または &quot;pshlight&quot; または &quot;psslight&quot; または &quot;psdodge&quot; または &quot;psdodge5&quot; または &quot;psburn&quot; または &quot;pslighten&quot; または &quot;psdarken&quot; または &quot;psdiff&quot; または &quot;psdiff5&quot; または &quot;psexcl&quot;</attrformat>
+			<attrinfo>　sx sy sw sh の各属性で指定した矩形領域を 重ね合わせるか、あるいは単純にコピーするか、あるいは演算を行うかを指定します。<br />　&quot;copy&quot; または &quot;opaque&quot; を指定すると矩形領域はコピーされます。&quot;copy&quot; でも &quot;opaque&quot; でも同じ意味です。<br />　&quot;pile&quot; または &quot;alpha&quot; を指定すると、アルファ合成による重ね合わせが行われます。&quot;pile&quot; でも &quot;alpha&quot; でも同じ意味です。<br />　&quot;addalpha&quot; を指定すると、加算アルファ合成による重ね合わせが行われます。<br />　そのほかのモードについては <ref>image</ref> タグの mode 属性を参照してください。<br />　省略すると &quot;pile&quot; が指定されたと見なされます。例外的に TLG5/6 画像は画像中にどの重ね合わせモードで重ね合わされるかの情報を持っています (この情報は <ref>image</ref> タグで読み込まれる物と同一です)。この場合は、この属性が省略された場合は、その画像が情報として持っている重ね合わせモードに従います。<br /></attrinfo>
+		</attr>
+		<attr id="attr_pimage_opacity">
+			<attrname>opacity</attrname>
+			<attrshortinfo>不透明度</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>不透明度 ( 0 (全くの透明) 〜 255 (全くの不透明 ) )</attrformat>
+			<attrinfo>　mode 属性で &quot;pile&quot; を指定した場合の重ね合わせの不透明度、あるいは &quot;add&quot; &quot;sub&quot; &quot;mul&quot; &quot;dodge&quot; &quot;darken&quot;  &quot;lighten&quot; &quot;screen&quot; のいずれかを指定した場合の演算の強度を指定します。<br />　省略すると 255 であると見なされます。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_playbgm">
+		<tagname>playbgm</tagname>
+		<tagshortinfo>BGM の演奏</tagshortinfo>
+		<tagremarks>　BGM を演奏します。</tagremarks>
+		<attr id="attr_playbgm_storage">
+			<attrname>storage</attrname>
+			<attrshortinfo>BGM ファイル名</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>BGM ファイル名</attrformat>
+			<attrinfo>　演奏する BGM ファイル名を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_playbgm_loop">
+			<attrname>loop</attrname>
+			<attrshortinfo>ループするか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true(デフォルト) または false</attrformat>
+			<attrinfo>　BGM をループするかを指定します。<br />　true を指定するとループします。false を指定するとループしません。<br />　省略すると true であると見なされます。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_playse">
+		<tagname>playse</tagname>
+		<tagshortinfo>効果音の再生</tagshortinfo>
+		<tagremarks>　効果音を再生します。<br />　このタグは効果音の再生の終了を待ちません。終了を待つには <ref>ws</ref> タグを使ってください。</tagremarks>
+		<attr id="attr_playse_buf">
+			<attrname>buf</attrname>
+			<attrshortinfo>効果音バッファ番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音バッファ番号( 0(デフォルト) 〜 )</attrformat>
+			<attrinfo>　効果音を再生するバッファを指定します。一つのバッファでは同時には一つの効果音を鳴らすことができます。<br />　省略すると 0 であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_playse_storage">
+			<attrname>storage</attrname>
+			<attrshortinfo>効果音ファイル名</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>効果音ファイル名</attrformat>
+			<attrinfo>　演奏する効果音ファイル名を指定します。<br />　拡張子は省略可能ですが、省略した場合に自動的に探し出されるのは.wav または .ogg または .mp3 の拡張子を持つファイルだけです。( ただし ogg と mp3 の 再生には SDK 付属のプラグインが必要 )<br />そのほかのプラグインで使用可能になるそのほかのファイル形式を指定する場合は拡張子も指定してください。</attrinfo>
+		</attr>
+		<attr id="attr_playse_loop">
+			<attrname>loop</attrname>
+			<attrshortinfo>繰り返し再生を行うか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　効果音を繰り返し再生するかどうかを指定します。<br />　true を指定すると繰り返し再生されます。false を指定すると一回限りの再生となります。省略するとfalse であると見なされます。<br />　true を指定した場合は <ref>ws</ref> タグで効果音再生の終了を待つことはできません。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_playvideo">
+		<tagname>playvideo</tagname>
+		<tagshortinfo>ビデオ/SWFの再生</tagshortinfo>
+		<tagremarks>　ビデオまたはSWF(Shockwave Flash)を再生します。<ref>video</ref> タグで指定した表示領域にて再生します。ビデオ表示領域はデフォルトでは非表示なので、video タグで表示状態にしないと表示されません。<br />　このタグはビデオの再生の終了を待ちません。待つには <ref>wv</ref> を使用してください。<br /></tagremarks>
+		<attr id="attr_playvideo_slot">
+			<attrname>slot</attrname>
+			<attrshortinfo>ムービーオブジェクト番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ムービーオブジェクト番号(0〜)</attrformat>
+			<attrinfo>この操作を行うムービーオブジェクト番号を指定します。<br />省略すると 0 が指定されたと見なされます。<br />複数のムービーを同時に操作する場合は、Config.tjs の numMovies の値も、必要な個数に変更してください。<br /></attrinfo>
+		</attr>
+		<attr id="attr_playvideo_storage">
+			<attrname>storage</attrname>
+			<attrshortinfo>ファイル名</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ファイル名</attrformat>
+			<attrinfo>　再生するファイル名を指定します。<br />　すでに <ref>openvideo</ref> タグで再生の準備をしていた場合はこの属性を指定する必要はありません。<br />　逆に、openvideo タグを使用しない場合はここでファイル名を指定する必要があります。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_position">
+		<tagname>position</tagname>
+		<tagshortinfo>メッセージレイヤの属性</tagshortinfo>
+		<tagremarks>　メッセージレイヤに対する様々な属性を指定します。<br />　いずれの属性も、省略すれば設定は変更されません。<br />　marginl, margint, marginr, marginb のそれぞれの属性は、frame で指定したフレーム画像での表示領域を指定するのにも使います。　メッセージレイヤに対して個別に設定できます ( 裏ページ・面画面を別の設定にすることもできます )。</tagremarks>
+		<attr id="attr_position_layer">
+			<attrname>layer</attrname>
+			<attrshortinfo>対象レイヤ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>message0 または message1 または message</attrformat>
+			<attrinfo>　対象とするメッセージレイヤを指定します。<br />　省略すると <ref>current</ref> タグで指定された現在のメッセージレイヤが選択されます。<br />　この属性も page 属性も省略された場合は、current タグで指定された現在のページ・現在のメッセージレイヤが選択されます。</attrinfo>
+		</attr>
+		<attr id="attr_position_page">
+			<attrname>page</attrname>
+			<attrshortinfo>対象ページ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;fore&quot; または &quot;back&quot;</attrformat>
+			<attrinfo>　対象とするページを指定します。<br />　この属性を省略すると <ref>current</ref> タグで指定された現在のページが選択されます。</attrinfo>
+		</attr>
+		<attr id="attr_position_left">
+			<attrname>left</attrname>
+			<attrshortinfo>左端位置</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>左端位置 ( pixel 単位 )</attrformat>
+			<attrinfo>　メッセージレイヤの左端位置を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_position_top">
+			<attrname>top</attrname>
+			<attrshortinfo>上端位置</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>上端位置 ( pixel 単位 )</attrformat>
+			<attrinfo>　メッセージレイヤの上端位置を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_position_width">
+			<attrname>width</attrname>
+			<attrshortinfo>幅</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>幅 ( pixel 単位 )</attrformat>
+			<attrinfo>　メッセージレイヤの幅を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_position_height">
+			<attrname>height</attrname>
+			<attrshortinfo>高さ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>高さ ( pixel 単位 )</attrformat>
+			<attrinfo>　メッセージレイヤの高さを指定します。</attrinfo>
+		</attr>
+		<attr id="attr_position_frame">
+			<attrname>frame</attrname>
+			<attrshortinfo>フレーム画像</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>フレーム画像のファイル名</attrformat>
+			<attrinfo>　メッセージレイヤのフレーム画像として表示させる画像を指定します。使用しない場合は &quot;&quot; を指定してください。&quot;&quot; を指定すると、メッセージレイヤが color および opacity 属性で指定した色、濃度で矩形で表示されます。　ここで指定したファイル名 (拡張子を除く) 部分に _m を追加したファイルが、もしあれば、マスク画像として読み込まれます。マスク画像は必ず 256 色グレースケールで保存してください。</attrinfo>
+		</attr>
+		<attr id="attr_position_framekey">
+			<attrname>framekey</attrname>
+			<attrshortinfo>フレーム画像のカラーキー</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式 または パレットインデックス番号 または &quot;adapt&quot;</attrformat>
+			<attrinfo>　frame 属性で指定したフレーム画像の、どの色を抜き色とするかを指定します。省略すると抜き色は無効になります。 　key=0xRRGGBB という形式で 16 進数で抜き色を指定すると、RR(赤) GG(緑) BB(青)で塗られた部分を抜き色として透明にします。たとえば、key=0xff00ff では (r,g,b)=(255,0,255) つまり真マゼンダの部分を抜き色として透明にするという指定になります。<br />　ただ単に数値を指定すれば、そのパレットインデックスの数値が抜き色となります。16色/256色の画像に対して有効です。<br />　key=adapt と指定すれば、自動的に抜き色が決定されます。使用される抜き色は、画像の一番上のラインにて、一番多く使われている色です。16色/256色の画像に対して有効です。<br />　マスク画像を使用する場合は、この属性を指定する必要はありません。</attrinfo>
+		</attr>
+		<attr id="attr_position_color">
+			<attrname>color</attrname>
+			<attrshortinfo>レイヤの色</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式</attrformat>
+			<attrinfo>　メッセージレイヤの表示色を 0xRRGGBB 形式で指定します。 frame に &quot;&quot; を指定したときに有効です。</attrinfo>
+		</attr>
+		<attr id="attr_position_opacity">
+			<attrname>opacity</attrname>
+			<attrshortinfo>レイヤの不透明度</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>不透明度 ( 0 〜 255 )</attrformat>
+			<attrinfo>　メッセージレイヤの不透明度を 0 〜 255 の数値で指定します(文字の不透明度や、レイヤ自体の不透明度ではありません)。0 で完全に透明です。frame に &quot;&quot; を指定したときに有効です。</attrinfo>
+		</attr>
+		<attr id="attr_position_marginl">
+			<attrname>marginl</attrname>
+			<attrshortinfo>左余白</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>左余白 ( pixel 単位 )</attrformat>
+			<attrinfo>メッセージレイヤの左余白を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_position_margint">
+			<attrname>margint</attrname>
+			<attrshortinfo>上余白</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>上余白 ( pixel 単位 )</attrformat>
+			<attrinfo>メッセージレイヤの上余白を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_position_marginr">
+			<attrname>marginr</attrname>
+			<attrshortinfo>右余白</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>右余白 ( pixel 単位 )</attrformat>
+			<attrinfo>メッセージレイヤの右余白を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_position_marginb">
+			<attrname>marginb</attrname>
+			<attrshortinfo>下余白</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>下余白 ( pixel 単位 )</attrformat>
+			<attrinfo>メッセージレイヤの下余白を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_position_vertical">
+			<attrname>vertical</attrname>
+			<attrshortinfo>縦書きモード</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;true&quot; または &quot;false&quot;</attrformat>
+			<attrinfo>　メッセージレイヤを縦書きにモードにするには &quot;true&quot; を指定します。横書きにするには &quot;false&quot; を指定してください。</attrinfo>
+		</attr>
+		<attr id="attr_position_draggable">
+			<attrname>draggable</attrname>
+			<attrshortinfo>マウスでドラッグ可能か</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;true&quot; または &quot;false&quot;</attrformat>
+			<attrinfo>　true に設定すると、marginl, margint, marginr, marginb で指定したマージンの部分でかつ、フレーム画像の不透明度が 64 以上の箇所を、マウスでドラッグすることによりメッセージレイヤをユーザが移動できるようになります。<br />　false を指定するとこの動作は行われません。</attrinfo>
+		</attr>
+		<attr id="attr_position_visible">
+			<attrname>visible</attrname>
+			<attrshortinfo>可視か</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;true&quot; または &quot;false&quot;</attrformat>
+			<attrinfo>　true に設定すると、メッセージレイヤが可視(表示状態)になります。<br />　false に設定すると、メッセージレイヤは不可視(非表示状態)になります。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_preparevideo">
+		<tagname>preparevideo</tagname>
+		<tagshortinfo>ビデオの再生準備</tagshortinfo>
+		<tagremarks>ビデオの再生準備を行います。<br />レイヤー描画モード時に未描画画像が表示されてしまうのを防ぐためにこの機能を使用してください。<br />このタグの直後にかならず[wp]タグを置いて準備完了を待ってください。<br />このタグはレイヤー描画モード時のみ有効です。<br /></tagremarks>
+		<attr id="attr_preparevideo_slot">
+			<attrname>slot</attrname>
+			<attrshortinfo>ムービーオブジェクト番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ムービーオブジェクト番号(0〜)</attrformat>
+			<attrinfo>この操作を行うムービーオブジェクト番号を指定します。<br />省略すると 0 が指定されたと見なされます。<br />複数のムービーを同時に操作する場合は、Config.tjs の numMovies の値も、必要な個数に変更してください。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_ptext">
+		<tagname>ptext</tagname>
+		<tagshortinfo>レイヤへの文字描画</tagshortinfo>
+		<tagremarks>　指定したレイヤに文字を描画します。<br />　メッセージレイヤに表示するのと異なり、このタグで描画した内容は栞に記録されます (栞を読み込んでも再現されます)。<br />　文字はレイヤに画像を読み込むと消去されます。<br />　なにかの数値ステータスなどを画面上に表示し続けたい場合に便利です。<br /></tagremarks>
+		<attr id="attr_ptext_layer">
+			<attrname>layer</attrname>
+			<attrshortinfo>対象レイヤ</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>&quot;base&quot; または 0 以上の整数</attrformat>
+			<attrinfo>　文字を描画するレイヤを指定します。<br />&quot;base&quot; を指定すると 背景レイヤ、 0 以上の整数を指定すると、対応する前景レイヤに文字を描画します。</attrinfo>
+		</attr>
+		<attr id="attr_ptext_page">
+			<attrname>page</attrname>
+			<attrshortinfo>ページ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;back&quot; または &quot;fore&quot;</attrformat>
+			<attrinfo>　表(fore)画面を対象とするか、裏(back)画面を対象とするかを指定します。省略すると表ページであると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_ptext_x">
+			<attrname>x</attrname>
+			<attrshortinfo>x座標値</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>pixel単位</attrformat>
+			<attrinfo>　文字を描画する横位置を pixel 単位で指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_ptext_y">
+			<attrname>y</attrname>
+			<attrshortinfo>y座標値</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>pixel単位</attrformat>
+			<attrinfo>　文字を描画する縦位置を pixel 単位で指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_ptext_text">
+			<attrname>text</attrname>
+			<attrshortinfo>描画する文字</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>文字列</attrformat>
+			<attrinfo>　描画する文字列を指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_ptext_vertical">
+			<attrname>vertical</attrname>
+			<attrshortinfo>縦書きかどうか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>false(デフォルト) または true</attrformat>
+			<attrinfo>　縦書きかどうかを指定します。true を指定すると縦書きになります。<br /></attrinfo>
+		</attr>
+		<attr id="attr_ptext_angle">
+			<attrname>angle</attrname>
+			<attrshortinfo>文字描画角度</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>角度の10倍</attrformat>
+			<attrinfo>　文字描画の角度を指定します。角度の 10 倍の値 ( 0 〜 3600 ) で指定します。<br />　省略すると、横書きの場合は 0、縦書きの場合は 2700 が指定されたと見なされます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_ptext_size">
+			<attrname>size</attrname>
+			<attrshortinfo>文字サイズ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>文字サイズ(pixel単位)</attrformat>
+			<attrinfo>　文字サイズを pixel 単位で指定します。<br />　この属性を省略すると 12 が選択されます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_ptext_face">
+			<attrname>face</attrname>
+			<attrshortinfo>フォント名</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>フォント名</attrformat>
+			<attrinfo>　フォント名を指定します。<br />　フォント名には曖昧な指定はできません。スペース、半角／全角も正確に指定してください。<br />　複数のフォント名をカンマで区切って指定できます。この場合は、最初の方に書いたフォントが存在すれば、それが優先されて選択されます。<br />　例 : face=&quot;HG行書体,ＭＳ Ｐゴシック&quot;<br />　縦書き用フォントは自動的に設定されますので、フォント名の先頭に @ マークをつける必要はありません。<br />　この属性を省略すると ＭＳ Ｐゴシックが選択されます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_ptext_color">
+			<attrname>color</attrname>
+			<attrshortinfo>文字色</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式</attrformat>
+			<attrinfo>　文字色を 0xRRGGBB 形式で指定します。<br />　省略すると 0x000000 であると見なされます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_ptext_italic">
+			<attrname>italic</attrname>
+			<attrshortinfo>斜体にするか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　文字を斜体にするかどうかを指定します。true を指定すると斜体になります。<br />　この属性を省略すると false であると見なされます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_ptext_shadow">
+			<attrname>shadow</attrname>
+			<attrshortinfo>影を表示するか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true(デフォルト) または false</attrformat>
+			<attrinfo>　文字に影をつけるかを指定します。true を指定すると影がつきます。<br />　edge と shadow 両方に true を指定することはできません。<br /></attrinfo>
+		</attr>
+		<attr id="attr_ptext_edge">
+			<attrname>edge</attrname>
+			<attrshortinfo>袋文字にするか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　文字を袋文字 ( 縁取り文字 ) にするかを指定します。true を指定すると袋文字になります。<br /></attrinfo>
+		</attr>
+		<attr id="attr_ptext_edgecolor">
+			<attrname>edgecolor</attrname>
+			<attrshortinfo>袋文字の袋の色</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式</attrformat>
+			<attrinfo>　文字の袋の色を 0xRRGGBB 形式で指定します。<br />　省略すると 0x000000 が指定されたと見なされます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_ptext_shadowcolor">
+			<attrname>shadowcolor</attrname>
+			<attrshortinfo>影の色</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0xRRGGBB 形式</attrformat>
+			<attrinfo>　影の色を 0xRRGGBB 形式で指定します。<br />　省略すると 0x000000 が指定されたと見なされます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_ptext_bold">
+			<attrname>bold</attrname>
+			<attrshortinfo>太文字にするか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　文字を太文字にするかを指定します。 true を指定すると太文字になります。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_quake">
+		<tagname>quake</tagname>
+		<tagshortinfo>画面を揺らす</tagshortinfo>
+		<tagremarks>　画面を揺らします。<br />　このタグは揺れの終了を待ちません。揺れの終了を待つには <ref>wq</ref> タグを使用してください。<br />　vmax 属性を 0 に設定すると横揺れになります。hmax 属性を 0 に設定すると縦揺れになります。</tagremarks>
+		<attr id="attr_quake_time">
+			<attrname>time</attrname>
+			<attrshortinfo>揺らしている期間</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>文字数または ms(ミリ秒)</attrformat>
+			<attrinfo>　ここで指定した文字数を表示するのと同じだけの時間、画面を揺らします。<br />　timemode 属性で ms を指定した場合はミリ秒単位で、delay を指定した場合は<ref>delay</ref> タグで指定した文字表速度×このタグの time 属性で指定した時間分揺れが続きます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_quake_timemode">
+			<attrname>timemode</attrname>
+			<attrshortinfo>time属性の単位</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;ms&quot; または &quot;delay&quot;</attrformat>
+			<attrinfo>　time 属性の単位を指定します。<br />　ここの設定のデフォルトは Config.tjs の defaultQuakeTimeInChUnit に　従います。</attrinfo>
+		</attr>
+		<attr id="attr_quake_hmax">
+			<attrname>hmax</attrname>
+			<attrshortinfo>横揺れ最大振幅</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>pixel 単位</attrformat>
+			<attrinfo>　揺れの横方向への最大振幅を指定します。省略すると 10 が指定されたと見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_quake_vmax">
+			<attrname>vmax</attrname>
+			<attrshortinfo>縦揺れ最大振幅</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>pixel 単位</attrformat>
+			<attrinfo>　揺れの縦方向への最大振幅を指定します。省略すると 10 が指定されたと見なされます。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_r">
+		<tagname>r</tagname>
+		<tagshortinfo>改行する</tagshortinfo>
+		<tagremarks>　改行します。<br /></tagremarks>
+		<attr id="attr_r_eol">
+			<attrname>eol</attrname>
+			<attrshortinfo>行末の改行かどうか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true</attrformat>
+			<attrinfo>Config.tjs の ignoreCR が false の場合、KAG は改行の際に rタグを生成しますが、この「改行の際に生成される r タグ」の場合はこの属性があり、値が true になっています。シナリオ中に書かれた[r] タグの場合はこの属性はありません。<br />この属性はTJSスクリプト内部で改行と[r]タグを区別したい場合に使用されますので、KAGシナリオ上でこの属性を指定する意味はありません。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_rclick">
+		<tagname>rclick</tagname>
+		<tagshortinfo>右クリックの設定</tagshortinfo>
+		<tagremarks>　右クリックや、キーボードから ESC キーを押した時の動作を設定します。<br />　いずれの属性も、省略すれば設定は変更されません。<br />　これらの機能は、[l] [p] タグでのクリック待ち、[s] タグでの停止時にのみ発動することができます。</tagremarks>
+		<tagexample>@rclick call=true target=&quot;*rclick&quot; name=&quot;右クリック用サブルーチンを呼ぶ(&amp;S)&quot; enabled=true<br /><br />*rclick<br />@rclick jump=true target=&quot;*exit&quot; name=&quot;戻る(&amp;S)&quot; enabled=true<br />@current layer=message1<br />@layopt layer=message1 page=fore visible=true<br />@er<br />ここは右クリックルーチン内です。<br />@s<br />*exit<br />@layopt layer=message1 page=fore visible=false<br />@current layer=message0<br />@rclick call=true target=&quot;*rclick&quot; name=&quot;右クリック用サブルーチンを呼ぶ(&amp;S)&quot; enabled=true<br />@return<br /></tagexample>
+		<attr id="attr_rclick_call">
+			<attrname>call</attrname>
+			<attrshortinfo>サブルーチンを呼び出すか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false</attrformat>
+			<attrinfo>　true を設定すると、右クリックで storage と target 属性で指定したサブルーチンを呼び出すようになります。jump 属性とこの属性の両方に false を指定すると、通常の 「メッセージを消す」の動作になります。<br />　この属性と jump 属性を同時に true にする事はできません。</attrinfo>
+		</attr>
+		<attr id="attr_rclick_jump">
+			<attrname>jump</attrname>
+			<attrshortinfo>指定場所にジャンプするか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false</attrformat>
+			<attrinfo>　true を設定すると、右クリックで storage と target 属性で指定した場所にジャンプするようになります。call 属性とこの属性の両方に false を指定すると、通常の「メッセージを消す」の動作になります。<br />　この属性と call 属性を同時に true にする事はできません。</attrinfo>
+		</attr>
+		<attr id="attr_rclick_target">
+			<attrname>target</attrname>
+			<attrshortinfo>サブルーチンの呼び出し先/ジャンプ先</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ラベル</attrformat>
+			<attrinfo>　call 属性か jump 属性に true を設定した場合、その呼び出し先/ジャンプ先のラベルを指定します。<br />　この属性を target=&quot;&quot; とした場合、storage 属性で指定したファイルの先頭から実行が始まります。</attrinfo>
+		</attr>
+		<attr id="attr_rclick_storage">
+			<attrname>storage</attrname>
+			<attrshortinfo>サブルーチンの呼び出し先/ジャンプ先ファイル</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ファイル</attrformat>
+			<attrinfo>　call 属性か jump 属性に true を設定した場合、その呼び出し先/ジャンプ先のファイルを指定します。<br />　この属性を storage=&quot;&quot; とした場合、右クリックがされた時点でのファイル内のラベルが検索されます。</attrinfo>
+		</attr>
+		<attr id="attr_rclick_enabled">
+			<attrname>enabled</attrname>
+			<attrshortinfo>右クリック動作を行うか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false</attrformat>
+			<attrinfo>　true を設定すると、右クリックによりメッセージレイヤが隠されたり、指定のルーチンが呼び出されたり、指定場所にジャンプしたりします。<br />　false を指定すると、これらの動作は行われません。<br /></attrinfo>
+		</attr>
+		<attr id="attr_rclick_name">
+			<attrname>name</attrname>
+			<attrshortinfo>メニュー項目名</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>メニュー項目名または &quot;default&quot;</attrformat>
+			<attrinfo>　システムメニュー内の「メッセージを消す」のメニュー項目名を指定します。<br />　name=default とすると、デフォルトの「メッセージを消す」になります。<br />　メニューホットキー ( メニュー項目内で下線のついた文字 ) を指定するには、&amp; に続けて文字を指定してください ( たとえば「メッセージを消す(&amp;S)」 )。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_record">
+		<tagname>record</tagname>
+		<tagshortinfo>通過記録を行う</tagshortinfo>
+		<tagremarks>　現在の位置で通過記録を行います。<br />　通過記録には、直前にある「栞を保存可能なラベル」の位置が記録され、戻るときはそこに戻りますが、それが実際に通過記録として記録されるタイミングは、このタグを記述した次の「栞を保存可能なラベル」を通過したときです。<br /></tagremarks>
+	</tag>
+	<tag id="tag_resetfont">
+		<tagname>resetfont</tagname>
+		<tagshortinfo>文字属性をデフォルトに戻す</tagshortinfo>
+		<tagremarks>　<ref>font</ref> タグで指定した文字の属性をデフォルトに戻します。<br />　文字属性は、メッセージレイヤごとに個別に設定できます。</tagremarks>
+	</tag>
+	<tag id="tag_resetstyle">
+		<tagname>resetstyle</tagname>
+		<tagshortinfo>スタイルをデフォルトに戻す</tagshortinfo>
+		<tagremarks>　<ref>style</ref> タグで指定した行のスタイルをすべてデフォルトの設定に戻します。</tagremarks>
+	</tag>
+	<tag id="tag_resetwait">
+		<tagname>resetwait</tagname>
+		<tagshortinfo>ウェイトの初期化</tagshortinfo>
+		<tagremarks>　<ref>wait</ref> タグの mode=until で使用する時間原点を設定します。<br />　このタグと wait タグの間には栞を保存可能なラベルを書かないでください ( 途中で栞を保存してもこの情報までは保存されないので )。</tagremarks>
+		<tagexample>[resetwait]<br />[wait mode=until time=3000]<br />; ↑ resetwait を通過した時間から 3 秒経過するまで待つ</tagexample>
+	</tag>
+	<tag id="tag_resumebgm">
+		<tagname>resumebgm</tagname>
+		<tagshortinfo>BGM 演奏の再開</tagshortinfo>
+		<tagremarks>　<ref>pausebgm</ref> タグで一時停止した BGM を再開します。</tagremarks>
+	</tag>
+	<tag id="tag_resumevideo">
+		<tagname>resumevideo</tagname>
+		<tagshortinfo>ビデオ再生の再開</tagshortinfo>
+		<tagremarks>ビデオの再生を再開します。<br />pausevideoでの一時停止後は、resumevideoを使用して、再生を再開します。<br /></tagremarks>
+		<attr id="attr_resumevideo_slot">
+			<attrname>slot</attrname>
+			<attrshortinfo>ムービーオブジェクト番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ムービーオブジェクト番号(0〜)</attrformat>
+			<attrinfo>この操作を行うムービーオブジェクト番号を指定します。<br />省略すると 0 が指定されたと見なされます。<br />複数のムービーを同時に操作する場合は、Config.tjs の numMovies の値も、必要な個数に変更してください。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_return">
+		<tagname>return</tagname>
+		<tagshortinfo>サブルーチンから戻る</tagshortinfo>
+		<tagremarks>　サブルーチンから呼び出し元に戻ります。<br />　storage と target を両方とも省略すると、呼び出し元の call タグの直後に戻ります。storage や target を指定すれば、任意の場所に戻ることができます。<br />　<ref>call</ref> タグで呼び出されたサブルーチンは、このタグで呼び出し元に戻すか、任意の場所にもどす必要があります。</tagremarks>
+		<attr id="attr_return_storage">
+			<attrname>storage</attrname>
+			<attrshortinfo>戻り先のシナリオファイル名</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>シナリオファイル名</attrformat>
+			<attrinfo>　戻り先のシナリオファイルを指定します。storage 属性を省略して、target 属性だけが書かれていると、現在のシナリオファイル内であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_return_target">
+			<attrname>target</attrname>
+			<attrshortinfo>戻り先のラベル名</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ラベル名</attrformat>
+			<attrinfo>　戻り先のラベルを指定します。<br />　target 属性を省略して、storage 属性だけがかかれていると、ファイルの先頭から実行されます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_return_countpage">
+			<attrname>countpage</attrname>
+			<attrshortinfo>「読んだ」と見なすか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true(デフォルト) または false</attrformat>
+			<attrinfo>　呼び出し元に戻るときに、この return タグのある場所のラベルを「読んだ」とみなすかどうかを指定します。<br />　戻る際にそのページが「読んだ」ことになっては困る場合に false を指定します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_rewindvideo">
+		<tagname>rewindvideo</tagname>
+		<tagshortinfo>ビデオの巻き戻し</tagshortinfo>
+		<tagremarks>　ビデオを先頭まで巻き戻します。</tagremarks>
+		<attr id="attr_rewindvideo_slot">
+			<attrname>slot</attrname>
+			<attrshortinfo>ムービーオブジェクト番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ムービーオブジェクト番号(0〜)</attrformat>
+			<attrinfo>この操作を行うムービーオブジェクト番号を指定します。<br />省略すると 0 が指定されたと見なされます。<br />複数のムービーを同時に操作する場合は、Config.tjs の numMovies の値も、必要な個数に変更してください。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_ruby">
+		<tagname>ruby</tagname>
+		<tagshortinfo>ルビ指定</tagshortinfo>
+		<tagremarks>　次の一文字に対するルビを指定します。<br />　ルビを表示させたい場合は毎回指定してください。<br />　複数の文字にルビを振る場合は、一文字毎にルビを指定する必要があります。<br /></tagremarks>
+		<tagexample>　[ruby text=&quot;かん&quot;]漢[ruby text=&quot;じ&quot;]字</tagexample>
+		<attr id="attr_ruby_text">
+			<attrname>text</attrname>
+			<attrshortinfo>ルビ</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>ルビとして表示される文字</attrformat>
+			<attrinfo>ルビとして表示させる文字を指定します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_s">
+		<tagname>s</tagname>
+		<tagshortinfo>停止する</tagshortinfo>
+		<tagremarks>　シナリオファイルの実行を停止します。<br />　<ref>link</ref> タグで選択肢待ちをするときに、このタグを書きます。<br /></tagremarks>
+	</tag>
+	<tag id="tag_save">
+		<tagname>save</tagname>
+		<tagshortinfo>栞の保存</tagshortinfo>
+		<tagremarks>　非フリーセーブモードにおいて、指定された栞に保存します。メニューから「栞をはさむ」を選択された場合と同じ動作をします。</tagremarks>
+		<attr id="attr_save_place">
+			<attrname>place</attrname>
+			<attrshortinfo>保存場所</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0または正の整数(0がデフォルト)</attrformat>
+			<attrinfo>　栞の番号を指定します。省略すると 0 が指定されたと見なされます。<br />　どのような数値を指定してもかまいませんが、999 〜 1999 は特別な意味を持つ栞です。</attrinfo>
+		</attr>
+		<attr id="attr_save_ask">
+			<attrname>ask</attrname>
+			<attrshortinfo>確認をするか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　true を指定すると、栞を保存するかどうかの確認をします。false を指定すると栞を保存するかどうかの確認はありません。この属性を省略すると false を指定したとみなされます。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_seopt">
+		<tagname>seopt</tagname>
+		<tagshortinfo>効果音の設定</tagshortinfo>
+		<tagremarks>　効果音の個々のバッファに対する設定を変更します。<br /></tagremarks>
+		<attr id="attr_seopt_buf">
+			<attrname>buf</attrname>
+			<attrshortinfo>効果音バッファ番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音バッファ番号( 0(デフォルト) 〜 )</attrformat>
+			<attrinfo>　設定を変更するバッファを指定します。<br />　省略すると 0 であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_seopt_volume">
+			<attrname>volume</attrname>
+			<attrshortinfo>音量</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>音量% (0〜100)</attrformat>
+			<attrinfo>　効果音の音量を % で指定します。初期状態の KAG では100 % です。省略すれば音量は変更されません。<br />　100 が上限です。音量の抑制のみをサポートします(増幅は音源の特性上、できません)。</attrinfo>
+		</attr>
+		<attr id="attr_seopt_gvolume">
+			<attrname>gvolume</attrname>
+			<attrshortinfo>大域音量</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>音量% (0〜100)</attrformat>
+			<attrinfo>　効果音の大域音量を % で指定します。初期状態の KAG では100 % です。省略すれば音量は変更されません。<br />　大域音量は volume 属性で指定する通常の音量とは別に、バッファの音量を制御することができるもう一つのものです。実際に再生される音量は、通常の音量と大域音量を掛け合わせた音量になります( たとえば volume=50 で gvolume=75 ならば 50(%)*75(%)=37.5(%) )<br />　大域音量は効果音バッファごとにシステム変数に記録され、次回起動時にも引き継がれます ( 各栞に保存されるわけではありません )。</attrinfo>
+		</attr>
+		<attr id="attr_seopt_pan">
+			<attrname>pan</attrname>
+			<attrshortinfo>パン</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>パン (-100〜0〜100)</attrformat>
+			<attrinfo>　パン (左右の音像位置) を指定します。<br />　-100 が完全な左、0 が中央、100 が完全な右です。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_showhistory">
+		<tagname>showhistory</tagname>
+		<tagshortinfo>メッセージ履歴の表示</tagshortinfo>
+		<tagremarks>　メッセージ履歴を表示します。<br />　メッセージ履歴の表示を終了すると、実行は継続します。</tagremarks>
+	</tag>
+	<tag id="tag_startanchor">
+		<tagname>startanchor</tagname>
+		<tagshortinfo>「最初に戻る」の有効・無効</tagshortinfo>
+		<tagremarks>　Config.tjs 内で goToStartMenuItem.visible =true; と設定すると、システム|最初に戻るメニューが表示されますが、それが選択された場合に戻る場所をこのタグで指定します。<br />　戻る場所を指定する場合は enabled 属性を省略するか true を指定しますが、このタグはセーブ可能なラベルの直後に書いてください。このラベルを通過しない間は、システム|最初に戻るのメニューは使用不可能になります。<br />　enabled 属性に false を指定すると「最初に戻る」の機能は無効になります。<br />　「最初に戻る」の動作は、このタグの書かれた場所のラベルの栞を読み出す動作に似ていますが、ゲーム変数の内容は保持されたままとなります。<br /></tagremarks>
+		<attr id="attr_startanchor_enabled">
+			<attrname>enabled</attrname>
+			<attrshortinfo>有効・無効の設定</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;true&quot;(デフォルト) または &quot;false&quot;</attrformat>
+			<attrinfo>　&quot;true&quot; を指定するかこの属性を省略すると、このタグのあるすぐ前のセーブ可能なラベルが「最初に戻る」の戻り先であるとされ、「最初に戻る」の機能が有効になります。<br />　&quot;false&quot; を指定すると「最初に戻る」の機能が無効になります。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_stopbgm">
+		<tagname>stopbgm</tagname>
+		<tagshortinfo>BGM 演奏の停止</tagshortinfo>
+		<tagremarks>　BGM 演奏を停止します。</tagremarks>
+	</tag>
+	<tag id="tag_stopmove">
+		<tagname>stopmove</tagname>
+		<tagshortinfo>レイヤの自動移動の停止</tagshortinfo>
+		<tagremarks>　<ref>move</ref> タグで開始した自動移動を強制的に中止します。すべてのレイヤの自動移動が停止します。<br />　画像は最終位置に移動し、最終の表示濃度になります。</tagremarks>
+	</tag>
+	<tag id="tag_stopquake">
+		<tagname>stopquake</tagname>
+		<tagshortinfo>画面揺らしの停止</tagshortinfo>
+		<tagremarks>　<ref>quake</ref>タグで開始した揺れを終了させます。<br />　quake タグの time 属性で指定した回数を待たずに揺れを終了させることができます。</tagremarks>
+	</tag>
+	<tag id="tag_stopse">
+		<tagname>stopse</tagname>
+		<tagshortinfo>効果音再生の停止</tagshortinfo>
+		<tagremarks>　効果音再生を停止します。</tagremarks>
+		<attr id="attr_stopse_buf">
+			<attrname>buf</attrname>
+			<attrshortinfo>効果音バッファ番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音バッファ番号( 0(デフォルト) 〜 )</attrformat>
+			<attrinfo>　効果音を停止するバッファを指定します。<br />　省略すると 0 であると見なされます。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_stoptrans">
+		<tagname>stoptrans</tagname>
+		<tagshortinfo>レイヤのトランジションの停止</tagshortinfo>
+		<tagremarks>　<ref>trans</ref> タグで開始したトランジションを強制的に中止します。すべてのレイヤのトランジションが停止します。<br />　画像は完全に切り替わった状態になります。</tagremarks>
+	</tag>
+	<tag id="tag_stopvideo">
+		<tagname>stopvideo</tagname>
+		<tagshortinfo>ビデオ/SWF再生の停止</tagshortinfo>
+		<tagremarks>　ビデオ/SWFの再生を停止します。<br /></tagremarks>
+		<attr id="attr_stopvideo_slot">
+			<attrname>slot</attrname>
+			<attrshortinfo>ムービーオブジェクト番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ムービーオブジェクト番号(0〜)</attrformat>
+			<attrinfo>この操作を行うムービーオブジェクト番号を指定します。<br />省略すると 0 が指定されたと見なされます。<br />複数のムービーを同時に操作する場合は、Config.tjs の numMovies の値も、必要な個数に変更してください。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_store">
+		<tagname>store</tagname>
+		<tagshortinfo>栞機能の設定</tagshortinfo>
+		<tagremarks>　栞機能を有効にするか、無効にするかを指定します。ユーザーにセーブ・ロードの動作を行わせたくない場合に <TT>[store enabled=false]</TT> とします。 <br />　<ref>disablestore</ref> の機能と違うのは、store タグは栞をはさむ・たどるの両方の機能を恒久的に設定するのに対し、disablestore タグはセーブ可能なラベルを通過するまでの間の一時的な間だけ「栞をはさむ」または「たどる」の機能を無効にするだけです。使い勝手は disablestore の方が良いでしょう。</tagremarks>
+		<attr id="attr_store_enabled">
+			<attrname>enabled</attrname>
+			<attrshortinfo>有効・無効の設定</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>true または false</attrformat>
+			<attrinfo>　栞機能を有効にする場合は true 、無効にする場合は false を指定します。false を指定すると栞によるセーブ・ロードができなくなります。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_style">
+		<tagname>style</tagname>
+		<tagshortinfo>スタイルの設定</tagshortinfo>
+		<tagremarks>　行のスタイルを指定します。<br />　KAG ドキュメントの「文字表示の詳細」も参照してください。　これらの属性は、<ref>resetstyle</ref> タグや <ref>ct</ref> タグが実行されると、デフォルトの値に戻ります。<br />　行のスタイルはメッセージレイヤごとに個別に設定できます。</tagremarks>
+		<attr id="attr_style_align">
+			<attrname>align</attrname>
+			<attrshortinfo>文字揃え</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;left&quot;/&quot;top&quot; または &quot;center&quot; または &quot;right&quot;/&quot;bottom&quot; または &quot;default&quot;</attrformat>
+			<attrinfo>　行の文字揃えを指定します。<br />　横書きの場合、&quot;left&quot; を指定すると左揃え(デフォルト)、&quot;center&quot; を指定するとセンタリング、&quot;right&quot; を指定すると右揃えになります。&quot;default&quot; を指定すると左揃えになります。<br />　縦書きの場合、&quot;top&quot; を指定すると上詰め(デフォルト)、&quot;center&quot; を指定するとセンタリング、&quot;bottom&quot; を指定すると下詰めになります。&quot;default&quot; を指定すると上詰めになります。</attrinfo>
+		</attr>
+		<attr id="attr_style_linespacing">
+			<attrname>linespacing</attrname>
+			<attrshortinfo>行間</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>行間 (pixel単位)</attrformat>
+			<attrinfo>　行間を pixel 単位で指定します。一行全体の幅は、この属性で指定した値と linesize 属性で指定した値を足した値になります。</attrinfo>
+		</attr>
+		<attr id="attr_style_pitch">
+			<attrname>pitch</attrname>
+			<attrshortinfo>字間</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>字間オフセット(pixel単位)</attrformat>
+			<attrinfo>　字間のオフセットを pixel 単位で指定します。　0 を指定すると、その文字のデフォルトの字間で表示されます。負の数、たとえば -1 を指定すると、その文字のデフォルトの字間 -1 のピクセル数分、文字が詰めて表示されます。正の数を表示すると字間をあけることが出来ます。</attrinfo>
+		</attr>
+		<attr id="attr_style_linesize">
+			<attrname>linesize</attrname>
+			<attrshortinfo>文字サイズの予約サイズ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>予約サイズ(pixel単位) または &quot;default&quot;</attrformat>
+			<attrinfo>　行の幅を指定します。<br />　&quot;default&quot; を指定すると行の幅は自動的に決定されますが、途中で文字が大きくなると、その大きい文字に合わせて文字の再配置が行われます。<br />　再配置を防ぐには、あらかじめこの属性で、文字の最大の大きさを指定してください。<br /></attrinfo>
+		</attr>
+		<attr id="attr_style_autoreturn">
+			<attrname>autoreturn</attrname>
+			<attrshortinfo>自動改行・改ページの設定</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;true&quot; または &quot;false&quot; または &quot;default&quot;</attrformat>
+			<attrinfo>　自動改行・自動改ページを行わせるかどうかを指定します。<br />　&quot;true&quot; または &quot;default&quot; を指定すると自動改行・改ページを行います。<br />　&quot;false&quot; を指定すると自動改行・改ページは行われませんので、表示する文字が長すぎてもメッセージレイヤをはみ出して描画されます。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_tempload">
+		<tagname>tempload</tagname>
+		<tagshortinfo>栞のメモリ上からの読み込み</tagshortinfo>
+		<tagremarks>　<ref>tempsave</ref> タグで保存したメモリ上の「栞」を読み出します。<br />　ただ、通常の栞の読み出しと違うのは、保存した位置に実行が移動しないで、そのまま実行が続行するところと、変数の内容は変化しないことです。<br />　メッセージレイヤも消去されません。また、se、bgm、backlay 属性により、ロード時の挙動を制御することができます。<br />　主な用途は、たとえばデモシーンなどに入るまえにいったん tempsave タグで状態を保存し、デモシーンが終わったところでこのタグで復帰するというように、いちいちすべての設定を元に戻すのが面倒なときに、一気に設定を元に戻す用途で使います。<br />　rclick で指定した右クリック時のサブルーチンで一時的に情報を保存するのにも使うことができます。<br /></tagremarks>
+		<attr id="attr_tempload_place">
+			<attrname>place</attrname>
+			<attrshortinfo>保存場所</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0または正の整数(0がデフォルト)</attrformat>
+			<attrinfo>　栞の番号を指定します。省略すると 0 が指定されたと見なされます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_tempload_se">
+			<attrname>se</attrname>
+			<attrshortinfo>効果音を読み込むか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true (デフォルト) または false</attrformat>
+			<attrinfo>　読み込むときに、効果音の情報も読み込むかを指定します。<br />　false を指定すると効果音の情報は読み込みません ( 現在の効果音がそのまま鳴り続けます )。</attrinfo>
+		</attr>
+		<attr id="attr_tempload_bgm">
+			<attrname>bgm</attrname>
+			<attrshortinfo>BGM を読み込むか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true (デフォルト) または false</attrformat>
+			<attrinfo>　読み込むときに、BGM の情報も読み込むかを指定します。<br />　false を指定すると BGM の情報は読み込みません ( 現在の BGM がそのまま演奏され続けます )。</attrinfo>
+		</attr>
+		<attr id="attr_tempload_backlay">
+			<attrname>backlay</attrname>
+			<attrshortinfo>表ページを裏ページに読み込むか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false (デフォルト)</attrformat>
+			<attrinfo>　読み込むときに、前景レイヤの情報は読み込まずに、かつ背景レイヤには前景レイヤの情報を読み込むかどうかを指定します。<br />　true を指定すると、メモリ上の「栞」では表ページとして記録されている情報が、実際には裏ページに読み込まれ、表ページはそのままになります。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_tempsave">
+		<tagname>tempsave</tagname>
+		<tagshortinfo>栞のメモリ上への保存</tagshortinfo>
+		<tagremarks>　メモリ上の「栞」に現在の位置での情報を挟みます。ここで保存されるのはファイルではなくメモリ上の栞ですので、KAG が終了しても内容は保持されませんし、通常の「栞」とはなんの関係も持ちません。<br />　また、最後に通過したラベル位置での状態が保存されるのではなくて、このタグのある位置での情報が記録されます。また、変数の内容は記録されません。<br />　<ref>tempload</ref> タグと組み合わせて使います。<br /></tagremarks>
+		<attr id="attr_tempsave_place">
+			<attrname>place</attrname>
+			<attrshortinfo>保存場所</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>0または正の整数(0がデフォルト)</attrformat>
+			<attrinfo>　栞の番号を指定します。省略すると 0 が指定されたと見なされます。<br />　指定できる数値や保存箇所の個数に制限はありませんが、あまり大きな整数は指定しないでください。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_title">
+		<tagname>title</tagname>
+		<tagshortinfo>タイトル指定</tagshortinfo>
+		<tagremarks>　タスクバー、およびウィンドウキャプション ( タイトルバー ) に表示する文字を指定します。<br />　通常はゲーム等のタイトルです。</tagremarks>
+		<attr id="attr_title_name">
+			<attrname>name</attrname>
+			<attrshortinfo>タイトル</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>タイトル</attrformat>
+			<attrinfo>　表示したいタイトルを指定してください。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_trace">
+		<tagname>trace</tagname>
+		<tagshortinfo>コンソールへ値の出力</tagshortinfo>
+		<tagremarks>　exp で示された式を評価し、結果をコンソールに出力します。<br />　コンソールは Shift+F4 で表示されるほか、Config.tjs 内で logMode を設定することにより、ファイルに記録することもできます。<br /></tagremarks>
+		<tagexample>[trace exp=&quot;f.test&quot;]<br />; ↑ ゲーム変数 test の内容を コンソール に出力する<br />; コンソールには以下のように表示される ( 例 )<br />;  6:45:34 ▼[trace] expression=&quot;f.test&quot;  type of result=Number  result=500<br /></tagexample>
+		<attr id="attr_trace_exp">
+			<attrname>exp</attrname>
+			<attrshortinfo>TJS 式</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>TJS 式</attrformat>
+			<attrinfo>　評価する TJS 式を指定します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_trans">
+		<tagname>trans</tagname>
+		<tagshortinfo>レイヤのトランジション</tagshortinfo>
+		<tagremarks>　指定したレイヤでトランジションを行います。<br />　トランジションは、常に裏ページの対象のレイヤが、表ページの対象のレイヤに入れ替わる方向で行われます。<br />　トランジション後は、表ページの対象のレイヤの画像、位置、サイズ、可視・不可視の状態は裏ページの対象のレイヤと同じになります。<br />　一般的に method=universal のトランジションは、<ref>backlay</ref> タグで表ページの情報を裏画面にコピーし、裏ページに対して <ref>image</ref> や <ref>layopt</ref> タグでレイヤを操作し、この trans タグを layer=base children=true で使用し、<ref>wt</ref> タグでトランジションの終了を待ちます。<br />　<ref>macro</ref> タグでこの一連の操作をマクロ化しておくと便利かもしれません。<br />　トランジション中は、文字表示ができなかったり、遅くなったりします。また、基本的に状態は「不定」なので、位置移動や表示・非表示の変更はトランジションの終了を待ってからにしてください。<br />　通常は背景レイヤに対してトランジションを行わせますが、特殊な用途に使用する目的で前景レイヤやメッセージレイヤに対して個別にトランジションを行わせることができます。しかし、「裏ページ・面画面のそのレイヤのサイズは同一でなければならない」という制限があります。<br />　本当に特殊な用途 ( 一概に言えませんが ) に用いる以外は、layer には baseを指定してください。<br /><br />　このタグは、トランジションの終了を待ちません。トランジションの終了を待つには <ref>wt</ref> タグを使用してください。<br /></tagremarks>
+		<tagexample>[backlay]<br />[image storage=fg0 layer=0 page=back]<br />[trans method=universal time=1500 rule=trans0 vague=64]<br />[wt]<br /></tagexample>
+		<attr id="attr_trans_layer">
+			<attrname>layer</attrname>
+			<attrshortinfo>対象レイヤ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;base&quot;(デフォルト) または 0 以上の整数 またはは message0 または message1 または message</attrformat>
+			<attrinfo>　対象となるレイヤを指定します。<br />　base を指定すると 背景レイヤ になります。<br />　0 以上の整数を指定すると前景レイヤになります。<br />　message0 または message1 を指定するとメッセージレイヤになります。単に message とのみ指定した場合は、<ref>current</ref> タグで指定した現在の操作対象のメッセージレイヤが対象になります ( 裏ページ・表ページのどちらのメッセージレイヤが操作対象であっても裏ページ→表ページへのトランジションが行われます )。<br />　通常は base に対してトランジションを行わせます。<br />　base 以外に対してトランジションを行わせる場合はかなりの制限があります。</attrinfo>
+		</attr>
+		<attr id="attr_trans_children">
+			<attrname>children</attrname>
+			<attrshortinfo>子レイヤも含めるか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true(デフォルト) または false</attrformat>
+			<attrinfo>　トランジションの対象に子レイヤも含めるかどうかを指定します。true を指定すると子レイヤも含めます。false を指定すると子レイヤは含まれません。<br />　layer=base と指定したときのみ使用できます。<br />　子レイヤには、前景レイヤとメッセージレイヤが含まれます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_trans_time">
+			<attrname>time</attrname>
+			<attrshortinfo>トランジション時間</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>時間(ms単位)</attrformat>
+			<attrinfo>　トランジションを行っている時間を数値で指定します。</attrinfo>
+		</attr>
+		<attr id="attr_trans_method">
+			<attrname>method</attrname>
+			<attrshortinfo>トランジションのタイプ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;universal&quot; (デフォルト) または &quot;scroll&quot; またはその他</attrformat>
+			<attrinfo>　トランジションのタイプを指定します。<br />&quot;universal&quot; を指定すると、 rule, vague, time 属性に従ってユニバーサルトランジションが行われます。<br />&quot;crossfade&quot; を指定すると、time 属性に従って、単純なクロスフェードが行われます。<br />&quot;scroll&quot; を指定すると、from, stay を元にしてスクロールトランジションが行われます。<br />　プラグインによって使用可能になるトランジションのタイプもあります。その場合は method 属性にはそのトランジションの名前を指定し、また、トランジションによっては別の属性を指定しなければならない場合があります。</attrinfo>
+		</attr>
+		<attr id="attr_trans_rule">
+			<attrname>rule</attrname>
+			<attrshortinfo>ルール画像</attrshortinfo>
+			<attrrequired>method=universal のときのみ</attrrequired>
+			<attrformat>ルール画像名</attrformat>
+			<attrinfo>　ユニバーサルトランジションに用いるルール画像を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_trans_vague">
+			<attrname>vague</attrname>
+			<attrshortinfo>あいまい領域値</attrshortinfo>
+			<attrrequired>method=universal のときのみ</attrrequired>
+			<attrformat>あいまい領域値 (0〜)</attrformat>
+			<attrinfo>　ユニバーサルトランジションに適用する あいまい領域値を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_trans_from">
+			<attrname>from</attrname>
+			<attrshortinfo>スクロールされる方向</attrshortinfo>
+			<attrrequired>method=scroll のときのみ</attrrequired>
+			<attrformat>&quot;left&quot; または &quot;top&quot; または &quot;right&quot; または &quot;bottom&quot;</attrformat>
+			<attrinfo>　スクロールトランジションにおいて、裏ページの画像がどの方向から現れてくるかを指定します。&quot;left&quot; = 左、&quot;top&quot;= 上、&quot;right&quot; = 右、&quot;bottom&quot; = 下</attrinfo>
+		</attr>
+		<attr id="attr_trans_stay">
+			<attrname>stay</attrname>
+			<attrshortinfo>元画像がその場に居座るか</attrshortinfo>
+			<attrrequired>method=scroll のときのみ</attrrequired>
+			<attrformat>&quot;stayfore&quot; または &quot;stayback&quot; または &quot;nostay&quot;(デフォルト)</attrformat>
+			<attrinfo>　スクロールトランシジョンにおいて、表ページの画像がその場にとどまったまま、裏ページの画像が外部からスクロールしてくるか ( &quot;stayfore&quot; )、<br />　表ページの画像がスクロールして出ていく裏から、裏ページの画像がその場にとどまったまま現れてくるか( &quot;stayback&quot; )、<br />　または表ページの画像と裏ページの画像が連結されて一緒に移動しながら切り替わっていくか ( &quot;nostay&quot; )、を指定します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_unlocklink">
+		<tagname>unlocklink</tagname>
+		<tagshortinfo>リンクのロックの解除</tagshortinfo>
+		<tagremarks>　すべてのメッセージレイヤのリンクのロックを解除します。<br />　リンクやボタンは、一回選択されると、再び新しいリンクやボタンが作成されるまで選択不能になります ( エディットやチェックボックスも操作不能になります ) が、それを強制的に再び選択可能にするためにこのタグがあります。<br />　逆の動作をする <ref>locklink</ref> タグもあります。<br /></tagremarks>
+	</tag>
+	<tag id="tag_unlocksnapshot">
+		<tagname>unlocksnapshot</tagname>
+		<tagshortinfo>スナップショットのロックの解除</tagshortinfo>
+		<tagremarks>　<ref>locksnapshot</ref> でロックしたスナップショットのロックを解除します。<br /></tagremarks>
+	</tag>
+	<tag id="tag_video">
+		<tagname>video</tagname>
+		<tagshortinfo>ビデオ/SWF表示領域の属性を指定</tagshortinfo>
+		<tagremarks>　ビデオ/SWF表示領域の属性を指定します。<br />　ビデオ/SWF表示領域はデフォルトで非表示なので、このタグで表示状態にしないと表示されません。<br />　オーバーレイモードで表示される領域はレイヤではありません。すべてのレイヤよりも手前に表示されます。<br />　現バージョンではSWFはレイヤ描画モードによる再生はできません。<br /></tagremarks>
+		<attr id="attr_video_slot">
+			<attrname>slot</attrname>
+			<attrshortinfo>ムービーオブジェクト番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ムービーオブジェクト番号(0〜)</attrformat>
+			<attrinfo>この操作を行うムービーオブジェクト番号を指定します。<br />省略すると 0 が指定されたと見なされます。<br />複数のムービーを同時に操作する場合は、Config.tjs の numMovies の値も、必要な個数に変更してください。<br /></attrinfo>
+		</attr>
+		<attr id="attr_video_visible">
+			<attrname>visible</attrname>
+			<attrshortinfo>可視・不可視</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false</attrformat>
+			<attrinfo>　ビデオ/SWF の表示領域を表示するか ( true の場合 )、非表示にするか ( false の場合 ) を指定します。 非表示でもビデオ/SWFは再生できます ( 当然表示されません )。<br /></attrinfo>
+		</attr>
+		<attr id="attr_video_left">
+			<attrname>left</attrname>
+			<attrshortinfo>左端位置</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>左端位置 ( pixel 単位 )</attrformat>
+			<attrinfo>　表示領域の左端位置を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_video_top">
+			<attrname>top</attrname>
+			<attrshortinfo>上端位置</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>上端位置 ( pixel 単位 )</attrformat>
+			<attrinfo>　表示領域の上端位置を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_video_width">
+			<attrname>width</attrname>
+			<attrshortinfo>幅</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>幅 ( pixel 単位 )</attrformat>
+			<attrinfo>　表示領域の幅を指定します。現バージョンではレイヤ描画モードでは指定は無視されます。</attrinfo>
+		</attr>
+		<attr id="attr_video_height">
+			<attrname>height</attrname>
+			<attrshortinfo>高さ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>高さ ( pixel 単位 )</attrformat>
+			<attrinfo>　表示領域の高さを指定します。現バージョンではレイヤ描画モードでは指定は無視されます。</attrinfo>
+		</attr>
+		<attr id="attr_video_loop">
+			<attrname>loop</attrname>
+			<attrshortinfo>ループするかどうか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false</attrformat>
+			<attrinfo>　ループを行いたい場合は true を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_video_position">
+			<attrname>position</attrname>
+			<attrshortinfo>移動先時間</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>時間 ( ms 単位 )</attrformat>
+			<attrinfo>　指定した時間までビデオの再生位置を移動したい場合に指定します。</attrinfo>
+		</attr>
+		<attr id="attr_video_frame">
+			<attrname>frame</attrname>
+			<attrshortinfo>移動先フレーム</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>フレーム番号</attrformat>
+			<attrinfo>　指定した位置までビデオの再生位置を移動したい場合に指定します。<br />　position属性と違い、この属性ではフレーム単位で指定することができます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_video_mode">
+			<attrname>mode</attrname>
+			<attrshortinfo>描画モード</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;overlay&quot; または &quot;layer&quot;</attrformat>
+			<attrinfo>　ムービーの描画モードを指定します。<br />　&quot;overlay&quot; を指定するとオーバーレイモードで再生できます。オーバーレイモードではビデオは他のレイヤより奥になることはできませんが、再生負荷を軽くすることができます。<br />　&quot;layer&quot; を指定すると、レイヤ描画モードで再生できます。レイヤ描画モードでは、ビデオの画像をレイヤに表示できますが、再生負荷は &quot;overlay&quot; よりも高くなります。表示するレイヤは <ref>videolayer</ref> タグで設定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_video_playrate">
+			<attrname>playrate</attrname>
+			<attrshortinfo>再生速度</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>再生速度(0.0より大きい値)</attrformat>
+			<attrinfo>　メディアの再生速度を設定します。<br />　設定可能値はDirectShowのフィルタによって決まります。<br />　参考 : 音声付のMPEGファイルの場合、0.0より大きい値から2.0までの値が設定可能です。音声なしのMPEGファイルの場合、0.0より大きい値からdoubleの範囲内(たぶん)で設定可能ですが、実際の再生速度は処理速度によって上限が決まります。<br /></attrinfo>
+		</attr>
+		<attr id="attr_video_volume">
+			<attrname>volume</attrname>
+			<attrshortinfo>音量</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>音量% (0〜100)</attrformat>
+			<attrinfo>　音量を % で指定します。　100 が上限です。音量の抑制のみをサポートします(増幅は音源の特性上、できません)。</attrinfo>
+		</attr>
+		<attr id="attr_video_pan">
+			<attrname>pan</attrname>
+			<attrshortinfo>音量</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>パン (-100〜0〜100)</attrformat>
+			<attrinfo>　パン (左右の音像位置) を指定します。<br />　-100 が完全な左、0 が中央、100 が完全な右です。<br />　真中の値は 0 で、これは両方のチャンネルがフルボリュームであることを意味しています。<br />　 一方のチャンネルが減衰されても、もう一方のチャンネルはフル ボリュームのままです。<br /></attrinfo>
+		</attr>
+		<attr id="attr_video_audiostreamnum">
+			<attrname>audiostreamnum</attrname>
+			<attrshortinfo>音声ストリーム番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>音声ストリーム番号(0〜)</attrformat>
+			<attrinfo>　指定した音声ストリーム番号を有効にします。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_videoevent">
+		<tagname>videoevent</tagname>
+		<tagshortinfo>ピリオドイベントの発生</tagshortinfo>
+		<tagremarks>　指定したフレームでピリオドイベントを発生させることができます。<br />　ピリオドイベントは、<ref>wp</ref>タグで待つことができます。<br /></tagremarks>
+		<attr id="attr_videoevent_slot">
+			<attrname>slot</attrname>
+			<attrshortinfo>ムービーオブジェクト番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ムービーオブジェクト番号(0〜)</attrformat>
+			<attrinfo>この操作を行うムービーオブジェクト番号を指定します。<br />省略すると 0 が指定されたと見なされます。<br />複数のムービーを同時に操作する場合は、Config.tjs の numMovies の値も、必要な個数に変更してください。<br /></attrinfo>
+		</attr>
+		<attr id="attr_videoevent_frame">
+			<attrname>frame</attrname>
+			<attrshortinfo>フレーム番号</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>フレーム番号</attrformat>
+			<attrinfo>　ピリオドイベントを発生させるフレーム番号を指定します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_videolayer">
+		<tagname>videolayer</tagname>
+		<tagshortinfo>ビデオレイヤ設定</tagshortinfo>
+		<tagremarks>　レイヤー描画モード時に、ビデオの画像を表示させたいレイヤを指定します。レイヤサイズは、ビデオのサイズに自動的に変更されます。<br />　この設定を解除するには<ref>clearvideolayer</ref>タグを使います。<br /></tagremarks>
+		<attr id="attr_videolayer_slot">
+			<attrname>slot</attrname>
+			<attrshortinfo>ムービーオブジェクト番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ムービーオブジェクト番号(0〜)</attrformat>
+			<attrinfo>この操作を行うムービーオブジェクト番号を指定します。<br />省略すると 0 が指定されたと見なされます。<br />複数のムービーを同時に操作する場合は、Config.tjs の numMovies の値も、必要な個数に変更してください。<br /></attrinfo>
+		</attr>
+		<attr id="attr_videolayer_channel">
+			<attrname>channel</attrname>
+			<attrshortinfo>チャンネル</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>1 または 2</attrformat>
+			<attrinfo>　レイヤ描画モードでは、同時に二つのチャンネルでビデオを再生できます。<br />　slot属性は、同時に異なるビデオを再生したいときのためにあり、channel属性は、同じビデオを２つのレイヤ(たとえば、表レイヤと裏レイヤ) で再生したいときのためにあります。<br />　この属性では、そのどちらのチャンネルに対してのレイヤを設定するかを指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_videolayer_page">
+			<attrname>page</attrname>
+			<attrshortinfo>ページ</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>&quot;fore&quot; または &quot;back&quot;</attrformat>
+			<attrinfo>　表ページ(&quot;fore&quot;)か、裏ページ(&quot;back&quot;)かを指定します。<br /></attrinfo>
+		</attr>
+		<attr id="attr_videolayer_layer">
+			<attrname>layer</attrname>
+			<attrshortinfo>レイヤ</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>レイヤ番号(0〜)</attrformat>
+			<attrinfo>　表示したいレイヤ番号を指定します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_videosegloop">
+		<tagname>videosegloop</tagname>
+		<tagshortinfo>ビデオのセグメントループ再生</tagshortinfo>
+		<tagremarks>　start 属性と end 属性で示した区間内でループ再生を行います。<br />このタグはレイヤー描画モード時のみ有効です。<br /></tagremarks>
+		<attr id="attr_videosegloop_slot">
+			<attrname>slot</attrname>
+			<attrshortinfo>ムービーオブジェクト番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ムービーオブジェクト番号(0〜)</attrformat>
+			<attrinfo>この操作を行うムービーオブジェクト番号を指定します。<br />省略すると 0 が指定されたと見なされます。<br />複数のムービーを同時に操作する場合は、Config.tjs の numMovies の値も、必要な個数に変更してください。<br /></attrinfo>
+		</attr>
+		<attr id="attr_videosegloop_start">
+			<attrname>start</attrname>
+			<attrshortinfo>開始フレーム番号</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>フレーム番号</attrformat>
+			<attrinfo>　ループの始点を指定します。</attrinfo>
+		</attr>
+		<attr id="attr_videosegloop_end">
+			<attrname>end</attrname>
+			<attrshortinfo>終了フレーム番号</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>フレーム番号</attrformat>
+			<attrinfo>　ループの終点を指定します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_wa">
+		<tagname>wa</tagname>
+		<tagshortinfo>アニメーションの停止待ち</tagshortinfo>
+		<tagremarks>　任意のセグメントのアニメーションの停止を待ちます。<br />　アニメーションが停止するためには、asd ファイル上で s タグか home タグを通過する必要があります。<br /></tagremarks>
+		<attr id="attr_wa_layer">
+			<attrname>layer</attrname>
+			<attrshortinfo>対象レイヤ</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>&quot;base&quot; または 0 以上の整数</attrformat>
+			<attrinfo>　アニメーションの停止を待つするレイヤを指定します。<br />&quot;base&quot; を指定すると 背景レイヤ、 0 以上の整数を指定すると、対応する前景レイヤを表します。　指定したレイヤには、アニメーション情報が読み込まれていないとなりません。</attrinfo>
+		</attr>
+		<attr id="attr_wa_page">
+			<attrname>page</attrname>
+			<attrshortinfo>ページ</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;back&quot; または &quot;fore&quot;</attrformat>
+			<attrinfo>　表(fore)画面を対象とするか、裏(back)画面を対象とするかを指定します。省略すると表ページであると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_wa_seg">
+			<attrname>seg</attrname>
+			<attrshortinfo>セグメント</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>0 または正の整数</attrformat>
+			<attrinfo>　この属性で指定したセグメント番号のアニメーションの停止を待ちます。<br />　セグメント番号 0 も指定できます。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_wait">
+		<tagname>wait</tagname>
+		<tagshortinfo>ウェイトを入れる</tagshortinfo>
+		<tagremarks>　ウェイトを入れます。<br />　現在の時間からを待つ (mode=&quot;normal&quot;) か、あるいは <ref>resetwait</ref>タグで指定した時間原点からの時間を待つ (mode=&quot;until&quot;) ことができます。<br />　mode=&quot;until&quot; の場合、すでに指定した時間を過ぎていた場合は kag.lastWaitTime という変数に 0 が入ります。ですので、[if exp=&quot;kag.lastWaitTime != 0&quot;] のようにして判断すれば、「まだ指定した時間を過ぎていない場合」(多くの場合、処理が追いついている場合)かどうかを判断できます。<br /></tagremarks>
+		<attr id="attr_wait_time">
+			<attrname>time</attrname>
+			<attrshortinfo>時間</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>時間(ミリ秒)</attrformat>
+			<attrinfo>　ウェイトをミリ秒で指定します。</attrinfo>
+		</attr>
+		<attr id="attr_wait_mode">
+			<attrname>mode</attrname>
+			<attrshortinfo>ウェイトの方式</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;normal&quot;(デフォルト) または &quot;until&quot;</attrformat>
+			<attrinfo>　ウェイトの方式を指定します。<br />　&quot;normal&quot; を指定するか、この属性を省略すると単に time で指定する時間だけ待つことになります。<br />　&quot;until&quot; を指定すると、<ref>resetwait</ref> タグで設定した時間原点からの経過秒を time で指定したとみなし、指定した時間までを待ちます。すでに指定した時間を過ぎていた場合は待ちません。<br /></attrinfo>
+		</attr>
+		<attr id="attr_wait_canskip">
+			<attrname>canskip</attrname>
+			<attrshortinfo>スキップできるか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true(デフォルト) または false</attrformat>
+			<attrinfo>　このウェイトを、マウスのクリックやキーボードでスキップできるかを指定します。false を指定すると、マウスのクリックやキーボードでは、このウェイトをスキップできません。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_waitclick">
+		<tagname>waitclick</tagname>
+		<tagshortinfo>クリックを待つ</tagshortinfo>
+		<tagremarks>　クリックを待ちます。<br />　<ref>l</ref> タグや <ref>p</ref> タグと違うのは、スキップできないことと、クリック待ち記号が表示されないということ、待っている間は栞を挟む/たどるや、そのほかのスキップ操作などができないなど、です。<br /></tagremarks>
+	</tag>
+	<tag id="tag_waittrig">
+		<tagname>waittrig</tagname>
+		<tagshortinfo>トリガを待つ</tagshortinfo>
+		<tagremarks>　TJS2 スクリプトが trigger メソッドを呼ぶのを待ちます。<br />　「トリガ」は イベント駆動型のプログラミングモデルで動作する KAG において、シナリオ進行をいったん停止し、なんらかの処理を待つために使われる機構です。<br />　このタグは、TJS2 スクリプトの処理が終わるのを待つのに使います。<br />　たとえばトリガ名 &quot;click&quot; は、マウスがクリックされたときに発動するトリガ ( これについては KAG 内部ですでに定義されているトリガ ) で、<TT>[waittrig name=&quot;click&quot;]</TT>と記述することによりマウスのクリックを待つことができます。<br /></tagremarks>
+		<attr id="attr_waittrig_name">
+			<attrname>name</attrname>
+			<attrshortinfo>トリガ名</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>トリガ名</attrformat>
+			<attrinfo>　待つトリガ名を指定します。　kag オブジェクト ( MainWindow クラス ) の trigger メソッドで引数に同名のトリガ名を指定することにより、トリガを発動し、待ち状態を解除することができます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_waittrig_canskip">
+			<attrname>canskip</attrname>
+			<attrshortinfo>スキップできるか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　true を指定すると、クリックにより、待つ動作をスキップすることができます。<br /></attrinfo>
+		</attr>
+		<attr id="attr_waittrig_onskip">
+			<attrname>onskip</attrname>
+			<attrshortinfo>スキップされたとき</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>TJS式</attrformat>
+			<attrinfo>　クリックによりスキップされたときに実行する TJS式 を指定します。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_wb">
+		<tagname>wb</tagname>
+		<tagshortinfo>BGM フェードの終了待ち</tagshortinfo>
+		<tagremarks>　BGM のフェードアウト・フェードインの終了を待ちます。</tagremarks>
+		<attr id="attr_wb_canskip">
+			<attrname>canskip</attrname>
+			<attrshortinfo>スキップできるかどうか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　true を指定するとクリックでフェードの終了待ちをスキップできます。<br />　false を指定するとスキップできません。<br />　ただし <ref>clickskip</ref> タグでクリックスキップが禁止されているとこのスキップもできないので注意してください。<br />　BGM フェードをスキップした場合は、音量は直ちにフェードの到達音量になります。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_wc">
+		<tagname>wc</tagname>
+		<tagshortinfo>文字数分のウェイトを入れる</tagshortinfo>
+		<tagremarks>　文字数分のウェイトを入れます。</tagremarks>
+		<attr id="attr_wc_time">
+			<attrname>time</attrname>
+			<attrshortinfo>文字数</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>文字数</attrformat>
+			<attrinfo>　ここで指定した文字数を表示するのと同じだけの時間を待ちます。 一文字に必要な時間は <ref>delay</ref> タグで指定します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_wf">
+		<tagname>wf</tagname>
+		<tagshortinfo>効果音フェードの終了待ち</tagshortinfo>
+		<tagremarks>　効果音のフェードアウト・フェードインの終了を待ちます。</tagremarks>
+		<attr id="attr_wf_buf">
+			<attrname>buf</attrname>
+			<attrshortinfo>効果音バッファ番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音バッファ番号( 0(デフォルト) 〜 )</attrformat>
+			<attrinfo>　フェードの終了を待つバッファを指定します。<br />　省略すると 0 であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_wf_canskip">
+			<attrname>canskip</attrname>
+			<attrshortinfo>スキップできるかどうか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　true を指定するとクリックでフェード終了待ちをスキップできます。<br />　false を指定するとスキップできません。<br />　ただし <ref>clipskip</ref> タグでクリックスキップが禁止されているとこのスキップもできないので注意してください。<br />　効果音フェードをスキップした場合は、音量は直ちにフェードの到達音量になります。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_wl">
+		<tagname>wl</tagname>
+		<tagshortinfo>BGM 再生の終了待ち</tagshortinfo>
+		<tagremarks>　BGM 再生の終了を待ちます。　BGM が繰り返し再生の場合は待ちません。</tagremarks>
+		<attr id="attr_wl_canskip">
+			<attrname>canskip</attrname>
+			<attrshortinfo>スキップできるかどうか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　true を指定するとクリックで BGM 再生の終了待ちをスキップできます。<br />　false を指定するとスキップできません。<br />　ただし <ref>clickskip</ref> タグでクリックスキップが禁止されているとこのスキップもできないので注意してください。<br />　途中で再生終了待ちをスキップした場合は、BGM は直ちに停止します。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_wm">
+		<tagname>wm</tagname>
+		<tagshortinfo>自動移動の終了待ち</tagshortinfo>
+		<tagremarks>　自動移動の終了を待ちます。</tagremarks>
+		<attr id="attr_wm_canskip">
+			<attrname>canskip</attrname>
+			<attrshortinfo>スキップできるかどうか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true(デフォルト) または false</attrformat>
+			<attrinfo>　true を指定するとクリックで自動移動の終了待ちをスキップできます。<br />　false を指定するとスキップできません。<br />　ただし <ref>clickskip</ref> タグでクリックスキップが禁止されているとこのスキップもできないので注意してください。<br />　途中で自動移動の終了待ちをスキップした場合は、直ちに最終位置に移動します。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_wp">
+		<tagname>wp</tagname>
+		<tagshortinfo>ビデオピリオドイベント待ち</tagshortinfo>
+		<tagremarks>ピリオドイベントを待ちます。<br />for属性が未指定の場合、すべてのイベントを待ち、いずれかが発生すると処理を継続します。</tagremarks>
+		<attr id="attr_wp_slot">
+			<attrname>slot</attrname>
+			<attrshortinfo>ムービーオブジェクト番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ムービーオブジェクト番号(0〜)</attrformat>
+			<attrinfo>この操作を行うムービーオブジェクト番号を指定します。<br />省略すると 0 が指定されたと見なされます。<br />複数のムービーを同時に操作する場合は、Config.tjs の numMovies の値も、必要な個数に変更してください。<br /></attrinfo>
+		</attr>
+		<attr id="attr_wp_for">
+			<attrname>for</attrname>
+			<attrshortinfo>イベントの種類</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>&quot;loop&quot;,&quot;period&quot;,&quot;prepare&quot;,&quot;segLoop&quot;のいずれか</attrformat>
+			<attrinfo>　待つイベントの種類を指定します。<br />　&quot;loop&quot;を指定すると、ループ終端を待ちます。<br />　&quot;period&quot;を指定すると、ピリオドイベントを待ちます。<br />　&quot;prepare&quot;を指定すると、preparevideoの準備完了を待ちます。<br />　&quot;segLoop&quot;を指定すると、セグメントループ終端を待ちます。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_wq">
+		<tagname>wq</tagname>
+		<tagshortinfo>画面揺らしの終了待ち</tagshortinfo>
+		<tagremarks>　<ref>quake</ref> タグで開始した画面揺らしの終了を待ちます。</tagremarks>
+		<attr id="attr_wq_canskip">
+			<attrname>canskip</attrname>
+			<attrshortinfo>スキップできるかどうか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　true を指定するとクリックでトランジションの終了待ちをスキップできます。<br />　false を指定するとスキップできません。<br />　ただし <ref>clickskip</ref> タグでクリックスキップが禁止されているとこのスキップもできないので注意してください。<br />　途中でトランジション終了待ちをスキップした場合は、直ちに切り替わり後の状態に移行します。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_ws">
+		<tagname>ws</tagname>
+		<tagshortinfo>効果音再生の終了待ち</tagshortinfo>
+		<tagremarks>　効果音再生の終了を待ちます。<br />　効果音が繰り返し再生の場合は待ちません。</tagremarks>
+		<attr id="attr_ws_buf">
+			<attrname>buf</attrname>
+			<attrshortinfo>効果音バッファ番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>効果音バッファ番号( 0(デフォルト) 〜 )</attrformat>
+			<attrinfo>　再生終了を待つバッファを指定します。<br />　省略すると 0 であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_ws_canskip">
+			<attrname>canskip</attrname>
+			<attrshortinfo>スキップできるか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　効果音再生をマウスのクリックでスキップできるかを指定します。<br />　true を指定すると効果音再生をマウスのクリックでスキップできるようになります。<br />　ただし <ref>clipskip</ref> タグでクリックスキップが禁止されているとこのスキップもできないので注意してください。<br />　また、スキップされると効果音の再生も自動的に停止します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_wt">
+		<tagname>wt</tagname>
+		<tagshortinfo>トランジションの終了待ち</tagshortinfo>
+		<tagremarks>　トランジションの終了を待ちます。</tagremarks>
+		<attr id="attr_wt_canskip">
+			<attrname>canskip</attrname>
+			<attrshortinfo>スキップできるかどうか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true(デフォルト) または false</attrformat>
+			<attrinfo>　true を指定するとクリックでトランジションの終了待ちをスキップできます。<br />　false を指定するとスキップできません。<br />　ただし <ref>clickskip</ref> タグでクリックスキップが禁止されているとこのスキップもできないので注意してください。<br />　途中でトランジション終了待ちをスキップした場合は、直ちに切り替わり後の状態に移行します。<br /></attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_wv">
+		<tagname>wv</tagname>
+		<tagshortinfo>ビデオ再生の終了待ち</tagshortinfo>
+		<tagremarks>　ビデオ再生の終了や、<ref>preparevideo</ref> タグによる再生準備の完了、<ref>videoevent</ref> タグによるピリオドイベントを待ちます。<br />　SWF(Sockwave Flash) の再生の終了を待つことはできません。<ref>wait</ref> タグ等で必要な時間を待つなどをして対処してください。<br /></tagremarks>
+		<attr id="attr_wv_slot">
+			<attrname>slot</attrname>
+			<attrshortinfo>ムービーオブジェクト番号</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>ムービーオブジェクト番号(0〜)</attrformat>
+			<attrinfo>この操作を行うムービーオブジェクト番号を指定します。<br />省略すると 0 が指定されたと見なされます。<br />複数のムービーを同時に操作する場合は、Config.tjs の numMovies の値も、必要な個数に変更してください。<br /></attrinfo>
+		</attr>
+		<attr id="attr_wv_canskip">
+			<attrname>canskip</attrname>
+			<attrshortinfo>スキップできるか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true または false(デフォルト)</attrformat>
+			<attrinfo>　ビデオ再生をマウスのクリックでスキップできるかを指定します。<br />　true を指定すると ビデオ再生をマウスのクリックでスキップできるようになります。<br />　ただし <ref>clickskip</ref> タグでクリックスキップが禁止されているとこのスキップもできないので注意してください。<br />　また、スキップされると ビデオの再生も自動的に停止します。</attrinfo>
+		</attr>
+	</tag>
+	<tag id="tag_xchgbgm">
+		<tagname>xchgbgm</tagname>
+		<tagshortinfo>BGM を入れ替える</tagshortinfo>
+		<tagremarks>　BGM を入れ替えます。<br />　このタグを使う場合は、Config.tjs で doubleBuffered を true に設定してください。</tagremarks>
+		<attr id="attr_xchgbgm_storage">
+			<attrname>storage</attrname>
+			<attrshortinfo>BGM ファイル名</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>BGM ファイル名</attrformat>
+			<attrinfo>　次に再生する BGM ファイル名または CD トラックを指定します。</attrinfo>
+		</attr>
+		<attr id="attr_xchgbgm_loop">
+			<attrname>loop</attrname>
+			<attrshortinfo>ループするか</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>true(デフォルト) または false</attrformat>
+			<attrinfo>　BGM をループするかを指定します。<br />　true を指定するとループします。false を指定するとループしません。<br />　省略すると true であると見なされます。</attrinfo>
+		</attr>
+		<attr id="attr_xchgbgm_time">
+			<attrname>time</attrname>
+			<attrshortinfo>フェード時間</attrshortinfo>
+			<attrrequired>yes</attrrequired>
+			<attrformat>フェードを行っている時間 (ms単位)</attrformat>
+			<attrinfo>　指定した時間で現在の曲のフェードアウトが行われた後、同じ時間で指定した曲のフェードインが行われます。</attrinfo>
+		</attr>
+		<attr id="attr_xchgbgm_overlap">
+			<attrname>overlap</attrname>
+			<attrshortinfo>オーバーラップ時間</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>オーバーラップを行う時間(ms単位)</attrformat>
+			<attrinfo>　overlap に時間を設定すると、その時間分、フェードアウトとフェードインの時間が重なります。省略すると 0 であると見なされます。クロスフェードを行うときに指定します。</attrinfo>
+		</attr>
+		<attr id="attr_xchgbgm_volume">
+			<attrname>volume</attrname>
+			<attrshortinfo>次の曲の音量</attrshortinfo>
+			<attrrequired>no</attrrequired>
+			<attrformat>音量% (0〜100)</attrformat>
+			<attrinfo>　次の曲のフェード後に到達させる BGM の音量を % で指定します。<br />　省略すると、次の曲の音量は現在の音量と同じになります。<br /></attrinfo>
+		</attr>
+	</tag>
+</tdb>

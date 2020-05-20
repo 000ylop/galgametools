@@ -1,0 +1,19 @@
+﻿Name:		ADVDX
+Description:	ADVDX system
+Archive:	.dat(no magic) .pak(no magic) .ads(weak magic)
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.1.0
+Status:	        Beta
+
+【TODO】
+support decrypting text in .spt
+
+【Notice】
+when extracting must specify -u parameter
+exsample:
+crage -d "Q:\blackrainbow" -u advdx
+
+【ChangeLog】
+2009-01-24 16:45 ver 1.1.0 supported extracting .adx encrypted archive
+2008-04-26 12:25 ver 1.0.1 fixed a extraction error in overlaing length field due to long name
+2008-02-02 12:24 ver 1.0.0 1st version released

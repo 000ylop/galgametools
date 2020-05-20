@@ -1,0 +1,10 @@
+// pgd2tga.cpp, v1.1 2007/10/05
+// coded by asmodean
+
+// contact: 
+//   web:   http://plaza.rakuten.co.jp/asmodean
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+
+// Decompresses STRIKE's TGA graphics (*.PGD).
+// Depends on pal.dll from various games.

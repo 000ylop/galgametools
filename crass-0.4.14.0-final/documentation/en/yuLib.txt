@@ -1,0 +1,61 @@
+﻿Name:		yuLib
+Description:		
+Archive:	.arc(no magic) .kthb .kmap(weak magic)
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.0.2
+Status:：	Beta
+
+【EXAMPLE】
+Take game "××な彼女のつくりかた プラグインデータ5種" as an example:
+crage -d "M:\(18禁ゲーム) [071122] [kiss] ××な彼女のつくりかた プラグインデータ5種+1まとめ (filez rr3%)"  -u yulib
+plg_Uw4G_Miko.arc: 准备提取封包文件（含66个资源文件） ...
+plg_Uw4G_Miko.arc：成功提取66 / 66个资源文件  /
+
+DateC.arc: 准备提取封包文件（含2个资源文件） ...
+DateC.arc：成功提取2 / 2个资源文件  /
+
+MapC.arc: 准备提取封包文件（含4个资源文件） ...
+MapC.arc：成功提取4 / 4个资源文件  \
+
+plg_Uw4H_Hime.arc: 准备提取封包文件（含210个资源文件） ...
+plg_Uw4H_Hime.arc：成功提取210 / 210个资源文件  /
+
+DateE.arc: 准备提取封包文件（含2个资源文件） ...
+DateE.arc：成功提取2 / 2个资源文件  /
+
+MapE.arc: 准备提取封包文件（含4个资源文件） ...
+MapE.arc：成功提取4 / 4个资源文件  \
+
+plg_Uw4I_Bunny.arc: 准备提取封包文件（含118个资源文件） ...
+plg_Uw4I_Bunny.arc：成功提取118 / 118个资源文件  /
+
+DateB.arc: 准备提取封包文件（含2个资源文件） ...
+DateB.arc：成功提取2 / 2个资源文件  /
+
+MapB.arc: 准备提取封包文件（含4个资源文件） ...
+MapB.arc：成功提取4 / 4个资源文件  \
+
+plg_Uw4J_Apron.arc: 准备提取封包文件（含132个资源文件） ...
+plg_Uw4J_Apron.arc：成功提取132 / 132个资源文件  \
+
+DateD.arc: 准备提取封包文件（含2个资源文件） ...
+DateD.arc：成功提取2 / 2个资源文件  /
+
+MapD.arc: 准备提取封包文件（含4个资源文件） ...
+MapD.arc：成功提取4 / 4个资源文件  \
+
+plg_Uw4K_Henshin.arc: 准备提取封包文件（含80个资源文件） ...
+plg_Uw4K_Henshin.arc：成功提取80 / 80个资源文件  \
+
+DateF.arc: 准备提取封包文件（含2个资源文件） ...
+DateF.arc：成功提取2 / 2个资源文件  /
+
+MapF.arc: 准备提取封包文件（含4个资源文件） ...
+MapF.arc：成功提取4 / 4个资源文件  \
+
+yuLib：成功提取15个.arc封包文件文件 \
+
+【ChangeLog】
+2007-11-24 21:54 ver 1.0.2 supported extracting more types of resource
+2007-11-17 22:36 ver 1.0.1 changed .arc to no magic property
+2007-10-31 23:23 ver 1.0.0 1st version released

@@ -1,0 +1,53 @@
+﻿名称：		N2System
+描述：		株式会社ニトロプラス开发的游戏系统Nitroplus system 2
+封包：		.npa
+作者：		痴漢公賊(glanser@163.com)
+版本：		1.0.5
+成熟度：	正式版
+
+【注意事项】
+提取时必须指定“game”参数，参数值和具体游戏的对应关系是：
+
+·スマガスペシャル － 使用“game=Smgsp”参数提取
+·装甲悪鬼村正 Web体験版 － 使用“game=Muramasa”参数提取
+·Sweet Pool － 使用“game=SweetPool”参数提取
+·スマガ － 使用“game=SMG”参数提取
+·スマガ 3％体験版 － 使用“game=SMGTrial”参数提取
+·CHAOS；HEAD － 使用“game=ChaosHead”参数提取
+·CHAOS；HEAD 体験版 Ver.2 － 使用“game=ChaosHeadTrial2”参数提取
+·CHAOS；HEAD 体験版 － 使用“game=ChaosHeadTrial”参数提取
+·続・殺戮のジャンゴ －地獄の賞金首－ － 使用“game=Django”参数提取
+·続・殺戮のジャンゴ －地獄の賞金首－ 体験版 － 使用“game=DjangoTrial”参数提取
+·Lamento -BEYOND THE VOID- － 使用“game=LamentoBTV”参数提取
+·予告編 ［Lamento -FRAGMENT-］－ 使用“game=LamentoF”参数提取
+
+【提取示例】
+以游戏“続・殺戮のジャンゴ －地獄の賞金首－”为例
+crage -d "E:\Program Files\Nitroplus\懕丒嶦滳偺僕儍儞僑亅抧崠偺徿嬥庱亅" -O game=Django
+cg.npa: 准备提取封包文件（含1817个资源文件） ...
+cg.npa：成功提取1817 / 1817个资源文件  /
+
+nss.npa: 准备提取封包文件（含249个资源文件） ...
+nss.npa：成功提取249 / 249个资源文件  /
+
+sound.npa: 准备提取封包文件（含628个资源文件） ...
+sound.npa：成功提取628 / 628个资源文件  |
+
+system.npa: 准备提取封包文件（含1个资源文件） ...
+system.npa：成功提取1 / 1个资源文件  /
+
+voice.npa: 准备提取封包文件（含3516个资源文件） ...
+voice.npa：成功提取3516 / 3516个资源文件  |
+
+N2System：成功提取5个.npa封包文件文件 /
+
+N2System：成功提取35个封包文件
+
+【ChangeLog】
+2009-06-27 15:23 ver 1.0.5 加入参数“game=Smgsp”，支持“スマガスペシャル”的提取
+2009-05-28 10:34 ver 1.0.4 修正提取游戏［Lamento -FRAGMENT-］时发生的错误
+2008-12-23 19:34 ver 1.0.3 加入参数“game=SweetPool”，支持“Sweet Pool”的提取，感谢扬帆之翼提供内存dump数据
+2008-09-28 21:03 ver 1.0.2 加入参数“game=SMG”，支持“スマガ”的提取，感谢緋色の欠片提供内存dump数据
+2008-07-18 21:28 ver 1.0.1 加入参数“game=SMGTrial”，支持“スマガ 3％体験版”的提取
+2008-04-25 10:18 ver 1.0.0 支持“CHAOS；HEAD”的提取，感谢famervan和famergui提供内存dump数据
+2008-04-22 22:21 ver 0.8.0 第一版发布

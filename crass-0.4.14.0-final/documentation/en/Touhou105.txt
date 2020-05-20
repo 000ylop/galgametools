@@ -1,0 +1,13 @@
+﻿Name:		Touhou
+Description:	game system developed by 黄昏フロンティア
+Archive:	.dat(no magic)
+Author:		痴漢公賊 (glanser@163.com)
+Version:	1.0.1
+Status:	        Final
+
+【Notice】
+·when extracting must specify "-u Touhou" parameter
+
+【ChangeLog】
+2008-05-25 21:02 ver 1.0.1 revoked support of trial version, only supported extracting final version
+2008-05-01 14:03 ver 1.0.0 1st version released

@@ -1,0 +1,35 @@
+﻿Name:		TmrHiroADVSystem
+Description:	
+Archive:	.pac(no magic)
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.0.1
+Status:	        Beta
+
+【Notice】
+specify raw parameter to extract original character image
+
+【Sample】
+crage -d J:\mar\人妻搾乳百貨店 -u TmrHiroADVSystem
+grd.pac: 准备提取封包文件（含427个资源文件） ...
+grd.pac：成功提取427 / 427个资源文件  -
+
+mus.pac: 准备提取封包文件（含9个资源文件） ...
+mus.pac：成功提取9 / 9个资源文件  |
+
+se.pac: 准备提取封包文件（含45个资源文件） ...
+se.pac：成功提取45 / 45个资源文件  |
+
+srp.pac: 准备提取封包文件（含34个资源文件） ...
+srp.pac：成功提取34 / 34个资源文件  /
+
+sse.pac: 准备提取封包文件（含9个资源文件） ...
+sse.pac：成功提取9 / 9个资源文件  |
+
+vic.pac: 准备提取封包文件（含1320个资源文件） ...
+vic.pac：成功提取1320 / 1320个资源文件  \
+
+TmrHiroADVSystem：成功提取6个.pac封包文件
+
+【ChangeLog】
+2007-12-30 12:00 ver 1.0.1 added raw parameter(thanks pcicp) 
+2008-02-03 01:25 ver 1.0.0 1st version released

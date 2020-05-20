@@ -1,0 +1,21 @@
+/*
+    YS6 Ó¾×°Í¼Æ¬½âÂë½Å±¾
+*/
+
+name = mem.getUint [sys.argv, 2];
+data = io.readFileA [name, @size];
+
+fp = io.fopenA [name, "wb"];
+
+t1 = 0x31415926;
+for [i = 0; i < size; i += 1]
+[
+    t1 *= 0x3D09;
+    t2  = t1 >> 0x10;
+    t2 &= 0xFF;
+
+    c = mem.getByte [data, i];
+    io.writeByte [c - t2, fp];
+]
+mem.free [data];
+io.fclose [fp];

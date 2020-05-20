@@ -1,0 +1,69 @@
+﻿Name:            	DaiSystem
+Description:        	DaiSystem(DAI氏)
+Archive:   	 	.pac
+Author:            	痴漢公賊 (glanser@163.com)
+Version:        	0.9.0
+Status: 		Alpha
+Translation:		ravenex
+
+【TODO】
+To support decode modes 1.
+
+【.dat archive info】
+    resource archive with directory structure within
+    original data may be one of bmp (CGs), ogg (sound and voice) or plain text (scripts).
+    
+    	HEADER:
+            	s8 magic[16];		// "DAI_SYSTEM_01000"
+            	u16 index_entries;      // file count
+            	u32 index_length;       // length of index
+        	INDEX: index entries are encrypted and of variable lengths
+            	xxxx,yyyy,
+            	"xxxx" is the original file name; "yyyy" is the offset (from head of archive); these fields are sperated by a comma (",").
+        CONTENTS:
+            	Following INDEX are the contents, which may be one of "Scripts", "CGs" or "OGGs":
+
+		【Scripts】plain text
+	    	SUB_HEADER:
+			s8 magic[3];			// "HA0"
+			u8 parameter_length;            // 2 bytes
+			u32 uncomprlen;                 // uncompressed data length
+			u8 mode[4];                     // decode mode ( 1 - unknown; 2 - unknown; 3 - byte level encryption; 4 - lzss compression )
+			u32 reserved;
+			s8 parameter[2];                // "OK"
+			u32 uncomprlen0;                // uncompressed data length
+			u32 flag_bitmap_bit_length;     // number of valid bits of the flags
+			u32 flag_bitmap_byte_length;    // number of bytes used by the flags
+	    	ACTUAL_CONTENT:
+			Following the SUB_HEADER; actual format depends on decode mode.
+
+		【CGs】raster image, always 24 bits per pixel
+    		SUB_HEADER:
+            		s8 magic[3];                    // "HA0"
+            		u8 parameter_length;            // 5 bytes
+            		u32 uncomprlen;                 // uncompressed data length
+            		u8 mode[4];                     // decode mode ( 1 - unknown; 2 - unknown; 3 - byte level encryption; 4 - lzss compression )
+            		u32 reserved;
+            		u16 width;                      // image width
+            		u16 height;                     // image height
+            		u8 have_alpha;                  // zero - without alpha; non-zero: with alpha
+            		u32 uncomprlen0;                // uncompressed data length
+            		u32 flag_bitmap_bit_length;     // number of valid bits of the flags
+            		u32 flag_bitmap_byte_length;    // number of bytes used by the flags
+    		ACTUAL_CONTENT:
+            		Following the SUB_HEADER; actual format depends on decode mode.
+
+		【OGGs】Ogg Vorbis audio files
+    		SUB_HEADER:
+            		s8 magic[3];                    // "HA0"
+            		u8 parameter_length;            // 2 bytes
+            		u32 uncomprlen;                 // uncompressed data length
+            		u8 mode[4];                     // always zero
+            		u32 reserved;
+            		s8 parameter[2];                // "OK"
+    		ACTUAL_CONTENT:
+            		Following the SUB_HEADER are the ogg audio files.
+
+【ChangeLog】
+2008-04-21 15:16 ver 0.9.0 supported decoding control field method 2; re-programmed extraction code
+2007-05-07 04:11 ver 0.8.0 First release

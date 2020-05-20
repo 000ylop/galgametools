@@ -1,0 +1,9 @@
+﻿Name: 		bruns-system
+Description: 		
+Archive: 	.um3 .brs .bmp .scm .bso .dat .cfg .png .brs
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	0.5.0
+Status: 	Alpha
+
+【ChangeLog】
+2008-03-25 18:53 ver 0.8.0 1st version released

@@ -1,0 +1,9 @@
+// cpb2bmp_rl.cpp, v1.1 2010/02/04
+// coded by asmodean
+
+// contact: 
+//   web:   http://asmodean.reverse.net
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+
+// This tool converts TYP1 and TYP2 (*.cpb) images used by Rune Lord.

@@ -1,0 +1,9 @@
+// exbelldat.cpp, v1.35 2013/01/20
+// coded by asmodean
+
+// contact: 
+//   web:   http://asmodean.reverse.net
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+
+// This tool extracts/decompresses data from Tinkerbell's arc*.dat archives.

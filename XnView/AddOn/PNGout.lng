@@ -1,0 +1,145 @@
+[en]
+1=Save
+2=Cancel
+
+-1=PNGout
+1000=Filter:
+1002=Strategy:
+1004=Keep the palette order intact
+
+[en-str]
+1=If source file is in PNG, it will be overwrited... Do you want to continue? 
+2=Auto
+3=None
+4=Sub (delta x)
+5=Up (delta y)
+6=Average (delta x&y)
+7=Paeth
+8=Adaptive (mixed)
+9=Xtreme! (Slowest)
+10=Intense (Slow)
+11=Longest Match (Fast)
+12=Huffman Only (Faster)
+13=Uncompressed (Fastest)
+
+[fr]
+1=Sauver
+2=Annuler
+
+-1=PNGout
+1000=Filtre:
+1002=Stratйgie:
+1004=Garder intact l'ordre de la palette
+
+[fr-str]
+1=Si le fichier source est en PNG, il sera йcrasй... Voulez-vous continuer? 
+2=Auto
+3=Aucun
+4=Sub (delta x)
+5=Up (delta y)
+6=Average (delta x&y)
+7=Paeth
+8=Adaptive (mixed)
+9=Xtreme! (Le plus lent)
+10=Intense (Lent)
+11=Longest Match (Rapide)
+12=Huffman Only (Trиs rapide)
+13=Non compressй (Le plus rapide)
+
+
+[de]
+1=Speichern
+2=Abbrechen
+
+-1=PNGout
+1000=Filter:
+1002=Strategie:
+1004=Palettenreihenfolge beibehalten
+
+[de-str]
+1=Falls die Originaldatei das PNG-Format hat, wird sie ьberschrieben. Wollen Sie fortsetzen? 
+2=Auto
+3=Keine
+4=Sub (Delta x)
+5=Up (Delta y)
+6=Durchschnitt (Delta x&y)
+7=Paeth
+8=Adaptiv (gemischt)
+9=Xtreme! (Sehr langsam)
+10=Intense (Langsam)
+11=Longest Match (Normal)
+12=Huffman Only (Schnell)
+13=Unkomprimiert (Sehr schnell)
+
+
+[sv]
+1=Spara
+2=Avbryt
+
+-1=PNGout
+1000=Filter:
+1002=Strategi:
+1004=Behеll palettordningen intakt
+
+[sv-str]
+1=Om kдllfilen дr i PNG kommer den att fцrstцras... vill du fortsдtta? 
+2=Automatiskt
+3=Ingen
+4=Sub (delta x)
+5=Up (delta y)
+6=Medel (delta x&y)
+7=Paeth
+8=Adaptiv (blandad)
+9=Xtreme! (Lеngsammast)
+10=Intensiv (Lеngsam)
+11=Lдngsta matchning (Snabb)
+12=Bara Huffman (Mycket snabb)
+13=Ingen komprimering (Snabbast)
+
+[fi]
+1=Tallenna
+2=Peruuta
+
+-1=PNGout
+1000=Suodatus:
+1002=Menetelmд:
+1004=Sдilytд paletin vдrijдrjestys
+
+[fi-str]
+1=Jos tiedoston lдhdemuoto on PNG, tiedosto ylikirjoitetaan... Haluatko jatkaa?
+2=Automaattinen
+3=Ei mitддn
+4=Sub (delta x)
+5=Up (delta y)
+6=Tavallinen/Keskiverto (delta x&y)
+7=Paeth
+8=Mukautuva (sekoitettu)
+9=Ддrimmдinen! (Hitain)
+10=Voimakas (Hidas)
+11=Pisin sovitus (Nopea)
+12=Vain Huffman (Nopeampi)
+13=Pakkaamaton (Nopein)
+
+[ru]
+1=Сохранить
+2=Отмена
+
+-1=PNGout
+1000=Фильтр:
+1002=Метод преобразования:
+1004=Сохр.порядок распол.палитры
+
+[ru-str]
+1=Если исходный файл в формате PNG, он будет перезаписан... Желаете продолжить? 
+2=Автоматически
+3=Отсутствует
+4=Sub (delta X)
+5=Up (delta Y)
+6=Average (delta X&Y)
+7=Paeth
+8=Адаптивный (смешанный)
+9=Максимальное сжатие (очень медленно)
+10=Сильное сжатие (медленно)
+11=Быстрое сжатие
+12=Алгоритм Хаффмана (быстрый)
+13=Не сжимать (самый быстрый)

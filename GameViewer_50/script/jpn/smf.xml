@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="Hypatia.dll" 接口名="PAK" 0 />
+	<插件 文件名="Hypatia.dll" 接口名="WBM" 1 />
+
+	<文件 文件名="Data\Ev??.pak" 插件="0" />
+	<文件 文件名="Data\Fv??.pak" 插件="0" />
+
+	<文件 文件名="Data\Graphic.pak"     插件="0" />
+	<文件 文件名="Data\Inter.pak"       插件="0" />
+	<文件 文件名="Data\Manual.pak"      插件="0" />
+	<文件 文件名="Data\Script0.ini.pak" 插件="0" />
+	<文件 文件名="Data\Se.pak"          插件="0" />
+	<文件 文件名="Data\Script0.pak"     插件="0" 编码="0" />
+
+	<文件 文件名="*.Wbm" 插件="1" 数据文件="smf.act" />
+
+</游戏脚本>

@@ -1,0 +1,65 @@
+/*
+    GameViewer »ù±¾ HLSL äÖÈ¾½Å±¾
+*/
+
+if   [gv.state == gv.LOOP]
+[
+    SetMVPMatToVS [gv.tran, 0];
+
+    SetDecl [gv.mesh];
+
+    DIP [gv.mesh];
+
+    return;
+]
+elif [gv.state == gv.LOAD]
+[
+    EnableVS [shader];
+    return;
+]
+elif [gv.state == gv.EXIT]
+[
+    DisableVS [shader];
+    return;
+]
+elif [gv.state == gv.INIT]
+[
+
+    vs = """
+            struct  VS_INPUT
+            {
+                float4  vPosition : POSITION;
+                float4  vNormal   : NORMAL;
+                float2  vTexture  : TEXCOORD0;
+            };
+
+            struct  VS_OUTPUT
+            {
+                float4  vPosition : POSITION;
+                float4  vDiffuse  : COLOR0;
+                float2  vTexture  : TEXCOORD0;
+            };
+
+            float4x4    MVP : register(c0);
+
+            VS_OUTPUT   vs_main (VS_INPUT input)
+            {
+                VS_OUTPUT   output;
+
+                output.vPosition = mul(input.vPosition, MVP);
+                output.vDiffuse  = float4(1, 1, 1, 1);
+                output.vTexture  = input.vTexture;
+
+                return output;
+            }
+    """;
+
+    shader = CreateHlslShader [];
+    CompileVS [shader, vs];
+
+    UseDecl [];
+]
+else
+[
+    ReleaseShader [shader];
+]

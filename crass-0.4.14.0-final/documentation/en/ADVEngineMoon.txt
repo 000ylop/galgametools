@@ -1,0 +1,15 @@
+﻿Name:		ADVEngineMoon
+Description:		
+Archive:	no extension
+Author:	        绫波微步
+Version:	0.9.0
+Status:	        Alpha
+
+【TODO】
+some fields are unknown
+
+【Notice】
+.amd file is video, it's directly able to playback with media classic
+
+【ChangeLog】
+2008-02-04 13:24 ver 0.9.0 1st version released

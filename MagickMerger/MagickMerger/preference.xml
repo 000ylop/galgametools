@@ -1,0 +1,5 @@
+<Preference>
+    <AccessPath>F:\Sourcefiles\CGRIP\MagickMerger</AccessPath>
+    <IMPath>C:\Program Files\ImageMagick-6.7.2-Q16</IMPath>
+    <BatchPath>F:\Sourcefiles\CGRIP\MagickMerger\merge.bat</BatchPath>
+</Preference>

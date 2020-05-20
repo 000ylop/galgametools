@@ -1,0 +1,83 @@
+﻿Name:		Lucifen
+Description:	Lucifen Library
+Archive:	.LPK .elg
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	0.8.0
+Status:	        Alpha
+
+【TODO】
+·support old Lucifen Library & Tools version
+·support to extract .lag resource
+
+【Notice】
+·it's must to specify script or game parameter for extracting .LPK; script parameter stand for file path of SCRIPT.LPK; if you get failed to rip, please use game parameter instead.
+·except SCRIPT.LPK if other LPK can't be extracted, please upload SCRIPT.LPK so that 痴漢公賊 can find decryption key.
+
+真説 猟奇の檻 第2章：specify game=sin_ryouki2 to rip
+
+【Sample】
+·take game "ね～PON？×らいPON！" as example:
+crage -d "E:\Program Files\NaponLipon" -O script="E:\Program Files\NaponLipon\SCRIPT.LPK"
+
+BGM.LPK: start the extraction (containing 24 resources) ...
+BGM.LPK: extracted resource 24 / 244 |
+
+CHR.LPK: start the extraction (containing 2149 resources) ...
+CHR.LPK: extracted resource 2149 / 21499 /
+
+DATA.LPK: start the extraction (containing 1 resources) ...
+DATA.LPK: extracted resource 1 / 11 /
+
+DESKTOP.LPK: start the extraction (containing 45 resources) ...
+DESKTOP.LPK: extracted resource 45 / 455 /
+
+PIC.LPK: start the extraction (containing 440 resources) ...
+PIC.LPK: extracted resource 440 / 4400 |
+
+SCRIPT.LPK: start the extraction (containing 177 resources) ...
+SCRIPT.LPK: extracted resource 177 / 1777 /
+
+SE.LPK: start the extraction (containing 69 resources) ...
+SE.LPK: extracted resource 69 / 699 /
+
+SYS.LPK: start the extraction (containing 867 resources) ...
+SYS.LPK: extracted resource 867 / 8677 \
+
+VOICE.LPK: start the extraction (containing 12457 resources) ...
+VOICE.LPK: extracted resource 12457 / 124577 /
+
+Lucifen: extracted 9 packages
+
+·take game "真説 猟奇の檻 第2章 体験版" as example:
+crage -d "Q:\sin_ryouki2_trial\恀愢 椔婏偺烞 戞俀復 懱尡斉" -O game=sin_ryouki2
+
+BGM.LPK: start the extraction (containing 16 resources) ...
+BGM.LPK: extracted resource 16 / 166 |
+
+CHR.LPK: start the extraction (containing 148 resources) ...
+CHR.LPK: extracted resource 148 / 1488 |
+
+DATA.LPK: start the extraction (containing 1 resources) ...
+DATA.LPK: extracted resource 1 / 11 /
+
+PIC.LPK: start the extraction (containing 110 resources) ...
+PIC.LPK: extracted resource 110 / 1100 -
+
+SCRIPT.LPK: start the extraction (containing 305 resources) ...
+SCRIPT.LPK: extracted resource 305 / 3055 /
+
+SE.LPK: start the extraction (containing 43 resources) ...
+SE.LPK: extracted resource 43 / 433 \
+
+SYS.LPK: start the extraction (containing 145 resources) ...
+SYS.LPK: extracted resource 145 / 1455 /
+
+VOICE.LPK: start the extraction (containing 3468 resources) ...
+VOICE.LPK: extracted resource 3468 / 34688 |
+
+Lucifen: extracted 8 packages
+
+【ChangeLog】
+2009-04-30 22:54 ver 0.8.0 re-add game parameter to rip
+2009-01-31 18:21 ver 0.7.0 added script parameter to replace game parameter, so that to support feature of automatically detecting key
+2009-01-31 15:11 ver 0.5.0 1st version released

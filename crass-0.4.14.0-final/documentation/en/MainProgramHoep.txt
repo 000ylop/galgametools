@@ -1,0 +1,28 @@
+﻿Name:		MainProgramHoep
+Description:
+Archive:	.sce(weak magic) .amw(weak magic) .amb .amp .pck .eog .cwp .dat .cwd .cw_ .cwl
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.1.1
+Statis:	        Beta
+
+【NOTICE】
+·Original images should be 24-bit+α PNGs, which can not be supported by XP's preview function or mass image-viewing softwares. (Vista supports it, anyway). So in default, crage will export BMP files. 
+To extract original 24-bit+α PNGs, please use the parameter "SaveAsPNG".
+
+【EXAMPLE】
+·crage -d m:\am\feeler01\cg -O SaveAsPNG
+H-130.amp: 准备提取资源封包文件 ...
+H-130.amp：成功提取1 / 1个资源文件  |
+
+H-131.amp: 准备提取资源封包文件 ...
+H-131.amp：成功提取1 / 1个资源文件  |
+
+H-132.amp: 准备提取资源封包文件 ...
+H-132.amp：成功提取1 / 1个资源文件  
+
+【ChangeLog】
+2009-03-06 22:38 ver 1.1.1 removed no magic signature of .pck; saved as 24-bit color by image resource
+2008-03-29 13:44 ver 1.1.0 supported extracting .cwl resource
+2007-12-12 21:46 ver 1.0.2 supported extracting .cwp resource in .pck
+2007-10-18 19:11 ver 1.0.1 supported extracting .dat and .cwd resource
+2007-10-17 22:30 ver 1.0.0 1st version released

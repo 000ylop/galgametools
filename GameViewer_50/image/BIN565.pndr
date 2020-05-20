@@ -1,0 +1,18 @@
+/*
+    GameViewer 16位色(565)二进制图片输出脚本
+*/
+
+if [gv.state == gv.LOOP]
+[
+    fp = io.fopenW [gv.fileName, L"wb"];
+
+//    io.writeUint [gv.width,  fp];
+//    io.writeUint [gv.height, fp];
+
+    size = gv.width * gv.height;
+
+    gv.to565 [gv.image, size];
+
+    io.fwrite [gv.image, size * 2, 1, fp];
+    io.fclose [fp];
+]

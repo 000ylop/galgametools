@@ -1,0 +1,47 @@
+﻿Name: 		Hypatia
+Description: 		
+Archive: 	.pak .dat
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	1.0.0
+Status: 	Beta
+
+【.pak Archive Info】
+    the .pak is actual type of archive with directory.
+    meta-data according to practical situation can be all kinds of resources.
+  
+   	header: 
+		s8 magic[6];    	// "HyPack"
+		u16 version;		// 0x0100, 0x0200, 0x0300 or 0x0301
+		u32 index_offset;	// index segment offset
+		u32 index_entries;	// resource number
+	index segment(version 0x0100)：
+		s8 name[21];		// resource name
+		s8 suffix[3];		// resource extension
+		u32 offset;		// resource data offset(requiring to add header length)
+		u32 length;		// resource data length
+	index segment(version 0x0200)：
+		s8 name[21];		// resource name
+		s8 suffix[3];		// resource extension
+		u32 offset;		// resource data offset(requiring to add header length)
+		u32 uncomprLen;		// data length after decompression/decoding resource
+		u32 comprLen;		// resource data length
+		u8 mode;		// 1 - variant of lzss compression; 2 - BWT transformation + MTF transformation + RangeCoder compression; 3 - choosing inverse transformation; other - plain-text data
+	index segment(version 0x0300或0x0301)：
+		s8 name[21];		// resource name
+		s8 suffix[3];		// resource extension
+		u32 offset;		// resource data offset(requiring to add header length)
+		u32 uncomprLen;		// data length after decompression/decoding resource
+		u32 comprLen;		// resource data length
+		u8 mode;		// 1 - variant of lzss compression; 2 - BWT transformation + MTF transformation + RangeCoder compression; 3 - choosing inverse transformation; other - plaintext data
+		u8 do_crc_check;	// always is 1 
+		u16 crc;		// crc check sum of resource data
+		FILETIME time_stamp;	// windows timestamp
+	data: 
+		closely behind header.
+
+【ChangeLog】
+                 ver 1.0.0 supported checking crc; supported archive in type of version 0x100 and 0x200; fixed bug for decompression code; updated specification about pak format in document
+2007-11-06 22:54 ver 0.9.1 supported extracting .dat archive
+2007-04-25 20:41 ver 0.9.0 fixed a error in unchecking boundary when decompressing type 1; supported 发明工坊-重现蓝海之都的光芒(chinese version)
+2007-03-31 14:09 ver 0.1.0 supported extracting type mode2 resource; supported ASDVD～生まれたばかりのLoveSong(thansk 名雪君 for testing)
+2007-03-29 18:28 ver 0.0.1 1st version released

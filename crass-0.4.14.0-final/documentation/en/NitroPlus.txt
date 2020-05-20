@@ -1,0 +1,79 @@
+﻿Name: 		NitroPlus
+Description: 	
+Archive: 	.pak
+Author: 	痴漢公賊 (glanser@163.com)
+Version: 	1.0.3
+Status: 	Final
+
+【.pak Archive Info】
+    the pak is actual type of archive with directory.
+    original data according to practical situation, can be png, jpg, ogg, ini, nps(script), txt(script) and so on.
+
+    	header: 
+		u32 version;	// 1, 2, 3 or 4
+		
+		on the basis of difference of version field, division into 4 different archive.
+
+【.pak(Ver2) Archive Info】
+	header: 	
+		u32 version;		// 2
+		u32 index_entries;	// resource number
+		u32 uncomprlen;		// length of index segment decompression
+		u32 comprlen;		// length of index segment zlib compression 
+		u32 unknown1;		// 0 or 0x100(related to is_compr?)	
+		s8 magic[256];		// always is game's english name 
+ 	index segment: zlib compression，index item with variable length
+		u32 name_length;	// resource name length
+		s8 *name;		// resource name
+		u32 offset;		// resource data offset(count from index segment ending)
+		u32 uncomprlen;		// decompressed data length
+		u32 act_length;		// actual data length
+		u32 is_compr;		// whether in zlib compression(0-no zlib compression; 1-zlib compression)
+		u32 comprlen;		// data length of zlib compression(if is_compr is 0, the field is 0)
+	data: 
+		closely behind index segment; about state of is_compr as 0, data is plaintext; if is_compr is 1, need decompression.
+
+【.pak(Ver3) Archive Info】
+	header: 	
+		u32 version;		// 3
+		u32 index_entries;	// resource number
+		u32 uncomprlen;		// length of index segment decompression
+		u32 comprlen;		// length of index segment zlib compression 
+		u32 unknown[2];
+		s8 magic[256];		// always is game's english name 
+ 	index segment: zlib compression，index item with variable length
+		u32 name_length;	// resource name length
+		s8 *name;		// resource name
+		u32 offset;		// resource data offset(count from index segment ending)
+		u32 uncomprlen;		// decompressed data length
+		u32 act_length;		// actual data length
+		u32 is_compr;		// whether in zlib compression(0-no zlib compression; 1-zlib compression)
+		u32 comprlen;		// data length of zlib compression(if is_compr is 0, the field is 0)
+	data: 
+		closely behind index segment; about state of is_compr as 0, data is plaintext; if is_compr is 1, need decompression.
+
+notice: ver3 has a variant，format as same as ver4, only version field is 3.
+
+【.pak(Ver4) Archive Info】
+	header: 	
+		u32 version;		// 4
+		s8 magic[256];		// xor decryption key(always is game's english name)
+		u32 xor_factor;		// using for xor decrypting comprlen field
+		u32 uncomprlen;		// length of index segment decompression(encryption)
+		u32 index_entries;	// resource number(encryption)
+		u32 comprlen;		// length of index segment zlib compression(encryption)
+ 	index segment: zlib compression，index item with variable length
+		u32 name_length;	// resource name length
+		s8 *name;		// resource name，also xor decryption key
+		u32 offset;		// resource data offset(count from index segment ending)(encryption)
+		u32 uncomprlen;		// decompressed data length(encryption)
+		u32 next_offset;	// offset to next index item in index segment(encryption)
+		u32 is_compr;		// whether in zlib compression(0-no zlib compression; 1-zlib compression)(encryption)
+		u32 comprlen;		// data length of zlib compression(if is_compr is 0, the field is 0)(encryption)
+	data: encryption
+		closely behind index segment; about state of is_compr as 0, data need xor decoding(decoding previous 1024 bytes at most); if is_compr is 1, require to xor decoding all decompressed data.
+
+【ChangeLog】
+2009-06-21 12:53 ver 1.0.3 support ver1 archive format
+2007-08-19 22:41 ver 1.0.1 supported ver2 and a variant of ver3
+2007-05-10 00:13 ver 0.9.0 1st version released

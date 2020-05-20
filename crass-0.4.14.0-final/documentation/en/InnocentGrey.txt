@@ -1,0 +1,33 @@
+﻿Name:		InnocentGrey
+Description:	Innocent Grey game system (http://www.gungnir.co.jp/innocentgrey/)
+Archive:	.dat .d .s(weak magic)
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	0.9.3
+Status: 	Alpha
+
+【TODO】
+Completely analysis of field "mode".
+
+【.dat Archive Info】
+    the .dat is actual type of archive with directory.
+    meta-data according to practical situation, can be bmp, ogg, s(binary script) and so on.
+    
+    	header:
+		s8 magic[8];		// "PACKDAT."
+		u32 index_entries0;	// resource number(no using)
+		u32 index_entries;	// resource number	
+	index segment:
+		s8 name[32];		// resource name
+		u32 offset;		// resource data offset(count from header)
+		u32 mode;		// any bit in low 24-bit is 1, means need decryption; otherwise is plain-text data
+		u32 uncomprlen;		// data length after decrypting
+		u32 comprlen;		// resource data length
+	data:
+		closely behind index segment.
+		if resource is .s binary script, it's required to complement by byte data.
+
+【ChangeLog】
+2008-07-30 10:18 ver 0.9.3 supported extracting .d dummy file
+2008-05-15 10:47 ver 0.9.2 supported extracting .s file
+2008-05-04 11:55 ver 0.9.1 supported decrypting mode 0x10000
+2007-04-17 21:21 ver 0.9.0 1st version released

@@ -1,0 +1,67 @@
+/*
+    GameViewer 32位色 ZAW 图片输出脚本
+*/
+
+if   [gv.state == gv.INIT]
+[
+    keys = mem.alloc [256 * 4];
+
+    for [i = 0, i < 256, i += 1]
+    [
+        t = i;
+        for [b = 8, b != 0, b -= 1]
+        [
+            if [t & 1]
+            [
+                t >>= 1;
+                t  ^= 0xEDB88320;
+            ]
+            else
+            [
+                t >>= 1;
+            ]
+        ]
+        mem.setUint [keys, i, t];
+    ]
+    head = "\x5A\x41\x57\x00\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00
+\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00
+\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00";
+
+    dll  = sys.loadBin ["core.dll"];
+    zcmp = sys.getBinCall [dll, "ZlibEncode"];
+    sys.setCallC [sys.self, "core.zcmp", zcmp, 4, type.int];
+]
+elif [gv.state == gv.TERM]
+[
+    sys.freeBin [dll];
+    mem.free [keys];
+]
+else
+[
+    size = gv.width * gv.height * 4;
+    ndst = core.zcmp [0, 0, gv.image, size];
+    dest = mem.alloc [ndst];
+    ndst = core.zcmp [dest, ndst, gv.image, size];
+
+    mem.setUint [head, 1, 0];
+    mem.setUint [head, 2, ndst];
+    mem.setUint [head, 4, gv.width];
+    mem.setUint [head, 5, gv.height];
+
+    k = 0xFFFFFFFF;
+    for [i = 0, i < 64, i += 1]
+    [
+        j   = mem.getByte [head, i] ^ k;
+        k >>= 8;
+        k  ^= mem.getUint [keys, j & 0xFF];
+    ]
+    mem.setUint [head, 1, ~k];
+
+    fp = io.fopenW [gv.fileName, L"wb"];
+    io.fwrite [head, 64,   1, fp];
+    io.fwrite [dest, ndst, 1, fp];
+    io.fclose [fp];
+
+    mem.free [dest];
+]

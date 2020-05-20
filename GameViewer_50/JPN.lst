@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏列表>
+
+	<分类 名称="AIL">
+				<游戏 名称="肉体改造[P]" 文件="jpn\nurse.xml" />
+	</分类>
+
+	<分类 名称="ALICE-SOFT">
+				<游戏 名称="人妻2[AP]"         文件="jpn\a-system.xml" 编码="932" />
+				<游戏 名称="大悪司[AP]"        文件="jpn\a-system.xml" 编码="932" />
+				<游戏 名称="鬼畜王兰斯[AP]"    文件="jpn\a-system.xml" 编码="932" />
+				<游戏 名称="COSPLAY LEMON[AP]" 文件="jpn\a-system.xml"            />
+	</分类>
+
+	<分类 名称="aromarie">
+				<游戏 名称="月ノ光太陽ノ影[AP]" 文件="jpn\axre.xml" />
+	</分类>
+
+	<分类 名称="ARTDINK">
+				<游戏 名称="侠客游3[AP]"         文件="jpn\lunatic34.xml" />
+				<游戏 名称="侠客游4[AP]"         文件="jpn\lunatic34.xml" />
+				<游戏 名称="侠客游-未来之书[AP]" 文件="jpn\lunatic95.xml" />
+				<游戏 名称="侠客游-前途道标[AP]" 文件="jpn\lunatic95.xml" />
+				<游戏 名称="侠客游-第三之书[AP]" 文件="jpn\lunatic3b.xml" />
+	</分类>
+
+	<分类 名称="Black Rainbow">
+				<游戏 名称="催眠学园[AP]" 文件="jpn\gsd.xml" />
+	</分类>
+
+	<分类 名称="Broccoli">
+				<游戏 名称="仲夏夜之梦[AP]"                  文件="jpn\dfantasy.xml"              />
+				<游戏 名称="银河天使-月夜情人[AP]"           文件="jpn\ga1.xml"                   />
+				<游戏 名称="银河天使-永恒情人[AP]"           文件="jpn\ga1.xml"                   />
+				<游戏 名称="魔法少女-未知的天空艾塔提亚[AP]" 文件="jpn\crossworld.xml" 编码="932" />
+	</分类>
+
+	<分类 名称="EGO">
+				<游戏 名称="红泪[AP]"         文件="jpn\ego.xml" />
+				<游戏 名称="新圣魔大战[AP]"   文件="jpn\ego.xml" />
+				<游戏 名称="苍青色的月光[AP]" 文件="jpn\ego.xml" />
+	</分类>
+
+	<分类 名称="ELF">
+				<游戏 名称="鬼作[P]"             文件="jpn\ai5_1.xml" />
+				<游戏 名称="秃作[P]"             文件="jpn\ai5_1.xml" />
+				<游戏 名称="遗作[AP]"            文件="jpn\ai5_2.xml" />
+				<游戏 名称="下级生[AP]"          文件="jpn\ai5_3.xml" />
+				<游戏 名称="同级生[AP]"          文件="jpn\ai5_2.xml" />
+				<游戏 名称="同级生2[AP]"         文件="jpn\napa2.xml" />
+				<游戏 名称="ELF全明星脫衣雀[AP]" 文件="jpn\ai5_4.xml" />
+	</分类>
+
+	<分类 名称="EnterBrain">
+				<游戏 名称="超魔法大战[AP]" 文件="jpn\crosshermit.xml" />
+	</分类>
+
+	<分类 名称="EXE Create">
+				<游戏 名称="失忆的天使[AP]" 文件="jpn\frane1.xml" />
+				<游戏 名称="圣界的奇迹[AP]" 文件="jpn\frane2.xml" />
+				<游戏 名称="绯苍幻想曲[AP]" 文件="jpn\frane3.xml" />
+	</分类>
+
+	<分类 名称="F&C">
+				<游戏 名称="公主的回忆[AP]" 文件="jpn\pmemory.xml" />
+	</分类>
+
+	<分类 名称="Falcom">
+				<游戏 名称="英雄传说3-白发魔女[AP]"   文件="jpn\ed3win.xml"            />
+				<游戏 名称="英雄传说4-朱红的泪[AP]"   文件="jpn\ed4win.xml"            />
+				<游戏 名称="英雄传说5-海之槛歌[AP]"   文件="jpn\ed5win.xml"            />
+				<游戏 名称="英雄传说6-空之轨迹[APM]"  文件="jpn\ed6win.xml"            />
+				<游戏 名称="伊苏O-起源[AP]"           文件="jpn\ys3d.xml"   编码="932" />
+				<游戏 名称="永远的伊苏1[P]"           文件="jpn\yse1.xml"              />
+				<游戏 名称="永远的伊苏2[P]"           文件="jpn\yse2.xml"              />
+				<游戏 名称="伊苏F-菲尔盖娜之誓约[AP]" 文件="jpn\ys3d.xml"   编码="932" />
+				<游戏 名称="伊苏6-纳比斯汀的方舟[AP]" 文件="jpn\ys3d.xml"   编码="932" />
+				<游戏 名称="双星物语[P]"              文件="jpn\zwei.xml"              />
+				<游戏 名称="英雄传说3-白发魔女PSP[P]" 文件="jpn\ed3psp.xml"            />
+				<游戏 名称="英雄传说4-朱红的泪PSP[P]" 文件="jpn\ed4psp.xml"            />
+				<游戏 名称="英雄传说5-海之槛歌PSP[P]" 文件="jpn\ed5psp.xml"            />
+	</分类>
+
+	<分类 名称="Front Wing">
+				<游戏 名称="TimeLeap[APM]" 文件="jpn\timeleap.xml" 编码="932" />
+	</分类>
+
+	<分类 名称="GAINAX">
+				<游戏 名称="美少女梦工厂1-绮丽版[AP]"         文件="jpn\pm1r.xml"             />
+				<游戏 名称="美少女梦工厂2-豪华版[AP]"         文件="jpn\pm2.xml"              />
+				<游戏 名称="美少女梦工厂2-绮丽版[AP]"         文件="jpn\pm2r.xml"             />
+				<游戏 名称="美少女梦工厂3-加强版[AP]"         文件="jpn\pm3r.xml"             />
+				<游戏 名称="美少女梦工厂3-梦幻妖精[AP]"       文件="jpn\pm3.xml"              />
+				<游戏 名称="美少女梦工厂4-繁体版[AP]"         文件="jpn\pm4.xml"              />
+				<游戏 名称="美少女梦工厂4-完璧版[AP]"         文件="jpn\pm4r.xml"             />
+				<游戏 名称="美少女梦工厂4-今天吉普不在家[AP]" 文件="jpn\pm4r.xml"             />
+				<游戏 名称="美少女梦工厂5[AP]"                文件="jpn\pm5.xml"              />
+				<游戏 名称="新世纪福音战士-钢铁的女友[AP]"    文件="jpn\eva95.xml" 编码="932" />
+	</分类>
+
+	<分类 名称="GeneX">
+				<游戏 名称="梦幻奇缘2[P]" 文件="jpn\fanta2.xml" />
+	</分类>
+
+	<分类 名称="Illusion">
+				<游戏 名称="尾行2[AP]"         文件="jpn\biko2.xml"   />
+				<游戏 名称="电车之狼VR[AP]"    文件="jpn\ipvr.xml"    />
+				<游戏 名称="监禁-千雨脱出[AP]" 文件="jpn\requiem.xml" />
+	</分类>
+
+	<分类 名称="Kakuya">
+				<游戏 名称="妹汁[AP]"                         文件="jpn\advwtl.xml" 编码="932" />
+				<游戏 名称="姉汁～白川三姉妹におまかせ～[AP]" 文件="jpn\advwtl.xml" 编码="932" />
+	</分类>
+
+	<分类 名称="KEY">
+				<游戏 名称="家族[P]"            文件="jpn\reallive.xml" />
+				<游戏 名称="星之梦[P]"          文件="jpn\reallive.xml" />
+				<游戏 名称="Little Busters![P]" 文件="jpn\reallive.xml" />
+	</分类>
+
+	<分类 名称="KID">
+				<游戏 名称="见习天使[P]"              文件="jpn\memoff123.xml"           />
+				<游戏 名称="秋之回忆1[P]"             文件="jpn\memoff123.xml"           />
+				<游戏 名称="秋之回忆2[P]"             文件="jpn\memoff123.xml"           />
+				<游戏 名称="秋之回忆3-从今以后[AP]"   文件="jpn\memoff123.xml"           />
+				<游戏 名称="秋之回忆4-想君[AP]"       文件="jpn\memoff4.xml"             />
+				<游戏 名称="秋之回忆5-中断的胶片[AP]" 文件="jpn\memoff5.xml"   编码="-2" />
+	</分类>
+
+	<分类 名称="KOEI">
+				<游戏 名称="安琪莉可女王之路[AP]" 文件="jpn\aqlk95.xml"            />
+				<游戏 名称="安琪莉可4日文版[AP]"  文件="jpn\aqlk4.xml"  编码="932" />
+	</分类>
+
+	<分类 名称="KOGADO">
+				<游戏 名称="天使小夜曲[AP]"      文件="jpn\as1.xml"      编码="932" />
+				<游戏 名称="天使的恋曲[P]"       文件="jpn\as2.xml"      编码="932" />
+				<游戏 名称="精灵协奏曲[P]"       文件="jpn\dearpia.xml"             />
+				<游戏 名称="交响乐之雨爱藏版[P]" 文件="jpn\srte.xml"                />
+				<游戏 名称="幸福姐妹花[AP]"      文件="jpn\smf.xml"      编码="932" />
+				<游戏 名称="战机少女[AP]"        文件="jpn\gadgett.xml"             />
+				<游戏 名称="手机少女PC[P]"       文件="jpn\ktg.xml"      编码="-2"  />
+				<游戏 名称="蓝色天使队1[AP]"     文件="jpn\blueflow.xml"            />
+				<游戏 名称="蓝色天使队2[AP]"     文件="jpn\blueflow.xml"            />
+				<游戏 名称="小魔女帕妃1[AP]"     文件="jpn\lwp1.xml"                />
+				<游戏 名称="小魔女帕妃2[AP]"     文件="jpn\lwp2.xml"     编码="932" />
+				<游戏 名称="小魔女蕾妮特[AP]"    文件="jpn\lwr.xml"      编码="950" />
+	</分类>
+
+	<分类 名称="KONAMI">
+				<游戏 名称="心跳回忆之交给我你的心[AP]" 文件="jpn\yourheart.xml" />
+	</分类>
+
+	<分类 名称="KSS">
+				<游戏 名称="龙机传承1[P]"  文件="jpn\ryuki.xml"   />
+				<游戏 名称="龙机传承2[P]"  文件="jpn\ryuki.xml"   />
+				<游戏 名称="龙机传承3[AP]" 文件="jpn\dragoon.xml" />
+	</分类>
+
+	<分类 名称="La'cryma">
+				<游戏 名称="真实之泪[P]" 文件="jpn\truetears.xml" />
+	</分类>
+
+	<分类 名称="Lass">
+				<游戏 名称="3days～満ちてゆく刻の彼方で～[AP]" 文件="jpn\nekopack.xml" />
+	</分类>
+
+	<分类 名称="LiLiTH">
+				<游戏 名称="姫騎士[P]"            文件="jpn\krkr.xml" />
+				<游戏 名称="催眠彼女[P]"          文件="jpn\krkr.xml" />
+				<游戏 名称="対魔忍アサギ外伝[AP]" 文件="jpn\krkr.xml" />
+				<游戏 名称="恥辱病棟-白衣天使[P]" 文件="jpn\krkr.xml" />
+	</分类>
+
+	<分类 名称="Liquid">
+				<游戏 名称="魔将の贄[AP]" 文件="jpn\lcse.xml" 编码="932" />
+	</分类>
+
+	<分类 名称="MAKURA-SOFT">
+				<游戏 名称="H2O～FOOTPRINTS IN THE SAND～[AP]" 文件="jpn\bgi.xml" />
+	</分类>
+
+	<分类 名称="Marcus">
+				<游戏 名称="青涩宝贝1[P]" 文件="jpn\sgw1.xml" />
+				<游戏 名称="青涩宝贝2[P]" 文件="jpn\sgw2.xml" />
+	</分类>
+
+	<分类 名称="MicroCabin">
+				<游戏 名称="人偶情缘1[AP]" 文件="jpn\marico1.xml" />
+				<游戏 名称="人偶情缘2[AP]" 文件="jpn\marico2.xml" />
+	</分类>
+
+	<分类 名称="Navel">
+				<游戏 名称="Tick! Tack![AP]" 文件="jpn\nekopack.xml" 编码="932" />
+	</分类>
+
+	<分类 名称="NEKONEKO">
+				<游戏 名称="120日元之夏[AP]" 文件="jpn\nscripter.xml" />
+				<游戏 名称="120日元之冬[AP]" 文件="jpn\nscripter.xml" />
+	</分类>
+
+	<分类 名称="QuinRose">
+				<游戏 名称="魔法使与主人[AP]" 文件="jpn\wizard.xml" 编码="932" />
+	</分类>
+
+	<分类 名称="RusK">
+				<游戏 名称="Aster[AP]" 文件="jpn\aster.xml" />
+	</分类>
+
+	<分类 名称="SEKILALA">
+				<游戏 名称="人妻姬俱樂部[AP]" 文件="jpn\himecus.xml" />
+	</分类>
+
+	<分类 名称="Shall Luck">
+				<游戏 名称="あねトレっ！[AP]" 文件="jpn\anetore.xml" 编码="-2" />
+	</分类>
+
+	<分类 名称="SOFTPAL">
+				<游戏 名称="ななついろ★ドロップス[AP]" 文件="jpn\pajamas.xml" />
+	</分类>
+
+	<分类 名称="Spray">
+				<游戏 名称="鬼畜眼镜[AP]" 文件="jpn\reallive.xml" />
+	</分类>
+
+	<分类 名称="STAGE NANA">
+				<游戏 名称="水仙[AP]" 文件="jpn\nscripter.xml" />
+	</分类>
+
+	<分类 名称="TGL">
+				<游戏 名称="天使同盟[AP]"                  文件="jpn\tenshi.xml"   />
+				<游戏 名称="快刀乱麻[AP]"                  文件="jpn\kranma.xml"   />
+				<游戏 名称="圣眼之翼[AP]"                  文件="jpn\sainteye.xml" />
+				<游戏 名称="少女魔法师1[AP]"               文件="jpn\mahou12.xml"  />
+				<游戏 名称="少女魔法师2[AP]"               文件="jpn\mahou12.xml"  />
+				<游戏 名称="黎明圣记-暗黑天使[AP]"         文件="jpn\harlem2.xml"  />
+				<游戏 名称="新神奇传说3[AP]"               文件="jpn\fo.xml"       />
+				<游戏 名称="神奇传说-时空道标[AP]"         文件="jpn\fs.xml"       />
+				<游戏 名称="神奇传说-远征奥德赛1[AP]"      文件="jpn\fo.xml"       />
+				<游戏 名称="神奇传说-远征奥德赛2[AP]"      文件="jpn\fo.xml"       />
+				<游戏 名称="战国美少女1-斩断云空[AP]"      文件="jpn\sengoku.xml"  />
+				<游戏 名称="战国美少女2-春风之章[AP]"      文件="jpn\harukaze.xml" />
+				<游戏 名称="守护者之剑外传-无尽的宿命[AP]" 文件="jpn\gs_saga.xml"  />
+	</分类>
+
+	<分类 名称="TinkerBell">
+				<游戏 名称="人妻[AP]" 文件="jpn\advsys3.xml" />
+	</分类>
+
+	<分类 名称="TOMATO">
+				<游戏 名称="神の子育成SLAG[AP]" 文件="jpn\fpk.xml" />
+	</分类>
+
+	<分类 名称="TYPE-MOON">
+				<游戏 名称="真月谭-月姬[AP]" 文件="jpn\nscripter.xml" />
+	</分类>
+
+	<分类 名称="VALKYRIA">
+				<游戏 名称="怪盗L☆lita＆you～姉妹監禁肉遊～[AP]" 文件="jpn\odn.xml" />
+	</分类>
+
+	<分类 名称="Waffle">
+				<游戏 名称="魔法の少女シルキーリップ[AP]" 文件="jpn\nekosdk.xml" 编码="932" />
+	</分类>
+
+	<分类 名称="未分类">
+				<游戏 名称="花吻2[AP]"                          文件="jpn\nsystem.xml"              />
+				<游戏 名称="有希の诗[AP]"                       文件="jpn\yukinouta.xml" 编码="932" />
+				<游戏 名称="月葬の城[AP]"                       文件="jpn\gessou.xml"    编码="932" />
+				<游戏 名称="夢幻の迷宮3[AP]"                    文件="jpn\mukyu3.xml"               />
+				<游戏 名称="えん☆でび-ANGEL or DEVIL-[P]"      文件="jpn\krkr.xml"                 />
+				<游戏 名称="妹レイプ～妹の小生意気な媚肉～[AP]" 文件="jpn\nscripter.xml"            />
+	</分类>
+
+</游戏列表>

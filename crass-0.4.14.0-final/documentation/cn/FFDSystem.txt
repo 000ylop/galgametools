@@ -1,0 +1,35 @@
+﻿名称：		FFDSystem
+描述：		FLOATING FRAME DIRECTOR
+封包：		.dat
+作者：		痴漢公賊 (glanser@163.com)
+版本：		1.0.4
+成熟度：	测试版
+
+【TODO】
+支持version 5封包的批量提取。
+
+【注意事项】
+·参数code0、code1、code2、code3
+如果要提取不在“支持游戏列表中”的游戏封包，需要提供这4个参数，用于正确解密封包。
+·参数name
+对于version 5及以上的版本的dat封包，必须提供要提取的资源文件名才能正确解包，否则只能使用暴力破解模式提取。
+·参数crack
+对于version 5及以上的版本的dat封包，如果没有指定资源文件名，那么请使用该参数进行暴力破解提取（很慢）。
+对于version 4版本的dat封包，保存的资源文件将以有意义的名称来命名，而不是无意义的md5。
+
+【提取示例】
+·指定name参数提取：
+crage -p "G:\program files\Littlewitch\ロマネスク\System.dat" -O name=font.def
+font.def: extract OK
+·指定crack参数暴力提取：
+crage -p "G:\program files\Littlewitch\ロマネスク\System.dat" -O crack
+·指定codeX参数提取：
+以ピリオド为例（提取font.def这个资源文件）：
+crage -p c:\System.dat -O name=font.def,code0=0xDED5A4D1,code1=0xFA871AB2,code2=0x8128CFA5,code3=0xFA871AB2
+
+【ChangeLog】
+2008-06-24 14:50 ver 1.0.4 增加了对ver3封包的提取；修正了ver4封包提取的错误
+2008-04-30 22:30 ver 1.0.3 修改了ver5的提取方式；加入“少女魔法学リトルウィッチロマネスク editio perfecta”的解密code
+2008-03-10 10:35 ver 1.0.2 修改了ver2的解密参数；加入”白詰草話番外編“和”少女魔法学 リトルウィッチロマネスク特別企画番外編“的解密code
+2007-12-20 22:11 ver 1.0.1 加入ピリオド的解密code（可以不用再像提取示例中那样指定codeX参数了）
+2007-12-17 21:22 ver 1.0.0 第一版发布

@@ -1,0 +1,10 @@
+// cpb2bmp.cpp, v1.0 2007/04/28
+// coded by asmodean
+
+// contact: 
+//   web:   http://plaza.rakuten.co.jp/asmodean
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+
+// This tool converts CPB (*.cpb) images to bitmaps. 
+// Compile with -DSENTINEL or -DZWEIWORTER.

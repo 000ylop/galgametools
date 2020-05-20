@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="NScripter.dll" 接口名="NSA" 0 />
+	<插件 文件名="NScripter.dll" 接口名="SAR" 1 />
+	<插件 文件名="NScripter.dll" 接口名="TXT" 2 />
+
+	<文件 文件名="*.nsa"       插件="0" />
+	<文件 文件名="*.sar"       插件="1" />
+	<文件 文件名="nscript.dat" 插件="2" />
+
+</游戏脚本>

@@ -1,0 +1,19 @@
+﻿Name:		SOFTPAL ADV SYSTEM
+Description:	SOFTPAL ADV SYSTEM
+Archive:	.pac .PGD
+Author:	        痴漢公賊 (glanser@163.com)
+Version:	1.3.2
+Status:	        Alpha
+
+【TODO】
+·support PGD2 format.
+·support .EPG video format.
+
+【ChangeLog】
+2009-06-23 22:03 ver 1.3.2 support new .pac archive format
+2009-03-23 20:48 ver 1.3.1 support type1 mode of new GE format
+2009-03-14 19:40 ver 1.3.0 supported extracting PGD3 format and .EPG
+2009-03-07 19:03 ver 1.2.0 removed no magic signature of .pac; fixed a problem on incorrect content of 32-bit incorrect image; supported 32-bit bmp alpha bleding
+2008-07-11 19:03 ver 1.1.1 fixed a error in extracting "00_C" type image
+2008-05-03 18:24 ver 1.1.0 supported new .pac and .PGD format
+2007-10-08 22:27 ver 1.0.0 1st version released

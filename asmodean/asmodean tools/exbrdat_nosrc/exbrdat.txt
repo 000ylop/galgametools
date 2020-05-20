@@ -1,0 +1,10 @@
+// exbrdat.cpp, v1.01 2007/09/29
+// coded by asmodean
+
+// contact: 
+//   web:   http://plaza.rakuten.co.jp/asmodean
+//   email: asmodean [at] hush.com
+//   irc:   asmodean on efnet (irc.efnet.net)
+
+// This tool extracts files from *.DAT/*.PAK archives used by BLACKRAINBOW and
+// others.  Use bmd2bmp for the graphics.

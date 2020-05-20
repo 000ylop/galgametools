@@ -1,0 +1,17 @@
+@charset "shift_jis";
+
+@import url("browser.css");
+
+dl dt{
+	margin-left: 1em;
+	margin-top: 1em;
+	font-weight: bold;
+}
+
+dl dd{
+	margin-left: 2em;
+}
+
+dl{
+	margin-bottom: 0em;
+}

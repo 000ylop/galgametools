@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="TGL.dll" 接口名="ANP" />
+
+	<文件 文件名="*.anp"         插件="0" 数据文件="gs_saga.pal" />
+	<文件 文件名="anp\*.anp"     插件="0" 数据文件="gs_saga.pal" />
+	<文件 文件名="anp\*.pcx"                                     />
+	<文件 文件名="anp\*.bmp"                                     />
+	<文件 文件名="bto\*.anp"     插件="0" 数据文件="gs_saga.pal" />
+	<文件 文件名="bto\*.pcx"                                     />
+	<文件 文件名="cursor\*.anp"  插件="0" 数据文件="gs_saga.pal" />
+	<文件 文件名="face\*.pcx"                                    />
+	<文件 文件名="i_face\*.anp"  插件="0" 数据文件="gs_saga.pal" />
+	<文件 文件名="i_face\*.pcx"                                  />
+	<文件 文件名="map\*.pcx"                                     />
+	<文件 文件名="map\Day\*.anp" 插件="0" 数据文件="gs_saga.pal" />
+	<文件 文件名="map\Day\*.scn" 插件="0"                        />
+
+</游戏脚本>

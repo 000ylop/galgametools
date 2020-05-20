@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<游戏脚本>
+
+	<插件 文件名="ManPAK.upk" 0 />
+	<插件 文件名="AGP.grp"    1 />
+
+	<文件 文件名="Inst.fpa"    插件="0" 数据文件="pm3\Inst.fpa.ini" />
+	<文件 文件名="Pm3dat1.fpa" 插件="0" 数据文件="pm3\Pm3dat1.fpa.ini" />
+	<文件 文件名="Pm3dat2.fpa" 插件="0" 数据文件="pm3\Pm3dat2.fpa.ini" />
+	<文件 文件名="Pm3sys0.fpa" 插件="0" 数据文件="pm3\Pm3sys0.fpa.ini" />
+
+</游戏脚本>

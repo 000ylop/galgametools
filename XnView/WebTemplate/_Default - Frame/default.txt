@@ -1,0 +1,8 @@
+<head>
+	<meta name="GENERATOR" content="XnView">
+	<title>Test</title>
+   <style type="text/css" media="screen">
+       @import "default.css";
+    </style>
+
+</head>
