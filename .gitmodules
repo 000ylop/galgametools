@@ -1,0 +1,3 @@
+[submodule "GARbro"]
+	path = GARbro
+	url = https://github.com/morkt/GARbro
